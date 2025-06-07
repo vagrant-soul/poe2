@@ -66,7 +66,7 @@ jobs:
         working-directory: RePoE
       - name: generate index.html
         run: |
-          find data -type d -exec tree {} -H '.' --dirsfirst -F -L 1 -T "RePoE - PoE2 version $(cat version.txt)" -I 'index.html|schema_doc*' --noreport --charset utf-8 -o {}/index.html \;
+          find data -type d -exec tree {} -H '.' --dirsfirst -F -L 1 -T "RePoE - PoE2 version ${{ needs.version.outputs.version }}" -I 'index.html|schema_doc*' --noreport --charset utf-8 -o {}/index.html \;
           find data -name index.html -exec sed -i 's|<h1>RePoE|<h1><a href="https://github.com/repoe-fork/repoe-fork">RePoE</a>|' {} \;
         working-directory: poe2
       - id: autocommit
