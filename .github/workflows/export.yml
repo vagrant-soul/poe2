@@ -5,7 +5,7 @@ on:
   push:
     branches: [ "master" ]
   schedule:
-    - cron: "0 1 * * *"
+    - cron: 40 */4 * * *
 
 jobs:
   version:
@@ -66,25 +66,23 @@ jobs:
         working-directory: RePoE
       - name: generate index.html
         run: |
-          find data -type d -exec tree {} -H '.' --dirsfirst -F -L 1 -T "RePoE - PoE2 version $(cat ../version.txt)" -I 'index.html|schema_doc*' --noreport --charset utf-8 -o {}/index.html \;
+          find data -type d -exec tree {} -H '.' --dirsfirst -F -L 1 -T "RePoE - PoE2 version $(cat version.txt)" -I 'index.html|schema_doc*' --noreport --charset utf-8 -o {}/index.html \;
           find data -name index.html -exec sed -i 's|<h1>RePoE|<h1><a href="https://github.com/repoe-fork/repoe-fork">RePoE</a>|' {} \;
         working-directory: poe2
       - id: autocommit
         uses: stefanzweifel/git-auto-commit-action@v5.2.0
         with:
           repository: poe2
+          push_options: '--force-with-lease'
           commit_message: "[skip ci] Export ${{ needs.version.outputs.version }}"
       - if: github.event_name != 'schedule' || steps.autocommit.outputs.changes_detected == 'true'
         uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: poe2/data
-    outputs:
-      changes_detected: ${{ steps.autocommit.outputs.changes_detected }}
 
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    if: github.event_name != 'schedule' || needs.build.outputs.changes_detected == 'true'
     permissions:
       pages: write
       id-token: write
