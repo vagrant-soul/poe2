@@ -38,7 +38,7 @@ jobs:
           cache: poetry
       - run: curl --fail 'https://ggpk.exposed/version?poe=2' | sed -r 's|.*/([0-9](\.[0-9]+)+)/$|\1|' > poe2/version.txt
       - run: git ls-remote https://github.com/poe-tool-dev/dat-schema.git refs/heads/main > poe2/schema.txt
-      - run: echo "version=$(cat version.txt)" >> "$GITHUB_OUTPUT"
+      - run: echo "version=$(cat poe2/version.txt)" >> "$GITHUB_OUTPUT"
       - name: clean poe2 dir
         run: find poe2/data '(' -name '*.json' -not -path '*/pob/*' -o -name '*.html' -o -name '*.txt' ')' -delete -print | wc -l
       - run: poetry install
