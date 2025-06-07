@@ -15,14 +15,11 @@ jobs:
       changes_detected: ${{ steps.autocommit.outputs.changes_detected }}
 
     steps:
-      - run: curl --fail 'https://ggpk.exposed/version?poe=2' | sed -r 's|.*/([0-9](\.[0-9]+)+)/$|\1|' > version.txt
-      - run: git ls-remote https://github.com/poe-tool-dev/dat-schema.git refs/heads/main > schema.txt
-      - run: echo "version=$(cat version.txt)" >> "$GITHUB_OUTPUT"
-        id: version
       - name: checkout
         uses: actions/checkout@v4.2.2
         with:
           path: poe2
+        id: version
       - name: checkout repoe
         uses: actions/checkout@v4.2.2
         with:
@@ -39,31 +36,28 @@ jobs:
         with:
           python-version: "3.13"
           cache: poetry
+      - run: curl --fail 'https://ggpk.exposed/version?poe=2' | sed -r 's|.*/([0-9](\.[0-9]+)+)/$|\1|' > poe2/version.txt
+      - run: git ls-remote https://github.com/poe-tool-dev/dat-schema.git refs/heads/main > poe2/schema.txt
+      - run: echo "version=$(cat version.txt)" >> "$GITHUB_OUTPUT"
       - name: clean poe2 dir
-        run: find poe2/poe2/ '(' -name '*.json' -not -path '*/pob/*' -o -name '*.html' -o -name '*.txt' ')' -delete -print | wc -l
-      - name: copy text files
-        run: cp RePoE/RePoE/*.txt poe2/poe2/
+        run: find poe2/data '(' -name '*.json' -not -path '*/pob/*' -o -name '*.html' -o -name '*.txt' ')' -delete -print | wc -l
       - run: poetry install
-        working-directory: RePoE/RePoE
+        working-directory: RePoE
       - run: poetry run pypoe_schema_import -a stable --poe2 -u https://repoe-fork.github.io/dat-export/poe2/filtered.json
-        working-directory: RePoE/RePoE
+        working-directory: RePoE
       - name: update models
         run: |
           for i in *.schema.json
           do
             poetry run datamodel-codegen --input $i --input-file-type jsonschema --output ../model/${i/.schema.json/.py} --output-model-type pydantic_v2.BaseModel --disable-timestamp --use-double-quotes --enable-version-header
           done
-          poetry run generate-schema-doc --config footer_show_time=false ./ ../../../poe2/poe2/
         working-directory: RePoE/RePoE/schema
-      - name: run export
-        run: |
-          poetry --version
-          poetry run repoe all -l all --poe2
-        working-directory: RePoE/RePoE
+      - run: poetry run repoe all -l all --poe2 -o ../poe2/data
+        working-directory: RePoE
       - name: generate index.html
         run: |
-          find poe2 -type d -exec tree {} -H '' --dirsfirst -F -L 1 -T "RePoE - PoE2 version $(cat ../version.txt)" -I 'index.html|schema_doc*' --noreport --charset utf-8 -o {}/index.html \;
-          find poe2 -name index.html sed -i 's|<h1>RePoE|<h1><a href="https://github.com/repoe-fork/repoe-fork">RePoE</a>|' {} \;
+          find data -type d -exec tree {} -H '.' --dirsfirst -F -L 1 -T "RePoE - PoE2 version $(cat ../version.txt)" -I 'index.html|schema_doc*' --noreport --charset utf-8 -o {}/index.html \;
+          find data -name index.html -exec sed -i 's|<h1>RePoE|<h1><a href="https://github.com/repoe-fork/repoe-fork">RePoE</a>|' {} \;
         working-directory: poe2
       - name: commit changes
         id: autocommit
@@ -75,7 +69,7 @@ jobs:
         if: github.event_name != 'schedule' || steps.autocommit.outputs.changes_detected == 'true'
         uses: actions/upload-pages-artifact@v3.0.1
         with:
-          path: poe2/poe2/
+          path: poe2/data
 
   deploy:
     runs-on: ubuntu-latest
