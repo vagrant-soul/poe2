@@ -22,7 +22,6 @@ jobs:
           commit_message: "[skip ci] Version ${{ steps.version.outputs.version }}"
     outputs:
       changes_detected: ${{ steps.autocommit.outputs.changes_detected }}
-      commit_hash: ${{ steps.autocommit.outputs.commit_hash }}
       version: ${{ steps.version.outputs.version }}
 
   build:
@@ -34,7 +33,6 @@ jobs:
         uses: actions/checkout@v4.2.2
         with:
           path: poe2
-          ref: ${{ needs.version.outputs.commit_hash }}
       - name: checkout repoe
         uses: actions/checkout@v4.2.2
         with:
@@ -63,8 +61,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5.2.0
         with:
           repository: poe2
-          skip_fetch: true
-          push_options: '--force-with-lease'
           commit_message: "[skip ci] Export ${{ needs.version.outputs.version }}"
       - name: generate index.html
         run: |
