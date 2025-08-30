@@ -161,7 +161,7 @@
             "per_minute_to_per_second"
           ]
         ],
-        "string": "每有一個惡焰，每秒失去 {0}% 熱能",
+        "string": "每有一個惡焰，每秒[LifeLoss|失去] {0}% 最大生命",
         "reminder_text": null,
         "is_markup": null
       }
@@ -228,7 +228,7 @@
   {
     "English": null,
     "ids": [
-      "demon_form_spell_damage_+%_per_stack"
+      "demon_form_spell_damage_+%_final_per_stack"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -255,7 +255,25 @@
         "index_handlers": [
           []
         ],
-        "string": "每有一個惡焰增加 {0}% [Spell|法術]傷害",
+        "string": "每有一個惡魔烈焰賦予更多[Spell|法術]傷害@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每有一個惡魔烈焰，造成 {0}% 更多[Spell|法術]傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -273,25 +291,7 @@
         "index_handlers": [
           []
         ],
-        "string": "每有一個惡焰減少 {0}% [Spell|法術]傷害",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "每有一個惡焰減少 {0}% [Spell|法術]傷害",
+        "string": "每有一個惡魔烈焰，造成 {0}% 更少[Spell|法術]傷害",
         "reminder_text": null,
         "is_markup": null
       }

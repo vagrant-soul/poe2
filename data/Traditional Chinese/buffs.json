@@ -29,7 +29,7 @@
   },
   "frozen": {
     "description": "無法移動或做任何動作",
-    "invisible": false,
+    "invisible": true,
     "name": "冰凍",
     "removable": false,
     "stats": [
@@ -611,6 +611,21 @@
     "templates": null,
     "stack_limit": null
   },
+  "life_leech_not_removed_at_full": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_recovery_per_minute_from_life_leech",
+      "is_life_leeching"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "energy_shield_leech": {
     "description": "",
     "invisible": true,
@@ -619,6 +634,21 @@
     "stats": [
       "base_recovery_per_minute_from_energy_shield_leech",
       "is_es_leeching"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "rage_leech": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_rage_recovery_per_minute_from_rage_leech",
+      "is_rage_leeching"
     ],
     "visuals": "invisible",
     "category": null,
@@ -1004,6 +1034,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "utility_charm_curse_immunity": {
+    "description": "移除你身上所有的詛咒效果，且你不會受到詛咒。",
+    "invisible": false,
+    "name": "淨化護符",
+    "removable": false,
+    "stats": [
+      "immune_to_curses"
+    ],
+    "visuals": "flask_utility_cleansing",
+    "category": "Charm",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "chill_immunity": {
     "description": "移除你身上全部冰緩，且你不能被冰緩。",
     "invisible": false,
@@ -1307,8 +1351,7 @@
     "name": "衰弱",
     "removable": false,
     "stats": [
-      "damage_+%_final_if_not_unique_from_enfeeble",
-      "damage_+%_final_if_unique_from_enfeeble"
+      "damage_+%_final_from_enfeeble"
     ],
     "visuals": "curse_enfeeble",
     "category": "Hex",
@@ -1400,6 +1443,20 @@
       "debilitate_self_for_x_milliseconds_on_hit"
     ],
     "visuals": "curse_punishment",
+    "category": "Hex",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "curse_pain_synchronisation": {
+    "description": "此[Curse|詛咒]會追蹤你受到的[HitDamage|傷害]。當效果結束時，你會再次承受該傷害的一部分。",
+    "invisible": false,
+    "name": "命定苦痛",
+    "removable": false,
+    "stats": [
+      "curse_pain_synchronisation_target_recorded_damage_%_to_deal"
+    ],
+    "visuals": "curse_pain_synchronisation",
     "category": "Hex",
     "sources": null,
     "templates": null,
@@ -2231,7 +2288,7 @@
     },
     "templates": {
       "MonsterAuraEnergyShield1": {
-        "aura_radius_metres": 2.5,
+        "aura_radius_metres": 5.0,
         "stats": {
           "base_maximum_life_%_to_gain_as_total_energy_shield": 0
         },
@@ -2239,7 +2296,7 @@
         "visuals": null
       },
       "PlayerMonsterAuraEnergyShield1": {
-        "aura_radius_metres": 2.5,
+        "aura_radius_metres": 5.0,
         "stats": {
           "base_maximum_life_%_to_gain_as_total_energy_shield": 0
         },
@@ -2926,12 +2983,12 @@
     "stack_limit": null
   },
   "lightning_shield": {
-    "description": "你獲得額外法術格擋率，並免疫感電。",
+    "description": "",
     "invisible": false,
     "name": "暴風之盾",
     "removable": true,
     "stats": [
-      "shield_spell_block_%",
+      "dummy_stat_display_nothing",
       "base_immune_to_shock"
     ],
     "visuals": "lightning_shield",
@@ -3090,7 +3147,7 @@
     "removable": false,
     "stats": [
       "phase_through_objects",
-      "base_spell_suppression_chance_%"
+      "dummy_stat_display_nothing"
     ],
     "visuals": "flask_utility_phase",
     "category": "Flask",
@@ -3219,20 +3276,6 @@
       "base_ward"
     ],
     "visuals": "flask_utility_ward",
-    "category": "Flask",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "flask_utility_adaptation": {
-    "description": "你有額外的適應值",
-    "invisible": false,
-    "name": "金剛藥劑",
-    "removable": false,
-    "stats": [
-      "base_adaptation_rating"
-    ],
-    "visuals": "flask_utility_adaptation",
     "category": "Flask",
     "sources": null,
     "templates": null,
@@ -3599,7 +3642,7 @@
           "life_regeneration_rate_per_minute_%": 0
         },
         "stat_text": [
-          "+2051 點護甲"
+          "+2051 [Armour|護甲值]"
         ],
         "visuals": null
       }
@@ -3659,7 +3702,7 @@
           "life_regeneration_rate_per_minute_%": 0
         },
         "stat_text": [
-          "+2575 點閃避值"
+          "+2575 [Evasion|閃避]值"
         ],
         "visuals": null
       }
@@ -3707,7 +3750,7 @@
           "affected_by_purity_of_elements": 1
         },
         "stat_text": [
-          "+34% 全部元素抗性"
+          "所有[ElementalDamage|元素][Resistances|抗性] +34%"
         ],
         "visuals": null
       }
@@ -3753,7 +3796,7 @@
           "affected_by_purity_of_fire": 1
         },
         "stat_text": [
-          "+41% 火焰抗性"
+          "[Resistances|火焰抗性] +41%"
         ],
         "visuals": null
       }
@@ -3799,7 +3842,7 @@
           "affected_by_purity_of_ice": 1
         },
         "stat_text": [
-          "+41% 冰冷抗性"
+          "[Resistances|冰冷抗性] +41%"
         ],
         "visuals": null
       }
@@ -3845,7 +3888,7 @@
           "affected_by_purity_of_lightning": 1
         },
         "stat_text": [
-          "+41% 閃電抗性"
+          "[Resistances|閃電抗性] +41%"
         ],
         "visuals": null
       }
@@ -3853,9 +3896,9 @@
     "stack_limit": null
   },
   "player_aura_chaos_resist": {
-    "description": "Grants additional Chaos Resistance",
+    "description": "賦予額外混沌抗性。",
     "invisible": false,
-    "name": "Impurity Aura",
+    "name": "不淨光環",
     "removable": true,
     "stats": [
       "base_chaos_damage_resistance_%",
@@ -3908,7 +3951,7 @@
           "affected_by_discipline": 1
         },
         "stat_text": [
-          "增加 30% 能量護盾充能率"
+          "增加 30% [ESRechargeRate|能量護盾充能率]"
         ],
         "visuals": null
       }
@@ -3972,7 +4015,7 @@
           "life_regeneration_rate_per_minute_%": 0
         },
         "stat_text": [
-          "攻擊附加 109 至 155 火焰傷害",
+          "[Attack|攻擊]附加 109 至 155 [Fire|火焰]傷害",
           "法術附加 109 至 155 火焰傷害"
         ],
         "visuals": null
@@ -4033,7 +4076,7 @@
           "life_regeneration_rate_per_minute_%": 0
         },
         "stat_text": [
-          "獲得 25% 物理傷害的冰冷傷害"
+          "[Gain|獲得]相當於 25% [Physical|物理]傷害的額外[Cold|冰冷]傷害"
         ],
         "visuals": null
       }
@@ -4091,7 +4134,7 @@
           "life_regeneration_rate_per_minute_%": 0
         },
         "stat_text": [
-          "攻擊附加 16 至 248 閃電傷害"
+          "[Attack|攻擊]附加 16 至 248 [Lightning|閃電]傷害"
         ],
         "visuals": null
       }
@@ -4155,7 +4198,7 @@
           "life_regeneration_rate_per_minute_%": 0
         },
         "stat_text": [
-          "增加 16% 攻擊速度",
+          "增加 16% [Attack|攻擊]速度",
           "增加 16% 施放速度",
           "增加 9% 移動速度"
         ],
@@ -4277,14 +4320,14 @@
     "stack_limit": null
   },
   "vaal_aura_dodge": {
-    "description": "獲得額外閃避攻擊擊中率，並使對你的壓抑法術傷害以不幸進行計算。",
+    "description": "獲得額外閃避攻擊擊中率，並使對你的壓抑法術傷害帶有厄運。",
     "invisible": false,
     "name": "瓦爾優雅光環",
     "removable": true,
     "stats": [
       "affected_by_grace",
-      "chance_to_evade_attacks_%",
-      "damage_taken_from_suppressed_hits_is_unlucky",
+      "dummy_stat_display_nothing",
+      "dummy_stat_display_nothing",
       "base_additional_physical_damage_reduction_%",
       "damage_+%",
       "attack_and_cast_speed_+%",
@@ -5875,7 +5918,7 @@
         },
         "stat_text": [
           "增加 50% 行動速度",
-          "增加 80% 投射物速度"
+          "[Projectile|投射物]速度增加 80%"
         ],
         "visuals": null
       },
@@ -5888,7 +5931,7 @@
         },
         "stat_text": [
           "增加 60% 行動速度",
-          "增加 100% 投射物速度"
+          "[Projectile|投射物]速度增加 100%"
         ],
         "visuals": "shrine_monster_affected"
       },
@@ -5901,7 +5944,7 @@
         },
         "stat_text": [
           "增加 10% 行動速度",
-          "增加 30% 投射物速度"
+          "[Projectile|投射物]速度增加 30%"
         ],
         "visuals": null
       },
@@ -5914,7 +5957,7 @@
         },
         "stat_text": [
           "增加 40% 行動速度",
-          "增加 50% 投射物速度"
+          "[Projectile|投射物]速度增加 50%"
         ],
         "visuals": null
       },
@@ -5927,7 +5970,7 @@
         },
         "stat_text": [
           "增加 50% 行動速度",
-          "增加 80% 投射物速度"
+          "[Projectile|投射物]速度增加 80%"
         ],
         "visuals": null
       }
@@ -5961,7 +6004,7 @@
         },
         "stat_text": [
           "增加 50% 傷害",
-          "擊中時擊退敵人",
+          "[HitDamage|擊中]時會[Knockback|擊退敵人]",
           "增加 30% 敵人暈眩時間",
           "更多鮮血"
         ],
@@ -5978,7 +6021,7 @@
         },
         "stat_text": [
           "增加 50% 傷害",
-          "擊中時擊退敵人",
+          "[HitDamage|擊中]時會[Knockback|擊退敵人]",
           "增加 30% 敵人暈眩時間",
           "更多鮮血"
         ],
@@ -5995,7 +6038,7 @@
         },
         "stat_text": [
           "增加 20% 傷害",
-          "擊中時擊退敵人",
+          "[HitDamage|擊中]時會[Knockback|擊退敵人]",
           "增加 20% 敵人暈眩時間"
         ],
         "visuals": null
@@ -6011,7 +6054,7 @@
         },
         "stat_text": [
           "增加 40% 傷害",
-          "擊中時擊退敵人",
+          "[HitDamage|擊中]時會[Knockback|擊退敵人]",
           "增加 30% 敵人暈眩時間",
           "更多鮮血"
         ],
@@ -6437,7 +6480,7 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "擊中時有 100% 機率使用隨機咒術詛咒敵人"
+          "擊中時，有 100% 機率以隨機咒術[Curse|詛咒]敵人"
         ],
         "visuals": "shrine_monster_affected"
       },
@@ -6457,7 +6500,7 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "擊中時有 100% 機率使用隨機咒術詛咒敵人"
+          "擊中時，有 100% 機率以隨機咒術[Curse|詛咒]敵人"
         ],
         "visuals": null
       }
@@ -6568,7 +6611,7 @@
       "maximum_energy_shield_+%",
       "base_damage_taken_+%",
       "monsters_only_old_bad_add_%_of_total_maximum_life_to_base_maximum_energy_shield",
-      "base_spell_suppression_chance_%",
+      "dummy_stat_display_nothing",
       "has_shrine_effect"
     ],
     "visuals": "shrine_defence",
@@ -6583,13 +6626,13 @@
           "maximum_energy_shield_+%": 100,
           "base_damage_taken_+%": 0,
           "monsters_only_old_bad_add_%_of_total_maximum_life_to_base_maximum_energy_shield": 0,
-          "base_spell_suppression_chance_%": 0,
+          "dummy_stat_display_nothing": 0,
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "增加 100% 護甲",
-          "增加 100% 閃避值",
-          "增加 100% 最大能量護盾"
+          "[Armour|護甲值]增加 100%",
+          "[Evasion|閃避值]增加 100%",
+          "最大[EnergyShield|能量護盾]增加 100%"
         ],
         "visuals": null
       },
@@ -6601,12 +6644,11 @@
           "maximum_energy_shield_+%": 0,
           "base_damage_taken_+%": -20,
           "monsters_only_old_bad_add_%_of_total_maximum_life_to_base_maximum_energy_shield": 20,
-          "base_spell_suppression_chance_%": 20,
+          "dummy_stat_display_nothing": 20,
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "減少 20% 承受傷害",
-          "+20% 壓抑法術傷害率"
+          "減少 20% 承受傷害"
         ],
         "visuals": "shrine_monster_affected"
       },
@@ -6618,13 +6660,13 @@
           "maximum_energy_shield_+%": 50,
           "base_damage_taken_+%": 0,
           "monsters_only_old_bad_add_%_of_total_maximum_life_to_base_maximum_energy_shield": 0,
-          "base_spell_suppression_chance_%": 0,
+          "dummy_stat_display_nothing": 0,
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "增加 50% 護甲",
-          "增加 50% 閃避值",
-          "增加 50% 最大能量護盾"
+          "[Armour|護甲值]增加 50%",
+          "[Evasion|閃避值]增加 50%",
+          "最大[EnergyShield|能量護盾]增加 50%"
         ],
         "visuals": null
       },
@@ -6636,13 +6678,13 @@
           "maximum_energy_shield_+%": 100,
           "base_damage_taken_+%": 0,
           "monsters_only_old_bad_add_%_of_total_maximum_life_to_base_maximum_energy_shield": 0,
-          "base_spell_suppression_chance_%": 0,
+          "dummy_stat_display_nothing": 0,
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "增加 100% 護甲",
-          "增加 100% 閃避值",
-          "增加 100% 最大能量護盾"
+          "[Armour|護甲值]增加 100%",
+          "[Evasion|閃避值]增加 100%",
+          "最大[EnergyShield|能量護盾]增加 100%"
         ],
         "visuals": null
       },
@@ -6654,13 +6696,13 @@
           "maximum_energy_shield_+%": 100,
           "base_damage_taken_+%": 0,
           "monsters_only_old_bad_add_%_of_total_maximum_life_to_base_maximum_energy_shield": 0,
-          "base_spell_suppression_chance_%": 0,
+          "dummy_stat_display_nothing": 0,
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "增加 100% 護甲",
-          "增加 100% 閃避值",
-          "增加 100% 最大能量護盾"
+          "[Armour|護甲值]增加 100%",
+          "[Evasion|閃避值]增加 100%",
+          "最大[EnergyShield|能量護盾]增加 100%"
         ],
         "visuals": null
       }
@@ -6723,7 +6765,7 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "+50% 全部元素抗性",
+          "所有[ElementalDamage|元素][Resistances|抗性] +50%",
           "+10% 最大全部抗性"
         ],
         "visuals": null
@@ -6736,7 +6778,7 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "+50% 全部元素抗性",
+          "所有[ElementalDamage|元素][Resistances|抗性] +50%",
           "+10% 最大全部抗性"
         ],
         "visuals": "shrine_monster_affected"
@@ -6749,7 +6791,7 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "+25% 全部元素抗性",
+          "所有[ElementalDamage|元素][Resistances|抗性] +25%",
           "+2% 最大全部抗性"
         ],
         "visuals": null
@@ -6762,7 +6804,7 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "+30% 全部元素抗性"
+          "所有[ElementalDamage|元素][Resistances|抗性] +30%"
         ],
         "visuals": null
       },
@@ -6774,7 +6816,7 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "+50% 全部元素抗性",
+          "所有[ElementalDamage|元素][Resistances|抗性] +50%",
           "+10% 最大全部抗性"
         ],
         "visuals": null
@@ -6848,8 +6890,9 @@
     "name": "卡魯之血",
     "removable": false,
     "stats": [
-      "cannot_recover_life",
-      "recover_%_maximum_life_when_buff_reaches_duration"
+      "damage_taken_goes_to_life_over_4_seconds_%",
+      "gain_x_rage_when_hit",
+      "no_inherent_rage_loss"
     ],
     "visuals": "blood_of_the_karui",
     "category": "Flask",
@@ -7231,7 +7274,7 @@
     "category": null,
     "sources": null,
     "templates": null,
-    "stack_limit": 45
+    "stack_limit": 50
   },
   "frostwall_epk": {
     "description": "",
@@ -7526,7 +7569,7 @@
     "name": "骸骨奉獻",
     "removable": false,
     "stats": [
-      "base_spell_block_%",
+      "dummy_stat_display_nothing",
       "monster_base_block_%",
       "life_regeneration_rate_per_minute_%_if_blocked_recently",
       "base_cast_speed_+%"
@@ -7942,13 +7985,12 @@
     "stack_limit": null
   },
   "unique_flask_rumis_concoction": {
-    "description": "你獲得額外的機率以阻擋攻擊和法術",
+    "description": "",
     "invisible": false,
     "name": "魯米的靈藥",
     "removable": false,
     "stats": [
-      "monster_base_block_%",
-      "base_spell_block_%"
+      "monster_base_block_%"
     ],
     "visuals": "unique_flask_rumis_concoction",
     "category": "Flask",
@@ -8260,6 +8302,40 @@
         "aura_radius_metres": null,
         "stats": {
           "base_cannot_be_damaged": 0
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "cannot_be_damaged_sudoku_boss_display": {
+    "description": "受到先祖戰士庇護。",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "display_cannot_be_damaged_sudoku_boss"
+    ],
+    "visuals": "nobuff",
+    "category": "Buff",
+    "sources": {
+      "Mods": [
+        {
+          "id": "MonsterCannotBeDamagedSudokuBossDisplay",
+          "item": null,
+          "name": null,
+          "template": "MonsterCannotBeDamagedSudokuBossDisplay",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "MonsterCannotBeDamagedSudokuBossDisplay": {
+        "aura_radius_metres": null,
+        "stats": {
+          "display_cannot_be_damaged_sudoku_boss": 0
         },
         "stat_text": null,
         "visuals": null
@@ -8750,8 +8826,9 @@
     "name": "聚魂",
     "removable": false,
     "stats": [
-      "capped_actor_scale_+%",
-      "maximum_life_+%"
+      "monster_difficulty_tankiness_+%",
+      "damage_+%",
+      "capped_actor_scale_+%"
     ],
     "visuals": "invisible",
     "category": null,
@@ -11644,7 +11721,7 @@
           "is_maimed": 1
         },
         "stat_text": [
-          "減少 15% 閃避值"
+          "[Evasion|閃避值]減少 15%"
         ],
         "visuals": "maim"
       }
@@ -13087,9 +13164,9 @@
           "base_cold_damage_resistance_%": -20
         },
         "stat_text": [
-          "-20% 混沌抗性",
+          "[Resistances|混沌抗性] -20%",
           "減少 100% 生命回復率",
-          "-20% 冰冷抗性"
+          "[Resistances|冰冷抗性] -20%"
         ],
         "visuals": null
       },
@@ -13101,9 +13178,9 @@
           "base_cold_damage_resistance_%": -8
         },
         "stat_text": [
-          "-8% 混沌抗性",
+          "[Resistances|混沌抗性] -8%",
           "減少 100% 生命回復率",
-          "-8% 冰冷抗性"
+          "[Resistances|冰冷抗性] -8%"
         ],
         "visuals": null
       }
@@ -14517,13 +14594,13 @@
     "templates": null,
     "stack_limit": 20
   },
-  "have_blocked_attack_recently": {
+  "have_blocked_recently": {
     "description": "",
     "invisible": true,
     "name": "",
     "removable": false,
     "stats": [
-      "have_blocked_attack_recently"
+      "have_blocked_recently"
     ],
     "visuals": "invisible",
     "category": null,
@@ -16005,20 +16082,6 @@
     "templates": null,
     "stack_limit": null
   },
-  "have_blocked_spell_recently": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [
-      "have_blocked_spell_recently"
-    ],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
   "have_used_a_fire_skill_recently": {
     "description": "",
     "invisible": true,
@@ -16624,7 +16687,7 @@
     "removable": true,
     "stats": [
       "arcane_surge_mana_regeneration_+%_final",
-      "arcane_surge_cast_speed_+%_final"
+      "base_cast_speed_+%"
     ],
     "visuals": "arcane_surge",
     "category": "Buff",
@@ -16682,6 +16745,34 @@
     "removable": false,
     "stats": [
       "chaos_damage_taken_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "hinder_physical_damage_taken": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "physical_damage_taken_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "hinder_elemental_damage_taken": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "elemental_damage_taken_+%"
     ],
     "visuals": "invisible",
     "category": null,
@@ -17025,12 +17116,32 @@
     "category": null,
     "sources": null,
     "templates": {
+      "ExpeditionDamageTakenLerp": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_damage_taken_lerp_+%_final_min": -98,
+          "monster_damage_taken_lerp_+%_final_max": 0,
+          "monster_damage_taken_lerp_+%_final_time": 7000
+        },
+        "stat_text": null,
+        "visuals": null
+      },
       "ArchnemesisDamageTakenLerp": {
         "aura_radius_metres": null,
         "stats": {
           "monster_damage_taken_lerp_+%_final_min": -90,
           "monster_damage_taken_lerp_+%_final_max": 0,
           "monster_damage_taken_lerp_+%_final_time": 6000
+        },
+        "stat_text": null,
+        "visuals": null
+      },
+      "SpiritHauntDamageTakenLerp": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_damage_taken_lerp_+%_final_min": -60,
+          "monster_damage_taken_lerp_+%_final_max": -99,
+          "monster_damage_taken_lerp_+%_final_time": 2000
         },
         "stat_text": null,
         "visuals": null
@@ -17051,28 +17162,7 @@
     "visuals": "invisible",
     "category": null,
     "sources": null,
-    "templates": {
-      "ExpeditionDamageTakenLerp": {
-        "aura_radius_metres": null,
-        "stats": {
-          "monster_damage_taken_lerp_+%_final_min": -98,
-          "monster_damage_taken_lerp_+%_final_max": 0,
-          "monster_damage_taken_lerp_+%_final_time": 7000
-        },
-        "stat_text": null,
-        "visuals": null
-      },
-      "SpiritHauntDamageTakenLerp": {
-        "aura_radius_metres": null,
-        "stats": {
-          "monster_damage_taken_lerp_+%_final_min": -60,
-          "monster_damage_taken_lerp_+%_final_max": -99,
-          "monster_damage_taken_lerp_+%_final_time": 2000
-        },
-        "stat_text": null,
-        "visuals": null
-      }
-    },
+    "templates": null,
     "stack_limit": null
   },
   "harbinger_action_speed_aura": {
@@ -17243,7 +17333,7 @@
     "name": "",
     "removable": false,
     "stats": [
-      "base_cannot_be_stunned"
+      "cannot_be_light_stunned"
     ],
     "visuals": "invisible",
     "category": null,
@@ -17592,7 +17682,9 @@
     "invisible": true,
     "name": "",
     "removable": false,
-    "stats": [],
+    "stats": [
+      "has_player_minion_been_killed_recently"
+    ],
     "visuals": "invisible",
     "category": null,
     "sources": null,
@@ -19369,20 +19461,6 @@
     "templates": null,
     "stack_limit": null
   },
-  "additional_spell_block_if_have_cast_spell_recently": {
-    "description": "守衛提供你法術格擋率。",
-    "invisible": false,
-    "name": "希望壁壘",
-    "removable": false,
-    "stats": [
-      "additional_spell_block_%"
-    ],
-    "visuals": "guardian_spell_block_aura",
-    "category": "Buff",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
   "capture_monster_trapped": {
     "description": "",
     "invisible": true,
@@ -19582,10 +19660,10 @@
         },
         "stat_text": [
           "增加 100% 傷害",
-          "增加 25% 攻擊速度",
+          "增加 25% [Attack|攻擊]速度",
           "增加 25% 施放速度",
           "增加 25% 移動速度",
-          "10% 額外物理傷害減免"
+          "額外 10% [Physical|物理]傷害減免"
         ],
         "visuals": null
       }
@@ -19678,7 +19756,7 @@
         "stat_text": [
           "增加 1% 移動速度",
           "[SkillSpeed|技能速度]增加 3%",
-          "增加 15% 閃避值"
+          "[Evasion|閃避值]增加 15%"
         ],
         "visuals": null
       },
@@ -19694,7 +19772,7 @@
         "stat_text": [
           "增加 1% 移動速度",
           "[SkillSpeed|技能速度]增加 3%",
-          "增加 15% 閃避值"
+          "[Evasion|閃避值]增加 15%"
         ],
         "visuals": null
       },
@@ -19710,7 +19788,7 @@
         "stat_text": [
           "增加 1% 移動速度",
           "[SkillSpeed|技能速度]增加 3%",
-          "增加 15% 閃避值"
+          "[Evasion|閃避值]增加 15%"
         ],
         "visuals": null
       }
@@ -20606,6 +20684,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "blood_ground_invisible": {
+    "description": "You are taking Physical Damage over time",
+    "invisible": true,
+    "name": "Boiling Blood",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "vaal_righteous_fire_duration_aura": {
     "description": "你持續受到附近使用正義之火敵人的燃燒傷害",
     "invisible": false,
@@ -20662,7 +20754,7 @@
     "stack_limit": null
   },
   "arc_enhanced_behaviour": {
-    "description": "你的電弧傷害會以幸運進行計算",
+    "description": "你的電弧傷害會帶有幸運",
     "invisible": false,
     "name": "幸運電弧",
     "removable": false,
@@ -20994,7 +21086,7 @@
     "stack_limit": null
   },
   "unique_nearby_allies_are_lucky": {
-    "description": "你攻擊敵人時會以幸運進行計算。",
+    "description": "你對敵人造成傷害時會帶有幸運。",
     "invisible": false,
     "name": "珀奎爾的指頭",
     "removable": false,
@@ -21865,6 +21957,7 @@
     "stats": [
       "attack_damage_+%_final_from_war_banner",
       "accuracy_rating_+%",
+      "attack_speed_+%",
       "base_resist_all_elements_%"
     ],
     "visuals": "bloodstained_banner",
@@ -21931,7 +22024,8 @@
     "name": "恐懼之旗",
     "removable": false,
     "stats": [
-      "stun_and_ailment_threshold_+%_final_from_dread_banner",
+      "ailment_threshold_+%_final_from_dread_banner",
+      "additional_maximum_all_elemental_resistances_%",
       "generate_x_charges_for_any_flask_per_minute",
       "base_resist_all_elements_%"
     ],
@@ -22082,21 +22176,6 @@
       "action_speed_-%"
     ],
     "visuals": "secret_police_taser",
-    "category": "Debuff",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "overpowered_reduced_block_chance": {
-    "description": "減少你格擋攻擊和法術擊中率。",
-    "invisible": false,
-    "name": "壓制",
-    "removable": false,
-    "stats": [
-      "base_spell_block_%",
-      "monster_base_block_%"
-    ],
-    "visuals": "overpowered",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -22840,7 +22919,7 @@
           "attack_and_cast_speed_+%": 0
         },
         "stat_text": [
-          "增加 39% 法術暴擊率",
+          "[Spell|法術]增加 39% [Critical|暴擊率]",
           "你擊中稀有或傳奇敵人時有 10% 機率製造奉獻地面，持續 8 秒"
         ],
         "visuals": null
@@ -23490,8 +23569,8 @@
         "stat_text": [
           "擊中時有 20% 機率獲得 1 顆暴擊球、狂怒球或耐力球",
           "擊殺時有 60% 機率獲得 1 顆暴擊、狂怒或耐力球",
-          "每個暴擊球增加 40% 暴擊率",
-          "每個狂怒球增加 4% 攻擊速度",
+          "每個暴擊球增加 40% [Critical|暴擊]率",
+          "每有一個狂怒球增加 4% [Attack|攻擊]速度",
           "每顆耐力球有 4% 額外物理傷害減免",
           "每個耐力球 +4% 全部元素抗性",
           "每顆狂怒、暴擊或耐力球增加 5% 傷害"
@@ -23534,8 +23613,8 @@
         "stat_text": [
           "擊中時有 20% 機率獲得 1 顆暴擊球、狂怒球或耐力球",
           "擊殺時有 60% 機率獲得 1 顆暴擊、狂怒或耐力球",
-          "每個暴擊球增加 40% 暴擊率",
-          "每個狂怒球增加 4% 攻擊速度",
+          "每個暴擊球增加 40% [Critical|暴擊]率",
+          "每有一個狂怒球增加 4% [Attack|攻擊]速度",
           "每顆耐力球有 4% 額外物理傷害減免",
           "每個耐力球 +4% 全部元素抗性",
           "每顆狂怒、暴擊或耐力球增加 5% 傷害"
@@ -23559,8 +23638,8 @@
         "stat_text": [
           "擊中時有 20% 機率獲得 1 顆暴擊球、狂怒球或耐力球",
           "擊殺時有 60% 機率獲得 1 顆暴擊、狂怒或耐力球",
-          "每個暴擊球增加 40% 暴擊率",
-          "每個狂怒球增加 4% 攻擊速度",
+          "每個暴擊球增加 40% [Critical|暴擊]率",
+          "每有一個狂怒球增加 4% [Attack|攻擊]速度",
           "每顆耐力球有 4% 額外物理傷害減免",
           "每個耐力球 +4% 全部元素抗性",
           "每顆狂怒、暴擊或耐力球增加 5% 傷害"
@@ -24035,7 +24114,7 @@
     "stack_limit": null
   },
   "screech_snipe_debuff": {
-    "description": "你被奧庫納的獵捕影響。奧庫納對你發射額外投射物。塊陶阿！",
+    "description": "你被奧庫納的獵捕影響。奧庫納對你發射額外投射物。快逃啊！",
     "invisible": false,
     "name": "奧庫納的獵捕",
     "removable": false,
@@ -24260,7 +24339,7 @@
         },
         "stat_text": [
           "增加 30% 範圍效果",
-          "擊中時威嚇敵人 4 秒",
+          "[HitDamage|擊中]時會[Intimidate|威嚇]敵人，持續 4 秒",
           "擊中時使敵人膽怯 4 秒"
         ],
         "visuals": null
@@ -24274,7 +24353,7 @@
           "chance_to_unnerve_on_hit_%": 100
         },
         "stat_text": [
-          "擊中時威嚇敵人 4 秒",
+          "[HitDamage|擊中]時會[Intimidate|威嚇]敵人，持續 4 秒",
           "擊中時使敵人膽怯 4 秒"
         ],
         "visuals": null
@@ -24864,7 +24943,7 @@
   },
   "minion_instability_support_aura_burn": {
     "description": "",
-    "invisible": false,
+    "invisible": true,
     "name": "",
     "removable": false,
     "stats": [],
@@ -25185,7 +25264,7 @@
   },
   "blight_ice_elemental_tower_freeze": {
     "description": "",
-    "invisible": false,
+    "invisible": true,
     "name": "",
     "removable": false,
     "stats": [
@@ -26603,13 +26682,13 @@
         "visuals": "archnemesis_maim"
       },
       "MonsterHinderAura1": {
-        "aura_radius_metres": 3.0,
+        "aura_radius_metres": 3.6,
         "stats": null,
         "stat_text": null,
         "visuals": "monster_aura_hinder"
       },
       "PlayerMonsterHinderAura1": {
-        "aura_radius_metres": 3.0,
+        "aura_radius_metres": 3.6,
         "stats": null,
         "stat_text": null,
         "visuals": "monster_aura_hinder"
@@ -26639,16 +26718,16 @@
         "visuals": null
       },
       "TrenchHagDrowningOrb": {
-        "aura_radius_metres": 0.8,
+        "aura_radius_metres": 0.7,
         "stats": null,
         "stat_text": null,
         "visuals": "trench_hag_drowning_orb"
       },
       "SirenBossDrowningOrb": {
-        "aura_radius_metres": 0.8,
+        "aura_radius_metres": 0.7,
         "stats": null,
         "stat_text": null,
-        "visuals": null
+        "visuals": "trench_hag_drowning_orb"
       }
     },
     "stack_limit": null
@@ -27014,7 +27093,7 @@
     "templates": null,
     "stack_limit": null
   },
-  "rage_regeneration": {
+  "rage_gain_over_time": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -27040,27 +27119,13 @@
     "templates": null,
     "stack_limit": null
   },
-  "seismic_cry": {
-    "description": "你更容易暈眩敵人。",
-    "invisible": false,
-    "name": "裂地戰吼",
-    "removable": false,
-    "stats": [
-      "base_stun_threshold_reduction_+%",
-      "affected_by_a_warcry"
-    ],
-    "visuals": "seismic_cry",
-    "category": "Buff",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
   "ancestral_cry": {
-    "description": "你有近戰範圍和護甲加成。",
+    "description": "你已成為岡姆的化身。你的[Strike|打擊]和[Slam|重擊]受到[AncestralBoost|先祖強化]。",
     "invisible": false,
     "name": "先祖戰吼",
     "removable": false,
     "stats": [
+      "base_actor_scale_+%",
       "affected_by_a_warcry"
     ],
     "visuals": "ancestral_cry",
@@ -28009,7 +28074,9 @@
     "invisible": true,
     "name": "烈焰之牆",
     "removable": false,
-    "stats": [],
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
     "visuals": "invisible",
     "category": "Debuff",
     "sources": null,
@@ -28456,8 +28523,7 @@
     "stats": [
       "spell_minimum_added_physical_damage",
       "spell_maximum_added_physical_damage",
-      "cannot_block_attacks",
-      "cannot_block_spells",
+      "cannot_block",
       "gain_no_defences_from_equipped_shield"
     ],
     "visuals": "shattered_shield_buff",
@@ -29482,6 +29548,36 @@
     "templates": null,
     "stack_limit": null
   },
+  "sulphite_spire_mined_buff": {
+    "description": "你具有增加的移動速度、額外的元素抗性，並獲得相當於傷害 30% 的額外[Lightning|閃電]傷害",
+    "invisible": false,
+    "name": "醉硫酸",
+    "removable": false,
+    "stats": [
+      "base_movement_velocity_+%",
+      "non_skill_base_all_damage_%_to_gain_as_lightning",
+      "base_resist_all_elements_%"
+    ],
+    "visuals": "sulphite_spire_mined_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "sulphite_spire_monster_buff": {
+    "description": "獲得相當於傷害 30% 的額外[Lightning|閃電]傷害",
+    "invisible": false,
+    "name": "醉硫酸",
+    "removable": false,
+    "stats": [
+      "non_skill_base_all_damage_%_to_gain_as_lightning"
+    ],
+    "visuals": "sulphite_spire_monster_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "number_of_non_instant_spells_cast_in_past_8_seconds": {
     "description": "",
     "invisible": true,
@@ -30496,7 +30592,7 @@
     "category": "Debuff",
     "sources": null,
     "templates": null,
-    "stack_limit": 3
+    "stack_limit": null
   },
   "blood_tendrils_fire": {
     "description": "你正在承受火焰持續傷害。",
@@ -30701,7 +30797,7 @@
         "stat_text": [
           "減少 40% 生命恢復率",
           "減少 40% 魔力恢復率",
-          "減少 40% 能量護盾恢復率"
+          "[EnergyShield|能量護盾]恢復率減少 40%"
         ],
         "visuals": null
       },
@@ -30715,7 +30811,7 @@
         "stat_text": [
           "減少 75% 生命恢復率",
           "減少 75% 魔力恢復率",
-          "減少 75% 能量護盾恢復率"
+          "[EnergyShield|能量護盾]恢復率減少 75%"
         ],
         "visuals": null
       }
@@ -30761,8 +30857,8 @@
           "additional_maximum_all_elemental_resistances_%": -10
         },
         "stat_text": [
-          "-15% 全部元素抗性",
-          "-10% 全部最大元素抗性"
+          "所有[ElementalDamage|元素][Resistances|抗性] -15%",
+          "所有[MaximumResistances|最大元素抗性] -10%"
         ],
         "visuals": null
       },
@@ -30773,8 +30869,8 @@
           "additional_maximum_all_elemental_resistances_%": -20
         },
         "stat_text": [
-          "-30% 全部元素抗性",
-          "-20% 全部最大元素抗性"
+          "所有[ElementalDamage|元素][Resistances|抗性] -30%",
+          "所有[MaximumResistances|最大元素抗性] -20%"
         ],
         "visuals": null
       }
@@ -30939,8 +31035,8 @@
           "debuff_time_passed_+%": -66
         },
         "stat_text": [
-          "你身上的增益加速 200% 失效",
-          "減緩減益效果失效 66%"
+          "你身上的[Buff|增益效果]加快 200% 失效",
+          "你身上的[Debuff|減益效果]減緩 66% 失效"
         ],
         "visuals": null
       }
@@ -31136,7 +31232,7 @@
           "cannot_recover_above_low_life_except_flasks": 1
         },
         "stat_text": [
-          "藥劑以外的生命恢復無法使生命恢復到高於貧血狀態"
+          "[Flask|藥劑]以外的生命恢復無法使生命恢復到高於[LowLife|貧血狀態]"
         ],
         "visuals": null
       }
@@ -31339,7 +31435,7 @@
           "extra_critical_rolls": -1
         },
         "stat_text": [
-          "不幸的暴擊率"
+          "你的[Critical|暴擊]率很不幸"
         ],
         "visuals": null
       }
@@ -31412,7 +31508,7 @@
           "non_damaging_ailments_reflected_to_self": 1
         },
         "stat_text": [
-          "你造成的詛咒會反射至你",
+          "你造成的[Curse|詛咒]會反射給你",
           "除了[Freeze|冰凍]以外，你所造成的其他非傷害性異常狀態會反射回你身上"
         ],
         "visuals": null
@@ -31734,7 +31830,7 @@
     "stack_limit": null
   },
   "damage_immune_while_owner_lives": {
-    "description": "你不會受到傷害",
+    "description": "你不會受到敵人的傷害。",
     "invisible": false,
     "name": "調停",
     "removable": false,
@@ -31841,6 +31937,12 @@
     },
     "templates": {
       "UltimatumDealNoDamageFor2SecondEvery8Seconds": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      },
+      "PlayerDebuffDealNoDamageFor3SecondEvery10Seconds": {
         "aura_radius_metres": null,
         "stats": null,
         "stat_text": null,
@@ -32318,20 +32420,6 @@
     "templates": null,
     "stack_limit": null
   },
-  "flask_bonus_adaptation_rating": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [
-      "adaptation_rating_+%"
-    ],
-    "visuals": "invisible",
-    "category": "Flask",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
   "frontal_proximity_shield": {
     "description": "你不會受到盾牌前敵人的直接傷害。",
     "invisible": false,
@@ -32353,20 +32441,6 @@
     "removable": false,
     "stats": [
       "ward_does_not_break"
-    ],
-    "visuals": "invisible",
-    "category": "Flask",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "flask_bonus_adaptations_apply_to_all_elements": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [
-      "adaptations_apply_to_all_elements"
     ],
     "visuals": "invisible",
     "category": "Flask",
@@ -32819,7 +32893,7 @@
     "templates": null,
     "stack_limit": null
   },
-  "injected_liquid": {
+  "permanent_flasks": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -33231,8 +33305,7 @@
     "removable": true,
     "stats": [
       "take_%_of_hit_damage_from_soul_link_source_energy_shield_before_you",
-      "damage_taken_+%_final_from_soul_link",
-      "mana_regeneration_rate_+%"
+      "damage_taken_+%_final_from_soul_link"
     ],
     "visuals": "soul_link_target",
     "category": "Link",
@@ -33259,8 +33332,7 @@
     "removable": true,
     "stats": [
       "global_minimum_added_fire_damage",
-      "global_maximum_added_fire_damage",
-      "base_chance_to_ignite_%"
+      "global_maximum_added_fire_damage"
     ],
     "visuals": "flame_link_target",
     "category": "Link",
@@ -33563,13 +33635,13 @@
     "templates": null,
     "stack_limit": null
   },
-  "have_cast_a_mark_spell_recently": {
+  "have_used_a_mark_recently": {
     "description": "",
     "invisible": true,
     "name": "",
     "removable": false,
     "stats": [
-      "have_cast_a_mark_spell_recently"
+      "have_used_a_mark_recently"
     ],
     "visuals": "invisible",
     "category": null,
@@ -34040,7 +34112,7 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "增加 500% 暴擊率"
+          "[Critical|暴擊]率增加 500%"
         ],
         "visuals": null
       }
@@ -34171,6 +34243,36 @@
       "no_mana_recovery"
     ],
     "visuals": "monster_mod_mana_siphoner",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "monster_mod_abyss_mana_siphoner": {
+    "description": "你受到閃電持續傷害和被抽乾魔力。你不會恢復魔力",
+    "invisible": false,
+    "name": "魔力吸取",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "izaro_charge_damage_+%_final"
+    ],
+    "visuals": "monster_mod_abyss_mana_siphonerCopy",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "monster_mod_abyss_mana_siphoner_outer": {
+    "description": "You are taking Physical Damage over time and lose Skill Speed as you use Skills.",
+    "invisible": false,
+    "name": "Soul Siphoning of Exhaustion",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "skill_speed_+%_final_per_recent_skill_use"
+    ],
+    "visuals": "monster_mod_abyss_mana_siphonerCopy",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -34363,7 +34465,7 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "增加 50% 物品稀有度",
+          "找到的[ItemRarity|物品稀有度]增加 50%",
           "增加 15% 物品數量",
           "增加 20% 承受傷害"
         ],
@@ -34944,7 +35046,7 @@
           "non_skill_base_physical_damage_%_to_gain_as_fire": 100
         },
         "stat_text": [
-          "獲得 100% 物理傷害的火焰傷害"
+          "[Gain|獲得]相當於 100% [Physical|物理]傷害的額外[Fire|火焰]傷害"
         ],
         "visuals": null
       }
@@ -34969,7 +35071,7 @@
           "non_skill_base_physical_damage_%_to_gain_as_cold": 100
         },
         "stat_text": [
-          "獲得 100% 物理傷害的冰冷傷害"
+          "[Gain|獲得]相當於 100% [Physical|物理]傷害的額外[Cold|冰冷]傷害"
         ],
         "visuals": null
       }
@@ -34994,7 +35096,7 @@
           "non_skill_base_physical_damage_%_to_gain_as_lightning": 100
         },
         "stat_text": [
-          "獲得 100% 物理傷害的閃電傷害"
+          "[Gain|獲得]相當於 100% [Physical|物理]傷害的額外[Lightning|閃電]傷害"
         ],
         "visuals": null
       }
@@ -35019,7 +35121,7 @@
           "non_skill_base_physical_damage_%_to_gain_as_chaos": 100
         },
         "stat_text": [
-          "獲得 100% 物理傷害的混沌傷害"
+          "[Gain|獲得]相當於 100% [Physical|物理]傷害的額外[Chaos|混沌]傷害"
         ],
         "visuals": null
       }
@@ -35166,7 +35268,7 @@
           "life_mana_es_recovery_rate_+%_per_endurance_charge": -4
         },
         "stat_text": [
-          "每顆耐力球減少 4% 生命、魔力和能量護盾恢復率"
+          "每有一個耐力球減少 4% 生命、魔力和[EnergyShield|能量護盾]恢復率"
         ],
         "visuals": null
       }
@@ -35262,26 +35364,11 @@
           "travel_skill_cooldown_speed_+%_final_from_fire_rune": -50
         },
         "stat_text": [
-          "-5% 最大火焰抗性"
+          "[MaximumResistances|最大火焰抗性] -5%"
         ],
         "visuals": null
       }
     },
-    "stack_limit": null
-  },
-  "infinite_hunger_corrosion": {
-    "description": "每層腐蝕飢餓使你 -1% 物理傷害減免和 -1% 閃避率。",
-    "invisible": false,
-    "name": "腐蝕飢餓",
-    "removable": false,
-    "stats": [
-      "base_additional_physical_damage_reduction_%",
-      "chance_to_evade_attacks_%"
-    ],
-    "visuals": "infinite_hunger_corrosion",
-    "category": "Debuff",
-    "sources": null,
-    "templates": null,
     "stack_limit": null
   },
   "tag_nearby_monsters_with_mod": {
@@ -35785,7 +35872,7 @@
     "stack_limit": null
   },
   "galvanic_field_bonus": {
-    "description": "你有額外感電機率。感電敵人會製造電光領域。",
+    "description": "你有更多感電機率。感電敵人會產生一顆球體。",
     "invisible": false,
     "name": "電光領域",
     "removable": false,
@@ -35928,9 +36015,9 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "100% 機率避免被冰緩",
-          "100% 機率避免被冰凍",
-          "不會被暈眩",
+          "避免被[Chill|冰緩]的機率有 100%",
+          "避免被[Freeze|冰凍]的機率有 100%",
+          "無法被[Stun|暈眩]",
           "承受 20% 的擊中物理傷害視為冰冷傷害"
         ],
         "visuals": null
@@ -35949,12 +36036,12 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "增加 50% 冰冷傷害",
-          "100% 機率避免被冰緩",
-          "100% 機率避免被冰凍",
-          "+10% 最大冰冷抗性",
-          "+50% 冰冷抗性",
-          "傷害穿透 10% 冰冷抗性"
+          "[Cold|冰冷]傷害增加 50%",
+          "避免被[Chill|冰緩]的機率有 100%",
+          "避免被[Freeze|冰凍]的機率有 100%",
+          "[MaximumResistances|最大冰冷抗性] +10%",
+          "[Resistances|冰冷抗性] +50%",
+          "傷害[Penetration|穿透] 10% [Resistances|冰冷抗性]"
         ],
         "visuals": "shrine_monster_affected"
       }
@@ -35989,8 +36076,8 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "增加 50% 冰冷傷害",
-          "技能發射 2 個額外投射物",
+          "[Cold|冰冷]傷害增加 50%",
+          "技能發射額外 2 個[Projectile|投射物]",
           "技能連鎖 +2",
           "避免投射物"
         ],
@@ -36007,8 +36094,8 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "增加 50% 冰冷傷害",
-          "技能發射 2 個額外投射物",
+          "[Cold|冰冷]傷害增加 50%",
+          "技能發射額外 2 個[Projectile|投射物]",
           "50% 機率避免投射物",
           "減少 50% 承受的元素傷害"
         ],
@@ -36045,8 +36132,8 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "增加 50% 火焰傷害",
-          "不會受到暴擊產成的額外暴擊傷害",
+          "[Fire|火焰]傷害增加 50%",
+          "遭[Critical|暴擊]時不會承受額外傷害",
           "100% 機率避免元素異常狀態"
         ],
         "visuals": null
@@ -36062,10 +36149,10 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "增加 50% 火焰傷害",
-          "不會受到暴擊產成的額外暴擊傷害",
+          "[Fire|火焰]傷害增加 50%",
+          "遭[Critical|暴擊]時不會承受額外傷害",
           "50% 機率避免元素異常狀態",
-          "傷害穿透 10% 火焰抗性"
+          "傷害[Penetration|穿透] 10% [Resistances|火焰抗性]"
         ],
         "visuals": "shrine_monster_affected"
       }
@@ -36100,9 +36187,9 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "增加 50% 混沌傷害",
-          "獲得 15% 物理傷害的混沌傷害",
-          "獲得等同 15% 元素傷害的額外混沌傷害",
+          "[Chaos|混沌]傷害增加 50%",
+          "[Gain|獲得]相當於 15% [Physical|物理]傷害的額外[Chaos|混沌]傷害",
+          "[Gain|獲得]相當於 15% 元素傷害的額外混沌傷害",
           "減少 100% 所承受的持續性傷害"
         ],
         "visuals": null
@@ -36118,8 +36205,8 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "增加 50% 混沌傷害",
-          "獲得 10% 物理傷害的混沌傷害",
+          "[Chaos|混沌]傷害增加 50%",
+          "[Gain|獲得]相當於 10% [Physical|物理]傷害的額外[Chaos|混沌]傷害",
           "減少 50% 所承受的持續性傷害"
         ],
         "visuals": "shrine_monster_affected"
@@ -37119,7 +37206,7 @@
     },
     "stack_limit": null
   },
-  "number_of_times_have_suppressed_a_spell_recently": {
+  "number_of_times_have_deflected_a_hit_recently": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -37308,7 +37395,8 @@
     "name": "",
     "removable": false,
     "stats": [
-      "base_damage_taken_+%"
+      "base_damage_taken_+%",
+      "fire_damage_taken_+%"
     ],
     "visuals": "invisible",
     "category": null,
@@ -37510,7 +37598,7 @@
           "base_cooldown_speed_+%": -10
         },
         "stat_text": [
-          "減少 10% 冷卻恢復速度"
+          "減少 10% [CooldownRecovery|冷卻時間恢復率]"
         ],
         "visuals": null
       }
@@ -37545,7 +37633,7 @@
     "templates": null,
     "stack_limit": null
   },
-  "marked_enemy_cannot_regenerate_life": {
+  "cannot_regenerate_life": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -37696,58 +37784,6 @@
     "name": "",
     "removable": false,
     "stats": [],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "guardian_alternating_block_chance": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [
-      "buff_impl_stat",
-      "buff_impl_stat"
-    ],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": {
-      "GuardianAlternatingBlockChance": {
-        "aura_radius_metres": null,
-        "stats": {
-          "buff_impl_stat": 50
-        },
-        "stat_text": null,
-        "visuals": null
-      }
-    },
-    "stack_limit": null
-  },
-  "guardian_alternating_attack_block_chance_%": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [
-      "additional_block_%"
-    ],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "guardian_alternating_spell_block_chance_%": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [
-      "additional_spell_block_%"
-    ],
     "visuals": "invisible",
     "category": null,
     "sources": null,
@@ -38425,7 +38461,7 @@
   },
   "chimera_corrupted_ground": {
     "description": "你正在承受火焰、閃電和混沌持續傷害。",
-    "invisible": false,
+    "invisible": true,
     "name": "WIP",
     "removable": false,
     "stats": [
@@ -38593,7 +38629,7 @@
     "stats": [
       "monster_aggro_radius_+%"
     ],
-    "visuals": "invisible",
+    "visuals": "goblin_drumming_aggro",
     "category": "Buff",
     "sources": null,
     "templates": null,
@@ -38605,10 +38641,7 @@
     "name": "",
     "removable": false,
     "stats": [
-      "attack_speed_+%",
-      "base_cast_speed_+%",
-      "base_movement_velocity_+%",
-      "base_damage_taken_+%"
+      "attack_damage_+%"
     ],
     "visuals": "invisible",
     "category": "Buff",
@@ -38688,13 +38721,13 @@
     "stack_limit": null
   },
   "ground_sulphite": {
-    "description": "你正在承受閃電和混沌持續傷害。",
+    "description": "你受到閃電和物理持續傷害。",
     "invisible": false,
-    "name": "硫酸劇毒",
+    "name": "魔暴硫酸地面",
     "removable": false,
     "stats": [
       "base_lightning_damage_taken_per_minute",
-      "base_chaos_damage_taken_per_minute"
+      "base_physical_damage_taken_per_minute"
     ],
     "visuals": "ground_sulphite",
     "category": "Debuff",
@@ -38708,7 +38741,8 @@
     "name": "WIP",
     "removable": false,
     "stats": [
-      "base_physical_damage_taken_per_minute"
+      "base_physical_damage_taken_per_minute",
+      "base_fire_damage_taken_per_minute"
     ],
     "visuals": "bloodfever_aura_of_flies",
     "category": "Debuff",
@@ -38786,7 +38820,7 @@
     "stack_limit": null
   },
   "monster_smite_lightning_and_undead_damage": {
-    "description": "WIP",
+    "description": "Allies deal additional lightning damage and additional damage against the undead.",
     "invisible": false,
     "name": "WIP",
     "removable": false,
@@ -38844,14 +38878,14 @@
     "templates": null,
     "stack_limit": null
   },
-  "rapid_shot_buff": {
+  "heat": {
     "description": "疾射和擲彈技能[Gain|獲得][Fire|火焰]傷害",
     "invisible": false,
-    "name": "加熱",
+    "name": "熱能",
     "removable": false,
     "stats": [],
-    "visuals": "rapid_shot_buff",
-    "category": "Active skill",
+    "visuals": "heat",
+    "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -38880,20 +38914,6 @@
     ],
     "visuals": "invisible",
     "category": "Debuff",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "twilight_soldier_frozen_shield": {
-    "description": "",
-    "invisible": true,
-    "name": "WIP",
-    "removable": false,
-    "stats": [
-      "projectile_damage_taken_+%"
-    ],
-    "visuals": "invisible",
-    "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -39204,7 +39224,7 @@
     "stats": [
       "monster_base_block_%",
       "additional_maximum_block_%",
-      "can_block_all_hits"
+      "can_block_from_all_directions"
     ],
     "visuals": "serpent_boss_bone_armour",
     "category": "Buff",
@@ -39344,7 +39364,7 @@
   },
   "pinned": {
     "description": "你無法移動。",
-    "invisible": false,
+    "invisible": true,
     "name": "被釘身",
     "removable": false,
     "stats": [
@@ -39482,6 +39502,30 @@
     "stack_limit": null
   },
   "cast_on_ignite_count": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "cast_on_ailments_reserve": {
+    "description": "",
+    "invisible": false,
+    "name": "元素異常狀態時施放",
+    "removable": false,
+    "stats": [],
+    "visuals": "cast_on_ailments_reserve",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "cast_on_ailments_count": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -39645,7 +39689,9 @@
     "name": "完全破甲",
     "removable": false,
     "stats": [
-      "physical_damage_taken_+%_from_hits",
+      "broken_armor_and_sundered_armor_physical_damage_taken_+%_from_hits",
+      "no_life_regeneration",
+      "fully_broken_armour_and_sundered_armour_debuff_also_applies_to_fire_damage_taken",
       "armour_is_fully_broken"
     ],
     "visuals": "armour_broken",
@@ -39667,7 +39713,7 @@
     "stack_limit": null
   },
   "barrier_invocation_reserve": {
-    "description": "能量護盾受到傷害時你會獲得能量。消耗儲存的能量可觸發屏障祈願插槽中的法術。",
+    "description": "",
     "invisible": false,
     "name": "屏障祈願",
     "removable": false,
@@ -39949,7 +39995,7 @@
         },
         "stat_text": [
           "擊中時必定冰凍敵人",
-          "你的擊中必定點燃",
+          "擊中必定造成[Ignite|點燃]",
           "你的擊中必定感電"
         ],
         "visuals": null
@@ -40257,18 +40303,20 @@
     "stack_limit": null
   },
   "bone_offering_hit_absorption": {
-    "description": "",
+    "description": "You are taking less Damage from Hits while shielded.",
     "invisible": false,
     "name": "骸骨奉獻",
     "removable": false,
-    "stats": [],
+    "stats": [
+      "damage_taken_+%_final_from_bone_offering"
+    ],
     "visuals": "bone_armour_buff_effect",
     "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
-  "bone_offering_impaled": {
+  "impaled_by_offering_spike": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -40697,6 +40745,48 @@
     "templates": null,
     "stack_limit": null
   },
+  "sceptre_allies_physical_damage": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "physical_damage_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "sceptre_allies_elemental_damage": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "elemental_damage_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "sceptre_allies_chaos_damage": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "chaos_damage_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "electrocuting_arrow_debuff": {
     "description": "",
     "invisible": false,
@@ -40707,6 +40797,18 @@
     ],
     "visuals": "electrocuting_arrow_debuff",
     "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "electrocuting_arrow_attached_visual": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -40738,19 +40840,21 @@
     "stack_limit": null
   },
   "igneous_shield_buff": {
-    "description": "格擋以暫時為你的盾牌注入火焰之力",
+    "description": "你[Block|格擋]的機率增加。在最大充能下，舉起你的盾牌來為你下一次的[Block|格擋]注入[Fire|火焰]，並賦予一個[Charges|耐力球]。",
     "invisible": false,
     "name": "熔岩屏障",
     "removable": false,
-    "stats": [],
+    "stats": [
+      "block_chance_+%"
+    ],
     "visuals": "igneous_shield_hidden",
-    "category": null,
+    "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
   "igneous_shield_blocking": {
-    "description": "你的盾牌暫時注入了火焰之力",
+    "description": "你下一次的[Block|格擋]注入了[Fire|火焰]，並賦予一個[Charges|耐力球]。",
     "invisible": false,
     "name": "熔岩屏障主動格擋",
     "removable": false,
@@ -41151,8 +41255,8 @@
           "base_cold_damage_resistance_%": -30
         },
         "stat_text": [
-          "-30% 火焰抗性",
-          "-30% 冰冷抗性"
+          "[Resistances|火焰抗性] -30%",
+          "[Resistances|冰冷抗性] -30%"
         ],
         "visuals": null
       }
@@ -41366,6 +41470,35 @@
     "templates": null,
     "stack_limit": null
   },
+  "tornado_degen": {
+    "description": "由於身處龍捲風中，你正在承受物理持續傷害且移動速度減少。深入龍捲風會被額外施加一層此效果。",
+    "invisible": false,
+    "name": "龍捲風",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "tornado_degen",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "fire_tornado_degen": {
+    "description": "你因身處龍捲風內承受火焰持續傷害。 ",
+    "invisible": false,
+    "name": "火炎龍捲風",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "tornado_degen",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "player_low_aggro": {
     "description": "",
     "invisible": true,
@@ -41475,12 +41608,14 @@
     "templates": null,
     "stack_limit": null
   },
-  "grim_feast_visual": {
-    "description": "附近的敵人和召喚物死亡時會製造冷酷殘骸，收集時可獲得能量護盾。",
+  "grim_feast": {
+    "description": "附近的敵人和召喚物死亡時會產生殘酷痕跡，收集時可獲得能量護盾。",
     "invisible": false,
     "name": "冷酷之宴",
     "removable": false,
-    "stats": [],
+    "stats": [
+      "grim_remnant_health_stored"
+    ],
     "visuals": "grim_feast",
     "category": null,
     "sources": null,
@@ -41613,6 +41748,20 @@
     ],
     "visuals": "blink_reservation",
     "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "black_powder_blitz_reservation": {
+    "description": "Your dodge roll is replaced by an explosive leap.",
+    "invisible": false,
+    "name": "Black Powder Blitz",
+    "removable": false,
+    "stats": [
+      "dodge_roll_is_replaced_by_black_powder_blitz"
+    ],
+    "visuals": "black_powder_blitz_reservation",
+    "category": "Active skill",
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -41974,7 +42123,7 @@
     "stack_limit": null
   },
   "life_remnants_visual": {
-    "description": "當你擊殺或對敵人造成暴擊時會製造生命痕跡，將其收集起來可恢復生命。",
+    "description": "當你擊殺或擊中敵人時會製造生命痕跡，走過生命痕跡會消耗它並恢復你的生命",
     "invisible": false,
     "name": "生命痕跡",
     "removable": false,
@@ -42481,78 +42630,6 @@
     "templates": null,
     "stack_limit": 6
   },
-  "has_placed_banner": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "valour": {
-    "description": "",
-    "invisible": false,
-    "name": "勇氣",
-    "removable": false,
-    "stats": [],
-    "visuals": "generic_movement_speed_buff",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "valour_war": {
-    "description": "",
-    "invisible": true,
-    "name": "勇氣",
-    "removable": false,
-    "stats": [],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "valour_defiance": {
-    "description": "",
-    "invisible": true,
-    "name": "勇氣",
-    "removable": false,
-    "stats": [],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "valour_dread": {
-    "description": "",
-    "invisible": true,
-    "name": "勇氣",
-    "removable": false,
-    "stats": [],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "valour_gain_cooldown": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
   "banner_debuff_aura": {
     "description": "",
     "invisible": true,
@@ -42615,16 +42692,16 @@
     "templates": null,
     "stack_limit": null
   },
-  "thaumaturgist_mark": {
+  "voltaic_mark": {
     "description": "",
     "invisible": false,
-    "name": "奇術師的印記",
+    "name": "電流印記",
     "removable": false,
     "stats": [
       "shocked_effect_on_self_+%",
       "shock_chance_on_self_+%_final_from_thaumaturgist_mark"
     ],
-    "visuals": "thaumaturgist_mark",
+    "visuals": "voltaic_mark",
     "category": "Mark",
     "sources": null,
     "templates": null,
@@ -42650,7 +42727,7 @@
     "stats": [
       "ailment_bearer_elemental_damage_+%_final",
       "unbound_ailment_elemental_ailment_chance_+%_final",
-      "unbound_ailment_elemental_ailment_buildup_+%_final",
+      "unbound_ailment_hit_damage_elemental_immobilisation_multiplier_+%_final",
       "ailment_bearer_active"
     ],
     "visuals": "ailment_bearer",
@@ -42836,7 +42913,7 @@
     "removable": false,
     "stats": [
       "base_life_lost_per_minute_nonlethal",
-      "spell_damage_+%"
+      "spell_damage_+%_final_from_demon_flame"
     ],
     "visuals": "demon_form_buff",
     "category": null,
@@ -42864,7 +42941,6 @@
     "name": "",
     "removable": false,
     "stats": [
-      "can_gain_war_banner_resource",
       "player_needs_to_track_unique_enemies_in_your_presence"
     ],
     "visuals": "invisible",
@@ -42879,7 +42955,6 @@
     "name": "",
     "removable": false,
     "stats": [
-      "can_gain_defiance_banner_resource",
       "player_needs_to_track_unique_enemies_in_your_presence"
     ],
     "visuals": "invisible",
@@ -42894,7 +42969,6 @@
     "name": "",
     "removable": false,
     "stats": [
-      "can_gain_dread_banner_resource",
       "player_needs_to_track_unique_enemies_in_your_presence"
     ],
     "visuals": "invisible",
@@ -42954,7 +43028,7 @@
     "stack_limit": null
   },
   "jade_stacks": {
-    "description": "每層賦予 1% 額外物理傷害減免。翠玉的上限為 10 層。當你承受[HitDamage|擊中]的物理傷害時，失去一層翠玉。",
+    "description": "每層賦予 1% 額外物理傷害減免，最大 10 層翠玉。",
     "invisible": false,
     "name": "翠玉",
     "removable": true,
@@ -43289,9 +43363,9 @@
     "stack_limit": null
   },
   "sanctum_frozen_hideout": {
-    "description": "You are slowed",
+    "description": "你被緩速。",
     "invisible": false,
-    "name": "Slowed Time",
+    "name": "時間減緩",
     "removable": false,
     "stats": [
       "hourglass_hideout_decoration_movement_speed_+%_final"
@@ -43338,7 +43412,7 @@
     "templates": null,
     "stack_limit": null
   },
-  "number_of_crossbow_bolts_reloaded_in_past_6_seconds": {
+  "number_of_crossbow_bolts_reloaded_in_past_X_seconds_from_support_fresh_clip": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -43398,7 +43472,7 @@
           "non_skill_base_all_damage_%_to_gain_as_fire": 100
         },
         "stat_text": [
-          "[Gain|獲得]相當於傷害 100% 的額外火焰傷害"
+          "[Gain|獲得]相當於傷害 100% 的額外[Fire|火焰]傷害"
         ],
         "visuals": null
       },
@@ -43409,7 +43483,7 @@
           "non_skill_base_all_damage_%_to_gain_as_fire": 100
         },
         "stat_text": [
-          "[Gain|獲得]相當於傷害 100% 的額外火焰傷害"
+          "[Gain|獲得]相當於傷害 100% 的額外[Fire|火焰]傷害"
         ],
         "visuals": null
       },
@@ -43556,7 +43630,7 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "[Gain|獲得]相當於傷害 50% 的額外混沌傷害",
+          "[Gain|獲得]相當於傷害 50% 的額外[Chaos|混沌]傷害",
           "你擊殺的敵人有 100% 機率爆炸，造成等同四分之一其最大生命的混沌傷害"
         ],
         "visuals": null
@@ -43569,7 +43643,7 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "[Gain|獲得]相當於傷害 35% 的額外混沌傷害"
+          "[Gain|獲得]相當於傷害 35% 的額外[Chaos|混沌]傷害"
         ],
         "visuals": null
       },
@@ -43685,7 +43759,7 @@
           "base_item_found_rarity_+%": 100
         },
         "stat_text": [
-          "增加 100% 物品稀有度"
+          "找到的[ItemRarity|物品稀有度]增加 100%"
         ],
         "visuals": null
       }
@@ -43739,7 +43813,7 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "增加 100% 全域防禦",
+          "全域[Defences|防禦]增加 100%",
           "增加 50% 最大生命"
         ],
         "visuals": null
@@ -43752,7 +43826,7 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "增加 100% 全域防禦",
+          "全域[Defences|防禦]增加 100%",
           "增加 100% 最大生命"
         ],
         "visuals": null
@@ -43930,7 +44004,7 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "+50% 全部元素抗性",
+          "所有[ElementalDamage|元素][Resistances|抗性] +50%",
           "+10% 最大全部抗性"
         ],
         "visuals": null
@@ -43943,7 +44017,7 @@
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "+50% 全部元素抗性",
+          "所有[ElementalDamage|元素][Resistances|抗性] +50%",
           "+10% 最大全部抗性"
         ],
         "visuals": null
@@ -44114,7 +44188,7 @@
   "melee_kill_invocation_reserve": {
     "description": "",
     "invisible": false,
-    "name": "",
+    "name": "收割者祈願",
     "removable": false,
     "stats": [],
     "visuals": "melee_kill_invocation_reserve",
@@ -44215,7 +44289,8 @@
     "name": "",
     "removable": false,
     "stats": [
-      "herald_of_agony_poison_on_enemies_you_kill_spread_to_enemies_within_x"
+      "herald_of_agony_poison_on_enemies_you_kill_spread_to_enemies_within_x",
+      "affected_by_herald_of_agony"
     ],
     "visuals": "herald_of_agony",
     "category": null,
@@ -44365,7 +44440,7 @@
     "templates": null,
     "stack_limit": null
   },
-  "infusion": {
+  "soul_offering": {
     "description": "你造成額外[Spell|法術]傷害",
     "invisible": false,
     "name": "神秘威能",
@@ -44485,18 +44560,6 @@
     "templates": null,
     "stack_limit": null
   },
-  "guard_regeneration": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [],
-    "visuals": "invisible",
-    "category": "Flask",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
   "number_of_skills_of_different_elemental_types_used_recently": {
     "description": "",
     "invisible": true,
@@ -44516,6 +44579,32 @@
     "removable": false,
     "stats": [
       "track_number_of_skills_of_different_elemental_types_used_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "number_of_different_command_skills_used_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "track_number_of_different_command_skills_used_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "track_number_of_different_command_skills_used_recently"
     ],
     "visuals": "invisible",
     "category": null,
@@ -44594,13 +44683,13 @@
     "sources": null,
     "templates": {
       "AscendancyTortoisePauaAura": {
-        "aura_radius_metres": 4.0,
+        "aura_radius_metres": 5.5,
         "stats": {
           "global_defences_+%": 80,
           "block_chance_+%": 40
         },
         "stat_text": [
-          "增加 80% 全域防禦",
+          "全域[Defences|防禦]增加 80%",
           "[Block|格擋]機率增加 40%"
         ],
         "visuals": null
@@ -44673,18 +44762,6 @@
     "templates": null,
     "stack_limit": null
   },
-  "life_remnant_delay": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
   "ultimatum_hidden_monster": {
     "description": "",
     "invisible": true,
@@ -44730,7 +44807,7 @@
     "stack_limit": null
   },
   "infernalist_non_skill_base_all_damage_%_to_gain_as_fire": {
-    "description": "一名秘術家正使你[Gain|獲得]相當於傷害 20% 的[Fire|火焰傷害]",
+    "description": "一名獄火師正使你[Gain|獲得][Fire|火焰傷害]",
     "invisible": false,
     "name": "沸騰軀體",
     "removable": false,
@@ -44850,7 +44927,7 @@
           "base_damage_taken_+%": 10
         },
         "stat_text": [
-          "減少 10% 照亮範圍",
+          "[LightRadius|光線範圍]減少 10%",
           "增加 10% 承受傷害"
         ],
         "visuals": null
@@ -45001,10 +45078,13 @@
   },
   "demon_claw_boss_blackflame_ground": {
     "description": "你沒有生命或能量護盾恢復",
-    "invisible": false,
+    "invisible": true,
     "name": "暗焰地面",
     "removable": false,
-    "stats": [],
+    "stats": [
+      "cannot_recover_life",
+      "base_no_energy_shield_recovery"
+    ],
     "visuals": "demon_claw_blackflame_ignite",
     "category": "Debuff",
     "sources": null,
@@ -45277,49 +45357,49 @@
     "templates": null,
     "stack_limit": null
   },
-  "cold_infusion": {
+  "instilling_cold": {
     "description": "你下一次的[Projectile|投射物][Attack|攻擊]會引起一次[Cold|冰冷]爆發",
     "invisible": false,
     "name": "冰冷灌注",
     "removable": false,
     "stats": [],
-    "visuals": "cold_infusion",
+    "visuals": "instilling_cold",
     "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
-  "fire_infusion": {
+  "instilling_fire": {
     "description": "你下一次的[Projectile|投射物][Attack|攻擊]會引起一次[Fire|火焰]爆發",
     "invisible": false,
     "name": "火焰灌注",
     "removable": false,
     "stats": [],
-    "visuals": "fire_infusion",
+    "visuals": "instilling_fire",
     "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
-  "lightning_infusion": {
+  "instilling_lightning": {
     "description": "你下一次的[Projectile|投射物][Attack|攻擊]會引起一次[Lightning|閃電]爆發",
     "invisible": false,
     "name": "閃電灌注",
     "removable": false,
     "stats": [],
-    "visuals": "lightning_infusion",
+    "visuals": "instilling_lightning",
     "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
-  "chaos_infusion": {
+  "instilling_chaos": {
     "description": "你下一次的[Projectile|投射物][Attack|攻擊]會引起一次[Chaos|混沌]爆發",
     "invisible": false,
     "name": "混沌灌注",
     "removable": false,
     "stats": [],
-    "visuals": "chaos_infusion",
+    "visuals": "instilling_chaos",
     "category": "Buff",
     "sources": null,
     "templates": null,
@@ -45513,6 +45593,18 @@
     "templates": null,
     "stack_limit": null
   },
+  "tempering_exposure": {
+    "description": "",
+    "invisible": true,
+    "name": "折射分解",
+    "removable": false,
+    "stats": [],
+    "visuals": "tempering_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "have_hit_with_projectile_attack_damage_in_past_8_seconds": {
     "description": "",
     "invisible": true,
@@ -45547,8 +45639,8 @@
           "evasion_rating_+%": -5
         },
         "stat_text": [
-          "減少 5% 護甲",
-          "減少 5% 閃避值"
+          "[Armour|護甲值]減少 5%",
+          "[Evasion|閃避值]減少 5%"
         ],
         "visuals": null
       }
@@ -45671,7 +45763,8 @@
     "name": "不穩定的力量",
     "removable": false,
     "stats": [
-      "non_skill_base_all_damage_%_to_gain_as_chaos"
+      "non_skill_base_all_damage_%_to_gain_as_chaos",
+      "critical_strike_chance_+%"
     ],
     "visuals": "instability_stack_buff",
     "category": "Buff",
@@ -45680,10 +45773,11 @@
       "InstabilityBuff": {
         "aura_radius_metres": null,
         "stats": {
-          "non_skill_base_all_damage_%_to_gain_as_chaos": 1
+          "non_skill_base_all_damage_%_to_gain_as_chaos": 1,
+          "critical_strike_chance_+%": 0
         },
         "stat_text": [
-          "[Gain|獲得]相當於傷害 1% 的額外混沌傷害"
+          "[Gain|獲得]相當於傷害 1% 的額外[Chaos|混沌]傷害"
         ],
         "visuals": null
       }
@@ -45751,6 +45845,32 @@
     "removable": false,
     "stats": [
       "track_deal_thorns_damage_on_hit_for_X_hits_after_thorns_trigger"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "deal_thorns_damage_twice_on_hit_for_X_hits_after_thorns_trigger": {
+    "description": "你受倒刺輔助的技能會在擊中時造成兩次荊棘傷害",
+    "invisible": false,
+    "name": "倒刺",
+    "removable": false,
+    "stats": [],
+    "visuals": "barbs_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "track_deal_thorns_damage_twice_on_hit_for_X_hits_after_thorns_trigger": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "track_deal_thorns_damage_twice_on_hit_for_X_hits_after_thorns_trigger"
     ],
     "visuals": "invisible",
     "category": null,
@@ -45827,11 +45947,11 @@
     "removable": false,
     "stats": [
       "gain_X_resonance_of_majority_damage_on_hit",
-      "elemental_attack_damage_+%_final_per_50_resonance",
+      "elemental_damage_+%_final_per_50_resonance",
       "lose_X_resonance_per_second_while_not_gaining_resonance",
       "resonance_decay_delay_ms",
       "lose_X_resonance_per_hit",
-      "attack_speed_+%_while_all_resonance_is_at_least_250"
+      "skill_speed_+%_while_all_resonance_is_at_least_250"
     ],
     "visuals": "lingering_illusion",
     "category": null,
@@ -46032,10 +46152,10 @@
     "templates": null,
     "stack_limit": null
   },
-  "support_mobile_assault": {
+  "skill_instance_unusable_until_moved_X_distance": {
     "description": "",
     "invisible": true,
-    "name": "靈活攻擊",
+    "name": "",
     "removable": false,
     "stats": [],
     "visuals": "invisible",
@@ -46445,8 +46565,8 @@
           "non_skill_base_all_damage_%_to_gain_as_lightning": 30
         },
         "stat_text": [
-          "增加 100% 物品稀有度",
-          "增加 50% 全域防禦",
+          "找到的[ItemRarity|物品稀有度]增加 100%",
+          "全域[Defences|防禦]增加 50%",
           "[Gain|獲得]相當於傷害 30% 的額外[Lightning|閃電]傷害"
         ],
         "visuals": null
@@ -46524,6 +46644,20 @@
     "sources": null,
     "templates": null,
     "stack_limit": 4
+  },
+  "window_of_opportunity_deflection_buff": {
+    "description": "You have additional [Deflect|Deflection Rating].",
+    "invisible": false,
+    "name": "完美偏斜",
+    "removable": false,
+    "stats": [
+      "additional_deflection_rating"
+    ],
+    "visuals": "perfect_deflection_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
   },
   "KaruiAdrenaline": {
     "description": "你增加傷害，增加攻擊、施放和移動速度，額外承受物理傷害減免。",
@@ -46653,34 +46787,6 @@
     "templates": null,
     "stack_limit": null
   },
-  "parry_movement_speed_+%": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [
-      "base_movement_velocity_+%"
-    ],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "parry_attack_speed_+%": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [
-      "attack_speed_+%"
-    ],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
   "monster_mod_added_chaos_damage": {
     "description": "",
     "invisible": true,
@@ -46702,20 +46808,6 @@
     "removable": false,
     "stats": [],
     "visuals": "convalescence_reservation",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "parry_heavy_stun_poise_decay_rate_+%": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [
-      "heavy_stun_poise_decay_rate_+%"
-    ],
-    "visuals": "invisible",
     "category": null,
     "sources": null,
     "templates": null,
@@ -47040,6 +47132,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "bone_offering_after_shield_loss": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "damage_taken_+%_final_from_bone_offering_after_shield_loss"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "marked_target_phys_taken_as_armour_break": {
     "description": "",
     "invisible": true,
@@ -47054,33 +47160,6 @@
     "templates": null,
     "stack_limit": null
   },
-  "track_ultimate_charge": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [
-      "max_required_ultimate_charge",
-      "track_ultimate_charge"
-    ],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "ultimate_charge": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
   "shard_despoiler_crossbow_not_consume_bolts": {
     "description": "[Crossbow|十字弓][Attack|攻擊]不消耗弩箭",
     "invisible": false,
@@ -47091,6 +47170,18 @@
     ],
     "visuals": "shard_scavenger",
     "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "unique_double_vision": {
+    "description": "",
+    "invisible": false,
+    "name": "雙重視界",
+    "removable": false,
+    "stats": [],
+    "visuals": "double_vision_buff_cold",
+    "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -47111,43 +47202,377 @@
     "templates": null,
     "stack_limit": null
   },
-  "lingering_mirage_reservation": {
-    "description": "Dodge Rolling will create a Mirage copy of you which uses skills.",
+  "electrocuting_arrow_damage_%_to_gain_as_lightning_with_attacks": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "attackers_gain_all_damage_%_as_lightning"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "unique_crit_prevention_aura": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "global_cannot_crit"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blink_fake_reservation_sand": {
+    "description": "",
     "invisible": false,
-    "name": "Lingering Mirage",
+    "name": "",
+    "removable": false,
+    "stats": [
+      "dodge_roll_is_replaced_by_blink"
+    ],
+    "visuals": "blink_reservation",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "water_djinn_mana_regeneration": {
+    "description": "你增加魔力回復",
+    "invisible": false,
+    "name": "[DNT] Mana Wave",
+    "removable": false,
+    "stats": [
+      "mana_regeneration_rate_+%"
+    ],
+    "visuals": "water_djinn_mana_regeneration",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "support_no_fear_buildup": {
+    "description": "被堅忍輔助的技能正在獲得傷害，直至達到上限。",
+    "invisible": false,
+    "name": "堅忍",
     "removable": false,
     "stats": [],
-    "visuals": "lingering_illusion",
+    "visuals": "no_fear_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "post_dodge_roll_sprint": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_movement_velocity_+%",
+      "is_sprinting",
+      "heavy_stun_does_not_decay"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ravenous_swarm_reservation": {
+    "description": "每隔幾秒，你會創造出蟲群。",
+    "invisible": false,
+    "name": "貪婪蟲群",
+    "removable": false,
+    "stats": [],
+    "visuals": "ravenous_swarm_buff",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "support_no_fear": {
+    "description": "被堅忍輔助的技能正在獲得傷害，直至達到上限。",
+    "invisible": true,
+    "name": "堅忍",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_successfully_parried_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_successfully_parried_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "breach_wild_boss_explode_on_death": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "breach_wild_boss_explode_on_death",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "BreachWildBossWarcryExplodeBuff": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "spell_flux_reservation": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "spell_flux_delay": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "spell_flux_delay",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "spell_flux_bonus": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "spell_flux_bonus",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "wyvern_swipe_empowered": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] Devoured Shock",
+    "removable": false,
+    "stats": [],
+    "visuals": "wyvern_swipe_empowered",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "lingering_mirage_reservation": {
+    "description": "閃避翻滾時製造一個會使用技能的幻影複製體。",
+    "invisible": false,
+    "name": "殘留幻影",
+    "removable": false,
+    "stats": [],
+    "visuals": "lingering_mirage_buff",
     "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
   "lingering_mirage_cooldown": {
-    "description": "Dodge Rolling will extend this cooldown.",
+    "description": "閃避翻滾會延長該冷卻時間。",
     "invisible": false,
-    "name": "Lingering Mirage Cooldown",
+    "name": "殘留幻影冷卻時間",
     "removable": false,
     "stats": [],
-    "visuals": "lingering_illusion",
-    "category": "Debuff",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "unique_double_vision": {
-    "description": "",
-    "invisible": false,
-    "name": "Double Vision",
-    "removable": false,
-    "stats": [],
-    "visuals": "double_vision_buff_cold",
+    "visuals": "lingering_mirage_debuff",
     "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
+  "rip_from_time_immune": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "rip_from_time_immune",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "rip_from_time_clone": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "damage_taken_is_copied_to_past_self_%",
+      "no_blood_on_death",
+      "monster_no_drops_or_experience",
+      "cannot_be_used_as_minion",
+      "immune_to_rip_from_time"
+    ],
+    "visuals": "rip_from_time_clone",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "rip_from_time_life_degen": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "life_degeneration_per_minute_from_future_self",
+      "damage_taken_per_minute_to_life_from_future_self",
+      "self_damage_taken_per_minute_to_life_from_future_self",
+      "self_nonlethal_damage_taken_per_minute_to_life_from_future_self",
+      "life_lost_per_minute_nonlethal_from_future_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "rip_from_time_shield_degen": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "damage_taken_per_minute_to_energy_shield_excess_to_life_from_future_self",
+      "damage_taken_per_minute_to_energy_shield_excess_to_mana_from_future_self",
+      "self_damage_taken_per_minute_to_energy_shield_excess_to_life_from_future_self",
+      "self_damage_taken_per_minute_to_energy_shield_excess_to_mana_from_future_self",
+      "self_nonlethal_damage_taken_per_minute_to_energy_shield_excess_to_life_from_future_self",
+      "self_nonlethal_damage_taken_per_minute_to_energy_shield_excess_to_mana_from_future_self",
+      "damage_taken_per_minute_to_energy_shield_extra_hard_excess_to_life_from_future_self",
+      "damage_taken_per_minute_to_energy_shield_extra_hard_excess_to_mana_from_future_self",
+      "self_damage_taken_per_minute_to_energy_shield_extra_hard_excess_to_life_from_future_self",
+      "self_damage_taken_per_minute_to_energy_shield_extra_hard_excess_to_mana_from_future_self",
+      "self_nonlethal_damage_taken_per_minute_to_energy_shield_extra_hard_excess_to_life_from_future_self",
+      "self_nonlethal_damage_taken_per_minute_to_energy_shield_extra_hard_excess_to_mana_from_future_self",
+      "energy_shield_lost_per_minute_from_future_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "rip_from_time_mana_degen": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "mana_degeneration_per_minute_from_future_self",
+      "damage_taken_per_minute_to_mana_from_future_self",
+      "self_nonlethal_damage_taken_per_minute_to_mana_from_future_self",
+      "self_damage_taken_per_minute_to_mana_from_future_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "warding_steel_buff": {
+    "description": "啟動時，儲存一定比例你[Armour|護甲]或其他傷害減免所防止的[Physical|物理]傷害。使用守護新星技能會以尖刺新星釋放儲存的傷害。",
+    "invisible": false,
+    "name": "鋼鐵守護",
+    "removable": false,
+    "stats": [
+      "warding_steel_gains_%_of_damage_from_mitigated_physical_damage"
+    ],
+    "visuals": "warding_steel_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "warding_steel_reservation": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "spell_flux_clone": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "spell_flux_clone",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "decompose_aura_chaos_degen": {
+    "description": "敵人持續受到混沌傷害",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_chaos_damage_taken_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "minimum_sprint_period": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "must_sprint"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "damage_over_time_application_aura": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -47171,10 +47596,94 @@
     "templates": null,
     "stack_limit": null
   },
-  "elemental_power": {
-    "description": "You deal more [ElementalDamage|Elemental Damage] and can apply [ElementalAilments|Elemental Ailments] with other damage types. ",
+  "blind_beast_enrage": {
+    "description": "",
     "invisible": false,
-    "name": "Pinnacle of Power",
+    "name": "魔暴之怒",
+    "removable": false,
+    "stats": [
+      "non_skill_base_physical_damage_%_to_gain_as_lightning"
+    ],
+    "visuals": "blind_beast_enrage",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "fire_beast_enrage": {
+    "description": "",
+    "invisible": false,
+    "name": "赤獄之怒",
+    "removable": false,
+    "stats": [
+      "non_skill_base_physical_damage_%_to_gain_as_fire"
+    ],
+    "visuals": "fire_beast_enrage",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "fire_beast_enrage_self_immolate": {
+    "description": "你正在因靠近沃納斯而承受火焰傷害。",
+    "invisible": false,
+    "name": "焚化",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "fire_beast_enrage_self_immolate",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "entangle_attached_vine": {
+    "description": "移動速度被你身上的每一條藤蔓[Slow|減緩]。移動可掙脫藤蔓。",
+    "invisible": false,
+    "name": "纏結藤蔓",
+    "removable": false,
+    "stats": [
+      "entangle_vines_movement_speed_+%_final"
+    ],
+    "visuals": "entangle_attached_vine",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "wolf_pack": {
+    "description": "",
+    "invisible": true,
+    "name": "狼群",
+    "removable": false,
+    "stats": [
+      "wolf_pack_size",
+      "number_of_wolf_packs",
+      "additional_companions_from_wolf_packs"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "cross_slash_mark": {
+    "description": "[DNT] Cause ice chunks nearby to fly towards you, increased damage per nearby enemy.",
+    "invisible": false,
+    "name": "[DNT] Wolf Mark",
+    "removable": false,
+    "stats": [],
+    "visuals": "dominus_mark",
+    "category": "Mark",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "elemental_power": {
+    "description": "你造成更多[ElementalDamage|元素傷害]，且可施加其他傷害類型的[ElementalAilments|元素異常狀態]。",
+    "invisible": false,
+    "name": "力量巔峰",
     "removable": false,
     "stats": [
       "elemental_power_elemental_damage_+%_final",
@@ -47201,9 +47710,9 @@
     "stack_limit": null
   },
   "requiem_active": {
-    "description": "Your Crossbow shot is replaced by a barrage of tormented souls.",
+    "description": "你的十字弓射擊由罪魂彈幕取代。",
     "invisible": false,
-    "name": "Requiem",
+    "name": "安魂曲",
     "removable": false,
     "stats": [],
     "visuals": "requiem_active",
@@ -47224,10 +47733,2672 @@
     "templates": null,
     "stack_limit": null
   },
-  "chilling_presence_aura": {
+  "primal_avatar_indicator": {
     "description": "",
     "invisible": true,
-    "name": "Chilling Aura",
+    "name": "",
+    "removable": false,
+    "stats": [
+      "cannot_die"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "on_rhoa_mount": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "rage_regeneration_over_time": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_rage_regeneration_per_minute",
+      "should_not_lose_rage",
+      "rage_regeneration_does_not_ignore_rage_loss_delay"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "wyvern_devour_empowered": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] Full Belly",
+    "removable": false,
+    "stats": [],
+    "visuals": "adrenaline",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": 1
+  },
+  "wolf_lunar_blessing": {
+    "description": "",
+    "invisible": false,
+    "name": "月神祝福",
+    "removable": false,
+    "stats": [
+      "base_movement_velocity_+%",
+      "attack_speed_+%"
+    ],
+    "visuals": "wolf_lunar_blessing",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "wolf_lunar_blessing_rage": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "wolf_warcry_buff": {
+    "description": "",
+    "invisible": false,
+    "name": "狼戰吼增益效果",
+    "removable": false,
+    "stats": [
+      "attack_minimum_added_cold_damage",
+      "attack_maximum_added_cold_damage"
+    ],
+    "visuals": "cold_damage_storm",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "digesting_regeneration": {
+    "description": "[DNT] Regenerating X life cause you ate something.",
+    "invisible": false,
+    "name": "[DNT] Digesting",
+    "removable": false,
+    "stats": [
+      "base_life_regeneration_rate_per_minute"
+    ],
+    "visuals": "player_aura_life_regen",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "sprint_speed_delay": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "wolf_minion_focus_fire": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "wolf_minion_focus_fire_target_id"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "cross_slash_mark_nearby": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "wolf_mark_aura_attack_speed_+%"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "frozen_one_brittle_bell_toll": {
+    "description": "你更容易受到暴擊",
+    "invisible": false,
+    "name": "Profane Flame",
+    "removable": false,
+    "stats": [
+      "base_enemy_critical_strike_chance_+%_against_self"
+    ],
+    "visuals": "ground_profane",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "cast_curse_on_block_reserve": {
+    "description": "",
+    "invisible": false,
+    "name": "格擋時施放",
+    "removable": false,
+    "stats": [],
+    "visuals": "cast_on_block_reserve",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "cast_curse_on_block_count": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "EzomyteReaper_storm": {
+    "description": "你正受到閃電持續傷害",
+    "invisible": false,
+    "name": "刀刃風暴",
+    "removable": false,
+    "stats": [
+      "base_lightning_damage_taken_per_minute"
+    ],
+    "visuals": "ezomyte_reaper_storm",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 50
+  },
+  "primed_for_shocking_rift": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "corpse_beetles_buff": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] Corpse Beetles",
+    "removable": false,
+    "stats": [],
+    "visuals": "raging_spirits_buff",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "wrath_presence_aura": {
+    "description": "技能[HitDamage|擊中]你[Presence|存在範圍]內的[Shock|感電]敵人時，也會[HitDamage|擊中]你[Presence|存在範圍]內的其他[Shock|感電]敵人。",
+    "invisible": false,
+    "name": "劇烈爆發",
+    "removable": false,
+    "stats": [
+      "wrath_aura_shared_damage_+%_to_other_shocked_enemies_in_presence"
+    ],
+    "visuals": "wrath_presence_aura",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "wrath_owner_handler": {
+    "description": "技能[HitDamage|擊中]你[Presence|存在範圍]內的[Shock|感電]敵人時，也會[HitDamage|擊中]你[Presence|存在範圍]內的其他[Shock|感電]敵人。",
+    "invisible": true,
+    "name": "劇烈爆發",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ghoulish_destroy_corpse": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "oasis_ground_buff": {
+    "description": "[DNT] You are gaining significant Recoup and Life and Mana flask charge recovery",
+    "invisible": false,
+    "name": "[DNT] Oasis Buff",
+    "removable": false,
+    "stats": [
+      "damage_taken_goes_to_life_over_4_seconds_%",
+      "damage_taken_goes_to_mana_%"
+    ],
+    "visuals": "oasis_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "vivid_stags_wisp_accumulation_buff": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] Summoning Vivid Wisps",
+    "removable": false,
+    "stats": [
+      "vivid_stag_max_charge",
+      "vivid_stag_max_wisps",
+      "vivid_stag_charge_gain_per_m",
+      "ascendancy_vivid_stag_trigger_cooldown_ms"
+    ],
+    "visuals": "vivid_wisp_accumulation_buff",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_touched": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "monster_initial_aggro_radius_+%"
+    ],
+    "visuals": "abyssal_touched",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_touched_drain": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "life_loss_%_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "passage_unique_you_and_allies_cooldown_speed": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_cooldown_speed_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "passage_unique_you_and_allies_chaos_damage_resistance": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_chaos_damage_resistance_%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "passage_unique_you_and_allies_cast_speed": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_cast_speed_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "passage_unique_you_and_allies_attack_speed": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "attack_speed_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "passage_unique_you_and_allies_accuracy_rating": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "accuracy_rating_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "recover_mana_on_nearby_death": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "recover_mana_%_to_aura_owner_on_death"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_wasting": {
+    "description": "你減少 50% 的生命回復率",
+    "invisible": false,
+    "name": "深淵耗損",
+    "removable": false,
+    "stats": [
+      "life_regeneration_rate_+%",
+      "base_fire_damage_resistance_%",
+      "base_cold_damage_resistance_%",
+      "base_lightning_damage_resistance_%",
+      "afflicted_by_abyssal_wasting"
+    ],
+    "visuals": "abyssal_wasting",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "owl_feather_accumulation_buff": {
+    "description": "[DNT] You are accumulating Owl Feathers over time.",
+    "invisible": false,
+    "name": "[DNT] Owl Feather Catcher",
+    "removable": false,
+    "stats": [
+      "max_owl_feathers"
+    ],
+    "visuals": "owl_feather_accumulation_visual",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "OwlFeatherAccumulatorTemplate": {
+        "aura_radius_metres": null,
+        "stats": {
+          "max_owl_feathers": 3
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "owl_feather": {
+    "description": "[DNT] You have Owl Feathers which will be consumed on Dodge Rolling.",
+    "invisible": false,
+    "name": "[DNT] Owl Feather",
+    "removable": false,
+    "stats": [],
+    "visuals": "owl_feather_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "receive_electrocution_buildup": {
+    "description": "[Lightning|閃電]傷害造成[Electrocute|觸電]累積。",
+    "invisible": false,
+    "name": "電擊",
+    "removable": false,
+    "stats": [
+      "lightning_damage_hits_against_self_are_electrocuting"
+    ],
+    "visuals": "receive_electrocution_buildup",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "lightless_stalker_gaze": {
+    "description": "",
+    "invisible": false,
+    "name": "黯光懼靈的凝視",
+    "removable": false,
+    "stats": [
+      "phantasmal_eye_spawn_chance_on_hit_%_against_rare_unique",
+      "phantasmal_eye_spawn_chance_on_kill_%_per_monster_power"
+    ],
+    "visuals": "lightless_stalker_gaze",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "djinn_unable_to_command": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "spellslinger_invocation_reserve": {
+    "description": "",
+    "invisible": false,
+    "name": "法術回音",
+    "removable": false,
+    "stats": [],
+    "visuals": "elemental_invocation_reserve",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "spellslinger_invocation_count": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "twilight_order_holy_fire": {
+    "description": "你受到[Fire|火焰]持續傷害。",
+    "invisible": false,
+    "name": "神聖之炎",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "twilight_order_holy_fire",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ghostflame": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "affected_by_ghostflame"
+    ],
+    "visuals": "ghostflame",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "generic_league_monster_enhanced": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "monster_difficulty_tankiness_+%",
+      "damage_+%",
+      "from_league_item_rarity_+%_permyriad",
+      "from_league_item_quantity_+%_permyriad"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ground_elemental_shred": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "elemental_shred": {
+    "description": "[DNT] Description.",
+    "invisible": false,
+    "name": "[DNT] Elemental Shred",
+    "removable": false,
+    "stats": [
+      "base_resist_all_elements_%"
+    ],
+    "visuals": "elemental_shred",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "feast_of_flesh_regeneration": {
+    "description": "自血肉盛宴回復生命和魔力",
+    "invisible": false,
+    "name": "血肉盛宴",
+    "removable": false,
+    "stats": [
+      "base_life_regeneration_rate_per_minute",
+      "base_mana_regeneration_rate_per_minute"
+    ],
+    "visuals": "feast_of_flesh_regeneration",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "kulemak_boss_soul_drain": {
+    "description": "You are taking [Cold] damage over time. Stand still to hold on to your soul.",
+    "invisible": false,
+    "name": "Soul Drain",
+    "removable": false,
+    "stats": [
+      "base_cold_damage_taken_per_minute"
+    ],
+    "visuals": "kulemak_boss_soul_drain",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "explode_teleport_stage": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "toxic_domain_buff": {
+    "description": "你的技能消耗增加、你正在回復生命，且你的[Projectile|投射物][Attack|攻擊]會在所[HitDamage|擊中]敵人身上產生劇毒膿包。",
+    "invisible": false,
+    "name": "劇毒之花",
+    "removable": false,
+    "stats": [
+      "toxic_domain_buff_mana_cost_+%",
+      "toxic_domain_buff_life_regeneration_rate_per_minute_+",
+      "toxic_domain_buff_pustule_chance_%"
+    ],
+    "visuals": "toxic_domain_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "shearing_bolts": {
+    "description": "你的[Bow|弓]和[Spear|長鋒][Projectile|投射物][Attack|攻擊]受到[Empowered|強化]，會產生[IceFragment|寒冰碎片]。",
+    "invisible": false,
+    "name": "冰鏃箭矢",
+    "removable": false,
+    "stats": [],
+    "visuals": "shearing_bolts",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "player_marked_for_death": {
+    "description": "你承受的傷害增加 50%。",
+    "invisible": false,
+    "name": "死亡印記",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%"
+    ],
+    "visuals": "marked_for_death",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "UberMapPlayerMarkedForDeath": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_damage_taken_+%": 50
+        },
+        "stat_text": [
+          "增加 50% 承受傷害"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "number_of_skills_used_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "wildspeaker_weapon_damage_companion_child_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "attack_minimum_added_physical_damage",
+      "attack_minimum_added_fire_damage",
+      "attack_minimum_added_cold_damage",
+      "attack_minimum_added_lightning_damage",
+      "attack_minimum_added_chaos_damage",
+      "attack_maximum_added_physical_damage",
+      "attack_maximum_added_fire_damage",
+      "attack_maximum_added_cold_damage",
+      "attack_maximum_added_lightning_damage",
+      "attack_maximum_added_chaos_damage"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "wildspeaker_weapon_damage_companion_aura": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "mantra_of_destruction",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "cast_when_damage_taken_charge": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "cast_when_damage_taken_charge",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "thunderfist": {
+    "description": "你的雙拳帶來閃電。",
+    "invisible": false,
+    "name": "閃光掌",
+    "removable": true,
+    "stats": [
+      "unarmed_melee_attack_hits_trigger_thunderfist_lightning"
+    ],
+    "visuals": "thunderfist",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "foresight_ready": {
+    "description": "你無法避免自己的命運，你的閃避翻滾無法迴避擊中。",
+    "invisible": false,
+    "name": "洞燭機先",
+    "removable": false,
+    "stats": [
+      "base_dodge_roll_cannot_avoid_damage"
+    ],
+    "visuals": "foresight_ready",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "foresight_immortality": {
+    "description": "在悉妮蔻拉的引導下，你避免了死亡。",
+    "invisible": false,
+    "name": "超越境界",
+    "removable": false,
+    "stats": [
+      "cannot_die"
+    ],
+    "visuals": "foresight_immortal",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "foresight_downtime": {
+    "description": "悉妮蔻拉洞悉你的未來與過去。",
+    "invisible": false,
+    "name": "後事之師",
+    "removable": false,
+    "stats": [],
+    "visuals": "foresight_downtime",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "foresight_reserve": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "foresight_reserve",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "karui_captain_kitava_blood_siphon": {
+    "description": "塔瓦凱所造成的傷害會為他恢復生命",
+    "invisible": false,
+    "name": "被吸收標記",
+    "removable": false,
+    "stats": [],
+    "visuals": "karui_captain_kitava_blood_siphon",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "high_velocity_armor_break_debuff": {
+    "description": "每次承受的[Attack|攻擊][HitDamage|擊中]會附加[Physical|物理]傷害。",
+    "invisible": false,
+    "name": "碎甲",
+    "removable": false,
+    "stats": [
+      "exploit_debuff_physical_attack_damage_taken_+",
+      "cannot_be_armour_broken"
+    ],
+    "visuals": "high_velocity_armour_break_debuff",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "vaulting_impact_dazed_debuff": {
+    "description": "每次承受的[Attack|攻擊][HitDamage|擊中]會附加[Physical|物理]傷害。",
+    "invisible": false,
+    "name": "卸防姿態",
+    "removable": false,
+    "stats": [
+      "exploit_debuff_physical_attack_damage_taken_+",
+      "cannot_be_dazed"
+    ],
+    "visuals": "vaulting_impact_dazed_debuff",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "inside_allied_bubble_aura": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] Inside Bubble",
+    "removable": false,
+    "stats": [
+      "water_bubble_damage_transfer_%"
+    ],
+    "visuals": "oasis_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "inside_enemy_bubble_aura": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "water_djinn_energy_shield_recharge_buff": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] Accelerated Recharge",
+    "removable": false,
+    "stats": [
+      "energy_shield_recharge_rate_+%"
+    ],
+    "visuals": "oasis_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "runic_tempering": {
+    "description": "Your runic barrier causes you to take less damage.",
+    "invisible": false,
+    "name": "Runic Tempering",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%",
+      "visual_hit_effect_runic_tempering_backlash_when_hit"
+    ],
+    "visuals": "runic_tempering",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "vivid_wisp_buff": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] Vivid Wisp",
+    "removable": false,
+    "stats": [],
+    "visuals": "vivid_wisp_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "sundered_armour": {
+    "description": "減益效果無效化所有[Armour|護甲]，並使承受的[HitDamage|擊中][Physical|物理]傷害增加，但玩家不受影響。",
+    "invisible": false,
+    "name": "破碎護甲",
+    "removable": false,
+    "stats": [
+      "broken_armor_and_sundered_armor_physical_damage_taken_+%_from_hits",
+      "fully_broken_armour_and_sundered_armour_debuff_also_applies_to_fire_damage_taken",
+      "cannot_be_armour_broken"
+    ],
+    "visuals": "armour_broken_sundered",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blackblood_remnants": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ancestral_jade_hulk_buff": {
+    "description": "你的傷害增加 50%",
+    "invisible": false,
+    "name": "翠玉巨獸之吼",
+    "removable": false,
+    "stats": [
+      "damage_+%"
+    ],
+    "visuals": "ancestral_jade_hulk_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "AscendancyJadeHulkWarcry": {
+        "aura_radius_metres": null,
+        "stats": {
+          "damage_+%": 50
+        },
+        "stat_text": [
+          "增加 50% 傷害"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "used_by_unearth": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "pillar_of_flame_pillars": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blackwood_entrance_buff": {
+    "description": "你得到魔幻的幫助。返回黑木林。",
+    "invisible": false,
+    "name": "魔幻的幫助",
+    "removable": false,
+    "stats": [],
+    "visuals": "blackwood_entrance_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_hit_with_melee_attack_in_past_2_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_hit_with_melee_attack_in_past_2_seconds"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "track_have_hit_with_melee_attack_in_past_2_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "track_have_hit_with_melee_attack_in_past_2_seconds"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_hit_with_projectile_attack_damage_in_past_2_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_hit_with_projectile_attack_damage_in_past_2_seconds"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "track_have_hit_with_projectile_attack_damage_in_past_2_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "track_have_hit_with_projectile_attack_damage_in_past_2_seconds"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "next_attack_is_ancestrally_boosted": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "slams_always_ancestral_slam",
+      "strikes_are_ancestrally_boosted"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "keystone_tecrods_brutality": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_life_regeneration_rate_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "gemling_charge_generation": {
+    "description": "你會被動生成[Charges|能量球]。",
+    "invisible": false,
+    "name": "奇術活力",
+    "removable": false,
+    "stats": [
+      "gain_random_charge_every_X_ms_from_total_socketed_gem_attribute_requirements"
+    ],
+    "visuals": "gemling_charge_generation_visual",
+    "category": "Buff",
+    "sources": {
+      "PassiveSkills": [
+        {
+          "id": "AscendancyMercenary3Notable4",
+          "item": null,
+          "name": null,
+          "template": "AscendancyGemlingChargeGenerator",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "AscendancyGemlingChargeGenerator": {
+        "aura_radius_metres": null,
+        "stats": {
+          "gain_random_charge_every_X_ms_from_total_socketed_gem_attribute_requirements": 8000
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "debilitate_enemies_in_front_within_x_metres_when_blocking": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "permanent_damage_+%_taken_per_second_of_ignite": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "permanent_fire_damage_+%_taken_per_second_of_ignite"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "monster_mod_kurgals_gasp_revived": {
+    "description": "怪物復甦並強化一段時間",
+    "invisible": false,
+    "name": "柯戈的恐息",
+    "removable": false,
+    "stats": [],
+    "visuals": "monster_mod_kurgals_gasp_revived",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "consuming_glory_grants_increased_attack_per_glory_consumed": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "attack_damage_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "skill_instance_wildshard_stack": {
+    "description": "你的法術受西奧妮的鍛鍊輔助時，有機率發射呈環狀射出的額外投射物。",
+    "invisible": false,
+    "name": "野性裂片",
+    "removable": false,
+    "stats": [],
+    "visuals": "wildshard_stack",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "sprint_heavy_stunnable": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "all_hits_stun_you"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ground_effect_applies_less_cooldown": {
+    "description": "[CooldownRecovery|冷卻時間恢復速度]被降低。",
+    "invisible": false,
+    "name": "抑制地面",
+    "removable": false,
+    "stats": [
+      "cooldown_speed_+%_final_from_ground_effect"
+    ],
+    "visuals": "suppressive_ground_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "overheated": {
+    "description": "你的十字弓溫度過高，無法發動更多的疾射。",
+    "invisible": false,
+    "name": "過熱",
+    "removable": false,
+    "stats": [],
+    "visuals": "overheated",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "witch_hunter_mark": {
+    "description": "",
+    "invisible": false,
+    "name": "女巫獵手印記",
+    "removable": false,
+    "stats": [
+      "enemy_additional_critical_strike_multiplier_against_self"
+    ],
+    "visuals": "snipers_mark",
+    "category": "Mark",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "kulemak_circle_debuff": {
+    "description": "You are taking [Fire] damage over time.",
+    "invisible": false,
+    "name": "Kulemak's Inferno",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "kulemak_inferno",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "archon_fire": {
+    "description": "你的[Spell|法術]造成更多[Fire|火焰]傷害。\n將法術的[ElementalDamage|元素]傷害[Conversion|轉換]為火焰。\n法術有更多[Ignite|點燃]機率。",
+    "invisible": false,
+    "name": "火焰統治者",
+    "removable": false,
+    "stats": [
+      "fire_damage_with_spell_skills_+%_final_from_archon_buff",
+      "archon_elemental_damage_with_spells_%_to_convert_to_fire",
+      "base_movement_velocity_+%",
+      "base_resist_all_elements_%",
+      "archon_spells_ignite_chance_+%_final",
+      "have_archon_fire",
+      "deal_no_non_fire_spell_damage",
+      "base_is_floating"
+    ],
+    "visuals": "archon_fire",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "archon_cold": {
+    "description": "你的[Spell|法術]造成更多[Cold|冰冷]傷害。\n將法術的[ElementalDamage|元素]傷害[Conversion|轉換]為冰冷。\n法術造成更多的[Freeze|冰凍]累積。",
+    "invisible": false,
+    "name": "寒冰統治者",
+    "removable": false,
+    "stats": [
+      "cold_damage_with_spell_skills_+%_final_from_archon_buff",
+      "archon_elemental_damage_with_spells_%_to_convert_to_cold",
+      "base_movement_velocity_+%",
+      "base_resist_all_elements_%",
+      "archon_spells_hit_damage_freeze_multiplier_+%_final",
+      "have_archon_cold",
+      "deal_no_non_cold_spell_damage",
+      "base_is_floating"
+    ],
+    "visuals": "archon_cold",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "archon_lightning": {
+    "description": "你的[Spell|法術]造成更多[Lightning|閃電]傷害。\n將法術的[ElementalDamage|元素]傷害[Conversion|轉換]為閃電。\n法術有更多[Shock|感電]機率。",
+    "invisible": false,
+    "name": "閃電統治者",
+    "removable": false,
+    "stats": [
+      "lightning_damage_with_spell_skills_+%_final_from_archon_buff",
+      "archon_elemental_damage_with_spells_%_to_convert_to_lightning",
+      "base_movement_velocity_+%",
+      "base_resist_all_elements_%",
+      "archon_spells_shock_chance_+%_final",
+      "have_archon_lightning",
+      "deal_no_non_lightning_spell_damage",
+      "base_is_floating"
+    ],
+    "visuals": "archon_lightning",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "archon_delay": {
+    "description": "你在一段時間裡無法再度成為[Archon|統治者]。",
+    "invisible": false,
+    "name": "統治者冷卻時間",
+    "removable": false,
+    "stats": [
+      "have_archon_delay"
+    ],
+    "visuals": "archon_delay",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "support_demolisher_permanent": {
+    "description": "你承受的物理傷害增加。",
+    "invisible": false,
+    "name": "毀壞護甲",
+    "removable": false,
+    "stats": [
+      "physical_damage_taken_+%"
+    ],
+    "visuals": "armour_demolisher_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "cold_infusion": {
+    "description": "",
+    "invisible": false,
+    "name": "冰冷灌注",
+    "removable": false,
+    "stats": [],
+    "visuals": "cold_infusion",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "fire_infusion": {
+    "description": "",
+    "invisible": false,
+    "name": "火焰灌注",
+    "removable": false,
+    "stats": [],
+    "visuals": "fire_infusion",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "lightning_infusion": {
+    "description": "",
+    "invisible": false,
+    "name": "閃電灌注",
+    "removable": false,
+    "stats": [],
+    "visuals": "lightning_infusion",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "monster_mod_abyss_immune_aura": {
+    "description": "友方不會受到敵人的傷害",
+    "invisible": false,
+    "name": "Invulnerability Aura",
+    "removable": false,
+    "stats": [],
+    "visuals": "monster_mod_abyss_immune_aura",
+    "category": "Buff",
+    "sources": {
+      "Mods": [
+        {
+          "id": "MonsterAbyssImmuneAura1",
+          "item": null,
+          "name": null,
+          "template": "MonsterAbyssImmuneAura",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "PlayerMonsterAbyssImmuneAura1",
+          "item": null,
+          "name": null,
+          "template": "PlayerMonsterAbyssImmuneAura",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "MonsterAbyssImmuneAura": {
+        "aura_radius_metres": 4.0,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      },
+      "PlayerMonsterAbyssImmuneAura": {
+        "aura_radius_metres": 4.0,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "rimeshield_buff": {
+    "description": "",
+    "invisible": false,
+    "name": "寒冰護甲",
+    "removable": false,
+    "stats": [
+      "rime_damage_taken_+%_final"
+    ],
+    "visuals": "rimeshield_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "infusion_remnants_visual": {
+    "description": "施加[ElementalAilments|元素異常狀態]時，有一定機率產生[ElementalInfusion|灌注][Remnant|痕跡]。",
+    "invisible": false,
+    "name": "虹吸元素",
+    "removable": false,
+    "stats": [
+      "has_infusion_remnants"
+    ],
+    "visuals": "infusion_remnants",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "prisoner_boss_water_gate_push": {
+    "description": "",
+    "invisible": true,
+    "name": "隱形",
+    "removable": false,
+    "stats": [
+      "stance_movement_speed_+%_final"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "witch_hunter_mark_remnant_humanoid": {
+    "description": "你獲得攻擊、施放和移動速度。",
+    "invisible": false,
+    "name": "獵手的狡詐",
+    "removable": false,
+    "stats": [
+      "base_movement_velocity_+%",
+      "attack_and_cast_speed_+%"
+    ],
+    "visuals": "witch_hunter_mark_remnant_humanoid_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "witch_hunter_mark_remnant_construct": {
+    "description": "你獲得等同你一定比例閃避值的護甲。",
+    "invisible": false,
+    "name": "獵手的蔑視",
+    "removable": false,
+    "stats": [
+      "evasion_rating_%_to_gain_as_armour"
+    ],
+    "visuals": "witch_hunter_mark_remnant_construct_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "witch_hunter_mark_remnant_demon": {
+    "description": "你獲得大量生命回復。",
+    "invisible": false,
+    "name": "獵手的活力",
+    "removable": false,
+    "stats": [
+      "base_life_regeneration_rate_per_minute"
+    ],
+    "visuals": "witch_hunter_mark_remnant_demon_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "witch_hunter_mark_remnant_undead": {
+    "description": "你不會死亡。",
+    "invisible": false,
+    "name": "獵手的尊嚴",
+    "removable": false,
+    "stats": [
+      "cannot_die"
+    ],
+    "visuals": "witch_hunter_mark_remnant_undead_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "brute_warcry_debuff": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "intimidated",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "edict_declaration": {
+    "description": "[DNT] You have declared edicts",
+    "invisible": false,
+    "name": "[DNT] Edict Declaration",
+    "removable": false,
+    "stats": [],
+    "visuals": "edict_declaration",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "life_reservation_from_curse": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "life_reserved_by_curse_stat_%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "exposure_elemental": {
+    "description": "造成的減益效果降低[Resistances|抗性]",
+    "invisible": false,
+    "name": "元素曝曬",
+    "removable": false,
+    "stats": [
+      "exposure_-_to_total_elemental_resistance"
+    ],
+    "visuals": "elemental_exposure",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "tactician_ripwire_ballista_aura": {
+    "description": "你的禁錮累積得到提升。",
+    "invisible": false,
+    "name": "撕裂陣地",
+    "removable": false,
+    "stats": [
+      "hit_damage_immobilisation_multiplier_+%"
+    ],
+    "visuals": "tactician_ripwire_ballista_aura_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PlayerTacticianRipwireAura": {
+        "aura_radius_metres": 4.5,
+        "stats": {
+          "hit_damage_immobilisation_multiplier_+%": 40
+        },
+        "stat_text": [
+          "[Immobilised|禁錮]累積增加 40%"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "tactician_artillery_ballista_aura": {
+    "description": "你對受禁錮敵人造成的傷害增加。",
+    "invisible": false,
+    "name": "砲火陣地",
+    "removable": false,
+    "stats": [
+      "damage_+%_vs_immobilised_enemies"
+    ],
+    "visuals": "tactician_artillery_ballista_aura_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PlayerTacticianArtilleryAura": {
+        "aura_radius_metres": 4.5,
+        "stats": {
+          "damage_+%_vs_immobilised_enemies": 50
+        },
+        "stat_text": [
+          "對[Immobilised|受禁錮]敵人的傷害增加 50%"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "tactician_grenade_ballista_aura": {
+    "description": "你獲得火焰傷害。",
+    "invisible": false,
+    "name": "迫擊砲陣地",
+    "removable": false,
+    "stats": [
+      "non_skill_base_all_damage_%_to_gain_as_fire"
+    ],
+    "visuals": "tactician_grenade_ballista_aura_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PlayerTacticianGrenadeAura": {
+        "aura_radius_metres": 4.5,
+        "stats": {
+          "non_skill_base_all_damage_%_to_gain_as_fire": 15
+        },
+        "stat_text": [
+          "[Gain|獲得]相當於傷害 15% 的額外[Fire|火焰]傷害"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "tactician_shockwave_totem_aura": {
+    "description": "你增加效果範圍。",
+    "invisible": false,
+    "name": "震波陣地",
+    "removable": false,
+    "stats": [
+      "base_skill_area_of_effect_+%"
+    ],
+    "visuals": "tactician_shockwave_totem_aura_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PlayerTacticianShockwaveAura": {
+        "aura_radius_metres": 4.5,
+        "stats": {
+          "base_skill_area_of_effect_+%": 30
+        },
+        "stat_text": [
+          "增加 30% 範圍效果"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "tactician_warrior_totem_aura": {
+    "description": "你的產生榮耀提升。",
+    "invisible": false,
+    "name": "先祖陣地",
+    "removable": false,
+    "stats": [
+      "glory_generation_+%"
+    ],
+    "visuals": "tactician_warrior_totem_aura_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PlayerTacticianWarriorAura": {
+        "aura_radius_metres": 4.5,
+        "stats": {
+          "glory_generation_+%": 40
+        },
+        "stat_text": [
+          "增加 40% 生成的[Glory|榮耀]"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "tactician_dark_effigy_totem_aura": {
+    "description": "你造成的持續傷害增加。",
+    "invisible": false,
+    "name": "雕像陣地",
+    "removable": false,
+    "stats": [
+      "damage_over_time_+%"
+    ],
+    "visuals": "tactician_dark_effigy_totem_aura_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PlayerTacticianDarkAura": {
+        "aura_radius_metres": 4.5,
+        "stats": {
+          "damage_over_time_+%": 40
+        },
+        "stat_text": [
+          "增加 40% 持續傷害"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "tawhoa_medicine_woman_aura_life_regen": {
+    "description": "友方回復生命",
+    "invisible": false,
+    "name": "生命回復光環",
+    "removable": false,
+    "stats": [
+      "life_regeneration_rate_per_minute_%"
+    ],
+    "visuals": "tawhoa_medicine_woman_aura_life_regen",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "emergency_reload_visual": {
+    "description": "你的彈藥受到[Empowered|強化]。",
+    "invisible": false,
+    "name": "緊急裝填",
+    "removable": false,
+    "stats": [],
+    "visuals": "emergency_reload",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blood_mage_life_flask_buff": {
+    "description": "你獲得物理傷害。",
+    "invisible": false,
+    "name": "腥紅之潮",
+    "removable": false,
+    "stats": [
+      "non_skill_base_all_damage_%_to_gain_as_physical"
+    ],
+    "visuals": "tactician_dark_effigy_totem_aura_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blood_mage_life_spent_tracker": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyss_mod_apparition_beam": {
+    "description": "你正承受[Physical|物理]持續傷害。",
+    "invisible": false,
+    "name": "骷髏馬克的褻瀆",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "abyss_mod_apparition_beam",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "twilight_order_wall_debuff": {
+    "description": "黎明教團認為你實力孱弱，你的速度減慢，且更容易承受暴擊。",
+    "invisible": false,
+    "name": "神聖復仇",
+    "removable": false,
+    "stats": [
+      "base_enemy_critical_strike_chance_+%_against_self",
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "twilight_order_wall_debuff",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "shark_boss_blood_hunt": {
+    "description": "血腥的氣息引誘你的敵人",
+    "invisible": false,
+    "name": "獵物",
+    "removable": false,
+    "stats": [],
+    "visuals": "shark_boss_blood_hunt",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "allies_in_presence_gain_glory_generation": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "glory_generation_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "pinned_enemy_cannot_deal_critical_strikes": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "global_cannot_crit"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "number_of_active_totems_in_presence": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "medicine_woman_saved": {
+    "description": "減少使用的藥劑充能，並在使用藥劑時移除腐化之血。",
+    "invisible": false,
+    "name": "鮮血之藥",
+    "removable": false,
+    "stats": [
+      "flask_charges_used_+%",
+      "remove_corrupted_blood_when_you_use_a_flask"
+    ],
+    "visuals": "medicine_woman_saved",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "pacify": {
+    "description": "你無法造成傷害。",
+    "invisible": false,
+    "name": "平靜",
+    "removable": false,
+    "stats": [
+      "base_deal_no_damage"
+    ],
+    "visuals": "pacified",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_been_heavy_stunned_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_been_heavy_stunned_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "number_of_beast_companions_in_presence": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "guard_boss_offensive_buff": {
+    "description": "托維安受到強化，所有擊中都會施加感電、冰緩、點燃和冰凍。",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "all_damage_can_chill",
+      "all_damage_can_shock",
+      "all_damage_can_ignite",
+      "all_damage_can_freeze"
+    ],
+    "visuals": "guard_boss_offensive_buff",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "guard_boss_defensive_buff": {
+    "description": "托維安受到強化，受到更少傷害。",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "hellscape_monster_damage_taken_+%_final"
+    ],
+    "visuals": "guard_boss_defensive_buff",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "guard_boss_utility_buff": {
+    "description": "托維安受到強化，不會受到暈眩或異常狀態。",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "immune_to_status_ailments",
+      "base_cannot_be_stunned"
+    ],
+    "visuals": "guard_boss_utility_buff",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "overabundance_life_reservation": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "forge_hammer_deployed": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "flammability_ignite_chance_buildup": {
+    "description": "你更容易點燃。",
+    "invisible": false,
+    "name": "易燃",
+    "removable": false,
+    "stats": [],
+    "visuals": "flammability_ignite_chance_buildup",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "karui_chieftain_plant_damage_debuff": {
+    "description": "在塔赫亞的森林中，你造成的傷害大幅減少",
+    "invisible": false,
+    "name": "塔赫亞的森林",
+    "removable": false,
+    "stats": [
+      "damage_+%"
+    ],
+    "visuals": "karui_chieftain_plant_damage_debuff",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyss_desecrated_ground": {
+    "description": "你正在承受[Physical|物理]持續傷害，且不會恢復生命或能量護盾。",
+    "invisible": false,
+    "name": "腐化地面",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "cannot_recover_life",
+      "base_no_energy_shield_recovery"
+    ],
+    "visuals": "abyssal_desecrated_ground",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "prison_water_slow": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "labyrinth_arrow_movement_speed_+%_final"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "support_abyssal_mod": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "executioner_stolen_mod",
+    "category": "Stolen",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 3
+  },
+  "have_cast_a_specific_spell_in_last_8_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "num_unique_spells_cast_in_last_8_seconds"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "void_illusion_reserve": {
+    "description": "閃避翻滾會製造一個你的幻影複製體。",
+    "invisible": false,
+    "name": "虛空幻影",
+    "removable": false,
+    "stats": [],
+    "visuals": "void_illusion_reserve",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "unaffected_by_pacifying_curses": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "unaffected_by_pacifying_curses"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "generic_quick_life_loss": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "life_degeneration_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "unravelling": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "unravelling_ignite": {
+    "description": "擊中的混沌傷害也會貢獻至點燃機率和幅度。",
+    "invisible": false,
+    "name": "紛亂火炎",
+    "removable": false,
+    "stats": [
+      "base_chaos_damage_can_ignite"
+    ],
+    "visuals": "unravelling_ignite",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "unravelling_shock": {
+    "description": "擊中的混沌傷害也會貢獻至感電機率。",
+    "invisible": false,
+    "name": "紛亂雷電",
+    "removable": false,
+    "stats": [
+      "chaos_damage_can_shock"
+    ],
+    "visuals": "unravelling_shock",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "unravelling_freeze": {
+    "description": "擊中的混沌傷害也會貢獻至冰凍累積。",
+    "invisible": false,
+    "name": "紛亂寒霜",
+    "removable": false,
+    "stats": [
+      "chaos_damage_can_freeze"
+    ],
+    "visuals": "unravelling_freeze",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "was_heavy_stunned_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "was_frozen_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "was_electrocuted_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "was_pinned_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "chronomancer_cast_speed": {
+    "description": "你獲得施放速度。",
+    "invisible": false,
+    "name": "時間之沙",
+    "removable": false,
+    "stats": [
+      "base_cast_speed_+%"
+    ],
+    "visuals": "chronomancer_cast_speed_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "chronomancer_area_of_effect": {
+    "description": "你獲得效果範圍。",
+    "invisible": false,
+    "name": "時間之沙",
+    "removable": false,
+    "stats": [
+      "base_skill_area_of_effect_+%"
+    ],
+    "visuals": "chronomancer_area_of_effect_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "number_of_life_flasks_used_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "number_of_mana_flasks_used_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "number_of_charms_used_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "support_culling_strike_increased_threshold": {
+    "description": "你的撲殺門檻增加。",
+    "invisible": false,
+    "name": "強化撲殺",
+    "removable": false,
+    "stats": [
+      "culling_strike_threshold_+%"
+    ],
+    "visuals": "culling_strike_support_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "owner_is_offering_to_cascade_at": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_used_a_specific_grenade_in_last_8_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "number_of_grenades_types_fired_in_past_8_seconds"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "owner_is_hatching_elementals": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "consume_boss_devouring_darkness": {
+    "description": "你正承受物理持續傷害。",
+    "invisible": false,
+    "name": "暗夜吞噬",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "consume_boss_devouring_darkness",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_consumed_infusion_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_consumed_infusion_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "toxic_domain_pustule": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "affected_by_toxic_domain_pustule"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "withered_ground": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "lich_skeletal_graft_warrior": {
+    "description": "此靈魂類型每一靈魂賦予增加 25% 攻擊傷害。",
+    "invisible": false,
+    "name": "幽暗之魂",
+    "removable": false,
+    "stats": [
+      "attack_damage_+%"
+    ],
+    "visuals": "lich_skeletal_graft_warrior",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "lich_skeletal_graft_reaver": {
+    "description": "此靈魂類型每一靈魂賦予增加 10% 技能速度。",
+    "invisible": false,
+    "name": "幽暗之魂",
+    "removable": false,
+    "stats": [
+      "skill_speed_+%"
+    ],
+    "visuals": "lich_skeletal_graft_reaver",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "lich_skeletal_graft_brute": {
+    "description": "此靈魂類型每一靈魂賦予增加 80% 暈眩累積。",
+    "invisible": false,
+    "name": "幽暗之魂",
+    "removable": false,
+    "stats": [
+      "hit_damage_stun_multiplier_+%"
+    ],
+    "visuals": "lich_skeletal_graft_brute",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "lich_skeletal_graft_archer": {
+    "description": "此靈魂類型每一靈魂賦予增加 30% 投射物速度。",
+    "invisible": false,
+    "name": "幽暗之魂",
+    "removable": false,
+    "stats": [
+      "base_projectile_speed_+%"
+    ],
+    "visuals": "lich_skeletal_graft_archer",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "lich_skeletal_graft_frost_mage": {
+    "description": "此靈魂類型每一靈魂賦予增加 50% 最大能量護盾。",
+    "invisible": false,
+    "name": "幽暗之魂",
+    "removable": false,
+    "stats": [
+      "maximum_energy_shield_+%"
+    ],
+    "visuals": "lich_skeletal_graft_frost_mage",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "lich_skeletal_graft_storm_mage": {
+    "description": "此靈魂類型每一靈魂賦予增加 50% 法術傷害。",
+    "invisible": false,
+    "name": "幽暗之魂",
+    "removable": false,
+    "stats": [
+      "spell_damage_+%"
+    ],
+    "visuals": "lich_skeletal_graft_storm_mage",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "lich_skeletal_graft_arsonist": {
+    "description": "此靈魂類型每一靈魂賦予增加 25% 效果範圍。",
+    "invisible": false,
+    "name": "幽暗之魂",
+    "removable": false,
+    "stats": [
+      "base_skill_area_of_effect_+%"
+    ],
+    "visuals": "lich_skeletal_graft_arsonist",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "lich_skeletal_graft_cleric": {
+    "description": "此靈魂類型每一靈魂賦予增加 35% 能量護盾充能率。",
+    "invisible": false,
+    "name": "幽暗之魂",
+    "removable": false,
+    "stats": [
+      "energy_shield_recharge_rate_+%"
+    ],
+    "visuals": "lich_skeletal_graft_cleric",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ascendancy_deadeye_marks_reservation": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ascendancy_deadeye_marks_cooldown": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "ascendancy_deadeye_marks_cd",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ascendancy_deadeye_marks_ready": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "ascendancy_deadeye_marks",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "mark_immunity": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "immune_to_marks"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "karui_captain_boss_blood_thief_heal": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "life_regeneration_rate_per_minute_%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_lich_ascendancy_explosion_aura": {
+    "description": "",
+    "invisible": true,
+    "name": "巫妖光環",
+    "removable": false,
+    "stats": [
+      "explode_cursed_enemies_for_25%_life_as_physical_on_kill_chance_%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "kulemak_boss_darkness": {
+    "description": "身處黑暗之中時，你無法造成傷害。",
+    "invisible": false,
+    "name": "黑暗",
+    "removable": false,
+    "stats": [
+      "base_deal_no_damage"
+    ],
+    "visuals": "kulemak_boss_darkness",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyss_lightless_well": {
+    "description": "",
+    "invisible": false,
+    "name": "Amanamu's Void",
+    "removable": false,
+    "stats": [],
+    "visuals": "abyss_lightless_well",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyss_lightless_well_immune": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "pain_offering_buff_player": {
+    "description": "You have increased Attack Speed, Cast Speed and Damage.",
+    "invisible": false,
+    "name": "Pain Offering",
+    "removable": false,
+    "stats": [
+      "attack_speed_+%",
+      "base_cast_speed_+%",
+      "damage_+%"
+    ],
+    "visuals": "pain_offering_buff",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyss_leech_aura": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_life_leech_from_any_attack_damage_permyriad",
+      "base_life_leech_from_all_spell_damage_permyriad"
+    ],
+    "visuals": "abyss_leech_aura",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "exposure_elemental_recently_visual": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "exposure_elemental_recently_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "exposure_elemental_recently_visual_cooldown": {
+    "description": "",
+    "invisible": true,
+    "name": "",
     "removable": false,
     "stats": [],
     "visuals": "invisible",

@@ -26,7 +26,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Отнимает {0}% от здоровья скелета, чтобы нанести столько же урона хаосом",
+        "string": "Жертвует {0}% здоровья [Minion|приспешника], чтобы нанести столько же урона [Chaos|хаосом]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1289,42 +1289,6 @@
           []
         ],
         "string": "Чары повторяются ещё {0} раз(-а)",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "damage_infusion_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Переносит {0}% урона, полученного окружающими врагами, на одну цель",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3212,44 +3176,6 @@
   {
     "English": null,
     "ids": [
-      "poison_skill_effect_duration"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp"
-          ]
-        ],
-        "string": "Длительность яда: {0} секунд(-ы)",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "minion_duration"
     ],
     "trade_stats": null,
@@ -3920,42 +3846,6 @@
           []
         ],
         "string": "{0}% шанс наложить шок на врагов",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "base_chance_to_ignite_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% шанс поджечь врагов",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5184,6 +5074,136 @@
           []
         ],
         "string": "{0}% к [CriticalDamageBonus|бонусу критического урона] под действием Неуловимости",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "apply_x_wither_on_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Количество накладываемых при [HitDamage|нанесении удара] [Debuff|отрицательных эффектов] [Withered|истощения]@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Накладывает заряд [Withered|истощения] при [HitDamage|нанесении удара]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Накладывает зарядов [Withered|истощения] при [HitDamage|нанесении удара]: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "active_skill_withered_base_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "[Withered|Истощение] длится {0} секунду",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "[Withered|Истощение] длится {0} секунд(-ы)",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7424,42 +7444,6 @@
   {
     "English": null,
     "ids": [
-      "shield_spell_block_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% шанс блокировать урон от чар со щитом в руках",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "fire_shield_damage_threshold"
     ],
     "trade_stats": null,
@@ -8437,7 +8421,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Максимум [Totem|тотемов]@{0}",
+        "string": "Лимит [Totem|тотемов]@{0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8826,42 +8810,6 @@
           ]
         ],
         "string": "{0}% снижение здоровья тотема",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "freeze_as_though_dealt_damage_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Удары замораживают, как если бы они нанесли на {0}% больше урона",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9575,7 +9523,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Отнимает ваше здоровье, если поблизости нет скелетов",
+        "string": "Использует ваше здоровье, если в радиусе нет [Minion|приспешника]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13181,78 +13129,6 @@
   {
     "English": null,
     "ids": [
-      "global_reduce_enemy_block_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Шанс блока этого умения врагом снижен на {0}%",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "reduce_enemy_dodge_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Враги имеют {0}% снижение шанса уворота от ударов этим умением",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "damage_+%_final_to_stunned_enemies"
     ],
     "trade_stats": null,
@@ -15163,60 +15039,6 @@
   {
     "English": null,
     "ids": [
-      "chance_to_freeze_shock_ignite_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 99,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% шанс заморозить, поджечь и наложить шок",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Всегда замораживает, поджигает и накладывает шок",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "additional_chance_to_freeze_chilled_enemies_%"
     ],
     "trade_stats": null,
@@ -16511,102 +16333,6 @@
   {
     "English": null,
     "ids": [
-      "banner_aura_magnitude_+%_final_per_resource",
-      "quality_display_banner_buff_effect_+%_final_per_resource_is_gem"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "На {0}% больше [BuffMagnitude|силы] [Aura|ауры] за единицу [Valour|доблести]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "На {0}% больше [BuffMagnitude|силы] [Aura|ауры] за единицу [Valour|доблести]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ],
-          []
-        ],
-        "string": "На {0}% меньше [BuffMagnitude|силы] [Aura|ауры] за единицу [Valour|доблести]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "corrosive_shroud_poison_effect_+%_final_while_accumulating_poison"
     ],
     "trade_stats": null,
@@ -16652,96 +16378,6 @@
           ]
         ],
         "string": "На {0}% меньше эффекта накладываемого вами отравления во время инкубирования и не при максимуме чумы",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "plague_bearer_gains_%_of_damage_from_inflicted_poisons"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Ожидаемое накопление урона от [Poison|отравления]@{0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Накапливает {0}% ожидаемого урона [Poison|от яда]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "plague_bearer_maximum_stored_poison_damage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Накапливает вплоть до {0} урона [Poison|от яда]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -16834,6 +16470,62 @@
           ]
         ],
         "string": "Дарует {0}% ослабление эффекта отравления при заражении",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_mana_leech_rate_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[ManaLeech|Похищает] ману на {0}% быстрее",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[ManaLeech|Похищает] ману на {0}% медленнее",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17947,7 +17639,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Не может быть заморожен",
+        "string": "Не может замораживать",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18871,6 +18563,118 @@
   {
     "English": null,
     "ids": [
+      "active_skill_consume_enemy_freeze_to_gain_damage_against_non_unique_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Consume|Поглощает] [Freeze|заморозку] на [Rarity|не-уникальных] врагах для нанесения на {0}% больше урона",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Consume|Поглощает] [Freeze|заморозку] на [Rarity|не-уникальных] врагах для нанесения на {0}% меньше урона",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "active_skill_consume_enemy_freeze_to_gain_damage_against_unique_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Consume|Поглощает] [Freeze|заморозку] на [Rarity|уникальных] врагах для нанесения на {0}% больше урона",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Consume|Поглощает] [Freeze|заморозку] на [Rarity|уникальных] врагах для нанесения на {0}% меньше урона",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "active_skill_consume_enemy_fully_broken_armour_to_gain_damage_+%_final"
     ],
     "trade_stats": null,
@@ -19084,6 +18888,80 @@
   {
     "English": null,
     "ids": [
+      "active_skill_damage_+%_final_vs_unique_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Множитель урона по [Rarity|уникальным] врагам@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "На {0}% больше урона по [Rarity|уникальным] врагам",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "На {0}% меньше урона по [Rarity|уникальным] врагам",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "active_skill_damage_+%_final_while_dual_wielding"
     ],
     "trade_stats": null,
@@ -19200,6 +19078,44 @@
         "index_handlers": [
           []
         ],
+        "string": "Множитель урона после каждого удара [Chain|по цепи]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Уменьшение урона после каждого удара [Chain|по цепи]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "На {0}% больше урона от [HitDamage|ударов] за каждый удар, соврешенный этим умением [Chain|по цепи]",
         "reminder_text": null,
         "is_markup": null
@@ -19256,6 +19172,44 @@
         "index_handlers": [
           []
         ],
+        "string": "Множитель урона от [HitDamage|ударов] по [Burning|горящим] врагам@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Уменьшение урона от [HitDamage|ударов] по [Burning|горящим] врагам@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "На {0}% больше урона от [HitDamage|ударов] по [Burning|горящим] врагам",
         "reminder_text": null,
         "is_markup": null
@@ -19298,6 +19252,44 @@
     "Korean": null,
     "Portuguese": null,
     "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Множитель урона от [HitDamage|ударов] по [Chill|охлажденным] врагам@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Уменьшение урона от [HitDamage|ударов] по [Chill|охлажденным] врагам@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -19501,6 +19493,42 @@
           ]
         ],
         "string": "На {0}% меньше скорости накопления шкалы [Electrocute|электризации]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "active_skill_has_%_standard_scaling_attack_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Attack Damage of this skill is {0}% of [DefaultAttackDamage|Default Attack Damage]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -19740,7 +19768,7 @@
         "index_handlers": [
           []
         ],
-        "string": "На {0}% больше шанса наложить [Ignite|поджог] на врагов",
+        "string": "Накладывает [Flammability|Горючесть] с на {0}% большей [BuffMagnitude|силой]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -19760,7 +19788,7 @@
             "negate"
           ]
         ],
-        "string": "На {0}% меньше шанса наложить [Ignite|поджог] на врагов",
+        "string": "Накладывает [Flammability|Горючесть] с на {0}% меньшей [BuffMagnitude|силой]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -19783,6 +19811,31 @@
     "Korean": null,
     "Portuguese": null,
     "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Множитель [BuffMagnitude|силы] накладываемого [Ignite|поджога]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -19913,6 +19966,118 @@
           ]
         ],
         "string": "На {0}% меньше длительности [Ignite|поджога]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "active_skill_ignite_proliferation_radius"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "[Ignite|Ignites] inflicted by this Skill [AilmentSpread|Spread] to other\nenemies that stay within {0} metre for 1 second",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "[Ignite|Ignites] inflicted by this Skill [AilmentSpread|Spread] to other\nenemies that stay within {0} metres for 1 second",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "active_skill_knockback_distance_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Множитель дистанции [Knockback|отбрасывания]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "На {0}% больше дистанции [Knockback|отбрасывания]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20617,7 +20782,7 @@
           }
         ],
         "format": [
-          "+#"
+          "#"
         ],
         "index_handlers": [
           []
@@ -20635,7 +20800,7 @@
           }
         ],
         "format": [
-          "+#"
+          "#"
         ],
         "index_handlers": [
           [
@@ -20643,6 +20808,62 @@
           ]
         ],
         "string": "На {0}% меньше длительности [Shock|шока]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "active_skill_shock_effect_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "На {0}% больше [BuffMagnitude|силы] накладыавемого [Shock|шока]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "На {0}% меньше [BuffMagnitude|силы] накладыавемого [Shock|шока]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20678,6 +20899,24 @@
         "index_handlers": [
           []
         ],
+        "string": "Увеличение [StunThreshold|порога оглушения] при использовании@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "{0}% увеличение [StunThreshold|порога оглушения] при использовании умения",
         "reminder_text": null,
         "is_markup": null
@@ -20685,8 +20924,8 @@
       {
         "condition": [
           {
-            "min": -1,
-            "max": null,
+            "min": null,
+            "max": -1,
             "negated": null
           }
         ],
@@ -21144,7 +21383,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DamageTypes|Весь урон] от [HitDamage|ударов] [Contributes|влияет] на шанс и силу [Ignite|поджога], накопление шкалы [Freeze|заморозки] и шанс [Shock|шока]",
+        "string": "[DamageTypes|Весь урон] от [HitDamage|ударов] [Contributes|влияет] на [BuffMagnitude|силу] [Flammability|горючести] и [Ignite|поджога], накопление шкалы [Freeze|заморозки] и шанс [Shock|шока]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21758,42 +21997,6 @@
   {
     "English": null,
     "ids": [
-      "apply_overpowered_on_enemy_block_reduced_block_and_spell_block_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Притеснение дает -{0}% шанс заблокировать урон от [Attack|атак] и чар",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "arc_chain_hit_damage_+%_final"
     ],
     "trade_stats": null,
@@ -21850,8 +22053,135 @@
   {
     "English": null,
     "ids": [
-      "arc_damage_+%_final_for_each_remaining_chain",
-      "quality_display_arc_is_gem"
+      "arc_chains_gained_from_infusion_consumption"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Дополнительные удары по [Chain|цепи] от [ElementalInfusion|насыщения] [Lightning|молнией]@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Наносит дополнительных ударов по [Chain|цепи] при [ElementalInfusion|насыщении] [Lightning|молнией]: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "arc_damage_+%_final_from_infusion_consumption"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Множитель урона от [ElementalInfusion|насыщения] [Lightning|молнией]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "На {0}% больше урона при [ElementalInfusion|насыщении] [Lightning|молнией]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "На {0}% меньше урона при [ElementalInfusion|насыщении] [Lightning|молнией]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "arc_damage_+%_final_for_each_remaining_chain"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -21867,22 +22197,15 @@
             "min": null,
             "max": null,
             "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
           }
         ],
         "format": [
-          "#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
-          [],
           []
         ],
-        "string": "Множитель урона за каждый оставшийся возможный удар по [Chain|цепи]@{0}",
+        "string": "Множитель урона за каждый оставшийся удар по [Chain|цепи]@{0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -21892,22 +22215,15 @@
             "min": 1,
             "max": null,
             "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
           }
         ],
         "format": [
-          "+#",
-          "ignore"
+          "+#"
         ],
         "index_handlers": [
-          [],
           []
         ],
-        "string": "На {0}% больше урона за каждый оставшийся возможный удар по [Chain|цепи]",
+        "string": "На {0}% больше урона за каждый оставшийся удар по [Chain|цепи]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -21917,22 +22233,15 @@
             "min": 1,
             "max": null,
             "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
           }
         ],
         "format": [
-          "#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
-          [],
           []
         ],
-        "string": "На {0}% больше урона за каждый оставшийся возможный удар по [Chain|цепи]",
+        "string": "На {0}% больше урона за каждый оставшийся удар по [Chain|цепи]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -21942,24 +22251,17 @@
             "min": null,
             "max": -1,
             "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
           }
         ],
         "format": [
-          "#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           [
             "negate"
-          ],
-          []
+          ]
         ],
-        "string": "На {0}% меньше урона за каждый оставшийся возможный удар по [Chain|цепи]",
+        "string": "На {0}% меньше урона за каждый оставшийся удар по [Chain|цепи]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -23203,6 +23505,127 @@
   {
     "English": null,
     "ids": [
+      "base_additional_damage_from_distance_+%_final",
+      "quality_display_spear_puncture_is_gem"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Максимальный множитель урона от расстояния@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Наносит вплоть до {0}% больше дополнительного урона в зависимости от пройденного расстояния",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Наносит вплоть до {0}% больше урона в зависимости от пройденного расстояния",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ],
+          []
+        ],
+        "string": "Наносит вплоть до {0}% меньше урона в зависимости от пройденного расстояния",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_bleeding_effect_+100%_final_chance"
     ],
     "trade_stats": null,
@@ -23228,6 +23651,60 @@
           []
         ],
         "string": "Кровотечение с {0}% шансом может иметь на 100% сильнее эффект",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_chance_to_daze_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": 100,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Накладывает [Daze|оцепенение] при нанесении [HitDamage|удара]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс наложить [Daze|оцепенение] при нанесении [HitDamage|удара]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -23593,7 +24070,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% повышение [CooldownRecovery|Cooldown Recovery Rate]",
+        "string": "{0}% повышение [CooldownRecovery|скорости перезарядки умений]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -23613,7 +24090,63 @@
             "negate"
           ]
         ],
-        "string": "{0}% снижение [CooldownRecovery|Cooldown Recovery Rate]",
+        "string": "{0}% снижение [CooldownRecovery|скорости перезарядки умений]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_curse_delay_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Область [Curse|проклятия] проявляется после увеличенной на {0}% задержки",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Область [Curse|проклятия] проявляется после уменьшенной на {0}% задержки",
         "reminder_text": null,
         "is_markup": null
       }
@@ -23670,127 +24203,6 @@
           ]
         ],
         "string": "{0}% уменьшение получаемого урона",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "base_dash_additional_damage_from_distance_+%_final",
-      "quality_display_spear_puncture_is_gem"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "Максимальный множитель урона от расстояния@{0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "Наносит вплоть до {0}% больше дополнительного урона в зависимости от пройденного расстояния",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "Наносит вплоть до {0}% больше урона в зависимости от пройденного расстояния",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ],
-          []
-        ],
-        "string": "Наносит вплоть до {0}% меньше урона в зависимости от пройденного расстояния",
         "reminder_text": null,
         "is_markup": null
       }
@@ -23948,7 +24360,7 @@
   {
     "English": null,
     "ids": [
-      "galvanic_field_retargeting_delay_ms"
+      "base_ignite_effect_+%"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -23961,27 +24373,7 @@
       {
         "condition": [
           {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp"
-          ]
-        ],
-        "string": "Может выбирать каждого врага в цель не чаще 1 раза каждую {0} секунду",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -23990,11 +24382,29 @@
           "#"
         ],
         "index_handlers": [
+          []
+        ],
+        "string": "{0}% увеличение [BuffMagnitude|силы] [Ignite|поджога]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
           [
-            "milliseconds_to_seconds_2dp"
+            "negate"
           ]
         ],
-        "string": "Может выбирать каждого врага в цель не чаще 1 раза каждые {0} секунд (-ы)",
+        "string": "{0}% уменьшение [BuffMagnitude|силы] [Ignite|поджога]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -24030,7 +24440,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% chance to inflict Cold [Exposure] on Hit",
+        "string": "{0}% шанс наложить [Exposure|восприимчивость] к холоду при нанесении удара",
         "reminder_text": null,
         "is_markup": null
       },
@@ -24048,7 +24458,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Inflict Cold [Exposure] on Hit",
+        "string": "Накладывает [Exposure|восприимчивость] к холоду при нанесении удара",
         "reminder_text": null,
         "is_markup": null
       }
@@ -24392,6 +24802,70 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Выпускает [Projectile|снарядов]: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Выпускает стрел: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 2,
             "max": null,
             "negated": null
@@ -24450,6 +24924,60 @@
           []
         ],
         "string": "Выпускает стрел: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_projectiles_in_spiral_nova"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Выпускает {0} [Projectile|снаряд]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Выпускает с [Projectile|снарядов] по спирали: {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -24658,7 +25186,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Максимум колоколов: {0}",
+        "string": "Лимит колоколов: {0}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -24676,7 +25204,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Максимум колоколов: {0}",
+        "string": "Лимит колоколов: {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -24861,6 +25389,50 @@
           []
         ],
         "string": "Молния ударяет по {0} врагам",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "spell_minimum_base_cold_damage_per_removable_frenzy_charge",
+      "spell_maximum_base_cold_damage_per_removable_frenzy_charge"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Наносит от {0} до {1} базового урона от холода за каждый снятый заряд ярости",
         "reminder_text": null,
         "is_markup": null
       }
@@ -26966,6 +27538,56 @@
           [],
           []
         ],
+        "string": "Число выпускаемых побегов@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Выпускает побеги максимум в {0} цель",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
         "string": "Выпускает побеги максимум в {0} целей",
         "reminder_text": null,
         "is_markup": null
@@ -26973,7 +27595,57 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Выпускает побеги максимум в {0} целей",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Выпускает побеги максимум в {0} цель",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
             "max": null,
             "negated": null
           },
@@ -27171,6 +27843,44 @@
         "index_handlers": [
           []
         ],
+        "string": "Множитель получаемого защищенными [Minion|приспешниками] урона в течение 1 секунды после потери щита@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Уменьшение получаемого защищенными [Minion|приспешниками] урона в течение 1 секунды после потери щита@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "Защищенные [Minion|приспешники] получают на {0}% больше урона в течение 1 секунды после потери щита",
         "reminder_text": null,
         "is_markup": null
@@ -27178,8 +27888,8 @@
       {
         "condition": [
           {
-            "min": -1,
-            "max": null,
+            "min": null,
+            "max": -1,
             "negated": null
           }
         ],
@@ -27447,7 +28157,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[FlamesOfChayula|Огни Чаюлы] появляются рядом каждык {0} секунд(-ы)",
+        "string": "[FlamesOfChayula|Огни Чаюлы] появляются рядом каждые {0} секунд(-ы)",
         "reminder_text": null,
         "is_markup": null
       }
@@ -27692,6 +28402,42 @@
           []
         ],
         "string": "Не может [ArmourBreak|разрушать броню]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "cannot_consume_power_frenzy_endurance_charges"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Не может поглощать [Charges|заряды]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28158,6 +28904,60 @@
           []
         ],
         "string": "Вызывает срабатывание этих чар при нанесении критического удара по врагу",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "cast_on_damage_taken_gain_X_centienergy_when_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Получение [Energy|энергии] при получении [HitDamage|удара]@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Получает {0} [Energy|энергии] когда вы получаете урон от [HitDamage|удара]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -29129,6 +29929,60 @@
   {
     "English": null,
     "ids": [
+      "chance_%_to_spawn_another_infusion_remnant"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс создать дополнительный [Remnant|сгусток] [ElementalInfusion|насыщения]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Создает дополнительный [Remnant|сгусток] [ElementalInfusion|насыщения]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "chance_for_extra_damage_roll_%"
     ],
     "trade_stats": null,
@@ -29507,6 +30361,114 @@
   {
     "English": null,
     "ids": [
+      "chance_to_daze_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% уменьшение шанса наложить [Daze|оцепенение]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% увеличение шанса наложить [Daze|оцепенение]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_to_daze_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "На {0}% меньше шанс наложить [Daze|оцепенение]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "На {0}% больше шанс наложить [Daze|оцепенение]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "chance_to_deal_double_damage_%"
     ],
     "trade_stats": null,
@@ -29639,7 +30601,79 @@
         "index_handlers": [
           []
         ],
-        "string": "[Projectile|Снаряды] имеют {0}% шанс выпустить дополнительный снаряд при [Fork|разветвлении]",
+        "string": "[Projectile|Снаряды] с {0}% шансом могут выпустить дополнительный снаряд при [Fork|разветвлении]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_to_gain_1_more_charge_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Шанс получения дополнительного [Charges|заряда]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс при получении вами [Charges|заряда] получить дополнительный [Charges|заряд]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "При получении вами [Charges|заряда] дарует дополнительный [Charges|заряд]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -30107,6 +31141,150 @@
   {
     "English": null,
     "ids": [
+      "base_chance_to_not_consume_corpse_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Шанс не уничтожить поглощенные [Corpse|трупы]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс не уничтожить поглощенный [Corpse|труп]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_to_not_consume_infusion_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс не удалить [ElementalInfusion|насыщение], но все равно считаться поглотившим их",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_to_not_consume_parried_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Шанс не поглотить эффект Парирован@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс не поглотить эффект Парирован",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "chance_to_pierce_ignited_enemy_%"
     ],
     "trade_stats": null,
@@ -30186,6 +31364,60 @@
           []
         ],
         "string": "Удары могут накладывать отравление больше одного раза",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_to_retain_40%_of_glory_on_use_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Шанс сохранить 40% [Glory|доблести]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс сохранить 40% [Glory|доблести]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -31661,6 +32893,24 @@
         "index_handlers": [
           []
         ],
+        "string": "Шанс не снять [Frozen|заморозку]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "{0}% шанс [Shatter|разбить], не снимая [Frozen|заморозку]",
         "reminder_text": null,
         "is_markup": null
@@ -32023,6 +33273,154 @@
   {
     "English": null,
     "ids": [
+      "consume_X_heat_on_skill_use",
+      "active_skill_all_damage_%_as_fire_if_heat_is_consumed",
+      "ignite_effect_+%_final_if_heat_is_consumed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Gain|Даруемый] урон от [Fire|огня] при поглощении {0} [Heat|нагрева]@{1}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Множитель [BuffMagnitude|силы] [Ignite|поджога]  при поглощении {0} [Heat|нагрева]@{2}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Поглощает {0} [Heat|нагрева], если это возможно, чтобы \n[Gain|нанести] {1}% урона в виде урона от [Fire|огня]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Поглощает {0} [Heat|нагрева], если это возможно, чтобы получить {2}% множитель [BuffMagnitude|силы] [Ignite|поджога]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "consume_enemy_daze_to_always_hit"
     ],
     "trade_stats": null,
@@ -32361,6 +33759,42 @@
     "Korean": null,
     "Portuguese": null,
     "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Поражается дополнительных врагов при сотворении@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Инфекция поражает {0} дополнительного врага при сотворении",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -33424,6 +34858,42 @@
   {
     "English": null,
     "ids": [
+      "crossbow_ammo_always_reload"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Всегда перезаряжается при переключении на эти [Ammunition|боеприпасы]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "cruelty_effect_+%"
     ],
     "trade_stats": null,
@@ -33765,6 +35235,62 @@
           ]
         ],
         "string": "Теряет 1 стадию каждые {0} секунд(-ы), если не поддерживается",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "damage_+%_final_from_lich_apparition_cloned_skill"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Spell|Spells] cast by Apparition deal {0}% more Damage",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Spell|Spells] cast by Apparition deal {0}% less Damage",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34336,7 +35862,25 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% шанс выпустить дополнительный [Projectile|снаряд ] за каждый [Debuff|отрицательный эффект] постепенного урона [Chaos|хаосом] на враге",
+        "string": "Шанс на дополнительный [Projectile|снаряд] за каждый [Debuff|отрицательный эффект] постепенного урона [Chaos|хаосом] на враге@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс выпустить дополнительный [Projectile|снаряд] за каждый [Debuff|отрицательный эффект] постепенного урона [Chaos|хаосом] на враге",
         "reminder_text": null,
         "is_markup": null
       }
@@ -35306,6 +36850,60 @@
           ]
         ],
         "string": "{0}% уменьшение урона при снятии зарядов трёх разных типов",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "disengage_%_chance_for_additional_shockwave"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Шанс дополнительной ударной волны@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс дополнительной ударной волны",
         "reminder_text": null,
         "is_markup": null
       }
@@ -37230,6 +38828,24 @@
         "index_handlers": [
           []
         ],
+        "string": "Множитель урона за каждый шип@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "На {0}% больше урона от [HitDamage|ударов] за каждый шип",
         "reminder_text": null,
         "is_markup": null
@@ -37251,42 +38867,6 @@
           ]
         ],
         "string": "На {0}% меньше урона от [HitDamage|ударов] за каждый шип",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "electrocuting_arrow_%_damage_gained_as_extra_lightning_on_debuffed_target"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[HitDamage|Удары] по целям с прикрепленными громоотводами наносят {0}% урона в виде дополнительного урона от [Lightning|молнии]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -39117,9 +40697,9 @@
   {
     "English": null,
     "ids": [
-      "feast_of_flesh_gain_X_life_per_corpse_consumed",
-      "feast_of_flesh_gain_X_mana_per_corpse_consumed",
-      "feast_of_flesh_gain_X_energy_shield_per_corpse_consumed"
+      "base_life_recovery_per_minute",
+      "base_mana_recovery_per_minute",
+      "feast_of_flesh_regeneration_duration"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -39129,6 +40709,40 @@
     "Korean": null,
     "Portuguese": null,
     "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Регенерирует {0} здоровья и {1} маны в течение {2} секунды за каждый [Consume|поглощенный] [Corpse|труп]",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -39155,9 +40769,11 @@
         "index_handlers": [
           [],
           [],
-          []
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
         ],
-        "string": "Дарует {0} здоровья за каждый поглощённый труп\nДарует {1} маны за каждый поглощённый труп\nДарует {2} [EnergyShield|энергетического щита] за каждый поглощённый труп",
+        "string": "Регенерирует {0} здоровья и {1} маны в течение {2} секунд(-ы) за каждый [Consume|поглощенный] [Corpse|труп]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -39873,6 +41489,44 @@
         "index_handlers": [
           []
         ],
+        "string": "Множитель [BuffMagnitude|силы] [Ignite|поджога], накладываемого [Projectile|снарядами]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Уменьшение [BuffMagnitude|силы] [Ignite|поджога], накладываемого [Projectile|снарядами]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "Проходящие сквозь стену [Projectile|снаряды] имеют на {0}% больше эффекта [Ignite|поджога]",
         "reminder_text": null,
         "is_markup": null
@@ -40055,42 +41709,6 @@
   {
     "English": null,
     "ids": [
-      "flameblast_ignite_chance_+%_per_stage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% шанс поджечь за каждую стадию",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "flameblast_maximum_stages"
     ],
     "trade_stats": null,
@@ -40101,24 +41719,6 @@
     "Korean": null,
     "Portuguese": null,
     "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Максимум стадий@{0}",
-        "reminder_text": null,
-        "is_markup": null
-      },
       {
         "condition": [
           {
@@ -42207,7 +43807,7 @@
   {
     "English": null,
     "ids": [
-      "fully_broken_armour_duration_ms_+"
+      "fully_broken_armour_and_sundered_armour_duration_ms_+"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -42308,42 +43908,6 @@
           []
         ],
         "string": "{0}% шанс получить 1 свирепости при использовании",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "gain_X_rage_on_hit_once_per_skill_use"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Дарует {0} [Rage|свирепости] при нанесении удара, единожды за использование умения",
         "reminder_text": null,
         "is_markup": null
       }
@@ -42789,7 +44353,7 @@
   {
     "English": null,
     "ids": [
-      "gain_x_valour_per_minute_while_unique_presence"
+      "gain_x_rage_on_attack_hit"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -42811,11 +44375,9 @@
           "#"
         ],
         "index_handlers": [
-          [
-            "per_minute_to_per_second_2dp_if_required"
-          ]
+          []
         ],
-        "string": "Убийства [Attack|атаками] накапливают [Valour|доблесть], равную влиянию врага\nПолучает {0} [Valour|доблести], пока в вашем [Presence|присутствии] находится уникальный враг",
+        "string": "Дарует {0} [Rage|свирепости] при нанесении [HitDamage|удара]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -43136,6 +44698,42 @@
           ]
         ],
         "string": "Взрывы происходят на {0}% реже",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "global_bleed_on_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Вызывает [Bleeding|кровотечение] при нанесении [HitDamage|удара]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -43605,6 +45203,42 @@
   {
     "English": null,
     "ids": [
+      "has_freeze_cull"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Freeze|Замораживает] [PrimedFreeze|готовых к заморозке] врагов",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "hazard_rearm_%_chance"
     ],
     "trade_stats": null,
@@ -43993,6 +45627,44 @@
         "index_handlers": [
           []
         ],
+        "string": "Множитель урона за каждую секунду оставшейся длительности удаленного [Curse|проклятия]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Уменьшение урона за каждую секунду оставшейся длительности удаленного [Curse|проклятия]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "На {0}% больше урона за каждую секунду оставшейся длительности удаленного [Curse|проклятия]",
         "reminder_text": null,
         "is_markup": null
@@ -44000,8 +45672,8 @@
       {
         "condition": [
           {
-            "min": -1,
-            "max": null,
+            "min": null,
+            "max": -1,
             "negated": null
           }
         ],
@@ -44331,6 +46003,24 @@
     "Korean": null,
     "Portuguese": null,
     "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Шанс накопления шкалы [Daze|оцепенения]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -44839,6 +46529,190 @@
   {
     "English": null,
     "ids": [
+      "ice_crystal_shatter_detonation_area_of_effect_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Множитель области действия при [IceCrystalShatter|раскалывании]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "На {0}% больше области действия при [IceCrystalShatter|раскалывании]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ice_crystal_shatter_detonation_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Множитель урона при [IceCrystalShatter|раскалывании]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "На {0}% больше урона при [IceCrystalShatter|раскалывании]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ice_crystals_hazard_damage_+%_final_for_first_500_ms_when_not_killed_by_self"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Less damage in first 0.5 seconds@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% less damage if destroyed within 0.5 seconds by something other than you",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% more damage if not destroyed withint 0.5 seconds by something other than you",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "ice_dash_cooldown_recovery_per_nearby_normal_or_magic_enemy",
       "ice_dash_cooldown_recovery_per_nearby_rare_or_unique_enemy"
     ],
@@ -45312,7 +47186,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% шанс наложить Прокол на врагов при нанесении удара",
+        "string": "{0}% шанс наложить [Impale|Прокол] на врагов при нанесении [HitDamage|удара]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -45330,7 +47204,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Накладывает Прокол на врагов при нанесении удара",
+        "string": "Накладывает [Impale|Прокол] на врагов при нанесении [HitDamage|удара]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -45726,7 +47600,7 @@
   {
     "English": null,
     "ids": [
-      "inflict_cold_exposure_for_x_ms_on_cold_crit"
+      "inflict_exposure_for_x_ms_on_cold_crit"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -45752,7 +47626,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Длительность [Exposure|восприимчивости к холоду] от [Critical|критического удара] уроном от [Cold|холода]@{0} с",
+        "string": "Длительность [Exposure|восприимчивости] при нанесении [Critical|критического удара] [Cold|холодом]@{0} с",
         "reminder_text": null,
         "is_markup": null
       }
@@ -45764,7 +47638,7 @@
   {
     "English": null,
     "ids": [
-      "inflict_fire_exposure_for_x_ms_on_ignite"
+      "inflict_exposure_for_x_ms_on_ignite"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -45790,7 +47664,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Длительность [Exposure|восприимчивости к огню] от [Ignite|поджога]@{0} с",
+        "string": "Длительность [Exposure|восприимчивости] при наложении [Ignite|поджога]@{0} с",
         "reminder_text": null,
         "is_markup": null
       }
@@ -45802,7 +47676,7 @@
   {
     "English": null,
     "ids": [
-      "inflict_lightning_exposure_for_x_ms_on_shock"
+      "inflict_exposure_for_x_ms_on_shock"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -45828,7 +47702,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Длительность [Exposure|восприимчивости к молнии] от [Shock|шока]@{0} с",
+        "string": "Длительность [Exposure|восприимчивости] при наложении [Shock|шока]@{0} с",
         "reminder_text": null,
         "is_markup": null
       }
@@ -45840,7 +47714,7 @@
   {
     "English": null,
     "ids": [
-      "infusion_grants_life_regeneration_rate_per_minute_%"
+      "inflict_exposure_on_hit_%_chance"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -45862,11 +47736,261 @@
           "#"
         ],
         "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
+          []
         ],
-        "string": "Всплеск силы дарует регенерацию {0}% здоровья в секунду",
+        "string": "Шанс наложения [Exposure|восприимчивости] при нанесении [HitDamage|удара]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс наложить [Exposure|восприимчивость] при нанесении [HitDamage|удара]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Накладывает [Exposure|восприимчивость] при нанесении [HitDamage|удара]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "infusion_remnants_%_chance_to_spawn_cold_infusion_on_freezing_an_enemy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс создать [Remnant|сгусток] [Cold|холода] при [Freeze|заморозке] цели за каждый ее [Power|уровень угрозы]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Шанс создать [Remnant|сгусток] [Cold|холода] при [Freeze|заморозке] за [Power|уровень угрозы]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс создать [Remnant|сгусток] [Cold|холода] при [Freeze|заморозке] цели за каждый ее [Power|уровень угрозы]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "infusion_remnants_%_chance_to_spawn_fire_infusion_on_igniting_an_enemy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс создать [Remnant|сгусток] [Fire|холода] при [Ignite|поджигании] неподожженной цели",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Шанс создать [Remnant|сгусток] [Fire|холода] при [Ignite|поджигании]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс создать [Remnant|сгусток] [Fire|холода] при [Ignite|поджигании] неподожженной цели",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "infusion_remnants_%_chance_to_spawn_lightning_infusion_on_shocking_an_enemy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс создать [Remnant|сгусток] [Lightning|молнии] при наложении [Shock|шока] на цель без шока",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Шанс создать [Remnant|сгусток] [Lightning|молнии] при наложении [Shock|шока]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс создать [Remnant|сгусток] [Lightning|молнии] при наложении [Shock|шока] на цель без шока",
         "reminder_text": null,
         "is_markup": null
       }
@@ -46866,6 +48990,80 @@
   {
     "English": null,
     "ids": [
+      "lightning_conduit_damage_+%_final_per_5%_increased_damage_taken_from_shock"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Урон от [HitDamage|ударов] за каждые 5% эффекта [Shock|шока]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "На {0}% больше урона от [HitDamage|ударов] за каждые 5% эффекта [Shock|шока] на враге",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "На {0}% меньше урона от [HitDamage|ударов] за каждые 5% эффекта [Shock|шока] на враге",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "lightning_rod_%_chance_for_additional_burst_on_landing"
     ],
     "trade_stats": null,
@@ -47638,6 +49836,26 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_1dp"
+          ]
+        ],
+        "string": "Время действия эффектов Бури маны@{0} с",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 1000,
             "max": 1000,
             "negated": null
@@ -48041,33 +50259,6 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ],
-          []
-        ],
-        "string": "Интервал получения стадий\nМаксимум стадий@{0} с\n{1}",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
             "min": 1000,
             "max": 1000,
             "negated": null
@@ -48163,6 +50354,75 @@
   {
     "English": null,
     "ids": [
+      "maximum_number_of_crossbow_heat_stacks",
+      "quality_display_rapid_shot_maximum_num_of_stacks_is_gem"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "{0} к максимуму нагрева",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Максимум нагрева: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "galvanic_field_maximum_number_of_spheres"
     ],
     "trade_stats": null,
@@ -48187,7 +50447,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Максимум полей: {0}",
+        "string": "Лимит полей: {0}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -48205,7 +50465,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Максимум полей: {0}",
+        "string": "Лимит полей: {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -49862,7 +52122,45 @@
       {
         "condition": [
           {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Усиление эффекта [Rage|свирепости]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Ослабление эффекта [Rage|свирепости]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -49874,6 +52172,26 @@
           []
         ],
         "string": "{0}% усиление эффекта [Rage|свирепости] у [Minion|приспешников]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% ослабление эффекта [Rage|свирепости] у [Minion|приспешников]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -50988,6 +53306,42 @@
   {
     "English": null,
     "ids": [
+      "never_shock"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Не может накладывать [Shock|шок]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "nightblade_elusive_grants_critical_strike_multiplier_+_to_supported_skills"
     ],
     "trade_stats": null,
@@ -51069,6 +53423,60 @@
           ]
         ],
         "string": "{0}% уменьшение [BuffMagnitude|силы] накладываемых [NonDamagingAilments|не наносящих урон состояний]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "non_skill_base_all_damage_%_to_gain_as_cold_with_spells_from_buff"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Gain|Наносимый] [Empowered|улучшенными] [Spell|чарами] урон от [Cold|холода]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Empowered|Улучшенные] [Spell|чары] [Gain|наносят] {0}% урона в виде урона от [Cold|холода]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -51264,6 +53672,60 @@
   {
     "English": null,
     "ids": [
+      "number_of_additional_impaled_debuffs_to_apply"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Inflicts an additional [Impale]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Inflicts {0} additional [Impale|Impales]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "number_of_allowed_storm_arrows"
     ],
     "trade_stats": null,
@@ -51289,6 +53751,60 @@
           []
         ],
         "string": "Максимум {0} стрел на земле",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "number_of_branching_fissures"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Трещина разветвляется один раз",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Трещина разветвляется {0} раз(-а)",
         "reminder_text": null,
         "is_markup": null
       }
@@ -51540,7 +54056,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Максимум [Mark|помеченных] целей: {0}",
+        "string": "Лимит [Mark|помеченных] целей: {0}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -51558,7 +54074,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Максимум [Mark|помеченных] целей: {0}",
+        "string": "Лимит [Mark|помеченных] целей: {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -51826,60 +54342,6 @@
   {
     "English": null,
     "ids": [
-      "orb_of_storms_maximum_number_of_hits"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Максимум выпускаемых снарядов@{0}",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[Orb|Сфера] исчезает после {0} ударов",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "orb_of_storms_maximum_number_of_orbs"
     ],
     "trade_stats": null,
@@ -51904,63 +54366,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Limit|Максимум] сфер: {0}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "overpowered_effect_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% усиление эффекта Притеснения",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "{0}% ослабление эффекта Притеснения",
+        "string": "[Limit|Лимит] сфер: {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -52739,6 +55145,75 @@
   {
     "English": null,
     "ids": [
+      "plague_bearer_gains_%_of_damage_from_inflicted_poisons",
+      "plague_bearer_maximum_stored_poison_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Ожидаемый сохраненный урон от [Poison|яда] (максимум)@{0}% ({1})",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Сохраняет {0}% от ожидаемого урона от [Poison|яда], вплоть до {1}\nНаносит [Physical|физический] урон, равный сохраненному урону от [Poison|яда]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "plague_bearer_movement_speed_+%_while_infecting"
     ],
     "trade_stats": null,
@@ -52784,64 +55259,6 @@
           ]
         ],
         "string": "Вы имеете {0}% снижение скорости передвижения во время заражения",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "plague_bearer_nova_area_+%_final_per_incubation_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "multiply_by_one_hundred"
-          ]
-        ],
-        "string": "Максимальный множитель области действия от накопленного [Poison|яда]@{0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "multiply_by_one_hundred"
-          ]
-        ],
-        "string": "Накопленный [Poison|яд] дарует вплоть до {0}% больше области действия",
         "reminder_text": null,
         "is_markup": null
       }
@@ -54763,75 +57180,6 @@
   {
     "English": null,
     "ids": [
-      "rapid_shot_maximum_num_of_stacks",
-      "quality_display_rapid_shot_maximum_num_of_stacks_is_gem"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "{0} к максимуму нагрева",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "Максимум нагрева: {0}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "reave_additional_max_stacks"
     ],
     "trade_stats": null,
@@ -55151,6 +57499,156 @@
           []
         ],
         "string": "[Consume|Поглощает] [Freeze|заморозку] на врагах при наложении на них [Ignite|поджога]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "rhoa_movement_speed_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Повышение скорости передвижения при езде верхом@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% повышение скорости передвижения при езде верхом",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% снижение скорости передвижения при езде верхом",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "rhoa_movement_speed_penalty_+%_final_while_performing_action"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Даруемое уменьшение штрафа скорости передвижения@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% увеличение штрафа скорости передвижения\nпри использовании умений во время езды верхом",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% уменьшение штрафа скорости передвижения\nпри использовании умений во время езды верхом",
         "reminder_text": null,
         "is_markup": null
       }
@@ -55598,24 +58096,6 @@
     "Korean": null,
     "Portuguese": null,
     "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Максимум стадий@{0}",
-        "reminder_text": null,
-        "is_markup": null
-      },
       {
         "condition": [
           {
@@ -56291,7 +58771,25 @@
         "index_handlers": [
           []
         ],
-        "string": "На больше {0}% урона при разрушении [Slam|мощным] умением",
+        "string": "Множитель урона при уничтожении вашими умениями@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "На {0}% больше урона при уничтожении вашими умениями",
         "reminder_text": null,
         "is_markup": null
       },
@@ -56311,7 +58809,7 @@
             "negate"
           ]
         ],
-        "string": "На меньше {0}% урона при разрушении [Slam|мощным] умением",
+        "string": "На {0}% меньше урона при уничтожении вашими умениями",
         "reminder_text": null,
         "is_markup": null
       }
@@ -56908,6 +59406,26 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_1dp"
+          ]
+        ],
+        "string": "Длительность иммунитета к урону у воскрешенных скелетов@{0} с",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 1000,
             "max": 1000,
             "negated": null
@@ -57137,7 +59655,7 @@
   {
     "English": null,
     "ids": [
-      "skill_base_covered_in_oil_exposure_-_to_total_fire_resistance"
+      "skill_base_covered_in_oil_exposure_-_to_total_elemental_resistance"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -57231,7 +59749,7 @@
   {
     "English": null,
     "ids": [
-      "skill_base_ground_oil_exposure_-_to_total_fire_resistance"
+      "skill_base_ground_oil_exposure_-_to_total_elemental_resistance"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -57435,6 +59953,60 @@
   {
     "English": null,
     "ids": [
+      "skill_curses_cannot_apply_to_targets_above_level"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимальный уровень врагов для наложения [Curse|проклятия]@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Curse|Проклятие] не накладывается на врагов выше {0} уровня",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "skill_damage_+%_final_per_chain_from_skill_specific_stat"
     ],
     "trade_stats": null,
@@ -57501,6 +60073,24 @@
     "Korean": null,
     "Portuguese": null,
     "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Шанс повтора@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -57666,6 +60256,282 @@
           ]
         ],
         "string": "Усиленные умения имеют {0}% уменьшение длительности эффекта пока вы мертвы",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_grant_X_frenzy_charges_against_normal_and_magic_monsters",
+      "skill_grant_X_frenzy_charges_against_rare_monsters",
+      "skill_grant_X_frenzy_charges_against_unique_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Добивание монстра дарует {2} [Charges|заряда выносливости]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Rarity|Обычные и волшебные] монстры даруют {0} [Charges|заряд ярости]\n[Rarity|Редкие] монстры даруют {1} [Charges|заряд ярости]\n[Rarity|Уникальные] монстры даруют {2} [Charges|заряд ярости]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Rarity|Обычные и волшебные] монстры даруют {0} [Charges|заряд ярости]\n[Rarity|Редкие] монстры даруют {1} [Charges|заряда ярости]\n[Rarity|Уникальные] монстры даруют {2} [Charges|заряд ярости]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Rarity|Обычные и волшебные] монстры даруют {0} [Charges|заряда ярости]\n[Rarity|Редкие] монстры даруют {1} [Charges|заряд ярости]\n[Rarity|Уникальные] монстры даруют {2} [Charges|заряд ярости]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Rarity|Обычные и волшебные] монстры даруют {0} [Charges|заряда ярости]\n[Rarity|Редкие] монстры даруют {1} [Charges|заряд ярости]\n[Rarity|Уникальные] монстры даруют {2} [Charges|заряда ярости]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Rarity|Обычные и волшебные] монстры даруют {0} [Charges|заряда ярости]\n[Rarity|Редкие] монстры даруют {1} [Charges|заряда ярости]\n[Rarity|Уникальные] монстры даруют {2} [Charges|заряд ярости]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Rarity|Обычные и волшебные] монстры даруют {0} [Charges|заряд ярости]\n[Rarity|Редкие] монстры даруют {1} [Charges|заряда ярости]\n[Rarity|Уникальные] монстры даруют {2} [Charges|заряда ярости]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Rarity|Обычные и волшебные] монстры даруют {0} [Charges|заряда ярости]\n[Rarity|Редкие] монстры даруют {1} [Charges|заряда ярости]\n[Rarity|Уникальные] монстры даруют {2} [Charges|заряда ярости]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -58947,6 +61813,64 @@
   {
     "English": null,
     "ids": [
+      "spellslinger_invocation_gain_X_centienergy_per_10ms_base_cast_time"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Получаемая [Energy|энергия] за каждые 0.1 секунды базового времени сотворения [Spell|чар]@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Получает {0} [Energy|энергии] за каждые 0.1 секунды базового времени сотворяемых вами [Spell|чар]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "spellslinger_mana_reservation"
     ],
     "trade_stats": null,
@@ -60087,6 +63011,44 @@
           ]
         ],
         "string": "Отраженный урон уменьшается на {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "storm_barrier_grants_life_regeneration_rate_per_minute_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Всплеск силы дарует регенерацию {0}% здоровья в секунду",
         "reminder_text": null,
         "is_markup": null
       }
@@ -61428,7 +64390,8 @@
   {
     "English": null,
     "ids": [
-      "support_combo_finisher_required_number_of_combo_stacks"
+      "support_combo_finisher_required_number_of_combo_stacks",
+      "support_combo_finisher_max_combo_required"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -61444,12 +64407,19 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "Требует {0} [Combo|комбо] для использования",
@@ -63185,44 +66155,6 @@
   {
     "English": null,
     "ids": [
-      "support_overpowered_duration_ms"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds"
-          ]
-        ],
-        "string": "Накладывает Притеснение на {0} секунд(-ы) при блоке вашего удара",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "support_parallel_projectile_number_of_points_per_side"
     ],
     "trade_stats": null,
@@ -63506,42 +66438,6 @@
           ]
         ],
         "string": "Дарует 1 заряд [Rage|свирепости] при нанесении удара в [Melee|ближнем бою], но не чаще одного раза в {0} секунд(-ы)",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "support_reduce_enemy_block_and_spell_block_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Враги имеют -{0}% шанс заблокировать урон от [Attack|атак] или чар от этого умения",
         "reminder_text": null,
         "is_markup": null
       }
@@ -65480,6 +68376,44 @@
         "index_handlers": [
           []
         ],
+        "string": "Множитель урона за каждый полученный колоколом [HitDamage|удар]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Уменьшение урона за каждый полученный колоколом [HitDamage|удар]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "Колокол наносит на {0}% больше урона за каждый полученный [HitDamage|удар]",
         "reminder_text": null,
         "is_markup": null
@@ -65687,6 +68621,60 @@
           []
         ],
         "string": "Максимум сетей на враге: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "thunderous_leap_%_chance_for_shocked_ground_when_detonating"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Шанс [ShockedGround|заряженной земли] при [Detonator|взрыве]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс оставить [ShockedGround|заряженную землю] при [Detonator|взрыве] копий",
         "reminder_text": null,
         "is_markup": null
       }
@@ -66007,6 +68995,75 @@
           ]
         ],
         "string": "[Totem|Тотемы] регенерируют {0}% здоровья в секунду",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "toxic_domain_+1%_final_more_damage_per_x_stored_poison",
+      "toxic_domain_max_damage_+%_final_from_stored_poison"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Максимальный множитель урона от взрыва от [Poison|яда]@{1}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Сохраненный [Poison|яд] дарует вплоть до на {1}% больше урона от взрыва",
         "reminder_text": null,
         "is_markup": null
       }
@@ -67283,7 +70340,7 @@
     "English": null,
     "ids": [
       "triggered_by_generic_ongoing_trigger",
-      "display_generic_ongoing_triggerer_is_invocation_skill",
+      "generic_ongoing_triggerer_is_invocation_skill",
       "virtual_energy_cost_for_generic_ongoing_trigger"
     ],
     "trade_stats": null,
@@ -69029,7 +72086,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Limit|Максимум] облаков яда@{0}",
+        "string": "[Limit|Лимит] облаков яда@{0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -69791,7 +72848,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Максимум оазломов: {0}",
+        "string": "Лимит расселин: {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -69895,6 +72952,60 @@
   {
     "English": null,
     "ids": [
+      "volcano_base_number_of_geysers_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум вулканов: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум вулканов: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "volcano_damage_+%_final_per_stage"
     ],
     "trade_stats": null,
@@ -69978,60 +73089,6 @@
           ]
         ],
         "string": "Выпускает [Projectile|снаряды] каждые {0} секунды",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "volcano_max_number_of_geysers"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Максимум вулканов: {0}",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Максимум вулканов: {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -70234,42 +73291,6 @@
           []
         ],
         "string": "Положительный эффект дарует [Attack|атакам] дополнительный урон, равный {0}% от урона вашего\nосновного оружия за каждые 5 влияния, вплоть до максимума в 20%",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "seismic_cry_+%_enemy_stun_threshold_per_5_MP"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Положительный эффект дарует {0}% снижение [EnemyStunThreshold|порога оглушения врага] за каждые 5 влияния, вплоть до максимума в 30%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -70650,6 +73671,100 @@
           ]
         ],
         "string": "Положительный эффект имеет на {0}% меньше усиления на ваших приспешниках",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "warcry_empowers_per_X_monster_power",
+      "warcry_empowers_per_X_monster_power_mp_cap"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Требуемый [Power|уровень угрозы] врагов для [Empowered|улучшения] [Attack|атаки] (максимум)@{0} ({1})",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Empowered|Улучшает] одну [Attack|атаку] за [Power|уровень угрозы] врагов в радиусе, вплоть до {1} [Power|уровней угрозы]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Empowered|Улучшает] одну [Attack|атаку] за каждые {0} [Power|уровней угрозы] врагов в радиусе, вплоть до {1} [Power|уровней угрозы]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -71344,6 +74459,198 @@
         "string": "Положительный эффект удаляется, чтобы [Empowered|улучшить] {0} следующих выполняемых вами [Attack|атаки] в [Melee|ближнем бою]\n[Attack|Атаки], [Exert|улучшенные] этим умением, не могут быть [Exert|улучшены] другими умениями",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Empowered|Улучшает] следующую выполняемую вами [Attack|атаку]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Empowered|Улучшает] следующую выполняемую вами [Attack|атаку], плюс еще одну дополнительную [Attack|атаку] за каждый поглощенный [Charges|заряд выносливости]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Empowered|Улучшает] следующую выполняемую вами [Attack|атаку], плюс еще {1} дополнительных [Attack|атаки] за каждый поглощенный [Charges|заряд выносливости]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Empowered|Улучшает] {0} следующих выполняемых вами [Attack|атаки]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Empowered|Улучшает] {0} следующих выполняемых вами [Attack|атаки], плюс еще одну дополнительную [Attack|атаку] за каждый поглощенный [Charges|заряд выносливости]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Empowered|Улучшает] {0} следующих выполняемых вами [Attack|атаки], плюс еще {1} дополнительных [Attack|атаки] за каждый поглощенный [Charges|заряд выносливости]",
+        "reminder_text": null,
+        "is_markup": null
       }
     ],
     "Spanish": null,
@@ -71995,6 +75302,122 @@
   {
     "English": null,
     "ids": [
+      "warding_steel_gains_%_of_damage_from_mitigated_physical_damage",
+      "warding_steel_maximum_stored_mitigated_physical_damage",
+      "quality_display_warding_steel_is_gem"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Сохраняемый смягченный [Physical|физический] урон (максимум)@{0}% ({1})",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Сохраняет {0}% смягченного [Physical|физического] урона",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Сохраняет {0}% смягченного [Physical|физического] урона, вплоть до {1}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "water_sphere_cold_lightning_exposure_%"
     ],
     "trade_stats": null,
@@ -72260,6 +75683,100 @@
           []
         ],
         "string": "На {0}% больше дистанции [Knockback|отбрасывания] за стадию",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "wind_blast_damage_+%_final_from_distance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимальный множитель урона от расстояния@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Максимальное уменьшение штрафа от расстояния@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "На {0}% больше урона по врагам в радиусе 1.5 м от вас вплоть до отсутствия бонуса на расстоянии 4 м и дальше",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "На {0}% меньше урона по врагам в радиусе 1.5 м от вас вплоть до отсутствия бонуса на расстоянии 4 м и дальше",
         "reminder_text": null,
         "is_markup": null
       }
@@ -72566,6 +76083,296 @@
           []
         ],
         "string": "Положительный эффект не пропадет при использовании умения",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "wolf_warcry_buff_cold_damage_min_per_5_power_up_to_cap",
+      "wolf_warcry_buff_cold_damage_max_per_5_power_up_to_cap",
+      "wolf_warcry_buff_cold_damage_min_cap",
+      "wolf_warcry_buff_cold_damage_max_cap"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "Положительный эффект дарует [Attack|атакам] от {0} до {1} дополнительного урона от [Cold|холода] за каждые 5 [Power|уровней угрозы] врагов и союзников в радиусе, максимум от {2} до {3}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "Положительный эффект дарует [Attack|атакам] от {0} до {1} дополнительного урона от [Cold|холода] за каждые 5 [Power|уровней угрозы] врагов и союзников в радиусе, максимум от {2} до {3}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "wolf_warcry_empowered_attack_cold_damage_min_per_5_power_up_to_cap",
+      "wolf_warcry_empowered_attack_cold_damage_max_per_5_power_up_to_cap",
+      "wolf_warcry_empowered_attack_cold_damage_min_cap",
+      "wolf_warcry_empowered_attack_cold_damage_max_cap"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "[Empowered|Улучшенные] [Attack|атаки] получают от{0} до {1} дополнительного урона от [Cold|холода] за каждые 5 [Power|уровней угрозы] врагов и союзников в радиусе, максимум от {2} до {3}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "[Empowered|Улучшенные] [Attack|атаки] получают от{0} до {1} дополнительного урона от [Cold|холода] за каждые 5 [Power|уровней угрозы] врагов и союзников в радиусе, максимум от {2} до {3}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "wolf_warcry_focus_fire_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "Когда вы наносите удар по [Enemy|врагам] этим [Warcry|боевым кличем], ваши волки в течение {0} секунд будут атаковать врагов, [Mark|помеченных] вашим Перекрестным разрезом",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "wolf_warcry_maximum_number_of_wolves"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Призывает Ледяного волка за каждого  [Mark|помеченного] врага в радиусе. Волки постоянны и не возрождаются. Максимум волков - {0}. Если у вас уже максимум волков, вместо призыва будет исцелен волк с наименьшим текущим здоровьем.",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Призывает Ледяного волка за каждого  [Mark|помеченного] врага в радиусе. Волки постоянны и не возрождаются. Максимум волков - {0}. Если у вас уже максимум волков, вместо призыва будет исцелен волк с наименьшим текущим здоровьем.",
         "reminder_text": null,
         "is_markup": null
       }

@@ -25,7 +25,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Sacrifica {0}% da Vida do Esqueleto para causar esse tanto em Dano de Caos",
+        "string": "Sacrifica {0}% da vida do [Minion|lacaio] para causar a mesma quantidade de dano de [Chaos|caos]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -803,7 +803,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Os aumentos e Reduções ao Campo de Visão também são aplicados à Área de Efeito dessa Habilidade",
+        "string": "Os aumentos e Reduções ao Raio da Luz também são aplicados ao Efeito em Área dessa Habilidade",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1288,42 +1288,6 @@
           []
         ],
         "string": "Habilidade Repete {0} vezes adicionais",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "damage_infusion_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Transfere {0}% do Dano sofrido de cada inimigo próximo para o alvo",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3212,44 +3176,6 @@
   {
     "English": null,
     "ids": [
-      "poison_skill_effect_duration"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp"
-          ]
-        ],
-        "string": "Veneno Dura {0} segundos",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "minion_duration"
     ],
     "trade_stats": null,
@@ -3919,42 +3845,6 @@
           []
         ],
         "string": "{0}% de chance de Eletrizar inimigos",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "base_chance_to_ignite_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% de chance de Incendiar inimigos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5195,6 +5085,136 @@
   {
     "English": null,
     "ids": [
+      "apply_x_wither_on_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Debuff|Penalidades] de [Withered|Atrofia] infligidas ao [HitDamage|atingir]@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Inflige [Withered|Atrofia] ao [HitDamage|atingir]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Inflige {0} [Debuff|penalidades] de [Withered|Atrofia] ao [HitDamage|atingir]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "active_skill_withered_base_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "Definhar dura {0} segundo",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "Definhar dura {0} segundos",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "life_gain_per_target"
     ],
     "trade_stats": null,
@@ -5330,7 +5350,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Clones têm Velocidade de Movimento aumentada em {0}%",
+        "string": "Clones possuem {0}% de aumento da Velocidade de Movimento",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5350,7 +5370,7 @@
             "negate"
           ]
         ],
-        "string": "Clones têm Velocidade de Movimento reduzida em {0}%",
+        "string": "Clones possuem {0}% de redução da Velocidade de Movimento",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7424,42 +7444,6 @@
   {
     "English": null,
     "ids": [
-      "shield_spell_block_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% de chance de Bloquear o Dano Mágico enquanto empunhando um Escudo",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "fire_shield_damage_threshold"
     ],
     "trade_stats": null,
@@ -8837,42 +8821,6 @@
   {
     "English": null,
     "ids": [
-      "freeze_as_though_dealt_damage_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Acertos Congelam como se causassem {0}% mais Dano",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "glacial_hammer_third_hit_freeze_as_though_dealt_damage_+%"
     ],
     "trade_stats": null,
@@ -9008,7 +8956,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Velocidade de Regeneração de Vida aumentada em {0}%",
+        "string": "Regeneração de Vida aumentada em {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -9028,7 +8976,7 @@
             "negate"
           ]
         ],
-        "string": "Velocidade de Regeneração de Vida reduzida em {0}%",
+        "string": "Regeneração de Vida reduzida em {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9574,7 +9522,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Usa sua Vida se não houver Esqueletos no alcance",
+        "string": "Usa a sua vida se não houver [Minion|lacaios] por perto",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10501,7 +10449,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Totens e Lacaios evocados por essa Habilidade têm {0}% de Resistência a Fogo",
+        "string": "Totens e Lacaios evocados por essa Habilidade possuem {0}% de Resistência a Fogo",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10537,7 +10485,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Totens e Lacaios evocados por essa Habilidade têm {0}% de Resistência a Frio",
+        "string": "Totens e Lacaios evocados por essa Habilidade possuem {0}% de Resistência a Frio",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10573,7 +10521,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Totens e Lacaios evocados por essa Habilidade têm {0}% de Resistência a Raio",
+        "string": "Totens e Lacaios evocados por essa Habilidade possuem {0}% de Resistência a Raio",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11638,7 +11586,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% de chance de Ativar essa Magia quando você Usar uma Habilidade enquanto tiver uma Carga Espiritual",
+        "string": "{0}% de chance de Ativar essa Magia quando você Usar uma Habilidade enquanto possuir uma Carga Espiritual",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11656,7 +11604,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Ativa essa Magia quando você Usar uma Habilidade enquanto tiver uma Carga Espiritual",
+        "string": "Ativa essa Magia quando você Usar uma Habilidade enquanto possuir uma Carga Espiritual",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12764,7 +12712,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Magia tem {0}% mais Velocidade de Conjuração",
+        "string": "Magia possui {0}% mais Velocidade de Conjuração",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12784,7 +12732,7 @@
             "negate"
           ]
         ],
-        "string": "Magia tem {0}% menos Velocidade de Conjuração",
+        "string": "Magia possui {0}% menos Velocidade de Conjuração",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13056,7 +13004,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Área de Efeito aumentada em {0}% por cada repetição",
+        "string": "Efeito em Área aumentado em {0}% a cada repetição",
         "reminder_text": null,
         "is_markup": null
       },
@@ -13076,7 +13024,7 @@
             "negate"
           ]
         ],
-        "string": "Área de Efeito reduzida em {0}% por cada repetição",
+        "string": "Efeito em Área reduzido em {0}% a cada repetição",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13169,78 +13117,6 @@
           []
         ],
         "string": "Não pode ser Evadido",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "global_reduce_enemy_block_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Chance de Bloqueio Inimigo reduzido em {0}% contra essa Habilidade",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "reduce_enemy_dodge_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Inimigos têm chance de Esquivar de Acertos dessa Habilidade reduzida em {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15163,60 +15039,6 @@
   {
     "English": null,
     "ids": [
-      "chance_to_freeze_shock_ignite_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 99,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% de chance de Congelar, Eletrizar e Incendiar",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Sempre Congela, Eletriza e Incendeia",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "additional_chance_to_freeze_chilled_enemies_%"
     ],
     "trade_stats": null,
@@ -16511,102 +16333,6 @@
   {
     "English": null,
     "ids": [
-      "banner_aura_magnitude_+%_final_per_resource",
-      "quality_display_banner_buff_effect_+%_final_per_resource_is_gem"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "{0}% mais [BuffMagnitude|Magnitude] de [Aura|Aura] por [Valour|Bravura]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "{0}% mais [BuffMagnitude|Magnitude] de [Aura|Aura] por [Valour|Bravura]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ],
-          []
-        ],
-        "string": "{0}% menos [BuffMagnitude|Magnitude] de [Aura|Aura] por [Valour|Bravura]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "corrosive_shroud_poison_effect_+%_final_while_accumulating_poison"
     ],
     "trade_stats": null,
@@ -16651,96 +16377,6 @@
           ]
         ],
         "string": "{0}% menos Efeito de Envenenamentos que você infligir enquanto Incubando e não estiver no Valor Máximo da Infestação",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "plague_bearer_gains_%_of_damage_from_inflicted_poisons"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Dano de [Poison|Veneno] esperado armazenado@{0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Armazena {0}% do Dano de [Poison|Veneno] Esperado",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "plague_bearer_maximum_stored_poison_damage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Armazena até {0} do Dano de [Poison|Veneno]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -16833,6 +16469,62 @@
           ]
         ],
         "string": "Concede Efeito dos Envenenamentos reduzido em {0}% enquanto Infectando",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_mana_leech_rate_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[ManaLeech|Drena] Mana {0}% mais rápido",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[ManaLeech|Drena] Mana {0}% mais lento",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17582,7 +17274,7 @@
             "divide_by_one_hundred"
           ]
         ],
-        "string": "Perde {0} de Fúria por segundo",
+        "string": "Perca {0} de Fúria por segundo",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17618,7 +17310,7 @@
         "index_handlers": [
           []
         ],
-        "string": "A cada segundo, {0}% mais Fúria perdida",
+        "string": "Acada segundo {0}% mais Fúria perdida",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18018,7 +17710,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Impactos têm {0}% mais Área de Efeito",
+        "string": "Impactos têm {0}% mais Efeito em Área",
         "reminder_text": null,
         "is_markup": null
       },
@@ -18038,7 +17730,7 @@
             "negate"
           ]
         ],
-        "string": "Impactos têm {0}% menos Área de Efeito",
+        "string": "Impactos têm {0}% menos Efeito em Área",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18520,7 +18212,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0} de largura do Área de Efeito",
+        "string": "{0} de largura do Efeito em Área",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18871,6 +18563,118 @@
   {
     "English": null,
     "ids": [
+      "active_skill_consume_enemy_freeze_to_gain_damage_against_non_unique_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Consume|Consome] [Freeze|congelamentos] em inimigos [Rarity|não únicos] para causar +{0}% de dano",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Consume|Consome] [Freeze|congelamentos] em inimigos [Rarity|não únicos] para causar -{0}% de dano",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "active_skill_consume_enemy_freeze_to_gain_damage_against_unique_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Consume|Consome] [Freeze|congelamentos] em inimigos [Rarity|únicos] para causar +{0}% de dano",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Consume|Consome] [Freeze|congelamentos] em inimigos [Rarity|únicos] para causar -{0}% de dano",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "active_skill_consume_enemy_fully_broken_armour_to_gain_damage_+%_final"
     ],
     "trade_stats": null,
@@ -19084,6 +18888,62 @@
   {
     "English": null,
     "ids": [
+      "active_skill_damage_+%_final_vs_unique_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "+{0}% de dano contra inimigos [Rarity|únicos]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "-{0}% de dano contra inimigos [Rarity|únicos]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "active_skill_damage_+%_final_while_dual_wielding"
     ],
     "trade_stats": null,
@@ -19222,6 +19082,44 @@
         "string": "{0}% menos Dano com [HitDamage|Acertos] por cada vez que esta Habilidade tenha [Chain|Ricocheteado]",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% mais Dano com [HitDamage|Acertos] por cada vez que esta Habilidade tenha [Chain|Ricocheteado]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% menos Dano com [HitDamage|Acertos] por cada vez que esta Habilidade tenha [Chain|Ricocheteado]",
+        "reminder_text": null,
+        "is_markup": null
       }
     ],
     "Russian": null,
@@ -19278,6 +19176,44 @@
         "string": "{0}% menos Dano com [HitDamage|Acertos] contra Inimigos [Ignite|Incendiar]",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% mais Dano com [HitDamage|Acertos] contra Inimigos [Ignite|Incendiar]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% menos Dano com [HitDamage|Acertos] contra Inimigos [Ignite|Incendiar]",
+        "reminder_text": null,
+        "is_markup": null
       }
     ],
     "Russian": null,
@@ -19297,6 +19233,44 @@
     "Japanese": null,
     "Korean": null,
     "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% mais Dano com [HitDamage|Acertos] contra Inimigos [Chill|Resfriado]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% menos Dano com [HitDamage|Acertos] contra Inimigos [Chill|Resfriado]",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -19500,6 +19474,42 @@
           ]
         ],
         "string": "{0}% menos acúmulo de [Electrocute|Eletrocussão]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "active_skill_has_%_standard_scaling_attack_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Attack Damage of this skill is {0}% of [DefaultAttackDamage|Default Attack Damage]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -19739,7 +19749,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% mais chance de Incendiar inimigos",
+        "string": "Inflige +{0}% de [BuffMagnitude|intensidade] de [Flammability|inflamabilidade]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -19755,9 +19765,11 @@
           "#"
         ],
         "index_handlers": [
-          []
+          [
+            "negate"
+          ]
         ],
-        "string": "{0}% menos chance de Incendiar inimigos",
+        "string": "Inflige -{0}% de [BuffMagnitude|intensidade] de [Flammability|inflamabilidade]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -19910,6 +19922,118 @@
           ]
         ],
         "string": "{0}% menos duração de [Ignite|Incendios]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "active_skill_ignite_proliferation_radius"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "[Ignite|Incêndios] infligidos por esta habilidade se [AilmentSpread|espalham] para outros\ninimigos que fiquem em até {0} metro por 1 segundo",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "[Ignite|Incêndios] infligidos por esta habilidade se [AilmentSpread|espalham] para outros\ninimigos que fiquem em até {0} metros por 1 segundo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "active_skill_knockback_distance_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Aumento na distância do [Knockback|Empurrão]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Aumento de {0}% na distância do [Knockback|Empurrão]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20614,7 +20738,7 @@
           }
         ],
         "format": [
-          "+#"
+          "#"
         ],
         "index_handlers": [
           []
@@ -20632,7 +20756,7 @@
           }
         ],
         "format": [
-          "+#"
+          "#"
         ],
         "index_handlers": [
           [
@@ -20640,6 +20764,62 @@
           ]
         ],
         "string": "{0}% menos duração de [Shock|Eletrizações]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "active_skill_shock_effect_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "+{0}% de [BuffMagnitude|intensidade] da [Shock|eletrificação] infligida",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "-{0}% de [BuffMagnitude|intensidade] da [Shock|eletrificação] infligida",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20675,6 +20855,24 @@
         "index_handlers": [
           []
         ],
+        "string": "Aumento do [StunThreshold|Ponto de Atordoamento] enquanto em uso@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "[StunThreshold|Ponto de Atordoamento] aumentado em {0}% enquanto usando a Habilidade",
         "reminder_text": null,
         "is_markup": null
@@ -20682,8 +20880,8 @@
       {
         "condition": [
           {
-            "min": -1,
-            "max": null,
+            "min": null,
+            "max": -1,
             "negated": null
           }
         ],
@@ -21141,7 +21339,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DamageTypes|Todo o Dano] dos [HitDamage|Acertos] [Contributes|contribuem] com a Magnitude e Chance do Acúmulo de [Freeze|Congelamento] e Chance de [Shock|Eletrizar]",
+        "string": "[DamageTypes|Todo o dano] dos [HitDamage|ataques] [Contributes|contribui] para as [BuffMagnitude|intensidades] de [Flammability|inflamabilidade] e [Ignite|incêndio], acúmulo de [Freeze|congelamento] e chance de [Shock|eletrificar]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21756,42 +21954,6 @@
   {
     "English": null,
     "ids": [
-      "apply_overpowered_on_enemy_block_reduced_block_and_spell_block_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Subjugado aplica -{0}% de chance de Bloquear o Dano Mágico e de Ataques",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "arc_chain_hit_damage_+%_final"
     ],
     "trade_stats": null,
@@ -21848,8 +22010,135 @@
   {
     "English": null,
     "ids": [
-      "arc_damage_+%_final_for_each_remaining_chain",
-      "quality_display_arc_is_gem"
+      "arc_chains_gained_from_infusion_consumption"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Chain|Propagações] adicionais de [ElementalInfusion|Infusão] [Lightning|Elétrica]@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Chain|Propaga-se] mais {0} vezes se estiver com [ElementalInfusion|Infusão] [Lightning|Elétrica]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "arc_damage_+%_final_from_infusion_consumption"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Mais dano de [ElementalInfusion|Infusão] [Lightning|Elétrica]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ㅤ+{0}% de dano se estiver com [ElementalInfusion|Infusão] [Lightning|Elétrica]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ㅤ-{0}% de dano se estiver com [ElementalInfusion|Infusão] [Lightning|Elétrica]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "arc_damage_+%_final_for_each_remaining_chain"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -21864,22 +22153,15 @@
             "min": null,
             "max": null,
             "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
           }
         ],
         "format": [
-          "#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
-          [],
           []
         ],
-        "string": "Mais dano por cada [Chain|Ricochete] restante@{0}",
+        "string": "Mais dano para cada [Chain|propagação] restante@{0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -21889,22 +22171,15 @@
             "min": 1,
             "max": null,
             "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
           }
         ],
         "format": [
-          "+#",
-          "ignore"
+          "+#"
         ],
         "index_handlers": [
-          [],
           []
         ],
-        "string": "{0}% mais Dano por cada Ricochete restante",
+        "string": "{0}% mais dano para cada [Chain|propagação] restante",
         "reminder_text": null,
         "is_markup": null
       },
@@ -21914,22 +22189,15 @@
             "min": 1,
             "max": null,
             "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
           }
         ],
         "format": [
-          "#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
-          [],
           []
         ],
-        "string": "{0}% mais Dano por cada Ricochete restante",
+        "string": "{0}% mais dano para cada [Chain|propagação] restante",
         "reminder_text": null,
         "is_markup": null
       },
@@ -21939,24 +22207,17 @@
             "min": null,
             "max": -1,
             "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
           }
         ],
         "format": [
-          "#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           [
             "negate"
-          ],
-          []
+          ]
         ],
-        "string": "{0}% menos Dano por cada Ricochete restante",
+        "string": "{0}% menos dano para cada [Chain|propagação] restante",
         "reminder_text": null,
         "is_markup": null
       }
@@ -22398,7 +22659,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Área de Efeito aumentada em {0}% por Estágio",
+        "string": "Efeito em Área aumentado em {0}% por Estágio",
         "reminder_text": null,
         "is_markup": null
       },
@@ -22418,7 +22679,7 @@
             "negate"
           ]
         ],
-        "string": "Área de Efeito reduzida em {0}% por Estágio",
+        "string": "Efeito em Área reduzido em {0}% por Estágio",
         "reminder_text": null,
         "is_markup": null
       }
@@ -23201,6 +23462,127 @@
   {
     "English": null,
     "ids": [
+      "base_additional_damage_from_distance_+%_final",
+      "quality_display_spear_puncture_is_gem"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Mais Dano Máximo da distância@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Causa até um adicional de {0}% mais Dano, baseado na distância percorrida",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Causa até {0}% mais Dano, baseado na distância percorrida",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ],
+          []
+        ],
+        "string": "Causa até {0}% menos Dano, baseado na distância percorrida",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_bleeding_effect_+100%_final_chance"
     ],
     "trade_stats": null,
@@ -23225,6 +23607,60 @@
           []
         ],
         "string": "{0}% de chance de Sangramentos terem 100% mais Efeito",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_chance_to_daze_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": 100,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Daze|Pasma] ao [HitDamage|atingir]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de chance de [Daze|pasmar] ao [HitDamage|atingir]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -23623,6 +24059,62 @@
   {
     "English": null,
     "ids": [
+      "base_curse_delay_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Zona de [Curse|maldição] demora {0}% mais para irromper",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Zona de [Curse|maldição] demora {0}% menos para irromper",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_damage_taken_+%"
     ],
     "trade_stats": null,
@@ -23646,7 +24138,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dano sofrido aumentado em {0}%",
+        "string": "{0}% de aumento do Dano recebido",
         "reminder_text": null,
         "is_markup": null
       },
@@ -23666,128 +24158,7 @@
             "negate"
           ]
         ],
-        "string": "Dano sofrido reduzido em {0}%",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "base_dash_additional_damage_from_distance_+%_final",
-      "quality_display_spear_puncture_is_gem"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "Mais Dano Máximo da distância@{0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "Causa até um adicional de {0}% mais Dano, baseado na distância percorrida",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "Causa até {0}% mais Dano, baseado na distância percorrida",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ],
-          []
-        ],
-        "string": "Causa até {0}% menos Dano, baseado na distância percorrida",
+        "string": "{0}% de redução do Dano recebido",
         "reminder_text": null,
         "is_markup": null
       }
@@ -23946,7 +24317,7 @@
   {
     "English": null,
     "ids": [
-      "galvanic_field_retargeting_delay_ms"
+      "base_ignite_effect_+%"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -23958,27 +24329,7 @@
       {
         "condition": [
           {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp"
-          ]
-        ],
-        "string": "Pode focar em cada inimigo apenas uma vez a cada {0} segundo",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -23987,11 +24338,29 @@
           "#"
         ],
         "index_handlers": [
+          []
+        ],
+        "string": "[BuffMagnitude|Intensidade] de [Ignite|incêndio] aumentada em {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
           [
-            "milliseconds_to_seconds_2dp"
+            "negate"
           ]
         ],
-        "string": "Pode focar em cada inimigo apenas uma vez a cada {0} segundos",
+        "string": "[BuffMagnitude|Intensidade] de [Ignite|incêndio] reduzida em {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -24027,7 +24396,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% chance to inflict Cold [Exposure] on Hit",
+        "string": "{0}% de chance de causar [Exposure|Exposição] ao Frio ao atingir",
         "reminder_text": null,
         "is_markup": null
       },
@@ -24045,7 +24414,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Inflict Cold [Exposure] on Hit",
+        "string": "Causa [Exposure|Exposição] ao Frio ao atingir",
         "reminder_text": null,
         "is_markup": null
       }
@@ -24124,18 +24493,18 @@
       {
         "condition": [
           {
-            "min": 1,
-            "max": 99,
+            "min": 100,
+            "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
           []
         ],
-        "string": "{0}% de chance de infligir Exposição ao Raio ao Acertar",
+        "string": "Inflige Exposição ao Fogo ao Acertar",
         "reminder_text": null,
         "is_markup": null
       },
@@ -24447,6 +24816,124 @@
           []
         ],
         "string": "Dispara {0} Flechas",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Dispara {0} [Projectile|Projéteis]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Dispara {0} Flechas",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_projectiles_in_spiral_nova"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dispara {0} [Projectile|projétil]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dispara {0} [Projectile|projéteis] em espiral",
         "reminder_text": null,
         "is_markup": null
       }
@@ -24870,6 +25357,50 @@
   {
     "English": null,
     "ids": [
+      "spell_minimum_base_cold_damage_per_removable_frenzy_charge",
+      "spell_maximum_base_cold_damage_per_removable_frenzy_charge"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Causa de {0} a {1} de Dano de Gelo base por Carga de Frenesi removida",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "bear_and_siphoning_trap_debuff_grants_-%_cooldown_speed"
     ],
     "trade_stats": null,
@@ -25229,7 +25760,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Rajada Final tem Área de Efeito aumentada em {0}%",
+        "string": "Rajada Final tem Efeito em Área aumentado em {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -25249,7 +25780,7 @@
             "negate"
           ]
         ],
-        "string": "Rajada Final tem Área de Efeito reduzida em {0}%",
+        "string": "Rajada Final tem Efeito em Área reduzido em {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -27191,6 +27722,24 @@
         "string": "[Minion|Lacaios] Protegidos sofrem {0}% menos Dano por 1 segundo após o Escudo ser perdido",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Minion|Lacaios] Protegidos sofrem {0}% mais Dano por 1 segundo após o Escudo ser perdido",
+        "reminder_text": null,
+        "is_markup": null
       }
     ],
     "Russian": null,
@@ -27701,6 +28250,42 @@
   {
     "English": null,
     "ids": [
+      "cannot_consume_power_frenzy_endurance_charges"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Não pode consumir [Charges|cargas]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "cannot_daze"
     ],
     "trade_stats": null,
@@ -28155,6 +28740,60 @@
           []
         ],
         "string": "Ativa esta Magia quando você acertar um Crítico em um Inimigo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "cast_on_damage_taken_gain_X_centienergy_when_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Energy|Energia] recebida quando você for [HitDamage|Acerto]@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Ganha {0} de [Energy|Energia] quando você sofrer Dano de um [HitDamage|Acerto]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -29127,6 +29766,60 @@
   {
     "English": null,
     "ids": [
+      "chance_%_to_spawn_another_infusion_remnant"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de chance de gerar 1 [Remnant|vestígio] de [ElementalInfusion|infusão] adicional",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Gera 1 [Remnant|vestígio] de [ElementalInfusion|infusão] adicional",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "chance_for_extra_damage_roll_%"
     ],
     "trade_stats": null,
@@ -29505,6 +30198,114 @@
   {
     "English": null,
     "ids": [
+      "chance_to_daze_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Chance de [Daze|pasmar] reduzida em {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Chance de [Daze|pasmar] aumentada em {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_to_daze_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "-{0}% de chance de [Daze|pasmar]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Mais {0}% de chance de [Daze|pasmar]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "chance_to_deal_double_damage_%"
     ],
     "trade_stats": null,
@@ -29636,7 +30437,79 @@
         "index_handlers": [
           []
         ],
-        "string": "Projéteis têm {0}% de chance de receber um Projétil adicional ao [Fork|Difundir]",
+        "string": "[Projectile|Projéteis] têm {0}% de chance de ganhar um projétil adicional ao [Fork|ramificar]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_to_gain_1_more_charge_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Chance de ganhar uma [Charges|Carga] adicional@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de chance de, ao ganhar uma [Charges|Carga], ganhar uma [Charges|Carga] adicional",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Ganhe uma [Charges|Carga] adicional ao ganhar uma [Charges|Carga]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -30074,7 +30947,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% de chance de infligir Causticação, Enfraquecimento e Desgaste",
+        "string": "{0}% de chance de infligir Causticar, Enfraquecer e Exaurir",
         "reminder_text": null,
         "is_markup": null
       },
@@ -30092,7 +30965,151 @@
         "index_handlers": [
           []
         ],
-        "string": "Sempre inflige Causticação, Enfraquecimento e Desgaste",
+        "string": "Sempre inflige Causticar, Enfraquecer e Exaurir",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_chance_to_not_consume_corpse_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Chance de não destruir [Corpse|Corpos] consumidos@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Chance de não destruir [Corpse|Corpos] Consumidos@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_to_not_consume_infusion_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de chance de não remover uma [ElementalInfusion|infusão], mas ainda conta como se a consumisse",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_to_not_consume_parried_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Chance de não consumir Aparo@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de chance de não consumir um efeito negativo de Aparo",
         "reminder_text": null,
         "is_markup": null
       }
@@ -30183,6 +31200,60 @@
           []
         ],
         "string": "Acertos podem aplicar Envenenamentos mais de uma vez",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_to_retain_40%_of_glory_on_use_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Chance de reter 40% de [Glory|Glória]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de chance de reter 40% de [Glory|Glória] ao usar",
         "reminder_text": null,
         "is_markup": null
       }
@@ -30508,7 +31579,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Esta Habilidade é Ativada quando você Atordoar um Inimigo com Pancada ou Esmaga-ossos",
+        "string": "Esta Habilidade é Ativada quando você Atordoar um Inimigo com Pancada ou Esmagar Ossos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -31250,7 +32321,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Área Resfriada tem Velocidade de Movimento aumentada em {0}%",
+        "string": "Área Resfriada possui Velocidade de Movimento aumentada em {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -31270,7 +32341,7 @@
             "negate"
           ]
         ],
-        "string": "Área Resfriada tem Velocidade de Movimento reduzida em {0}%",
+        "string": "Área Resfriada possui Velocidade de Movimento reduzida em {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -32009,6 +33080,154 @@
           ]
         ],
         "string": "Área do Solo Sagrado reduzida em {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "consume_X_heat_on_skill_use",
+      "active_skill_all_damage_%_as_fire_if_heat_is_consumed",
+      "ignite_effect_+%_final_if_heat_is_consumed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Gain|Ganha] dano como dano de [Fire|fogo] ao consumir {0} de [Heat|calor]@{1}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Mais [BuffMagnitude|intensidade] de [Ignite|incêndio] ao consumir {0} de [Heat|calor]@{2}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Se possível, consome {0} de [Heat|calor] para\n[Gain|ganhar] {1}% de dano como dano de [Fire|fogo]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Se possível, consome {0} de [Heat|calor] para\nganhar +{2}% de [BuffMagnitude|intensidade] de [Ignite|incêndio]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -33422,6 +34641,42 @@
   {
     "English": null,
     "ids": [
+      "crossbow_ammo_always_reload"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Sempre recarrega ao trocar para esta [Ammunition|munição]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "cruelty_effect_+%"
     ],
     "trade_stats": null,
@@ -33762,6 +35017,62 @@
           ]
         ],
         "string": "Perde 1 Estágio a cada {0} segundo enquanto não Canalizada",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "damage_+%_final_from_lich_apparition_cloned_skill"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Spell|Magias] conjuradas pela Aparição causam +{0}% de dano",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Spell|Magias] conjuradas pela Aparição causam -{0}% de dano",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34319,6 +35630,24 @@
     "Japanese": null,
     "Korean": null,
     "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de Chance de disparar um [Projétil] adicional por [Debuff] de dano degenerativo de [Chaos|Caos] no Inimigo",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -35303,6 +36632,60 @@
           ]
         ],
         "string": "Dano reduzido em {0}% se três tipos de Cargas diferentes forem removidos",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "disengage_%_chance_for_additional_shockwave"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Chance de Onda de Choque adicional@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de chance de causar uma Onda de Choque adicional",
         "reminder_text": null,
         "is_markup": null
       }
@@ -37171,7 +38554,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Impacto Inicial tem Área de Efeito aumentada em {0}%",
+        "string": "Impacto Inicial tem Efeito em Área aumentado em {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -37191,7 +38574,7 @@
             "negate"
           ]
         ],
-        "string": "Impacto Inicial tem Área de Efeito reduzida em {0}%",
+        "string": "Impacto Inicial tem Efeito em Área reduzido em {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -37227,6 +38610,24 @@
         "index_handlers": [
           []
         ],
+        "string": "Mais Dano por Estaca@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "{0}% mais Dano com [HitDamage|Acertos] por cada Estaca",
         "reminder_text": null,
         "is_markup": null
@@ -37248,42 +38649,6 @@
           ]
         ],
         "string": "{0}% menos Dano com [HitDamage|Acertos] por cada Estaca",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "electrocuting_arrow_%_damage_gained_as_extra_lightning_on_debuffed_target"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[HitDamage|Acertos] contra alvos com Para-raios vinculados ganham {0}% do Dano como [Lightning|Dano extra de Raio]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -37872,7 +39237,7 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "+{0} segundos à Recarga enquanto tiver Loucura Gloriosa",
+        "string": "+{0} segundos à Recarga enquanto possuir Loucura Gloriosa",
         "reminder_text": null,
         "is_markup": null
       }
@@ -39115,9 +40480,9 @@
   {
     "English": null,
     "ids": [
-      "feast_of_flesh_gain_X_life_per_corpse_consumed",
-      "feast_of_flesh_gain_X_mana_per_corpse_consumed",
-      "feast_of_flesh_gain_X_energy_shield_per_corpse_consumed"
+      "base_life_recovery_per_minute",
+      "base_mana_recovery_per_minute",
+      "feast_of_flesh_regeneration_duration"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -39152,9 +40517,79 @@
         "index_handlers": [
           [],
           [],
-          []
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
         ],
-        "string": "Recebe {0} de Vida por cada Cadáver consumido\nRecebe {1} de Mana por cada cadáver consumido\nRecebe {2} de Escudo de Energia por cada cadáver consumido",
+        "string": "Vida regenerada por [Corpse|cadáver]\nMana regenerado por [Corpse|cadáver]\nDuração de regeneração@{0}\n{1}\n{2} s",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Regenera {0} de vida e {1} de mana em {2} segundo por [Corpse|cadáver] [Consume|consumido]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Regenera {0} de vida e {1} de mana em {2} segundos por [Corpse|cadáver] [Consume|consumido]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -39556,7 +40991,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Primeiro Impacto tem {0}% mais Área de Efeito",
+        "string": "Primeiro Impacto tem {0}% mais efeito em área",
         "reminder_text": null,
         "is_markup": null
       },
@@ -39576,7 +41011,7 @@
             "negate"
           ]
         ],
-        "string": "Primeiro Impacto tem {0}% menos Área de Efeito",
+        "string": "Primeiro Impacto tem {0}% menos efeito em área",
         "reminder_text": null,
         "is_markup": null
       }
@@ -39893,6 +41328,44 @@
         "string": "{0}% menos [BuffMagnitude|Magnitude] dos [Ignite|Incêndios] infligidos por [Projectile|Projéteis] que atravessaram a Parede",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% mais [BuffMagnitude|Magnitude] dos [Ignite|Incêndios] infligidos por [Projectile|Projéteis] que atravessaram a Parede",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% menos [BuffMagnitude|Magnitude] dos [Ignite|Incêndios] infligidos por [Projectile|Projéteis] que atravessaram a Parede",
+        "reminder_text": null,
+        "is_markup": null
       }
     ],
     "Russian": null,
@@ -40053,42 +41526,6 @@
   {
     "English": null,
     "ids": [
-      "flameblast_ignite_chance_+%_per_stage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% de chance de Incendiar para cada Estágio",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "flameblast_maximum_stages"
     ],
     "trade_stats": null,
@@ -40098,24 +41535,6 @@
     "Japanese": null,
     "Korean": null,
     "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Máximo de Estágios@{0}",
-        "reminder_text": null,
-        "is_markup": null
-      },
       {
         "condition": [
           {
@@ -40238,7 +41657,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tem {0} Chamas",
+        "string": "Possui {0} Chamas",
         "reminder_text": null,
         "is_markup": null
       }
@@ -42205,7 +43624,7 @@
   {
     "English": null,
     "ids": [
-      "fully_broken_armour_duration_ms_+"
+      "fully_broken_armour_and_sundered_armour_duration_ms_+"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -42305,42 +43724,6 @@
           []
         ],
         "string": "{0}% de chance de ganhar 1 de Fúria ao usar",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "gain_X_rage_on_hit_once_per_skill_use"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Ganha {0} de [Rage|Fúria] ao Acertar, uma vez por uso da Habilidade",
         "reminder_text": null,
         "is_markup": null
       }
@@ -42787,7 +44170,7 @@
   {
     "English": null,
     "ids": [
-      "gain_x_valour_per_minute_while_unique_presence"
+      "gain_x_rage_on_attack_hit"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -42808,11 +44191,9 @@
           "#"
         ],
         "index_handlers": [
-          [
-            "per_minute_to_per_second_2dp_if_required"
-          ]
+          []
         ],
-        "string": "Habilidades de [Attack|Ataque] geram [Valour|Valor] igual ao [Power|Poder] do inimigo\nGanhe {0} de [Valour|Valor] por segundo enquanto um\ninimigo Único estiver em sua [Presence|Presença]",
+        "string": "Ganha {0} [Rage|Fúria] ao [HitDamage|atingir]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -43133,6 +44514,42 @@
           ]
         ],
         "string": "Explosões ocorrem {0}% mais lento",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "global_bleed_on_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Bleeding|Sangramento] ao [HitDamage|Acertar]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -43603,6 +45020,42 @@
   {
     "English": null,
     "ids": [
+      "has_freeze_cull"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Freeze|Congela] inimigos que estão [PrimedFreeze|vulneráveis a congelamento]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "hazard_rearm_%_chance"
     ],
     "trade_stats": null,
@@ -44013,6 +45466,24 @@
         "string": "{0}% menos Dano por cada 1 segundo de duração restante da [Curse|Maldição] removida",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% mais Dano por cada 1 segundo de duração restante da [Curse|Maldição] removida",
+        "reminder_text": null,
+        "is_markup": null
       }
     ],
     "Russian": null,
@@ -44328,6 +45799,24 @@
     "Japanese": null,
     "Korean": null,
     "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de chance dos [HitDamage|Acertos] causarem [Daze|Acúmulo de Aturdimento]",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -44710,7 +46199,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Pulsa a cada {0} segundos enquanto Congelada, Eletrizada, Enfraquecimento ou Desgaste",
+        "string": "Pulsa a cada {0} segundos enquanto Congelada, Eletrizada, Enfraquecida ou Exaurida",
         "reminder_text": null,
         "is_markup": null
       }
@@ -44825,6 +46314,190 @@
           ]
         ],
         "string": "Primeiro Estágio causa {0}% menos Dano",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ice_crystal_shatter_detonation_area_of_effect_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Mais área de efeito se [IceCrystalShatter|despedaçado]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% mais área de efeito se [IceCrystalShatter|despedaçado]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ice_crystal_shatter_detonation_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Mais dano se [IceCrystalShatter|despedaçado]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Mais {0}% de dano se [IceCrystalShatter|despedaçado]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ice_crystals_hazard_damage_+%_final_for_first_500_ms_when_not_killed_by_self"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Less damage in first 0.5 seconds@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% less damage if destroyed within 0.5 seconds by something other than you",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% more damage if not destroyed withint 0.5 seconds by something other than you",
         "reminder_text": null,
         "is_markup": null
       }
@@ -45724,7 +47397,7 @@
   {
     "English": null,
     "ids": [
-      "inflict_cold_exposure_for_x_ms_on_cold_crit"
+      "inflict_exposure_for_x_ms_on_cold_crit"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -45749,7 +47422,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[Exposure|Exposição a Gelo] com [Critical|Acertos Críticos] de [Cold|Gelo]@{0}s",
+        "string": "[Exposure|Exposição] ao causar [Critical|golpes críticos] de [Cold|frio]@{0} s",
         "reminder_text": null,
         "is_markup": null
       }
@@ -45762,7 +47435,7 @@
   {
     "English": null,
     "ids": [
-      "inflict_fire_exposure_for_x_ms_on_ignite"
+      "inflict_exposure_for_x_ms_on_ignite"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -45787,7 +47460,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[Exposure|Exposição a Fogo] com [Ignite|Incêndios]@{0}s",
+        "string": "[Exposure|Exposição] ao [Ignite|incendiar]@{0} s",
         "reminder_text": null,
         "is_markup": null
       }
@@ -45800,7 +47473,7 @@
   {
     "English": null,
     "ids": [
-      "inflict_lightning_exposure_for_x_ms_on_shock"
+      "inflict_exposure_for_x_ms_on_shock"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -45825,7 +47498,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[Exposure|Exposição a Raio] ao [Shock|Eletrizar]@{0}s",
+        "string": "[Exposure|Exposição] ao [Shock|eletrificar]@{0} s",
         "reminder_text": null,
         "is_markup": null
       }
@@ -45838,7 +47511,7 @@
   {
     "English": null,
     "ids": [
-      "infusion_grants_life_regeneration_rate_per_minute_%"
+      "inflict_exposure_on_hit_%_chance"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -45850,7 +47523,61 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de chance de infligir Exposição ao Fogo ao Acertar",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Inflige Exposição ao Fogo ao Acertar",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "infusion_remnants_%_chance_to_spawn_cold_infusion_on_freezing_an_enemy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -45859,11 +47586,117 @@
           "#"
         ],
         "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
+          []
         ],
-        "string": "Infusão concede {0}% de Vida Regenerada por segundo",
+        "string": "Chance de [Remnant|vestígio] de [Cold|frio] ao [Freeze|congelar] por [Power|poder]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Chance de [Remnant|vestígio] de [Cold|frio] ao [Freeze|congelar] por [Power|poder]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de chance por [Power|poder] de gerar um [Remnant|vestígio] de [Cold|frio] ao\n[Freeze|congelar] um alvo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "infusion_remnants_%_chance_to_spawn_fire_infusion_on_igniting_an_enemy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Chance de [Remnant|vestígio] de [Fire|fogo] ao [Ignite|incendiar]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "infusion_remnants_%_chance_to_spawn_lightning_infusion_on_shocking_an_enemy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Chance de [Remnant|vestígio] [Lightning|elétrico] ao [Shock|eletrificar]@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -46445,7 +48278,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Projéteis ganham Área de Efeito aumentada em {0}% após Difundirem",
+        "string": "Projéteis ganham Efeito em Área aumentado em {0}% após Difundirem",
         "reminder_text": null,
         "is_markup": null
       }
@@ -46852,6 +48685,80 @@
           []
         ],
         "string": "{0}% de chance de Acertar um Inimigo adicional",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "lightning_conduit_damage_+%_final_per_5%_increased_damage_taken_from_shock"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dano com [HitDamage|Acertos] por cada 5% de [Shock|Eletrização] no inimigo@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% mais Dano com [HitDamage|Acertos] por cada 5% de Efeito de [Shock|Eletrizações] no Inimigo",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% menos Dano com [HitDamage|Acertos] por cada 5% de Efeito de [Shock|Eletrizações] no Inimigo",
         "reminder_text": null,
         "is_markup": null
       }
@@ -47655,6 +49562,26 @@
       {
         "condition": [
           {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_1dp"
+          ]
+        ],
+        "string": "Efeitos da Tempestade de Mana perduram por {0} segundo após sair da Tempestade",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": null,
             "max": null,
             "negated": null
@@ -48038,33 +49965,6 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ],
-          []
-        ],
-        "string": "Intervalo de Ganho de Estágios\nEstágios Máximos@{0}s\n{1}",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
             "min": 1000,
             "max": 1000,
             "negated": null
@@ -48149,6 +50049,75 @@
           []
         ],
         "string": "Máximno de {0} Lâminas Persistentes podem ser deixadas no chão por vez",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "maximum_number_of_crossbow_heat_stacks",
+      "quality_display_rapid_shot_maximum_num_of_stacks_is_gem"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "{0} ao Máximo de Aquecimento",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Máximo {0} de Aquecimento",
         "reminder_text": null,
         "is_markup": null
       }
@@ -48462,7 +50431,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Máximo de {0} Atiradores de Elite Ilusórios Convocados\nConvoca {0} Atiradores de Elite Ilusórios que utilizam esta Habilidade\nAtiradores de Elite Ilusórios disparam no local do seu alvo quando você usa Tiro Gélido",
+        "string": "Máximo de {0} Atiradores de Elite Ilusórios Convocados\nConvoca {0} Atiradores de Elite Ilusórios que utilizam esta Habilidade\nAtiradores de Elite Ilusórios disparam no local do seu alvo quando você usa Tiro de Gelo",
         "reminder_text": null,
         "is_markup": null
       },
@@ -48480,7 +50449,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Máximo de {0} Atiradores de Elite Ilusórios Convocados\nConvoca {0} Atiradores de Elite Ilusórios que utilizam esta Habilidade\nAtiradores de Elite Ilusórios disparam no local do seu alvo quando você usa Tiro Gélido",
+        "string": "Máximo de {0} Atiradores de Elite Ilusórios Convocados\nConvoca {0} Atiradores de Elite Ilusórios que utilizam esta Habilidade\nAtiradores de Elite Ilusórios disparam no local do seu alvo quando você usa Tiro de Gelo",
         "reminder_text": null,
         "is_markup": null
       }
@@ -49130,7 +51099,7 @@
           [],
           []
         ],
-        "string": "Aura concede {0} a {1} de Dano Adicional de Raio",
+        "string": "Aura concede {0} a {1} de Dano de Raio adicional",
         "reminder_text": null,
         "is_markup": null
       }
@@ -49906,7 +51875,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Lacaios têm Área de Efeito aumentada em {0}%",
+        "string": "Lacaios têm Efeito em Área aumentado em {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -49926,7 +51895,7 @@
             "negate"
           ]
         ],
-        "string": "Lacaios têm Área de Efeito reduzida em {0}%",
+        "string": "Lacaios têm Efeito em Área reduzido em {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -50785,7 +52754,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Área de Efeito aumentada em {0}% por Repetição",
+        "string": "Efeito em Área aumentado em {0}% por Repetição",
         "reminder_text": null,
         "is_markup": null
       },
@@ -50805,7 +52774,7 @@
             "negate"
           ]
         ],
-        "string": "Área de Efeito reduzida em {0}% por Repetição",
+        "string": "Efeito em Área reduzido em {0}% por Repetição",
         "reminder_text": null,
         "is_markup": null
       }
@@ -50986,6 +52955,42 @@
   {
     "English": null,
     "ids": [
+      "never_shock"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Não pode [Shock|eletrificar]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "nightblade_elusive_grants_critical_strike_multiplier_+_to_supported_skills"
     ],
     "trade_stats": null,
@@ -51066,6 +53071,60 @@
           ]
         ],
         "string": "[BuffMagnitude|Magnitude] das [NonDamagingAilments|Afecções Não Nocivas] infligidas reduzida em {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "non_skill_base_all_damage_%_to_gain_as_cold_with_spells_from_buff"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dano [Spell|mágico] [Empowered|fortalecido] [Gain|ganho] como dano de [Cold|frio]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Spell|Magias] [Empowered|fortalecidas] [Gain|ganham] {0}% de dano como dano de [Cold|frio]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -51262,6 +53321,60 @@
   {
     "English": null,
     "ids": [
+      "number_of_additional_impaled_debuffs_to_apply"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Inflicts an additional [Impale]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Inflicts {0} additional [Impale|Impales]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "number_of_allowed_storm_arrows"
     ],
     "trade_stats": null,
@@ -51286,6 +53399,60 @@
           []
         ],
         "string": "Máximo de {0} Flechas no solo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "number_of_branching_fissures"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Fendas ramificam uma vez",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Fendas ramificam {0} vezes",
         "reminder_text": null,
         "is_markup": null
       }
@@ -51824,60 +53991,6 @@
   {
     "English": null,
     "ids": [
-      "orb_of_storms_maximum_number_of_hits"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Máximo de tiros disparados@{0}",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[Orb|Orbe] desaparece após {0} disparos",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "orb_of_storms_maximum_number_of_orbs"
     ],
     "trade_stats": null,
@@ -51902,62 +54015,6 @@
           []
         ],
         "string": "Limite de {0} Orbes",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "overpowered_effect_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Efeito Sobrecarga aumentado em {0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "Efeito Sobrecarga reduzido em {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -52737,6 +54794,75 @@
   {
     "English": null,
     "ids": [
+      "plague_bearer_gains_%_of_damage_from_inflicted_poisons",
+      "plague_bearer_maximum_stored_poison_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Dano de [Poison|veneno] esperado guardado (máximo)@{0}% ({1})",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Guarda {0}% de [Poison|veneno] esperado, até {1}\nCausa dano [Physical|físico] equivalente ao [Poison|veneno] guardado",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "plague_bearer_movement_speed_+%_while_infecting"
     ],
     "trade_stats": null,
@@ -52781,64 +54907,6 @@
           ]
         ],
         "string": "Você tem Velocidade de Movimento reduzida em {0}% enquanto Infectando",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "plague_bearer_nova_area_+%_final_per_incubation_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "multiply_by_one_hundred"
-          ]
-        ],
-        "string": "Máximo de mais Área de Efeito dos [Poison|Envenenamentos] armazenados@{0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "multiply_by_one_hundred"
-          ]
-        ],
-        "string": "[Poison|Envenenamentos] Armazenados concedem até {0}% mais Área de Efeito",
         "reminder_text": null,
         "is_markup": null
       }
@@ -54761,75 +56829,6 @@
   {
     "English": null,
     "ids": [
-      "rapid_shot_maximum_num_of_stacks",
-      "quality_display_rapid_shot_maximum_num_of_stacks_is_gem"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "{0} ao Máximo de Aquecimento",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "Máximo {0} de Aquecimento",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "reave_additional_max_stacks"
     ],
     "trade_stats": null,
@@ -55111,7 +57110,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% de chance de atualizar a Duração de Sangramentos ao Acertar",
+        "string": "{0}% de chance de atualizar a Duração do Sangramento ao Acertar",
         "reminder_text": null,
         "is_markup": null
       }
@@ -55148,6 +57147,156 @@
           []
         ],
         "string": "[Consume|Consome] [Freeze|Congelamentos] dos Inimigos quando os [Ignite|Incendiar]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "rhoa_movement_speed_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Velocidade de movimento aumentada enquanto montado@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de aumento de velocidade de movimento enquanto montado",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% de redução de velocidade de movimento enquanto montado",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "rhoa_movement_speed_penalty_+%_final_while_performing_action"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Penalidade de velocidade de movimento reduzida em@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de aumento na penalidade de movimento\nao usar habilidades montado",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% de redução na penalidade de movimento\nao usar habilidades montado",
         "reminder_text": null,
         "is_markup": null
       }
@@ -55609,24 +57758,6 @@
         "index_handlers": [
           []
         ],
-        "string": "Máximo de estágios@{0}",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
         "string": "Máximo de {0} Estágios",
         "reminder_text": null,
         "is_markup": null
@@ -55894,7 +58025,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Rastejador Agonizante causa Dano Físico aumentado em {0}% por Virulência que você tiver",
+        "string": "Rastejador Agonizante causa Dano Físico aumentado em {0}% por Virulência possuida por você",
         "reminder_text": null,
         "is_markup": null
       },
@@ -55914,7 +58045,7 @@
             "negate"
           ]
         ],
-        "string": "Rastejador Agonizante causa Dano Físico reduzido em {0}% por Virulência que você tiver",
+        "string": "Rastejador Agonizante causa Dano Físico reduzido em {0}% por Virulência possuida por você",
         "reminder_text": null,
         "is_markup": null
       }
@@ -55958,7 +58089,7 @@
           [],
           []
         ],
-        "string": "O Rastejador da Agonia tem de {0} a {1} de Dano Físico Adicional por Virulência que você tiver",
+        "string": "O Rastejador da Agonia possui de {0} a {1} de Dano Físico Adicional por Virulência possuída por você",
         "reminder_text": null,
         "is_markup": null
       }
@@ -56288,7 +58419,25 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% mais Dano quando destruído por uma [Pancada]",
+        "string": "Mais dano se destruída por suas habilidades@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "+{0}% de dano se destruída por suas habilidades",
         "reminder_text": null,
         "is_markup": null
       },
@@ -56308,7 +58457,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% menos Dano quando destruído por uma [Pancada]",
+        "string": "-{0}% de dano se destruída por suas habilidades",
         "reminder_text": null,
         "is_markup": null
       }
@@ -56925,6 +59074,26 @@
       {
         "condition": [
           {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_1dp"
+          ]
+        ],
+        "string": "Esqueletos Revividos são imunes a Dano por {0} segundo após serem Revividos",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": null,
             "max": null,
             "negated": null
@@ -57010,7 +59179,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Ângulo do Área de Efeito aumentada em {0}%",
+        "string": "Ângulo do Efeito em Área aumentado em {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -57030,7 +59199,7 @@
             "negate"
           ]
         ],
-        "string": "Ângulo do Área de Efeito reduzida em {0}%",
+        "string": "Ângulo do Efeito em Área reduzido em {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -57135,7 +59304,7 @@
   {
     "English": null,
     "ids": [
-      "skill_base_covered_in_oil_exposure_-_to_total_fire_resistance"
+      "skill_base_covered_in_oil_exposure_-_to_total_elemental_resistance"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -57229,7 +59398,7 @@
   {
     "English": null,
     "ids": [
-      "skill_base_ground_oil_exposure_-_to_total_fire_resistance"
+      "skill_base_ground_oil_exposure_-_to_total_elemental_resistance"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -57433,6 +59602,60 @@
   {
     "English": null,
     "ids": [
+      "skill_curses_cannot_apply_to_targets_above_level"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "A [Curse|maldição] não é aplicada a inimigos acima de nível@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "A [Curse|maldição] não é aplicada a inimigos acima de nível {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "skill_damage_+%_final_per_chain_from_skill_specific_stat"
     ],
     "trade_stats": null,
@@ -57498,6 +59721,24 @@
     "Japanese": null,
     "Korean": null,
     "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de chance de repetir",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -57663,6 +59904,282 @@
           ]
         ],
         "string": "Magias Suportadas têm Duração do Efeito da Habilidade reduzido em {0}% enquanto Morto",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_grant_X_frenzy_charges_against_normal_and_magic_monsters",
+      "skill_grant_X_frenzy_charges_against_rare_monsters",
+      "skill_grant_X_frenzy_charges_against_unique_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Aniquilar um monstro concede {2} [Charges|cargas de frenesi]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Monstros [Rarity|normais e mágicos] concedem {0} [Charges|carga de frenesi]\nMonstros [Rarity|raros] concedem {1} [Charges|carga de frenesi]\nMonstros [Rarity|únicos] concedem {2} [Charges|cargas de frenesi]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Monstros [Rarity|normais e mágicos] concedem {0} [Charges|carga de frenesi]\nMonstros [Rarity|raros] concedem {1} [Charges|cargas de frenesi]\nMonstros [Rarity|únicos] concedem {2} [Charges|carga de frenesi]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Monstros [Rarity|normais e mágicos] concedem {0} [Charges|cargas de frenesi]\nMonstros [Rarity|raros] concedem {1} [Charges|carga de frenesi]\nMonstros [Rarity|únicos] concedem {2} [Charges|carga de frenesi]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Monstros [Rarity|normais e mágicos] concedem {0} [Charges|cargas de frenesi]\nMonstros [Rarity|raros] concedem {1} [Charges|carga de frenesi]\nMonstros [Rarity|únicos] concedem {2} [Charges|cargas de frenesi]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Monstros [Rarity|normais e mágicos] concedem {0} [Charges|cargas de frenesi]\nMonstros [Rarity|raros] concedem {1} [Charges|cargas de frenesi]\nMonstros [Rarity|únicos] concedem {2} [Charges|carga de frenesi]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Monstros [Rarity|normais e mágicos] concedem {0} [Charges|carga de frenesi]\nMonstros [Rarity|raros] concedem {1} [Charges|cargas de frenesi]\nMonstros [Rarity|únicos] concedem {2} [Charges|cargas de frenesi]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Monstros [Rarity|normais e mágicos] concedem {0} [Charges|cargas de frenesi]\nMonstros [Rarity|raros] concedem {1} [Charges|cargas de frenesi]\nMonstros [Rarity|únicos] concedem {2} [Charges|cargas de frenesi]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -58670,7 +61187,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Magias têm Área de Efeito aumentada em {0}% enquanto em Postura da Areia",
+        "string": "Magias têm Efeito em Área aumentado em {0}% enquanto na Postura da Areia",
         "reminder_text": null,
         "is_markup": null
       },
@@ -58690,7 +61207,7 @@
             "negate"
           ]
         ],
-        "string": "Magias têm Área de Efeito reduzida em {0}% enquanto em Postura da Areia",
+        "string": "Magias têm Efeito em Área reduzido em {0}% enquanto na Postura da Areia",
         "reminder_text": null,
         "is_markup": null
       }
@@ -58933,6 +61450,64 @@
           []
         ],
         "string": "Desacelera Inimigos ao Acertar",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "spellslinger_invocation_gain_X_centienergy_per_10ms_base_cast_time"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Ganha {0} de [Energy|energia] a cada 0,1 segundo do tempo base de conjuração da [Spell|magia]@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Ganha {0} de [Energy|energia] a cada 0,1 segundo do\ntempo base de conjuração das [Spell|magias] conjuradas por você",
         "reminder_text": null,
         "is_markup": null
       }
@@ -60007,7 +62582,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dano Refletido é causado com Área de Efeito aumentada em {0}%",
+        "string": "Dano Refletido é causado com Efeito em Área aumentado em {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -60027,7 +62602,7 @@
             "negate"
           ]
         ],
-        "string": "Dano Refletido é causado com Área de Efeito reduzida em {0}%",
+        "string": "Dano Refletido é causado com Efeito em Área reduzido em {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -60084,6 +62659,44 @@
           ]
         ],
         "string": "Dano Refletido reduzido em {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "storm_barrier_grants_life_regeneration_rate_per_minute_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Infusão concede {0}% de Vida Regenerada por segundo",
         "reminder_text": null,
         "is_markup": null
       }
@@ -60815,7 +63428,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Onda de Choque tem Área de Efeito aumentada em {0}%",
+        "string": "Onda de Choque tem Efeito em Área aumentado em {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -60835,7 +63448,7 @@
             "negate"
           ]
         ],
-        "string": "Onda de Choque tem Área de Efeito reduzida em {0}%",
+        "string": "Onda de Choque tem Efeito em Área reduzido em {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -60871,7 +63484,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Onda tem Área de Efeito aumentada em {0}%",
+        "string": "Onda tem Efeito em Área aumentado em {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -60891,7 +63504,7 @@
             "negate"
           ]
         ],
-        "string": "Onda tem Área de Efeito reduzida em {0}%",
+        "string": "Onda tem Efeito em Área reduzido em {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -61426,7 +64039,8 @@
   {
     "English": null,
     "ids": [
-      "support_combo_finisher_required_number_of_combo_stacks"
+      "support_combo_finisher_required_number_of_combo_stacks",
+      "support_combo_finisher_max_combo_required"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -61441,12 +64055,19 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "Requer {0} [Combo|Combo] para usar",
@@ -61910,7 +64531,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Área de Efeito aumentada em {0}% por Repetição",
+        "string": "Efeito em Área aumentado em {0}% por Repetição",
         "reminder_text": null,
         "is_markup": null
       },
@@ -61930,7 +64551,7 @@
             "negate"
           ]
         ],
-        "string": "Área de Efeito reduzida em {0}% por Repetição",
+        "string": "Efeito em Área reduzido em {0}% por Repetição",
         "reminder_text": null,
         "is_markup": null
       }
@@ -62869,7 +65490,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Lacaios causam {0}% mais Dano enquanto você tiver Frenesi Faminto",
+        "string": "Lacaios causam {0}% mais Dano enquanto você possuir Frenesi Faminto",
         "reminder_text": null,
         "is_markup": null
       },
@@ -62889,7 +65510,7 @@
             "negate"
           ]
         ],
-        "string": "Lacaios causam {0}% menos Dano enquanto você tiver Frenesi Faminto",
+        "string": "Lacaios causam {0}% menos Dano enquanto você possuir Frenesi Faminto",
         "reminder_text": null,
         "is_markup": null
       }
@@ -63171,44 +65792,6 @@
           ]
         ],
         "string": "Vórtice dura {0} segundos",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "support_overpowered_duration_ms"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds"
-          ]
-        ],
-        "string": "Inflige Subjugado por {0} segundos quando Bloqueado",
         "reminder_text": null,
         "is_markup": null
       }
@@ -63503,42 +66086,6 @@
           ]
         ],
         "string": "Ganha 1 de Fúria no Acerto Corpo a Corpo, não mais do que uma vez a cada {0} segundos",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "support_reduce_enemy_block_and_spell_block_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Inimigos têm -{0}% de chance de bloquear o Dano de [Attack|Ataques] ou Magias dessa Habilidade",
         "reminder_text": null,
         "is_markup": null
       }
@@ -65683,7 +68230,61 @@
         "index_handlers": [
           []
         ],
-        "string": "Máximo de {0} arapucas por Inimigo",
+        "string": "Máximo de {0} Aprisionamentos por Inimigo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "thunderous_leap_%_chance_for_shocked_ground_when_detonating"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Chance de criar [ShockedGround|Terreno Eletrificado] ao [Detonator|detonar]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de chance de criar [ShockedGround|Terreno Eletrificado] ao [Detonator|detonar] lanças",
         "reminder_text": null,
         "is_markup": null
       }
@@ -66004,6 +68605,75 @@
           ]
         ],
         "string": "[Totem|Totens] Regeneram {0}% de Vida por segundo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "toxic_domain_+1%_final_more_damage_per_x_stored_poison",
+      "toxic_domain_max_damage_+%_final_from_stored_poison"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Máximo de mais dano com explosões do [Poison|Envenenamento]@{1}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Poison|Envenenamentos] Armazenados concedem até {1}% mais Dano de explosão",
         "reminder_text": null,
         "is_markup": null
       }
@@ -66543,7 +69213,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% menos Dano por Trauma",
+        "string": "{0}% menos Dano por Trauma, até 200%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -66579,7 +69249,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Pulso tem Área de Efeito aumentada em {0}% por cada 0.1s de Duração do Atordoamento, máximo de 400%",
+        "string": "Pulso tem Efeito em Área aumentado em {0}% por cada 0.1s de Duração do Atordoamento, máximo de 400%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -66599,7 +69269,7 @@
             "negate"
           ]
         ],
-        "string": "Pulso tem Área de Efeito reduzida em {0}% por cada 0.1s de Duração do Atordoamento",
+        "string": "Pulso tem Efeito em Área Reduzido em {0}% por cada 0.1s de Duração do Atordoamento",
         "reminder_text": null,
         "is_markup": null
       }
@@ -67281,7 +69951,7 @@
     "English": null,
     "ids": [
       "triggered_by_generic_ongoing_trigger",
-      "display_generic_ongoing_triggerer_is_invocation_skill",
+      "generic_ongoing_triggerer_is_invocation_skill",
       "virtual_energy_cost_for_generic_ongoing_trigger"
     ],
     "trade_stats": null,
@@ -67717,7 +70387,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tem 10 lâminas",
+        "string": "Possui 10 lâminas",
         "reminder_text": null,
         "is_markup": null
       }
@@ -69893,6 +72563,60 @@
   {
     "English": null,
     "ids": [
+      "volcano_base_number_of_geysers_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} Vulcão",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} Vulcões",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "volcano_damage_+%_final_per_stage"
     ],
     "trade_stats": null,
@@ -69975,60 +72699,6 @@
           ]
         ],
         "string": "Dispara [Projectile|Projéteis] a cada {0} segundos",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "volcano_max_number_of_geysers"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Máximo de {0} Vulcão",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Máximo de {0} Vulcões",
         "reminder_text": null,
         "is_markup": null
       }
@@ -70231,42 +72901,6 @@
           []
         ],
         "string": "Buff concede Dano Adicional com Ataques igual a {0}% do Dano da Arma da Sua Mão\nPrincipal por cada 5 de Poder, até um máximo de 20%",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "seismic_cry_+%_enemy_stun_threshold_per_5_MP"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Buff concede Limite de Atordoamento Inimigo reduzido em {0}% por cada 5 de Poder, até um máximo de 30%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -70647,6 +73281,100 @@
           ]
         ],
         "string": "Buff tem {0}% menos Efeito em seus Lacaios",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "warcry_empowers_per_X_monster_power",
+      "warcry_empowers_per_X_monster_power_mp_cap"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Power|Poder] inimigo necessário por [Attack|ataque] [Empowered|fortalecido] (máximo)@{0} ({1})",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Empowered|Fortalece] um [Attack|ataque] por [Power|poder] inimigo ao\nalcance, até {1} [Power|poder]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Empowered|Fortalece] um [Attack|ataque] por {0} [Power|poderes] inimigos ao\nalcance, até {1} [Power|poderes]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -71993,6 +74721,122 @@
   {
     "English": null,
     "ids": [
+      "warding_steel_gains_%_of_damage_from_mitigated_physical_damage",
+      "warding_steel_maximum_stored_mitigated_physical_damage",
+      "quality_display_warding_steel_is_gem"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Dano [Physical|físico] guardado mitigado (máximo)@{0}% ({1})",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Guarda {0}% de dano [Physical|físico] mitigado",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "Guarda {0}% de dano [Physical|físico] mitigado, até {1}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "water_sphere_cold_lightning_exposure_%"
     ],
     "trade_stats": null,
@@ -72257,6 +75101,100 @@
           []
         ],
         "string": "{0}% mais distância de [Knockback|Empurrão] por estágio",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "wind_blast_damage_+%_final_from_distance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Bônus máximo de dano com base na distância:@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Penalidade máxima de dano com base na distância:@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "+{0}% de dano contra inimigos a até 1,5 metro, diminuindo gradualmente até zerar a 4 metros ou mais",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "-{0}% de dano contra inimigos a até 1,5 metro, diminuindo gradualmente até zerar a 4 metros ou mais",
         "reminder_text": null,
         "is_markup": null
       }
@@ -72563,6 +75501,296 @@
           []
         ],
         "string": "Buff não é removido ao usar a Habilidade",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "wolf_warcry_buff_cold_damage_min_per_5_power_up_to_cap",
+      "wolf_warcry_buff_cold_damage_max_per_5_power_up_to_cap",
+      "wolf_warcry_buff_cold_damage_min_cap",
+      "wolf_warcry_buff_cold_damage_max_cap"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "O efeito concede dano de [Cold|frio] adicionado a [Attack|ataques] de {0} - {1} por 5 [Power|Poder] de aliados e inimigos no campo de visão, limitado a {2} - {3}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "O efeito concede dano de [Cold|frio] adicionado a [Attack|ataques] de {0} - {1} por 5 [Power|Poder] de aliados e inimigos no campo de visão, limitado a {2} - {3}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "wolf_warcry_empowered_attack_cold_damage_min_per_5_power_up_to_cap",
+      "wolf_warcry_empowered_attack_cold_damage_max_per_5_power_up_to_cap",
+      "wolf_warcry_empowered_attack_cold_damage_min_cap",
+      "wolf_warcry_empowered_attack_cold_damage_max_cap"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "[Attack|Ataques] [Empowered|fortalecidos] têm dano de [Cold|frio] adicionado de {0} - {1} por 5 [Power|Poder] de aliados e inimigos no campo de visão, limitado a {2} - {3}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "[Attack|Ataques] [Empowered|fortalecidos] têm dano de [Cold|frio] adicionado de {0} - {1} por 5 [Power|Poder] de aliados e inimigos no campo de visão, limitado a {2} - {3}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "wolf_warcry_focus_fire_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "Ao atingir [Enemy|inimigos] com este [Warcry|clamor], seus lobos atacarão o inimigo [Mark|marcado] por seu Talho Cruzado por {0} segundos",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "wolf_warcry_maximum_number_of_wolves"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Invoca um Lobo de Gelo por inimigo [Mark|marcado] no campo de visão. Os lobos são permanentes e não podem ser revividos. Limite de lobos: {0}. Ao atingir o limite, em vez de invocar um novo lobo, o com menos vida será curado",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Invoca um Lobo de Gelo por inimigo [Mark|marcado] no campo de visão. Os lobos são permanentes e não podem ser revividos. Limite de lobos: {0}. Ao atingir o limite, em vez de invocar um novo lobo, o com menos vida será curado",
         "reminder_text": null,
         "is_markup": null
       }

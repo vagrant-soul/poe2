@@ -38,6 +38,98 @@
   {
     "English": null,
     "ids": [
+      "base_tribute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0} 貢禮",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "tribute_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "貢禮增加 {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "貢禮減少 {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "base_strength"
     ],
     "trade_stats": null,
@@ -65,7 +157,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0} 力量",
+        "string": "{0} [Strength|力量]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -101,7 +193,7 @@
         "index_handlers": [
           []
         ],
-        "string": "增加 {0}% 力量",
+        "string": "增加 {0}% [Strength|力量]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -121,7 +213,7 @@
             "negate"
           ]
         ],
-        "string": "減少 {0}% 力量",
+        "string": "減少 {0}% [Strength|力量]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -157,7 +249,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0} 敏捷",
+        "string": "{0} [Dexterity|敏捷]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -193,7 +285,7 @@
         "index_handlers": [
           []
         ],
-        "string": "增加 {0}% 敏捷",
+        "string": "增加 {0}% [Dexterity|敏捷]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -213,7 +305,7 @@
             "negate"
           ]
         ],
-        "string": "減少 {0}% 敏捷",
+        "string": "減少 {0}% [Dexterity|敏捷]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -249,7 +341,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0} 智慧",
+        "string": "{0} [Intelligence|智慧]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -285,7 +377,7 @@
         "index_handlers": [
           []
         ],
-        "string": "增加 {0}% 智慧",
+        "string": "增加 {0}% [Intelligence|智慧]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -305,7 +397,7 @@
             "negate"
           ]
         ],
-        "string": "減少 {0}% 智慧",
+        "string": "減少 {0}% [Intelligence|智慧]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -343,7 +435,7 @@
             "per_minute_to_per_second"
           ]
         ],
-        "string": "額外增加 {0}% 魔力回復",
+        "string": "{0}% 每秒魔力回復",
         "reminder_text": null,
         "is_markup": null
       }
@@ -417,7 +509,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0} 最大耐力球數量",
+        "string": "{0} 最大[Charges|耐力球]數量",
         "reminder_text": null,
         "is_markup": null
       }
@@ -453,7 +545,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0} 最大狂怒球數量",
+        "string": "{0} 最大[Charges|狂怒球]數量",
         "reminder_text": null,
         "is_markup": null
       }
@@ -489,7 +581,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0} 最大暴擊球數量",
+        "string": "{0} 最大[Charges|暴擊球]數量",
         "reminder_text": null,
         "is_markup": null
       }
@@ -561,7 +653,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊殺敵人獲得 1 顆狂怒球",
+        "string": "擊殺敵人時獲得 1 顆狂怒球",
         "reminder_text": null,
         "is_markup": null
       }
@@ -597,7 +689,7 @@
         "index_handlers": [
           []
         ],
-        "string": "將所有[Evasion|閃避值]轉化為[Armour|護甲值]",
+        "string": "將所有[Evasion|閃避值][StatConversion|轉化]為[Armour|護甲值]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -885,7 +977,7 @@
         "index_handlers": [
           []
         ],
-        "string": "滿血時有 30% 更少[CriticalDamageBonus|暴擊傷害加成]\n [LowLife|貧血狀態]時有 30% 更多[CriticalDamageBonus|暴擊傷害加成]",
+        "string": "滿血時有 30% 更少[CriticalDamageBonus|暴擊傷害加成]\n [LowLife|貧血狀態]時有 30% 更多暴擊傷害加成",
         "reminder_text": null,
         "is_markup": null
       }
@@ -921,7 +1013,7 @@
         "index_handlers": [
           []
         ],
-        "string": "投射物攻擊擊中目標時，在起始位置造成最多 30% 更多傷害，隨著投射物飛行越遠對目標造成傷害減少",
+        "string": "投射物[Attack|攻擊]擊中目標時，在起始位置造成最多 30% 更多傷害，隨著投射物飛行越遠對目標造成傷害減少",
         "reminder_text": null,
         "is_markup": null
       }
@@ -958,42 +1050,6 @@
           []
         ],
         "string": "如果你即將獲得[Charges|能量球]，則改為你[Presence|存在範圍]內的[Allies|友方]獲得該能量球",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "keystone_projectile_evasion"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "閃避值對投射物攻擊為 2 倍\n對近戰攻擊有 25% 更少閃避值",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1065,7 +1121,7 @@
         "index_handlers": [
           []
         ],
-        "string": "召喚物瀕死時爆炸，對附近敵人造成 33% 最大生命的火焰傷害",
+        "string": "召喚物[LowLife|貧血]時爆炸，對附近敵人造成 33% 最大生命的火焰傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1101,7 +1157,7 @@
         "index_handlers": [
           []
         ],
-        "string": "造成[Fire|火焰]傷害的擊中會移除火焰[Exposure|曝曬]並造成[Lightning|閃電]曝曬\n造成[Cold|冰冷]傷害的擊中會移除冰冷曝曬並造成[Fire|火焰]曝曬\n造成[Lightning|閃電]傷害的擊中會移除閃電曝曬並造成[Cold|冰冷]曝曬",
+        "string": "你創造的[ElementalInfusion|灌注][Remnant|痕跡]必定屬於一個隨機[ElementalDamage|元素]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1137,7 +1193,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Maximum Life is 1\nImmune to [Chaos] Damage and [Bleeding]",
+        "string": "最大生命為 1\n免疫[Chaos|混沌]傷害和[Bleeding|流血]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1209,7 +1265,7 @@
         "index_handlers": [
           []
         ],
-        "string": "增加 {0}% 暴擊率",
+        "string": "增加 {0}% [Critical|暴擊率]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1229,7 +1285,7 @@
             "negate"
           ]
         ],
-        "string": "減少 {0}% 暴擊率",
+        "string": "減少 {0}% [Critical|暴擊率]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1265,7 +1321,7 @@
         "index_handlers": [
           []
         ],
-        "string": "持長杖時 {0}% 攻擊傷害格擋率",
+        "string": "持長杖時 {0}% [Attack|攻擊]傷害格擋率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1337,7 +1393,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的[HitDamage|擊中]無法被[Evasion|閃避]\n永遠不會造成[Critical|暴擊]",
+        "string": "[Accuracy|命中]值變成雙倍\n無法造成[Critical|暴擊]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1373,7 +1429,7 @@
         "index_handlers": [
           []
         ],
-        "string": "不會[LightStun|被輕微暈眩]\n無法閃避翻滾",
+        "string": "不會被[LightStun|輕微暈眩]\n無法閃避翻滾或衝刺",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1445,7 +1501,7 @@
         "index_handlers": [
           []
         ],
-        "string": "增加 {0} 力量與敏捷",
+        "string": "{0} 點[Strength|力量]與[Dexterity|敏捷]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1481,7 +1537,7 @@
         "index_handlers": [
           []
         ],
-        "string": "增加 {0} 力量與智慧",
+        "string": "{0} 點[Strength|力量]與[Intelligence|智慧]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1517,7 +1573,7 @@
         "index_handlers": [
           []
         ],
-        "string": "增加 {0} 敏捷與智慧",
+        "string": "{0} 點[Dexterity|敏捷]與[Intelligence|智慧]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1553,7 +1609,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊中敵人時有 {0}% 機率致盲",
+        "string": "[HitDamage|擊中]敵人時有 {0}% 機率[Blind|致盲]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1571,7 +1627,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊中敵人時致盲",
+        "string": "[HitDamage|擊中]時[Blind|致盲]敵人",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1615,7 +1671,7 @@
           [],
           []
         ],
-        "string": "技能有額外一個投射物",
+        "string": "技能發射額外 1 個[Projectile|投射物]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1640,7 +1696,7 @@
           [],
           []
         ],
-        "string": "技能有額外 {1} 個投射物",
+        "string": "技能發射額外 {1} 個[Projectile|投射物]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1865,6 +1921,506 @@
   {
     "English": null,
     "ids": [
+      "gain_X_life_flask_charges_per_4%_life_spent"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每消耗 4% 生命獲得 {0} 生命[Flask|藥劑]充能",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每消耗 4% 生命獲得 {0} 生命[Flask|藥劑]充能",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "adaptation_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[DNT] Adaptations last for {0} second",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[DNT] Adaptations last for {0} seconds",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "add_X_guard_on_trigger_per_100_ms_total_use_time_of_triggered_skill_up_to_maximum_mana"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] Add {0} [Guard] when [Trigger|Triggering] a Skill for every 0.1 seconds of base use time of that Skill",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "add_X_ms_to_energy_shield_recharge_delay_per_combo_spent"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[DNT] Expending [Combo] adds {0} second to remaining [ESRecharge|Energy Shield Recharge] delay per [Combo]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[DNT] Expending [Combo] adds {0} seconds to remaining [ESRecharge|Energy Shield Recharge] delay per [Combo]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": -1000,
+            "max": -1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[DNT] Expending [Combo] removes {0} second from remaining [ESRecharge|Energy Shield Recharge] delay per [Combo]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[DNT] Expending [Combo] removes {0} seconds from remaining [ESRecharge|Energy Shield Recharge] delay per [Combo]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "additional_combo_gain_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[HitDamage|擊中]時有 {0}% 機率額外累積一個[Combo|連擊]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[HitDamage|擊中]時額外累積一個[Combo|連擊]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "additional_combo_gain_on_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] Gain {0} additional [Combo] whenever you gain [Combo]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "aggravate_bleeding_when_inflicted_vs_pinned_enemy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你對[Pinned|釘身]的敵人造成的[Bleeding|流血]會[Aggravate|加劇]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "apply_X_critical_weakness_on_consuming_mark"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "對敵人[Consume|消耗][Mark|印記]時，施加 {0} 層[CriticalWeakness|暴擊弱點]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "arcane_surge_effect_on_self_+%_per_10%_missing_mana"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每損失 10% 魔力，你身上的[ArcaneSurge|秘能波動][BuffEffect|效果]增加 {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_arcane_archer_triggered_skill_mana_cost_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] {0}% more Mana cost of [Trigger|Triggered Skills]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[DNT] {0}% less Mana cost of [Trigger|Triggered Skills]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "ascendancy_chronomancer_apex_of_the_moment_base_slow_aura_value"
     ],
     "trade_stats": null,
@@ -1913,6 +2469,986 @@
           ]
         ],
         "string": "處於你的[Presence|存在範圍]中的敵人[Slow|行動速度]降低 {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_enable_fire_djinn_passive"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] Fire Djinn will use Flame Slice on Enemies you target with Damaging Skills",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_gemling_charge_generator_buff_display"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "賦予[ThaumaturgicalDynamism|奇術活力]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_lich_consume_power_for_apparition"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "如果可以，傷害型[Spell|法術]會消耗一顆[Charges|暴擊球]來觸發深淵幻象",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_lich_skeletons_are_buffs_instead_of_minions"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每有一個你本來會創造的[Minion|召喚物]，你可創造的骷髏[Minion|召喚物]改為賦予你[LichSkeletalBuff|幽暗之魂]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_lich_spell_damage_+%_final_when_sacrificing_energy_shield"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "在[Sacrifice|獻祭][EnergyShield|能量護盾]時，[Spell|法術]造成 {0}% 更多傷害",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "在[Sacrifice|獻祭][EnergyShield|能量護盾]時，[Spell|法術]造成 {0}% 更少傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_lich_spells_consume_power_charges_for_spell_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "如果可以，[Spell|法術]會消耗一顆[Charges|暴擊球]以造成 {0}% 更多傷害",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "如果可以，[Spell|法術]會消耗一顆[Charges|暴擊球]以造成 {0}% 更少傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_random_ignite_effect_+%_final_up_to_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] [Ignite|Ignites] you inflict have up to {0}% more [BuffMagnitude|Magnitude], at random",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_tactician_suppressing_fire_hit_damage_immobilisation_multiplier_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": -100,
+            "max": -100,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "不能造成[Immobilised|禁錮]累積",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% 更多[Immobilised|禁錮]累積",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% 更少[Immobilised|禁錮]累積",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_vivid_stag_minimum_stag_wisp_count"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] Minimum {0} Vivid Stag Wisp",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] Minimum {0} Vivid Stag Wisps",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_curse_delay_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Curse|詛咒]區域爆發前延遲增加 {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Curse|詛咒]區域爆發前延遲減少 {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_rage_cost"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] {0} to [Rage] cost of Skills",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_rage_regeneration_rate_per_minute_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second_2dp_if_required"
+          ]
+        ],
+        "string": "[DNT] Regenerate {0}% of your Maximum [Rage] per second",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "blood_mage_life_flask_buff_%_charges_to_consume",
+      "blood_mage_life_flask_buff_%_damage_to_gain_as_physical_per_charge_consumed",
+      "blood_mage_life_flask_buff_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "在生命[Flask|藥劑]充能全滿時[HitDamage|擊中]敵人，消耗其 {0}% 充能\n每以此方式消耗 1 充能，[Gain|獲得]相當於 {1}% 傷害的[Physical|物理]傷害 {2} 秒",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "在生命[Flask|藥劑]充能全滿時[HitDamage|擊中]敵人，消耗其 {0}% 充能\n每以此方式消耗 1 充能，[Gain|獲得]相當於 {1}% 傷害的[Physical|物理]傷害 {2} 秒",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "can_equip_staff_with_focus"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] You can wield a [Focus] while also wielding a [Staff]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "can_gain_combo_from_any_attack_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] Any [Attack] [HitDamage|Hit] can gain [Combo]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "can_only_spawn_blue_flame_of_chayula_remnants"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "所有你產生的[FlamesOfChayula|夏烏拉之炎]為[BlueFlamesOfChayula|藍炎]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "can_only_spawn_purple_flame_of_chayula_remnants"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "所有你產生的[FlamesOfChayula|夏烏拉之炎]為[PurpleFlamesOfChayula|紫炎]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "can_only_spawn_red_flame_of_chayula_remnants"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "所有你產生的[FlamesOfChayula|夏烏拉之炎]為[RedFlamesOfChayula|紅炎]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_for_extra_damage_roll_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "擊中傷害有 {0}% 機率帶有幸運",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_%_for_extra_infusion_on_infused_remnant_pickup"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "拾取[ElementalInfusion|元素灌注]時，有 {0}% 機率獲得另一個不同的[ElementalInfusion|元素灌注]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "拾取[ElementalInfusion|元素灌注]時，會獲得另一個不同的[ElementalInfusion|元素灌注]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_to_generate_owl_feather_%_on_crit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] {0}% chance to generate an Owl Feather on [Critical|Critical Hit]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "charge_skip_consume_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "技能有 {0}% 的機率不會移除[Charges|能量球]，但依然會視為將其消耗",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1977,6 +3513,178 @@
   {
     "English": null,
     "ids": [
+      "chronomancer_grant_cast_speed_+%",
+      "chronomancer_grant_area_of_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "賦予[Chronobuff|時間之沙]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "companion_damage_+%_per_socketed_talisman"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] [Companion|Companions] deal {0}% increased Damage per socketed Talisman",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[DNT] [Companion|Companions] deal {0}% reduced Damage per socketed Talisman",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "created_remnants_have_%_chance_to_duplicate_pick_up_results"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你所創造的[Remnant|痕跡]有 {0}% 機率賦予其效果兩次",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "critical_chance_vs_self_is_unlucky"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Enemy [Critical|Critical Hit Chance] against you is [Unlucky]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "crushing_blow"
     ],
     "trade_stats": null,
@@ -2005,6 +3713,222 @@
           []
         ],
         "string": "你的[HitDamage|擊中]為[CrushingBlow|粉碎重擊]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "current_energy_shield_%_as_elemental_damage_reduction"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "現有[EnergyShield|能量護盾]的 {0}% 也會賦予[Physical|物理傷害]減免",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": 100,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "現有[EnergyShield|能量護盾]也會賦予[Physical|物理傷害]減免",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 101,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "現有[EnergyShield|能量護盾]的 {0}% 也會賦予[Physical|物理傷害]減免",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "cursed_enemies_have_life_reserved_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "受你[Curse|詛咒]的敵人有至少 {0}% 生命被[Reservation|保留]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "damage_taken_from_hits_is_unlucky"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Damage of Enemies [HitDamage|Hitting] you is [Unlucky]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "daze_enemies_on_block_with_shield_raised_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "當你主動[Block|格擋]時，[HitDamage|擊中]被你[Block|格擋]的敵人有 {0}% 機率受到[Daze|目眩]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_fire_djinn_enable_living_bomb"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] Enable Living Bomb",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2049,6 +3973,114 @@
   {
     "English": null,
     "ids": [
+      "display_sand_djinn_enable_explode_teleport"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] Enable Explosive Teleport",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_sand_djinn_enable_hand_slam"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] Enable Hand Slam",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_sand_djinn_enable_knife_throw"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] Enable Knife Toss",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "display_you_have_x_fortification"
     ],
     "trade_stats": null,
@@ -2077,6 +4109,248 @@
           []
         ],
         "string": "你有 {0} 層護體",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "djinn_ascendancy_energy_shield_recharge_rate_+%_final_on_low_energy_shield"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] {0}% more [ESRecharge|Energy Shield Recharge Rate]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[DNT] {0}% less [ESRecharge|Energy Shield Recharge Rate]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "elemental_damage_removed_from_mana_before_life_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% of [ElementalDamage|Elemental Damage] is taken from Mana before Life",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "elemental_damage_taken_+%_final_per_matching_adaptation"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] {0}% more [ElementalDamage|Elemental Damage] taken per Adaptation, matching that Adaptations type",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[DNT] {0}% less [ElementalDamage|Elemental Damage] taken per Adaptation, matching that Adaptations type",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "elemental_skill_limit_+"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[ElementalDamage|元素]技能的[Limit|上限] {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "energy_shield_recharge_starts_X_ms_sooner"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[ESRecharge|能量護盾充能]提早 {0} 秒開始",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[ESRecharge|能量護盾充能]提早 {0} 秒開始",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2115,6 +4389,170 @@
           ]
         ],
         "string": "每秒對附近敵人造成 {0} 秒凋零",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "focus_mod_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] {0}% increased bonuses gained from Equipped [Focus]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[DNT] {0}% reduced bonuses gained from Equipped [Focus]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "gain_X_adaptation_matching_type_when_hit_by_elemental_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] Gain {0} Adaptation when hit by [ElementalDamage|Elemental Damage], matching the type of the Damage taken",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "gain_X_volatility_on_inflicting_elemental_ailment"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "造成[ElementalAilments|元素異常狀態]時獲得 {0} 層[Volatility|易爆]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "immune_to_volatility_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "不會受到[Volatility|易爆]傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2294,7 +4732,7 @@
         "index_handlers": [
           []
         ],
-        "string": "副手無裝備且你的主手裝備[One-Handed|單手]武器時，得到 25% 更多技能速度",
+        "string": "副手無裝備且你的主手裝備\n[One-Handed|單手][MartialWeapon|軍用武器]時，得到 25% 更多技能速度",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2330,7 +4768,43 @@
         "index_handlers": [
           []
         ],
-        "string": "你可以在單手欄位手持[Two-Handed|雙手][Axe|斧]、[Mace|錘]和[Sword|劍]\n[MartialWeapon|軍用武器]所需的[Attributes|能力值]變為三倍。",
+        "string": "你可以在單手欄位手持[Two-Handed|雙手][Axe|斧]、[Mace|錘]和[Sword|劍]\n[MartialWeapon|軍用武器]所需的[Attributes|能力值]變為三倍\n[Strength|力量]賦予的固有生命減半",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "keystone_mana_leech_from_elemental_instead"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[ManaLeech|魔力偷取]會依據你的[ElementalDamage|元素傷害類型]而非[Physical|物理]傷害進行恢復",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2367,6 +4841,78 @@
           []
         ],
         "string": "從回復溢出的生命恢復會套用在[EnergyShield|能量護盾]\n[EnergyShield|能量護盾]不會充能",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "leech_also_recovers_based_on_chaos_damage_as_well"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Leech|偷取]的恢復以[Chaos|混沌]傷害及[Physical|物理]傷害為依據",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "life_leech_is_instant_for_empowered_attacks"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Empowered|強化]攻擊的生命[LifeLeech|偷取]變為立即生效",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2431,6 +4977,298 @@
   {
     "English": null,
     "ids": [
+      "mana_regeneration_rate_modifiers_apply_to_rage_regeneration"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Increases and Reductions to Mana Regeneration Rate also apply to [Rage] Regeneration Rate",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "maximum_block_chance_override"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最大[Block|格擋]機率為 {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "maximum_darkness_+%_per_capped_chaos_damage_resistance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每有 1% [Chaos|混沌抗性]增加 {0}% 最大黑暗",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "maximum_mana_per_50_evasion_rating_from_armour_items"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] {0} to maximum Mana per fifty [ItemDefences|Item Evasion Rating] on [EquipArmour|Equipped Armour Items]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "meta_gem_reservation_efficiency_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] [Meta|Meta Skill Gems] have {0}% increased [Reservation] efficiency",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[DNT] [Meta|Meta Skill Gems] have {0}% reduced [Reservation] efficiency",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "movement_speed_penalty_+%_while_raising_shield"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "主動[Block|格擋]時，移動速度懲罰增加 {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "主動[Block|格擋]時，移動速度懲罰減少 {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "multishot_critical_damage_bonus_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] [Attack|Attacks] [Empowered] by Owl Feathers have {0}% more [CriticalDamageBonus|Critical Damage Bonus]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "no_barrage_projectile_spread"
     ],
     "trade_stats": null,
@@ -2467,6 +5305,234 @@
   {
     "English": null,
     "ids": [
+      "no_self_critical_strike_multiplier_if_red_support_count_highest",
+      "skill_cost_+%_final_if_blue_support_count_highest",
+      "movement_speed_penalty_+%_final_while_performing_action_if_green_support_count_highest"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "依據插槽中輔助寶石最多顆的顏色，會獲得\n• 紅色：對你的[HitDamage|擊中]無[CriticalDamageBonus|暴擊傷害加成]\n• 藍色：技能有 {1}% 更多消耗\n• 綠色：移動時使用技能會有 {2}% 更多移動速度懲罰",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "negate"
+          ],
+          []
+        ],
+        "string": "依據插槽中輔助寶石最多顆的顏色，會獲得\n• 紅色：對你的[HitDamage|擊中]無[CriticalDamageBonus|暴擊傷害加成]\n• 藍色：技能有 {1}% 更少消耗\n• 綠色：移動時使用技能會有 {2}% 更多移動速度懲罰",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "negate"
+          ],
+          [
+            "negate"
+          ]
+        ],
+        "string": "依據插槽中輔助寶石最多顆的顏色，會獲得\n• 紅色：對你的[HitDamage|擊中]無[CriticalDamageBonus|暴擊傷害加成]\n• 藍色：技能有 {1}% 更少消耗\n• 綠色：移動時使用技能會有 {2}% 更少移動速度懲罰",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "negate"
+          ]
+        ],
+        "string": "依據插槽中輔助寶石最多顆的顏色，會獲得\n• 紅色：對你的[HitDamage|擊中]無[CriticalDamageBonus|暴擊傷害加成]\n• 藍色：技能有 {1}% 更多消耗\n• 綠色：移動時使用技能會有 {2}% 更少移動速度懲罰",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "offering_skill_target_cullable_enemies_instead"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Your [Offering|Offerings] can target Enemies in [CullingStrike|Culling] range",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "offerings_only_buff_you"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Your [Offering|Offerings] affect you instead of your [Minion|Minions]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "physical_damage_+%"
     ],
     "trade_stats": null,
@@ -2494,7 +5560,7 @@
         "index_handlers": [
           []
         ],
-        "string": "增加 {0}% 物理傷害",
+        "string": "增加 {0}% [Physical|物理]傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2514,7 +5580,445 @@
             "negate"
           ]
         ],
-        "string": "減少 {0}% 物理傷害",
+        "string": "減少 {0}% [Physical|物理]傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "physical_spell_damage_can_pin_on_critical_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Physical|物理][Spell|法術][HitDamage|擊中]且[Critical|暴擊]時，會累積[Pinned|釘身]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "pinned_enemies_cannot_crit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Pinned|釘身]的敵人不能造成[Critical|暴擊]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "pinned_enemies_cannot_evade_your_attacks"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Pinned|釘身]的敵人無法[Evasion|閃避]你的擊中",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "projectile_attacks_always_chain_to_marked_enemies_with_%_increased_chaining_distance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] [Projectile] [Attack|Attacks] always [Chain] to [Mark|Marked] Enemies with {0}% increased [Chain|Chaining Distance]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_shaman_spell_damage_+%_final_per_rage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] You gain {0}% more [Spell] Damage per [Rage]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "rage_gained_on_life_flask_use"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你使用生命[Flask|藥劑]時獲得 {0} [Rage|盛怒]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "random_freeze_duration_+%_up_to_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] [Freeze] you inflict has up to {0}% increased duration, at random",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "remnants_you_create_reappear_X_ms_after_being_collected"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "你創造的[Remnant|痕跡]在撿拾後 {0} 秒會再出現一次",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "你創造的[Remnant|痕跡]在撿拾後 {0} 秒會再出現一次",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "reservation_efficiency_+%_of_skills_per_socketed_talisman"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] Skills have {0}% increased [Reservation] efficiency per socketed Talisman",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[DNT] Skills have {0}% reduced [Reservation] efficiency per socketed Talisman",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "resist_all_elements_%_per_socketed_rune"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] {0}% to all [ElementalDamage|Elemental Resistances] per socketed Rune",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "sacrificing_energy_shield_does_not_interrupt_recharge"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Sacrifice|獻祭][EnergyShield|能量護盾]不會中斷[ESRecharge|充能]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2579,6 +6083,98 @@
   {
     "English": null,
     "ids": [
+      "skill_cost_+%_per_socketed_soul_core"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] {0}% increased cost of Skills per socketed Soul Core",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[DNT] {0}% reduced cost of Skills per socketed Soul Core",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "spells_sacrifice_%_of_your_energy_shield"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你施放[Spell|法術]時[Sacrifice|獻祭] {0}% 最大[EnergyShield|能量護盾]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "start_at_zero_energy_shield"
     ],
     "trade_stats": null,
@@ -2615,6 +6211,280 @@
   {
     "English": null,
     "ids": [
+      "tactician_grants_aura_to_deployed_totems"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你設置的[Totem|圖騰]賦予[TacticianTotemBuff|陣地光環]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "tame_beast_can_target_unique_beasts"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] Tame Beast can target Unique Beasts\nYou can summon Tamed Unique Beasts",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "tamed_beasts_randomly_possessed_every_x_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[DNT] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} second",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[DNT] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} seconds",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "time_lost_jewel_radius_is_upgraded"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] Your [TimeLostJewel|Time Lost Jewels] have upgraded radii",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "unlimited_banners_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你可以放置的[Banner|旗幟]數量沒有[Limit|上限]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "unravelling_cycling_buff_every_x_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "賦予[UnravellingBuff|紛亂]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "weapon_damage_%_granted_to_companions_in_presence"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] {0}% of Main Hand Weapon Damage granted as Added Attack Damage to your [Companion|Companions] in your [Presence]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "base_phasing_without_visual"
     ],
     "trade_stats": null,
@@ -2643,6 +6513,42 @@
           []
         ],
         "string": "迷蹤效果",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "lich_offering_effect_+%_per_enemy_power"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Offering|Offerings] created by [CullingStrike|Culling] Enemies have {0}% increased [BuffEffect|Effect] per [Power] of [CullingStrike|Culled] Enemy",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2813,6 +6719,78 @@
   {
     "English": null,
     "ids": [
+      "keystone_amanamus_defiance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "When taking damage from [HitDamage|Hits], 20% of Life Loss is prevented, then 150% of Life Loss prevented this way is Lost over 4 seconds",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "keystone_auto_invocation"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Invoke|祈願]技能改為每 2 秒[Trigger|觸發][Spell|法術\n[Invoke|祈願]技能在[Trigger|觸發][Spell|法術]期間無法獲得[Energy|能量]\n[Invoke|祈求]法術消耗 50% 更少[Energy|能量]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "keystone_barbed_tips"
     ],
     "trade_stats": null,
@@ -2840,7 +6818,7 @@
         "index_handlers": [
           []
         ],
-        "string": "攻擊投射物一並造成流血、癱瘓和擊退敵人\n投射物不會穿透、分裂或連鎖",
+        "string": "[Attack|攻擊]投射物一並造成流血、癱瘓和擊退敵人\n投射物不會穿透、分裂或連鎖",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2876,7 +6854,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你瞎了\n致盲不會影響你的照亮範圍\n被致盲時有 25% 更多近戰暴擊率",
+        "string": "你瞎了\n致盲不會影響你的照亮範圍\n被致盲時有 25% 更多[Melee|近戰][Critical|暴擊]率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2948,7 +6926,7 @@
         "index_handlers": [
           []
         ],
-        "string": "獲得的暴擊[Charges|球]改為狂怒球\n獲得的狂怒球改為耐力球\n獲得的耐力球改為暴擊球",
+        "string": "獲得的[Charges|狂怒球]改為[Charges|暴擊球]\n獲得的[Charges|耐力球]改為[Charges|狂怒球]\n獲得的[Charges|暴擊球]改為[Charges|耐力球]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2984,7 +6962,7 @@
         "index_handlers": [
           []
         ],
-        "string": "每秒消耗附近 1 個屍體回復 5% 生命和魔力\n若你近期沒有消耗屍體，承受 10% 更多傷害",
+        "string": "每秒消耗附近 1 個屍體回復 5% 生命和魔力\n若你[Recently|近期]沒有消耗屍體，承受 10% 更多傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3056,7 +7034,7 @@
         "index_handlers": [
           []
         ],
-        "string": "能量護盾不能回復超過護甲\n近期被防止擊中的 3% 總物理傷害，以每秒回復為能量護盾",
+        "string": "[EnergyShield|能量護盾]不能回復超過護甲\n近期被防止擊中的 3% 總物理傷害，以每秒回復為[EnergyShield|能量護盾]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3092,7 +7070,7 @@
         "index_handlers": [
           []
         ],
-        "string": "在過去 8 秒內造成暴擊的技能擊中會造成 40% 更多元素擊中傷害\n你的暴擊不會造成額外傷害",
+        "string": "在過去 8 秒內造成[Critical|暴擊]的技能擊中會造成 40% 更多元素擊中傷害\n你的[Critical|暴擊]不會造成額外傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3128,7 +7106,7 @@
         "index_handlers": [
           []
         ],
-        "string": "藥劑的生命回復同時套用至能量護盾\n30% 更少藥劑生命回復",
+        "string": "[Flask|藥劑]的生命回復同時套用至能量護盾\n30% 更少[Flask|藥劑]生命回復",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3164,7 +7142,43 @@
         "index_handlers": [
           []
         ],
-        "string": "能量護盾充能改為生命[LifeRecharge|充能]\n[Flask|藥劑]的生命恢復效果改為套用至[EnergyShield|能量護盾]",
+        "string": "[ESRecharge|能量護盾]充能改為生命[LifeRecharge|充能]\n[Flask|藥劑]的生命恢復效果改為套用至[EnergyShield|能量護盾]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "keystone_fire_spells_become_chaos_spells"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Fire|火焰][Spell|法術]將 100% 的火焰傷害[Conversion|轉換]為[Chaos|混沌傷害]\n來自[Fire|火焰][Spell|法術]的[Chaos|混沌傷害]會[Contributes|貢獻]至[Flammability|易燃]和[Ignite|點燃][BuffMagnitude|幅度]\n以[Fire|火焰][Spell|法術]造成的[Ignite|點燃]會造成[Chaos|混沌傷害]，而非火焰傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3236,7 +7250,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Block|格擋]機率變為雙倍\n你受到來自格擋[HitDamage|擊中]的 50% 傷害",
+        "string": "[Evasion|閃避]機率視為[UnLucky|帶來厄運]\n[Deflect|偏斜]的機率視為[Lucky|帶來幸運]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3353,6 +7367,42 @@
   {
     "English": null,
     "ids": [
+      "keystone_hollow_palm_technique"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "兩個手部欄位皆無武器時，可視為使用[Quarterstaff|細杖]進行[Attack|攻擊]\n本該使用你的[Quarterstaff|細杖]傷害的空手[Attack|攻擊]會獲得：\n• 依據技能等級的[Physical|物理]傷害\n• [EquipArmour|裝備的護甲物品]每具有 25 [ItemDefences|物品閃避值]便有 1% 更多[Attack|攻擊]速度\n• [EquipArmour|裝備的護甲物品]每具有 10 [ItemDefences|物品能量護盾]便 +0.1% [Critical|暴擊率]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "keystone_impale"
     ],
     "trade_stats": null,
@@ -3461,6 +7511,78 @@
   {
     "English": null,
     "ids": [
+      "keystone_kulemaks_sovereignty"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你的不死召喚物每有 2 [Power|強度]總值，你造成 1% 更多傷害\n不死召喚物具有 25% 更少最大生命",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "keystone_kurgals_ambition"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "來自回復的魔力恢復會[Overflow|溢出]最大魔力\n50% 更少魔力回復率",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "keystone_magnetic_charge"
     ],
     "trade_stats": null,
@@ -3524,7 +7646,7 @@
         "index_handlers": [
           []
         ],
-        "string": "80% 的最大魔力轉化為 2 倍的護甲",
+        "string": "80% 的最大魔力轉化為 2 倍的[Armour|護甲]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3632,7 +7754,7 @@
         "index_handlers": [
           []
         ],
-        "string": "若命中值高於最大生命，有 40% 更多攻擊傷害\n不會造成暴擊",
+        "string": "若命中值高於最大生命，有 40% 更多[Attack|攻擊]傷害\n不會造成[Critical|暴擊]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3668,7 +7790,7 @@
         "index_handlers": [
           []
         ],
-        "string": "護甲套用承受火焰、冰冷和閃電擊中傷害，而不是物理傷害\n-15% 全部最大元素抗性",
+        "string": "套用至[ElementalDamage|元素傷害]的[Armour|護甲值] +100%\n[Armour|護甲值]不會套用至[Physical|物理傷害]\n-15% 所有最大元素抗性",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3704,7 +7826,7 @@
         "index_handlers": [
           []
         ],
-        "string": "每顆暴擊球 3% 更多法術傷害\n獲得暴擊球而不是狂怒球",
+        "string": "每顆[Charges|暴擊球] 3% 更多[Spell|法術]傷害\n獲得[Charges|暴擊球]而不是[Charges|狂怒球]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3812,7 +7934,7 @@
         "index_handlers": [
           []
         ],
-        "string": "不能點燃、冰緩、冰凍或感電\n暴擊造成焦灼、易碎和殘喘",
+        "string": "不能點燃、冰緩、冰凍或感電\n[Critical|暴擊]造成焦灼、易碎和殘喘",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3848,7 +7970,7 @@
         "index_handlers": [
           []
         ],
-        "string": "不能使用頭盔\n你的暴擊率很幸運\n你暴擊的傷害很幸運\n敵人的暴擊傷害對你很幸運",
+        "string": "不能使用頭盔\n你的[Critical|暴擊]率帶有幸運\n你[Critical|暴擊]的傷害帶有幸運\n敵人的[Critical|暴擊]傷害對你帶有幸運",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3884,7 +8006,43 @@
         "index_handlers": [
           []
         ],
-        "string": "無視能力值需求\n不能獲得能力值既定的加成",
+        "string": "無視[Attributes|能力值]需求\n不能獲得[Attributes|能力值]既定的加成",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "keystone_tecrods_brutality"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "在過去 8 秒內每消耗 8 生命，每秒回復 1 生命\n50% 更多技能生命消耗",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3929,7 +8087,7 @@
   {
     "English": null,
     "ids": [
-      "keystone_hollow_palm_technique"
+      "keystone_ulamans_vision"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -3956,7 +8114,7 @@
         "index_handlers": [
           []
         ],
-        "string": "當你無所拘束時視為雙持武器\n當你無所拘束時有 40% 更多攻擊速度\n當你無所拘束時，每 10 點敏捷附加 14 至 20 攻擊物理傷害",
+        "string": "[Projectile|Projectiles] do one of the following at random:\n• [Fork] an additional time\n• [Chain] an additional time\n• [Chain] from Terrain an additional time\n• Cannot collide with targets",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3992,7 +8150,7 @@
         "index_handlers": [
           []
         ],
-        "string": "-25% 最大攻擊傷害格擋率\n-25% 最大法術傷害格擋率\n每 1% 超過上限的攻擊傷害格擋率 +2% 法術傷害格擋率",
+        "string": "-25% 最大[Attack|攻擊]傷害格擋率\n-25% 最大法術傷害格擋率\n每 1% 超過上限的[Attack|攻擊]傷害格擋率 +2% 法術傷害格擋率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4028,43 +8186,7 @@
         "index_handlers": [
           []
         ],
-        "string": "被非瓦爾守護技能影響時，+10% 全部元素抗性和最大元素抗性\n被非瓦爾守護技能影響時，有 20% 額外物理傷害減免\n若近期失去非瓦爾守護增益效果，承受 20% 更多傷害",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "keystone_wind_dancer"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "若你近期沒有被擊中，承受 20% 更少攻擊傷害\n若你近期被攻擊擊中，10% 更多閃避攻擊率\n若你近期被攻擊擊中，承受 20% 更多攻擊傷害",
+        "string": "被非瓦爾守護技能影響時，+10% 全部元素抗性和最大元素抗性\n被非瓦爾守護技能影響時，有 20% 額外物理傷害減免\n若[Recently|近期]失去非瓦爾守護增益效果，承受 20% 更多傷害",
         "reminder_text": null,
         "is_markup": null
       }

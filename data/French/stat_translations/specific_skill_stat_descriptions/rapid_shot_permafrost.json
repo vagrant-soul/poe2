@@ -23,7 +23,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "Rayon de l'explosion : {0} mètre",
+        "string": "Rayon de l'Explosion : {0} mètre",
         "reminder_text": null,
         "is_markup": null
       },
@@ -43,7 +43,85 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "Rayon de l'explosion : {0} mètres",
+        "string": "Rayon de l'Explosion : {0} mètres",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "permafrost_shard_arming_time_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Délai avant armement@{0} s",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Les Éclats sont armés après {0} seconde",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Les Éclats sont armés après {0} secondes",
         "reminder_text": null,
         "is_markup": null
       }
@@ -61,7 +139,8 @@
     "English": null,
     "ids": [
       "permafrost_shard_damage_+%_final_after_1_second",
-      "quality_display_permafrost_shard_damage_+%_final_after_1_second_is_gem"
+      "quality_display_permafrost_shard_damage_+%_final_after_1_second_is_gem",
+      "permafrost_shard_bonus_damage_delay_ms"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -77,17 +156,26 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
           "#",
-          "ignore"
+          "ignore",
+          "#"
         ],
         "index_handlers": [
           [],
-          []
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
         ],
-        "string": "More damage after one second@{0}%",
+        "string": "Maximum de Dégâts supplémentaires après {2} secondes d'armement@{0} %",
         "reminder_text": null,
         "is_markup": null
       },
@@ -102,17 +190,26 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
           "#",
-          "ignore"
+          "ignore",
+          "#"
         ],
         "index_handlers": [
           [],
-          []
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
         ],
-        "string": "Shards that have existed for at\nleast 0.5 seconds deal {0}% more Damage",
+        "string": "Les Éclats infligent jusqu'à {0} % de Dégâts supplémentaires {2} secondes après avoir été armés",
         "reminder_text": null,
         "is_markup": null
       },
@@ -127,19 +224,28 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
           "#",
-          "ignore"
+          "ignore",
+          "#"
         ],
         "index_handlers": [
           [
             "negate"
           ],
-          []
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
         ],
-        "string": "Shards that have existed for at\nleast 0.5 seconds deal {0}% less Damage",
+        "string": "Les Éclats infligent jusqu'à {0} % de Dégâts en moins {2} secondes après avoir été armés",
         "reminder_text": null,
         "is_markup": null
       },
@@ -154,17 +260,26 @@
             "min": 0,
             "max": 0,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
           "+#",
+          "ignore",
           "ignore"
         ],
         "index_handlers": [
           [],
-          []
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
         ],
-        "string": "Shards that have existed for at\nleast 0.5 seconds deal {0}% more Damage",
+        "string": "Les Éclats infligent jusqu'à {0} % de Dégâts supplémentaires après avoir été armés",
         "reminder_text": null,
         "is_markup": null
       }

@@ -2,6 +2,42 @@
   {
     "English": null,
     "ids": [
+      "active_skill_has_%_standard_scaling_attack_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "이 스킬의 공격 피해는 [DefaultAttackDamage|기본 공격 피해]의 {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "off_hand_weapon_minimum_physical_damage",
       "off_hand_weapon_maximum_physical_damage"
     ],
@@ -77,6 +113,50 @@
           []
         ],
         "string": "[Shield|방패]의 [Armour|방어도] 15당 [Fire|화염] 피해 {0}~{1} 추가",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "off_hand_minimum_added_fire_damage_per_15_shield_evasion",
+      "off_hand_maximum_added_fire_damage_per_15_shield_evasion"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Shield|방패]의 [Evasion|회피] 15당 [Fire|화염] 피해 {0}~{1} 추가",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3884,7 +3964,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "{0}초마다 범위 내 적 명중",
+        "string": "{0}초마다 범위 내 적 [HitDamage|명중]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4310,60 +4390,6 @@
   {
     "English": null,
     "ids": [
-      "base_chance_to_ignite_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 99,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}%의 확률로 점화 유발",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "항상 점화 유발",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "base_chance_to_shock_%"
     ],
     "trade_stats": null,
@@ -4573,64 +4599,6 @@
           ]
         ],
         "string": "[Curse|저주] 지속시간 {0}% 감소",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "base_galvanic_field_beam_delay_ms"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp"
-          ]
-        ],
-        "string": "{0}초마다 광선 발사",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp"
-          ]
-        ],
-        "string": "{0}초마다 광선 발사",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7290,7 +7258,7 @@
         "index_handlers": [
           []
         ],
-        "string": "신성화 지대 효과 {0}% 증가",
+        "string": "[ConsecratedGround|신성화 지대] 효과 {0}% 증가",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8892,7 +8860,7 @@
           [],
           []
         ],
-        "string": "[Empowered] [Attack|Attacks] [Repeat] {0} time",
+        "string": "[Empowered|강화]된 [Attack|공격]의 반복 횟수 {0}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -8917,7 +8885,7 @@
           [],
           []
         ],
-        "string": "[Empowered] [Attack|Attacks] [Repeat] {0} times",
+        "string": "[Empowered|강화]된 [Attack|공격]이 반복 횟수 {0}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -8942,7 +8910,7 @@
           [],
           []
         ],
-        "string": "[Empowered] [Attack|Attacks] [Repeat] {1} time per Frenzy Charge consumed",
+        "string": "소모한 격분 충전 하나당 [Empowered|강화]된 [Attack|공격]이 [Repeat|반복] 횟수 {1}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -8967,7 +8935,7 @@
           [],
           []
         ],
-        "string": "[Empowered] [Attack|Attacks] [Repeat] {1} time per Frenzy Charge consumed",
+        "string": "소모한 격분 충전 하나당 [Empowered|강화]된 [Attack|공격]이 [Repeat|반복] 횟수 {1}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -8992,7 +8960,7 @@
           [],
           []
         ],
-        "string": "[Empowered] [Attack|Attacks] [Repeat] {0} times, and a further {1} time per Frenzy Charge consumed",
+        "string": "[Empowered|강화]된 [Attack|공격]의 [Repeat|반복] 횟수 {0}, 소모한 격분 충전 하나당 추가 {1}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -9017,7 +8985,7 @@
           [],
           []
         ],
-        "string": "[Empowered] [Attack|Attacks] [Repeat] {0} time, and a further {1} times per Frenzy Charge consumed",
+        "string": "[Empowered|강화]된 [Attack|공격]의 [Repeat|반복] 횟수 {0}, 소모한 격분 충전 하나당 추가 {1}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -9042,7 +9010,7 @@
           [],
           []
         ],
-        "string": "[Empowered] [Attack|Attacks] [Repeat] {0} time, and a further {1} times per Frenzy Charge consumed",
+        "string": "[Empowered|강화]된 [Attack|공격]의 [Repeat|반복] 횟수 {0}, 소모한 격분 충전 하나당 추가 {1}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -9067,7 +9035,7 @@
           [],
           []
         ],
-        "string": "[Empowered] [Attack|Attacks] [Repeat] {0} times, and a further {1} times per Frenzy Charge consumed",
+        "string": "[Empowered|강화]된 [Attack|공격]의 [Repeat|반복] 횟수  {0}, 소모한 격분 충전 하나당 추가 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10088,42 +10056,6 @@
           []
         ],
         "string": "물리 피해 {0}~{1} 추가",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "global_reduce_enemy_block_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "적 막기 확률 {0}% 감소",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12174,6 +12106,60 @@
       {
         "condition": [
           {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "1회 추가 연쇄",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}회 추가 연쇄",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}회 [Chain|연쇄]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": null,
             "max": null,
             "negated": null
@@ -12681,7 +12667,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "1초마다, 그리고 플레이어가 [Orb|구슬] 근처에서 [Lightning|번개] 스킬을 사용할 때 타격",
+        "string": "1초마다, 그리고 플레이어가 [Orb|보주] 근처에서\n[Spell|주문]을 시전할 때 번개 발사",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12701,7 +12687,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "{0}초마다, 그리고 플레이어가 [Orb|구슬] 근처에서 [Lightning|번개] 스킬을 사용할 때 타격",
+        "string": "{0}초마다, 그리고 플레이어가 [Orb|보주] 근처에서\n[Spell|주문]을 시전할 때 번개 발사",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13660,42 +13646,6 @@
           []
         ],
         "string": "카오스 저항 {0}% 관통",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "reduce_enemy_dodge_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "적 완벽회피 확률{0}% 감소",
         "reminder_text": null,
         "is_markup": null
       }

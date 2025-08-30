@@ -60,8 +60,87 @@
   {
     "English": null,
     "ids": [
+      "permafrost_shard_arming_time_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Zeit bis zum Scharfstellen@{0}s",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Splitter sind nach {0} Sekunde scharf gestellt",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Splitter sind nach {0} Sekunden scharf gestellt",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "permafrost_shard_damage_+%_final_after_1_second",
-      "quality_display_permafrost_shard_damage_+%_final_after_1_second_is_gem"
+      "quality_display_permafrost_shard_damage_+%_final_after_1_second_is_gem",
+      "permafrost_shard_bonus_damage_delay_ms"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -78,17 +157,26 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
           "#",
-          "ignore"
+          "ignore",
+          "#"
         ],
         "index_handlers": [
           [],
-          []
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
         ],
-        "string": "Mehr Schaden nach einer Sekunde@{0}%",
+        "string": "Mehr Schaden nach {2} Sekunden nach dem Scharfstellen@{0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -103,17 +191,26 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
           "#",
-          "ignore"
+          "ignore",
+          "#"
         ],
         "index_handlers": [
           [],
-          []
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
         ],
-        "string": "Splitter, die mindestens 0.5 Sekunden bestehen,\nverursachen {0}% mehr Schaden",
+        "string": "Splitter verursachen {2} Sekunden nach dem Scharfstellen {0}% mehr Schaden",
         "reminder_text": null,
         "is_markup": null
       },
@@ -128,19 +225,28 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
           "#",
-          "ignore"
+          "ignore",
+          "#"
         ],
         "index_handlers": [
           [
             "negate"
           ],
-          []
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
         ],
-        "string": "Splitter, die mindestens 0.5 Sekunden bestehen,\nverursachen {0}% weniger Schaden",
+        "string": "Splitter verursachen {2} Sekunden nach dem Scharfstellen {0}% weniger Schaden",
         "reminder_text": null,
         "is_markup": null
       },
@@ -155,17 +261,26 @@
             "min": 0,
             "max": 0,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
           "+#",
+          "ignore",
           "ignore"
         ],
         "index_handlers": [
           [],
-          []
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
         ],
-        "string": "Splitter, die mindestens 0.5 Sekunden bestehen,\nverursachen {0}% mehr Schaden",
+        "string": "Splitter verursachen nach dem Scharfstellen {0}% mehr Schaden",
         "reminder_text": null,
         "is_markup": null
       }

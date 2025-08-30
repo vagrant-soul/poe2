@@ -60,8 +60,87 @@
   {
     "English": null,
     "ids": [
+      "permafrost_shard_arming_time_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "เวลาในการติดตั้ง@{0} วิ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "เกล็ดน้ำแข็ง ติดตั้งใน {0} วินาทีให้หลัง",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "เกล็ดน้ำแข็ง ติดตั้งใน {0} วินาทีให้หลัง",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "permafrost_shard_damage_+%_final_after_1_second",
-      "quality_display_permafrost_shard_damage_+%_final_after_1_second_is_gem"
+      "quality_display_permafrost_shard_damage_+%_final_after_1_second_is_gem",
+      "permafrost_shard_bonus_damage_delay_ms"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -84,17 +163,26 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
           "#",
-          "ignore"
+          "ignore",
+          "#"
         ],
         "index_handlers": [
           [],
-          []
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
         ],
-        "string": "ความเสียหาย ที่เพิ่มขึ้น อีก หลังจาก 1 วินาที@{0}%",
+        "string": "ความเสียหาย ที่เพิ่มขึ้น อีก หลังจากติดตั้งได้ {2} วินาที@{0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -109,17 +197,26 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
           "#",
-          "ignore"
+          "ignore",
+          "#"
         ],
         "index_handlers": [
           [],
-          []
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
         ],
-        "string": "เกล็ดน้ำแข็งที่คงอยู่อย่างน้อย 0.5 วินาที\nสร้างความเสียหาย เพิ่มขึ้น อีก {0}%",
+        "string": "เกล็ดน้ำแข็ง สร้างความเสียหาย เพิ่มขึ้น อีก {0}% หลังจากติดตั้งได้ {2} วินาที",
         "reminder_text": null,
         "is_markup": null
       },
@@ -134,19 +231,28 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
           "#",
-          "ignore"
+          "ignore",
+          "#"
         ],
         "index_handlers": [
           [
             "negate"
           ],
-          []
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
         ],
-        "string": "เกล็ดน้ำแข็งที่คงอยู่อย่างน้อย 0.5 วินาที\nสร้างความเสียหาย ลดลง อีก {0}%",
+        "string": "เกล็ดน้ำแข็ง สร้างความเสียหาย ลดลง อีก {0}% หลังจากติดตั้งได้ {2} วินาที",
         "reminder_text": null,
         "is_markup": null
       },
@@ -161,17 +267,26 @@
             "min": 0,
             "max": 0,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
           "+#",
+          "ignore",
           "ignore"
         ],
         "index_handlers": [
           [],
-          []
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
         ],
-        "string": "เกล็ดน้ำแข็งที่คงอยู่อย่างน้อย 0.5 วินาที\nสร้างความเสียหาย เพิ่มขึ้น อีก {0}%",
+        "string": "เกล็ดน้ำแข็ง สร้างความเสียหาย เพิ่มขึ้น อีก {0}% หลังจากติดตั้ง",
         "reminder_text": null,
         "is_markup": null
       }

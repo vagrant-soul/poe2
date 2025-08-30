@@ -23,7 +23,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "Rayon de l'explosion : {0} mètre",
+        "string": "Rayon de l'Explosion : {0} mètre",
         "reminder_text": null,
         "is_markup": null
       },
@@ -43,7 +43,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "Rayon de l'explosion : {0} mètres",
+        "string": "Rayon de l'Explosion : {0} mètres",
         "reminder_text": null,
         "is_markup": null
       }
@@ -127,6 +127,33 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second_2dp_if_required"
+          ],
+          []
+        ],
+        "string": "Un supplément de {0}% des Dégâts [Overkill|Excédentaires] contribue aux Dégâts de base de l'[Ignite|Embrasement]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 0,
             "max": 0,
             "negated": true
@@ -148,6 +175,33 @@
           []
         ],
         "string": "Dégâts d'[Ignite|Embrasement] provenant des Dégâts excédentaires@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second_2dp_if_required"
+          ],
+          []
+        ],
+        "string": "Les Dégâts de base de l'[Ignite|Embrasement] sont de {0}% des Dégâts [Overkill|Excédentaires]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -183,7 +237,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Seuil des dégâts excédentaires@{0} %",
+        "string": "Seuil des Dégâts Excédentaires@{0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -201,7 +255,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Inflige [Ignite|Embrasement] aux ennemis aux alentours si les dégâts excédentaires atteignent au moins {0} % de la vie maximale de l'ennemi",
+        "string": "[Ignite|Embrase] les ennemis proches si les Dégâts Excédentaires représentent au moins {0}% de la Vie maximale de l'ennemi",
         "reminder_text": null,
         "is_markup": null
       }

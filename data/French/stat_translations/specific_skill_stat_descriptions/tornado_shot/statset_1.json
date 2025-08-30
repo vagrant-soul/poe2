@@ -166,24 +166,6 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Nombre de [HitDamage|coups] avant que la Tornade disparaisse@{0}",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
             "min": 1,
             "max": 1,
             "negated": null
@@ -240,7 +222,7 @@
         "condition": [
           {
             "min": null,
-            "max": null,
+            "max": -1,
             "negated": null
           },
           {
@@ -259,7 +241,7 @@
           ],
           []
         ],
-        "string": "Réduction des dégâts des [Projectile|projectiles] copiés@{0} %",
+        "string": "Pénalité de Dégâts des [Projectile|Projectiles] Copiés@{0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -284,7 +266,57 @@
           [],
           []
         ],
-        "string": "Les [Projectile|projectiles] copiés infligent {0} % de dégâts supplémentaires",
+        "string": "Bonus de Dégâts des [Projectile|Projectiles] Copiés@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Les [Projectile|Projectiles] Copiés ont {0}% Davantage de Dégâts",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Les [Projectile|Projectiles] Copiés ont {0}% Davantage de Dégâts",
         "reminder_text": null,
         "is_markup": null
       },
@@ -311,7 +343,7 @@
           ],
           []
         ],
-        "string": "Les [Projectile|projectiles] copiés infligent {0} % de dégâts en moins",
+        "string": "Les [Projectile|Projectiles] Copiés ont {0}% de Perte de Dégâts",
         "reminder_text": null,
         "is_markup": null
       }
@@ -349,7 +381,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "Portée maximale des [Projectile|projectiles] copiés@{0} m",
+        "string": "Portée maximale des [Projectile|Projectiles] Copiés@{0}m",
         "reminder_text": null,
         "is_markup": null
       },
@@ -369,7 +401,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "Les [Projectile|projectiles] copiés ont une portée maximale de {0} mètres",
+        "string": "Portée maximale des [Projectile|Projectiles] Copiés : {0} mètres",
         "reminder_text": null,
         "is_markup": null
       }

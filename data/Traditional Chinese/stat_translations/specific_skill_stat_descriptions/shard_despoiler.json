@@ -2,6 +2,62 @@
   {
     "English": null,
     "ids": [
+      "base_secondary_skill_effect_duration"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Consume|消耗][Freeze|冰凍]、[Shock|感電]、[Ignite|點燃]或[ArmourBreak|完全破甲]時，\n立即裝填你的[Crossbow|十字弓]並為你的[Grenade|擲彈]恢復一次冷卻使用次數，\n每次消耗最短間隔持續時間為 {0} 秒",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[Consume|消耗][Freeze|冰凍]、[Shock|感電]、[Ignite|點燃]或[ArmourBreak|完全破甲]時，\n立即裝填你的[Crossbow|十字弓]並為你的[Grenade|擲彈]恢復一次冷卻使用次數，\n每次消耗最短間隔持續時間為 {0} 秒",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "base_skill_effect_duration"
     ],
     "trade_stats": null,
@@ -52,82 +108,6 @@
           ]
         ],
         "string": "[Buff|增益效果]持續時間為 {0} 秒",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "reload_ammo_on_effect_consume_with_x_ms_cooldown"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "Minimum reload interval@{0}s",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Instantly reloads your [Crossbow] and restores one cooldown use for your [Grenade|Grenades] upon [Consume|Consuming]\n[Freeze], [Shock], [Ignite], or [ArmourBreak|Fully Broken Armour], no more than\nonce per second",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "Instantly reloads your [Crossbow] and restores one cooldown use for your [Grenade|Grenades] upon [Consume|Consuming]\n[Freeze], [Shock], [Ignite], or [ArmourBreak|Fully Broken Armour], no more than\nonce every {0} seconds",
         "reminder_text": null,
         "is_markup": null
       }
