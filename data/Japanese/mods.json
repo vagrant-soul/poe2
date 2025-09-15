@@ -118715,7 +118715,7 @@
     "generation_weights": [],
     "grants_effects": [],
     "groups": [
-      "BeltFlaskChargesUsed"
+      "BeltFlaskChargesGained"
     ],
     "implicit_tags": [
       "flask"
@@ -118726,13 +118726,13 @@
     "spawn_weights": [],
     "stats": [
       {
-        "id": "flask_charges_used_+%",
+        "id": "flask_charges_gained_+%",
         "max": 30,
         "min": 20
       }
     ],
-    "text": "消費[Flask|フラスコ]チャージが(20-30)%増加する",
-    "type": "BeltReducedFlaskChargesUsed",
+    "text": "獲得[Flask|フラスコ]チャージが(20-30)%増加する",
+    "type": "BeltIncreasedFlaskChargesGained",
     "gold_value": null
   },
   "UniqueReducedFlaskChargesUsed2": {
@@ -125283,7 +125283,7 @@
         "min": 50
       }
     ],
-    "text": "50% less [Flask|Flask] Charges used",
+    "text": "使用[Flask|フラスコ]チャージが50%低下する",
     "type": "HuskOfDreamsFlaskChargesUsed",
     "gold_value": null
   },
@@ -126889,7 +126889,7 @@
         "min": 1
       }
     ],
-    "text": "プレイヤーが[HitDamage|ヒット]によりライフを[LifeLeech|ライフリーチ]した時に、プレイヤーの[Presence|存在下]にいる味方も[LeechSameAmount|同量]のライフをリーチする",
+    "text": "[LifeLeech|Leeching Life] from your [HitDamage|Hits] causes Allies in your [Presence] to also Leech the [LeechSameAmount|same amount] of Life",
     "type": "LifeLeechToAllies",
     "gold_value": null
   },
@@ -129662,7 +129662,7 @@
         "min": 100
       }
     ],
-    "text": "[Recently|直近]リロードを行っていれば100%の確率でボルトを消費しない",
+    "text": "[Recently|直近]リロードしていれば\n[Crossbow|クロスボウ][Attack|アタック]によって放たれたボルトは100%の確率で[Ammunition|弾薬]を使用しない",
     "type": "ChanceForNoBoltReload",
     "gold_value": null
   },
@@ -138527,7 +138527,7 @@
         "min": 10
       }
     ],
-    "text": "使用時に[SpiritOfTheStagPossessedPlayer|蛙の精霊]に(10-20)秒間[PlayerPossessed|憑依]される",
+    "text": "使用時に[SpiritOfTheStagPossessedPlayer|牡鹿の精霊]に(10-20)秒間[PlayerPossessed|憑依]される",
     "type": "CharmStagPossess",
     "gold_value": null
   },
@@ -144079,7 +144079,13 @@
     "name": "幽玄な",
     "required_level": 16,
     "spawn_weights": [],
-    "stats": [],
+    "stats": [
+      {
+        "id": "ignore_cannot_be_damaged_by_enemies",
+        "max": 0,
+        "min": 0
+      }
+    ],
     "text": null,
     "type": "MonsterProximalTangibility",
     "gold_value": null
@@ -144098,7 +144104,13 @@
     "name": "幽玄な",
     "required_level": 1,
     "spawn_weights": [],
-    "stats": [],
+    "stats": [
+      {
+        "id": "ignore_cannot_be_damaged_by_enemies",
+        "max": 0,
+        "min": 0
+      }
+    ],
     "text": null,
     "type": "MonsterProximalTangibility",
     "gold_value": null
@@ -146128,7 +146140,7 @@
         "min": 55
       }
     ],
-    "text": null,
+    "text": "エリアで見つかるゴールドの量が(55-75)%増加する",
     "type": "MapDroppedGoldIncrease",
     "gold_value": 310.0
   },
@@ -146153,7 +146165,7 @@
         "min": 76
       }
     ],
-    "text": null,
+    "text": "エリアで見つかるゴールドの量が(76-100)%増加する",
     "type": "MapDroppedGoldIncrease",
     "gold_value": 310.0
   },
@@ -146178,7 +146190,7 @@
         "min": 101
       }
     ],
-    "text": null,
+    "text": "エリアで見つかるゴールドの量が(101-150)%増加する",
     "type": "MapDroppedGoldIncrease",
     "gold_value": 310.0
   },
@@ -146203,7 +146215,7 @@
         "min": 25
       }
     ],
-    "text": null,
+    "text": "獲得経験値が(25-34)%増加する",
     "type": "MapExperienceGainIncrease",
     "gold_value": 310.0
   },
@@ -146228,7 +146240,7 @@
         "min": 35
       }
     ],
-    "text": null,
+    "text": "獲得経験値が(35-40)%増加する",
     "type": "MapExperienceGainIncrease",
     "gold_value": 310.0
   },
@@ -146253,7 +146265,7 @@
         "min": 35
       }
     ],
-    "text": null,
+    "text": "獲得経験値が(35-40)%増加する",
     "type": "MapExperienceGainIncrease",
     "gold_value": 310.0
   },
@@ -154687,7 +154699,7 @@
         "min": 0
       }
     ],
-    "text": null,
+    "text": "獲得経験値が(100-150)%増加する",
     "type": "EndgameCorruptionExperienceQuantity",
     "gold_value": null
   },
@@ -154722,7 +154734,7 @@
         "min": 0
       }
     ],
-    "text": null,
+    "text": "獲得経験値が(100-150)%増加する",
     "type": "EndgameCorruptionRarityExperience",
     "gold_value": null
   },
@@ -155217,7 +155229,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "獲得経験値が(200-400)%増加する",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -159001,7 +159013,7 @@
       "physical"
     ],
     "is_essence_only": false,
-    "name": "物理ダメージオーラ（中）",
+    "name": "物理ダメージオーラ (中 )",
     "required_level": 4,
     "spawn_weights": [],
     "stats": [
@@ -159030,7 +159042,7 @@
       "physical"
     ],
     "is_essence_only": false,
-    "name": "物理ダメージオーラ（大）",
+    "name": "物理ダメージオーラ (大 )",
     "required_level": 8,
     "spawn_weights": [],
     "stats": [
@@ -231833,7 +231845,7 @@
         "min": 5
       }
     ],
-    "text": null,
+    "text": "獲得経験値が5%増加する",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231858,7 +231870,7 @@
         "min": 150
       }
     ],
-    "text": null,
+    "text": "獲得経験値が150%増加する",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231883,7 +231895,7 @@
         "min": 300
       }
     ],
-    "text": null,
+    "text": "獲得経験値が(300-400)%増加する",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231908,7 +231920,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "獲得経験値が(100-150)%増加する",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231933,7 +231945,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "獲得経験値が(20-50)%増加する",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231958,7 +231970,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "獲得経験値が200%増加する",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231983,7 +231995,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "獲得経験値が100%増加する",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -232008,7 +232020,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "獲得経験値が100%増加する",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -232033,7 +232045,7 @@
         "min": 150
       }
     ],
-    "text": null,
+    "text": "獲得経験値が150%増加する",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -232058,7 +232070,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "獲得経験値が200%増加する",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -232083,7 +232095,7 @@
         "min": 40
       }
     ],
-    "text": null,
+    "text": "獲得経験値が40%増加する",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -309459,7 +309471,7 @@
     ],
     "implicit_tags": [],
     "is_essence_only": false,
-    "name": "喚きのエッセンス（怒り）",
+    "name": "喚きのエッセンス (怒り )",
     "required_level": 1,
     "spawn_weights": [],
     "stats": [],
@@ -333287,7 +333299,7 @@
         "min": 60
       }
     ],
-    "text": null,
+    "text": "獲得経験値が(60-100)%増加する",
     "type": "UniqueMapGenericBounses",
     "gold_value": null
   },
@@ -333327,7 +333339,7 @@
         "min": 60
       }
     ],
-    "text": null,
+    "text": "獲得経験値が(60-100)%増加する",
     "type": "UniqueMapGenericBounses",
     "gold_value": null
   },
@@ -367973,7 +367985,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "獲得経験値が20%増加する",
     "type": "LegionMapFragmentKarui",
     "gold_value": null
   },
@@ -368023,7 +368035,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "獲得経験値が20%増加する",
     "type": "LegionMapFragmentMaraketh",
     "gold_value": null
   },
@@ -368073,7 +368085,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "獲得経験値が20%増加する",
     "type": "LegionMapFragmentEternal",
     "gold_value": null
   },
@@ -368123,7 +368135,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "獲得経験値が20%増加する",
     "type": "LegionMapFragmentTemplar",
     "gold_value": null
   },
@@ -368173,7 +368185,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "獲得経験値が20%増加する",
     "type": "LegionMapFragmentVaal",
     "gold_value": null
   },
@@ -368418,7 +368430,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "獲得経験値が20%増加する",
     "type": "LegionMapFragmentKaruiUber",
     "gold_value": null
   },
@@ -368468,7 +368480,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "獲得経験値が20%増加する",
     "type": "LegionMapFragmentMarakethUber",
     "gold_value": null
   },
@@ -368518,7 +368530,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "獲得経験値が20%増加する",
     "type": "LegionMapFragmentEternalUber",
     "gold_value": null
   },
@@ -368568,7 +368580,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "獲得経験値が20%増加する",
     "type": "LegionMapFragmentTemplarUber",
     "gold_value": null
   },
@@ -368618,7 +368630,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "獲得経験値が20%増加する",
     "type": "LegionMapFragmentVaalUber",
     "gold_value": null
   },
@@ -370800,7 +370812,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "獲得経験値が100%増加する",
     "type": "UniqueMapGenericBounses",
     "gold_value": null
   },
@@ -370840,7 +370852,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "獲得経験値が200%増加する",
     "type": "UniqueMapGenericBounses",
     "gold_value": null
   },
@@ -370890,7 +370902,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "獲得経験値が100%増加する",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -370915,7 +370927,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "獲得経験値が200%増加する",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -379300,7 +379312,7 @@
         "min": 100
       }
     ],
-    "text": "ラビリンスの罠によるヒットから受けるダメージが30%増加する\nラビリンスの罠によるプレイヤーに対する継続ダメージデバフの効果が30%増加する",
+    "text": "ラビリンスの罠によるヒットから受けるダメージが30%増加する\nラビリンスの罠によるプレイヤーに対する継続ダメージデバフの効果が30%増加する\n獲得経験値が100%増加する",
     "type": "LabyrinthCommonScaling",
     "gold_value": null
   },
@@ -408837,7 +408849,7 @@
         "min": 1
       }
     ],
-    "text": "ハイスト中は1%の確率で混沌のオーブの代わりにディヴァインオーブがドロップする",
+    "text": "ハイスト中は1%の確率で混沌のオーブの代わりに神のオーブがドロップする",
     "type": "HeistTrinketCurrencyChaosDropsAsDivine",
     "gold_value": null
   },
@@ -408862,7 +408874,7 @@
         "min": 1
       }
     ],
-    "text": "ハイスト中は1%の確率で混沌のオーブの代わりにエグザルテッドオーブがドロップする",
+    "text": "ハイスト中は1%の確率で混沌のオーブの代わりに高貴なオーブがドロップする",
     "type": "HeistTrinketCurrencyChaosDropsAsExalted",
     "gold_value": null
   },
@@ -408887,7 +408899,7 @@
         "min": 2
       }
     ],
-    "text": "ハイスト中は2%の確率で王者のオーブの代わりにディヴァインオーブがドロップする",
+    "text": "ハイスト中は2%の確率で王者のオーブの代わりに神のオーブがドロップする",
     "type": "HeistTrinketCurrencyRegalDropsAsDivine",
     "gold_value": null
   },
@@ -408912,7 +408924,7 @@
         "min": 3
       }
     ],
-    "text": "ハイスト中は3%の確率で王者のオーブの代わりにディヴァインオーブがドロップする",
+    "text": "ハイスト中は3%の確率で王者のオーブの代わりに神のオーブがドロップする",
     "type": "HeistTrinketCurrencyRegalDropsAsDivine",
     "gold_value": null
   },
@@ -408937,7 +408949,7 @@
         "min": 4
       }
     ],
-    "text": "ハイスト中は4%の確率で王者のオーブの代わりにディヴァインオーブがドロップする",
+    "text": "ハイスト中は4%の確率で王者のオーブの代わりに神のオーブがドロップする",
     "type": "HeistTrinketCurrencyRegalDropsAsDivine",
     "gold_value": null
   },
@@ -408962,7 +408974,7 @@
         "min": 2
       }
     ],
-    "text": "ハイスト中は2%の確率で王者のオーブの代わりにエグザルテッドオーブがドロップする",
+    "text": "ハイスト中は2%の確率で王者のオーブの代わりに高貴なオーブがドロップする",
     "type": "HeistTrinketCurrencyRegalDropsAsExalted",
     "gold_value": null
   },
@@ -408987,7 +408999,7 @@
         "min": 3
       }
     ],
-    "text": "ハイスト中は3%の確率で王者のオーブの代わりにエグザルテッドオーブがドロップする",
+    "text": "ハイスト中は3%の確率で王者のオーブの代わりに高貴なオーブがドロップする",
     "type": "HeistTrinketCurrencyRegalDropsAsExalted",
     "gold_value": null
   },
@@ -409012,7 +409024,7 @@
         "min": 4
       }
     ],
-    "text": "ハイスト中は4%の確率で王者のオーブの代わりにエグザルテッドオーブがドロップする",
+    "text": "ハイスト中は4%の確率で王者のオーブの代わりに高貴なオーブがドロップする",
     "type": "HeistTrinketCurrencyRegalDropsAsExalted",
     "gold_value": null
   },
@@ -431873,7 +431885,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "獲得経験値が100%増加する",
     "type": "MapExperienceGainIncrease",
     "gold_value": null
   },
@@ -432409,7 +432421,7 @@
     ],
     "implicit_tags": [],
     "is_essence_only": false,
-    "name": "グレーターリーガル",
+    "name": "王者大の",
     "required_level": 1,
     "spawn_weights": [],
     "stats": [
@@ -432419,7 +432431,7 @@
         "min": 30874
       }
     ],
-    "text": "最大10x グレーターリーガルオーブを捧げ試練の完了時に二倍の報酬を受け取る",
+    "text": "最大10x 上級の王者のオーブを捧げ試練の完了時に二倍の報酬を受け取る",
     "type": "UltimatumWagerType",
     "gold_value": null
   },
@@ -432434,7 +432446,7 @@
     ],
     "implicit_tags": [],
     "is_essence_only": false,
-    "name": "パーフェクトリーガル",
+    "name": "王者完全の",
     "required_level": 1,
     "spawn_weights": [],
     "stats": [
@@ -432484,7 +432496,7 @@
     ],
     "implicit_tags": [],
     "is_essence_only": false,
-    "name": "グレーターカオスの",
+    "name": "カオス大の",
     "required_level": 1,
     "spawn_weights": [],
     "stats": [
@@ -432509,7 +432521,7 @@
     ],
     "implicit_tags": [],
     "is_essence_only": false,
-    "name": "パーフェクトカオスの",
+    "name": "カオス完全の",
     "required_level": 1,
     "spawn_weights": [],
     "stats": [
@@ -432559,7 +432571,7 @@
     ],
     "implicit_tags": [],
     "is_essence_only": false,
-    "name": "エグザルテッド",
+    "name": "高貴の",
     "required_level": 1,
     "spawn_weights": [],
     "stats": [
@@ -432584,7 +432596,7 @@
     ],
     "implicit_tags": [],
     "is_essence_only": false,
-    "name": "グレーターエグザルテッド",
+    "name": "高貴大の",
     "required_level": 1,
     "spawn_weights": [],
     "stats": [
@@ -432594,7 +432606,7 @@
         "min": 8084
       }
     ],
-    "text": "最大10x エグザルテッドグレーターオーブを捧げ試練の完了時に二倍の報酬を受け取る",
+    "text": "最大10x 上級の高貴なオーブを捧げ試練の完了時に二倍の報酬を受け取る",
     "type": "UltimatumWagerType",
     "gold_value": null
   },
@@ -432609,7 +432621,7 @@
     ],
     "implicit_tags": [],
     "is_essence_only": false,
-    "name": "パーフェクトエグザルテッド",
+    "name": "高貴完全の",
     "required_level": 1,
     "spawn_weights": [],
     "stats": [
@@ -432619,7 +432631,7 @@
         "min": 6774
       }
     ],
-    "text": "最大3x エグザルテッドパーフェクトオーブを捧げ試練の完了時に二倍の報酬を受け取る",
+    "text": "最大3x 完全な高貴なオーブを捧げ試練の完了時に二倍の報酬を受け取る",
     "type": "UltimatumWagerType",
     "gold_value": null
   },
@@ -432634,7 +432646,7 @@
     ],
     "implicit_tags": [],
     "is_essence_only": false,
-    "name": "ディヴァイン",
+    "name": "神の",
     "required_level": 1,
     "spawn_weights": [],
     "stats": [
@@ -436697,7 +436709,7 @@
         "min": 100
       }
     ],
-    "text": "エリアには浄化されたモンスターのパックが追加で(20-30)パック出現する",
+    "text": "エリアには浄化されたモンスターのパックが追加で(20-30)パック出現する\nエリアで見つかるゴールドの量が(100-150)%増加する",
     "type": "EndgameCleansedGoldFind",
     "gold_value": null
   },
@@ -436827,7 +436839,7 @@
         "min": -80
       }
     ],
-    "text": "エリアには浄化されたモンスターのパックが追加で(20-30)パック出現する",
+    "text": "エリアには浄化されたモンスターのパックが追加で(20-30)パック出現する\n獲得経験値が-(80-60)%増加する",
     "type": "EndgameCleansedRarityExperience",
     "gold_value": null
   },
@@ -453325,7 +453337,13 @@
     "name": "アビサル",
     "required_level": 1,
     "spawn_weights": [],
-    "stats": [],
+    "stats": [
+      {
+        "id": "ignore_cannot_be_damaged_by_enemies",
+        "max": 1,
+        "min": 1
+      }
+    ],
     "text": null,
     "type": "MonsterProximalTangibility",
     "gold_value": null
@@ -453344,7 +453362,13 @@
     "name": "アビサル",
     "required_level": 1,
     "spawn_weights": [],
-    "stats": [],
+    "stats": [
+      {
+        "id": "ignore_cannot_be_damaged_by_enemies",
+        "max": 0,
+        "min": 0
+      }
+    ],
     "text": null,
     "type": "MonsterProximalTangibility",
     "gold_value": null

@@ -343,6 +343,10 @@
     "definition": "Cuando generas una [Charges|carga] de aguante, frenes\u00ed o poder, los [Allies|aliados] que est\u00e1n en tu [Presence|presencia] generan esa carga en lugar de que lo hagas t\u00fa",
     "term": "Conducto"
   },
+  "ConnectedGem": {
+    "definition": "Dos gemas se consideran conectadas si una se engarza en otra o si ambas est\u00e1n engarzadas en una tercera gema.\r\n\r\nUna [SupportGem|gema de asistencia] engarzada en una [Meta|metahabilidad] sigue estando conectada a esa [Meta|metahabilidad] y a todas las dem\u00e1s habilidades engarzadas en esa [Meta|metahabilidad], incluso aunque no pueda asistir a algunas de esas habilidades.",
+    "term": "Gemas de asistencia conectadas"
+  },
   "ConsecratedGround": {
     "definition": "Si est\u00e1s sobre tu suelo consagrado, regeneras un 5% de tu vida m\u00e1xima por segundo, y las [Curse|maldiciones] tienen su efecto reducido un 50% sobre ti. Y lo mismo ocurre con los [Allies|aliados] que est\u00e9n sobre \u00e9l.",
     "term": "Suelo consagrado"
@@ -744,7 +748,7 @@
     "term": "Llama de Chayula"
   },
   "Flammability": {
-    "definition": "La inflamabilidad es un [Debuff|efecto nocivo] que otorga la probabilidad de que los [HitDamage|impactos] [Ignite|quemen] al objetivo. No es un [Ailments|estado alterado], pero est\u00e1 estrechamente relacionado con la [Ignite|quemadura], que s\u00ed lo es.\r\n\r\nEl da\u00f1o de [Fire|fuego] de los [HitDamage|impactos] [Contributes|contribuye] a la [BuffMagnitude|magnitud] de la inflamabilidad, as\u00ed que los [HitDamage|impactos] que infligen m\u00e1s da\u00f1o de [Fire|fuego] [Ignite|quemar\u00e1n] con m\u00e1s frecuencia.\r\nLa [BuffMagnitude|magnitud] base de la inflamabilidad es 1% de probabilidad de quemar al objetivo por cada 5% del [AilmentThreshold|umbral de estados alterados] del objetivo infligido como da\u00f1o de [Fire|fuego]. La inflamabilidad de un [HitDamage|impacto] se aplica antes de que ese impacto compruebe si deber\u00eda [Ignite|quemar] al objetivo y, por lo tanto, afectar\u00e1 a la probabilidad de [Ignite|quemar] de ese [HitDamage|impacto].\r\n\r\nComo la probabilidad de que los [HitDamage|impactos] [Ignite|quemen] proviene de la inflamabilidad en el objetivo, los modificadores que aumentan la probabilidad de aplicar [Ailments|estados alterados] aumentar\u00e1n la [BuffMagnitude|magnitud] de la inflamabilidad aplicada.\r\n\r\nLos efectos que no [HitDamage|impactan] a los objetivos, pero que [Ignite|queman] como si lo hicieran, como el [IgnitedGround|suelo quemado], tambi\u00e9n aplican inflamabilidad pero no generan una probabilidad aleatoria de [Ignite|quemar]. Este tipo de efectos no [Ignite|queman] hasta que la [Flammability|inflamabilidad] total del objetivo llegue al 50%.\r\n\r\nLas diferentes instancias de la inflamabilidad se acumulan, lo que aumenta la probabilidad de que los [HitDamage|impactos] [Ignite|quemen] al objetivo hasta un 100%. Cada instancia de inflamabilidad tiene su propia duraci\u00f3n independiente y dura 8 segundos por defecto.",
+    "definition": "La inflamabilidad es un [Debuff|efecto nocivo] que otorga la probabilidad de que los [HitDamage|impactos] [Ignite|quemen] al objetivo. No es un [Ailments|estado alterado], pero est\u00e1 estrechamente relacionado con la [Ignite|quemadura], que s\u00ed lo es.\r\n\r\nEl da\u00f1o de [Fire|fuego] de los [HitDamage|impactos] [Contributes|contribuye] a la [BuffMagnitude|magnitud] de la inflamabilidad, as\u00ed que los [HitDamage|impactos] que infligen m\u00e1s da\u00f1o de [Fire|fuego] [Ignite|quemar\u00e1n] con m\u00e1s frecuencia.\r\n\r\nLa [BuffMagnitude|magnitud] base de la inflamabilidad es 1% de probabilidad de quemar al objetivo por cada 5% del [AilmentThreshold|umbral de estados alterados] del objetivo infligido como da\u00f1o de [Fire|fuego]. La inflamabilidad de un [HitDamage|impacto] se aplica antes de que ese impacto compruebe si deber\u00eda [Ignite|quemar] al objetivo y, por lo tanto, afectar\u00e1 a la probabilidad de [Ignite|quemar] de ese [HitDamage|impacto].\r\n\r\nComo la probabilidad de que los [HitDamage|impactos] [Ignite|quemen] proviene de la inflamabilidad en el objetivo, los modificadores que aumentan la probabilidad de aplicar [Ailments|estados alterados] aumentar\u00e1n la [BuffMagnitude|magnitud] de la inflamabilidad aplicada.\r\n\r\nLos efectos que no [HitDamage|impactan] a los objetivos, pero que [Ignite|queman] como si lo hicieran, como el [IgnitedGround|suelo quemado], tambi\u00e9n aplican inflamabilidad pero no generan una probabilidad aleatoria de [Ignite|quemar]. Este tipo de efectos no [Ignite|queman] hasta que la [Flammability|inflamabilidad] total del objetivo llegue al 50%.\r\n\r\nLas diferentes instancias de la inflamabilidad se acumulan, lo que aumenta la probabilidad de que los [HitDamage|impactos] [Ignite|quemen] al objetivo hasta un 100%. Cada instancia de inflamabilidad tiene su propia duraci\u00f3n independiente y dura 8 segundos por defecto.",
     "term": "Inflamabilidad"
   },
   "Flask": {
@@ -1668,7 +1672,7 @@
     "term": "Carcajes"
   },
   "Rage": {
-    "definition": "La furia otorga un 1% m\u00e1s de da\u00f1o a los [Attack|ataques] por cada 1 de furia obtenida, hasta un m\u00e1ximo de 30. Pierdes 1 de furia cada 0.1 segundo si no has recibido da\u00f1o ni obtenido furia en los \u00faltimos 2 segundos.\r\n\r\nSolo puedes obtener furia con un [HitDamage|impacto] cada 0.5 segundos.",
+    "definition": "La furia otorga un 1% m\u00e1s de da\u00f1o a los [Attack|ataques] por cada 1 de furia obtenida, hasta un m\u00e1ximo de 30. Por defecto, pierdes 1 de furia cada 0.1 segundos. La p\u00e9rdida de furia se pausa durante 2 segundos si ganas furia de formas que no sean la regeneraci\u00f3n de furia, o cuando recibes da\u00f1o.\r\n\r\nSolo puedes obtener furia con un [HitDamage|impacto] cada 0.5 segundos.",
     "term": "Furia"
   },
   "RageLeech": {
@@ -1992,7 +1996,7 @@
     "term": "Armadura fisurada"
   },
   "SupportGem": {
-    "definition": "Las gemas de asistencia se pueden insertar en los engarces de una gema de habilidad para modificar los efectos de esa habilidad. Solo se aplican a la gema de habilidad en la que est\u00e1n engarzadas.\r\n\r\nNo puedes usar varias copias de la misma [LineageSupports|asistencia de linaje] en diferentes habilidades, y tampoco puedes usar varias gemas de asistencia de la misma [SupportGemCategory|categor\u00eda] en una misma habilidad.",
+    "definition": "Las gemas de asistencia se pueden insertar en los engarces de una gema de habilidad para modificar los efectos de esa habilidad. Solo se aplican a la gema de habilidad en la que est\u00e1n engarzadas.\r\n\r\nNo puedes usar varias copias de la misma [LineageSupports|asistencia de linaje] en diferentes habilidades ni asistencias que otorgan beneficios globales a las habilidades de reserva persistentes mientras est\u00e9 activa.\r\nNo puedes usar varias gemas de asistencia de la misma [SupportGemCategory|categor\u00eda] en una misma habilidad.",
     "term": "Gemas de asistencia"
   },
   "SupportGemCategory": {

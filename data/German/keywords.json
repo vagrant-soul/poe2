@@ -343,6 +343,10 @@
     "definition": "Wenn Ihr eine Widerstands-, Raserei- oder Energie-[Charges|Ladung] generiert, generieren [Allies|Verb\u00fcndete] in Eurer [Presence|Pr\u00e4senz] stattdessen diese Ladung.",
     "term": "Leitung"
   },
+  "ConnectedGem": {
+    "definition": "Zwei Gemmen gelten als verbunden, wenn eine in die andere eingefasst wird, oder wenn beide in eine dritte Gemme eingefasst werden.\r\n\r\nEine in eine [Meta|Meta]-Fertigkeit eingefasste [SupportGem|Unterst\u00fctzungsgemme] ist weiterhin mit dieser [Meta|Meta]-Fertigkeit und auch mit allen weiteren Fertigkeiten verbunden, die in diese [Meta|Meta]-Fertigkeit eingefasst sind, selbst wenn sie manche der Fertigkeiten nicht unterst\u00fctzen kann.",
+    "term": "Verbundene Unterst\u00fctzungsgemmen"
+  },
   "ConsecratedGround": {
     "definition": "Ihr und [Ally|Verb\u00fcndete], die auf Eurem geweihten Boden stehen, regenerieren 5% ihres maximalen Lebens pro Sekunde, und [Curse|Fl\u00fcche] haben 50% verringerte Wirkung.",
     "term": "Geweihter Boden"
@@ -744,7 +748,7 @@
     "term": "Flamme von Chayula"
   },
   "Flammability": {
-    "definition": "Entflammbarkeit ist eine [Debuff|Schw\u00e4chung], die [HitDamage|Treffern] die Chance gibt, das Ziel zu [Ignite|entz\u00fcnden]. Sie selbst ist keine [Ailments|Beeintr\u00e4chtigung], ist jedoch eng verbunden mit [Ignite|Entz\u00fcnden], welches eine ist.\r\n\r\n[Fire|Feuer]schaden durch [HitDamage|Treffer] [Contributes|tr\u00e4gt] zur [BuffMagnitude|Magnitude] von Entflammbarkeit bei, sodass [HitDamage|Treffer], die mehr [Fire|Feuer]schaden verursachen, auch \u00f6fter [Ignite|entz\u00fcnden].\r\nDie Basis[BuffMagnitude|magnitude] von Entflammbarkeit ist, das Ziel mit 1% Chance zu entz\u00fcnden, was f\u00fcr jede 5% [AilmentThreshold|Schwelle f\u00fcr Beeintr\u00e4chtigungen] des Ziels [Fire|Feuer]schaden verursacht. Entflammbarkeit durch einen [HitDamage|Treffer] wird angewendet, bevor der Treffer registriert, ob er das Ziel [Ignite|entz\u00fcnden] soll, und beeinflusst so die Chance f\u00fcr diesen [HitDamage|Treffer] zu [Ignite|entz\u00fcnden].\r\n\r\nDa die Chance von [HitDamage|Treffern] zu [Ignite|entz\u00fcnden] von der Entflammbarkeit auf dem Ziel stammt, werden Modifikatoren, die die Chance erh\u00f6hen, [Ailments|Beeintr\u00e4chtigungen] zu verursachen, auch die [BuffMagnitude|Magnitude] der verursachten Entflammbarkeit erh\u00f6hen.\r\n\r\nEffekte, die keine Ziele [HitDamage|treffen], aber trotzdem [Ignite|entz\u00fcnden], wie beispielsweise [IgnitedGround|entz\u00fcndeter Boden], verursachen ebenfalls Entflammbarkeit, aber w\u00fcrfeln keine zuf\u00e4llige Chance auf [Ignite|Entz\u00fcnden]. Solche Effekte [Ignite|entz\u00fcnden] solange nicht, bis die gesamte [Flammability|Entflammbarkeit] auf dem Ziel 50% erreicht.\r\n\r\nMultiple Instanzen von Entflammbarkeit stapeln sich, und erh\u00f6hen so die Chance von [HitDamage|Treffern], das Ziel zu [Ignite|entz\u00fcnden], auf bis zu 100%. Jede Instanz von Entflammbarkeit hat seine eigene unabh\u00e4ngige Dauer, und h\u00e4lt standardm\u00e4\u00dfig 8 Sekunden lang an.",
+    "definition": "Entflammbarkeit ist eine [Debuff|Schw\u00e4chung], die [HitDamage|Treffern] die Chance gibt, das Ziel zu [Ignite|entz\u00fcnden]. Sie selbst ist keine [Ailments|Beeintr\u00e4chtigung], ist jedoch eng verbunden mit [Ignite|Entz\u00fcnden], welches eine ist.\r\n\r\n[Fire|Feuer]schaden durch [HitDamage|Treffer] [Contributes|tr\u00e4gt] zur [BuffMagnitude|Magnitude] von Entflammbarkeit bei, sodass [HitDamage|Treffer], die mehr [Fire|Feuer]schaden verursachen, auch \u00f6fter [Ignite|entz\u00fcnden].\r\n\r\nDie Basis[BuffMagnitude|magnitude] von Entflammbarkeit ist, das Ziel mit 1% Chance zu entz\u00fcnden, was f\u00fcr jede 5% [AilmentThreshold|Schwelle f\u00fcr Beeintr\u00e4chtigungen] des Ziels [Fire|Feuer]schaden verursacht. Entflammbarkeit durch einen [HitDamage|Treffer] wird angewendet, bevor der Treffer registriert, ob er das Ziel [Ignite|entz\u00fcnden] soll, und beeinflusst so die Chance f\u00fcr diesen [HitDamage|Treffer] zu [Ignite|entz\u00fcnden].\r\n\r\nDa die Chance von [HitDamage|Treffern] zu [Ignite|entz\u00fcnden] von der Entflammbarkeit auf dem Ziel stammt, werden Modifikatoren, die die Chance erh\u00f6hen, [Ailments|Beeintr\u00e4chtigungen] zu verursachen, auch die [BuffMagnitude|Magnitude] der verursachten Entflammbarkeit erh\u00f6hen.\r\n\r\nEffekte, die keine Ziele [HitDamage|treffen], aber trotzdem [Ignite|entz\u00fcnden], wie beispielsweise [IgnitedGround|entz\u00fcndeter Boden], verursachen ebenfalls Entflammbarkeit, aber w\u00fcrfeln keine zuf\u00e4llige Chance auf [Ignite|Entz\u00fcnden]. Solche Effekte [Ignite|entz\u00fcnden] solange nicht, bis die gesamte [Flammability|Entflammbarkeit] auf dem Ziel 50% erreicht.\r\n\r\nMultiple Instanzen von Entflammbarkeit stapeln sich, und erh\u00f6hen so die Chance von [HitDamage|Treffern], das Ziel zu [Ignite|entz\u00fcnden], auf bis zu 100%. Jede Instanz von Entflammbarkeit hat seine eigene unabh\u00e4ngige Dauer, und h\u00e4lt standardm\u00e4\u00dfig 8 Sekunden lang an.",
     "term": "Entflammbarkeit"
   },
   "Flask": {
@@ -1668,7 +1672,7 @@
     "term": "K\u00f6cher"
   },
   "Rage": {
-    "definition": "Rausch gew\u00e4hrt 1% mehr [Attack|Angriffs]schaden pro 1 gewonnenem Rausch, bis zu einem Maximum von 30. Ihr verliert 1 Rausch alle 0,1 Sekunden, wenn Ihr in den letzten 2 Sekunden keinen Treffer erlitten oder Rausch erhalten habt.\r\n\r\nIhr k\u00f6nnt Rausch nur durch einen [HitDamage|Treffer] alle 0,5 Sekunden erhalten.",
+    "definition": "Rausch gew\u00e4hrt 1% mehr [Attack|Angriffs]schaden pro 1 gewonnenem Rausch, bis zu einem Maximum von 30. Standardm\u00e4\u00dfig verliert Ihr 1 Rausch alle 0,1 Sekunden. Der Verlust von Rausch wird f\u00fcr 2 Sekunden pausiert, wenn Ihr Rausch erhaltet, ausgenommen durch Rauschregeneration, oder Schaden erleidet.\r\n\r\nIhr k\u00f6nnt Rausch durch einen [HitDamage|Treffer] nur alle 0,5 Sekunden erhalten.",
     "term": "Rausch"
   },
   "RageLeech": {
@@ -1992,7 +1996,7 @@
     "term": "Verw\u00fcstete R\u00fcstung"
   },
   "SupportGem": {
-    "definition": "Unterst\u00fctzungsgemmen k\u00f6nnen in die Fassungen einer Fertigkeitengemme eingefasst werden, um die Effekte dieser Fertigkeit zu ver\u00e4ndern. Sie gelten nur f\u00fcr die Fertigkeitengemme, in die sie eingefasst werden.\r\n\r\nIhr k\u00f6nnt nicht mehrere Kopien derselben [LineageSupports|Abstammungs-Unterst\u00fctzungsgemme] f\u00fcr mehrere Fertigkeiten gleichzeitig verwenden oder mehrere Unterst\u00fctzungsgemmen derselben [SupportGemCategory|Kategorie] f\u00fcr eine einzige Fertigkeit verwenden.",
+    "definition": "Unterst\u00fctzungsgemmen k\u00f6nnen in die Fassungen einer Fertigkeitengemme eingefasst werden, um die Effekte dieser Fertigkeit zu ver\u00e4ndern. Sie gelten nur f\u00fcr die Fertigkeitengemme, in die sie eingefasst werden.\r\n\r\nIhr k\u00f6nnt nicht mehrere Kopien derselben [LineageSupports|Abstammungs-Unterst\u00fctzungsgemme] f\u00fcr mehrere Fertigkeiten gleichzeitig verwenden oder f\u00fcr Unterst\u00fctzungen, die globale Boni f\u00fcr dauerhafte Reservierungs-Fertigkeiten gew\u00e4hren, w\u00e4hrend sie aktiv sind.\r\n\r\nIhr k\u00f6nnt nicht mehrere Unterst\u00fctzungsgemmen derselben [SupportGemCategory|Kategorie] f\u00fcr eine einzige Fertigkeit verwenden.",
     "term": "Unterst\u00fctzungsgemmen"
   },
   "SupportGemCategory": {

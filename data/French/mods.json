@@ -70875,7 +70875,7 @@
         "min": 1
       }
     ],
-    "text": "Used when you become [Curse|Cursed]",
+    "text": "S'active lorsque vous êtes [Curse|Maudit]",
     "type": "FlaskUseOnAffectedByCurse",
     "gold_value": null
   },
@@ -118715,7 +118715,7 @@
     "generation_weights": [],
     "grants_effects": [],
     "groups": [
-      "BeltFlaskChargesUsed"
+      "BeltFlaskChargesGained"
     ],
     "implicit_tags": [
       "flask"
@@ -118726,13 +118726,13 @@
     "spawn_weights": [],
     "stats": [
       {
-        "id": "flask_charges_used_+%",
+        "id": "flask_charges_gained_+%",
         "max": 30,
         "min": 20
       }
     ],
-    "text": "(20-30)% d'Augmentation du nombre de Charges de [Flask|Flacon] utilisées",
-    "type": "BeltReducedFlaskChargesUsed",
+    "text": "(20-30)% d'Augmentation des Charges de [Flask|Flacon] gagnées",
+    "type": "BeltIncreasedFlaskChargesGained",
     "gold_value": null
   },
   "UniqueReducedFlaskChargesUsed2": {
@@ -120275,7 +120275,7 @@
         "min": 1
       }
     ],
-    "text": "[Curse|Curses] you inflict have infinite Duration",
+    "text": "Vos [Curse|Malédictions] ont une Durée infinie",
     "type": "CursesNeverExpire",
     "gold_value": null
   },
@@ -121251,7 +121251,7 @@
         "min": 100
       }
     ],
-    "text": "100% d'Augmentation des Dégâts d'[Attack|Attaque] tant que votre Vie est [LowLife|Basse]",
+    "text": "100% increased [Attack|Attack] Damage while on [LowLife|Low Life]",
     "type": "AttackDamageOnLowLife",
     "gold_value": null
   },
@@ -121356,7 +121356,7 @@
         "min": 10
       }
     ],
-    "text": "Répand du [IgnitedGround|Sol embrasé] en vous déplaçant, qui dure 8 secondes et [Ignite|Embrase] comme s'il avait infligé des Dégâts de [Fire|Feu] équivalents à 10% de votre Vie maximale",
+    "text": "Vous répandez du [IgnitedGround|Sol embrasant] en vous déplaçant, qui dure 8 secondes et [Ignite|Embrase] comme s'il avait infligé des Dégâts de [Fire|Feu] équivalents à 10% de votre Vie maximale",
     "type": "BurningGroundWhileMovingMaximumLife",
     "gold_value": null
   },
@@ -126889,7 +126889,7 @@
         "min": 1
       }
     ],
-    "text": "Lorsque vous [LifeLeech|Drainez] de la Vie au [HitDamage|Toucher], les Alliés en votre [Presence|Présence] Drainent également le [LeechSameAmount|même montant] de Vie",
+    "text": "[LifeLeech|Leeching Life] from your [HitDamage|Hits] causes Allies in your [Presence] to also Leech the [LeechSameAmount|same amount] of Life",
     "type": "LifeLeechToAllies",
     "gold_value": null
   },
@@ -129662,7 +129662,7 @@
         "min": 100
       }
     ],
-    "text": "100% de chances de ne pas consommer de Carreau si vous avez Rechargé [Recently|Récemment]",
+    "text": "Bolts fired by [Crossbow|Crossbow] [Attack|Attacks] have 100% chance to not\nexpend [Ammunition] if you've Reloaded [Recently]",
     "type": "ChanceForNoBoltReload",
     "gold_value": null
   },
@@ -135451,7 +135451,7 @@
         "min": 1
       }
     ],
-    "text": "[Curse|Curses] you inflict can affect [Hexproof] Enemies",
+    "text": "Vos [Curse|Malédictions] peuvent affecter les Ennemis ayant la [Hexproof|Protection contre les Calamités]",
     "type": "IgnoreHexproof",
     "gold_value": null
   },
@@ -144079,7 +144079,13 @@
     "name": "<if:MS>{Éthéré}<elif:FS>{Éthérée}<elif:MP>{Éthérés}<elif:FP>{Éthérées}",
     "required_level": 16,
     "spawn_weights": [],
-    "stats": [],
+    "stats": [
+      {
+        "id": "ignore_cannot_be_damaged_by_enemies",
+        "max": 0,
+        "min": 0
+      }
+    ],
     "text": null,
     "type": "MonsterProximalTangibility",
     "gold_value": null
@@ -144098,7 +144104,13 @@
     "name": "<if:MS>{Éthéré}<elif:FS>{Éthérée}<elif:MP>{Éthérés}<elif:FP>{Éthérées}",
     "required_level": 1,
     "spawn_weights": [],
-    "stats": [],
+    "stats": [
+      {
+        "id": "ignore_cannot_be_damaged_by_enemies",
+        "max": 0,
+        "min": 0
+      }
+    ],
     "text": null,
     "type": "MonsterProximalTangibility",
     "gold_value": null
@@ -146128,7 +146140,7 @@
         "min": 55
       }
     ],
-    "text": null,
+    "text": "(55-75)% increased Gold found in this Area",
     "type": "MapDroppedGoldIncrease",
     "gold_value": 310.0
   },
@@ -146153,7 +146165,7 @@
         "min": 76
       }
     ],
-    "text": null,
+    "text": "(76-100)% increased Gold found in this Area",
     "type": "MapDroppedGoldIncrease",
     "gold_value": 310.0
   },
@@ -146178,7 +146190,7 @@
         "min": 101
       }
     ],
-    "text": null,
+    "text": "(101-150)% increased Gold found in this Area",
     "type": "MapDroppedGoldIncrease",
     "gold_value": 310.0
   },
@@ -146203,7 +146215,7 @@
         "min": 25
       }
     ],
-    "text": null,
+    "text": "(25-34)% d'Augmentation du gain d'Expérience",
     "type": "MapExperienceGainIncrease",
     "gold_value": 310.0
   },
@@ -146228,7 +146240,7 @@
         "min": 35
       }
     ],
-    "text": null,
+    "text": "(35-40)% d'Augmentation du gain d'Expérience",
     "type": "MapExperienceGainIncrease",
     "gold_value": 310.0
   },
@@ -146253,7 +146265,7 @@
         "min": 35
       }
     ],
-    "text": null,
+    "text": "(35-40)% d'Augmentation du gain d'Expérience",
     "type": "MapExperienceGainIncrease",
     "gold_value": 310.0
   },
@@ -150505,7 +150517,7 @@
         "min": 33
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapSpreadBurningGround",
     "gold_value": 224.0
   },
@@ -150552,7 +150564,7 @@
         "min": 33
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapSpreadBurningGround",
     "gold_value": 224.0
   },
@@ -150599,7 +150611,7 @@
         "min": 33
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapSpreadBurningGround",
     "gold_value": 224.0
   },
@@ -152448,7 +152460,7 @@
         "min": 25
       }
     ],
-    "text": "Players have 3% less Movement and [SkillSpeed|Skill Speed] for each time they've used a Skill [Recently]",
+    "text": "Les Joueurs ont 3% de Perte de Vitesse d'[SkillSpeed|Aptitude] et de déplacement pour chaque Aptitude utilisée [Recently|Récemment]",
     "type": "MapUberModActionSpeed",
     "gold_value": 438.0
   },
@@ -154687,7 +154699,7 @@
         "min": 0
       }
     ],
-    "text": null,
+    "text": "(100-150)% d'Augmentation du gain d'Expérience",
     "type": "EndgameCorruptionExperienceQuantity",
     "gold_value": null
   },
@@ -154722,7 +154734,7 @@
         "min": 0
       }
     ],
-    "text": null,
+    "text": "(100-150)% d'Augmentation du gain d'Expérience",
     "type": "EndgameCorruptionRarityExperience",
     "gold_value": null
   },
@@ -155217,7 +155229,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "(200-400)% d'Augmentation du gain d'Expérience",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -156497,7 +156509,7 @@
         "min": 500
       }
     ],
-    "text": "500% d'Augmentation des Chances de [Critical|Touche critique] contre les Ennemis dont la Vie est Pleine",
+    "text": "500% increased [Critical|Critical Hit Chance] against Enemies that are on Full Life",
     "type": "ExpeditionRelicModifierCriticalAgainstFullLife",
     "gold_value": null
   },
@@ -174878,7 +174890,7 @@
         "min": 14
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapBurningGround",
     "gold_value": null
   },
@@ -174923,7 +174935,7 @@
         "min": 14
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapBurningGround",
     "gold_value": null
   },
@@ -193308,7 +193320,7 @@
         "min": 14
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapBurningGroundMapWorlds",
     "gold_value": null
   },
@@ -193363,7 +193375,7 @@
         "min": 12
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapBurningGroundMapWorlds",
     "gold_value": null
   },
@@ -193418,7 +193430,7 @@
         "min": 14
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapBurningGroundMapWorlds",
     "gold_value": null
   },
@@ -193473,7 +193485,7 @@
         "min": 16
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapBurningGroundMapWorlds",
     "gold_value": null
   },
@@ -193528,7 +193540,7 @@
         "min": 16
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapBurningGroundMapWorlds",
     "gold_value": null
   },
@@ -193583,7 +193595,7 @@
         "min": 18
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapBurningGroundMapWorlds",
     "gold_value": null
   },
@@ -193638,7 +193650,7 @@
         "min": 18
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapBurningGroundMapWorlds",
     "gold_value": null
   },
@@ -193693,7 +193705,7 @@
         "min": 18
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapBurningGroundMapWorlds",
     "gold_value": null
   },
@@ -228257,7 +228269,7 @@
         "min": 14
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapBurningGround",
     "gold_value": null
   },
@@ -231833,7 +231845,7 @@
         "min": 5
       }
     ],
-    "text": null,
+    "text": "5% d'Augmentation du gain d'Expérience",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231858,7 +231870,7 @@
         "min": 150
       }
     ],
-    "text": null,
+    "text": "150% d'Augmentation du gain d'Expérience",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231883,7 +231895,7 @@
         "min": 300
       }
     ],
-    "text": null,
+    "text": "(300-400)% d'Augmentation du gain d'Expérience",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231908,7 +231920,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "(100-150)% d'Augmentation du gain d'Expérience",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231933,7 +231945,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "(20-50)% d'Augmentation du gain d'Expérience",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231958,7 +231970,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "200% d'Augmentation du gain d'Expérience",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231983,7 +231995,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "100% d'Augmentation du gain d'Expérience",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -232008,7 +232020,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "100% d'Augmentation du gain d'Expérience",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -232033,7 +232045,7 @@
         "min": 150
       }
     ],
-    "text": null,
+    "text": "150% d'Augmentation du gain d'Expérience",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -232058,7 +232070,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "200% d'Augmentation du gain d'Expérience",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -232083,7 +232095,7 @@
         "min": 40
       }
     ],
-    "text": null,
+    "text": "40% d'Augmentation du gain d'Expérience",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -299899,7 +299911,7 @@
         "min": 100
       }
     ],
-    "text": "100% d'Augmentation des Chances de [Critical|Touche critique] contre les Ennemis dont la Vie est Pleine",
+    "text": "100% increased [Critical|Critical Hit Chance] against Enemies that are on Full Life",
     "type": "CriticalChanceAgainstEnemiesOnFullLife",
     "gold_value": null
   },
@@ -306827,7 +306839,7 @@
         "min": 1
       }
     ],
-    "text": "[Curse|Curses] you inflict can affect [Hexproof] Enemies",
+    "text": "Vos [Curse|Malédictions] peuvent affecter les Ennemis ayant la [Hexproof|Protection contre les Calamités]",
     "type": "IgnoreHexproof",
     "gold_value": null
   },
@@ -317137,7 +317149,7 @@
         "min": 70
       }
     ],
-    "text": "[Minion|Minions] deal 70% increased Damage if you've [HitDamage|Hit] [Recently]",
+    "text": "70% d'Augmentation des Dégâts des Créatures si vous avez Touché [Recently|Récemment]",
     "type": "IncreasedMinionDamageIfYouHitEnemy",
     "gold_value": null
   },
@@ -317165,7 +317177,7 @@
         "min": 15
       }
     ],
-    "text": "[Minion|Minions] deal 15% increased Damage if you've [HitDamage|Hit] [Recently]",
+    "text": "15% d'Augmentation des Dégâts des Créatures si vous avez Touché [Recently|Récemment]",
     "type": "IncreasedMinionDamageIfYouHitEnemy",
     "gold_value": null
   },
@@ -333287,7 +333299,7 @@
         "min": 60
       }
     ],
-    "text": null,
+    "text": "(60-100)% d'Augmentation du gain d'Expérience",
     "type": "UniqueMapGenericBounses",
     "gold_value": null
   },
@@ -333327,7 +333339,7 @@
         "min": 60
       }
     ],
-    "text": null,
+    "text": "(60-100)% d'Augmentation du gain d'Expérience",
     "type": "UniqueMapGenericBounses",
     "gold_value": null
   },
@@ -346389,7 +346401,7 @@
         "min": 14
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapBurningGroundMapWorlds",
     "gold_value": null
   },
@@ -346444,7 +346456,7 @@
         "min": 16
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapBurningGroundMapWorlds",
     "gold_value": null
   },
@@ -346499,7 +346511,7 @@
         "min": 18
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapBurningGroundMapWorlds",
     "gold_value": null
   },
@@ -361281,7 +361293,7 @@
         "min": 14
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapBurningGroundMapWorlds",
     "gold_value": null
   },
@@ -361336,7 +361348,7 @@
         "min": 16
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapBurningGroundMapWorlds",
     "gold_value": null
   },
@@ -361391,7 +361403,7 @@
         "min": 18
       }
     ],
-    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasé]",
+    "text": "La Zone a des surfaces de [IgnitedGround|Sol embrasant]",
     "type": "MapBurningGroundMapWorlds",
     "gold_value": null
   },
@@ -367973,7 +367985,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "20% d'Augmentation du gain d'Expérience",
     "type": "LegionMapFragmentKarui",
     "gold_value": null
   },
@@ -368023,7 +368035,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "20% d'Augmentation du gain d'Expérience",
     "type": "LegionMapFragmentMaraketh",
     "gold_value": null
   },
@@ -368073,7 +368085,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "20% d'Augmentation du gain d'Expérience",
     "type": "LegionMapFragmentEternal",
     "gold_value": null
   },
@@ -368123,7 +368135,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "20% d'Augmentation du gain d'Expérience",
     "type": "LegionMapFragmentTemplar",
     "gold_value": null
   },
@@ -368173,7 +368185,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "20% d'Augmentation du gain d'Expérience",
     "type": "LegionMapFragmentVaal",
     "gold_value": null
   },
@@ -368418,7 +368430,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "20% d'Augmentation du gain d'Expérience",
     "type": "LegionMapFragmentKaruiUber",
     "gold_value": null
   },
@@ -368468,7 +368480,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "20% d'Augmentation du gain d'Expérience",
     "type": "LegionMapFragmentMarakethUber",
     "gold_value": null
   },
@@ -368518,7 +368530,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "20% d'Augmentation du gain d'Expérience",
     "type": "LegionMapFragmentEternalUber",
     "gold_value": null
   },
@@ -368568,7 +368580,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "20% d'Augmentation du gain d'Expérience",
     "type": "LegionMapFragmentTemplarUber",
     "gold_value": null
   },
@@ -368618,7 +368630,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "20% d'Augmentation du gain d'Expérience",
     "type": "LegionMapFragmentVaalUber",
     "gold_value": null
   },
@@ -370800,7 +370812,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "100% d'Augmentation du gain d'Expérience",
     "type": "UniqueMapGenericBounses",
     "gold_value": null
   },
@@ -370840,7 +370852,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "200% d'Augmentation du gain d'Expérience",
     "type": "UniqueMapGenericBounses",
     "gold_value": null
   },
@@ -370890,7 +370902,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "100% d'Augmentation du gain d'Expérience",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -370915,7 +370927,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "200% d'Augmentation du gain d'Expérience",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -379300,7 +379312,7 @@
         "min": 100
       }
     ],
-    "text": "30% d'Augmentation des Dégâts subis au Toucher de la part des Pièges du Labyrinthe\n30% d'Augmentation de l'efficacité des Effets néfastes des Dégâts sur la durée que les Pièges du Labyrinthe infligent aux joueurs",
+    "text": "30% d'Augmentation des Dégâts subis au Toucher de la part des Pièges du Labyrinthe\n30% d'Augmentation de l'efficacité des Effets néfastes des Dégâts sur la durée que les Pièges du Labyrinthe infligent aux joueurs\n100% d'Augmentation du gain d'Expérience",
     "type": "LabyrinthCommonScaling",
     "gold_value": null
   },
@@ -431873,7 +431885,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "100% d'Augmentation du gain d'Expérience",
     "type": "MapExperienceGainIncrease",
     "gold_value": null
   },
@@ -436697,7 +436709,7 @@
         "min": 100
       }
     ],
-    "text": "La Zone contient (20-30) Groupes supplémentaires de Monstres Purifiés",
+    "text": "La Zone contient (20-30) Groupes supplémentaires de Monstres Purifiés\n(100-150)% increased Gold found in this Area",
     "type": "EndgameCleansedGoldFind",
     "gold_value": null
   },
@@ -436827,7 +436839,7 @@
         "min": -80
       }
     ],
-    "text": "La Zone contient (20-30) Groupes supplémentaires de Monstres Purifiés",
+    "text": "La Zone contient (20-30) Groupes supplémentaires de Monstres Purifiés\n-(80-60)% d'Augmentation du gain d'Expérience",
     "type": "EndgameCleansedRarityExperience",
     "gold_value": null
   },
@@ -441982,7 +441994,7 @@
         "min": 10
       }
     ],
-    "text": "(10-20)% increased [Fire|Fire Damage] per 10% of target's Armour that is [ArmourBreak|Broken]",
+    "text": "(10-20)% d'Augmentation des [Fire|Dégâts de feu] tous les 10% de l'Armure [ArmourBreak|Brisée] de la cible",
     "type": "FireDamagePercentPerArmourBreak",
     "gold_value": null
   },
@@ -442881,7 +442893,7 @@
         "min": 50
       }
     ],
-    "text": "(50-100)% more [Stun|Stun] Buildup with [Lightning] Damage",
+    "text": "(50-100)% Davantage d'Accumulation d'[Stun|Étourdissement] avec les Dégâts de [Lightning|Foudre]",
     "type": "UniqueTwoHandedWeaponLightningStunMultiplier",
     "gold_value": null
   },
@@ -447646,7 +447658,7 @@
         "min": 8
       }
     ],
-    "text": "(8-12)% increased Mana Cost [Efficiency] if you have Dodge Rolled [Recently]",
+    "text": "(8-12)% d'Augmentation de l'[Efficiency|Efficacité] du Coût en Mana si vous avez effectué une Roulade [Recently|Récemment]",
     "type": "ManaCostEfficiencyIfDodgeRolledRecently",
     "gold_value": 3266.0
   },
@@ -447854,7 +447866,7 @@
         "min": 4
       }
     ],
-    "text": "2 to 4 [Fire|Fire] [Thorns|Thorns] damage per 100 maximum Life",
+    "text": "Les [Thorns|Épines] ont 2 à 4 Dégâts de [Fire|Feu] tous les 100 de Vie maximale",
     "type": "ThornsFirePerOneHundredLife",
     "gold_value": 3266.0
   },
@@ -449210,7 +449222,7 @@
         "min": 15
       }
     ],
-    "text": "(15-25)% d'Augmentation des Dégâts d'[Attack|Attaque] tant que votre Vie est [LowLife|Basse]",
+    "text": "(15-25)% increased [Attack|Attack] Damage while on [LowLife|Low Life]",
     "type": "AttackDamageOnLowLife",
     "gold_value": 3266.0
   },
@@ -449327,7 +449339,7 @@
         "min": 15
       }
     ],
-    "text": "[Minion|Minions] deal (15-25)% increased Damage if you've [HitDamage|Hit] [Recently]",
+    "text": "(15-25)% d'Augmentation des Dégâts des Créatures si vous avez Touché [Recently|Récemment]",
     "type": "IncreasedMinionDamageIfYouHitEnemy",
     "gold_value": 3266.0
   },
@@ -453325,7 +453337,13 @@
     "name": "<if:MS>{Abyssal}<elif:FS>{Abyssale}<elif:MP>{Abyssaux}<elif:FP>{Abyssales}",
     "required_level": 1,
     "spawn_weights": [],
-    "stats": [],
+    "stats": [
+      {
+        "id": "ignore_cannot_be_damaged_by_enemies",
+        "max": 1,
+        "min": 1
+      }
+    ],
     "text": null,
     "type": "MonsterProximalTangibility",
     "gold_value": null
@@ -453344,7 +453362,13 @@
     "name": "<if:MS>{Abyssal}<elif:FS>{Abyssale}<elif:MP>{Abyssaux}<elif:FP>{Abyssales}",
     "required_level": 1,
     "spawn_weights": [],
-    "stats": [],
+    "stats": [
+      {
+        "id": "ignore_cannot_be_damaged_by_enemies",
+        "max": 0,
+        "min": 0
+      }
+    ],
     "text": null,
     "type": "MonsterProximalTangibility",
     "gold_value": null

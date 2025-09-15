@@ -343,6 +343,10 @@
     "definition": "Quando voc\u00ea gera uma [Charges|Carga] de Toler\u00e2ncia, Frenesi ou Poder, [Allies|Aliados] em sua [Presence|Presen\u00e7a] geram essa Carga ao inv\u00e9s.",
     "term": "Condutor"
   },
+  "ConnectedGem": {
+    "definition": "Duas gemas s\u00e3o consideradas conectadas se uma estiver encaixada na outra ou se ambas estiverem encaixadas em uma terceira gema.\r\n \r\n Uma [SupportGem|Gema de Refor\u00e7o] encaixada em uma habilidade [Meta|meta] ainda \u00e9 considerada conectada a essa habilidade [Meta|meta] e a todas as habilidades nela encaixadas, mesmo que n\u00e3o possa oferecer refor\u00e7o a algumas delas.",
+    "term": "Gemas de Refor\u00e7o Conectadas"
+  },
   "ConsecratedGround": {
     "definition": "Voc\u00ea e [Allies|Aliados] em seu Solo Consagrado regeneram 5% de sua Vida m\u00e1xima por segundo, e [Curse|Maldi\u00e7\u00f5es] t\u00eam seu efeito reduzido em 50%.",
     "term": "Solo Sagrado"
@@ -744,7 +748,7 @@
     "term": "Chama de Chayula"
   },
   "Flammability": {
-    "definition": "Inflamabilidade \u00e9 uma [Debuff|penalidade] que concede a chance de os [HitDamage|ataques] [Ignite|incendiarem] o alvo. Embora n\u00e3o seja uma [Ailments|afec\u00e7\u00e3o], est\u00e1 intimamente associada a [Ignite|incendiar], que \u00e9.\r\n \r\n O dano de [Fire|fogo] de [HitDamage|ataques] [Contributes|contribui] para a [BuffMagnitude|intensidade] da inflamabilidade, portanto [HitDamage|ataques] que causam mais dano de [Fire|fogo] ir\u00e3o [Ignite|incendiar] com mais frequ\u00eancia.\r\n A [BuffMagnitude|intensidade] base da inflamabilidade \u00e9 de 1% de chance de incendiar o alvo para cada 5% da [AilmentThreshold|resist\u00eancia-limite a afec\u00e7\u00f5es] do alvo causado como dano de [Fire|fogo]. A inflamabilidade de um [HitDamage|ataque] \u00e9 aplicada antes que o acerto verifique se deve [Ignite|incendiar] o alvo, portanto afetar\u00e1 a chance daquele [HitDamage|ataque] ou [Ignite|inc\u00eandio].\r\n \r\n Como a chance de os [HitDamage|ataques] causarem [Ignite|inc\u00eandio] vem da inflamabilidade no alvo, modificadores que aumentam a chance de infligir [Ailments|afec\u00e7\u00f5es] aumentar\u00e3o a [BuffMagnitude|intensidade] da inflamabilidade infligida.\r\n \r\n Efeitos que n\u00e3o [HitDamage|atingem] alvos, mas [Ignite|incendeiam] como se tivessem atingido, como [IgnitedGround|ch\u00e3o incendiado], tamb\u00e9m infligem inflamabilidade, mas n\u00e3o geram uma chance aleat\u00f3ria de [Ignite|incendiar]. Tais efeitos apenas [Ignite|incendiar\u00e3o] quando a [Flammability|inflamabilidade] total no alvo atingir 50%.\r\n \r\n V\u00e1rias inst\u00e2ncias de inflamabilidade se acumulam, aumentando a chance de os [HitDamage|ataques] [Ignite|incendiarem] o alvo em at\u00e9 100%. Cada inst\u00e2ncia de inflamabilidade tem sua pr\u00f3pria dura\u00e7\u00e3o (padr\u00e3o: 8 segundos).",
+    "definition": "Inflamabilidade \u00e9 uma [Debuff|penalidade] que concede a chance de os [HitDamage|ataques] [Ignite|incendiarem] o alvo. Embora n\u00e3o seja uma [Ailments|afec\u00e7\u00e3o], est\u00e1 intimamente associada a [Ignite|incendiar], que \u00e9.\r\n \r\n O dano de [Fire|fogo] de [HitDamage|ataques] [Contributes|contribui] para a [BuffMagnitude|intensidade] da inflamabilidade, portanto [HitDamage|ataques] que causam mais dano de [Fire|fogo] ir\u00e3o [Ignite|incendiar] com mais frequ\u00eancia.\r\n \r\n A [BuffMagnitude|intensidade] base da inflamabilidade \u00e9 de 1% de chance de incendiar o alvo para cada 5% da [AilmentThreshold|resist\u00eancia-limite a afec\u00e7\u00f5es] do alvo causado como dano de [Fire|fogo]. A inflamabilidade de um [HitDamage|ataque] \u00e9 aplicada antes que o acerto verifique se deve [Ignite|incendiar] o alvo, portanto afetar\u00e1 a chance daquele [HitDamage|ataque] ou [Ignite|inc\u00eandio].\r\n \r\n Como a chance de os [HitDamage|ataques] causarem [Ignite|inc\u00eandio] vem da inflamabilidade no alvo, modificadores que aumentam a chance de infligir [Ailments|afec\u00e7\u00f5es] aumentar\u00e3o a [BuffMagnitude|intensidade] da inflamabilidade infligida.\r\n \r\n Efeitos que n\u00e3o [HitDamage|atingem] alvos, mas [Ignite|incendeiam] como se tivessem atingido, como [IgnitedGround|ch\u00e3o incendiado], tamb\u00e9m infligem inflamabilidade, mas n\u00e3o geram uma chance aleat\u00f3ria de [Ignite|incendiar]. Tais efeitos apenas [Ignite|incendiar\u00e3o] quando a [Flammability|inflamabilidade] total no alvo atingir 50%.\r\n \r\n V\u00e1rias inst\u00e2ncias de inflamabilidade se acumulam, aumentando a chance de os [HitDamage|ataques] [Ignite|incendiarem] o alvo em at\u00e9 100%. Cada inst\u00e2ncia de inflamabilidade tem sua pr\u00f3pria dura\u00e7\u00e3o (padr\u00e3o: 8 segundos).",
     "term": "Inflamabilidade"
   },
   "Flask": {
@@ -1668,7 +1672,7 @@
     "term": "Aljavas"
   },
   "Rage": {
-    "definition": "F\u00faria concede +1% de dano com [Attack|ataques] por 1 F\u00faria recebida, at\u00e9 30. Voc\u00ea perde 1 F\u00faria a cada 0,1 segundo se n\u00e3o tiver sofrido dano ou ganhado F\u00faria nos \u00faltimos 2 segundos.\r\n \r\n \u00c9 poss\u00edvel ganhar F\u00faria apenas com um ataque a cada 0,5 segundo.",
+    "definition": "F\u00faria concede +1% de dano com [Attack|ataques] por 1 F\u00faria recebida, at\u00e9 30. Por padr\u00e3o, voc\u00ea perde 1 F\u00faria a cada 0,1 segundo. Essa perda \u00e9 interrompida por 2 segundos ao ganhar F\u00faria por outra forma que n\u00e3o a Regenera\u00e7\u00e3o de F\u00faria ou ao sofrer dano.\r\n \r\n \u00c9 poss\u00edvel ganhar F\u00faria apenas com um ataque a cada 0,5 segundo.",
     "term": "F\u00faria"
   },
   "RageLeech": {
@@ -1992,7 +1996,7 @@
     "term": "Armadura Partida"
   },
   "SupportGem": {
-    "definition": "Gemas de refor\u00e7o podem ser inseridas nos encaixes de uma gema de habilidade para modificar seus efeitos. Elas s\u00f3 se aplicam \u00e0 gema de habilidade em que est\u00e3o encaixadas.\r\n \r\n N\u00e3o \u00e9 poss\u00edvel usar v\u00e1rias c\u00f3pias do mesmo [LineageSupports|refor\u00e7o de origem] simultaneamente em habilidade diferentes, nem usar v\u00e1rias gemas de refor\u00e7o da mesma [SupportGemCategory|categoria] em uma \u00fanica habilidade.",
+    "definition": "Gemas de refor\u00e7o podem ser inseridas nos encaixes de uma gema de habilidade para modificar seus efeitos. Elas s\u00f3 se aplicam \u00e0 gema de habilidade em que est\u00e3o encaixadas.\r\n \r\n N\u00e3o \u00e9 poss\u00edvel usar v\u00e1rias c\u00f3pias do mesmo [LineageSupports|refor\u00e7o de origem] simultaneamente em habilidade diferentes, nem em refor\u00e7os que concedem efeitos globais a habilidades de reserva recorrentes enquanto ativas.\r\n N\u00e3o \u00e9 poss\u00edvel usar v\u00e1rias gemas de refor\u00e7o da mesma [SupportGemCategory|categoria] em uma \u00fanica habilidade.",
     "term": "Gemas de Suporte"
   },
   "SupportGemCategory": {

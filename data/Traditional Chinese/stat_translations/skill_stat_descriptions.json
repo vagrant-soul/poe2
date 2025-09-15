@@ -1737,7 +1737,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "{0} 一連串波動的每道波動長度",
+        "string": "一系列連續波動中的每額外一道波動長度增加{0}公尺",
         "reminder_text": null,
         "is_markup": null
       }
@@ -19535,7 +19535,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Attack Damage of this skill is {0}% of [DefaultAttackDamage|Default Attack Damage]",
+        "string": "此技能造成攻擊傷害為{0}%的[DefaultAttackDamage|普通攻擊傷害]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -19560,7 +19560,7 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
@@ -19571,7 +19571,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% 更多[Freeze|冰凍]累積",
+        "string": "@{0}% 更多[Freeze|冰凍]累積",
         "reminder_text": null,
         "is_markup": null
       },
@@ -20012,7 +20012,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "[Ignite|Ignites] inflicted by this Skill [AilmentSpread|Spread] to other\nenemies that stay within {0} metre for 1 second",
+        "string": "此技能造成的[Ignite|點燃][AilmentSpread|散播] 至\n周遭{0}公尺的敵人，持續1秒",
         "reminder_text": null,
         "is_markup": null
       },
@@ -20032,7 +20032,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "[Ignite|Ignites] inflicted by this Skill [AilmentSpread|Spread] to other\nenemies that stay within {0} metres for 1 second",
+        "string": "此技能造成的[Ignite|點燃][AilmentSpread|散播] 至\n周遭{0}公尺的敵人，持續1秒",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20286,26 +20286,24 @@
         "condition": [
           {
             "min": null,
-            "max": -1,
+            "max": null,
             "negated": null
           },
           {
-            "min": null,
-            "max": null,
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
-          "#",
+          "+#",
           "ignore"
         ],
         "index_handlers": [
-          [
-            "negate"
-          ],
+          [],
           []
         ],
-        "string": "[Pinned|釘身]敵人時，視同造成 {0}% 更少傷害",
+        "string": "[Pinned|釘身]敵人時，視同造成 {0}% 更多傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -20393,7 +20391,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% 更多中毒期間",
+        "string": "{0}% 更多中毒持續時間",
         "reminder_text": null,
         "is_markup": null
       },
@@ -20413,7 +20411,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% 更少中毒期間",
+        "string": "{0}% 更少中毒持續時間",
         "reminder_text": null,
         "is_markup": null
       }
@@ -24552,18 +24550,18 @@
       {
         "condition": [
           {
-            "min": 1,
-            "max": 99,
+            "min": 100,
+            "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
           []
         ],
-        "string": "[HitDamage|擊中]時有 {0}% 機率造成[Lightning|閃電][Exposure|曝曬]",
+        "string": "[HitDamage|擊中]時造成[Fire|火焰][Exposure|曝曬]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -24817,6 +24815,70 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "發射 {0} [Projectile|投射物]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "發射 {0}支箭矢",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 2,
             "max": null,
             "negated": null
@@ -24842,7 +24904,7 @@
           [],
           []
         ],
-        "string": "發射 {0} [Projectile|投射物]",
+        "string": "2|# 0 #  發射 {0} [Projectile|投射物]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -24874,7 +24936,7 @@
           [],
           []
         ],
-        "string": "發射 {0} 支箭矢",
+        "string": "2|# 1 #  發射 {0} 支箭矢",
         "reminder_text": null,
         "is_markup": null
       }
@@ -35225,7 +35287,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Spell|Spells] cast by Apparition deal {0}% more Damage",
+        "string": "幻象所施放的[Spell|法術] 造成{0}%更多傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -35245,7 +35307,7 @@
             "negate"
           ]
         ],
-        "string": "[Spell|Spells] cast by Apparition deal {0}% less Damage",
+        "string": "幻象所施放的[Spell|法術] 造成{0}%更少傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40653,9 +40715,9 @@
   {
     "English": null,
     "ids": [
-      "base_life_recovery_per_minute",
-      "base_mana_recovery_per_minute",
-      "feast_of_flesh_regeneration_duration"
+      "feast_of_flesh_recover_X_life_per_corpse_consumed",
+      "feast_of_flesh_recover_X_mana_per_corpse_consumed",
+      "feast_of_flesh_recovery_duration"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -46552,7 +46614,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[IceCrystalShatter|粉碎]時的更多效果範圍@{0}%",
+        "string": "[IceCrystalShatter|粉碎]時有@{0}%更多效果範圍",
         "reminder_text": null,
         "is_markup": null
       },
@@ -46606,7 +46668,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[IceCrystalShatter|粉碎]時的更多傷害@{0}%",
+        "string": "[IceCrystalShatter|粉碎]時有@{0}%更多傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -46662,7 +46724,7 @@
             "negate"
           ]
         ],
-        "string": "Less damage in first 0.5 seconds@{0}%",
+        "string": "在最初的0.5秒造成@{0}%更少傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -46682,7 +46744,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% less damage if destroyed within 0.5 seconds by something other than you",
+        "string": "如果在0.5秒內被不是你的其他來源破壞，造成{0}%更少傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -46700,7 +46762,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% more damage if not destroyed withint 0.5 seconds by something other than you",
+        "string": "如果在0.5秒內沒有被不是你的其他來源破壞，造成{0}%更多傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -47756,132 +47818,6 @@
           []
         ],
         "string": "[HitDamage|擊中]時造成[Fire|火焰][Exposure|曝曬]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "infusion_remnants_%_chance_to_spawn_cold_infusion_on_freezing_an_enemy"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "每有 1 [Power|強度]，[Freeze|冰凍]時產生[Cold|冰冷][Remnant|痕跡]的機率@{0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "每有 1 [Power|強度]，[Freeze|冰凍]目標時有 {0}% 機率產生 1 個\n[Cold|冰冷][Remnant|痕跡]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "infusion_remnants_%_chance_to_spawn_fire_infusion_on_igniting_an_enemy"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[Ignite|點燃]時產生[Fire|火焰][Remnant|痕跡]的機率@{0}%",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "infusion_remnants_%_chance_to_spawn_lightning_infusion_on_shocking_an_enemy"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[Shock|感電]時產生[Lightning|閃電][Remnant|痕跡]的機率@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -53569,7 +53505,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Inflicts an additional [Impale]",
+        "string": "施加額外一層[Impale|穿刺]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -53587,7 +53523,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Inflicts {0} additional [Impale|Impales]",
+        "string": "施加額外{0}層[Impale|穿刺]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -54239,7 +54175,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Maximum bolts fired@{0}",
+        "string": "最多發射@{0}道雷擊",
         "reminder_text": null,
         "is_markup": null
       },
@@ -54257,7 +54193,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Orb|Orb] expires after firing {0} bolts",
+        "string": "[Orb|球體]會在發射{0}道雷擊後消失",
         "reminder_text": null,
         "is_markup": null
       }
@@ -55480,7 +55416,7 @@
             "negated": null
           },
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
@@ -55493,7 +55429,7 @@
           [],
           []
         ],
-        "string": "儲存的[Poison|中毒]賦予最多 {1}% 更多爆炸傷害",
+        "string": "爆炸會從儲存的[Poison|毒素]中獲得的更多傷害，至多為@{1}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -55518,7 +55454,7 @@
           [],
           []
         ],
-        "string": "儲存的[Poison|中毒]賦予最多 {1}% 更多爆炸傷害",
+        "string": "儲存的[Poison|毒素]能造成至多{1}%更多爆炸傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -59346,7 +59282,7 @@
             "milliseconds_to_seconds_1dp"
           ]
         ],
-        "string": "復甦骷髏在被復甦後的 {0} 秒內免疫傷害",
+        "string": "骷髏在被復甦後的 {0} 秒內免疫傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -59366,7 +59302,27 @@
             "milliseconds_to_seconds_1dp"
           ]
         ],
-        "string": "復甦骷髏在被復甦後的 {0} 秒內免疫傷害",
+        "string": "骷髏在被復甦後的 {0} 秒內免疫傷害",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_1dp"
+          ]
+        ],
+        "string": "骷髏在被復甦後的 {0} 秒內免疫傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -60196,7 +60152,7 @@
           [],
           []
         ],
-        "string": "Culling a monster grants {2} [Charges|Frenzy Charges]",
+        "string": "撲殺怪物會賦予 {2} 顆[Charges|狂怒球]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -60228,7 +60184,7 @@
           [],
           []
         ],
-        "string": "[Rarity|Normal and Magic] monsters grant {0} [Charges|Frenzy Charge]\n[Rarity|Rare] monsters grant {1} [Charges|Frenzy Charge]\n[Rarity|Unique] monsters grant {2} [Charges|Frenzy Charges]",
+        "string": "[Rarity|普通和魔法]怪物賦予 {0} 顆[Charges|狂怒球]\n[Rarity|稀有]怪物賦予 {1} 顆[Charges|狂怒球]\n[Rarity|傳奇]怪物賦予 {2} 顆[Charges|狂怒球]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -60260,7 +60216,7 @@
           [],
           []
         ],
-        "string": "[Rarity|Normal and Magic] monsters grant {0} [Charges|Frenzy Charge]\n[Rarity|Rare] monsters grant {1} [Charges|Frenzy Charges]\n[Rarity|Unique] monsters grant {2} [Charges|Frenzy Charge]",
+        "string": "[Rarity|普通和魔法]怪物賦予 {0} 顆[Charges|狂怒球]\n[Rarity|稀有]怪物賦予 {1} 顆[Charges|狂怒球]\n[Rarity|傳奇]怪物賦予 {2} 顆[Charges|狂怒球]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -60292,7 +60248,7 @@
           [],
           []
         ],
-        "string": "[Rarity|Normal and Magic] monsters grant {0} [Charges|Frenzy Charges]\n[Rarity|Rare] monsters grant {1} [Charges|Frenzy Charge]\n[Rarity|Unique] monsters grant {2} [Charges|Frenzy Charge]",
+        "string": "[Rarity|普通和魔法]怪物賦予 {0} 顆[Charges|狂怒球]\n[Rarity|稀有]怪物賦予 {1} 顆[Charges|狂怒球]\n[Rarity|傳奇]怪物賦予 {2} 顆[Charges|狂怒球]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -60324,7 +60280,7 @@
           [],
           []
         ],
-        "string": "[Rarity|Normal and Magic] monsters grant {0} [Charges|Frenzy Charges]\n[Rarity|Rare] monsters grant {1} [Charges|Frenzy Charge]\n[Rarity|Unique] monsters grant {2} [Charges|Frenzy Charges]",
+        "string": "[Rarity|普通和魔法]怪物賦予 {0} 顆[Charges|狂怒球]\n[Rarity|稀有]怪物賦予 {1} 顆[Charges|狂怒球]\n[Rarity|傳奇]怪物賦予 {2} 顆[Charges|狂怒球]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -60356,7 +60312,7 @@
           [],
           []
         ],
-        "string": "[Rarity|Normal and Magic] monsters grant {0} [Charges|Frenzy Charges]\n[Rarity|Rare] monsters grant {1} [Charges|Frenzy Charges]\n[Rarity|Unique] monsters grant {2} [Charges|Frenzy Charge]",
+        "string": "[Rarity|普通和魔法]怪物賦予 {0} 顆[Charges|狂怒球]\n[Rarity|稀有]怪物賦予 {1} 顆[Charges|狂怒球]\n[Rarity|傳奇]怪物賦予 {2} 顆[Charges|狂怒球]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -60388,7 +60344,7 @@
           [],
           []
         ],
-        "string": "[Rarity|Normal and Magic] monsters grant {0} [Charges|Frenzy Charge]\n[Rarity|Rare] monsters grant {1} [Charges|Frenzy Charges]\n[Rarity|Unique] monsters grant {2} [Charges|Frenzy Charges]",
+        "string": "[Rarity|普通和魔法]怪物賦予 {0} 顆[Charges|狂怒球]\n[Rarity|稀有]怪物賦予 {1} 顆[Charges|狂怒球]\n[Rarity|傳奇]怪物賦予 {2} 顆[Charges|狂怒球]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -60420,7 +60376,7 @@
           [],
           []
         ],
-        "string": "[Rarity|Normal and Magic] monsters grant {0} [Charges|Frenzy Charges]\n[Rarity|Rare] monsters grant {1} [Charges|Frenzy Charges]\n[Rarity|Unique] monsters grant {2} [Charges|Frenzy Charges]",
+        "string": "[Rarity|普通和魔法]怪物賦予 {0} 顆[Charges|狂怒球]\n[Rarity|稀有]怪物賦予 {1} 顆[Charges|狂怒球]\n[Rarity|傳奇]怪物賦予 {2} 顆[Charges|狂怒球]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -68927,7 +68883,7 @@
           [],
           []
         ],
-        "string": "Maximum more explosion damage from [Poison]@{1}%",
+        "string": "爆炸會從儲存的[Poison|毒素]中獲得的更多傷害，至多為@{1}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -68952,7 +68908,7 @@
           [],
           []
         ],
-        "string": "Stored [Poison|Poison] grants up to {1}% more explosion Damage",
+        "string": "儲存的[Poison|毒素]能造成至多{1}%更多爆炸傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -74366,6 +74322,198 @@
           []
         ],
         "string": "增益效果在[Empowered|強化]你下 {0} 次施展的[Melee|近戰][Attack|攻擊]後移除\n由此技能[Empowered|強化]的[Attack|攻擊]無法被其他技能[Empowered|強化]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Empowered|強化]你下次施展的[Attack|攻擊]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Empowered|強化]你下次施展的[Attack|攻擊]，每消耗一顆[Charges|耐力球]額外追加 1 次[Attack|攻擊]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Empowered|強化]你下次施展的[Attack|攻擊]，每消耗一顆[Charges|耐力球]額外追加 {1} 次[Attack|攻擊]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Empowered|強化]你下次施展的[Attack|攻擊]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Empowered|強化]你下次施展的[Attack|攻擊]，每消耗一顆[Charges|耐力球]額外追加 1 次[Attack|攻擊]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 4,
+            "max": 4,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Empowered|強化]你下次施展的[Attack|攻擊]，每消耗一顆[Charges|耐力球]額外追加 {1} 次[Attack|攻擊]",
         "reminder_text": null,
         "is_markup": null
       }

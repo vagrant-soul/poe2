@@ -118715,7 +118715,7 @@
     "generation_weights": [],
     "grants_effects": [],
     "groups": [
-      "BeltFlaskChargesUsed"
+      "BeltFlaskChargesGained"
     ],
     "implicit_tags": [
       "flask"
@@ -118726,13 +118726,13 @@
     "spawn_weights": [],
     "stats": [
       {
-        "id": "flask_charges_used_+%",
+        "id": "flask_charges_gained_+%",
         "max": 30,
         "min": 20
       }
     ],
-    "text": "Cargas de Frasco utilizadas aumentadas em (20-30)%",
-    "type": "BeltReducedFlaskChargesUsed",
+    "text": "Cargas de [Flask|Frasco] recebidas aumentadas em (20-30)%",
+    "type": "BeltIncreasedFlaskChargesGained",
     "gold_value": null
   },
   "UniqueReducedFlaskChargesUsed2": {
@@ -121251,7 +121251,7 @@
         "min": 100
       }
     ],
-    "text": "Dano com [Attack|Ataques] aumentado em 100% quando em [LowLife|Vida Baixa]",
+    "text": "Dano de [Attack|ataque] aumentado em 100% em [LowLife|vida baixa]",
     "type": "AttackDamageOnLowLife",
     "gold_value": null
   },
@@ -125283,7 +125283,7 @@
         "min": 50
       }
     ],
-    "text": "50% less [Flask|Flask] Charges used",
+    "text": "50% menos cargas de [Flask|frasco] usadas",
     "type": "HuskOfDreamsFlaskChargesUsed",
     "gold_value": null
   },
@@ -126889,7 +126889,7 @@
         "min": 1
       }
     ],
-    "text": "Ao [LifeLeech|Drenar] Vida com um [HitDamage|Acerto], Aliados em sua [Presence|Presença] também Drenam a [LeechSameAmount|mesma quantidade] de Vida",
+    "text": "[LifeLeech|Leeching Life] from your [HitDamage|Hits] causes Allies in your [Presence] to also Leech the [LeechSameAmount|same amount] of Life",
     "type": "LifeLeechToAllies",
     "gold_value": null
   },
@@ -129662,7 +129662,7 @@
         "min": 100
       }
     ],
-    "text": "100% de chance de não consumir um disparo se você Recarregou [Recently|Recentemente]",
+    "text": "Setas disparadas por [Attack|ataques] de [Crossbow|besta] têm 100% de chance de não\ngastar [Ammunition|munição] se você recarregou [Recently|recentemente]",
     "type": "ChanceForNoBoltReload",
     "gold_value": null
   },
@@ -144079,7 +144079,13 @@
     "name": "<if:MS>{Etéreo}<elif:FS>{Etérea}<elif:NS>{Etéreo}<elif:MP>{Etéreos}<elif:FP>{Etéreas}<elif:NP>{Etéreos}",
     "required_level": 16,
     "spawn_weights": [],
-    "stats": [],
+    "stats": [
+      {
+        "id": "ignore_cannot_be_damaged_by_enemies",
+        "max": 0,
+        "min": 0
+      }
+    ],
     "text": null,
     "type": "MonsterProximalTangibility",
     "gold_value": null
@@ -144098,7 +144104,13 @@
     "name": "<if:MS>{Etéreo}<elif:FS>{Etérea}<elif:NS>{Etéreo}<elif:MP>{Etéreos}<elif:FP>{Etéreas}<elif:NP>{Etéreos}",
     "required_level": 1,
     "spawn_weights": [],
-    "stats": [],
+    "stats": [
+      {
+        "id": "ignore_cannot_be_damaged_by_enemies",
+        "max": 0,
+        "min": 0
+      }
+    ],
     "text": null,
     "type": "MonsterProximalTangibility",
     "gold_value": null
@@ -146128,7 +146140,7 @@
         "min": 55
       }
     ],
-    "text": null,
+    "text": "Ouro encontrado nesta Área aumentado em (55-75)%",
     "type": "MapDroppedGoldIncrease",
     "gold_value": 310.0
   },
@@ -146153,7 +146165,7 @@
         "min": 76
       }
     ],
-    "text": null,
+    "text": "Ouro encontrado nesta Área aumentado em (76-100)%",
     "type": "MapDroppedGoldIncrease",
     "gold_value": 310.0
   },
@@ -146178,7 +146190,7 @@
         "min": 101
       }
     ],
-    "text": null,
+    "text": "Ouro encontrado nesta Área aumentado em (101-150)%",
     "type": "MapDroppedGoldIncrease",
     "gold_value": 310.0
   },
@@ -146203,7 +146215,7 @@
         "min": 25
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em (25-34)%",
     "type": "MapExperienceGainIncrease",
     "gold_value": 310.0
   },
@@ -146228,7 +146240,7 @@
         "min": 35
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em (35-40)%",
     "type": "MapExperienceGainIncrease",
     "gold_value": 310.0
   },
@@ -146253,7 +146265,7 @@
         "min": 35
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em (35-40)%",
     "type": "MapExperienceGainIncrease",
     "gold_value": 310.0
   },
@@ -154687,7 +154699,7 @@
         "min": 0
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em (100-150)%",
     "type": "EndgameCorruptionExperienceQuantity",
     "gold_value": null
   },
@@ -154722,7 +154734,7 @@
         "min": 0
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em (100-150)%",
     "type": "EndgameCorruptionRarityExperience",
     "gold_value": null
   },
@@ -155217,7 +155229,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em (200-400)%",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -156497,7 +156509,7 @@
         "min": 500
       }
     ],
-    "text": "[Critical|Chance de Acerto Crítico] contra Inimigos em Vida Cheia aumentada em 500%",
+    "text": "Chance de [Critical|golpe crítico] aumentada em 500% contra inimigos em vida cheia",
     "type": "ExpeditionRelicModifierCriticalAgainstFullLife",
     "gold_value": null
   },
@@ -231833,7 +231845,7 @@
         "min": 5
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 5%",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231858,7 +231870,7 @@
         "min": 150
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 150%",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231883,7 +231895,7 @@
         "min": 300
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em (300-400)%",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231908,7 +231920,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em (100-150)%",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231933,7 +231945,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em (20-50)%",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231958,7 +231970,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 200%",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231983,7 +231995,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 100%",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -232008,7 +232020,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 100%",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -232033,7 +232045,7 @@
         "min": 150
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 150%",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -232058,7 +232070,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 200%",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -232083,7 +232095,7 @@
         "min": 40
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 40%",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -299899,7 +299911,7 @@
         "min": 100
       }
     ],
-    "text": "[Critical|Chance de Acerto Crítico] contra Inimigos em Vida Cheia aumentada em 100%",
+    "text": "Chance de [Critical|golpe crítico] aumentada em 100% contra inimigos em vida cheia",
     "type": "CriticalChanceAgainstEnemiesOnFullLife",
     "gold_value": null
   },
@@ -333287,7 +333299,7 @@
         "min": 60
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em (60-100)%",
     "type": "UniqueMapGenericBounses",
     "gold_value": null
   },
@@ -333327,7 +333339,7 @@
         "min": 60
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em (60-100)%",
     "type": "UniqueMapGenericBounses",
     "gold_value": null
   },
@@ -367973,7 +367985,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 20%",
     "type": "LegionMapFragmentKarui",
     "gold_value": null
   },
@@ -368023,7 +368035,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 20%",
     "type": "LegionMapFragmentMaraketh",
     "gold_value": null
   },
@@ -368073,7 +368085,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 20%",
     "type": "LegionMapFragmentEternal",
     "gold_value": null
   },
@@ -368123,7 +368135,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 20%",
     "type": "LegionMapFragmentTemplar",
     "gold_value": null
   },
@@ -368173,7 +368185,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 20%",
     "type": "LegionMapFragmentVaal",
     "gold_value": null
   },
@@ -368418,7 +368430,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 20%",
     "type": "LegionMapFragmentKaruiUber",
     "gold_value": null
   },
@@ -368468,7 +368480,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 20%",
     "type": "LegionMapFragmentMarakethUber",
     "gold_value": null
   },
@@ -368518,7 +368530,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 20%",
     "type": "LegionMapFragmentEternalUber",
     "gold_value": null
   },
@@ -368568,7 +368580,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 20%",
     "type": "LegionMapFragmentTemplarUber",
     "gold_value": null
   },
@@ -368618,7 +368630,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 20%",
     "type": "LegionMapFragmentVaalUber",
     "gold_value": null
   },
@@ -370800,7 +370812,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 100%",
     "type": "UniqueMapGenericBounses",
     "gold_value": null
   },
@@ -370840,7 +370852,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 200%",
     "type": "UniqueMapGenericBounses",
     "gold_value": null
   },
@@ -370890,7 +370902,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 100%",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -370915,7 +370927,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 200%",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -379300,7 +379312,7 @@
         "min": 100
       }
     ],
-    "text": "Dano Sofrido de Acertos das Armadilhas do Labirinto aumentado em 30%\nEfetividade de Debuffs do Dano Degenerativo das Armadilhas do Labirinto em Jogadores aumentada em 30%",
+    "text": "Dano Sofrido de Acertos das Armadilhas do Labirinto aumentado em 30%\nEfetividade de Debuffs do Dano Degenerativo das Armadilhas do Labirinto em Jogadores aumentada em 30%\nGanho de Experiência aumentado em 100%",
     "type": "LabyrinthCommonScaling",
     "gold_value": null
   },
@@ -431873,7 +431885,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "Ganho de Experiência aumentado em 100%",
     "type": "MapExperienceGainIncrease",
     "gold_value": null
   },
@@ -436697,7 +436709,7 @@
         "min": 100
       }
     ],
-    "text": "Área contém (20-30) grupos adicionais de Monstros Purificados",
+    "text": "Área contém (20-30) grupos adicionais de Monstros Purificados\nOuro encontrado nesta Área aumentado em (100-150)%",
     "type": "EndgameCleansedGoldFind",
     "gold_value": null
   },
@@ -436827,7 +436839,7 @@
         "min": -80
       }
     ],
-    "text": "Área contém (20-30) grupos adicionais de Monstros Purificados",
+    "text": "Área contém (20-30) grupos adicionais de Monstros Purificados\nGanho de Experiência aumentado em -(80-60)%",
     "type": "EndgameCleansedRarityExperience",
     "gold_value": null
   },
@@ -440834,7 +440846,7 @@
         "min": 8000
       }
     ],
-    "text": "[HitDamage|Acertos] de ataque infligem [Ghostflame|Chama Espectral] por 8 segundos",
+    "text": "[HitDamage|Acertos] de ataque infligem [SpectralFire|Chama Espectral] por 8 segundos",
     "type": "GhostflameOnHit",
     "gold_value": null
   },
@@ -449210,7 +449222,7 @@
         "min": 15
       }
     ],
-    "text": "Dano com [Attack|Ataques] aumentado em (15-25)% quando em [LowLife|Vida Baixa]",
+    "text": "Dano de [Attack|ataque] aumentado em (15-25)% em [LowLife|vida baixa]",
     "type": "AttackDamageOnLowLife",
     "gold_value": 3266.0
   },
@@ -453325,7 +453337,13 @@
     "name": "<if:MS>{Abissal}<elif:FS>{Abissal}<elif:NS>{Abissal}<elif:MP>{Abissais}<elif:FP>{Abissais}<elif:NP>{Abissais}",
     "required_level": 1,
     "spawn_weights": [],
-    "stats": [],
+    "stats": [
+      {
+        "id": "ignore_cannot_be_damaged_by_enemies",
+        "max": 1,
+        "min": 1
+      }
+    ],
     "text": null,
     "type": "MonsterProximalTangibility",
     "gold_value": null
@@ -453344,7 +453362,13 @@
     "name": "<if:MS>{Abissal}<elif:FS>{Abissal}<elif:NS>{Abissal}<elif:MP>{Abissais}<elif:FP>{Abissais}<elif:NP>{Abissais}",
     "required_level": 1,
     "spawn_weights": [],
-    "stats": [],
+    "stats": [
+      {
+        "id": "ignore_cannot_be_damaged_by_enemies",
+        "max": 0,
+        "min": 0
+      }
+    ],
     "text": null,
     "type": "MonsterProximalTangibility",
     "gold_value": null

@@ -118715,7 +118715,7 @@
     "generation_weights": [],
     "grants_effects": [],
     "groups": [
-      "BeltFlaskChargesUsed"
+      "BeltFlaskChargesGained"
     ],
     "implicit_tags": [
       "flask"
@@ -118726,13 +118726,13 @@
     "spawn_weights": [],
     "stats": [
       {
-        "id": "flask_charges_used_+%",
+        "id": "flask_charges_gained_+%",
         "max": 30,
         "min": 20
       }
     ],
-    "text": "[Flask|플라스크] 충전 소모량 (20-30)% 증가",
-    "type": "BeltReducedFlaskChargesUsed",
+    "text": "[Flask|플라스크] 충전량 (20-30)% 증가",
+    "type": "BeltIncreasedFlaskChargesGained",
     "gold_value": null
   },
   "UniqueReducedFlaskChargesUsed2": {
@@ -121251,7 +121251,7 @@
         "min": 100
       }
     ],
-    "text": "[LowLife|낮은 생명력] 상태일 때 [Attack|공격] 피해 100% 증가",
+    "text": "100% increased [Attack|Attack] Damage while on [LowLife|Low Life]",
     "type": "AttackDamageOnLowLife",
     "gold_value": null
   },
@@ -126889,7 +126889,7 @@
         "min": 1
       }
     ],
-    "text": "[HitDamage|명중]으로 생명력을 [LifeLeech|흡수]할 때, [Presence|접근]해 있는 동료들도 [LeechSameAmount|동일한 양]의 생명력을 흡수함",
+    "text": "[LifeLeech|Leeching Life] from your [HitDamage|Hits] causes Allies in your [Presence] to also Leech the [LeechSameAmount|same amount] of Life",
     "type": "LifeLeechToAllies",
     "gold_value": null
   },
@@ -129662,7 +129662,7 @@
         "min": 100
       }
     ],
-    "text": "[Recently|최근 4초 이내] 재장전한 경우 100%의 확률로 볼트를 소모하지 않음",
+    "text": "Bolts fired by [Crossbow|Crossbow] [Attack|Attacks] have 100% chance to not\nexpend [Ammunition] if you've Reloaded [Recently]",
     "type": "ChanceForNoBoltReload",
     "gold_value": null
   },
@@ -144079,7 +144079,13 @@
     "name": "천상의",
     "required_level": 16,
     "spawn_weights": [],
-    "stats": [],
+    "stats": [
+      {
+        "id": "ignore_cannot_be_damaged_by_enemies",
+        "max": 0,
+        "min": 0
+      }
+    ],
     "text": null,
     "type": "MonsterProximalTangibility",
     "gold_value": null
@@ -144098,7 +144104,13 @@
     "name": "천상의",
     "required_level": 1,
     "spawn_weights": [],
-    "stats": [],
+    "stats": [
+      {
+        "id": "ignore_cannot_be_damaged_by_enemies",
+        "max": 0,
+        "min": 0
+      }
+    ],
     "text": null,
     "type": "MonsterProximalTangibility",
     "gold_value": null
@@ -146128,7 +146140,7 @@
         "min": 55
       }
     ],
-    "text": null,
+    "text": "(55-75)% increased Gold found in this Area",
     "type": "MapDroppedGoldIncrease",
     "gold_value": 310.0
   },
@@ -146153,7 +146165,7 @@
         "min": 76
       }
     ],
-    "text": null,
+    "text": "(76-100)% increased Gold found in this Area",
     "type": "MapDroppedGoldIncrease",
     "gold_value": 310.0
   },
@@ -146178,7 +146190,7 @@
         "min": 101
       }
     ],
-    "text": null,
+    "text": "(101-150)% increased Gold found in this Area",
     "type": "MapDroppedGoldIncrease",
     "gold_value": 310.0
   },
@@ -146203,7 +146215,7 @@
         "min": 25
       }
     ],
-    "text": null,
+    "text": "경험치 획득 (25-34)% 증가",
     "type": "MapExperienceGainIncrease",
     "gold_value": 310.0
   },
@@ -146228,7 +146240,7 @@
         "min": 35
       }
     ],
-    "text": null,
+    "text": "경험치 획득 (35-40)% 증가",
     "type": "MapExperienceGainIncrease",
     "gold_value": 310.0
   },
@@ -146253,7 +146265,7 @@
         "min": 35
       }
     ],
-    "text": null,
+    "text": "경험치 획득 (35-40)% 증가",
     "type": "MapExperienceGainIncrease",
     "gold_value": 310.0
   },
@@ -154687,7 +154699,7 @@
         "min": 0
       }
     ],
-    "text": null,
+    "text": "경험치 획득 (100-150)% 증가",
     "type": "EndgameCorruptionExperienceQuantity",
     "gold_value": null
   },
@@ -154722,7 +154734,7 @@
         "min": 0
       }
     ],
-    "text": null,
+    "text": "경험치 획득 (100-150)% 증가",
     "type": "EndgameCorruptionRarityExperience",
     "gold_value": null
   },
@@ -155217,7 +155229,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "경험치 획득 (200-400)% 증가",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -156497,7 +156509,7 @@
         "min": 500
       }
     ],
-    "text": "생명력이 최대인 적에 대한 [Critical|치명타 명중 확률] 500% 증가",
+    "text": "500% increased [Critical|Critical Hit Chance] against Enemies that are on Full Life",
     "type": "ExpeditionRelicModifierCriticalAgainstFullLife",
     "gold_value": null
   },
@@ -231833,7 +231845,7 @@
         "min": 5
       }
     ],
-    "text": null,
+    "text": "경험치 획득 5% 증가",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231858,7 +231870,7 @@
         "min": 150
       }
     ],
-    "text": null,
+    "text": "경험치 획득 150% 증가",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231883,7 +231895,7 @@
         "min": 300
       }
     ],
-    "text": null,
+    "text": "경험치 획득 (300-400)% 증가",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231908,7 +231920,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "경험치 획득 (100-150)% 증가",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231933,7 +231945,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "경험치 획득 (20-50)% 증가",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231958,7 +231970,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "경험치 획득 200% 증가",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -231983,7 +231995,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "경험치 획득 100% 증가",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -232008,7 +232020,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "경험치 획득 100% 증가",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -232033,7 +232045,7 @@
         "min": 150
       }
     ],
-    "text": null,
+    "text": "경험치 획득 150% 증가",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -232058,7 +232070,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "경험치 획득 200% 증가",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -232083,7 +232095,7 @@
         "min": 40
       }
     ],
-    "text": null,
+    "text": "경험치 획득 40% 증가",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -299899,7 +299911,7 @@
         "min": 100
       }
     ],
-    "text": "생명력이 최대인 적에 대한 [Critical|치명타 명중 확률] 100% 증가",
+    "text": "100% increased [Critical|Critical Hit Chance] against Enemies that are on Full Life",
     "type": "CriticalChanceAgainstEnemiesOnFullLife",
     "gold_value": null
   },
@@ -333287,7 +333299,7 @@
         "min": 60
       }
     ],
-    "text": null,
+    "text": "경험치 획득 (60-100)% 증가",
     "type": "UniqueMapGenericBounses",
     "gold_value": null
   },
@@ -333327,7 +333339,7 @@
         "min": 60
       }
     ],
-    "text": null,
+    "text": "경험치 획득 (60-100)% 증가",
     "type": "UniqueMapGenericBounses",
     "gold_value": null
   },
@@ -367973,7 +367985,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "경험치 획득 20% 증가",
     "type": "LegionMapFragmentKarui",
     "gold_value": null
   },
@@ -368023,7 +368035,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "경험치 획득 20% 증가",
     "type": "LegionMapFragmentMaraketh",
     "gold_value": null
   },
@@ -368073,7 +368085,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "경험치 획득 20% 증가",
     "type": "LegionMapFragmentEternal",
     "gold_value": null
   },
@@ -368123,7 +368135,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "경험치 획득 20% 증가",
     "type": "LegionMapFragmentTemplar",
     "gold_value": null
   },
@@ -368173,7 +368185,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "경험치 획득 20% 증가",
     "type": "LegionMapFragmentVaal",
     "gold_value": null
   },
@@ -368418,7 +368430,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "경험치 획득 20% 증가",
     "type": "LegionMapFragmentKaruiUber",
     "gold_value": null
   },
@@ -368468,7 +368480,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "경험치 획득 20% 증가",
     "type": "LegionMapFragmentMarakethUber",
     "gold_value": null
   },
@@ -368518,7 +368530,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "경험치 획득 20% 증가",
     "type": "LegionMapFragmentEternalUber",
     "gold_value": null
   },
@@ -368568,7 +368580,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "경험치 획득 20% 증가",
     "type": "LegionMapFragmentTemplarUber",
     "gold_value": null
   },
@@ -368618,7 +368630,7 @@
         "min": 20
       }
     ],
-    "text": null,
+    "text": "경험치 획득 20% 증가",
     "type": "LegionMapFragmentVaalUber",
     "gold_value": null
   },
@@ -370800,7 +370812,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "경험치 획득 100% 증가",
     "type": "UniqueMapGenericBounses",
     "gold_value": null
   },
@@ -370840,7 +370852,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "경험치 획득 200% 증가",
     "type": "UniqueMapGenericBounses",
     "gold_value": null
   },
@@ -370890,7 +370902,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "경험치 획득 100% 증가",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -370915,7 +370927,7 @@
         "min": 200
       }
     ],
-    "text": null,
+    "text": "경험치 획득 200% 증가",
     "type": "MapIncreasedExperienceGain",
     "gold_value": null
   },
@@ -379300,7 +379312,7 @@
         "min": 100
       }
     ],
-    "text": "미궁 덫으로 받는 피격 피해 30% 증가\n플레이어가 미궁 덫으로 받는 디버프 지속 피해 효과 30% 증가",
+    "text": "미궁 덫으로 받는 피격 피해 30% 증가\n플레이어가 미궁 덫으로 받는 디버프 지속 피해 효과 30% 증가\n경험치 획득 100% 증가",
     "type": "LabyrinthCommonScaling",
     "gold_value": null
   },
@@ -431873,7 +431885,7 @@
         "min": 100
       }
     ],
-    "text": null,
+    "text": "경험치 획득 100% 증가",
     "type": "MapExperienceGainIncrease",
     "gold_value": null
   },
@@ -436697,7 +436709,7 @@
         "min": 100
       }
     ],
-    "text": "지역에 정화된 몬스터 무리 (20-30)개 추가 등장",
+    "text": "지역에 정화된 몬스터 무리 (20-30)개 추가 등장\n(100-150)% increased Gold found in this Area",
     "type": "EndgameCleansedGoldFind",
     "gold_value": null
   },
@@ -436827,7 +436839,7 @@
         "min": -80
       }
     ],
-    "text": "지역에 정화된 몬스터 무리 (20-30)개 추가 등장",
+    "text": "지역에 정화된 몬스터 무리 (20-30)개 추가 등장\n경험치 획득 -(80-60)% 증가",
     "type": "EndgameCleansedRarityExperience",
     "gold_value": null
   },
@@ -449210,7 +449222,7 @@
         "min": 15
       }
     ],
-    "text": "[LowLife|낮은 생명력] 상태일 때 [Attack|공격] 피해 (15-25)% 증가",
+    "text": "(15-25)% increased [Attack|Attack] Damage while on [LowLife|Low Life]",
     "type": "AttackDamageOnLowLife",
     "gold_value": 3266.0
   },
@@ -453325,7 +453337,13 @@
     "name": "심연의",
     "required_level": 1,
     "spawn_weights": [],
-    "stats": [],
+    "stats": [
+      {
+        "id": "ignore_cannot_be_damaged_by_enemies",
+        "max": 1,
+        "min": 1
+      }
+    ],
     "text": null,
     "type": "MonsterProximalTangibility",
     "gold_value": null
@@ -453344,7 +453362,13 @@
     "name": "심연의",
     "required_level": 1,
     "spawn_weights": [],
-    "stats": [],
+    "stats": [
+      {
+        "id": "ignore_cannot_be_damaged_by_enemies",
+        "max": 0,
+        "min": 0
+      }
+    ],
     "text": null,
     "type": "MonsterProximalTangibility",
     "gold_value": null

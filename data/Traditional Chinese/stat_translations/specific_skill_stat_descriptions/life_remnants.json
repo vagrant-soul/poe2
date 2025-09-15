@@ -182,6 +182,44 @@
         "string": "[HitDamage|擊中]產生[Remnant|痕跡]間隔@{0} 秒",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[HitDamage|擊中]敵人時產生1個[Remnant|痕跡]，每1秒只能產生一個",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[HitDamage|擊中]敵人時產生1個[Remnant|痕跡]，每{0}秒只能產生一個",
+        "reminder_text": null,
+        "is_markup": null
       }
     ]
   },
