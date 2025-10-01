@@ -2054,7 +2054,7 @@
             "divide_by_one_hundred"
           ]
         ],
-        "string": "[LifeLeech|ดูด]พลังชีวิต เท่ากับ {0}% ของความเสียหาย [Attack|โจมตี] [Physical|กายภาพ]",
+        "string": "[LifeLeech|ดูด]พลังชีวิต {0}% จากความเสียหาย [Attack|โจมตี] [Physical|กายภาพ]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40724,6 +40724,40 @@
             "negated": null
           },
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "พลังชีวิตที่เติม ต่อจำนวน[Corpse|ศพ]\nมานาที่เติม ต่อจำนวน[Corpse|ศพ]\nระยะเวลาของการเติม@{0}\n{1}\n{2} วิ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
             "min": 1000,
             "max": 1000,
             "negated": null
@@ -40741,7 +40775,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "ฟื้นฟู พลังชีวิต {0} และมานา {1} ในเวลา {2} วินาทีต่อจำนวน[Corpse|ศพ]ที่[Consume|กลืนกิน]",
+        "string": "เติมพลังชีวิต {0} และมานา {1} ในเวลา {2} วินาทีต่อจำนวน[Corpse|ศพ]ที่[Consume|กลืนกิน]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -40775,7 +40809,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "ฟื้นฟู พลังชีวิต {0} และมานา {1} ในเวลา {2} วินาทีต่อจำนวน[Corpse|ศพ]ที่[Consume|กลืนกิน]",
+        "string": "เติมพลังชีวิต {0} และมานา {1} ในเวลา {2} วินาทีต่อจำนวน[Corpse|ศพ]ที่[Consume|กลืนกิน]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -47786,6 +47820,222 @@
   {
     "English": null,
     "ids": [
+      "infusion_remnants_%_chance_to_spawn_cold_infusion_on_freezing_an_enemy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "มีโอกาสเรียก [Remnant|หยาด][Cold|น้ำแข็ง] 1 หยาด เมื่อสร้างสถานะ [Freeze|แช่แข็ง] ต่อเป้าหมาย\n{0}% ต่อจำนวน[Power|พลัง]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "โอกาสเรียก [Remnant|หยาด][Cold|น้ำแข็ง] เมื่อสร้างสถานะ [Freeze|แช่แข็ง] ต่อจำนวน[Power|พลัง]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "มีโอกาสเรียก [Remnant|หยาด][Cold|น้ำแข็ง] 1 หยาด เมื่อสร้างสถานะ [Freeze|แช่แข็ง] ต่อเป้าหมาย\n{0}% ต่อจำนวน[Power|พลัง]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "infusion_remnants_%_chance_to_spawn_fire_infusion_on_igniting_an_enemy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "มีโอกาสเรียก [Remnant|หยาด][Fire|ไฟ] 1 หยาด {0}%\nเมื่อสร้างสถานะ [Ignite|ลุกไหม้] ต่อเป้าหมายที่ไม่ติดสถานะ ลุกไหม้",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "โอกาสเรียก [Remnant|หยาด][Fire|ไฟ] เมื่อสร้างสถานะ [Ignite|ลุกไหม้]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "มีโอกาสเรียก [Remnant|หยาด][Fire|ไฟ] 1 หยาด {0}%\nเมื่อสร้างสถานะ [Ignite|ลุกไหม้] ต่อเป้าหมายที่ไม่ติดสถานะ ลุกไหม้",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "infusion_remnants_%_chance_to_spawn_lightning_infusion_on_shocking_an_enemy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "มีโอกาสเรียก [Remnant|หยาด][Lightning|สายฟ้า] 1 หยาด {0}%\nเมื่อสร้างสถานะ [Shock|ช็อค] ต่อเป้าหมายที่ไม่ติดสถานะ ช็อค",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "โอกาสเรียก [Remnant|หยาด][Lightning|สายฟ้า] เมื่อสร้างสถานะ [Shock|ช็อค]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "มีโอกาสเรียก [Remnant|หยาด][Lightning|สายฟ้า] 1 หยาด {0}%\nเมื่อสร้างสถานะ [Shock|ช็อค] ต่อเป้าหมายที่ไม่ติดสถานะ ช็อค",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "inspiration_charge_duration_+%"
     ],
     "trade_stats": null,
@@ -53209,6 +53459,42 @@
           ]
         ],
         "string": "ลด[BuffMagnitude|จำนวนค่า]ของ [NonDamagingAilments|สถานะเจ็บป่วยไร้ความเสียหาย] ที่สร้าง {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "non_modifiable_totem_limit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ไม่สามารถมี โทเทมนักรบบรรพชน ได้มากกว่า {0} เสา",
         "reminder_text": null,
         "is_markup": null
       }
@@ -76755,6 +77041,42 @@
           []
         ],
         "string": "มิเนียน จะปกป้อง",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_skill_reserves_in_all_weapon_sets"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ต้องเปิดใช้ใน [WeaponSets|ชุดอาวุธ] ทั้งสองชุด",
         "reminder_text": null,
         "is_markup": null
       }

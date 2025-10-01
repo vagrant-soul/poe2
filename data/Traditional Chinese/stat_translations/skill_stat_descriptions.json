@@ -24550,18 +24550,18 @@
       {
         "condition": [
           {
-            "min": 100,
-            "max": null,
+            "min": 1,
+            "max": 99,
             "negated": null
           }
         ],
         "format": [
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "[HitDamage|擊中]時造成[Fire|火焰][Exposure|曝曬]",
+        "string": "[HitDamage|擊中]時有 {0}% 機率造成[Exposure|曝曬]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -24579,7 +24579,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[HitDamage|擊中]時造成[Lightning|閃電][Exposure|曝曬]",
+        "string": "[HitDamage|擊中]時造成[Exposure|曝曬]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40777,8 +40777,8 @@
             "negated": null
           },
           {
-            "min": 1000,
-            "max": 1000,
+            "min": null,
+            "max": null,
             "negated": null
           }
         ],
@@ -40794,7 +40794,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "每[Consume|消耗] 1 具[Corpse|屍體]，在 {2} 秒內回復 {0} 生命和 {1} 魔力",
+        "string": "每具[Corpse|屍體]生命回復\n每具[Corpse|屍體]魔力回復\n回復持續時間@{0}\n{1}\n{2} 秒",
         "reminder_text": null,
         "is_markup": null
       },
@@ -40811,8 +40811,8 @@
             "negated": null
           },
           {
-            "min": null,
-            "max": null,
+            "min": 1000,
+            "max": 1000,
             "negated": null
           }
         ],
@@ -47788,6 +47788,24 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[HitDamage|擊中]時有 {0}% 機率造成[Exposure|曝曬]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 1,
             "max": 99,
             "negated": null
@@ -47799,7 +47817,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[HitDamage|擊中]時有 {0}% 機率造成[Fire|火焰][Exposure|曝曬]",
+        "string": "[HitDamage|擊中]時有 {0}% 機率造成[Exposure|曝曬]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -47817,7 +47835,223 @@
         "index_handlers": [
           []
         ],
-        "string": "[HitDamage|擊中]時造成[Fire|火焰][Exposure|曝曬]",
+        "string": "[HitDamage|擊中]時造成[Exposure|曝曬]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "infusion_remnants_%_chance_to_spawn_cold_infusion_on_freezing_an_enemy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每點[Power|強度]有 {0}% 機率在[Freeze|冰凍]目標時生成一個[Cold|冰冷][Remnant|痕跡]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每點[Power|強度]有@{0}% 機率在[Freeze|冰凍]時生成[Cold|冰冷][Remnant|痕跡]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每點[Power|強度]有 {0}% 機率在[Freeze|冰凍]目標時生成一個[Cold|冰冷][Remnant|痕跡]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "infusion_remnants_%_chance_to_spawn_fire_infusion_on_igniting_an_enemy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "有 {0}% 機率在[Ignite|點燃]未被點燃的目標時生成一個[Fire|火焰][Remnant|痕跡]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "有 @{0}% 機率在[Ignite|點燃]時生成[Fire|火焰][Remnant|痕跡]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "有 {0}% 機率在[Ignite|點燃]未被點燃的目標時生成一個[Fire|火焰][Remnant|痕跡]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "infusion_remnants_%_chance_to_spawn_lightning_infusion_on_shocking_an_enemy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "有 {0}% 機率在[Shock|感電]未被感電的目標時生成一個[Lightning|閃電][Remnant|痕跡]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "有 @{0}% 機率在[Shock|感電]時生成[Lightning|閃電][Remnant|痕跡]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "有 {0}% 機率在[Shock|感電]未被感電的目標時生成一個[Lightning|閃電][Remnant|痕跡]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -53232,6 +53466,42 @@
           ]
         ],
         "string": "所施加之[NonDamagingAilments|非傷害型異常狀態]的[BuffMagnitude|幅度]減少 {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "non_modifiable_totem_limit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "無法有超過{0}個已召喚的先祖戰士圖騰",
         "reminder_text": null,
         "is_markup": null
       }
@@ -61126,7 +61396,7 @@
         "index_handlers": [
           []
         ],
-        "string": "創造 {0} 把長鋒",
+        "string": "創造 {0} 把長矛",
         "reminder_text": null,
         "is_markup": null
       }
@@ -68519,7 +68789,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Detonator|引爆]長鋒時有 {0}% 的機率留下[ShockedGround|感電地面]",
+        "string": "[Detonator|引爆]長矛時有 {0}% 的機率留下[ShockedGround|感電地面]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -76780,6 +77050,42 @@
           []
         ],
         "string": "召喚物有防守性",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_skill_reserves_in_all_weapon_sets"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "必須在兩個[WeaponSets|武器套裝]中同時啟用",
         "reminder_text": null,
         "is_markup": null
       }

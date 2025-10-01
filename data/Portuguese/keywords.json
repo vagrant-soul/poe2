@@ -384,16 +384,12 @@
     "term": "Irradiado "
   },
   "ContainsMapBoss": {
-    "definition": "A \u00e1rea cont\u00e9m um [MapBoss|chefe de mapa].",
-    "term": "Chefe de Mapa "
+    "definition": "Empowering a [MapBoss|Map Boss] upgrades it to a [PowerfulMapBoss|Powerful Map Boss]",
+    "term": "Empowerment"
   },
   "ContainsRitual": {
     "definition": "Altares Ritual\u00edsticos s\u00e3o locais de sacrif\u00edcio que absorvem os monstros mortos dentro de seus c\u00edrculos ritual\u00edsticos. Ap\u00f3s uma quantidade de monstros serem derrotados, o Ritual pode ser ativado. \r\nAtivar o Ritual ressuscitar\u00e1 os monstros mortos, exigindo que voc\u00ea os derrote novamente. \r\n\r\nDerrotar esses monstros revividos concede Tributo, um recurso que pode ser trocado por v\u00e1rios Favores no Altar Ritual\u00edstico. \r\nA lista de Favores dispon\u00edveis para troca por Tributo pode ser re-definida, custando Tributo. \r\nFavores podem ser adiados, pagando parte de seu custo, mas fazendo com que reapare\u00e7am novamente mais tarde.",
     "term": "Ritual "
-  },
-  "ContainsSuperBoss": {
-    "definition": "A \u00e1rea cont\u00e9m um [DeadlyMapBoss|chefe mortal de mapa]",
-    "term": "Chefe Mortal de Mapa"
   },
   "ContainsUniqueMap": {
     "definition": "Cont\u00e9m um layout de Mapa [Rarity|\u00danico], que pode conter recompensas especializadas.\r\n\r\nMapas \u00danicos n\u00e3o podem ganhar conte\u00fado adicional, [Essence|Ess\u00eancias], [Shrine|Santu\u00e1rios] ou [Strongbox|Cofres]. ",
@@ -1048,7 +1044,7 @@
     "term": "Campo de Vis\u00e3o"
   },
   "LightStun": {
-    "definition": "Todo [HitDamage|ataque] tem uma chance de causar [LightStun|atordoamento leve] no alvo, interrompendo sua a\u00e7\u00e3o atual e impedindo-o de agir por uma fra\u00e7\u00e3o de segundo. A chance depende da quantidade de vida infligida pelo ataque. Se ele infligir toda a vida do inimigo, a chance \u00e9 de 100%. Se for menos de 15%, n\u00e3o conta.\r\n\r\nDano [Physical|f\u00edsico] e dano [Melee|corpo a corpo] de jogador (mas n\u00e3o de monstro) t\u00eam 50% mais chance de acumular [LightStun|atordoamento leve]. No caso dos jogadores, os b\u00f4nus se multiplicam.",
+    "definition": "Todo [HitDamage|ataque] tem uma chance de causar [LightStun|atordoamento leve] no alvo, interrompendo sua a\u00e7\u00e3o atual e impedindo-o de agir por uma fra\u00e7\u00e3o de segundo. A chance depende da quantidade de dano causado pelo ataque. Se ele infligir toda a vida do inimigo, a chance \u00e9 de 100%. Se for menos de 15%, n\u00e3o conta.\r\n\r\nDano [Physical|f\u00edsico] e dano [Melee|corpo a corpo] de jogador (mas n\u00e3o de monstro) t\u00eam 50% mais chance de acumular [LightStun|atordoamento leve]. No caso dos jogadores, os b\u00f4nus se multiplicam.",
     "term": "Atordoamento Leve"
   },
   "Lightning": {
@@ -1120,11 +1116,11 @@
     "term": "Dreno de Mana"
   },
   "MapBoss": {
-    "definition": "Chefes de Mapas s\u00e3o aqueles encontrados nos Mapas.",
+    "definition": "Os mapas de fim de jogo t\u00eam um chefe de mapa, que \u00e9 um monstro \u00fanico com mec\u00e2nicas especiais e recompensas aumentadas.",
     "term": "Chefe de Mapa"
   },
   "MapBossMapDrop": {
-    "definition": "Apenas os [MapBoss|Chefes Finais de Mapa] em uma \u00c1rea de Mapa t\u00eam chance de derrubar uma [Waystone|Pedra Guia] de tier superior ao tier da \u00c1rea de Mapa.\r\n\r\nEssa chance diminui quanto maior o tier da [Waystone|Pedra Guia] usada para criar a \u00c1rea de Mapa, mas pode ser aumentada novamente ao adicionar modificadores \u00e0s [Waystone|Pedras Guia]; modificadores adicionais nas [Waystone|Pedras Guia] podem conceder chance aumentada de que [Waystone|Pedras Guia] sejam derrubadas nas \u00c1reas de Mapa que elas criam.",
+    "definition": "Apenas o \u00faltimo [PowerfulMapBoss|chefe de mapa poderoso] em uma \u00e1rea de mapa tem chance de largar uma [Waystone|Pedra-guia] de n\u00edvel superior ao da \u00e1rea de mapa.\r\n \r\n Essa chance diminui quanto maior o n\u00edvel da [Waystone|Pedra-guia] usada para criar a \u00e1rea de mapa, mas que pode ser aumentada novamente ao se adicionar modificadores de [Waystone|Pedra-guia]. Modificadores adicionais de [Waystone|Pedra-guia] podem conceder uma chance aumentada de que [Waystone|Pedras-guia] sejam encontradas nas \u00e1reas de mapa que elas criam.",
     "term": "Progress\u00e3o de Tier de Pedras Guia "
   },
   "MapNode": {
@@ -1615,12 +1611,16 @@
     "definition": "O Poder do Monstro \u00e9 um n\u00famero que reflete aproximadamente o qu\u00e3o forte e perigoso um monstro \u00e9. Um monstro m\u00e9dio tem um Poder de 1, monstros fortes podem ter Poder de 2 a 3, e monstros fracos podem ter apenas 0,5, ou ocasionalmente menos. Esse valor \u00e9 ent\u00e3o multiplicado de acordo com a [Rarity|Raridade] do monstro:\r\n\r\nNormal: 1 \r\nM\u00e1gico: 2 \r\nRaro: 5 \r\n\r\nMonstros \u00danicos sempre t\u00eam 20 de Poder.",
     "term": "Poder"
   },
+  "PowerfulMapBoss": {
+    "definition": "Chefes de mapa poderosos s\u00e3o [MapBoss|chefes de mapa] ainda mais dif\u00edceis que largam recompensas melhores.\r\n \r\n Chefes de mapa poderosos costumam largar [Waystone|Pedras-guia] de um n\u00edvel superior.",
+    "term": "Chefe de Mapa Poderoso"
+  },
   "PrecursorTablet": {
-    "definition": "As T\u00e1buas Precursoras s\u00e3o itens especiais que podem ser consumidos por [PrecursorTower|Torres Precursoras] conclu\u00eddas para adicionar mais Mec\u00e2nicas de Fim de Jogo aos mapas ao redor no seu Atlas.",
+    "definition": "As T\u00e1buas Precursoras s\u00e3o itens especiais que podem ser usadas no Dispositivo de Mapas para adicionar mais mec\u00e2nicas de fim de jogo aos mapas no seu Atlas.",
     "term": "T\u00e1buas Precursoras "
   },
   "PrecursorTower": {
-    "definition": "Torres Precursores s\u00e3o estruturas antigas espalhadas por todo o Atlas. Mapas de Torres Precursoras podem ser conclu\u00eddos para revelar uma grande \u00e1rea ao redor e permitir o uso de uma [PrecursorTablet|T\u00e1bua Precurssora], modificando os Mapas em uma \u00e1rea ao redor.\r\n\r\nCompletar uma Torre Precursora exige que voc\u00ea ative o Farol Precursor. ",
+    "definition": "Torres Precursoras s\u00e3o estruturas antigas espalhadas por todo o Atlas. Mapas de Torres Precursoras podem ser conclu\u00eddos para revelar uma grande \u00e1rea ao redor deles e para obter uma [PrecursorTablet|T\u00e1bua Precursora].\r\n \r\n No fim do mapa, voc\u00ea precisa ativar o Farol Precursor ap\u00f3s derrotar o [MapBoss|chefe de mapa] para completar uma Torre Precursora.",
     "term": "Torres Precursoras"
   },
   "Premitigation": {
@@ -1636,7 +1636,7 @@
     "term": "Preparado para a Eletrocuss\u00e3o"
   },
   "PrimedFreeze": {
-    "definition": "Inimigos normais ficam Vulner\u00e1vel a [Freeze|Congelamento] quando atingem pelo menos 40% de ac\u00famulo de congelamento. Os inimigos m\u00e1gicos ficam vulner\u00e1veis aos 50%, os raros aos 60% e os \u00fanicos aos 70%.",
+    "definition": "Inimigos normais ficam Vulner\u00e1veis a [Freeze|Congelamento] quando atingem pelo menos 40% de ac\u00famulo de congelamento. Os inimigos m\u00e1gicos ficam vulner\u00e1veis aos 50%, os raros aos 60% e os \u00fanicos aos 70%.",
     "term": "Vulner\u00e1vel a Congelamento"
   },
   "PrimedPin": {
@@ -1681,7 +1681,7 @@
   },
   "RareMonsterMapDrop": {
     "definition": "O \u00faltimo monstro [Rarity|Raro] morto em uma \u00c1rea de Mapa tem chance de derrubar uma [Waystone|Pedra Guia] igual ao tier da [Waystone|Pedra Guia] usada para criar aquela \u00c1rea de Mapa.\r\n\r\nEssa chance diminui conforme o tier da [Waystone|Pedra Guia] usada para criar a \u00c1rea de Mapa, mas pode ser aumentada novamente ao adicionar modificadores \u00e0s [Waystone|Pedras Guia]; modificadores adicionais nas [Waystone|Pedras Guia] podem conceder chance aumentada de que [Waystone|Pedras Guia] sejam derrubadas nas \u00c1reas de Mapa que elas criam.",
-    "term": "Queda de Pedras Guia do Monstro Raro Final "
+    "term": "Recompensa de Objetivo do Mapa: Pedra-guia"
   },
   "Rarity": {
     "definition": "A raridade de itens ou monstros pode ser Normal (cinza), M\u00e1gico (azul), Raro (amarelo) ou \u00danico (marrom). Como regra geral, monstros aumentam em dificuldade dependendo de sua [Rarity|Raridade]. ",
@@ -1947,6 +1947,10 @@
     "definition": "A Cidadela de Pedra \u00e9 uma \u00e1rea de fim de jogo que pode ser acessada com uma [Waystone|Pedra Guia] de N\u00edvel 15 ou superior. O chefe desta \u00e1rea deixar\u00e1 cair um Fragmento de Crise.\r\n\r\nAumentos na chance de queda de [Waystone|Pedra Guia] d\u00e3o uma chance de Fragmentos de Crise adicionais ca\u00edrem. ",
     "term": "Cidadela de Pedra "
   },
+  "StoneSummoningCircle": {
+    "definition": "Ao ativar um c\u00edrculo de invoca\u00e7\u00e3o, um chefe \u00e9 gerado",
+    "term": "C\u00edrculo de Invoca\u00e7\u00e3o"
+  },
   "StormSurge": {
     "definition": "Cada Tempestade El\u00e9trica nesta Arma concede 3% de Dano como Dano de [Lightning|Raio] Extra por 5 segundos. M\u00e1ximo de 10 Tempestades El\u00e9tricas.",
     "term": "Tormenta Explosiva"
@@ -1980,7 +1984,7 @@
     "term": "Caixas-forte"
   },
   "Stun": {
-    "definition": "Os [HitDamage|ataques] contra um alvo podem atordo\u00e1-lo, dependendo do dano causado. Se for atordoado, o alvo para o que estiver fazendo e fica sem agir por um curto per\u00edodo. H\u00e1 dois tipos de atordoamento:\r\n \r\n os [LightStun|atordoamentos leves] duram apenas um instante, mas podem ser causados com frequ\u00eancia. Qualquer [HitDamage|ataque] pode causar um [LightStun|atordoamento leve]. A chance depende da quantidade de vida infligida pelo ataque. Se ele infligir toda a vida do inimigo, a chance \u00e9 de 100%. Se for menos de 15%, n\u00e3o conta;\r\n \r\n os [HeavyStun|atordoamentos pesados] ocorrem quando a barra de atordoamento do alvo enche e duram v\u00e1rios segundos. Os [HitDamage|ataques] acumulam atordoamento pesado, dependendo do dano causado. Jogadores e seus [Minion|lacaios] geralmente n\u00e3o s\u00e3o [HeavyStun|atordoados] assim, mas podem acumular o efeito em a\u00e7\u00f5es espec\u00edficas, como levantar [Shield|escudo], aparar com um [Buckler|broquel] ou montar.\r\n \r\n Dano [Physical|f\u00edsico] e dano [Melee|corpo a corpo] de jogador t\u00eam 50% mais chance de acumular [LightStun|atordoamento leve] e [HeavyStun|pesado]. Esse b\u00f4nus se multiplicam.\r\n Dano [Physical|f\u00edsico] e dano [Melee|corpo a corpo] de monstro t\u00eam 100% e 33% mais chance de acumular [LightStun|atordoamento leve] e [HeavyStun|pesado], respectivamente. Esse b\u00f4nus se multiplicam.",
+    "definition": "Os [HitDamage|ataques] contra um alvo podem atordo\u00e1-lo, dependendo do dano causado. Se for atordoado, o alvo para o que estiver fazendo e fica sem agir por um curto per\u00edodo. H\u00e1 dois tipos de atordoamento:\r\n \r\n os [LightStun|atordoamentos leves] duram apenas um instante, mas podem ser causados com frequ\u00eancia. Qualquer [HitDamage|ataque] pode causar um [LightStun|atordoamento leve]. A chance depende da quantidade de dano causado pelo ataque. Se ele infligir toda a vida do inimigo, a chance \u00e9 de 100%. Se for menos de 15%, n\u00e3o conta;\r\n \r\n os [HeavyStun|atordoamentos totais] ocorrem quando a barra de atordoamento do alvo enche e duram v\u00e1rios segundos. Os [HitDamage|ataques] acumulam atordoamento total, dependendo do dano causado. Jogadores e seus [Minion|lacaios] geralmente n\u00e3o s\u00e3o [HeavyStun|atordoados] assim, mas podem acumular o efeito em a\u00e7\u00f5es espec\u00edficas, como levantar [Shield|escudo], aparar com um [Buckler|broquel] ou montar.\r\n \r\n Dano [Physical|f\u00edsico] e dano [Melee|corpo a corpo] de jogador t\u00eam 50% mais chance de acumular [LightStun|atordoamento leve] e [HeavyStun|total]. Esse b\u00f4nus se multiplicam.\r\n Dano [Physical|f\u00edsico] e dano [Melee|corpo a corpo] de monstro t\u00eam 100% e 33% mais chance de acumular [LightStun|atordoamento leve] e [HeavyStun|total], respectivamente. Esse b\u00f4nus se multiplicam.",
     "term": "Atordoamento"
   },
   "StunRecovery": {
@@ -2202,6 +2206,10 @@
   "UnravellingBuff": {
     "definition": "Enquanto sob efeito de Desencadeamento, seu dano de [Chaos|caos] tamb\u00e9m contribui aleatoriamente para o ac\u00famulo de [Freeze|congelamento], [BuffMagnitude|intensidades] de [Flammability|inflamabilidade] e de [Ignite|inc\u00eandios] ou a chance de [Shock|eletrifica\u00e7\u00e3o], mudando de efeito contribu\u00eddo a cada 2 segundos.",
     "term": "Desencadeamento"
+  },
+  "UnstableDesecration": {
+    "definition": "Este item pode ser [Abyssalify|profanado] com a moeda Cr\u00e2nio Conservado. A cada [Abyssalify|profana\u00e7\u00e3o], a probabilidade de ele ser destru\u00eddo aumenta.",
+    "term": "Profana\u00e7\u00e3o Inst\u00e1vel"
   },
   "UnwaveringStance": {
     "definition": "N\u00e3o pode sofrer atordoamento leve\nN\u00e3o pode usar cambalhota evasiva ou correr",

@@ -126889,7 +126889,7 @@
         "min": 1
       }
     ],
-    "text": "[LifeLeech|Leeching Life] from your [HitDamage|Hits] causes Allies in your [Presence] to also Leech the [LeechSameAmount|same amount] of Life",
+    "text": "Cuando [LifeLeech|absorbes vida] de tus [HitDamage|impactos], los aliados que están en tu [Presence|presencia] también absorben la [LeechSameAmount|misma cantidad] de vida",
     "type": "LifeLeechToAllies",
     "gold_value": null
   },
@@ -133728,7 +133728,7 @@
         "min": 1
       }
     ],
-    "text": "Infliges tu daño de [Thorns|espinas] a los enemigos a los que [Stun|aturdes]",
+    "text": "Infliges tu daño de [Thorns|espinas] a los enemigos a los que [Stun|aturdes] con [Attack|ataques] [Melee|cuerpo a cuerpo]",
     "type": "ThornsDamageOnStun",
     "gold_value": null
   },
@@ -147165,6 +147165,16 @@
         "id": "map_num_extra_shrines",
         "max": 1,
         "min": 1
+      },
+      {
+        "id": "map_map_item_drop_chance_+%",
+        "max": 10,
+        "min": 10
+      },
+      {
+        "id": "map_pack_size_+%",
+        "max": 5,
+        "min": 5
       }
     ],
     "text": "El área contiene un [Shrine|santuario] adicional",
@@ -147190,6 +147200,16 @@
         "id": "map_num_extra_strongboxes",
         "max": 1,
         "min": 1
+      },
+      {
+        "id": "map_map_item_drop_chance_+%",
+        "max": 10,
+        "min": 10
+      },
+      {
+        "id": "map_pack_size_+%",
+        "max": 5,
+        "min": 5
       }
     ],
     "text": "El área contiene una [Strongbox|caja fuerte] adicional",
@@ -147215,11 +147235,91 @@
         "id": "map_extra_monoliths",
         "max": 1,
         "min": 1
+      },
+      {
+        "id": "map_map_item_drop_chance_+%",
+        "max": 10,
+        "min": 10
+      },
+      {
+        "id": "map_item_drop_rarity_+%",
+        "max": 10,
+        "min": 10
       }
     ],
     "text": "El área contiene una [Essence|esencia] adicional",
     "type": "MapAdditionalEssence",
     "gold_value": 620.0
+  },
+  "MapAdditionalExile1": {
+    "adds_tags": [],
+    "domain": "unknown1",
+    "generation_type": "unique",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "MapAdditionalExile"
+    ],
+    "implicit_tags": [],
+    "is_essence_only": false,
+    "name": "<if:MS>{de anarquía}<elif:FS>{de anarquía}<elif:MP>{de anarquía}<elif:FP>{de anarquía}",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "map_spawn_extra_exiles",
+        "max": 1,
+        "min": 1
+      },
+      {
+        "id": "map_map_item_drop_chance_+%",
+        "max": 10,
+        "min": 10
+      },
+      {
+        "id": "map_item_drop_rarity_+%",
+        "max": 10,
+        "min": 10
+      }
+    ],
+    "text": "El área está habitada por 1 exiliado renegado adicional",
+    "type": "MapAdditionalExile",
+    "gold_value": null
+  },
+  "MapAdditionalAzmeriWisp1": {
+    "adds_tags": [],
+    "domain": "unknown1",
+    "generation_type": "unique",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "MapAdditionalAzmeriWisp"
+    ],
+    "implicit_tags": [],
+    "is_essence_only": false,
+    "name": "<if:MS>{de los azmeri}<elif:FS>{de los azmeri}<elif:MP>{de los azmeri}<elif:FP>{de los azmeri}",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "map_spawn_extra_torment_spirits",
+        "max": 1,
+        "min": 1
+      },
+      {
+        "id": "map_map_item_drop_chance_+%",
+        "max": 10,
+        "min": 10
+      },
+      {
+        "id": "map_item_drop_rarity_+%",
+        "max": 10,
+        "min": 10
+      }
+    ],
+    "text": "El área contiene un 1 [AzmeriSpirit|espíritu azmeri] adicional",
+    "type": "MapAdditionalAzmeriWisp",
+    "gold_value": null
   },
   "MapGainRarityOnKill1": {
     "adds_tags": [],
@@ -152129,7 +152229,7 @@
         "min": 12
       }
     ],
-    "text": "El área contiene 1 Reinas incubadoras adicionales",
+    "text": "El área contiene una reina incubadora adicional",
     "type": "MapAbyssContainsHarvester",
     "gold_value": null
   },
@@ -152558,15 +152658,15 @@
       "TowerAddContent"
     ],
     "implicit_tags": [],
-    "is_essence_only": false,
+    "is_essence_only": true,
     "name": "",
     "required_level": 1,
     "spawn_weights": [],
     "stats": [
       {
         "id": "tower_add_irradiated_to_X_maps",
-        "max": 18,
-        "min": 12
+        "max": 10,
+        "min": 10
       }
     ],
     "text": null,
@@ -152583,15 +152683,15 @@
       "TowerAddContent"
     ],
     "implicit_tags": [],
-    "is_essence_only": false,
+    "is_essence_only": true,
     "name": "",
     "required_level": 1,
     "spawn_weights": [],
     "stats": [
       {
         "id": "tower_add_breach_to_X_maps",
-        "max": 18,
-        "min": 12
+        "max": 10,
+        "min": 10
       }
     ],
     "text": null,
@@ -152608,15 +152708,15 @@
       "TowerAddContent"
     ],
     "implicit_tags": [],
-    "is_essence_only": false,
+    "is_essence_only": true,
     "name": "",
     "required_level": 1,
     "spawn_weights": [],
     "stats": [
       {
         "id": "tower_add_expedition_to_X_maps",
-        "max": 18,
-        "min": 12
+        "max": 10,
+        "min": 10
       }
     ],
     "text": null,
@@ -152633,15 +152733,15 @@
       "TowerAddContent"
     ],
     "implicit_tags": [],
-    "is_essence_only": false,
+    "is_essence_only": true,
     "name": "",
     "required_level": 1,
     "spawn_weights": [],
     "stats": [
       {
         "id": "tower_add_delirium_to_X_maps",
-        "max": 18,
-        "min": 12
+        "max": 10,
+        "min": 10
       }
     ],
     "text": null,
@@ -152658,15 +152758,15 @@
       "TowerAddContent"
     ],
     "implicit_tags": [],
-    "is_essence_only": false,
+    "is_essence_only": true,
     "name": "",
     "required_level": 1,
     "spawn_weights": [],
     "stats": [
       {
         "id": "tower_add_ritual_to_X_maps",
-        "max": 18,
-        "min": 12
+        "max": 10,
+        "min": 10
       }
     ],
     "text": null,
@@ -152683,15 +152783,165 @@
       "TowerAddContent"
     ],
     "implicit_tags": [],
-    "is_essence_only": false,
+    "is_essence_only": true,
     "name": "",
     "required_level": 1,
     "spawn_weights": [],
     "stats": [
       {
         "id": "tower_add_map_bosses_to_X_maps",
-        "max": 4,
-        "min": 2
+        "max": 10,
+        "min": 10
+      }
+    ],
+    "text": null,
+    "type": "TowerAddMapBossesToMaps",
+    "gold_value": null
+  },
+  "TowerAddIrradiatedToMapsImplicitUnique": {
+    "adds_tags": [],
+    "domain": "tincture",
+    "generation_type": "unique",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "TowerAddContent"
+    ],
+    "implicit_tags": [],
+    "is_essence_only": true,
+    "name": "",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "tower_add_irradiated_to_X_maps",
+        "max": 1,
+        "min": 1
+      }
+    ],
+    "text": null,
+    "type": "TowerAddIrradiatedToMaps",
+    "gold_value": null
+  },
+  "TowerAddBreachToMapsImplicitUnique": {
+    "adds_tags": [],
+    "domain": "tincture",
+    "generation_type": "unique",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "TowerAddContent"
+    ],
+    "implicit_tags": [],
+    "is_essence_only": true,
+    "name": "",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "tower_add_breach_to_X_maps",
+        "max": 5,
+        "min": 5
+      }
+    ],
+    "text": null,
+    "type": "TowerAddBreachToMaps",
+    "gold_value": null
+  },
+  "TowerAddExpeditionToMapsImplicitUnique": {
+    "adds_tags": [],
+    "domain": "tincture",
+    "generation_type": "unique",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "TowerAddContent"
+    ],
+    "implicit_tags": [],
+    "is_essence_only": true,
+    "name": "",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "tower_add_expedition_to_X_maps",
+        "max": 5,
+        "min": 5
+      }
+    ],
+    "text": null,
+    "type": "TowerAddExpeditionToMaps",
+    "gold_value": null
+  },
+  "TowerAddDeliriumToMapsImplicitUnique": {
+    "adds_tags": [],
+    "domain": "tincture",
+    "generation_type": "unique",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "TowerAddContent"
+    ],
+    "implicit_tags": [],
+    "is_essence_only": true,
+    "name": "",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "tower_add_delirium_to_X_maps",
+        "max": 5,
+        "min": 5
+      }
+    ],
+    "text": null,
+    "type": "TowerAddDeliriumToMaps",
+    "gold_value": null
+  },
+  "TowerAddRitualToMapsImplicitUnique": {
+    "adds_tags": [],
+    "domain": "tincture",
+    "generation_type": "unique",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "TowerAddContent"
+    ],
+    "implicit_tags": [],
+    "is_essence_only": true,
+    "name": "",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "tower_add_ritual_to_X_maps",
+        "max": 5,
+        "min": 5
+      }
+    ],
+    "text": null,
+    "type": "TowerAddRitualToMaps",
+    "gold_value": null
+  },
+  "TowerAddMapBossesToMapsImplicitUnique": {
+    "adds_tags": [],
+    "domain": "tincture",
+    "generation_type": "unique",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "TowerAddContent"
+    ],
+    "implicit_tags": [],
+    "is_essence_only": true,
+    "name": "",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "tower_add_map_bosses_to_X_maps",
+        "max": 5,
+        "min": 5
       }
     ],
     "text": null,
@@ -152715,8 +152965,8 @@
     "stats": [
       {
         "id": "map_item_drop_quantity_+%",
-        "max": 7,
-        "min": 3
+        "max": 10,
+        "min": 4
       }
     ],
     "text": null,
@@ -152740,8 +152990,8 @@
     "stats": [
       {
         "id": "map_item_drop_rarity_+%",
-        "max": 10,
-        "min": 7
+        "max": 30,
+        "min": 10
       }
     ],
     "text": null,
@@ -152765,8 +153015,8 @@
     "stats": [
       {
         "id": "map_pack_size_+%",
-        "max": 7,
-        "min": 3
+        "max": 10,
+        "min": 4
       }
     ],
     "text": null,
@@ -152790,8 +153040,8 @@
     "stats": [
       {
         "id": "map_number_of_magic_packs_+%",
-        "max": 25,
-        "min": 15
+        "max": 70,
+        "min": 25
       }
     ],
     "text": null,
@@ -152815,8 +153065,8 @@
     "stats": [
       {
         "id": "map_number_of_rare_packs_+%",
-        "max": 15,
-        "min": 10
+        "max": 40,
+        "min": 15
       }
     ],
     "text": null,
@@ -152840,8 +153090,8 @@
     "stats": [
       {
         "id": "map_extra_gold_piles_chance_%",
-        "max": 15,
-        "min": 10
+        "max": 40,
+        "min": 15
       }
     ],
     "text": null,
@@ -152865,7 +153115,7 @@
     "stats": [
       {
         "id": "map_experience_gain_+%",
-        "max": 10,
+        "max": 20,
         "min": 5
       }
     ],
@@ -152890,7 +153140,7 @@
     "stats": [
       {
         "id": "map_addtional_rare_chest_amount",
-        "max": 1,
+        "max": 3,
         "min": 1
       }
     ],
@@ -152915,8 +153165,8 @@
     "stats": [
       {
         "id": "map_map_item_drop_chance_+%",
-        "max": 20,
-        "min": 10
+        "max": 50,
+        "min": 20
       }
     ],
     "text": null,
@@ -152940,8 +153190,8 @@
     "stats": [
       {
         "id": "map_rare_monster_additional_modifier_chance_%_with_rollover",
-        "max": 30,
-        "min": 20
+        "max": 80,
+        "min": 30
       }
     ],
     "text": null,
@@ -152965,13 +153215,48 @@
     "stats": [
       {
         "id": "map_shrine_chance_+%",
-        "max": 50,
-        "min": 30
+        "max": 100,
+        "min": 50
       }
     ],
     "text": null,
     "type": "MapAdditionalShrineChance",
     "gold_value": 1000.0
+  },
+  "TowerAdditionalShrine1": {
+    "adds_tags": [],
+    "domain": "tincture",
+    "generation_type": "suffix",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "MapAdditionalShrine"
+    ],
+    "implicit_tags": [],
+    "is_essence_only": false,
+    "name": "<if:MS>{de los devotos}<elif:FS>{de los devotos}<elif:MP>{de los devotos}<elif:FP>{de los devotos}",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "map_num_extra_shrines",
+        "max": 1,
+        "min": 1
+      },
+      {
+        "id": "map_map_item_drop_chance_+%",
+        "max": 0,
+        "min": 0
+      },
+      {
+        "id": "map_pack_size_+%",
+        "max": 0,
+        "min": 0
+      }
+    ],
+    "text": null,
+    "type": "MapAdditionalShrine",
+    "gold_value": null
   },
   "TowerAdditionalStrongboxChance": {
     "adds_tags": [],
@@ -152990,13 +153275,48 @@
     "stats": [
       {
         "id": "map_strongbox_chance_+%",
-        "max": 50,
-        "min": 30
+        "max": 100,
+        "min": 50
       }
     ],
     "text": null,
     "type": "MapAdditionalStrongboxChance",
     "gold_value": 1500.0
+  },
+  "TowerAdditionalStrongbox1": {
+    "adds_tags": [],
+    "domain": "tincture",
+    "generation_type": "suffix",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "MapAdditionalStrongbox"
+    ],
+    "implicit_tags": [],
+    "is_essence_only": false,
+    "name": "<if:MS>{del anticuario}<elif:FS>{del anticuario}<elif:MP>{del anticuario}<elif:FP>{del anticuario}",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "map_num_extra_strongboxes",
+        "max": 1,
+        "min": 1
+      },
+      {
+        "id": "map_map_item_drop_chance_+%",
+        "max": 0,
+        "min": 0
+      },
+      {
+        "id": "map_pack_size_+%",
+        "max": 0,
+        "min": 0
+      }
+    ],
+    "text": null,
+    "type": "MapAdditionalStrongbox",
+    "gold_value": null
   },
   "TowerAdditionalEssenceChance": {
     "adds_tags": [],
@@ -153015,13 +153335,48 @@
     "stats": [
       {
         "id": "map_monolith_chance_+%",
-        "max": 50,
-        "min": 30
+        "max": 100,
+        "min": 50
       }
     ],
     "text": null,
     "type": "MapAdditionalEssenceChance",
     "gold_value": 1500.0
+  },
+  "TowerAdditionalEssence1": {
+    "adds_tags": [],
+    "domain": "tincture",
+    "generation_type": "prefix",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "MapAdditionalEssence"
+    ],
+    "implicit_tags": [],
+    "is_essence_only": false,
+    "name": "<if:MS>{cristalizado}<elif:FS>{cristalizada}<elif:MP>{cristalizados}<elif:FP>{cristalizadas}",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "map_extra_monoliths",
+        "max": 1,
+        "min": 1
+      },
+      {
+        "id": "map_map_item_drop_chance_+%",
+        "max": 0,
+        "min": 0
+      },
+      {
+        "id": "map_item_drop_rarity_+%",
+        "max": 0,
+        "min": 0
+      }
+    ],
+    "text": null,
+    "type": "MapAdditionalEssence",
+    "gold_value": null
   },
   "TowerAdditionalSpiritChance": {
     "adds_tags": [],
@@ -153040,13 +153395,48 @@
     "stats": [
       {
         "id": "map_tormented_spirit_chance_+%",
-        "max": 50,
-        "min": 30
+        "max": 100,
+        "min": 50
       }
     ],
     "text": null,
     "type": "MapAdditionalSpiritChance",
     "gold_value": 1500.0
+  },
+  "TowerAdditionalAzmeriWisp1": {
+    "adds_tags": [],
+    "domain": "tincture",
+    "generation_type": "prefix",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "MapAdditionalAzmeriWisp"
+    ],
+    "implicit_tags": [],
+    "is_essence_only": false,
+    "name": "<if:MS>{de los azmeri}<elif:FS>{de los azmeri}<elif:MP>{de los azmeri}<elif:FP>{de los azmeri}",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "map_spawn_extra_torment_spirits",
+        "max": 1,
+        "min": 1
+      },
+      {
+        "id": "map_map_item_drop_chance_+%",
+        "max": 0,
+        "min": 0
+      },
+      {
+        "id": "map_item_drop_rarity_+%",
+        "max": 0,
+        "min": 0
+      }
+    ],
+    "text": null,
+    "type": "MapAdditionalAzmeriWisp",
+    "gold_value": null
   },
   "TowerAdditionalExileChance": {
     "adds_tags": [],
@@ -153065,18 +153455,103 @@
     "stats": [
       {
         "id": "map_rogue_exile_chance_+%",
-        "max": 25,
-        "min": 15
+        "max": 50,
+        "min": 25
       }
     ],
     "text": null,
     "type": "MapAdditionalExileChance",
     "gold_value": 2200.0
   },
-  "TowerMapAdditionalModifier": {
+  "TowerAdditionalExile1": {
+    "adds_tags": [],
+    "domain": "tincture",
+    "generation_type": "prefix",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "MapAdditionalExile"
+    ],
+    "implicit_tags": [],
+    "is_essence_only": false,
+    "name": "<if:MS>{exiliado}<elif:FS>{exiliada}<elif:MP>{exiliados}<elif:FP>{exiliadas}",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "map_spawn_extra_exiles",
+        "max": 1,
+        "min": 1
+      },
+      {
+        "id": "map_map_item_drop_chance_+%",
+        "max": 0,
+        "min": 0
+      },
+      {
+        "id": "map_item_drop_rarity_+%",
+        "max": 0,
+        "min": 0
+      }
+    ],
+    "text": null,
+    "type": "MapAdditionalExile",
+    "gold_value": null
+  },
+  "TowerAdditionalStoneCircle": {
+    "adds_tags": [],
+    "domain": "tincture",
+    "generation_type": "prefix",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "MapAdditionalStoneCircle"
+    ],
+    "implicit_tags": [],
+    "is_essence_only": false,
+    "name": "<if:MS>{del invocador}<elif:FS>{del invocador}<elif:MP>{del invocador}<elif:FP>{del invocador}",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "map_num_extra_stone_circles",
+        "max": 1,
+        "min": 1
+      }
+    ],
+    "text": null,
+    "type": "MapAdditionalStoneCircle",
+    "gold_value": null
+  },
+  "TowerStoneCircleChance": {
     "adds_tags": [],
     "domain": "tincture",
     "generation_type": "suffix",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "MapAdditionalStoneCircle"
+    ],
+    "implicit_tags": [],
+    "is_essence_only": false,
+    "name": "<if:MS>{de la invocación}<elif:FS>{de la invocación}<elif:MP>{de la invocación}<elif:FP>{de la invocación}",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "map_stone_circle_chance_%",
+        "max": 50,
+        "min": 25
+      }
+    ],
+    "text": null,
+    "type": "MapStoneCircleChance",
+    "gold_value": null
+  },
+  "TowerMapAdditionalModifier": {
+    "adds_tags": [],
+    "domain": "tincture",
+    "generation_type": "unique",
     "generation_weights": [],
     "grants_effects": [],
     "groups": [
@@ -153090,7 +153565,7 @@
     "stats": [
       {
         "id": "map_number_of_additional_mods",
-        "max": 1,
+        "max": 2,
         "min": 1
       }
     ],
@@ -153115,8 +153590,8 @@
     "stats": [
       {
         "id": "map_breach_number_of_magic_packs_+%",
-        "max": 25,
-        "min": 15
+        "max": 70,
+        "min": 25
       }
     ],
     "text": null,
@@ -153140,7 +153615,7 @@
     "stats": [
       {
         "id": "map_breach_X_additional_rare_monsters",
-        "max": 1,
+        "max": 2,
         "min": 1
       }
     ],
@@ -153165,7 +153640,7 @@
     "stats": [
       {
         "id": "map_breach_monster_quantity_+%",
-        "max": 6,
+        "max": 10,
         "min": 4
       }
     ],
@@ -153190,12 +153665,12 @@
     "stats": [
       {
         "id": "map_breach_time_passed_+%",
-        "max": 10,
-        "min": 5
+        "max": 30,
+        "min": 10
       },
       {
         "id": "map_breach_monster_quantity_+%",
-        "max": 5,
+        "max": 8,
         "min": 3
       }
     ],
@@ -153220,7 +153695,7 @@
     "stats": [
       {
         "id": "map_breaches_num_additional_chests_to_spawn",
-        "max": 1,
+        "max": 3,
         "min": 1
       }
     ],
@@ -153245,8 +153720,8 @@
     "stats": [
       {
         "id": "map_breach_monster_splinter_quantity_+%",
-        "max": 10,
-        "min": 5
+        "max": 30,
+        "min": 10
       }
     ],
     "text": null,
@@ -153270,8 +153745,8 @@
     "stats": [
       {
         "id": "map_breach_%_chance_for_3_additional_breach",
-        "max": 4,
-        "min": 2
+        "max": 10,
+        "min": 4
       }
     ],
     "text": null,
@@ -153295,8 +153770,8 @@
     "stats": [
       {
         "id": "map_breach_%_chance_for_1_additional_breach",
-        "max": 10,
-        "min": 5
+        "max": 30,
+        "min": 10
       }
     ],
     "text": null,
@@ -153320,8 +153795,8 @@
     "stats": [
       {
         "id": "map_expedition_artifact_quantity_+%",
-        "max": 10,
-        "min": 5
+        "max": 30,
+        "min": 10
       }
     ],
     "text": null,
@@ -153345,8 +153820,8 @@
     "stats": [
       {
         "id": "map_expedition_maximum_placement_distance_+%",
-        "max": 10,
-        "min": 5
+        "max": 30,
+        "min": 10
       }
     ],
     "text": null,
@@ -153370,7 +153845,7 @@
     "stats": [
       {
         "id": "map_expedition_relics_+",
-        "max": 1,
+        "max": 2,
         "min": 1
       }
     ],
@@ -153395,8 +153870,8 @@
     "stats": [
       {
         "id": "map_expedition_explosion_radius_+%",
-        "max": 10,
-        "min": 5
+        "max": 30,
+        "min": 10
       }
     ],
     "text": null,
@@ -153420,8 +153895,8 @@
     "stats": [
       {
         "id": "expedition_monsters_logbook_chance_+%",
-        "max": 10,
-        "min": 5
+        "max": 30,
+        "min": 10
       }
     ],
     "text": null,
@@ -153445,8 +153920,8 @@
     "stats": [
       {
         "id": "map_expedition_rare_monsters_+%",
-        "max": 15,
-        "min": 10
+        "max": 40,
+        "min": 15
       }
     ],
     "text": null,
@@ -153470,8 +153945,8 @@
     "stats": [
       {
         "id": "map_expedition_relic_mod_effect_+%",
-        "max": 6,
-        "min": 3
+        "max": 18,
+        "min": 6
       }
     ],
     "text": null,
@@ -153495,8 +153970,8 @@
     "stats": [
       {
         "id": "map_expedition_elite_marker_count_+%",
-        "max": 10,
-        "min": 5
+        "max": 30,
+        "min": 10
       }
     ],
     "text": null,
@@ -153520,8 +153995,8 @@
     "stats": [
       {
         "id": "map_delirium_splinter_stack_size_+%",
-        "max": 10,
-        "min": 5
+        "max": 30,
+        "min": 10
       }
     ],
     "text": null,
@@ -153545,8 +154020,8 @@
     "stats": [
       {
         "id": "map_affliction_reward_progress_on_kill_+%",
-        "max": 10,
-        "min": 5
+        "max": 30,
+        "min": 10
       }
     ],
     "text": null,
@@ -153595,8 +154070,8 @@
     "stats": [
       {
         "id": "map_affliction_secondary_wave_delay_seconds_+",
-        "max": 6,
-        "min": 3
+        "max": 12,
+        "min": 6
       }
     ],
     "text": null,
@@ -153620,8 +154095,8 @@
     "stats": [
       {
         "id": "map_affliction_secondary_wave_acceleration_+%",
-        "max": -10,
-        "min": -15
+        "max": -20,
+        "min": -30
       }
     ],
     "text": null,
@@ -153645,8 +154120,8 @@
     "stats": [
       {
         "id": "map_affliction_encounter_monster_depth_+%",
-        "max": 10,
-        "min": 5
+        "max": 30,
+        "min": 10
       }
     ],
     "text": null,
@@ -153670,8 +154145,8 @@
     "stats": [
       {
         "id": "map_affliction_pack_size_+%",
-        "max": 10,
-        "min": 5
+        "max": 30,
+        "min": 10
       }
     ],
     "text": null,
@@ -153695,8 +154170,8 @@
     "stats": [
       {
         "id": "map_delirium_doodads_+%_final",
-        "max": 10,
-        "min": 5
+        "max": 30,
+        "min": 10
       }
     ],
     "text": null,
@@ -153720,7 +154195,7 @@
     "stats": [
       {
         "id": "map_killing_rare_monsters_pauses_delirium_mirror_timer_for_x_seconds",
-        "max": 2,
+        "max": 5,
         "min": 2
       }
     ],
@@ -153745,8 +154220,8 @@
     "stats": [
       {
         "id": "map_affliction_encounter_boss_chance_+%",
-        "max": 10,
-        "min": 5
+        "max": 30,
+        "min": 10
       }
     ],
     "text": null,
@@ -153770,8 +154245,8 @@
     "stats": [
       {
         "id": "map_delirium_additional_reward_type_chance_%",
-        "max": 8,
-        "min": 3
+        "max": 24,
+        "min": 8
       }
     ],
     "text": null,
@@ -153795,8 +154270,8 @@
     "stats": [
       {
         "id": "map_ritual_tribute_+%",
-        "max": 10,
-        "min": 5
+        "max": 30,
+        "min": 10
       }
     ],
     "text": null,
@@ -153820,8 +154295,8 @@
     "stats": [
       {
         "id": "map_ritual_rewards_reroll_cost_+%_final",
-        "max": -10,
-        "min": -15
+        "max": -20,
+        "min": -30
       }
     ],
     "text": null,
@@ -153845,8 +154320,8 @@
     "stats": [
       {
         "id": "map_ritual_defer_reward_tribute_cost_+%",
-        "max": -10,
-        "min": -15
+        "max": -20,
+        "min": -30
       }
     ],
     "text": null,
@@ -153870,8 +154345,8 @@
     "stats": [
       {
         "id": "map_ritual_deferred_rewards_are_offered_again_+%_sooner",
-        "max": 15,
-        "min": 10
+        "max": 40,
+        "min": 15
       }
     ],
     "text": null,
@@ -153895,7 +154370,7 @@
     "stats": [
       {
         "id": "map_ritual_additional_reward_rerolls",
-        "max": 1,
+        "max": 3,
         "min": 1
       }
     ],
@@ -153920,8 +154395,8 @@
     "stats": [
       {
         "id": "map_ritual_offered_rewards_from_rerolls_have_permyriad_chance_to_cost_no_tribute",
-        "max": 300,
-        "min": 100
+        "max": 600,
+        "min": 300
       }
     ],
     "text": null,
@@ -153945,8 +154420,8 @@
     "stats": [
       {
         "id": "map_ritual_magic_monsters_+%",
-        "max": 25,
-        "min": 15
+        "max": 70,
+        "min": 25
       }
     ],
     "text": null,
@@ -153970,8 +154445,8 @@
     "stats": [
       {
         "id": "map_ritual_rare_monsters_+%",
-        "max": 15,
-        "min": 10
+        "max": 40,
+        "min": 15
       }
     ],
     "text": null,
@@ -153995,8 +154470,8 @@
     "stats": [
       {
         "id": "map_ritual_omen_chance_+%",
-        "max": 25,
-        "min": 15
+        "max": 70,
+        "min": 25
       }
     ],
     "text": null,
@@ -154019,8 +154494,8 @@
     "spawn_weights": [],
     "stats": [
       {
-        "id": "maps_with_bosses_additional_strongbox_+",
-        "max": 1,
+        "id": "maps_with_powerful_bosses_additional_strongbox_+",
+        "max": 2,
         "min": 1
       }
     ],
@@ -154044,8 +154519,8 @@
     "spawn_weights": [],
     "stats": [
       {
-        "id": "maps_with_bosses_additional_shrine_+",
-        "max": 1,
+        "id": "maps_with_powerful_bosses_additional_shrine_+",
+        "max": 2,
         "min": 1
       }
     ],
@@ -154069,8 +154544,8 @@
     "spawn_weights": [],
     "stats": [
       {
-        "id": "maps_with_bosses_additional_essence_+",
-        "max": 1,
+        "id": "maps_with_powerful_bosses_additional_essence_+",
+        "max": 2,
         "min": 1
       }
     ],
@@ -154094,8 +154569,8 @@
     "spawn_weights": [],
     "stats": [
       {
-        "id": "maps_with_bosses_additional_spirit_+",
-        "max": 1,
+        "id": "maps_with_powerful_bosses_additional_spirit_+",
+        "max": 2,
         "min": 1
       }
     ],
@@ -154120,8 +154595,8 @@
     "stats": [
       {
         "id": "map_map_boss_bonus_map_drop_chance_+%",
-        "max": 10,
-        "min": 5
+        "max": 30,
+        "min": 10
       }
     ],
     "text": null,
@@ -154145,7 +154620,7 @@
     "stats": [
       {
         "id": "map_boss_experience_+%_final",
-        "max": 40,
+        "max": 80,
         "min": 20
       }
     ],
@@ -154170,8 +154645,8 @@
     "stats": [
       {
         "id": "map_boss_item_rarity_+%",
-        "max": 20,
-        "min": 15
+        "max": 60,
+        "min": 20
       }
     ],
     "text": null,
@@ -154195,7 +154670,7 @@
     "stats": [
       {
         "id": "map_boss_dropped_item_quantity_+%",
-        "max": 15,
+        "max": 20,
         "min": 10
       }
     ],
@@ -154468,7 +154943,7 @@
       "IrridiatedMaps"
     ],
     "implicit_tags": [],
-    "is_essence_only": false,
+    "is_essence_only": true,
     "name": "",
     "required_level": 1,
     "spawn_weights": [],
@@ -154483,7 +154958,7 @@
     "type": "MapsAccessedWithoutConnection",
     "gold_value": null
   },
-  "UniqueMapsRemoveIrridiationWhenCompleting": {
+  "UniqueMapsAddIrridiationWhenCompleting": {
     "adds_tags": [],
     "domain": "tincture",
     "generation_type": "unique",
@@ -154499,13 +154974,13 @@
     "spawn_weights": [],
     "stats": [
       {
-        "id": "map_remove_irradiation_instead_of_completing",
+        "id": "map_add_irradiation_instead_of_completing",
         "max": 1,
         "min": 1
       }
     ],
     "text": null,
-    "type": "MapsRemoveIrridiationWhenCompleting",
+    "type": "MapsAddIrridiationWhenCompleting",
     "gold_value": null
   },
   "EndgameCorruptionBasic": {
@@ -161015,6 +161490,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 1600,
         "min": 1600
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 2,
+        "min": 2
       }
     ],
     "text": null,
@@ -161050,6 +161530,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 4800,
         "min": 4800
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 3,
+        "min": 3
       }
     ],
     "text": null,
@@ -161085,6 +161570,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": -750,
         "min": -750
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161249,6 +161739,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 4500,
         "min": 4500
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161284,6 +161779,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 4500,
         "min": 4500
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161319,6 +161819,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 5000,
         "min": 5000
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161354,6 +161859,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 5500,
         "min": 5500
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161389,6 +161899,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 15000,
         "min": 15000
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161424,6 +161939,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 6000,
         "min": 6000
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161459,6 +161979,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 6000,
         "min": 6000
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161494,6 +162019,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 6000,
         "min": 6000
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161529,6 +162059,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 6000,
         "min": 6000
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161564,6 +162099,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 6000,
         "min": 6000
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161599,6 +162139,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 10000,
         "min": 10000
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161634,6 +162179,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 11000,
         "min": 11000
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161669,6 +162219,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 12000,
         "min": 12000
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161704,6 +162259,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 13000,
         "min": 13000
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161739,6 +162299,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 15000,
         "min": 15000
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161774,6 +162339,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 13000,
         "min": 13000
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161809,6 +162379,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 13000,
         "min": 13000
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161844,6 +162419,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 10000,
         "min": 10000
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161879,6 +162459,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 20000,
         "min": 20000
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -161914,6 +162499,11 @@
         "id": "monster_dropped_item_rarity_+%",
         "max": 20000,
         "min": 20000
+      },
+      {
+        "id": "i_am_boss_of_tier",
+        "max": 0,
+        "min": 0
       }
     ],
     "text": null,
@@ -178934,13 +179524,13 @@
       },
       {
         "id": "map_ground_effect_patches_per_100_tiles",
-        "max": 20,
-        "min": 20
+        "max": 4,
+        "min": 4
       },
       {
         "id": "map_ground_effect_radius",
-        "max": 14,
-        "min": 14
+        "max": 20,
+        "min": 20
       }
     ],
     "text": "El área tiene zonas de suelo incendiado",
@@ -193151,18 +193741,18 @@
       },
       {
         "id": "map_base_ground_fire_damage_to_deal_per_minute",
-        "max": 15000,
-        "min": 15000
+        "max": 21000,
+        "min": 21000
       },
       {
         "id": "map_ground_effect_patches_per_100_tiles",
-        "max": 20,
-        "min": 20
+        "max": 4,
+        "min": 4
       },
       {
         "id": "map_ground_effect_radius",
-        "max": 14,
-        "min": 14
+        "max": 20,
+        "min": 20
       }
     ],
     "text": "El área tiene zonas de suelo incendiado",
@@ -193201,18 +193791,18 @@
       },
       {
         "id": "map_base_ground_fire_damage_to_deal_per_minute",
-        "max": 17000,
-        "min": 17000
+        "max": 25000,
+        "min": 25000
       },
       {
         "id": "map_ground_effect_patches_per_100_tiles",
-        "max": 24,
-        "min": 24
+        "max": 5,
+        "min": 5
       },
       {
         "id": "map_ground_effect_radius",
-        "max": 16,
-        "min": 16
+        "max": 20,
+        "min": 20
       }
     ],
     "text": "El área tiene zonas de suelo incendiado",
@@ -193251,18 +193841,18 @@
       },
       {
         "id": "map_base_ground_fire_damage_to_deal_per_minute",
-        "max": 19000,
-        "min": 19000
+        "max": 28000,
+        "min": 28000
       },
       {
         "id": "map_ground_effect_patches_per_100_tiles",
-        "max": 28,
-        "min": 28
+        "max": 6,
+        "min": 6
       },
       {
         "id": "map_ground_effect_radius",
-        "max": 18,
-        "min": 18
+        "max": 20,
+        "min": 20
       }
     ],
     "text": "El área tiene zonas de suelo incendiado",
@@ -193741,13 +194331,13 @@
       },
       {
         "id": "map_ground_effect_patches_per_100_tiles",
-        "max": 20,
-        "min": 20
+        "max": 3,
+        "min": 3
       },
       {
         "id": "map_ground_effect_radius",
-        "max": 14,
-        "min": 14
+        "max": 26,
+        "min": 26
       }
     ],
     "text": "El área tiene zonas de suelo escarchado",
@@ -193786,13 +194376,13 @@
       },
       {
         "id": "map_ground_effect_patches_per_100_tiles",
-        "max": 24,
-        "min": 24
+        "max": 4,
+        "min": 4
       },
       {
         "id": "map_ground_effect_radius",
-        "max": 16,
-        "min": 16
+        "max": 26,
+        "min": 26
       }
     ],
     "text": "El área tiene zonas de suelo escarchado",
@@ -193831,13 +194421,13 @@
       },
       {
         "id": "map_ground_effect_patches_per_100_tiles",
-        "max": 28,
-        "min": 28
+        "max": 5,
+        "min": 5
       },
       {
         "id": "map_ground_effect_radius",
-        "max": 18,
-        "min": 18
+        "max": 26,
+        "min": 26
       }
     ],
     "text": "El área tiene zonas de suelo escarchado",
@@ -194276,13 +194866,13 @@
       },
       {
         "id": "map_ground_effect_patches_per_100_tiles",
-        "max": 20,
-        "min": 20
+        "max": 5,
+        "min": 5
       },
       {
         "id": "map_ground_effect_radius",
-        "max": 14,
-        "min": 14
+        "max": 17,
+        "min": 17
       }
     ],
     "text": "El área tiene zonas de [ShockedGround|suelo electrificado]",
@@ -194321,13 +194911,13 @@
       },
       {
         "id": "map_ground_effect_patches_per_100_tiles",
-        "max": 24,
-        "min": 24
+        "max": 6,
+        "min": 6
       },
       {
         "id": "map_ground_effect_radius",
-        "max": 16,
-        "min": 16
+        "max": 17,
+        "min": 17
       }
     ],
     "text": "El área tiene zonas de [ShockedGround|suelo electrificado]",
@@ -194366,13 +194956,13 @@
       },
       {
         "id": "map_ground_effect_patches_per_100_tiles",
-        "max": 28,
-        "min": 28
+        "max": 7,
+        "min": 7
       },
       {
         "id": "map_ground_effect_radius",
-        "max": 18,
-        "min": 18
+        "max": 17,
+        "min": 17
       }
     ],
     "text": "El área tiene zonas de [ShockedGround|suelo electrificado]",
@@ -327765,7 +328355,7 @@
         "min": 1
       }
     ],
-    "text": "El área contiene un [ContainsExpedition|encuentro de expedición]\nDistancia de colocación de explosivos aumentada un 50%\nCantidad de monedas exóticas arrojadas por los monstruos del área aumentada un 50%\nCantidad de artefactos arrojados por los monstruos aumentada un 40",
+    "text": "El área contiene un [ContainsExpedition|encuentro de expedición]\nAlcance de colocación de los explosivos de las [ContainsExpedition|expediciones] de tus mapas aumentado un 50%\nCantidad de monedas exóticas arrojadas por los monstruos del área aumentada un 50%\nCantidad de artefactos arrojados por los monstruos aumentada un 40",
     "type": "EverythingEverywhereExpedition",
     "gold_value": null
   },
@@ -350807,7 +351397,7 @@
     ],
     "text": null,
     "type": "VeiledPrefix",
-    "gold_value": null
+    "gold_value": 100.0
   },
   "VeiledSuffix": {
     "adds_tags": [],
@@ -350852,7 +351442,7 @@
     ],
     "text": null,
     "type": "VeiledSuffix",
-    "gold_value": null
+    "gold_value": 100.0
   },
   "BlightCrabMovementVelocity": {
     "adds_tags": [],
@@ -413288,7 +413878,7 @@
         "min": 10
       }
     ],
-    "text": "El radio de los explosivos está aumentado un (10-40)%",
+    "text": "Radio explosivo de la [ContainsExpedition|expedición] aumentado un (10-40)%",
     "type": "MapExpeditionExplosionRadius",
     "gold_value": null
   },
@@ -413488,7 +414078,7 @@
         "min": 20
       }
     ],
-    "text": "Distancia de colocación de explosivos aumentada un (20-50)%",
+    "text": "Alcance de colocación de los explosivos de las [ContainsExpedition|expediciones] de tus mapas aumentado un (20-50)%",
     "type": "MapExpeditionMaximumPlacementDistance",
     "gold_value": null
   },
@@ -433726,22 +434316,7 @@
     "spawn_weights": [],
     "stats": [
       {
-        "id": "map_no_core_leagues",
-        "max": 1,
-        "min": 1
-      },
-      {
-        "id": "map_no_strongboxes",
-        "max": 1,
-        "min": 1
-      },
-      {
-        "id": "map_no_shrines",
-        "max": 1,
-        "min": 1
-      },
-      {
-        "id": "map_no_essences",
+        "id": "map_no_natural_core_leagues",
         "max": 1,
         "min": 1
       }
@@ -434152,6 +434727,31 @@
       }
     ],
     "text": "El cofre contiene Temporalis",
+    "type": "MapReliquarySet",
+    "gold_value": null
+  },
+  "VaultKeyReliquarySetAzmeriSpirit": {
+    "adds_tags": [],
+    "domain": "necropolis_monster",
+    "generation_type": "unique",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "Nothing"
+    ],
+    "implicit_tags": [],
+    "is_essence_only": false,
+    "name": "",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "map_reliquary_set",
+        "max": 25,
+        "min": 25
+      }
+    ],
+    "text": null,
     "type": "MapReliquarySet",
     "gold_value": null
   },
@@ -440846,7 +441446,7 @@
         "min": 8000
       }
     ],
-    "text": "Los [HitDamage|impactos] de ataque aplican [SpectralFire|Llama fantasmal] durante 8 segundos",
+    "text": "Los [HitDamage|impactos] de ataque aplican [Ghostflame|Llama fantasmal] durante 8 segundos",
     "type": "GhostflameOnHit",
     "gold_value": null
   },
