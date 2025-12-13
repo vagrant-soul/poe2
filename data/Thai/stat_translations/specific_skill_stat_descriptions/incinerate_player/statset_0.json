@@ -98,6 +98,80 @@
   {
     "English": null,
     "ids": [
+      "active_skill_compounding_ignites"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สถานะ [Ignite|ลุกไหม้] ที่เกิดจากการใช้งานสกิลนี้หนึ่งครั้ง [CompoundIgnite|ลุกไหม้ทวีคูณ] หากไม่ได้เกิดจาก [IgnitedGround|พื้นลุกไหม้]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_fire_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "สร้างความเสียหาย [Fire|ไฟ] {0} ต่อวินาที",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_skill_effect_duration"
     ],
     "trade_stats": null,
@@ -306,138 +380,6 @@
   {
     "English": null,
     "ids": [
-      "incinerate_damage_+%_final_per_stage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "ความเสียหาย ที่เพิ่มขึ้น อีก ต่อจำนวนสเตจ@{0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "เพิ่มความเสียหาย อีก {0}% ต่อจำนวนสเตจ",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "incinerate_gain_stage_every_x_ms"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "ช่วงเวลาระหว่างการรับสเตจ@{0} วิ",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "ได้รับ 1 สเตจทุกวินาที",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "ได้รับ 1 สเตจทุก {0} วินาที",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "incinerate_buff_exposure_-_to_total_fire_resistance_per_stack",
       "incinerate_maximum_exposure_magnitude"
     ],
@@ -498,42 +440,6 @@
           []
         ],
         "string": "สร้างสถานะ [Exposure|พ่ายแก่ไฟ] ที่ซ้อนผลได้เมื่อสเตจเต็ม ทำให้ค่าต้านทาน [Fire|ไฟ] ลดลง {0}% ต่อจำนวนสถานะ สูงสุด {1}%",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "incinerate_maximum_stages"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "สูงสุด {0} สเตจ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -615,43 +521,7 @@
           [],
           []
         ],
-        "string": "สร้างสถานะ [Ignite|ลุกไหม้] ราวกับสร้างความเสียหาย [Fire|ไฟ] {0} ถึง {1}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "virtual_incinerate_maximum_stages"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "จำนวนสเตจสูงสุด@{0} สเตจ",
+        "string": "[Ignite|Ignites] as though dealing {0} to {1} [Fire] damage, every 0.075 seconds",
         "reminder_text": null,
         "is_markup": null
       }

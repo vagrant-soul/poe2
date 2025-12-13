@@ -17,7 +17,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "Root length@{0}m",
+        "string": "Fissure length@{0}m",
         "reminder_text": null,
         "is_markup": null
       }
@@ -55,7 +55,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "Root length is {0} metre",
+        "string": "Fissure length is {0} metre",
         "reminder_text": null,
         "is_markup": null
       },
@@ -75,7 +75,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "Root length is {0} metres",
+        "string": "Fissure length is {0} metres",
         "reminder_text": null,
         "is_markup": null
       }
@@ -196,6 +196,24 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0} to Fissure [Limit]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 1,
             "max": 1,
             "negated": null
@@ -207,7 +225,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Limit {0} Root",
+        "string": "[Limit] {0} Fissure",
         "reminder_text": null,
         "is_markup": null
       },
@@ -225,7 +243,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Limit {0} Roots",
+        "string": "[Limit] {0} Fissures",
         "reminder_text": null,
         "is_markup": null
       }
@@ -263,7 +281,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Root duration is {0} second",
+        "string": "Fissure duration is {0} second",
         "reminder_text": null,
         "is_markup": null
       },
@@ -283,7 +301,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Root duration is {0} seconds",
+        "string": "Fissure duration is {0} seconds",
         "reminder_text": null,
         "is_markup": null
       }
@@ -387,6 +405,62 @@
         "condition": [
           {
             "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Expiry rate when [Plant|Overgrown]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Plant|Overgrown] fissures expire {0}% slower",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "entangle_duration_speed_+%_when_wet"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
             "max": null,
             "negated": null
           }
@@ -397,7 +471,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Root limit@{0}",
+        "string": "Fissure [Limit]@{0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -435,7 +509,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Root duration@{0}s",
+        "string": "Fissure duration@{0}s",
         "reminder_text": null,
         "is_markup": null
       }

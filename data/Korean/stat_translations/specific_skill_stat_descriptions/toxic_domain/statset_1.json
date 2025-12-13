@@ -26,7 +26,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "Pustule [DetonationTime|Detonation] radius@{0}m",
+        "string": "농포 [DetonationTime|기폭] 반경@{0}미터",
         "reminder_text": null,
         "is_markup": null
       }
@@ -294,8 +294,44 @@
   {
     "English": null,
     "ids": [
-      "toxic_domain_+1%_final_more_damage_per_x_stored_poison",
-      "toxic_domain_max_damage_+%_final_from_stored_poison"
+      "skill_specific_stat_description_mode"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "농포가 자신에게 유발되는 [Poison|중독]의 예상되는 피해 저장",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "toxic_pustule_burst_1%_more_damage_per_x_stored_poison",
+      "toxic_pustule_max_burst_damage_+%_final_from_stored_poison"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -363,7 +399,8 @@
   {
     "English": null,
     "ids": [
-      "toxic_domain_pustule_poison_explode_threshold"
+      "toxic_pustule_burst_base_radius_+1_per_x_stored_poison",
+      "toxic_pustule_max_additional_burst_base_radius_+"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -374,36 +411,81 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 10,
+            "max": 10,
             "negated": null
           }
         ],
         "format": [
+          "ignore",
           "#"
         ],
         "index_handlers": [
-          []
+          [],
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
         ],
-        "string": "농포에 저장되는 [Poison|중독] 최대치@{0}",
+        "string": "저장된 [Poison|중독]이 기본 폭발 반경에 최대 {1}미터 추가",
         "reminder_text": null,
         "is_markup": null
       },
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
             "max": null,
             "negated": null
           }
         ],
         "format": [
+          "ignore",
           "#"
         ],
         "index_handlers": [
-          []
+          [],
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
         ],
-        "string": "농포가 최대 [Poison|중독] {0} 저장",
+        "string": "저장된 [Poison|중독]이 기본 폭발 반경에 최대 {1}미터 추가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "저장된 [Poison|중독]이 기본 폭발 반경에 최대 {1}미터 추가",
         "reminder_text": null,
         "is_markup": null
       }

@@ -2,6 +2,42 @@
   {
     "English": null,
     "ids": [
+      "active_skill_requires_X_glory"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "使用するのに{0}の[Glory|グローリー]を必要とする",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "skeletal_chains_aoe_%_health_dealt_as_chaos_damage"
     ],
     "trade_stats": null,
@@ -196,6 +232,44 @@
           ]
         ],
         "string": "キャストスピード{0}％減少を付与する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_main_hand_total_attack_fire_damage_permyriad_to_add_as_unscalable_damage_to_oil_ground_ignite"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_one_hundred"
+          ]
+        ],
+        "string": "[Ignite|発火]状態になると、[OilGround|オイル領域]はこのアタックの[Fire|火][HitDamage|ダメージ]の{0}%スケールしない[HitDamage|ダメージ]として[Ignite|発火]に追加する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2837,6 +2911,44 @@
         "index_handlers": [
           []
         ],
+        "string": "[Curse|呪い]の持続時間@無限",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[Curse|呪い]の持続時間は{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2147483646,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "[Curse|呪い]の持続時間は無限になる",
         "reminder_text": null,
         "is_markup": null
@@ -4546,7 +4658,7 @@
         "index_handlers": [
           []
         ],
-        "string": "キル時にフレンジーチャージを1個獲得する",
+        "string": "キル時に[Charges|フレンジーチャージ]を1個獲得する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13339,6 +13451,42 @@
   {
     "English": null,
     "ids": [
+      "elemental_discharge_no_physical_chaos_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Consume|消費]した[ElementalAilments|状態異常]と一致する[ElementalDamage|元素]属性のダメージだけを与える\n他の[DamageType|ダメージ属性]のダメージを与えられなくなる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "elemental_hit_no_physical_chaos_damage"
     ],
     "trade_stats": null,
@@ -18598,6 +18746,42 @@
   {
     "English": null,
     "ids": [
+      "active_skill_compounding_ignites"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "このスキルの単一の使用による[Ignite|発火]は[CompoundIgnite|複合]する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "active_skill_consume_enemy_freeze_to_gain_damage_+%_final"
     ],
     "trade_stats": null,
@@ -19643,18 +19827,18 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
+            "min": -100,
+            "max": -100,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
           []
         ],
-        "string": "[Freeze|凍結]蓄積モッド@{0}%",
+        "string": "[Freeze|凍結]蓄積を起こせなくなる",
         "reminder_text": null,
         "is_markup": null
       },
@@ -19728,7 +19912,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Stun|スタン]蓄積を起こさない",
+        "string": "[Stun|スタン]蓄積を起こせなくなる",
         "reminder_text": null,
         "is_markup": null
       },
@@ -19893,127 +20077,6 @@
   {
     "English": null,
     "ids": [
-      "active_skill_ignite_effect_+%_final",
-      "quality_display_active_skill_ignite_effect_is_gem"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "付与した[Ignite|発火]の[BuffMagnitude|強度]が{0}%上昇する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "付与した[Ignite|発火]の[BuffMagnitude|強度]が{0}%上昇する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ],
-          []
-        ],
-        "string": "付与した[Ignite|発火]の[BuffMagnitude|強度]が{0}%低下する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "付与した[Ignite|発火]の[BuffMagnitude|強度]が{0}%上昇する",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "active_skill_ignite_duration_+%_final"
     ],
     "trade_stats": null,
@@ -20056,6 +20119,100 @@
           ]
         ],
         "string": "[Ignite|発火]の持続時間が{0}%低下する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "active_skill_ignite_effect_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Ignite|発火][BuffMagnitude|強度]上昇@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Ignite|発火][BuffMagnitude|強度]低下@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Ignite|発火][BuffMagnitude|強度]が{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Ignite|発火][BuffMagnitude|強度]が{0}%低下する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -22364,98 +22521,6 @@
   {
     "English": null,
     "ids": [
-      "arc_damage_+%_final_for_each_remaining_chain"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "残りの[Chain|連鎖]回数ごとにダメージ上昇@{0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "残りの[Chain|連鎖]回数ごとにダメージが{0}%上昇する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "残りの[Chain|連鎖]回数ごとにダメージが{0}%上昇する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "残りの[Chain|連鎖]回数ごとにダメージが{0}%低下する",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "arc_damage_+%_final_per_chain"
     ],
     "trade_stats": null,
@@ -22848,6 +22913,62 @@
           []
         ],
         "string": "最大{0}個までの冷却エリアを展開できる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "area_of_effect_+%_final_from_whirling_assault_level"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "効果範囲が{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "効果範囲が{0}%低下する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -24066,7 +24187,7 @@
         "index_handlers": [
           []
         ],
-        "string": "キリングブロー時に{0}%の確率で発火した死体を破壊する",
+        "string": "[KillingBlow|キリングブロー]時に{0}%の確率で[Ignite|発火状態の死体]を破壊する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25026,60 +25147,6 @@
   {
     "English": null,
     "ids": [
-      "base_number_of_frozen_locus_allowed"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[IceCrystals|氷の結晶]の最大数 {0}",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[IceCrystals|氷の結晶]の最大数 {0}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "base_number_of_projectiles",
       "skill_can_fire_arrows",
       "quality_display_base_number_of_projectiles_is_gem"
@@ -25092,7 +25159,7 @@
       {
         "condition": [
           {
-            "min": 2,
+            "min": null,
             "max": null,
             "negated": null
           },
@@ -25124,13 +25191,13 @@
       {
         "condition": [
           {
-            "min": 2,
+            "min": null,
             "max": null,
             "negated": null
           },
           {
-            "min": 1,
-            "max": 1,
+            "min": 0,
+            "max": 0,
             "negated": null
           },
           {
@@ -25268,125 +25335,6 @@
           []
         ],
         "string": "[Projectile|投射物]を{0}個らせん状に放つ",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "base_number_of_shield_walls_allowed",
-      "quality_display_shield_wall_is_gem"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "一度に持てるアクティブなシールドウォールの数 {0}個",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "一度に持てるアクティブなシールドウォールの数 {0}個",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "一度にアクティブなシールドウォールを{0}個持てる",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "一度にアクティブなシールドウォールを{0}個持てる",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25759,6 +25707,122 @@
           []
         ],
         "string": "デバフは影響を与えている敵のクールダウン解消レートを{0}%減少させる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "bear_skills_additional_base_attack_time_when_performing_from_default_stance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "立ち構え状態でない時、基礎アタックタイム +{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "立ち構え状態でない時、基礎アタックタイム +{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "bear_skills_additional_base_attack_time_when_performing_from_standing_stance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "立ち構え状態の時、基礎アタックタイム +{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "立ち構え状態の時、基礎アタックタイム +{0}秒",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28872,6 +28936,42 @@
           []
         ],
         "string": "[Blind|盲目]を付与できない",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "cannot_inflict_bloodstone_lance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ブラッドストーンランスを付与できない",
         "reminder_text": null,
         "is_markup": null
       }
@@ -32520,6 +32620,104 @@
           []
         ],
         "string": "ヒット時に4秒間敵を狼狽させる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "channelled_skill_suppress_ongoing_rage_cost_for_first_X_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[Channelling|チャネリング]の最初の1秒の間[Rage|憤怒]コストを無視する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[Channelling|チャネリング]の最初の{0}秒の間[Rage|憤怒]コストを無視する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[Channelling|チャネリング]の最初の1秒の間[Rage|憤怒]コストを無視する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[Channelling|チャネリング]の最初の{0}秒の間[Rage|憤怒]コストを無視する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -38690,7 +38888,7 @@
         "index_handlers": [
           []
         ],
-        "string": "キル時に{0}%の確率で死体を破壊する",
+        "string": "キル時に{0}%の確率で[Corpse|死体]を破壊する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -39324,42 +39522,6 @@
   {
     "English": null,
     "ids": [
-      "display_bear_warcry"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "ソケットされたウォークライスキルをトリガーする",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "display_blink_base_cooldown"
     ],
     "trade_stats": null,
@@ -39422,6 +39584,42 @@
           ]
         ],
         "string": "物理ダメージの100%をブランドジェムのタグと一致する別のダメージタイプに変換する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_charge_speed_is_move_speed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "走るスピードは[Attack|アタック]スピードモッドの代わりに移動スピードモッドの影響を受ける",
         "reminder_text": null,
         "is_markup": null
       }
@@ -41808,6 +42006,42 @@
           ]
         ],
         "string": "オーブが{0}秒ごとにジャンプする",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_this_skill_cooldown_does_not_recover_during_buff"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "バフの効果中はクールダウンは解消されない",
         "reminder_text": null,
         "is_markup": null
       }
@@ -44799,6 +45033,60 @@
   {
     "English": null,
     "ids": [
+      "feral_invocation_gain_1_energy_per_X_mana_spent"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "エネルギーを獲得するのに必要なマナ使用量@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マナ{0}を使用するごとに[Energy|エネルギー]を1獲得する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "fire_beam_additional_stack_damage_+%_final"
     ],
     "trade_stats": null,
@@ -45059,42 +45347,6 @@
           []
         ],
         "string": "プレイヤーがスティールシャードを持っていない場合[Projectile|投射物]を1個だけ放つ",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "firestorm_and_bladefall_chance_to_replay_when_finished_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "終了した時に{0}%の確率で同じエリアに再度影響を与える",
         "reminder_text": null,
         "is_markup": null
       }
@@ -51654,42 +51906,6 @@
   {
     "English": null,
     "ids": [
-      "incinerate_starts_with_X_additional_stages"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}ステージ追加された状態で開始する",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "infernal_blow_explosion_applies_uncharged_debuff_on_hit_%_chance"
     ],
     "trade_stats": null,
@@ -53188,6 +53404,42 @@
   {
     "English": null,
     "ids": [
+      "life_leech_also_recovers_based_on_elemental_damage_types"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[LifeLeech|ライフリーチ]による回復は[Physical|物理]ダメージだけでなくこのスキルの[ElementalDamage|元素]ダメージにも基づくようになる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "lightning_ailment_effect_+%"
     ],
     "trade_stats": null,
@@ -53394,176 +53646,6 @@
           []
         ],
         "string": "最初の衝突時に{0}%の確率で追加のバーストを起こす",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "lightning_storm_hit_frequency_ms"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp"
-          ]
-        ],
-        "string": "{0}秒ごとに1体の対象にヒットする",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp"
-          ]
-        ],
-        "string": "{0}秒ごとに1体の対象にヒットする",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "lightning_storm_hit_prevention_duration_ms"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp"
-          ]
-        ],
-        "string": "{0}秒に一度だけそれぞれの敵にヒットする",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp"
-          ]
-        ],
-        "string": "{0}秒に一度だけそれぞれの敵にヒットする",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "lightning_storm_max_number_of_storms"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "一度に最大{0}個の雷嵐",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "一度に最大{0}個の雷嵐",
         "reminder_text": null,
         "is_markup": null
       }
@@ -55938,7 +56020,7 @@
             "divide_by_one_hundred_2dp_if_required"
           ]
         ],
-        "string": "プレイヤーが[Melee|近接][Attack|アタック]でキルした\n敵の[Power|パワー]ごとに{0}の[Energy|エネルギー]を獲得する",
+        "string": "プレイヤーが[Melee|近接][Attack|アタック]で倒した\n敵の[Power|パワー]ごとに{0}の[Energy|エネルギー]を獲得する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -56447,6 +56529,50 @@
           []
         ],
         "string": "[Strength|筋力]15ごとに{0}から{1}の基礎物理ダメージ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "minimum_unscalable_added_fire_damage_to_add_to_oil_ground_ignite",
+      "maximum_unscalable_added_fire_damage_to_add_to_oil_ground_ignite"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Ignite|発火]した[OilGround|オイル領域]はスケールしない[Fire|火][HitDamage|ダメージ]を追加@{0}から{1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -58268,6 +58394,42 @@
           ]
         ],
         "string": "繰り返しの三番目の攻撃のダメージが{0}%低下する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "never_ignite"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Ignite|発火]を付与できなくなる",
         "reminder_text": null,
         "is_markup": null
       }
@@ -60951,60 +61113,6 @@
   {
     "English": null,
     "ids": [
-      "physical_damage_%_dealt_as_evasion_break_vs_bleeding"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[Bleeding|出血]状態の敵に対する[Physical|物理]ダメージの何%の[Hobble|鈍足]を与えるか@{0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[Bleeding|出血]状態の敵に対する[Physical|物理][HitDamage|ヒット]ダメージの{0}%と同量の[Hobble|鈍足]を与える",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "physical_damage_reduction_%_per_crab_aspect_stack"
     ],
     "trade_stats": null,
@@ -61330,6 +61438,60 @@
   {
     "English": null,
     "ids": [
+      "plant_skill_damage_+%_final_when_wet"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "More [Plant|Overgrown] damage@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% more damage when [Plant|Overgrown]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_poison_effect_+%"
     ],
     "trade_stats": null,
@@ -61386,8 +61548,8 @@
   {
     "English": null,
     "ids": [
-      "poisonbloom_arrow_burst_base_radius_+1_per_x_stored_poison",
-      "poisonbloom_arrow_max_additional_burst_base_radius_+"
+      "toxic_pustule_burst_base_radius_+1_per_x_stored_poison",
+      "toxic_pustule_max_additional_burst_base_radius_+"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -61486,8 +61648,8 @@
   {
     "English": null,
     "ids": [
-      "poisonbloom_arrow_bloom_burst_1%_more_damage_per_x_stored_poison",
-      "poisonbloom_arrow_bloom_max_burst_damage_+%_final_from_stored_poison"
+      "toxic_pustule_burst_1%_more_damage_per_x_stored_poison",
+      "toxic_pustule_max_burst_damage_+%_final_from_stored_poison"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -62219,6 +62381,42 @@
   {
     "English": null,
     "ids": [
+      "projectile_only_collide_with_wet_targets"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "投射物はずぶ濡れ状態の敵とだけ衝突できる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "projectile_speed_+%"
     ],
     "trade_stats": null,
@@ -62695,6 +62893,44 @@
   {
     "English": null,
     "ids": [
+      "pustules_grow_as_though_dealing_X_poison_damage_per_minute_when_wet"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second_1dp"
+          ]
+        ],
+        "string": "[Plant|Overgrown] Pustules grow as though dealt {0} [Poison] damage per second",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "quick_guard_damage_absorbed_%",
       "quick_guard_damage_absorb_limit"
     ],
@@ -63042,6 +63278,84 @@
           ]
         ],
         "string": "レイジストームは{0}%減少したスピードで移動する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "rain_hit_delay_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "対象に対する再[HitDamage|ヒット間隔@{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp"
+          ]
+        ],
+        "string": "{0}秒に一度だけそれぞれの敵にヒットする",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp"
+          ]
+        ],
+        "string": "{0}秒に一度だけそれぞれの敵にヒットする",
         "reminder_text": null,
         "is_markup": null
       }
@@ -66189,6 +66503,42 @@
   {
     "English": null,
     "ids": [
+      "skill_additional_fissure_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}%の確率で追加の亀裂を生成する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "skill_angle_+%_in_sand_stance"
     ],
     "trade_stats": null,
@@ -66335,7 +66685,7 @@
   {
     "English": null,
     "ids": [
-      "skill_base_covered_in_oil_movement_speed_+%_final_to_apply"
+      "skill_base_oil_movement_speed_+%_final_to_apply"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -66358,7 +66708,7 @@
             "negate"
           ]
         ],
-        "string": "敵を[Oil|オイル]塗れにするとその移動スピードを{0}%[Slow|減速]させる",
+        "string": "[Oil|オイル]は敵の移動スピードを{0}%[Slow|減速]させる",
         "reminder_text": null,
         "is_markup": null
       }
@@ -66373,7 +66723,7 @@
   {
     "English": null,
     "ids": [
-      "skill_base_covered_in_oil_exposure_-_to_total_elemental_resistance"
+      "skill_base_oil_exposure_-_to_total_elemental_resistance"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -66396,7 +66746,7 @@
             "negate"
           ]
         ],
-        "string": "[Oil|オイル]塗れの敵に対する[Exposure|曝露]合計[Resistances|耐性] モッド@{0}%",
+        "string": "[Oil|オイル][Exposure|曝露]合計[Resistances|耐性]モッド@{0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -66414,83 +66764,7 @@
         "index_handlers": [
           []
         ],
-        "string": "敵を[Oil|オイル]塗れにすると[Exposure|曝露]を付与し、その合計[ElementalDamage|元素]耐性を{0}%下げる",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "skill_base_ground_oil_movement_speed_+%_final_to_apply"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[OilGround|オイル領域]は敵の移動スピードを{0}%[Slow|減速]させる",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "skill_base_ground_oil_exposure_-_to_total_elemental_resistance"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[OilGround|オイル領域]の[Exposure|曝露]合計[Resistances|耐性] モッド@{0}%",
+        "string": "[Oil|オイル]は[Exposure|曝露]を付与し\n合計[ElementalDamage|元素][Resistances|耐性]を{0}%下げる",
         "reminder_text": null,
         "is_markup": null
       },
@@ -66508,7 +66782,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[OilGround|オイル領域]は敵に[Exposure|曝露]を適用し、その合計耐性を{0}%下げる",
+        "string": "[Oil|オイル]は[Exposure|曝露]を付与し\n合計[ElementalDamage|元素][Resistances|耐性]を{0}%下げる",
         "reminder_text": null,
         "is_markup": null
       }
@@ -66601,6 +66875,78 @@
           ]
         ],
         "string": "オーラは[Attack|アタック]スピードおよびキャストスピード{0}%減少を付与する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_can_flicker"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "追加の適正な対象にダッシュを行い[Strike|ストライク]する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_cannot_gain_rage_during_use"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "このスキル使用中は[Rage|憤怒]を獲得できない",
         "reminder_text": null,
         "is_markup": null
       }
@@ -66729,44 +67075,6 @@
           []
         ],
         "string": "[Charges|パワーチャージ]消費時[Critical|クリティカルヒット率]上昇@{0}%",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "skill_covered_in_oil_movement_speed_+%_final_to_apply"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[Oil|オイル]塗れは移動スピードを何%[Slow|減速]させるか@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -67465,44 +67773,6 @@
   {
     "English": null,
     "ids": [
-      "skill_ground_oil_movement_speed_+%_final_to_apply"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[OilGround|オイル領域]は移動スピードを何%[Slow|減速]させるか@{0}%",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "skill_has_trigger_from_unique_item"
     ],
     "trade_stats": null,
@@ -67525,6 +67795,60 @@
           []
         ],
         "string": "このスキルはユニークアイテムによりトリガーされる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_hyena_cackle_size"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}体のハイエナを召喚する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}体のハイエナを召喚する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -67597,6 +67921,42 @@
   {
     "English": null,
     "ids": [
+      "skill_maximum_number_of_combo_stacks"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "コンボの最大数@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "skill_maximum_travel_distance_+%"
     ],
     "trade_stats": null,
@@ -67655,6 +68015,44 @@
           []
         ],
         "string": "スケルトン[Minion|ミニオン]を追加で1体対象にする",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_oil_movement_speed_+%_final_to_apply"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Oil|オイル]による移動スピード[Slow|減速]@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -67927,6 +68325,60 @@
   {
     "English": null,
     "ids": [
+      "skill_wolf_pack_size"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}体のオオカミを召喚する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}体のオオカミを召喚する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "slam_aftershock_chance_%"
     ],
     "trade_stats": null,
@@ -67948,7 +68400,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Aftershock|余震]を引き起こす確率 {0}%",
+        "string": "{0}%の確率で[Aftershock|余震]を追加で1回引き起こす",
         "reminder_text": null,
         "is_markup": null
       }
@@ -68791,6 +69243,62 @@
   {
     "English": null,
     "ids": [
+      "spellflux_frequency_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "幻影の頻度が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "幻影の頻度が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "spell_has_trigger_from_crafted_item_mod"
     ],
     "trade_stats": null,
@@ -68813,6 +69321,138 @@
           []
         ],
         "string": "このスペルはクラフトモッドによりトリガーされる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "spell_minimum_base_fire_damage_as_%_of_intelligence",
+      "spell_maximum_base_fire_damage_as_%_of_intelligence"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Intelligence|知性]の{0}%から{1}%を[Fire|火]ダメージとして与える",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "spell_minimum_base_cold_damage_as_%_of_intelligence",
+      "spell_maximum_base_cold_damage_as_%_of_intelligence"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Intelligence|知性]の{0}%から{1}%を[Cold|冷気]ダメージとして与える",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "spell_minimum_base_lightning_damage_as_%_of_intelligence",
+      "spell_maximum_base_lightning_damage_as_%_of_intelligence"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Intelligence|知性]の{0}%から{1}%を[Lightning|雷]ダメージとして与える",
         "reminder_text": null,
         "is_markup": null
       }
@@ -69193,6 +69833,214 @@
           []
         ],
         "string": "[PRojectile|投射物]を2個追加で放つ確率 {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "spellflux_base_delay_between_fluxes_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "幻影が出現する間の遅延は{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "幻影が出現する間の遅延は{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "spellflux_frequency_+%_per_socketed_valid_spell"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "幻影をキャスト可能な[Spell|スペル]ごとに幻影の頻度が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "幻影をキャスト可能な[Spell|スペル]ごとに幻影の頻度が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "spellflux_spell_damage_+%_final_if_matching_flux_cast"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Empowered|強化]された[Spell|スペル]のダメージ@{0}%上昇",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Empowered|強化]された[Spell|スペル]のダメージ@{0}%低下",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "次回の幻影までに一致する[Spell|スペル]をキャストするとそのスペルを[Empowered|強化]する\n[Empowered|強化]されたスペルはダメージが{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "次回の幻影までに一致する[Spell|スペル]をキャストするとそのスペルを[Empowered|強化]する\n[Empowered|強化]されたスペルはダメージが{0}%低下する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -69599,125 +70447,6 @@
           ]
         ],
         "string": "亀裂の長さが{0}%減少する",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "spike_slam_max_spikes",
-      "quality_display_earthshatter_is_gem"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "スパイクの最大数が{0}される",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "スパイクの最大数が{0}される",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "スパイクの最大数 {0}本",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "スパイクの最大数 {0}本",
         "reminder_text": null,
         "is_markup": null
       }
@@ -72551,7 +73280,7 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "このスキルでスタンを受けた敵は{0}秒間[Crushed|破砕]も受ける",
+        "string": "このスキルでスタンを受けた敵は{0}秒間[Crushed|クラッシュ]状態になる",
         "reminder_text": null,
         "is_markup": null
       }
@@ -72988,7 +73717,7 @@
             "milliseconds_to_seconds_0dp"
           ]
         ],
-        "string": "レアモンスターに対してキリングブローを与えるとそのモッドのうちの1個を{0}秒間獲得する",
+        "string": "[Rarity|レアモンスター]に対する[KillingBlow|キリングブロー]は\nその[MonsterModifiers|モッド]の一個を{0}秒付与する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -73062,7 +73791,7 @@
             "milliseconds_to_seconds_0dp"
           ]
         ],
-        "string": "[Rarity|レア]モンスターをキルした時にその[MonsterModifiers|モッド]を盗む時間@{0}秒",
+        "string": "[Rarity|レア]モンスターを倒した時にその[MonsterModifiers|モッド]を盗む時間@{0}秒",
         "reminder_text": null,
         "is_markup": null
       }
@@ -73100,7 +73829,7 @@
             "milliseconds_to_seconds_0dp"
           ]
         ],
-        "string": "[Rarity|レア]モンスターをキルした時にその[MonsterModifiers|モッド]を盗む時間@{0}秒",
+        "string": "[Rarity|レア]モンスターを倒した時にその[MonsterModifiers|モッド]を盗む時間@{0}秒",
         "reminder_text": null,
         "is_markup": null
       }
@@ -73954,7 +74683,7 @@
   {
     "English": null,
     "ids": [
-      "support_impact_shockwave_base_splash_radius"
+      "support_impact_shockwave_non_slam_aftershock_on_heavy_stun_radius"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -74022,6 +74751,77 @@
           []
         ],
         "string": "[Critical|クリティカルヒット]を与えていない時の毎秒の[Critical|クリティカルヒット]率増加@{0}% (最大{1}%)",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_inevitable_criticals_critical_strike_multiplier_+%_final_per_second",
+      "support_inevitable_criticals_critical_strike_multiplier_+%_final_cap"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Critical|クリティカルヒット]していない秒数ごとの[CriticalDamageBonus|クリティカルダメージボーナス]上昇獲得@0% (最大 {1}%)",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ],
+          []
+        ],
+        "string": "[Critical|クリティカルヒット]していない秒数ごとの[CriticalDamageBonus|クリティカルダメージボーナス]低下獲得@0% (最大 {1}%)",
         "reminder_text": null,
         "is_markup": null
       }
@@ -75480,7 +76280,7 @@
           [],
           []
         ],
-        "string": "[Rage|憤怒]を{0}消費した時のダメージ上昇@{1}%",
+        "string": "[Rage|憤怒]を{0}使用した時のダメージ上昇@{1}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -75516,7 +76316,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Shock|感電]状態の敵をキルした時の[EnergyShield|エナジーシールド]回復量@{0}%",
+        "string": "[Shock|感電]状態の敵を倒した時の[EnergyShield|エナジーシールド]回復量@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -78272,6 +79072,42 @@
   {
     "English": null,
     "ids": [
+      "thorns_damage_modifiers_apply_to_spell_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Thorns|棘]ダメージのモッドはこのスキルの[Spell|スペル]ダメージに適用される",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "thunderous_leap_%_chance_for_shocked_ground_when_detonating"
     ],
     "trade_stats": null,
@@ -78706,75 +79542,6 @@
           ]
         ],
         "string": "[Totem|トーテム]は毎秒ライフの{0}%を自動回復する",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "toxic_domain_+1%_final_more_damage_per_x_stored_poison",
-      "toxic_domain_max_damage_+%_final_from_stored_poison"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "#"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "[Poison|毒]による爆発ダメージの最大上昇@{1}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "#"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "貯められた[Poison|毒]は爆発のダメージに最大{1}%上昇を付与する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -80415,6 +81182,64 @@
           ]
         ],
         "string": "プレイヤーがチャネリングしていない時にシール獲得頻度が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "use_time_+_ms_if_shapeshift_required"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[Shapeshift|シェープシフト]時の基礎使用時間追加@+{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[Shapeshift|シェープシフト]時の基礎使用時間 +{0}秒",
         "reminder_text": null,
         "is_markup": null
       }
@@ -82514,7 +83339,7 @@
   {
     "English": null,
     "ids": [
-      "virtual_main_hand_non_slam_aftershock_chance_%"
+      "virtual_main_hand_melee_splash_chance_%"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -82535,7 +83360,7 @@
         "index_handlers": [
           []
         ],
-        "string": "メインハンド[Aftershock|余震]確率@{0}%",
+        "string": "メインハンド[MeleeSplash|スプラッシュ]確率@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -82571,7 +83396,7 @@
         "index_handlers": [
           []
         ],
-        "string": "メインハンド[Aftershock|余震]確率@{0}%",
+        "string": "メインハンド追加[Aftershock|余震]確率@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -83140,7 +83965,7 @@
   {
     "English": null,
     "ids": [
-      "virtual_off_hand_non_slam_aftershock_chance_%"
+      "virtual_off_hand_melee_splash_chance_%"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -83161,7 +83986,7 @@
         "index_handlers": [
           []
         ],
-        "string": "オフハンド[Aftershock|余震]確率@{0}%",
+        "string": "オフハンド[MeleeSplash|スプラッシュ]確率@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -83197,7 +84022,7 @@
         "index_handlers": [
           []
         ],
-        "string": "オフハンド[Aftershock|余震]確率@{0}%",
+        "string": "オフハンド追加[Aftershock|余震]確率@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -87932,205 +88757,7 @@
   {
     "English": null,
     "ids": [
-      "wolf_warcry_buff_cold_damage_min_per_5_power_up_to_cap",
-      "wolf_warcry_buff_cold_damage_max_per_5_power_up_to_cap",
-      "wolf_warcry_buff_cold_damage_min_cap",
-      "wolf_warcry_buff_cold_damage_max_cap"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "#",
-          "#",
-          "#"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          [],
-          []
-        ],
-        "string": "バフは範囲内の敵と味方の[Power|パワー]5ごとに{0}から{1}の追加[Attack|アタック][Cold|冷気]ダメージを付与する、上限は{2}から{3}まで",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "#",
-          "#",
-          "#"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          [],
-          []
-        ],
-        "string": "バフは範囲内の敵と味方の[Power|パワー]5ごとに{0}から{1}の追加[Attack|アタック][Cold|冷気]ダメージを付与する、上限は{2}から{3}まで",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "wolf_warcry_empowered_attack_cold_damage_min_per_5_power_up_to_cap",
-      "wolf_warcry_empowered_attack_cold_damage_max_per_5_power_up_to_cap",
-      "wolf_warcry_empowered_attack_cold_damage_min_cap",
-      "wolf_warcry_empowered_attack_cold_damage_max_cap"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "#",
-          "#",
-          "#"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          [],
-          []
-        ],
-        "string": "[Empowered|強化]された[Attack|アタック]は範囲内の敵と味方の[Power|パワー]5ごとに{0}から{1}の追加][Cold|冷気]ダメージを持つ、上限は{2}から{3}まで",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "#",
-          "#",
-          "#"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          [],
-          []
-        ],
-        "string": "[Empowered|強化]された[Attack|アタック]は範囲内の敵と味方の[Power|パワー]5ごとに{0}から{1}の追加][Cold|冷気]ダメージを持つ、上限は{2}から{3}まで",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "wolf_warcry_focus_fire_duration_ms"
+      "wolf_lunar_blessing_same_target_trigger_beam_attack_prevention_duration_ms"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -88150,10 +88777,50 @@
         ],
         "index_handlers": [
           [
-            "milliseconds_to_seconds"
+            "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "プレイヤーがこの[Warcry|ウォークライ]で敵をヒットした時に、ウルフは{0}秒間クロススラッシュにより[Mark|標的]とされた敵に集中攻撃する",
+        "string": "対象に対する再[HitDamage|ヒット間隔@{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp"
+          ]
+        ],
+        "string": "{0}秒に一度だけそれぞれの敵にヒットする",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp"
+          ]
+        ],
+        "string": "{0}秒に一度だけそれぞれの敵にヒットする",
         "reminder_text": null,
         "is_markup": null
       }
@@ -88189,7 +88856,7 @@
         "index_handlers": [
           []
         ],
-        "string": "範囲内の[Mark|標的]とされた敵ごとにアイスウルフを召喚する。ウルフは永続であるが復活はしない。ウルフの最大数は{0}。最大数のウルフを召喚している場合新しく召喚するのではなく代わりに最もライフの低いウルフを回復する",
+        "string": "[DNT-UNUSED] Wolves are permanent and not-reviving. Maximum number of wolves {0}. If you already have maximum wolves it will heal a wolf with the lowest health instead of summoning a new one.",
         "reminder_text": null,
         "is_markup": null
       },
@@ -88207,7 +88874,43 @@
         "index_handlers": [
           []
         ],
-        "string": "範囲内の[Mark|標的]とされた敵ごとにアイスウルフを召喚する。ウルフは永続であるが復活はしない。ウルフの最大数は{0}。最大数のウルフを召喚している場合新しく召喚するのではなく代わりに最もライフの低いウルフを回復する",
+        "string": "[DNT-UNUSED] Wolves are permanent and not-reviving. Maximum number of wolves {0}. If you already have maximum wolves it will heal a wolf with the lowest health instead of summoning a new one.",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "wolf_warcry_summon_x_additional_wolf_for_each_endurance_chage_consumed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT-UNUSED] Summons {0} additonal wolves per each Endurance charge consumed",
         "reminder_text": null,
         "is_markup": null
       }

@@ -648,7 +648,7 @@
         "index_handlers": [
           []
         ],
-        "string": "처치 시 격분 충전 획득",
+        "string": "처치 시 [Charges|격분 충전] 획득",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1044,7 +1044,7 @@
         "index_handlers": [
           []
         ],
-        "string": "플레이어가 [Charges|충전]을 획득할 상황에서, 플레이어에게 [Presence|접근]해 있는 [Allies|동료들]이 그 충전을 대신 획득",
+        "string": "플레이어가 [Charges|충전]을 획득할 상황에서, 플레이어에게 [Presence|접근]해 있는 [Allies|동료들]이 그 [Charges|충전]을 대신 획득",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1152,7 +1152,7 @@
         "index_handlers": [
           []
         ],
-        "string": "플레이어가 생성하는 [ElementalInfusion|주입] [Remnant|잔류물]이 항상 무작위 원소",
+        "string": "[Fire|화염] [ElementalInfusion|주입] [Remnant|잔류물] 대신 [Cold|냉기] [ElementalInfusion|주입] [Remnant|잔류물] 생성\n[Lightning|번개] [ElementalInfusion|주입] [Remnant|잔류물] 대신 [Fire|화염] [ElementalInfusion|주입] [Remnant|잔류물] 생성\n[Cold|냉기] [ElementalInfusion|주입] [Remnant|잔류물] 대신 [Lightning|번개] [ElementalInfusion|주입] [Remnant|잔류물] 생성",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1763,7 +1763,7 @@
         "index_handlers": [
           []
         ],
-        "string": "머라우더의 시작 포인트에서 패시브 스킬 할당 가능",
+        "string": "워리어의 시작 포인트에서 패시브 스킬 할당 가능",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1799,7 +1799,7 @@
         "index_handlers": [
           []
         ],
-        "string": "위치의 시작 포인트에서 패시브 스킬 할당 가능",
+        "string": "소서리스의 시작 포인트에서 패시브 스킬 할당 가능",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1921,6 +1921,64 @@
   {
     "English": null,
     "ids": [
+      "energy_shield_recharge_starts_X_ms_sooner"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "기본 [ESRecharge|에너지 보호막 재충전] 지연 -{0}초",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "기본 [ESRecharge|에너지 보호막 재충전] 지연 -{0}초",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "gain_X_life_flask_charges_per_4%_life_spent"
     ],
     "trade_stats": null,
@@ -1943,7 +2001,7 @@
         "index_handlers": [
           []
         ],
-        "string": "소모한 생명력 4%당 생명력 [플라스크] 충전 {0} 획득",
+        "string": "소모한 생명력 4%당 생명력 플라스크 충전 {0} 획득",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1961,7 +2019,63 @@
         "index_handlers": [
           []
         ],
-        "string": "소모한 생명력 4%당 생명력 [플라스크] 충전 {0} 획득",
+        "string": "소모한 생명력 4%당 생명력 플라스크 충전 {0} 획득",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "global_defences_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Defences|방어력] {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Defences|방어력] {0}% 감소",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1999,7 +2113,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[DNT] Adaptations last for {0} second",
+        "string": "[Adaptation|적응] 지속시간 {0}초",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2019,7 +2133,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[DNT] Adaptations last for {0} seconds",
+        "string": "[Adaptation|적응] 지속시간 {0}초",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2033,7 +2147,7 @@
   {
     "English": null,
     "ids": [
-      "add_X_guard_on_trigger_per_100_ms_total_use_time_of_triggered_skill_up_to_maximum_mana"
+      "gain_X_adaptation_matching_type_when_hit_by_elemental_damage"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2045,6 +2159,24 @@
         "condition": [
           {
             "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[HitDamage|명중]될 때마다 가장 높은 [ElementalDamage|원소 피해 유형]에 [Adaptation|적응]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
             "max": null,
             "negated": null
           }
@@ -2055,105 +2187,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Add {0} [Guard] when [Trigger|Triggering] a Skill for every 0.1 seconds of base use time of that Skill",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "add_X_ms_to_energy_shield_recharge_delay_per_combo_spent"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[DNT] Expending [Combo] adds {0} second to remaining [ESRecharge|Energy Shield Recharge] delay per [Combo]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[DNT] Expending [Combo] adds {0} seconds to remaining [ESRecharge|Energy Shield Recharge] delay per [Combo]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": -1000,
-            "max": -1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[DNT] Expending [Combo] removes {0} second from remaining [ESRecharge|Energy Shield Recharge] delay per [Combo]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[DNT] Expending [Combo] removes {0} seconds from remaining [ESRecharge|Energy Shield Recharge] delay per [Combo]",
+        "string": "[HitDamage|명중]될 때마다 가장 높은 [ElementalDamage|원소 피해 유형]에 {0}번 [Adaptation|적응]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2208,42 +2242,6 @@
           []
         ],
         "string": "[HitDamage|명중] 시 추가 [Combo|연계] 1 축적",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "additional_combo_gain_on_hit"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] Gain {0} additional [Combo] whenever you gain [Combo]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2387,7 +2385,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% more Mana cost of [Trigger|Triggered Skills]",
+        "string": "[DNT-UNUSED] {0}% more Mana cost of [Trigger|Triggered Skills]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2407,7 +2405,7 @@
             "negate"
           ]
         ],
-        "string": "[DNT] {0}% less Mana cost of [Trigger|Triggered Skills]",
+        "string": "[DNT-UNUSED] {0}% less Mana cost of [Trigger|Triggered Skills]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2459,7 +2457,7 @@
   {
     "English": null,
     "ids": [
-      "ascendancy_enable_fire_djinn_passive"
+      "ascendancy_disconnected_passives_can_be_allocated_around_allocated_keystones"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2470,7 +2468,7 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
@@ -2481,7 +2479,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Fire Djinn will use Flame Slice on Enemies you target with Damaging Skills",
+        "string": "할당된 핵심노드 패시브 스킬의 중형 반경 내 비-핵심노드 패시브 스킬이 트리와 연결되지 않아도 할당 가능",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2603,62 +2601,6 @@
   {
     "English": null,
     "ids": [
-      "ascendancy_lich_spell_damage_+%_final_when_sacrificing_energy_shield"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[EnergyShield|에너지 보호막]을 [Sacrifice|희생]하면 [Spell|주문]으로 주는 피해 {0}% 증폭",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[EnergyShield|에너지 보호막]을 [Sacrifice|희생]하면 [Spell|주문]으로 주는 피해 {0}% 감폭",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "ascendancy_lich_spells_consume_power_charges_for_spell_damage_+%_final"
     ],
     "trade_stats": null,
@@ -2715,6 +2657,42 @@
   {
     "English": null,
     "ids": [
+      "ascendancy_oracle_can_allocate_additional_oracle_only_passives_display"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[OraclePaths|가지 않은 길]을 걸음",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "ascendancy_random_ignite_effect_+%_final_up_to_%"
     ],
     "trade_stats": null,
@@ -2737,7 +2715,135 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Ignite|Ignites] you inflict have up to {0}% more [BuffMagnitude|Magnitude], at random",
+        "string": "[DNT-UNUSED] [Ignite|Ignites] you inflict have up to {0}% more [BuffMagnitude|Magnitude], at random",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_ritualist_damage_+%_final_vs_enemies_affected_by_blood_boil"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "피 종기의 영향을 받는 적에게 주는 피해 {0}% 증폭",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "피 종기의 영향을 받는 적에게 주는 피해 {0}% 감폭",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_shaman_+_spirit_per_empty_charm_slot"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "자신의 이용 가능한 빈 [Charm|호신부] 슬롯 하나당 추가 [Spirit|정신력] {0} 획득",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_shaman_spell_damage_+%_final_per_2_rage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Rage|격노] 2당 [Spell|주문] 피해도 {0}% 증폭",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2847,7 +2953,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Minimum {0} Vivid Stag Wisp",
+        "string": "[DNT-UNUSED] Minimum {0} Vivid Stag Wisp",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2865,7 +2971,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Minimum {0} Vivid Stag Wisps",
+        "string": "[DNT-UNUSED] Minimum {0} Vivid Stag Wisps",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2935,42 +3041,6 @@
   {
     "English": null,
     "ids": [
-      "base_rage_cost"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] {0} to [Rage] cost of Skills",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "base_rage_regeneration_rate_per_minute_%"
     ],
     "trade_stats": null,
@@ -2995,7 +3065,7 @@
             "per_minute_to_per_second_2dp_if_required"
           ]
         ],
-        "string": "[DNT] Regenerate {0}% of your Maximum [Rage] per second",
+        "string": "1초마다 [Rage|격노] 최대치의 {0}% 재생",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3119,7 +3189,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] You can wield a [Focus] while also wielding a [Staff]",
+        "string": "[Staff|지팡이] 장착 시 [Focus|집중구] 장착 가능",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3155,7 +3225,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Any [Attack] [HitDamage|Hit] can gain [Combo]",
+        "string": "[DNT-UNUSED] Any [Attack] [HitDamage|Hit] can gain [Combo]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3389,7 +3459,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% chance to generate an Owl Feather on [Critical|Critical Hit]",
+        "string": "[DNT-UNUSED] {0}% chance to generate an Owl Feather on [Critical|Critical Hit]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3561,7 +3631,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Companion|Companions] deal {0}% increased Damage per socketed Talisman",
+        "string": "[DNT-UNUSED] [Companion|Companions] deal {0}% increased Damage per socketed Talisman",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3581,7 +3651,7 @@
             "negate"
           ]
         ],
-        "string": "[DNT] [Companion|Companions] deal {0}% reduced Damage per socketed Talisman",
+        "string": "[DNT-UNUSED] [Companion|Companions] deal {0}% reduced Damage per socketed Talisman",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3797,7 +3867,7 @@
         "index_handlers": [
           []
         ],
-        "string": "플레이어가 [Curse|저주]하는 적의 생명력이 {0}% 이상 [Reservation|점유]됨",
+        "string": "플레이어가 [Curse|저주]하는 대상의 생명력이 {0}% 이상 [Reservation|점유]됨",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3869,7 +3939,7 @@
         "index_handlers": [
           []
         ],
-        "string": "직접 [Block|막는] 동안 {0}%의 확률로 [HitDamage|명중]이 [Block|막힌] 적을 [Daze|혼미]하게 함",
+        "string": "[Shield|방패]를 올려 [Block|막는] 동안 {0}%의 확률로 [HitDamage|명중]이 [Block|막힌] 적을 [Daze|혼미]하게 함",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3905,7 +3975,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Enable Living Bomb",
+        "string": "[DNT-UNUSED] Enable Living Bomb",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3977,7 +4047,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Enable Explosive Teleport",
+        "string": "[DNT-UNUSED] Enable Explosive Teleport",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4013,7 +4083,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Enable Hand Slam",
+        "string": "[DNT-UNUSED] Enable Hand Slam",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4049,7 +4119,43 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Enable Knife Toss",
+        "string": "[DNT-UNUSED] Enable Knife Toss",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_travellers_wisdom_extra_attribute_options"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "능력치 패시브 스킬이 피해 5% 증가로 대체 가능\n능력치 패시브 스킬이 [Defences|방어력] 5% 증가로 대체 가능\n능력치 패시브 스킬이 비용 [Efficiency|효율] 5% 증가로 대체 가능",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4121,7 +4227,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% more [ESRecharge|Energy Shield Recharge Rate]",
+        "string": "[LowEnergyShield|낮은 에너지 보호막] 상태일 때 [ESRecharge|에너지 보호막 재충전 속도] {0}% 증폭",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4141,7 +4247,43 @@
             "negate"
           ]
         ],
-        "string": "[DNT] {0}% less [ESRecharge|Energy Shield Recharge Rate]",
+        "string": "[LowEnergyShield|낮은 에너지 보호막] 상태일 때 [ESRecharge|에너지 보호막 재충전 속도] {0}% 감폭",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "double_adaptation_effect"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Adaptation|적응] 효과 2배",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4191,7 +4333,7 @@
   {
     "English": null,
     "ids": [
-      "elemental_damage_taken_+%_final_per_matching_adaptation"
+      "ascendancy_druid_shaman_elemental_damage_taken_+%_final_per_matching_adaptation"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -4199,24 +4341,6 @@
     "German": null,
     "Japanese": null,
     "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] {0}% more [ElementalDamage|Elemental Damage] taken per Adaptation, matching that Adaptations type",
-        "reminder_text": null,
-        "is_markup": null
-      },
       {
         "condition": [
           {
@@ -4233,7 +4357,25 @@
             "negate"
           ]
         ],
-        "string": "[DNT] {0}% less [ElementalDamage|Elemental Damage] taken per Adaptation, matching that Adaptations type",
+        "string": "[Adaptation|적응] 하나가 해당 [Adaptation|적응] 유형의 받는 피해 {0}% 감폭 효과 부여",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Adaptation|적응] 하나가 해당 [Adaptation|적응] 유형의 받는 피해 {0}% 증폭 효과 부여",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4270,64 +4412,6 @@
           []
         ],
         "string": "[ElementalDamage|원소] 스킬 [Limit|제한] {0}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "energy_shield_recharge_starts_X_ms_sooner"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[ESRecharge|에너지 보호막 재충전]이 {0}초 먼저 시작됨",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[ESRecharge|에너지 보호막 재충전]이 {0}초 먼저 시작됨",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4401,7 +4485,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% increased bonuses gained from Equipped [Focus]",
+        "string": "장착 중인 [Focus|집중구]로 받는 보너스 {0}% 증가",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4421,43 +4505,7 @@
             "negate"
           ]
         ],
-        "string": "[DNT] {0}% reduced bonuses gained from Equipped [Focus]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "gain_X_adaptation_matching_type_when_hit_by_elemental_damage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] Gain {0} Adaptation when hit by [ElementalDamage|Elemental Damage], matching the type of the Damage taken",
+        "string": "장착 중인 [Focus|집중구]로 받는 보너스 {0}% 감소",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4507,6 +4555,42 @@
   {
     "English": null,
     "ids": [
+      "hit_damage_remove_from_mana_before_life_while_mana_higher_than_life"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "현재 마나가 현재 생명력보다 클 경우 [HitDamage|명중] 피해를 생명력 대신 마나로 소모",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "immune_to_volatility_damage"
     ],
     "trade_stats": null,
@@ -4530,6 +4614,114 @@
           []
         ],
         "string": "[Volatility|일촉즉발]로 피해를 받지 않음",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "gain_elemental_archon_when_you_cast_a_spell_while_on_high_infernal_flame"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[HighInfernalFlame|높은 지옥불 화염] 상태일 때 [Spell|주문] 시전 시 [ElementalArchon|원소 집정관] 획득",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "elemental_archon_does_not_expire_while_on_high_infernal_flame"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[HighInfernalFlame|높은 지옥불 화염] 상태일 때 [ElementalArchon|원소 집정관]이 만료되지 않음",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "lose_elemental_archone_on_reaching_full_infernal_flame"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "최대 지옥불 화염 도달 시 [ElementalArchon|원소 집정관] 상실",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4637,7 +4829,7 @@
         "index_handlers": [
           []
         ],
-        "string": "플레이어가 유발하는 [Bleeding|출혈]이 [Aggravate|가중]됨\n기본 [Bleeding|출혈] 지속시간 1초",
+        "string": "플레이어가 유발하는 [Bleeding|출혈]이 [Aggravate|가중]됨\n기본 [Bleeding|출혈] 지속시간 1초\n플레이어가 유발하는 [Bleeding|출혈]의 [BuffMagnitude|강도] 50% 증폭",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4746,42 +4938,6 @@
           []
         ],
         "string": "[Two-Handed|양손] [Axe|도끼], [Mace|철퇴], [Sword|검]을 한손에 장착할 수 있음\n[MartialWeapon|무도 무기]의 [Attributes|능력치] 요구사항이 세 배로 적용\n[Strength|힘]이 부여하는 기본 생명력 절반으로 감소",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "keystone_mana_leech_from_elemental_instead"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[Physical|물리] 피해 대신 [ElementalDamage|원소 피해 유형]에 기반하여 [ManaLeech|마나 흡수] 회복",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5089,7 +5245,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0} to maximum Mana per fifty [ItemDefences|Item Evasion Rating] on [EquipArmour|Equipped Armour Items]",
+        "string": "[DNT-UNUSED] {0} to maximum Mana per fifty [ItemDefences|Item Evasion Rating] on [EquipArmour|Equipped Armour Items]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5103,7 +5259,7 @@
   {
     "English": null,
     "ids": [
-      "meta_gem_reservation_efficiency_+%"
+      "minion_non_skill_base_elemental_damage_%_to_gain_as_chaos"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -5125,27 +5281,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Meta|Meta Skill Gems] have {0}% increased [Reservation] efficiency",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[DNT] [Meta|Meta Skill Gems] have {0}% reduced [Reservation] efficiency",
+        "string": "[Minion|소환수]가 원소 피해의 {0}%를 추가 카오스 피해로 [Gain|획득]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5237,7 +5373,79 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Attack|Attacks] [Empowered] by Owl Feathers have {0}% more [CriticalDamageBonus|Critical Damage Bonus]",
+        "string": "[DNT-UNUSED] [Attack|Attacks] [Empowered] by Owl Feathers have {0}% more [CriticalDamageBonus|Critical Damage Bonus]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "natures_sustenance_added_rage_cost"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Skills have {0} to [Rage] cost",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "natures_sustenance_additional_maximum_rage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Rage|격노] 최대치 {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5443,6 +5651,42 @@
   {
     "English": null,
     "ids": [
+      "ascendancy_non_unique_jewel_radius_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "비-[Rarity|고유] 무궁한 [Jewel|주얼]의 반경 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "offering_skill_target_cullable_enemies_instead"
     ],
     "trade_stats": null,
@@ -5502,6 +5746,154 @@
           []
         ],
         "string": "플레이어의 [Offering|공물]이 [Minion|소환수] 대신 플레이어에게 영향을 줌",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "oracle_hits_eventually_crit_with_critical_strike_multiplier_+%_final_per_failed_roll"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[InevitableCriticalHits|피할 수 없는 치명타 명중]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "oracle_maximum_life_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "생명력 최대치 {0}% 증폭",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "생명력 최대치 {0}% 감폭",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "oracle_maximum_mana_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "마나 최대치 {0}% 증폭",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "마나 최대치 {0}% 감폭",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5701,43 +6093,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Projectile] [Attack|Attacks] always [Chain] to [Mark|Marked] Enemies with {0}% increased [Chain|Chaining Distance]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "ascendancy_shaman_spell_damage_+%_final_per_rage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] You gain {0}% more [Spell] Damage per [Rage]",
+        "string": "[DNT-UNUSED] [Projectile] [Attack|Attacks] always [Chain] to [Mark|Marked] Enemies with {0}% increased [Chain|Chaining Distance]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5809,7 +6165,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Freeze] you inflict has up to {0}% increased duration, at random",
+        "string": "[DNT-UNUSED] [Freeze] you inflict has up to {0}% increased duration, at random",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5903,7 +6259,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Skills have {0}% increased [Reservation] efficiency per socketed Talisman",
+        "string": "[DNT-UNUSED] Skills have {0}% increased [Reservation] efficiency per socketed Talisman",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5923,7 +6279,7 @@
             "negate"
           ]
         ],
-        "string": "[DNT] Skills have {0}% reduced [Reservation] efficiency per socketed Talisman",
+        "string": "[DNT-UNUSED] Skills have {0}% reduced [Reservation] efficiency per socketed Talisman",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5959,7 +6315,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% to all [ElementalDamage|Elemental Resistances] per socketed Rune",
+        "string": "[DNT-UNUSED] {0}% to all [ElementalDamage|Elemental Resistances] per socketed Rune",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6087,7 +6443,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% increased cost of Skills per socketed Soul Core",
+        "string": "[DNT-UNUSED] {0}% increased cost of Skills per socketed Soul Core",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6107,7 +6463,7 @@
             "negate"
           ]
         ],
-        "string": "[DNT] {0}% reduced cost of Skills per socketed Soul Core",
+        "string": "[DNT-UNUSED] {0}% reduced cost of Skills per socketed Soul Core",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6121,7 +6477,8 @@
   {
     "English": null,
     "ids": [
-      "spells_sacrifice_%_of_your_energy_shield"
+      "spells_sacrifice_%_of_your_energy_shield",
+      "ascendancy_lich_spell_damage_+%_final_when_sacrificing_energy_shield"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -6132,18 +6489,77 @@
       {
         "condition": [
           {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
             "min": 1,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
-        "string": "[Spell|주문] 시전 시 [EnergyShield|에너지 보호막] 최대치의 {0}% [Sacrifice|희생]",
+        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]\n[Spell|Spells] for which this [Sacrifice] was fully made deal {0}% more Damage",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ],
+          []
+        ],
+        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]\n[Spell|Spells] for which this [Sacrifice] was fully made deal {0}% less Damage",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6251,7 +6667,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Tame Beast can target Unique Beasts\nYou can summon Tamed Unique Beasts",
+        "string": "[DNT-UNUSED] Tame Beast can target Unique Beasts\nYou can summon Tamed Unique Beasts",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6289,7 +6705,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[DNT] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} second",
+        "string": "[DNT-UNUSED] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} second",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6309,43 +6725,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[DNT] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} seconds",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "time_lost_jewel_radius_is_upgraded"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] Your [TimeLostJewel|Time Lost Jewels] have upgraded radii",
+        "string": "[DNT-UNUSED] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} seconds",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6453,7 +6833,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% of Main Hand Weapon Damage granted as Added Attack Damage to your [Companion|Companions] in your [Presence]",
+        "string": "[DNT-UNUSED] {0}% of Main Hand Weapon Damage granted as Added Attack Damage to your [Companion|Companions] in your [Presence]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6616,6 +6996,42 @@
           []
         ],
         "string": "[Dexterity|민첩]으로 인한 기본 보너스 받지 않음\n민첩 2당 [Armour|방어도] 1% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "keystone_alternate_es_recovery"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "적의 [Power|위세] 1당 방지한 [Physical|물리] 피해의 5%를 [EnergyShield|에너지 보호막]으로 [Recoup|회생]\n[EnergyShield|에너지 보호막]이 [ESRecharge|재충전]되지 않음\n재생으로 [EnergyShield|에너지 보호막] 회복 불가\n[EnergyShield|에너지 보호막]을 [Armour|방어도] 위로 회복 불가",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7025,6 +7441,42 @@
   {
     "English": null,
     "ids": [
+      "keystone_druidic_rage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Rage|격노] 최대치 100% 증폭\n[Recently|최근 4초 이내] 소모한 [Rage|격노] 4당 1초마다 [Rage|격노] 1 재생\n[Rage|격노] 효과 없음",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "keystone_elemental_overload"
     ],
     "trade_stats": null,
@@ -7371,7 +7823,7 @@
         "index_handlers": [
           []
         ],
-        "string": "양쪽 무기 슬롯이 모두 비어 있는 동안 [Quarterstaff|육척봉]을 사용하는 것처럼 [Attack|공격] 가능\n[Quarterstaff|육척봉]의 피해를 사용하는 비무장 [Attack|공격]에 적용:\n• 스킬 레벨에 따라 [Physical|물리] 피해 획득\n• [EquipArmour|장착한 방어구 아이템]의 [ItemDefences|아이템 회피] 25당 [Attack|공격] 속도 1% 증폭\n• [EquipArmour|장착한 방어구 아이템]의 [ItemDefences|아이템 에너지 보호막] 10당 [Critical|치명타 명중 확률] +0.1%",
+        "string": "양쪽 무기 슬롯이 모두 비어 있는 동안 [Quarterstaff|육척봉]을 사용하는 것처럼 [Attack|공격] 가능\n[Quarterstaff|육척봉]의 피해를 사용하는 비무장 [Attack|공격]에 적용:\n• 스킬 레벨에 따라 [Physical|물리] 피해 획득\n• [EquipArmour|장착한 방어구 아이템]의 [ItemDefences|아이템 회피] 75당 [Attack|공격] 속도 1% 증폭\n• [EquipArmour|장착한 방어구 아이템]의 [ItemDefences|아이템 에너지 보호막] 10당 [Critical|치명타 명중 확률] +0.1%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7552,6 +8004,42 @@
           []
         ],
         "string": "재생으로 인한 마나 회복이 마나 최대치 이상으로 [Overflow|넘침]\n마나 재생 속도 50% 감폭",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "keystone_lord_of_the_wilds"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Talisman|부적] 장착 시 비-[ItemRarity|고유] [Sceptre|셉터] 장착 가능\n[Spirit|정신력] 50% 감폭\n비-[Minion|소환수] 스킬의 [Reservation|점유] [Efficiency|효율] 50% 감폭",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8019,7 +8507,7 @@
         "index_handlers": [
           []
         ],
-        "string": "지난 8초 동안 소모한 생명력 8당 1초마다 생명력 1 재생\n스킬의 생명력 비용 50% 증폭",
+        "string": "지난 4초 동안 사용한 생명력 16당 1초마다 생명력 1 재생\n스킬의 생명력 비용 20% 증폭",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8164,6 +8652,42 @@
           []
         ],
         "string": "비-바알 수호 스킬의 영향을 받는 동안 모든 원소 저항 및 원소 저항 최대치 +10%\n비-바알 수호 스킬의 영향을 받는 동안 받는 물리 피해 20% 추가 감소\n[Recently|최근 4초 이내] 비-바알 수호 버프를 상실한 경우 받는 피해 20% 증폭",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "keystone_wildsurge_incantation"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Storm|폭풍] 및 [Plant|식물] [Spell|주문]:\n• 주는 피해 50% 증폭\n• 비용 50% 감폭\n• 지속시간 75% 감폭",
         "reminder_text": null,
         "is_markup": null
       }

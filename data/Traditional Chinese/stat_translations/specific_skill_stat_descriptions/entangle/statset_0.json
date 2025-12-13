@@ -31,7 +31,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "根鬚長度@{0} 公尺",
+        "string": "裂縫長度為{0}米",
         "reminder_text": null,
         "is_markup": null
       }
@@ -69,7 +69,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "根鬚長度為 {0} 公尺",
+        "string": "裂縫長度為{0}米",
         "reminder_text": null,
         "is_markup": null
       },
@@ -89,7 +89,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "根鬚長度為 {0} 公尺",
+        "string": "裂縫長度為{0}米",
         "reminder_text": null,
         "is_markup": null
       }
@@ -210,8 +210,8 @@
       {
         "condition": [
           {
-            "min": 1,
-            "max": 1,
+            "min": null,
+            "max": null,
             "negated": null
           }
         ],
@@ -221,7 +221,7 @@
         "index_handlers": [
           []
         ],
-        "string": "限制 {0} 條根鬚",
+        "string": "[Limit|限制] {0} 道根鬚",
         "reminder_text": null,
         "is_markup": null
       },
@@ -239,7 +239,25 @@
         "index_handlers": [
           []
         ],
-        "string": "限制 {0} 條根鬚",
+        "string": "[Limit|限制] {0} 道裂縫",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Limit|限制] {0} 道裂縫",
         "reminder_text": null,
         "is_markup": null
       }
@@ -277,7 +295,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "根鬚持續時間為 {0} 秒",
+        "string": "裂縫持續時間為 {0} 秒",
         "reminder_text": null,
         "is_markup": null
       },
@@ -297,7 +315,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "根鬚持續時間為 {0} 秒",
+        "string": "裂縫持續時間為 {0} 秒",
         "reminder_text": null,
         "is_markup": null
       }
@@ -384,6 +402,62 @@
   {
     "English": null,
     "ids": [
+      "entangle_duration_speed_+%_when_wet"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "當[Plant|過度生長]時失效速度減緩@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "當[Plant|過度生長]時根鬚失效速度減緩{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "number_of_entangle_roots_allowed"
     ],
     "trade_stats": null,
@@ -411,7 +485,7 @@
         "index_handlers": [
           []
         ],
-        "string": "根鬚上限@ {0}",
+        "string": "裂縫[Limit|上限]@{0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -449,7 +523,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "根鬚持續時間@{0} 秒",
+        "string": "裂縫持續時間@{0} 秒",
         "reminder_text": null,
         "is_markup": null
       }

@@ -100,6 +100,80 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Ignite|Ignites] from a single use of this Skill [CompoundIgnite|Compound] if not\nfrom [IgnitedGround|Ignited Ground]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "active_skill_compounding_ignites"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Deals {0} [Fire] Damage per second",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "base_fire_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": 1000,
             "max": 1000,
             "negated": null
@@ -311,138 +385,6 @@
             "min": null,
             "max": null,
             "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "More damage per stage@{0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Deals {0}% more damage per stage",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "ids": [
-      "incinerate_damage_+%_final_per_stage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "Stage gain interval@{0}s",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "Gains a stage every second",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "Gains a stage every {0} seconds",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "ids": [
-      "incinerate_gain_stage_every_x_ms"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
           },
           {
             "min": null,
@@ -518,42 +460,6 @@
           "#"
         ],
         "index_handlers": [
-          []
-        ],
-        "string": "{0} maximum stages",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "ids": [
-      "incinerate_maximum_stages"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
           [
             "milliseconds_to_seconds_2dp_if_required"
           ]
@@ -601,7 +507,7 @@
           [],
           []
         ],
-        "string": "[Ignite|Ignites] as though dealing {0} to {1} [Fire] damage",
+        "string": "[Ignite|Ignites] as though dealing {0} to {1} [Fire] damage, every 0.075 seconds",
         "reminder_text": null,
         "is_markup": null
       }
@@ -609,42 +515,6 @@
     "ids": [
       "spell_minimum_base_fire_damage",
       "spell_maximum_base_fire_damage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Maximum stages@{0}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "ids": [
-      "virtual_incinerate_maximum_stages"
     ],
     "trade_stats": null,
     "hidden": null,

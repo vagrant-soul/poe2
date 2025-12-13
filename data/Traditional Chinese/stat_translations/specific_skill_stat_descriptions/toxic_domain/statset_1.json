@@ -294,8 +294,44 @@
   {
     "English": null,
     "ids": [
-      "toxic_domain_+1%_final_more_damage_per_x_stored_poison",
-      "toxic_domain_max_damage_+%_final_from_stored_poison"
+      "skill_specific_stat_description_mode"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "膿包保存對其施加的[Poison|中毒]的預期傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "toxic_pustule_burst_1%_more_damage_per_x_stored_poison",
+      "toxic_pustule_max_burst_damage_+%_final_from_stored_poison"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -363,7 +399,8 @@
   {
     "English": null,
     "ids": [
-      "toxic_domain_pustule_poison_explode_threshold"
+      "toxic_pustule_burst_base_radius_+1_per_x_stored_poison",
+      "toxic_pustule_max_additional_burst_base_radius_+"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -379,36 +416,81 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 10,
+            "max": 10,
             "negated": null
           }
         ],
         "format": [
+          "ignore",
           "#"
         ],
         "index_handlers": [
-          []
+          [],
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
         ],
-        "string": "膿包內儲存[Poison|毒素]最大量@{0}",
+        "string": "儲存的[Poison|中毒]使基礎爆炸範圍最多增加 {1} 公尺",
         "reminder_text": null,
         "is_markup": null
       },
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
             "max": null,
             "negated": null
           }
         ],
         "format": [
+          "ignore",
           "#"
         ],
         "index_handlers": [
-          []
+          [],
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
         ],
-        "string": "膿包可儲存最多 {0} [Poison|毒素]",
+        "string": "儲存的[Poison|中毒]使基礎爆炸範圍最多增加 {1} 公尺",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "儲存的[Poison|中毒]使基礎爆炸範圍最多增加 {1} 公尺",
         "reminder_text": null,
         "is_markup": null
       }

@@ -652,7 +652,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ได้รับ Frenzy Charge 1 ลูก เมื่อสังหาร",
+        "string": "ได้รับ [Charges|Frenzy Charge] 1 ลูก เมื่อสังหาร",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1048,7 +1048,7 @@
         "index_handlers": [
           []
         ],
-        "string": "หากคุณได้รับ [Charges|Charge] [Allies|เพื่อน]ใน[Presence|ระยะปรากฏกาย]ของคุณจะได้รับ Charge นั้นแทน",
+        "string": "เมื่อคุณได้รับ [Charges|Charge] [Allies|เพื่อน]ใน[Presence|ระยะปรากฏกาย]ของคุณได้รับ [Charges|Charge] นั้นแทน",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1156,7 +1156,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Remnant|หยาด][ElementalInfusion|ชุบพลัง]ที่คุณสร้าง มี[ElementalDamage|ธาตุ]แบบสุ่มเสมอ",
+        "string": "สร้าง [Remnant|หยาด][Infusion|ชุบพลัง][Cold|น้ำแข็ง] แทน [Remnant|หยาด][Infusion|ชุบพลัง][Fire|ไฟ]\nสร้าง [Remnant|หยาด][Infusion|ชุบพลัง][Fire|ไฟ] แทน [Remnant|หยาด][Infusion|ชุบพลัง][Lightning|สายฟ้า]\nสร้าง [Remnant|หยาด][Infusion|ชุบพลัง][Lightning|สายฟ้า] แทน [Remnant|หยาด][Infusion|ชุบพลัง][Cold|น้ำแข็ง]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1392,7 +1392,7 @@
         "index_handlers": [
           []
         ],
-        "string": "อัตรา[Accuracy|ความแม่นยำ] เพิ่มเป็นสองเท่า\nคุณไม่สามารถ[Critical|ปะทะคริติคอล]ได้",
+        "string": "อัตรา[Accuracy|ความแม่นยำ] เพิ่มเป็นสองเท่า\nไม่สามารถ[Critical|ปะทะคริติคอล]ได้",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1767,7 +1767,7 @@
         "index_handlers": [
           []
         ],
-        "string": "สามารถอัพพาสซีฟจากจุดเริ่มต้นของ Marauder",
+        "string": "สามารถอัพพาสซีฟจากจุดเริ่มต้นของ Ranger",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1803,7 +1803,7 @@
         "index_handlers": [
           []
         ],
-        "string": "สามารถอัพพาสซีฟจากจุดเริ่มต้นของ Witch",
+        "string": "สามารถอัพพาสซีฟจากจุดเริ่มต้นของ Templar",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1921,6 +1921,64 @@
   {
     "English": null,
     "ids": [
+      "energy_shield_recharge_starts_X_ms_sooner"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[ESRecharge|ระยะเวลารอ รีชาร์จ][EnergyShield|โล่พลังงาน] พื้นฐานของคุณ -{0} วินาที",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[ESRecharge|ระยะเวลารอ รีชาร์จ][EnergyShield|โล่พลังงาน] พื้นฐานของคุณ -{0} วินาที",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "gain_X_life_flask_charges_per_4%_life_spent"
     ],
     "trade_stats": null,
@@ -1975,6 +2033,62 @@
   {
     "English": null,
     "ids": [
+      "global_defences_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เพิ่ม[Defences|ค่าป้องกัน] {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ลด[Defences|ค่าป้องกัน] {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "adaptation_duration_ms"
     ],
     "trade_stats": null,
@@ -2003,7 +2117,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[DNT] Adaptations last for {0} second",
+        "string": "การ[Adaptation|ปรับตัว] มีระยะเวลา {0} วินาที",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2023,7 +2137,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[DNT] Adaptations last for {0} seconds",
+        "string": "การ[Adaptation|ปรับตัว] มีระยะเวลา {0} วินาที",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2033,7 +2147,7 @@
   {
     "English": null,
     "ids": [
-      "add_X_guard_on_trigger_per_100_ms_total_use_time_of_triggered_skill_up_to_maximum_mana"
+      "gain_X_adaptation_matching_type_when_hit_by_elemental_damage"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2049,6 +2163,24 @@
         "condition": [
           {
             "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Adaptation|ปรับตัว] ไปยัง[ElementalDamage|ชนิดของความเสียหาย ธาตุ] ที่สูงที่สุดในการ[HitDamage|ปะทะ]แต่ละครั้งที่คุณได้รับ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
             "max": null,
             "negated": null
           }
@@ -2059,105 +2191,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Add {0} [Guard] when [Trigger|Triggering] a Skill for every 0.1 seconds of base use time of that Skill",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "add_X_ms_to_energy_shield_recharge_delay_per_combo_spent"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[DNT] Expending [Combo] adds {0} second to remaining [ESRecharge|Energy Shield Recharge] delay per [Combo]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[DNT] Expending [Combo] adds {0} seconds to remaining [ESRecharge|Energy Shield Recharge] delay per [Combo]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": -1000,
-            "max": -1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[DNT] Expending [Combo] removes {0} second from remaining [ESRecharge|Energy Shield Recharge] delay per [Combo]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[DNT] Expending [Combo] removes {0} seconds from remaining [ESRecharge|Energy Shield Recharge] delay per [Combo]",
+        "string": "[Adaptation|ปรับตัว] {0} ครั้ง ไปยัง[ElementalDamage|ชนิดของความเสียหาย ธาตุ] ที่สูงที่สุดในการ[HitDamage|ปะทะ]แต่ละครั้งที่คุณได้รับ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2212,42 +2246,6 @@
           []
         ],
         "string": "สะสม[Combo|คอมโบ]เพิ่มเติม 1 ระดับ เมื่อ[HitDamage|ปะทะ]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "additional_combo_gain_on_hit"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] Gain {0} additional [Combo] whenever you gain [Combo]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2319,7 +2317,7 @@
         "index_handlers": [
           []
         ],
-        "string": "สร้างสถานะ [CriticalWeakness|แพ้คริติคอล] {0} ระดับต่อศัตรู เมื่อ[Consume|กลืนกิน][Mark|คำแช่ง]บนตัวพวกมัน",
+        "string": "สร้างสถานะ [CriticalWeakness|แพ้คริติคอล] {0} ระดับต่อศัตรู เมื่อ[Consume|กลืนกิน][Mark|คำแช่ง]บนตัวมัน",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2391,7 +2389,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% more Mana cost of [Trigger|Triggered Skills]",
+        "string": "[DNT-UNUSED] {0}% more Mana cost of [Trigger|Triggered Skills]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2411,7 +2409,7 @@
             "negate"
           ]
         ],
-        "string": "[DNT] {0}% less Mana cost of [Trigger|Triggered Skills]",
+        "string": "[DNT-UNUSED] {0}% less Mana cost of [Trigger|Triggered Skills]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2459,7 +2457,7 @@
   {
     "English": null,
     "ids": [
-      "ascendancy_enable_fire_djinn_passive"
+      "ascendancy_disconnected_passives_can_be_allocated_around_allocated_keystones"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2474,7 +2472,7 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
@@ -2485,7 +2483,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Fire Djinn will use Flame Slice on Enemies you target with Damaging Skills",
+        "string": "สามารถอัพพาสซีฟที่ไม่ใช่คีย์สโตนใน รัศมีกลาง ของพาสซีฟคีย์สโตนที่อัพได้ โดยไม่ต้องเชื่อมต่อกับตารางของคุณ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2603,62 +2601,6 @@
   {
     "English": null,
     "ids": [
-      "ascendancy_lich_spell_damage_+%_final_when_sacrificing_energy_shield"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[Spell|เวท] สร้างความเสียหาย เพิ่มขึ้น อีก {0}% เมื่อ [Sacrifice|สละ][EnergyShield|โล่พลังงาน]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[Spell|เวท] สร้างความเสียหาย ลดลง อีก {0}% เมื่อ [Sacrifice|สละ][EnergyShield|โล่พลังงาน]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "ascendancy_lich_spells_consume_power_charges_for_spell_damage_+%_final"
     ],
     "trade_stats": null,
@@ -2715,6 +2657,42 @@
   {
     "English": null,
     "ids": [
+      "ascendancy_oracle_can_allocate_additional_oracle_only_passives_display"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เดินใน[OraclePaths|เส้นทางที่ไร้ผู้สัญจร]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "ascendancy_random_ignite_effect_+%_final_up_to_%"
     ],
     "trade_stats": null,
@@ -2741,7 +2719,135 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Ignite|Ignites] you inflict have up to {0}% more [BuffMagnitude|Magnitude], at random",
+        "string": "[DNT-UNUSED] [Ignite|Ignites] you inflict have up to {0}% more [BuffMagnitude|Magnitude], at random",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_ritualist_damage_+%_final_vs_enemies_affected_by_blood_boil"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เพิ่มความเสียหาย อีก {0}% ต่อศัตรูที่ได้รับผลจากสถานะ ฝีโลหิต",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ลดความเสียหาย อีก {0}% ต่อศัตรูที่ได้รับผลจากสถานะ ฝีโลหิต",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_shaman_+_spirit_per_empty_charm_slot"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ได้รับพลังวิญญาณ เพิ่มเติม {0} ต่อจำนวน ช่อง[Charm|ของขลัง]ที่ว่างและใช้งานได้ของคุณ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_shaman_spell_damage_+%_final_per_2_rage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สถานะ [Rage|คลั่ง] แต่ละ 2 ระดับ มอบม็อด: เพิ่มความเสียหาย [Spell|เวท] อีก {0}% เช่นกัน",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2851,7 +2957,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Minimum {0} Vivid Stag Wisp",
+        "string": "[DNT-UNUSED] Minimum {0} Vivid Stag Wisp",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2869,7 +2975,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Minimum {0} Vivid Stag Wisps",
+        "string": "[DNT-UNUSED] Minimum {0} Vivid Stag Wisps",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2935,42 +3041,6 @@
   {
     "English": null,
     "ids": [
-      "base_rage_cost"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] {0} to [Rage] cost of Skills",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "base_rage_regeneration_rate_per_minute_%"
     ],
     "trade_stats": null,
@@ -2999,7 +3069,7 @@
             "per_minute_to_per_second_2dp_if_required"
           ]
         ],
-        "string": "[DNT] Regenerate {0}% of your Maximum [Rage] per second",
+        "string": "ฟื้นฟูสถานะ [Rage|คลั่ง] {0}% ต่อวินาที",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3123,7 +3193,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] You can wield a [Focus] while also wielding a [Staff]",
+        "string": "คุณสามารถสวมใส่ [Focus|โฟกัส] ได้ขณะที่สวมใส่ [Staff|ไม้พลอง]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3159,7 +3229,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Any [Attack] [HitDamage|Hit] can gain [Combo]",
+        "string": "[DNT-UNUSED] Any [Attack] [HitDamage|Hit] can gain [Combo]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3339,7 +3409,7 @@
         "index_handlers": [
           []
         ],
-        "string": "มีโอกาสได้รับ [ElementalInfusion|ชุบพลังธาตุ] ชนิดอื่น 1 ลูก {0}% เมื่อคุณเก็บ [ElementalInfusion|ชุบพลังธาตุ]",
+        "string": "มีโอกาสได้รับ [ElementalInfusion|ชุบพลังธาตุ] ชนิดอื่น เพิ่มเติม 1 ลูก {0}% เมื่อคุณเก็บ [ElementalInfusion|ชุบพลังธาตุ]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3357,7 +3427,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ได้รับ [ElementalInfusion|ชุบพลังธาตุ] ชนิดอื่น 1 ลูกเมื่อคุณเก็บ [ElementalInfusion|ชุบพลังธาตุ]",
+        "string": "ได้รับ [ElementalInfusion|ชุบพลังธาตุ] ชนิดอื่น เพิ่มเติม 1 ลูกเมื่อคุณเก็บ [ElementalInfusion|ชุบพลังธาตุ]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3393,7 +3463,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% chance to generate an Owl Feather on [Critical|Critical Hit]",
+        "string": "[DNT-UNUSED] {0}% chance to generate an Owl Feather on [Critical|Critical Hit]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3429,7 +3499,7 @@
         "index_handlers": [
           []
         ],
-        "string": "สกิล มีโอกาสไม่กำจัด [Charge|Charge] แต่นับว่ากลืนกินไปแล้ว {0}%",
+        "string": "สกิล มีโอกาสไม่กำจัด [Charges|Charge] แต่นับว่ากลืนกินไปแล้ว {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3565,7 +3635,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Companion|Companions] deal {0}% increased Damage per socketed Talisman",
+        "string": "[DNT-UNUSED] [Companion|Companions] deal {0}% increased Damage per socketed Talisman",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3585,7 +3655,7 @@
             "negate"
           ]
         ],
-        "string": "[DNT] [Companion|Companions] deal {0}% reduced Damage per socketed Talisman",
+        "string": "[DNT-UNUSED] [Companion|Companions] deal {0}% reduced Damage per socketed Talisman",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3729,7 +3799,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% ของ [EnergyShield|โล่พลังงาน]ที่มี ให้ ค่าป้องกัน[PhysicalDamage|กายภาพ] เช่นกัน",
+        "string": "{0}% ของ [EnergyShield|โล่พลังงาน]ที่มี ให้ ค่าป้องกัน[Physical|กายภาพ] เช่นกัน",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3747,7 +3817,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[EnergyShield|โล่พลังงาน]ที่มี ให้ ค่าป้องกัน[PhysicalDamage|กายภาพ] เช่นกัน",
+        "string": "[EnergyShield|โล่พลังงาน]ที่มี ให้ ค่าป้องกัน[Physical|กายภาพ] เช่นกัน",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3765,7 +3835,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% ของ [EnergyShield|โล่พลังงาน]ที่มี ให้ ค่าป้องกัน[PhysicalDamage|กายภาพ] เช่นกัน",
+        "string": "{0}% ของ [EnergyShield|โล่พลังงาน]ที่มี ให้ ค่าป้องกัน[Physical|กายภาพ] เช่นกัน",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3801,7 +3871,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ศัตรูที่คุณ[Curse|สาป] มีการ[Reservation|สำรอง]พลังชีวิต อย่างน้อย {0}%",
+        "string": "เป้าหมายที่คุณ[Curse|สาป] ถูก[Reservation|สำรอง]พลังชีวิต อย่างน้อย {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3873,7 +3943,7 @@
         "index_handlers": [
           []
         ],
-        "string": "มีโอกาสสร้างสถานะ [Daze|งุนงง] ต่อศัตรูที่คุณบล็อคการ[HitDamage|ปะทะ] {0}% ขณะที่คุณ[Block|กดบล็อค]",
+        "string": "มีโอกาสสร้างสถานะ [Daze|งุนงง] {0}% ต่อศัตรูที่คุณ[Block|บล็อค]การ[HitDamage|ปะทะ]ด้วยการยก[Shield|โล่]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3909,7 +3979,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Enable Living Bomb",
+        "string": "[DNT-UNUSED] Enable Living Bomb",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3981,7 +4051,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Enable Explosive Teleport",
+        "string": "[DNT-UNUSED] Enable Explosive Teleport",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4017,7 +4087,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Enable Hand Slam",
+        "string": "[DNT-UNUSED] Enable Hand Slam",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4053,7 +4123,43 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Enable Knife Toss",
+        "string": "[DNT-UNUSED] Enable Knife Toss",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_travellers_wisdom_extra_attribute_options"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "พาสซีฟค่าคุณสมบัติ สามารถมอบม็อด: เพิ่มความเสียหาย 5% แทน\nพาสซีฟค่าคุณสมบัติ สามารถมอบม็อด: เพิ่ม[Defences|ค่าป้องกัน] 5% แทน\nพาสซีฟค่าคุณสมบัติ สามารถมอบม็อด: เพิ่ม[Efficiency|ประสิทธิภาพ]การใช้งาน 5% แทน",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4125,7 +4231,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% more [ESRecharge|Energy Shield Recharge Rate]",
+        "string": "เพิ่ม[ESRecharge|ความเร็วในการ รีชาร์จโล่พลังงาน] อีก {0}% ขณะ [LowEnergyShield|โล่พลังงานเหลือน้อย]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4145,7 +4251,43 @@
             "negate"
           ]
         ],
-        "string": "[DNT] {0}% less [ESRecharge|Energy Shield Recharge Rate]",
+        "string": "ลด[ESRecharge|ความเร็วในการ รีชาร์จโล่พลังงาน] อีก {0}% ขณะ [LowEnergyShield|โล่พลังงานเหลือน้อย]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "double_adaptation_effect"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เพิ่มผลของ การ[Adaptation|ปรับตัว] เป็นสองเท่า",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4191,7 +4333,7 @@
   {
     "English": null,
     "ids": [
-      "elemental_damage_taken_+%_final_per_matching_adaptation"
+      "ascendancy_druid_shaman_elemental_damage_taken_+%_final_per_matching_adaptation"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -4203,24 +4345,6 @@
     "Russian": null,
     "Spanish": null,
     "Thai": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] {0}% more [ElementalDamage|Elemental Damage] taken per Adaptation, matching that Adaptations type",
-        "reminder_text": null,
-        "is_markup": null
-      },
       {
         "condition": [
           {
@@ -4237,7 +4361,25 @@
             "negate"
           ]
         ],
-        "string": "[DNT] {0}% less [ElementalDamage|Elemental Damage] taken per Adaptation, matching that Adaptations type",
+        "string": "การ[Adaptation|ปรับตัว] แต่ละระดับ มอบม็อด: ลดความเสียหายที่ได้รับ ที่มีชนิดตรงกับการ[Adaptation|ปรับตัว]นั้น อีก {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "การ[Adaptation|ปรับตัว] แต่ละระดับ มอบม็อด: เพิ่มความเสียหายที่ได้รับ ที่มีชนิดตรงกับการ[Adaptation|ปรับตัว]นั้น อีก {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4274,64 +4416,6 @@
           []
         ],
         "string": "[Limit|จำนวนจำกัด] {0} สำหรับ สกิล[ElementalDamage|ธาตุ]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "energy_shield_recharge_starts_X_ms_sooner"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "การ[ESRecharge|รีชาร์จโล่พลังงาน] เริ่ม เร็วขึ้น {0} วินาที",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "การ[ESRecharge|รีชาร์จโล่พลังงาน] เริ่ม ช้าลง {0} วินาที",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4405,7 +4489,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% increased bonuses gained from Equipped [Focus]",
+        "string": "เพิ่มโบนัสที่ได้รับจาก [Focus|โฟกัส]ที่สวมใส่ {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4425,43 +4509,7 @@
             "negate"
           ]
         ],
-        "string": "[DNT] {0}% reduced bonuses gained from Equipped [Focus]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "gain_X_adaptation_matching_type_when_hit_by_elemental_damage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] Gain {0} Adaptation when hit by [ElementalDamage|Elemental Damage], matching the type of the Damage taken",
+        "string": "ลดโบนัสที่ได้รับจาก [Focus|โฟกัส]ที่สวมใส่ {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4497,7 +4545,43 @@
         "index_handlers": [
           []
         ],
-        "string": "ได้รับสถานะ [Volatility|แรงปะทุ] {0} ระดับเมื่อสร้าง [ElementalAilments|สถานะเจ็บป่วยธาตุ]",
+        "string": "ได้รับสถานะ [Volatility|แรงปะทุ] {0} ระดับ เมื่อสร้าง [ElementalAilments|สถานะเจ็บป่วยธาตุ]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "hit_damage_remove_from_mana_before_life_while_mana_higher_than_life"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "รับความเสียหาย [HitDamage|ปะทะ] {0}% ด้วย มานา ก่อน พลังชีวิต หาก มานาที่คุณมี สูงกว่า พลังชีวิตที่คุณมี",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4534,6 +4618,114 @@
           []
         ],
         "string": "ไม่ได้รับความเสียหายจากสถานะ [Volatility|แรงปะทุ]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "gain_elemental_archon_when_you_cast_a_spell_while_on_high_infernal_flame"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ได้รับสถานะ [ElementalArchon|อาร์คอนธาตุ] เมื่อคุณร่าย[Spell|เวท] ขณะที่มี [HighInfernalFlame|เพลิงโลกันตร์สูง]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "elemental_archon_does_not_expire_while_on_high_infernal_flame"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สถานะ [ElementalArchon|อาร์คอนธาตุ] ไม่หมดเวลา ขณะที่มี [HighInfernalFlame|เพลิงโลกันตร์สูง]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "lose_elemental_archone_on_reaching_full_infernal_flame"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สูญเสียสถานะ [ElementalArchon|อาร์คอนธาตุ] เมื่อ เพลิงโลกันตร์เต็ม",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4641,7 +4833,7 @@
         "index_handlers": [
           []
         ],
-        "string": "สถานะ[Bleeding|เลือดไหล]ที่คุณสร้างจะ [Aggravate|เลือดไหลรุนแรง]\nระยะเวลาพื้นฐานของสถานะ [Bleeding|เลือดไหล] กลายเป็น 1 วินาที",
+        "string": "สถานะ[Bleeding|เลือดไหล]ที่คุณสร้างจะ [Aggravate|เลือดไหลรุนแรง]\nระยะเวลาพื้นฐานของสถานะ [Bleeding|เลือดไหล] กลายเป็น 1 วินาที\nเพิ่ม[BuffMagnitude|จำนวนค่า]ของสถานะ [Bleeding|เลือดไหล] ที่คุณสร้าง อีก 50%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4750,42 +4942,6 @@
           []
         ],
         "string": "คุณถือ [Axe|ขวาน], [Mace|กระบอง], [Sword|ดาบ][Two-Handed|สองมือ] ได้ในมือเดียว\nเงื่อนไข[Attributes|ค่าคุณสมบัติ]ที่ต้องการของ [MartialWeapon|อาวุธจู่โจม] เพิ่มเป็นสามเท่า\nพลังชีวิตดั้งเดิมที่ได้รับจาก [Strength] ลดลงครึ่งหนึ่ง",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "keystone_mana_leech_from_elemental_instead"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "การ[ManaLeech|ดูดมานา] ทำการเติมตาม[ElementalDamage|ความเสียหาย ธาตุต่างๆ] แทน [Physical|กายภาพ]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4929,7 +5085,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ศัตรูที่อยู่ใกล้ มีอัตราการ ฟื้นฟูพลังชีวิต เพิ่มขึ้น {0}%",
+        "string": "ศัตรูที่อยู่ใกล้ มีความเร็วในการ ฟื้นฟูพลังชีวิต เพิ่มขึ้น {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4949,7 +5105,7 @@
             "negate"
           ]
         ],
-        "string": "ศัตรูที่อยู่ใกล้ มีอัตราการ ฟื้นฟูพลังชีวิต ลดลง {0}%",
+        "string": "ศัตรูที่อยู่ใกล้ มีความเร็วในการ ฟื้นฟูพลังชีวิต ลดลง {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4985,7 +5141,7 @@
         "index_handlers": [
           []
         ],
-        "string": "การเพิ่มและลด อัตราการฟื้นฟูมานา ส่งผลต่อ อัตราการฟื้นฟูสถานะ [Rage|คลั่ง] เช่นกัน",
+        "string": "การเพิ่มและลด ความเร็วในการฟื้นฟูมานา ส่งผลต่อ ความเร็วในการฟื้นฟูสถานะ [Rage|คลั่ง] เช่นกัน",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5093,7 +5249,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0} to maximum Mana per fifty [ItemDefences|Item Evasion Rating] on [EquipArmour|Equipped Armour Items]",
+        "string": "[DNT-UNUSED] {0} to maximum Mana per fifty [ItemDefences|Item Evasion Rating] on [EquipArmour|Equipped Armour Items]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5103,7 +5259,7 @@
   {
     "English": null,
     "ids": [
-      "meta_gem_reservation_efficiency_+%"
+      "minion_non_skill_base_elemental_damage_%_to_gain_as_chaos"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -5129,27 +5285,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Meta|Meta Skill Gems] have {0}% increased [Reservation] efficiency",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[DNT] [Meta|Meta Skill Gems] have {0}% reduced [Reservation] efficiency",
+        "string": "[Minion|มิเนียน] นำความเสียหาย ธาตุ {0}% ไป[Gain|เสริม]เป็น เคออส",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5185,7 +5321,7 @@
         "index_handlers": [
           []
         ],
-        "string": "เพิ่มผลลบต่อ ความเร็วในการเคลื่อนที่ {0}% ขณะที่ใช้ กด[Block|บล็อค]",
+        "string": "เพิ่มการสูญเสียความเร็วในการเคลื่อนที่ {0}% ขณะที่ใช้ กด[Block|บล็อค]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5205,7 +5341,7 @@
             "negate"
           ]
         ],
-        "string": "ลดผลลบต่อ ความเร็วในการเคลื่อนที่ {0}% ขณะที่ใช้ กด[Block|บล็อค]",
+        "string": "ลดการสูญเสียความเร็วในการเคลื่อนที่ {0}% ขณะที่ใช้ กด[Block|บล็อค]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5241,7 +5377,79 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Attack|Attacks] [Empowered] by Owl Feathers have {0}% more [CriticalDamageBonus|Critical Damage Bonus]",
+        "string": "[DNT-UNUSED] [Attack|Attacks] [Empowered] by Owl Feathers have {0}% more [CriticalDamageBonus|Critical Damage Bonus]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "natures_sustenance_added_rage_cost"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Skills have {0} to [Rage] cost",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "natures_sustenance_additional_maximum_rage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "จำนวนสูงสุดของสถานะ [Rage|คลั่ง] {0} ระดับ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5320,16 +5528,16 @@
           }
         ],
         "format": [
+          "ignore",
           "#",
-          "#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           [],
           [],
           []
         ],
-        "string": "หินเสริมที่ใส่แต่ละสี ที่มีจำนวนมากที่สุด มอบม็อดต่อไปนี้:\n•สีแดง: การ[HitDamage|ปะทะ]ที่คุณได้รับ ไม่มี[CriticalDamageBonus|โบนัสความเสียหายคริติคอล]\n•สีฟ้า: สกิล มีค่าใช้งาน เพิ่มขึ้น อีก {1}%\n•สีเขียว: เพิ่มผลลบต่อ ความเร็วการเคลื่อนที่ อีก {0}% จากการใช้สกิลขณะเคลื่อนที่",
+        "string": "หินเสริมที่ใส่แต่ละสี ที่มีจำนวนมากที่สุด มอบม็อดต่อไปนี้:\n•สีแดง: การ[HitDamage|ปะทะ]ที่คุณได้รับ ไม่มี[CriticalDamageBonus|โบนัสความเสียหายคริติคอล]\n•สีฟ้า: สกิล มีค่าใช้งาน เพิ่มขึ้น อีก {1}%\n•สีเขียว: เพิ่มการสูญเสียความเร็วในการเคลื่อนที่ อีก {2}% เมื่อใช้สกิลขณะเคลื่อนที่",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5352,9 +5560,9 @@
           }
         ],
         "format": [
+          "ignore",
           "#",
-          "#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           [],
@@ -5363,7 +5571,7 @@
           ],
           []
         ],
-        "string": "หินเสริมที่ใส่แต่ละสี ที่มีจำนวนมากที่สุด มอบม็อดต่อไปนี้:\n•สีแดง: การ[HitDamage|ปะทะ]ที่คุณได้รับ ไม่มี[CriticalDamageBonus|โบนัสความเสียหายคริติคอล]\n•สีฟ้า: สกิล มีค่าใช้งาน ลดลง อีก {1}%\n•สีเขียว: เพิ่มผลลบต่อ ความเร็วการเคลื่อนที่ อีก {0}% จากการใช้สกิลขณะเคลื่อนที่",
+        "string": "หินเสริมที่ใส่แต่ละสี ที่มีจำนวนมากที่สุด มอบม็อดต่อไปนี้:\n•สีแดง: การ[HitDamage|ปะทะ]ที่คุณได้รับ ไม่มี[CriticalDamageBonus|โบนัสความเสียหายคริติคอล]\n•สีฟ้า: สกิล มีค่าใช้งาน ลดลง อีก {1}%\n•สีเขียว: เพิ่มการสูญเสียความเร็วในการเคลื่อนที่ อีก {2}% เมื่อใช้สกิลขณะเคลื่อนที่",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5386,9 +5594,9 @@
           }
         ],
         "format": [
+          "ignore",
           "#",
-          "#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           [],
@@ -5399,7 +5607,7 @@
             "negate"
           ]
         ],
-        "string": "หินเสริมที่ใส่แต่ละสี ที่มีจำนวนมากที่สุด มอบม็อดต่อไปนี้:\n•สีแดง: การ[HitDamage|ปะทะ]ที่คุณได้รับ ไม่มี[CriticalDamageBonus|โบนัสความเสียหายคริติคอล]\n•สีฟ้า: สกิล มีค่าใช้งาน ลดลง อีก {1}%\n•สีเขียว: ลดผลลบต่อ ความเร็วการเคลื่อนที่ อีก {0}% จากการใช้สกิลขณะเคลื่อนที่",
+        "string": "หินเสริมที่ใส่แต่ละสี ที่มีจำนวนมากที่สุด มอบม็อดต่อไปนี้:\n•สีแดง: การ[HitDamage|ปะทะ]ที่คุณได้รับ ไม่มี[CriticalDamageBonus|โบนัสความเสียหายคริติคอล]\n•สีฟ้า: สกิล มีค่าใช้งาน ลดลง อีก {1}%\n•สีเขียว: ลดการสูญเสียความเร็วในการเคลื่อนที่ อีก {2}% เมื่อใช้สกิลขณะเคลื่อนที่",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5422,9 +5630,9 @@
           }
         ],
         "format": [
+          "ignore",
           "#",
-          "#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           [],
@@ -5433,7 +5641,43 @@
             "negate"
           ]
         ],
-        "string": "หินเสริมที่ใส่แต่ละสี ที่มีจำนวนมากที่สุด มอบม็อดต่อไปนี้:\n•สีแดง: การ[HitDamage|ปะทะ]ที่คุณได้รับ ไม่มี[CriticalDamageBonus|โบนัสความเสียหายคริติคอล]\n•สีฟ้า: สกิล มีค่าใช้งาน เพิ่มขึ้น อีก {1}%\n•สีเขียว: ลดผลลบต่อ ความเร็วการเคลื่อนที่ อีก {0}% จากการใช้สกิลขณะเคลื่อนที่",
+        "string": "หินเสริมที่ใส่แต่ละสี ที่มีจำนวนมากที่สุด มอบม็อดต่อไปนี้:\n•สีแดง: การ[HitDamage|ปะทะ]ที่คุณได้รับ ไม่มี[CriticalDamageBonus|โบนัสความเสียหายคริติคอล]\n•สีฟ้า: สกิล มีค่าใช้งาน เพิ่มขึ้น อีก {1}%\n•สีเขียว: ลดการสูญเสียความเร็วในการเคลื่อนที่ อีก {2}% เมื่อใช้สกิลขณะเคลื่อนที่",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_non_unique_jewel_radius_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Jewel|จิวเวล] Time-lost ที่ไม่ใช่[Rarity|ยูนิค] มีรัศมี เพิ่มขึ้น {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5506,6 +5750,154 @@
           []
         ],
         "string": "การ[Offering|เซ่นไหว้] ส่งผลต่อคุณแทน[Minion|มิเนียน]ของคุณ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "oracle_hits_eventually_crit_with_critical_strike_multiplier_+%_final_per_failed_roll"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[InevitableCriticalHits|ปะทะคริติคอลแน่นอน]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "oracle_maximum_life_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เพิ่มพลังชีวิตสูงสุด อีก {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ลดพลังชีวิตสูงสุด อีก {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "oracle_maximum_mana_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เพิ่มมานาสูงสุด อีก {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ลดมานาสูงสุด อีก {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5705,43 +6097,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Projectile] [Attack|Attacks] always [Chain] to [Mark|Marked] Enemies with {0}% increased [Chain|Chaining Distance]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "ascendancy_shaman_spell_damage_+%_final_per_rage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] You gain {0}% more [Spell] Damage per [Rage]",
+        "string": "[DNT-UNUSED] [Projectile] [Attack|Attacks] always [Chain] to [Mark|Marked] Enemies with {0}% increased [Chain|Chaining Distance]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5777,7 +6133,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ได้รับสถานะ คลั่ง {0} ระดับเมื่อคุณใช้ [Flask|ขวดยา]พลังชีวิต",
+        "string": "ได้รับสถานะ คลั่ง {0} ระดับ เมื่อคุณใช้ [Flask|ขวดยา]พลังชีวิต",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5813,7 +6169,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Freeze] you inflict has up to {0}% increased duration, at random",
+        "string": "[DNT-UNUSED] [Freeze] you inflict has up to {0}% increased duration, at random",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5907,7 +6263,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Skills have {0}% increased [Reservation] efficiency per socketed Talisman",
+        "string": "[DNT-UNUSED] Skills have {0}% increased [Reservation] efficiency per socketed Talisman",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5927,7 +6283,7 @@
             "negate"
           ]
         ],
-        "string": "[DNT] Skills have {0}% reduced [Reservation] efficiency per socketed Talisman",
+        "string": "[DNT-UNUSED] Skills have {0}% reduced [Reservation] efficiency per socketed Talisman",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5963,7 +6319,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% to all [ElementalDamage|Elemental Resistances] per socketed Rune",
+        "string": "[DNT-UNUSED] {0}% to all [ElementalDamage|Elemental Resistances] per socketed Rune",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6091,7 +6447,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% increased cost of Skills per socketed Soul Core",
+        "string": "[DNT-UNUSED] {0}% increased cost of Skills per socketed Soul Core",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6111,7 +6467,7 @@
             "negate"
           ]
         ],
-        "string": "[DNT] {0}% reduced cost of Skills per socketed Soul Core",
+        "string": "[DNT-UNUSED] {0}% reduced cost of Skills per socketed Soul Core",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6121,7 +6477,8 @@
   {
     "English": null,
     "ids": [
-      "spells_sacrifice_%_of_your_energy_shield"
+      "spells_sacrifice_%_of_your_energy_shield",
+      "ascendancy_lich_spell_damage_+%_final_when_sacrificing_energy_shield"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -6136,18 +6493,77 @@
       {
         "condition": [
           {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
             "min": 1,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
-        "string": "[Sacrifice|สละ][EnergyShield|โล่พลังงาน] {0}% เมื่อคุณร่าย[Spell|เวท]",
+        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]\n[Spell|Spells] for which this [Sacrifice] was fully made deal {0}% more Damage",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ],
+          []
+        ],
+        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]\n[Spell|Spells] for which this [Sacrifice] was fully made deal {0}% less Damage",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6255,7 +6671,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Tame Beast can target Unique Beasts\nYou can summon Tamed Unique Beasts",
+        "string": "[DNT-UNUSED] Tame Beast can target Unique Beasts\nYou can summon Tamed Unique Beasts",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6293,7 +6709,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[DNT] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} second",
+        "string": "[DNT-UNUSED] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} second",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6313,43 +6729,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[DNT] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} seconds",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "time_lost_jewel_radius_is_upgraded"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] Your [TimeLostJewel|Time Lost Jewels] have upgraded radii",
+        "string": "[DNT-UNUSED] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} seconds",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6457,7 +6837,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% of Main Hand Weapon Damage granted as Added Attack Damage to your [Companion|Companions] in your [Presence]",
+        "string": "[DNT-UNUSED] {0}% of Main Hand Weapon Damage granted as Added Attack Damage to your [Companion|Companions] in your [Presence]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6620,6 +7000,42 @@
           []
         ],
         "string": "ไม่ได้รับโบนัสดั้งเดิมจาก [Dexterity|Dexterity]\nเพิ่ม[Armour|ค่าเกราะ] 1% ต่อ Dexterity 2 หน่วย",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "keystone_alternate_es_recovery"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ความเสียหาย กายภาพ ที่ยกเว้นได้ 5% ถูก[Recoup|เยียวยา]เป็น พลังชีวิต ต่อจำนวน[Power|พลัง]ศัตรู\n[Defences|โล่พลังงาน] ไม่รีชาร์จ\nคุณไม่สามารถ เติม[Defences|โล่พลังงาน] จากการ ฟื้นฟู\nคุณไม่สามารถ เติม[Defences|โล่พลังงาน] ให้สูงกว่า [Defences|ค่าเกราะ] ได้",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7025,6 +7441,42 @@
   {
     "English": null,
     "ids": [
+      "keystone_druidic_rage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เพิ่มจำนวนสูงสุดของสถานะ [Rage|คลั่ง] อีก 100%, ฟื้นฟูสถานะ [Rage|คลั่ง] 1 ระดับ ต่อวินาที ต่อสถานะ [Rage|คลั่ง] 4 ระดับที่จ่ายมา[Recently|เร็วๆ นี้], สถานะ [Rage|คลั่ง] ไม่มีผล",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "keystone_elemental_overload"
     ],
     "trade_stats": null,
@@ -7339,7 +7791,7 @@
         "index_handlers": [
           []
         ],
-        "string": "คุณสามารถ[Curse|สาป]ได้ เพิ่มเติม 1 สาป\nเพิ่มระยะเวลารอทำงานของ คำสาป เป็นสองเท่า",
+        "string": "คุณสามารถ[Curse|สาป]ได้ เพิ่มเติม 1 สาป\nเพิ่มระยะเวลารอทำงานของ [Curse|คำสาป] เป็นสองเท่า​",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7375,7 +7827,7 @@
         "index_handlers": [
           []
         ],
-        "string": "สามารถ[Attack|โจมตี]ได้ราวกับกำลังใช้ [Quarterstaff|ไม้พลองวรยุทธ์] ขณะที่ ช่องมือทั้งสอง ของคุณว่าง\nการ[Attack|โจมตี]ด้วยมือเปล่าที่ใช้ความเสียหายจาก [Quarterstaff|ไม้พลองวรยุทธ์]ของคุณ จะได้รับม็อด:• เสริมความเสียหาย [Physical|กายภาพ] ตามเลเวลสกิล\n• เพิ่มความเร็วในการ[Attack|โจมตี] อีก 1% ต่อ[ItemDefences|อัตราการหลบหลีกของไอเทม] 25 บน [EquipArmour|ไอเทมเกราะที่สวมใส่]\n[Critical|โอกาสปะทะคริติคอล] +0.1% ต่อ [ItemDefences|โล่พลังงานของไอเทม] 10 บน [EquipArmour|ไอเทมที่เกราะที่สวมใส่]",
+        "string": "สามารถ[Attack|โจมตี]ได้ราวกับกำลังใช้ [Quarterstaff|ไม้พลองวรยุทธ์] ขณะที่ ช่องมือทั้งสอง ของคุณว่าง\nการ[Attack|โจมตี]ด้วยมือเปล่าที่ใช้ความเสียหายจาก [Quarterstaff|ไม้พลองวรยุทธ์]ของคุณ จะได้รับม็อด:• เสริมความเสียหาย [Physical|กายภาพ] ตามเลเวลสกิล\n• เพิ่มความเร็วในการ[Attack|โจมตี] อีก 1% ต่อ[ItemDefences|อัตราการหลบหลีกของไอเทม] 75 บน [EquipArmour|ไอเทมเกราะที่สวมใส่]\n[Critical|โอกาสปะทะคริติคอล] +0.1% ต่อ [ItemDefences|โล่พลังงานของไอเทม] 10 บน [EquipArmour|ไอเทมเกราะที่สวมใส่]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7411,7 +7863,7 @@
         "index_handlers": [
           []
         ],
-        "string": "เมื่อการปะทะของคุณสร้างสถานะ ทิ่มแทง ต่อศัตรู คุณจะสร้างสถานะ ทิ่มแทง ต่อศัตรูที่อยู่ใกล้ด้วย\nเมื่อคุณสร้างสถานะทิ่มแทงต่อศัตรู คุณจะสร้างสถานะนั้น เพิ่มเติม 4 ระดับ\n4 วินาทีหลังจากที่คุณสร้างสถานะ ทิ่มแทง ต่อศัตรู พวกมันจะไม่ติดสถานะ ทิ่มแทง อีก และไม่สามารถเรียกสถานะนี้ออกมาจากพวกมันได้",
+        "string": "เมื่อการปะทะของคุณสร้างสถานะ ทิ่มแทง ต่อศัตรู คุณจะสร้างสถานะ ทิ่มแทง ต่อศัตรูที่อยู่ใกล้ด้วย\nเมื่อคุณสร้างสถานะทิ่มแทงต่อศัตรู คุณจะสร้างสถานะนั้น เพิ่มเติม 4 ระดับ\n4 วินาทีหลังจากที่คุณสร้างสถานะ ทิ่มแทง ต่อศัตรู มันจะไม่ติดสถานะ ทิ่มแทง อีก และไม่สามารถเรียกสถานะนี้ออกมาจากมันได้",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7555,7 +8007,43 @@
         "index_handlers": [
           []
         ],
-        "string": "การเติมมานาจากการ ฟื้นฟู [Overflow|เอ่อล้น]\nลดอัตราการ ฟื้นฟูมานา อีก 50%",
+        "string": "การเติมมานาจากการ ฟื้นฟู [Overflow|เอ่อล้น]\nลดความเร็วในการ ฟื้นฟูมานา อีก 50%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "keystone_lord_of_the_wilds"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "คุณสามารถสวมใส่ [Sceptre|คทา]ที่ไม่ใช่[ItemRarity|ยูนิค] ขณะถือ [Talisman|เครื่องราง]\nลด[Spirit|พลังวิญญาณ] อีก 50%\nสกิลที่ไม่ใช่มิเนียน มี[Efficiency|ประสิทธิภาพ]การ[Reservation|สำรอง] ลดลง อีก 50%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8023,7 +8511,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ฟื้นฟู 1 พลังชีวิตต่อวินาที ต่อ 8 พลังชีวิตที่จ่ายไปใน 8 วินาทีที่ผ่านมา\nเพิ่มค่าใช้งานของ สกิล อีก 50%",
+        "string": "ฟื้นฟูพลังชีวิต 1 ต่อวินาที ต่อพลังชีวิต 16 ที่จ่ายไปใน 4 วินาทีที่ผ่านมา\nเพิ่มค่าใช้งานพลังชีวิตของ สกิล อีก 20%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8095,7 +8583,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Projectile|โพรเจกไทล์] ทำสิ่งเหล่านี้ทีละอย่างแบบสุ่ม\n• [Fork|แบ่งตัว] เพิ่มเติม 1 ครั้ง\n• [Chain|ชิ่ง] เพิ่มเติม 1 ครั้ง\n• [ชิ่ง] จากพื้นผิว เพิ่มเติม 1 ครั้ง\n• ไม่สามารถกระทบกับเป้าหมายได้",
+        "string": "[Projectile|โพรเจกไทล์] ทำสิ่งเหล่านี้ทีละอย่างแบบสุ่ม\n• [Fork|แบ่งตัว] เพิ่มเติม 1 ครั้ง\n• [Chain|ชิ่ง] เพิ่มเติม 1 ครั้ง\n• ชิ่ง จากพื้นผิว เพิ่มเติม 1 ครั้ง\n• ไม่สามารถกระทบกับเป้าหมายได้",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8168,6 +8656,42 @@
           []
         ],
         "string": "ค่าต้านทาน ทุกธาตุ และค่าต้านทาน ทุกธาตุ สูงสุด +10% ขณะที่รับผลจาก สกิลตั้งรับที่ไม่ใช่วาล์\nเสริมค่าป้องกันกายภาพ 20% ขณะที่รับผลจาก สกิลตั้งรับที่ไม่ใช่วาล์\nเพิ่มความเสียหายที่ได้รับ อีก 20% หากสูญเสียบัฟจาก สกิลตั้งรับที่ไม่ใช่วาล์ มา[Recently|เร็วๆ นี้]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "keystone_wildsurge_incantation"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Spell|เวท][Storm|พายุ]และ[Plant|ต้นไม้]\n• สร้างความเสียหาย เพิ่มขึ้น อีก 50%\n• มีค่าใช้งาน ลดลง อีก 50%\n• มีระยะเวลา ลดลง อีก 75%",
         "reminder_text": null,
         "is_markup": null
       }

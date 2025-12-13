@@ -645,7 +645,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Gagnez une Charge de frénésie en Tuant",
+        "string": "Gain a [Charges|Frenzy Charge] on kill",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1041,7 +1041,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Lorsque vous gagnez une [Charges|Charge], les [Allies|Alliés] en votre [Presence|Présence] gagnent cette Charge à votre place",
+        "string": "If you would gain a [Charges|Charge], [Allies] in your [Presence] gain that [Charges|Charge] instead",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1149,7 +1149,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Les [Remnant|Reliquats] d'[ElementalInfusion|Infusion] que vous créez sont toujours d'un [ElementalDamage|Élément] aléatoire",
+        "string": "Create [Cold] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Fire] [ElementalInfusion|Infusion] [Remnant|Remnants]\nCreate [Fire] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Lightning] [ElementalInfusion|Infusion] [Remnant|Remnants]\nCreate [Lightning] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Cold] [ElementalInfusion|Infusion] [Remnant|Remnants]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1760,7 +1760,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Vous pouvez attribuer des Talents passifs depuis le départ du Maraudeur",
+        "string": "Vous pouvez attribuer des Talents passifs depuis le départ de la Rôdeuse",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1778,7 +1778,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Vous pouvez attribuer des Talents passifs depuis le départ de la Rôdeuse",
+        "string": "Vous pouvez attribuer des Talents passifs depuis le départ du Duelliste",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1796,7 +1796,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Vous pouvez attribuer des Talents passifs depuis le départ de la Sorcière",
+        "string": "Vous pouvez attribuer des Talents passifs depuis le départ du Templier",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1805,42 +1805,6 @@
           {
             "min": 4,
             "max": 4,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Vous pouvez attribuer des Talents passifs depuis le départ du Duelliste",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 5,
-            "max": 5,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Vous pouvez attribuer des Talents passifs depuis le départ du Templier",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 6,
-            "max": 6,
             "negated": null
           }
         ],
@@ -1921,6 +1885,64 @@
   {
     "English": null,
     "ids": [
+      "energy_shield_recharge_starts_X_ms_sooner"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "-{0} second to base [ESRecharge|Energy Shield Recharge] delay",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "-{0} seconds to base [ESRecharge|Energy Shield Recharge] delay",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "gain_X_life_flask_charges_per_4%_life_spent"
     ],
     "trade_stats": null,
@@ -1975,6 +1997,62 @@
   {
     "English": null,
     "ids": [
+      "global_defences_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% increased [Defences]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% reduced [Defences]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "adaptation_duration_ms"
     ],
     "trade_stats": null,
@@ -1996,7 +2074,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[DNT] Adaptations last for {0} second",
+        "string": "[Adaptation|Adaptations] have a duration of {0} second",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2016,7 +2094,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[DNT] Adaptations last for {0} seconds",
+        "string": "[Adaptation|Adaptations] have a duration of {0} seconds",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2033,7 +2111,7 @@
   {
     "English": null,
     "ids": [
-      "add_X_guard_on_trigger_per_100_ms_total_use_time_of_triggered_skill_up_to_maximum_mana"
+      "gain_X_adaptation_matching_type_when_hit_by_elemental_damage"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2042,6 +2120,24 @@
         "condition": [
           {
             "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Adaptation|Adapt] to the highest [ElementalDamage|Elemental Damage Type] of each [HitDamage|Hit] you take",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
             "max": null,
             "negated": null
           }
@@ -2052,105 +2148,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Add {0} [Guard] when [Trigger|Triggering] a Skill for every 0.1 seconds of base use time of that Skill",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "add_X_ms_to_energy_shield_recharge_delay_per_combo_spent"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": [
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[DNT] Expending [Combo] adds {0} second to remaining [ESRecharge|Energy Shield Recharge] delay per [Combo]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[DNT] Expending [Combo] adds {0} seconds to remaining [ESRecharge|Energy Shield Recharge] delay per [Combo]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": -1000,
-            "max": -1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[DNT] Expending [Combo] removes {0} second from remaining [ESRecharge|Energy Shield Recharge] delay per [Combo]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[DNT] Expending [Combo] removes {0} seconds from remaining [ESRecharge|Energy Shield Recharge] delay per [Combo]",
+        "string": "[Adaptation|Adapt] {0} times to the highest [ElementalDamage|Elemental Damage Type] of each [HitDamage|Hit] you take",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2205,42 +2203,6 @@
           []
         ],
         "string": "Vous accumulez 1 d'[Combo|Enchaînement] supplémentaire au [HitDamage|Toucher]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "additional_combo_gain_on_hit"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] Gain {0} additional [Combo] whenever you gain [Combo]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2384,7 +2346,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% more Mana cost of [Trigger|Triggered Skills]",
+        "string": "[DNT-UNUSED] {0}% more Mana cost of [Trigger|Triggered Skills]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2404,7 +2366,7 @@
             "negate"
           ]
         ],
-        "string": "[DNT] {0}% less Mana cost of [Trigger|Triggered Skills]",
+        "string": "[DNT-UNUSED] {0}% less Mana cost of [Trigger|Triggered Skills]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2459,7 +2421,7 @@
   {
     "English": null,
     "ids": [
-      "ascendancy_enable_fire_djinn_passive"
+      "ascendancy_disconnected_passives_can_be_allocated_around_allocated_keystones"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2467,7 +2429,7 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
@@ -2478,7 +2440,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Fire Djinn will use Flame Slice on Enemies you target with Damaging Skills",
+        "string": "Non-Keystone Passive Skills in Medium Radius of allocated Keystone Passive Skills can be allocated without being connected to your tree",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2603,62 +2565,6 @@
   {
     "English": null,
     "ids": [
-      "ascendancy_lich_spell_damage_+%_final_when_sacrificing_energy_shield"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Les [Spell|Sorts] ont {0}% Davantage de Dégâts lorsque vous [Sacrifice|Sacrifiez] du [EnergyShield|Bouclier d'énergie]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "Les [Spell|Sorts] ont {0}% de Perte de Dégâts lorsque vous [Sacrifice|Sacrifiez] du [EnergyShield|Bouclier d'énergie]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "ascendancy_lich_spells_consume_power_charges_for_spell_damage_+%_final"
     ],
     "trade_stats": null,
@@ -2715,6 +2621,42 @@
   {
     "English": null,
     "ids": [
+      "ascendancy_oracle_can_allocate_additional_oracle_only_passives_display"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Walk the [OraclePaths|Paths Not Taken]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "ascendancy_random_ignite_effect_+%_final_up_to_%"
     ],
     "trade_stats": null,
@@ -2734,7 +2676,135 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Ignite|Ignites] you inflict have up to {0}% more [BuffMagnitude|Magnitude], at random",
+        "string": "[DNT-UNUSED] [Ignite|Ignites] you inflict have up to {0}% more [BuffMagnitude|Magnitude], at random",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_ritualist_damage_+%_final_vs_enemies_affected_by_blood_boil"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% more Damage against Enemies affected by Blood Boils",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% less Damage against Enemies affected by Blood Boils",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_shaman_+_spirit_per_empty_charm_slot"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Gain an additional {0} [Spirit] for each empty available [Charm] slot you have",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_shaman_spell_damage_+%_final_per_2_rage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Every 2 [Rage] also grants {0}% more [Spell] damage",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2844,7 +2914,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Minimum {0} Vivid Stag Wisp",
+        "string": "[DNT-UNUSED] Minimum {0} Vivid Stag Wisp",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2862,7 +2932,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Minimum {0} Vivid Stag Wisps",
+        "string": "[DNT-UNUSED] Minimum {0} Vivid Stag Wisps",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2935,42 +3005,6 @@
   {
     "English": null,
     "ids": [
-      "base_rage_cost"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] {0} to [Rage] cost of Skills",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "base_rage_regeneration_rate_per_minute_%"
     ],
     "trade_stats": null,
@@ -2992,7 +3026,7 @@
             "per_minute_to_per_second_2dp_if_required"
           ]
         ],
-        "string": "[DNT] Regenerate {0}% of your Maximum [Rage] per second",
+        "string": "Regenerate {0}% of your maximum [Rage] per second",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3116,7 +3150,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] You can wield a [Focus] while also wielding a [Staff]",
+        "string": "You can equip a [Focus] while wielding a [Staff]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3152,7 +3186,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Any [Attack] [HitDamage|Hit] can gain [Combo]",
+        "string": "[DNT-UNUSED] Any [Attack] [HitDamage|Hit] can gain [Combo]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3386,7 +3420,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% chance to generate an Owl Feather on [Critical|Critical Hit]",
+        "string": "[DNT-UNUSED] {0}% chance to generate an Owl Feather on [Critical|Critical Hit]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3558,7 +3592,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Companion|Companions] deal {0}% increased Damage per socketed Talisman",
+        "string": "[DNT-UNUSED] [Companion|Companions] deal {0}% increased Damage per socketed Talisman",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3578,7 +3612,7 @@
             "negate"
           ]
         ],
-        "string": "[DNT] [Companion|Companions] deal {0}% reduced Damage per socketed Talisman",
+        "string": "[DNT-UNUSED] [Companion|Companions] deal {0}% reduced Damage per socketed Talisman",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3794,7 +3828,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Les Ennemis que vous [Curse|Maudissez] ont au moins {0}% de leur Vie [Reservation|Réservée]",
+        "string": "Targets [Curse|Cursed] by you have at least {0}% of Life [Reservation|Reserved]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3866,7 +3900,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% de chances d'[Daze|Hébéter] les Ennemis dont vous [Block|Bloquez] activement les [HitDamage|Touches]",
+        "string": "{0}% chance to [Daze] Enemies whose [HitDamage|Hits] you [Block] with a raised [Shield]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3902,7 +3936,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Enable Living Bomb",
+        "string": "[DNT-UNUSED] Enable Living Bomb",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3974,7 +4008,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Enable Explosive Teleport",
+        "string": "[DNT-UNUSED] Enable Explosive Teleport",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4010,7 +4044,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Enable Hand Slam",
+        "string": "[DNT-UNUSED] Enable Hand Slam",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4046,7 +4080,43 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Enable Knife Toss",
+        "string": "[DNT-UNUSED] Enable Knife Toss",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_travellers_wisdom_extra_attribute_options"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Attribute Passive Skills can instead grant 5% increased Damage\nAttribute Passive Skills can instead grant 5% increased [Defences]\nAttribute Passive Skills can instead grant 5% increased Cost [Efficiency]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4118,7 +4188,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% more [ESRecharge|Energy Shield Recharge Rate]",
+        "string": "{0}% more [ESRecharge|Energy Shield Recharge Rate] while on [LowEnergyShield|Low Energy Shield]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4138,7 +4208,43 @@
             "negate"
           ]
         ],
-        "string": "[DNT] {0}% less [ESRecharge|Energy Shield Recharge Rate]",
+        "string": "{0}% less [ESRecharge|Energy Shield Recharge Rate] while on [LowEnergyShield|Low Energy Shield]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "double_adaptation_effect"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Double [Adaptation] Effect",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4191,29 +4297,11 @@
   {
     "English": null,
     "ids": [
-      "elemental_damage_taken_+%_final_per_matching_adaptation"
+      "ascendancy_druid_shaman_elemental_damage_taken_+%_final_per_matching_adaptation"
     ],
     "trade_stats": null,
     "hidden": null,
     "French": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] {0}% more [ElementalDamage|Elemental Damage] taken per Adaptation, matching that Adaptations type",
-        "reminder_text": null,
-        "is_markup": null
-      },
       {
         "condition": [
           {
@@ -4230,7 +4318,25 @@
             "negate"
           ]
         ],
-        "string": "[DNT] {0}% less [ElementalDamage|Elemental Damage] taken per Adaptation, matching that Adaptations type",
+        "string": "Each [Adaptation] grants {0}% less Damage taken of that [Adaptation]'s type",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Each [Adaptation] grants {0}% more Damage taken of that [Adaptation]'s type",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4267,64 +4373,6 @@
           []
         ],
         "string": "Les Aptitudes [ElementalDamage|Élémentaires] ont {0} [Limit|Limite]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "energy_shield_recharge_starts_X_ms_sooner"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": [
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "La [ESRecharge|Recharge du Bouclier d'énergie] démarre {0} seconde plus tôt",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "La [ESRecharge|Recharge du Bouclier d'énergie] démarre {0} secondes plus tôt",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4398,7 +4446,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% increased bonuses gained from Equipped [Focus]",
+        "string": "{0}% increased bonuses gained from Equipped [Focus]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4418,43 +4466,7 @@
             "negate"
           ]
         ],
-        "string": "[DNT] {0}% reduced bonuses gained from Equipped [Focus]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "gain_X_adaptation_matching_type_when_hit_by_elemental_damage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] Gain {0} Adaptation when hit by [ElementalDamage|Elemental Damage], matching the type of the Damage taken",
+        "string": "{0}% reduced bonuses gained from Equipped [Focus]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4507,6 +4519,42 @@
   {
     "English": null,
     "ids": [
+      "hit_damage_remove_from_mana_before_life_while_mana_higher_than_life"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[HitDamage|Hit] damage is taken from Mana before Life if your current Mana is higher than your current Life",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "immune_to_volatility_damage"
     ],
     "trade_stats": null,
@@ -4527,6 +4575,114 @@
           []
         ],
         "string": "Vous ne subissez pas de dégâts d'[Volatility|Instabilité]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "gain_elemental_archon_when_you_cast_a_spell_while_on_high_infernal_flame"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Gain [ElementalArchon|Elemental Archon] when you cast a [Spell] while on [HighInfernalFlame|High Infernal Flame]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "elemental_archon_does_not_expire_while_on_high_infernal_flame"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[ElementalArchon|Elemental Archon] does not expire while on [HighInfernalFlame|High Infernal Flame]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "lose_elemental_archone_on_reaching_full_infernal_flame"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Lose [ElementalArchon|Elemental Archon] on reaching maximum Infernal Flame",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4634,7 +4790,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Les [Bleeding|Saignements] que vous infligez sont [Aggravate|Aggravés]\nLa Durée de base des [Bleeding|Saignements] est de 1 seconde",
+        "string": "[Bleeding] you inflict is [Aggravate|Aggravated]\nBase [Bleeding] Duration is 1 second\n50% more [BuffMagnitude|Magnitude] of [Bleeding] you inflict",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4743,42 +4899,6 @@
           []
         ],
         "string": "Vous pouvez manier les [Axe|Haches], [Mace|Masses] et [Sword|Épées] à [Two-Handed|deux mains] avec une seule main\nLes Prérequis d'[Attributes|Attributs] des [MartialWeapon|Armes martiales] sont triplés\nLa Vie inhérente octroyée par la [Strength|Force] est divisée par deux",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "keystone_mana_leech_from_elemental_instead"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Le [ManaLeech|Drain de Mana] découle des [ElementalDamage|Dégâts élémentaires] plutôt que des Dégâts [Physical|Physiques]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5086,7 +5206,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0} to maximum Mana per fifty [ItemDefences|Item Evasion Rating] on [EquipArmour|Equipped Armour Items]",
+        "string": "[DNT-UNUSED] {0} to maximum Mana per fifty [ItemDefences|Item Evasion Rating] on [EquipArmour|Equipped Armour Items]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5103,7 +5223,7 @@
   {
     "English": null,
     "ids": [
-      "meta_gem_reservation_efficiency_+%"
+      "minion_non_skill_base_elemental_damage_%_to_gain_as_chaos"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -5122,27 +5242,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Meta|Meta Skill Gems] have {0}% increased [Reservation] efficiency",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[DNT] [Meta|Meta Skill Gems] have {0}% reduced [Reservation] efficiency",
+        "string": "[Minion|Minions] [Gain] {0}% of Elemental Damage as Extra Chaos Damage",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5234,7 +5334,79 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Attack|Attacks] [Empowered] by Owl Feathers have {0}% more [CriticalDamageBonus|Critical Damage Bonus]",
+        "string": "[DNT-UNUSED] [Attack|Attacks] [Empowered] by Owl Feathers have {0}% more [CriticalDamageBonus|Critical Damage Bonus]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "natures_sustenance_added_rage_cost"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Skills have {0} to [Rage] cost",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "natures_sustenance_additional_maximum_rage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0} à la [Rage|Rage] maximale",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5443,6 +5615,42 @@
   {
     "English": null,
     "ids": [
+      "ascendancy_non_unique_jewel_radius_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Non-[Rarity|Unique] Time-Lost [Jewel|Jewels] have {0}% increased radius",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "offering_skill_target_cullable_enemies_instead"
     ],
     "trade_stats": null,
@@ -5499,6 +5707,154 @@
           []
         ],
         "string": "Vos [Offering|Offrandes] vous affectent vous plutôt que vos [Minion|Créatures]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "oracle_hits_eventually_crit_with_critical_strike_multiplier_+%_final_per_failed_roll"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[InevitableCriticalHits|Inevitable Critical Hits]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "oracle_maximum_life_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% more maximum Life",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% less maximum Life",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "oracle_maximum_mana_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% more maximum Mana",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% less maximum Mana",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5698,43 +6054,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Projectile] [Attack|Attacks] always [Chain] to [Mark|Marked] Enemies with {0}% increased [Chain|Chaining Distance]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "ascendancy_shaman_spell_damage_+%_final_per_rage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] You gain {0}% more [Spell] Damage per [Rage]",
+        "string": "[DNT-UNUSED] [Projectile] [Attack|Attacks] always [Chain] to [Mark|Marked] Enemies with {0}% increased [Chain|Chaining Distance]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5806,7 +6126,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] [Freeze] you inflict has up to {0}% increased duration, at random",
+        "string": "[DNT-UNUSED] [Freeze] you inflict has up to {0}% increased duration, at random",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5900,7 +6220,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Skills have {0}% increased [Reservation] efficiency per socketed Talisman",
+        "string": "[DNT-UNUSED] Skills have {0}% increased [Reservation] efficiency per socketed Talisman",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5920,7 +6240,7 @@
             "negate"
           ]
         ],
-        "string": "[DNT] Skills have {0}% reduced [Reservation] efficiency per socketed Talisman",
+        "string": "[DNT-UNUSED] Skills have {0}% reduced [Reservation] efficiency per socketed Talisman",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5956,7 +6276,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% to all [ElementalDamage|Elemental Resistances] per socketed Rune",
+        "string": "[DNT-UNUSED] {0}% to all [ElementalDamage|Elemental Resistances] per socketed Rune",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6084,7 +6404,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% increased cost of Skills per socketed Soul Core",
+        "string": "[DNT-UNUSED] {0}% increased cost of Skills per socketed Soul Core",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6104,7 +6424,7 @@
             "negate"
           ]
         ],
-        "string": "[DNT] {0}% reduced cost of Skills per socketed Soul Core",
+        "string": "[DNT-UNUSED] {0}% reduced cost of Skills per socketed Soul Core",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6121,7 +6441,8 @@
   {
     "English": null,
     "ids": [
-      "spells_sacrifice_%_of_your_energy_shield"
+      "spells_sacrifice_%_of_your_energy_shield",
+      "ascendancy_lich_spell_damage_+%_final_when_sacrificing_energy_shield"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -6129,18 +6450,77 @@
       {
         "condition": [
           {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
             "min": 1,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
-        "string": "Vous [Sacrifice|Sacrifiez] {0}% de votre [EnergyShield|Bouclier d'énergie] maximal lorsque vous Lancez un [Spell|Sorts]",
+        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]\n[Spell|Spells] for which this [Sacrifice] was fully made deal {0}% more Damage",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ],
+          []
+        ],
+        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]\n[Spell|Spells] for which this [Sacrifice] was fully made deal {0}% less Damage",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6248,7 +6628,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Tame Beast can target Unique Beasts\nYou can summon Tamed Unique Beasts",
+        "string": "[DNT-UNUSED] Tame Beast can target Unique Beasts\nYou can summon Tamed Unique Beasts",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6286,7 +6666,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[DNT] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} second",
+        "string": "[DNT-UNUSED] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} second",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6306,43 +6686,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[DNT] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} seconds",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "time_lost_jewel_radius_is_upgraded"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] Your [TimeLostJewel|Time Lost Jewels] have upgraded radii",
+        "string": "[DNT-UNUSED] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} seconds",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6450,7 +6794,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] {0}% of Main Hand Weapon Damage granted as Added Attack Damage to your [Companion|Companions] in your [Presence]",
+        "string": "[DNT-UNUSED] {0}% of Main Hand Weapon Damage granted as Added Attack Damage to your [Companion|Companions] in your [Presence]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6613,6 +6957,42 @@
           []
         ],
         "string": "La [Dexterity|Dextérité] n'octroie plus de bonus inhérent\n1% d'Augmentation d'[Armour|Armure] tous les 2 de Dextérité",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "keystone_alternate_es_recovery"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "5% of [Physical] Damage prevented [Recoup|Recouped] as [EnergyShield|Energy Shield] per enemy [Power]\n[EnergyShield|Energy Shield] does not [ESRecharge|Recharge]\nYou cannot Recover [EnergyShield|Energy Shield] from Regeneration\nYou cannot Recover [EnergyShield|Energy Shield] to above [Armour]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7025,6 +7405,42 @@
   {
     "English": null,
     "ids": [
+      "keystone_druidic_rage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "100% more Maximum [Rage]\nRegenerate 1 [Rage] per second per 4 [Rage] spent [Recently]\nNo [Rage] effect",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "keystone_elemental_overload"
     ],
     "trade_stats": null,
@@ -7368,7 +7784,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tant que les emplacements d'arme de vos deux mains sont vides, vous pouvez [Attack|Attaquer] comme si vous utilisiez une [Quarterstaff|Bâton de combat]\nLes [Attack|Attaques] à mains nues qui font appel à vos Dégâts avec un [Quarterstaff|Bâton de combat] gagnent :\n• Les Dégâts [Physical|Physiques] découlent du niveau de l'Aptitude utilisée\n• 1% Davantage de Vitesse d'[Attack|Attaque] tous les 25 de [ItemDefences|Score d'Évasion d'objet] sur les [EquipArmour|Objets d'Armure Équipés]\n• +0.1% aux chances de [Critical|Touche critique] tous les 10 de [ItemDefences|Bouclier d'énergie d'objet] sur les [EquipArmour|Objets d'Armure Équipés]",
+        "string": "Tant que les emplacements d'arme de vos deux mains sont vides, vous pouvez [Attack|Attaquer] comme si vous utilisiez une [Quarterstaff|Bâton de combat]\nLes [Attack|Attaques] à mains nues qui font appel à vos Dégâts avec un [Quarterstaff|Bâton de combat] gagnent :\n• Les Dégâts [Physical|Physiques] découlent du niveau de l'Aptitude utilisée\n• 1% Davantage de Vitesse d'[Attack|Attaque] tous les 75 de [ItemDefences|Score d'Évasion d'objet] sur les [EquipArmour|Objets d'Armure Équipés]\n• +0.1% aux chances de [Critical|Touche critique] tous les 10 de [ItemDefences|Bouclier d'énergie d'objet] sur les [EquipArmour|Objets d'Armure Équipés]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7476,7 +7892,7 @@
         "index_handlers": [
           []
         ],
-        "string": "La [Strength|Force] n'octroie plus de bonus inhérent\n1% d'Augmentation de Dégâts des [SpellSorts] tous les 2 de [Strength|Force]",
+        "string": "La [Strength|Force] n'octroie plus de bonus inhérent\n1% d'Augmentation de Dégâts des [Spell|Sorts] tous les 2 de [Strength|Force]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7549,6 +7965,42 @@
           []
         ],
         "string": "La Récupération de Mana découlant de la Régénération fait [Overflow|Déborder] le Mana maximal\n50% de Perte de Taux de Régénération de Mana",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "keystone_lord_of_the_wilds"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "You can equip a non-[ItemRarity|Unique] [Sceptre] while wielding a [Talisman]\n50% less [Spirit]\nNon-[Minion] Skills have 50% less [Reservation] [Efficiency]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8016,7 +8468,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Vous Régénérez 1 de Vie par seconde tous les 8 de Vie dépensée lors des 8 dernières secondes\nVos Aptitudes ont 50% Davantage de Coût en Vie",
+        "string": "Regenerate 1 Life per second per 16 Life spent in the past 4 seconds\n20% more Life Cost of Skills",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8161,6 +8613,42 @@
           []
         ],
         "string": "Vous avez +10% à toutes les Résistances élémentaires et Résistances élémentaires maximales tant qu'une Aptitude de Protection non vaal vous affecte\nVous avez une Réduction supplémentaire des Dégâts physiques de 20% tant qu'une Aptitude de Protection non vaal vous affecte\nVous avez 20% Davantage de Dégâts subis si l'Effet bénéfique d'une Aptitude de Protection a été perdu [Recently|Récemment]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "keystone_wildsurge_incantation"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Storm|Storm] and [Plant|Plant] [Spell|Spells]:\n• deal 50% more damage\n• cost 50% less\n• have 75% less duration",
         "reminder_text": null,
         "is_markup": null
       }

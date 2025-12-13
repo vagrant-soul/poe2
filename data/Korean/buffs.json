@@ -14,7 +14,7 @@
     "stack_limit": null
   },
   "chilled": {
-    "description": "[Slow|감속]",
+    "description": "[Slow|감속]됨",
     "invisible": false,
     "name": "냉각된",
     "removable": false,
@@ -641,21 +641,6 @@
     "templates": null,
     "stack_limit": null
   },
-  "rage_leech": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [
-      "base_rage_recovery_per_minute_from_rage_leech",
-      "is_rage_leeching"
-    ],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
   "players_increased": {
     "description": "게임 내에 더 많은 플레이어가 있습니다.",
     "invisible": true,
@@ -1243,7 +1228,7 @@
     "stack_limit": null
   },
   "curse_temporal_chains": {
-    "description": "저주가 플레이어를 [Slow|감속]시키고, 플레이어에게 적용된 다른 효과가 더 천천히 만료되게 합니다.",
+    "description": "[Curse|저주]가 플레이어를 [Slow|감속]시키고, 다른 효과들이 더 천천히 만료되게 합니다.",
     "invisible": false,
     "name": "시간의 사슬",
     "removable": false,
@@ -1258,7 +1243,7 @@
     "stack_limit": null
   },
   "curse_elemental_weakness": {
-    "description": "저주가 [Resistances|원소 저항]을 낮춥니다.",
+    "description": "[Curse|저주]가 [Resistances|원소 저항]을 낮춥니다.",
     "invisible": false,
     "name": "원소 약화",
     "removable": false,
@@ -1272,7 +1257,7 @@
     "stack_limit": null
   },
   "curse_fire_weakness": {
-    "description": "저주가 [Resistances|화염 저항]을 낮춥니다.",
+    "description": "[Curse|저주]가 [Resistances|화염 저항]을 낮춥니다.",
     "invisible": false,
     "name": "인화성",
     "removable": false,
@@ -1286,7 +1271,7 @@
     "stack_limit": null
   },
   "curse_cold_weakness": {
-    "description": "저주가 [Resistances|냉기 저항]을 낮춥니다.",
+    "description": "[Curse|저주]가 [Resistances|냉기 저항]을 낮춥니다.",
     "invisible": false,
     "name": "체온저하",
     "removable": false,
@@ -1300,7 +1285,7 @@
     "stack_limit": null
   },
   "curse_lightning_weakness": {
-    "description": "저주가 [Resistances|번개 저항]을 낮춥니다.",
+    "description": "[Curse|저주]가 [Resistances|번개 저항]을 낮춥니다.",
     "invisible": false,
     "name": "전도성",
     "removable": false,
@@ -1346,7 +1331,7 @@
     "stack_limit": null
   },
   "curse_enfeeble": {
-    "description": "저주가 피해량을 감폭시킵니다.",
+    "description": "[Curse|저주]가 피해량을 감폭시킵니다.",
     "invisible": false,
     "name": "쇠약화",
     "removable": false,
@@ -1398,7 +1383,7 @@
     "stack_limit": null
   },
   "curse_vulnerability": {
-    "description": "저주가 [Total|총] [Armour|방어도]를 일부 제거합니다.",
+    "description": "[Curse|저주]가 [Total|총] [Armour|방어도]의 일부를 제거합니다.",
     "invisible": false,
     "name": "취약성",
     "removable": false,
@@ -1449,7 +1434,7 @@
     "stack_limit": null
   },
   "curse_pain_synchronisation": {
-    "description": "이 [Curse|저주]는 받는 [HitDamage|피해]를 추적합니다. 저주가 만료되면 그 피해의 일부를 다시 받습니다.",
+    "description": "[Curse|저주]가 받는 [HitDamage|피해]를 추적합니다. 저주가 만료되면 그 피해의 일부를 다시 받습니다.",
     "invisible": false,
     "name": "피할 수 없는 고뇌",
     "removable": false,
@@ -5518,6 +5503,22 @@
     "templates": null,
     "stack_limit": null
   },
+  "onslaught_invisible": {
+    "description": "[SkillSpeed|스킬 속도]가 20%, 이동 속도가 10% 증가합니다.",
+    "invisible": true,
+    "name": "맹공",
+    "removable": false,
+    "stats": [
+      "attack_speed_+%",
+      "base_cast_speed_+%",
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "have_onslauht_from_nearby_allies": {
     "description": "",
     "invisible": true,
@@ -8183,6 +8184,21 @@
     "stack_limit": null
   },
   "heal": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "life_regeneration_rate_per_minute_%",
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "heal_boss_transition": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -14073,7 +14089,7 @@
     "stack_limit": null
   },
   "intimidated": {
-    "description": "위협에 걸려 받는 피해가 증가하고 주는 피해가 감소합니다.",
+    "description": "[Intimidate|위협]에 걸려 받는 피해가 증가하고 주는 피해가 감소합니다.",
     "invisible": false,
     "name": "위협",
     "removable": false,
@@ -14686,7 +14702,7 @@
     "stack_limit": null
   },
   "decay": {
-    "description": "지속 카오스 피해를 받고 있습니다.",
+    "description": "디버프가 받는 [Chaos|카오스] 피해를 증가시킵니다.",
     "invisible": false,
     "name": "부패",
     "removable": false,
@@ -19117,18 +19133,6 @@
     "templates": null,
     "stack_limit": null
   },
-  "rage": {
-    "description": "공격 피해가 증폭됩니다.\n최근 2초 이내 피격되지 않거나 격노를 얻지 못했다면 격노가 0.1초마다 1개씩 줄어듭니다.",
-    "invisible": false,
-    "name": "격노",
-    "removable": false,
-    "stats": [],
-    "visuals": "rage",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
   "bestiary_harpoon_slow": {
     "description": "",
     "invisible": true,
@@ -19603,20 +19607,6 @@
     "templates": null,
     "stack_limit": null
   },
-  "recent_rage_tracker": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [
-      "should_not_lose_rage"
-    ],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
   "cannot_evade_attacks": {
     "description": "",
     "invisible": true,
@@ -19729,7 +19719,7 @@
     "stack_limit": 3
   },
   "tailwind": {
-    "description": "중첩당 10초 동안 이동 속도 1% 증가, [SkillSpeed|스킬 속도] 3% 증가, [Evasion|회피] 15% 증가를 부여합니다. 최대 10회 중첩됩니다.",
+    "description": "중첩 하나당 이동 속도 1%, [SkillSpeed|스킬 속도] 2%, [Evasion|회피] 10% 증가를 부여하고 [Deflected|튕겨낸] [HitDamage|명중] 피해의 1%를 예방합니다. 최대 10회 중첩됩니다.",
     "invisible": false,
     "name": "순풍",
     "removable": false,
@@ -19737,6 +19727,7 @@
       "base_movement_velocity_+%",
       "skill_speed_+%",
       "evasion_rating_+%",
+      "base_damage_%_deflected",
       "has_tailwind",
       "tailwind_stacks"
     ],
@@ -19748,15 +19739,17 @@
         "aura_radius_metres": 6.0,
         "stats": {
           "base_movement_velocity_+%": 1,
-          "skill_speed_+%": 3,
-          "evasion_rating_+%": 15,
+          "skill_speed_+%": 2,
+          "evasion_rating_+%": 10,
+          "base_damage_%_deflected": 1,
           "has_tailwind": 1,
           "tailwind_stacks": 1
         },
         "stat_text": [
           "이동 속도 1% 증가",
-          "[SkillSpeed|스킬 속도] 3% 증가",
-          "[Evasion|회피] 15% 증가"
+          "[SkillSpeed|스킬 속도] 2% 증가",
+          "[Evasion|회피] 10% 증가",
+          "[Deflect|튕겨낸] [HitDamage|명중]의 피해 중 방지하는 피해 +1%"
         ],
         "visuals": null
       },
@@ -19764,15 +19757,17 @@
         "aura_radius_metres": 6.0,
         "stats": {
           "base_movement_velocity_+%": 1,
-          "skill_speed_+%": 3,
-          "evasion_rating_+%": 15,
+          "skill_speed_+%": 2,
+          "evasion_rating_+%": 10,
+          "base_damage_%_deflected": 1,
           "has_tailwind": 1,
           "tailwind_stacks": 1
         },
         "stat_text": [
           "이동 속도 1% 증가",
-          "[SkillSpeed|스킬 속도] 3% 증가",
-          "[Evasion|회피] 15% 증가"
+          "[SkillSpeed|스킬 속도] 2% 증가",
+          "[Evasion|회피] 10% 증가",
+          "[Deflect|튕겨낸] [HitDamage|명중]의 피해 중 방지하는 피해 +1%"
         ],
         "visuals": null
       },
@@ -19780,15 +19775,17 @@
         "aura_radius_metres": null,
         "stats": {
           "base_movement_velocity_+%": 1,
-          "skill_speed_+%": 3,
-          "evasion_rating_+%": 15,
+          "skill_speed_+%": 2,
+          "evasion_rating_+%": 10,
+          "base_damage_%_deflected": 1,
           "has_tailwind": 1,
           "tailwind_stacks": 1
         },
         "stat_text": [
           "이동 속도 1% 증가",
-          "[SkillSpeed|스킬 속도] 3% 증가",
-          "[Evasion|회피] 15% 증가"
+          "[SkillSpeed|스킬 속도] 2% 증가",
+          "[Evasion|회피] 10% 증가",
+          "[Deflect|튕겨낸] [HitDamage|명중]의 피해 중 방지하는 피해 +1%"
         ],
         "visuals": null
       }
@@ -20780,7 +20777,7 @@
     "stack_limit": null
   },
   "cold_snap_expanding_chilled_ground": {
-    "description": "얼음 지대 위에 서 있으면 동작이 느려집니다.",
+    "description": "[Slow|감속]됨",
     "invisible": false,
     "name": "얼음 지대",
     "removable": false,
@@ -21894,7 +21891,7 @@
     "stack_limit": null
   },
   "impaled_debuff": {
-    "description": "피격으로 인해 꿰뚫린 상태입니다. 또 다시 피격당하면 반사된 피해의 일부를 받습니다.",
+    "description": "피격으로 인해 [Impale|꿰뚫린] 상태입니다. 이어서 [HitDamage|피격]당하면 추가 명중 피해를 받습니다.",
     "invisible": false,
     "name": "꿰뚫림",
     "removable": false,
@@ -25334,18 +25331,6 @@
     "templates": null,
     "stack_limit": null
   },
-  "explosive_arrow": {
-    "description": "곧 폭발 피해를 받게 됩니다.",
-    "invisible": false,
-    "name": "폭발 화살에 피격",
-    "removable": false,
-    "stats": [],
-    "visuals": "fuse_arrow_orb",
-    "category": "Charge",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
   "combined_ascendancy_child_auras": {
     "description": "",
     "invisible": true,
@@ -27089,18 +27074,6 @@
     ],
     "visuals": "enduring_cry_charge_benefits",
     "category": "Buff",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "rage_gain_over_time": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [],
-    "visuals": "invisible",
-    "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -28940,11 +28913,14 @@
     "stack_limit": null
   },
   "wet": {
-    "description": "물로 된 구체 때문에 흠뻑 젖어, 구체의 파동에 피해를 받습니다.",
+    "description": "[Shock|감전]되고 [Freeze|동결]되기 쉽습니다.",
     "invisible": false,
     "name": "흠뻑 젖음",
     "removable": false,
-    "stats": [],
+    "stats": [
+      "shock_chance_on_self_+%_final_from_wet_debuff",
+      "hit_damage_freeze_multiplier_+%_final_on_self_from_wet_debuff"
+    ],
     "visuals": "wet",
     "category": "Debuff",
     "sources": null,
@@ -28956,9 +28932,7 @@
     "invisible": true,
     "name": "",
     "removable": false,
-    "stats": [
-      "wet_time_does_not_tick"
-    ],
+    "stats": [],
     "visuals": "invisible",
     "category": null,
     "sources": null,
@@ -30581,7 +30555,7 @@
     "stack_limit": null
   },
   "blood_tendrils": {
-    "description": "지속 물리 피해를 받고 있습니다.",
+    "description": "지속 [Physical|물리] 피해를 받고 있습니다.",
     "invisible": false,
     "name": "방혈",
     "removable": false,
@@ -32719,11 +32693,11 @@
   "olroth_relic_ground_burn": {
     "description": "지속 냉기 피해를 받고 움직임이 느려집니다.",
     "invisible": false,
-    "name": "영멸의 냉각",
+    "name": "영멸의 추위",
     "removable": false,
     "stats": [
       "base_cold_damage_taken_per_minute",
-      "action_speed_+%_final_from_chill"
+      "action_speed_+%_final_from_olroth_relic_ground_burn"
     ],
     "visuals": "orloth_relic_ground_burn",
     "category": "Debuff",
@@ -33255,7 +33229,8 @@
       "life_spent_per_minute",
       "es_spent_per_minute",
       "mana_spent_per_minute_taking_es_first",
-      "infernal_flame_gained_per_minute"
+      "infernal_flame_gained_per_minute",
+      "rage_spent_per_minute"
     ],
     "visuals": "invisible",
     "category": null,
@@ -33934,7 +33909,7 @@
     "stack_limit": null
   },
   "monster_grasping_vines": {
-    "description": "몸을 얽은 덩굴의 수에 따라 움직임이 [Slow|느려집니다]. 움직이면 덩굴이 끊어집니다.",
+    "description": "붙어 있는 덩굴의 수에 따라 이동 속도가 [Slow|느려집니다]. 움직이면 덩굴이 끊어집니다.",
     "invisible": false,
     "name": "탐욕스러운 덩굴",
     "removable": false,
@@ -34766,7 +34741,7 @@
     "stack_limit": null
   },
   "harvest_cat_grasping_vines_buff": {
-    "description": "몸을 얽은 덩굴의 수에 따라 움직임이 [Slow|느려집니다]. 움직이면 덩굴이 끊어집니다.",
+    "description": "붙어 있는 덩굴의 수에 따라 이동 속도가 [Slow|느려집니다]. 움직이면 덩굴이 끊어집니다.",
     "invisible": false,
     "name": "탐욕스러운 덩굴",
     "removable": false,
@@ -34780,7 +34755,7 @@
     "stack_limit": null
   },
   "nemesis_grasping_vines_buff": {
-    "description": "몸을 얽은 덩굴의 수에 따라 움직임이 [Slow|느려집니다]. 움직이면 덩굴이 끊어집니다.",
+    "description": "붙어 있는 덩굴의 수에 따라 이동 속도가 [Slow|느려집니다]. 움직이면 덩굴이 끊어집니다.",
     "invisible": false,
     "name": "탐욕스러운 덩굴",
     "removable": false,
@@ -34794,7 +34769,7 @@
     "stack_limit": null
   },
   "nature_grasping_vines_buff": {
-    "description": "몸을 얽은 덩굴의 수에 따라 움직임이 [Slow|느려집니다]. 움직이면 덩굴이 끊어집니다.",
+    "description": "붙어 있는 덩굴의 수에 따라 이동 속도가 [Slow|느려집니다]. 움직이면 덩굴이 끊어집니다.",
     "invisible": false,
     "name": "탐욕스러운 덩굴",
     "removable": false,
@@ -35954,7 +35929,7 @@
     "stack_limit": null
   },
   "trickster_alternating_less_hit_damage": {
-    "description": "피격 시 받는 피해가 30% 감폭됩니다.",
+    "description": "피격 시 받는 피해가 감폭됩니다.",
     "invisible": false,
     "name": "전호의 보관자",
     "removable": false,
@@ -35968,7 +35943,7 @@
     "stack_limit": null
   },
   "trickster_alternating_less_dot_damage": {
-    "description": "받는 지속 피해가 30% 감폭됩니다.",
+    "description": "받는 지속 피해가 감폭됩니다.",
     "invisible": false,
     "name": "전호의 보관자",
     "removable": false,
@@ -38584,7 +38559,7 @@
   "jagged_ground": {
     "description": "디버프가 이동 속도를 [Slow|감속]시킵니다.",
     "invisible": false,
-    "name": "가시 지대",
+    "name": "요철 지대",
     "removable": false,
     "stats": [
       "jagged_ground_movement_speed_+%_final"
@@ -38724,9 +38699,9 @@
     "stack_limit": null
   },
   "bloodfever_aura_of_flies": {
-    "description": "",
+    "description": "지속 [Physical|물리] 피해와 [Fire|화염] 피해를 받고 있습니다.",
     "invisible": false,
-    "name": "WIP",
+    "name": "피의 열병",
     "removable": false,
     "stats": [
       "base_physical_damage_taken_per_minute",
@@ -38803,6 +38778,22 @@
     ],
     "visuals": "invisible",
     "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "monster_smite_lightning_and_undead_damage_tiki": {
+    "description": "동료들이 추가 번개 피해를 주고 언데드에게 추가 피해를 줍니다.",
+    "invisible": false,
+    "name": "황혼의 교단 피해 오라",
+    "removable": false,
+    "stats": [
+      "non_skill_base_physical_damage_%_to_gain_as_lightning",
+      "damage_against_undead_+%",
+      "damage_vs_tiki_totems_+%"
+    ],
+    "visuals": "monster_smite_lightning_and_undead_damage",
+    "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -39658,7 +39649,7 @@
     "stack_limit": null
   },
   "armour_break_tracker": {
-    "description": "방어구의 일부를 잃었습니다.",
+    "description": "[Armour|방어구]의 일부가 [ArmourBreak|파괴]되었습니다.",
     "invisible": false,
     "name": "방어구 파괴",
     "removable": false,
@@ -39677,9 +39668,10 @@
     "name": "완전히 파괴된 방어구",
     "removable": false,
     "stats": [
-      "broken_armor_and_sundered_armor_physical_damage_taken_+%_from_hits",
+      "fully_broken_armor_physical_damage_taken_+%_from_hits",
       "no_life_regeneration",
-      "fully_broken_armour_and_sundered_armour_debuff_also_applies_to_fire_damage_taken",
+      "fully_broken_armour_on_you_also_increases_fire_damage_taken",
+      "fully_broken_armour_on_you_increases_all_damage_taken",
       "armour_is_fully_broken"
     ],
     "visuals": "armour_broken",
@@ -40827,6 +40819,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "sanguine_revelry_visual": {
+    "description": "[DNT-UNUSED] Conjure hateful energy to fuel your Rage and Life. While active, [Bleed|Bleeding] enemies you kill have a chance to spawn a Hateful [Remnant], and [Hit|Hitting] a [Bleed|Bleeding] target spawns a Hateful [Remnant] every few seconds. Picking up a Hateful [Remnant] grants you Rage and restores Life based on your current Rage.",
+    "invisible": false,
+    "name": "[DNT-UNUSED] Sanguine Revelry",
+    "removable": false,
+    "stats": [
+      "has_mana_remnants"
+    ],
+    "visuals": "mana_remnants",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "igneous_shield_buff": {
     "description": "[Block|막기] 확률이 증가합니다. 최대로 충전되면 방패를 올려 다음 [Block|막기]에 [Fire|화염]의 힘을 불어넣고 [Charges|인내 충전]을 부여합니다.",
     "invisible": false,
@@ -41583,7 +41589,7 @@
     "stack_limit": null
   },
   "ice_bite": {
-    "description": "공격에 냉기 피해가 추가됩니다.",
+    "description": "[Attack|공격]으로 추가 [Cold|냉기] 피해를 줍니다.",
     "invisible": false,
     "name": "얼음 쐐기",
     "removable": false,
@@ -41591,13 +41597,13 @@
       "non_skill_base_all_damage_%_to_gain_as_cold_with_attacks"
     ],
     "visuals": "ice_bite",
-    "category": null,
+    "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
   "grim_feast": {
-    "description": "주변의 적과 소환수가 사망하면 으스스한 잔류물이 생성되고, 이를 획득하면 에너지 보호막이 부여됩니다.",
+    "description": "주변의 [Reviving|부활]하는 [Minion|소환수]가 죽으면, [Minion|소환수]를 [Reviving|부활]시킬 때 사용할 수 있는 으스스한 잔류물이 생성됩니다.",
     "invisible": false,
     "name": "으스스한 연회",
     "removable": false,
@@ -41623,13 +41629,13 @@
     "stack_limit": null
   },
   "blasphemy_reservation": {
-    "description": "",
-    "invisible": true,
-    "name": "",
+    "description": "장착된 [Curse|저주] 스킬의 효과를 범위 내의 적들에게 적용하고 있습니다.",
+    "invisible": false,
+    "name": "신성 모독",
     "removable": false,
     "stats": [],
-    "visuals": "invisible",
-    "category": null,
+    "visuals": "blasphemy_reserve",
+    "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -41803,7 +41809,7 @@
     "stack_limit": null
   },
   "critical_weakness": {
-    "description": "피격되면 치명타 확률이 증가합니다.",
+    "description": "명중이 [CriticalWeakness|치명타 약화] 강도에 따라 추가 [Critical|치명타] 확률을 얻습니다.",
     "invisible": false,
     "name": "치명타 약화",
     "removable": false,
@@ -41991,7 +41997,7 @@
     "stack_limit": null
   },
   "lost_focus": {
-    "description": "이 적은 집중을 잃어 재사용 대기시간 회복 속도가 감소합니다.",
+    "description": "대상이 집중을 잃어 재사용 대기시간 회복 속도가 감소합니다.",
     "invisible": false,
     "name": "집중 상실",
     "removable": false,
@@ -42209,7 +42215,7 @@
     "name": "",
     "removable": false,
     "stats": [
-      "have_consumed_endurance_charge_recently"
+      "number_of_endurance_charges_consumed_recently"
     ],
     "visuals": "invisible",
     "category": null,
@@ -42277,7 +42283,7 @@
     "name": "",
     "removable": false,
     "stats": [
-      "have_consumed_power_charge_recently"
+      "number_of_power_charges_consumed_recently"
     ],
     "visuals": "invisible",
     "category": null,
@@ -42291,7 +42297,7 @@
     "name": "",
     "removable": false,
     "stats": [
-      "have_consumed_frenzy_charge_recently"
+      "number_of_frenzy_charges_consumed_recently"
     ],
     "visuals": "invisible",
     "category": null,
@@ -42534,7 +42540,7 @@
     "templates": null,
     "stack_limit": null
   },
-  "trigger_on_footstep_tracker": {
+  "trigger_on_distance_travelled_tracker": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -42563,7 +42569,7 @@
     "stack_limit": null
   },
   "daze_build_up": {
-    "description": "",
+    "description": "피해가 [Daze|혼미]를 축적하고 있습니다.",
     "invisible": false,
     "name": "혼미",
     "removable": false,
@@ -42672,10 +42678,25 @@
     "name": "동결의 징표",
     "removable": false,
     "stats": [
-      "hit_damage_freeze_multiplier_+%_final_on_self_from_freezing_mark"
+      "hit_damage_freeze_multiplier_+%_final_on_self_from_freezing_mark",
+      "has_freeze_cull_from_freezing_mark"
     ],
     "visuals": "freezing_mark",
     "category": "Mark",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "freezing_mark_damage_buff": {
+    "description": "추가 피해를 [Cold|냉기] 피해로 획득하고 있습니다.",
+    "invisible": false,
+    "name": "동결의 징표",
+    "removable": false,
+    "stats": [
+      "non_skill_base_all_damage_%_to_gain_as_cold"
+    ],
+    "visuals": "freezing_mark_buff",
+    "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -42687,10 +42708,26 @@
     "removable": false,
     "stats": [
       "shocked_effect_on_self_+%",
-      "shock_chance_on_self_+%_final_from_thaumaturgist_mark"
+      "shock_chance_on_self_+%_final_from_thaumaturgist_mark",
+      "hit_damage_electrocute_multiplier_+%_on_self",
+      "can_be_overloaded_from_voltaic_mark"
     ],
     "visuals": "voltaic_mark",
     "category": "Mark",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "voltaic_mark_damage_buff": {
+    "description": "추가 피해를 [Lightning|번개] 피해로 획득하고 있습니다.",
+    "invisible": false,
+    "name": "전도성 징표",
+    "removable": false,
+    "stats": [
+      "non_skill_base_all_damage_%_to_gain_as_lightning"
+    ],
+    "visuals": "voltaic_mark_buff",
+    "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -42827,7 +42864,7 @@
     "stack_limit": null
   },
   "time_stop_debuff": {
-    "description": "시간이 동결되었습니다.",
+    "description": "시간이 동결되어, 움직일 수 없습니다.",
     "invisible": false,
     "name": "시간 동결",
     "removable": false,
@@ -43300,7 +43337,7 @@
     "templates": null,
     "stack_limit": null
   },
-  "unique_enemies_in_presence_have_fire_exposure": {
+  "unique_enemies_in_presence_have_exposure": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -44522,7 +44559,7 @@
     "templates": null,
     "stack_limit": null
   },
-  "main_hand_total_hundred_times_monster_power_of_enemies_hit_in_past_6_seconds": {
+  "main_hand_total_hundred_times_monster_power_of_enemies_hit_in_past_20_seconds": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -44534,7 +44571,7 @@
     "templates": null,
     "stack_limit": null
   },
-  "off_hand_total_hundred_times_monster_power_of_enemies_hit_in_past_6_seconds": {
+  "off_hand_total_hundred_times_monster_power_of_enemies_hit_in_past_20_seconds": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -44591,6 +44628,32 @@
     "removable": false,
     "stats": [
       "track_number_of_different_command_skills_used_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "number_of_different_command_skills_used_in_last_15_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "track_number_of_different_command_skills_used_in_last_15_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "track_number_of_different_command_skills_used_in_last_15_seconds"
     ],
     "visuals": "invisible",
     "category": null,
@@ -45346,7 +45409,7 @@
   "instilling_cold": {
     "description": "다음 [Projectile|투사체] [Attack|공격]이 [Cold|냉기] 폭발을 일으킵니다.",
     "invisible": false,
-    "name": "냉기 주입",
+    "name": "냉기 쇄도",
     "removable": false,
     "stats": [],
     "visuals": "instilling_cold",
@@ -45358,7 +45421,7 @@
   "instilling_fire": {
     "description": "다음 [Projectile|투사체] [Attack|공격]이 [Fire|화염] 폭발을 일으킵니다.",
     "invisible": false,
-    "name": "화염 주입",
+    "name": "화염 쇄도",
     "removable": false,
     "stats": [],
     "visuals": "instilling_fire",
@@ -45370,7 +45433,7 @@
   "instilling_lightning": {
     "description": "다음 [Projectile|투사체] [Attack|공격]이 [Lightning|번개] 폭발을 일으킵니다.",
     "invisible": false,
-    "name": "번개 주입",
+    "name": "번개 쇄도",
     "removable": false,
     "stats": [],
     "visuals": "instilling_lightning",
@@ -45382,7 +45445,7 @@
   "instilling_chaos": {
     "description": "다음 [Projectile|투사체] [Attack|공격]이 [Chaos|카오스] 폭발을 일으킵니다.",
     "invisible": false,
-    "name": "카오스 주입",
+    "name": "카오스 쇄도",
     "removable": false,
     "stats": [],
     "visuals": "instilling_chaos",
@@ -46055,34 +46118,6 @@
     "templates": null,
     "stack_limit": null
   },
-  "evasion_break_tracker": {
-    "description": "회피의 일부를 잃었습니다.",
-    "invisible": false,
-    "name": "절뚝거림",
-    "removable": false,
-    "stats": [
-      "evasion_break_count"
-    ],
-    "visuals": "evasion_break_tracker_visual",
-    "category": "Debuff",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "broken_evasion_debuff": {
-    "description": "디버프가 모든 회피를 무효화합니다.",
-    "invisible": false,
-    "name": "완전히 절뚝거림",
-    "removable": false,
-    "stats": [
-      "evasion_is_fully_broken"
-    ],
-    "visuals": "evasion_broken_visual",
-    "category": "Debuff",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
   "parried_immunity": {
     "description": "",
     "invisible": false,
@@ -46110,7 +46145,7 @@
     "stack_limit": null
   },
   "incision_debuff": {
-    "description": "절개로 인해 일정 확률로 [Bleeding|출혈]을 유발당함",
+    "description": "[Incision|절개] 수에 따라 [Bleeding|출혈] 유발 확률이 높아집니다.",
     "invisible": false,
     "name": "절개",
     "removable": false,
@@ -46630,6 +46665,35 @@
     "sources": null,
     "templates": null,
     "stack_limit": 4
+  },
+  "tasalio_perfection_buff": {
+    "description": "타살리오의 리듬의 보조 대상 스킬이 주는 피해가 증폭되고, 타살리오의 리듬 중첩에 따라 [PerfectTiming|완벽한 타이밍] 기간이 짧아집니다.",
+    "invisible": false,
+    "name": "타살리오의 리듬",
+    "removable": false,
+    "stats": [
+      "tasalios_perfection_damage_+%_final",
+      "perfect_timing_window_ms_+%"
+    ],
+    "visuals": "tasalios_rhythm",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 5
+  },
+  "support_lineage_remnants_cdr": {
+    "description": "[KhatalsRejuvenation|카탈의 회춘] 중첩 수에 따라 재사용 대기시간 회복 속도가 증가합니다.",
+    "invisible": false,
+    "name": "카탈의 회춘",
+    "removable": false,
+    "stats": [
+      "base_cooldown_speed_+%"
+    ],
+    "visuals": "khatals_rejuvenation",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 8
   },
   "window_of_opportunity_deflection_buff": {
     "description": "추가 [Deflect|튕겨내기 평점]을 얻습니다.",
@@ -47233,7 +47297,7 @@
   "water_djinn_mana_regeneration": {
     "description": "마나 재생 증가",
     "invisible": false,
-    "name": "[DNT] Mana Wave",
+    "name": "Navira's Calming",
     "removable": false,
     "stats": [
       "mana_regeneration_rate_+%"
@@ -47262,9 +47326,8 @@
     "name": "",
     "removable": false,
     "stats": [
-      "base_movement_velocity_+%",
-      "is_sprinting",
-      "heavy_stun_does_not_decay"
+      "base_move_speed_+%_from_sprint",
+      "is_sprinting"
     ],
     "visuals": "invisible",
     "category": null,
@@ -47342,9 +47405,9 @@
     "stack_limit": null
   },
   "spell_flux_delay": {
-    "description": "",
+    "description": "운명이 다시 정렬되려면 기다려야 합니다.",
     "invisible": false,
-    "name": "",
+    "name": "운명 정렬 지연시간",
     "removable": false,
     "stats": [],
     "visuals": "spell_flux_delay",
@@ -47353,13 +47416,25 @@
     "templates": null,
     "stack_limit": null
   },
-  "spell_flux_bonus": {
-    "description": "",
+  "spell_flux_ready": {
+    "description": "적이 있을 때 운명 정렬이 상을 생성합니다.",
     "invisible": false,
-    "name": "",
+    "name": "운명 정렬",
     "removable": false,
     "stats": [],
-    "visuals": "spell_flux_bonus",
+    "visuals": "spell_flux_ready",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "spell_flux_bonus": {
+    "description": "이 스킬을 사용하면 보너스를 받습니다.",
+    "invisible": true,
+    "name": "운명이 정렬되었습니다",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
     "category": null,
     "sources": null,
     "templates": null,
@@ -47368,7 +47443,7 @@
   "wyvern_swipe_empowered": {
     "description": "",
     "invisible": false,
-    "name": "[DNT] Devoured Shock",
+    "name": "[DNT-UNUSED] Devoured Shock",
     "removable": false,
     "stats": [],
     "visuals": "wyvern_swipe_empowered",
@@ -47389,49 +47464,43 @@
     "templates": null,
     "stack_limit": null
   },
-  "lingering_mirage_cooldown": {
-    "description": "신기루 궁수가 재충전되는 중입니다. 회피 구르기 시 타이머가 초기화됩니다.",
+  "lingering_mirage_deadeye_reservation": {
+    "description": "Fire [Projectile] [Attack|Attacks] to create a Mirage which uses ranged [Attack|Attacks].",
     "invisible": false,
-    "name": "신기루 재충전",
+    "name": "Mirage Deadeye",
     "removable": false,
     "stats": [],
-    "visuals": "lingering_mirage_debuff",
+    "visuals": "lingering_mirage_buff",
     "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
-  "rip_from_time_immune": {
+  "moment_of_vulnerability_immune": {
     "description": "",
     "invisible": false,
     "name": "",
     "removable": false,
     "stats": [],
-    "visuals": "rip_from_time_immune",
+    "visuals": "moment_of_vulnerability_immune",
     "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
-  "rip_from_time_clone": {
+  "moment_of_vulnerability_clone": {
     "description": "",
     "invisible": true,
     "name": "",
     "removable": false,
-    "stats": [
-      "damage_taken_is_copied_to_past_self_%",
-      "no_blood_on_death",
-      "monster_no_drops_or_experience",
-      "cannot_be_used_as_minion",
-      "immune_to_rip_from_time"
-    ],
-    "visuals": "rip_from_time_clone",
+    "stats": [],
+    "visuals": "invisible",
     "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
-  "rip_from_time_life_degen": {
+  "moment_of_vulnerability_life_degen": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -47449,7 +47518,7 @@
     "templates": null,
     "stack_limit": null
   },
-  "rip_from_time_shield_degen": {
+  "moment_of_vulnerability_shield_degen": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -47475,7 +47544,7 @@
     "templates": null,
     "stack_limit": null
   },
-  "rip_from_time_mana_degen": {
+  "moment_of_vulnerability_mana_degen": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -47524,7 +47593,7 @@
     "name": "",
     "removable": false,
     "stats": [],
-    "visuals": "spell_flux_clone",
+    "visuals": "invisible",
     "category": null,
     "sources": null,
     "templates": null,
@@ -47625,7 +47694,7 @@
     "stack_limit": null
   },
   "entangle_attached_vine": {
-    "description": "몸을 얽은 덩굴의 수에 따라 이동 속도가 [Slow|느려집니다]. 움직이면 덩굴이 끊어집니다.",
+    "description": "붙어 있는 덩굴의 수에 따라 이동 속도가 [Slow|느려집니다]. 움직이면 덩굴이 끊어집니다.",
     "invisible": false,
     "name": "덩굴 얽어매기",
     "removable": false,
@@ -47659,8 +47728,10 @@
     "invisible": false,
     "name": "[DNT] Wolf Mark",
     "removable": false,
-    "stats": [],
-    "visuals": "dominus_mark",
+    "stats": [
+      "damage_taken_+%_per_nearby_enemy_from_wolf_mark"
+    ],
+    "visuals": "wolf_cross_slash_mark",
     "category": "Mark",
     "sources": null,
     "templates": null,
@@ -47745,42 +47816,29 @@
     "templates": null,
     "stack_limit": null
   },
-  "rage_regeneration_over_time": {
-    "description": "",
-    "invisible": true,
-    "name": "",
+  "wyvern_devour_empowered": {
+    "description": "스킬들이 추가 [Lightning|번개] 피해를 [Gain|획득]하고, 분리가 더 큰 범위를 휩씁니다.",
+    "invisible": false,
+    "name": "완전히 충전됨",
     "removable": false,
     "stats": [
-      "base_rage_regeneration_per_minute",
-      "should_not_lose_rage",
-      "rage_regeneration_does_not_ignore_rage_loss_delay"
+      "non_skill_base_all_damage_%_to_gain_as_lightning"
     ],
-    "visuals": "invisible",
-    "category": "Buff",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "wyvern_devour_empowered": {
-    "description": "",
-    "invisible": false,
-    "name": "[DNT] Full Belly",
-    "removable": false,
-    "stats": [],
-    "visuals": "adrenaline",
+    "visuals": "wyvern_swipe_empowered",
     "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": 1
   },
   "wolf_lunar_blessing": {
-    "description": "",
+    "description": "플레이어와 플레이어의 늑대 소환수들이 빨라지고 추가 [Cold|냉기] 피해를 줍니다.",
     "invisible": false,
     "name": "달의 축복",
     "removable": false,
     "stats": [
       "base_movement_velocity_+%",
-      "attack_speed_+%"
+      "attack_speed_+%",
+      "non_skill_base_all_damage_%_to_gain_as_cold"
     ],
     "visuals": "wolf_lunar_blessing",
     "category": "Buff",
@@ -47802,28 +47860,29 @@
   },
   "wolf_warcry_buff": {
     "description": "",
-    "invisible": false,
+    "invisible": true,
     "name": "늑대 함성 버프",
     "removable": false,
     "stats": [
       "attack_minimum_added_cold_damage",
-      "attack_maximum_added_cold_damage"
+      "attack_maximum_added_cold_damage",
+      "hit_damage_freeze_multiplier_+%"
     ],
-    "visuals": "cold_damage_storm",
+    "visuals": "wolf_warcry_buff",
     "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
   "digesting_regeneration": {
-    "description": "[DNT] Regenerating X life cause you ate something.",
-    "invisible": false,
-    "name": "[DNT] Digesting",
+    "description": "",
+    "invisible": true,
+    "name": "",
     "removable": false,
     "stats": [
       "base_life_regeneration_rate_per_minute"
     ],
-    "visuals": "player_aura_life_regen",
+    "visuals": "invisible",
     "category": "Buff",
     "sources": null,
     "templates": null,
@@ -47836,20 +47895,6 @@
     "removable": false,
     "stats": [
       "base_movement_velocity_+%"
-    ],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "wolf_minion_focus_fire": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [
-      "wolf_minion_focus_fire_target_id"
     ],
     "visuals": "invisible",
     "category": null,
@@ -47936,12 +47981,12 @@
     "stack_limit": null
   },
   "corpse_beetles_buff": {
-    "description": "",
+    "description": "주변의 [Corpse|시신]들에서 폭발하는 시신 딱정벌레가 생성됩니다.",
     "invisible": false,
-    "name": "[DNT] Corpse Beetles",
+    "name": "Kelari's Malediction",
     "removable": false,
     "stats": [],
-    "visuals": "raging_spirits_buff",
+    "visuals": "corpse_beetles_buff",
     "category": null,
     "sources": null,
     "templates": null,
@@ -47986,15 +48031,16 @@
     "stack_limit": null
   },
   "oasis_ground_buff": {
-    "description": "[DNT] You are gaining significant Recoup and Life and Mana flask charge recovery",
+    "description": "You gain [Flask] charges and have significant Life and Mana [Recoup].",
     "invisible": false,
-    "name": "[DNT] Oasis Buff",
+    "name": "Navira's Oasis",
     "removable": false,
     "stats": [
       "damage_taken_goes_to_life_over_4_seconds_%",
-      "damage_taken_goes_to_mana_%"
+      "damage_taken_goes_to_mana_%",
+      "generate_x_charges_for_life_and_mana_flasks_per_minute"
     ],
-    "visuals": "oasis_buff_visual",
+    "visuals": "water_djinn_oasis",
     "category": "Buff",
     "sources": null,
     "templates": null,
@@ -48003,14 +48049,9 @@
   "vivid_stags_wisp_accumulation_buff": {
     "description": "",
     "invisible": false,
-    "name": "[DNT] Summoning Vivid Wisps",
+    "name": "[DNT-UNUSED] Summoning Vivid Wisps",
     "removable": false,
-    "stats": [
-      "vivid_stag_max_charge",
-      "vivid_stag_max_wisps",
-      "vivid_stag_charge_gain_per_m",
-      "ascendancy_vivid_stag_trigger_cooldown_ms"
-    ],
+    "stats": [],
     "visuals": "vivid_wisp_accumulation_buff",
     "category": null,
     "sources": null,
@@ -48130,7 +48171,7 @@
     "stack_limit": null
   },
   "abyssal_wasting": {
-    "description": "생명력 재생 속도 50% 감소",
+    "description": "디버프가 생명력 재생 속도를 50% 감소시킵니다.",
     "invisible": false,
     "name": "심연의 소진",
     "removable": false,
@@ -48148,14 +48189,14 @@
     "stack_limit": null
   },
   "owl_feather_accumulation_buff": {
-    "description": "[DNT] You are accumulating Owl Feathers over time.",
-    "invisible": false,
-    "name": "[DNT] Owl Feather Catcher",
+    "description": "",
+    "invisible": true,
+    "name": "",
     "removable": false,
     "stats": [
       "max_owl_feathers"
     ],
-    "visuals": "owl_feather_accumulation_visual",
+    "visuals": "invisible",
     "category": null,
     "sources": null,
     "templates": {
@@ -48171,9 +48212,9 @@
     "stack_limit": null
   },
   "owl_feather": {
-    "description": "[DNT] You have Owl Feathers which will be consumed on Dodge Rolling.",
+    "description": "[DNT] You have Owl Feathers which will be consumed on Dodging",
     "invisible": false,
-    "name": "[DNT] Owl Feather",
+    "name": "[DNT-UNUSED] Owl Feather",
     "removable": false,
     "stats": [],
     "visuals": "owl_feather_visual",
@@ -48211,7 +48252,7 @@
     "templates": null,
     "stack_limit": null
   },
-  "djinn_unable_to_command": {
+  "djinn_locked_out": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -48262,7 +48303,7 @@
     "stack_limit": null
   },
   "ghostflame": {
-    "description": "",
+    "description": "[SpectralFire|영체 화염]이 쌓이고 있습니다.",
     "invisible": false,
     "name": "",
     "removable": false,
@@ -48324,8 +48365,8 @@
     "name": "육체의 연회",
     "removable": false,
     "stats": [
-      "base_life_recovery_per_minute",
-      "base_mana_recovery_per_minute"
+      "base_life_regeneration_rate_per_minute",
+      "base_mana_regeneration_rate_per_minute"
     ],
     "visuals": "feast_of_flesh_regeneration",
     "category": "Buff",
@@ -48579,21 +48620,21 @@
     "templates": null,
     "stack_limit": null
   },
-  "inside_allied_bubble_aura": {
-    "description": "",
+  "inside_allied_djinn_bubble_aura": {
+    "description": "A percentage of damage dealt by enemies outside the bubble will be absorbed by the bubble.",
     "invisible": false,
-    "name": "[DNT] Inside Bubble",
+    "name": "Navira's Embrace",
     "removable": false,
     "stats": [
       "water_bubble_damage_transfer_%"
     ],
-    "visuals": "oasis_buff_visual",
+    "visuals": "water_djinn_inside_bubble",
     "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
-  "inside_enemy_bubble_aura": {
+  "inside_enemy_djinn_bubble_aura": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -48606,14 +48647,14 @@
     "stack_limit": null
   },
   "water_djinn_energy_shield_recharge_buff": {
-    "description": "",
+    "description": "[ESRecharge|에너지 보호막 재충전] 속도가 증가합니다.",
     "invisible": false,
-    "name": "[DNT] Accelerated Recharge",
+    "name": "Navira's Well",
     "removable": false,
     "stats": [
       "energy_shield_recharge_rate_+%"
     ],
-    "visuals": "oasis_buff_visual",
+    "visuals": "water_djinn_es_recharge",
     "category": "Buff",
     "sources": null,
     "templates": null,
@@ -48637,11 +48678,11 @@
   "vivid_wisp_buff": {
     "description": "",
     "invisible": false,
-    "name": "[DNT] Vivid Wisp",
+    "name": "[DNT-UNUSED] Vivid Wisp",
     "removable": false,
     "stats": [],
     "visuals": "vivid_wisp_buff",
-    "category": "Buff",
+    "category": "Active skill",
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -48652,8 +48693,9 @@
     "name": "산산조각 난 방어구",
     "removable": false,
     "stats": [
-      "broken_armor_and_sundered_armor_physical_damage_taken_+%_from_hits",
-      "fully_broken_armour_and_sundered_armour_debuff_also_applies_to_fire_damage_taken",
+      "sundered_armor_physical_damage_taken_+%_from_hits",
+      "sundered_armour_on_you_also_increases_fire_damage_taken",
+      "sundered_armour_on_you_increases_all_damage_taken",
       "cannot_be_armour_broken"
     ],
     "visuals": "armour_broken_sundered",
@@ -48846,7 +48888,7 @@
       "AscendancyGemlingChargeGenerator": {
         "aura_radius_metres": null,
         "stats": {
-          "gain_random_charge_every_X_ms_from_total_socketed_gem_attribute_requirements": 8000
+          "gain_random_charge_every_X_ms_from_total_socketed_gem_attribute_requirements": 5000
         },
         "stat_text": null,
         "visuals": null
@@ -48997,6 +49039,8 @@
       "base_movement_velocity_+%",
       "base_resist_all_elements_%",
       "archon_spells_ignite_chance_+%_final",
+      "base_critical_strike_multiplier_+",
+      "critical_strike_chance_+%",
       "have_archon_fire",
       "deal_no_non_fire_spell_damage",
       "base_is_floating"
@@ -49004,7 +49048,25 @@
     "visuals": "archon_fire",
     "category": "Buff",
     "sources": null,
-    "templates": null,
+    "templates": {
+      "ArchonFire": {
+        "aura_radius_metres": null,
+        "stats": {
+          "fire_damage_with_spell_skills_+%_final_from_archon_buff": 25,
+          "archon_elemental_damage_with_spells_%_to_convert_to_fire": 100,
+          "base_movement_velocity_+%": 0,
+          "base_resist_all_elements_%": 0,
+          "archon_spells_ignite_chance_+%_final": 100,
+          "base_critical_strike_multiplier_+": 0,
+          "critical_strike_chance_+%": 0,
+          "have_archon_fire": 1,
+          "deal_no_non_fire_spell_damage": 1,
+          "base_is_floating": 1
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
     "stack_limit": null
   },
   "archon_cold": {
@@ -49018,6 +49080,8 @@
       "base_movement_velocity_+%",
       "base_resist_all_elements_%",
       "archon_spells_hit_damage_freeze_multiplier_+%_final",
+      "base_critical_strike_multiplier_+",
+      "critical_strike_chance_+%",
       "have_archon_cold",
       "deal_no_non_cold_spell_damage",
       "base_is_floating"
@@ -49025,7 +49089,25 @@
     "visuals": "archon_cold",
     "category": "Buff",
     "sources": null,
-    "templates": null,
+    "templates": {
+      "ArchonCold": {
+        "aura_radius_metres": null,
+        "stats": {
+          "cold_damage_with_spell_skills_+%_final_from_archon_buff": 25,
+          "archon_elemental_damage_with_spells_%_to_convert_to_cold": 100,
+          "base_movement_velocity_+%": 0,
+          "base_resist_all_elements_%": 0,
+          "archon_spells_hit_damage_freeze_multiplier_+%_final": 100,
+          "base_critical_strike_multiplier_+": 0,
+          "critical_strike_chance_+%": 0,
+          "have_archon_cold": 1,
+          "deal_no_non_cold_spell_damage": 1,
+          "base_is_floating": 1
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
     "stack_limit": null
   },
   "archon_lightning": {
@@ -49039,6 +49121,8 @@
       "base_movement_velocity_+%",
       "base_resist_all_elements_%",
       "archon_spells_shock_chance_+%_final",
+      "base_critical_strike_multiplier_+",
+      "critical_strike_chance_+%",
       "have_archon_lightning",
       "deal_no_non_lightning_spell_damage",
       "base_is_floating"
@@ -49046,7 +49130,68 @@
     "visuals": "archon_lightning",
     "category": "Buff",
     "sources": null,
-    "templates": null,
+    "templates": {
+      "ArchonLightning": {
+        "aura_radius_metres": null,
+        "stats": {
+          "lightning_damage_with_spell_skills_+%_final_from_archon_buff": 25,
+          "archon_elemental_damage_with_spells_%_to_convert_to_lightning": 100,
+          "base_movement_velocity_+%": 0,
+          "base_resist_all_elements_%": 0,
+          "archon_spells_shock_chance_+%_final": 100,
+          "base_critical_strike_multiplier_+": 0,
+          "critical_strike_chance_+%": 0,
+          "have_archon_lightning": 1,
+          "deal_no_non_lightning_spell_damage": 1,
+          "base_is_floating": 1
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "archon_elemental": {
+    "description": "[Spell|주문]으로 주는 [ElementalDamage|원소 피해] 피해가 증폭됩니다.\n주문의 [Ignite|점화] 확률이 증폭됩니다. \n주문의 [Freeze|동결] 축적이 증폭됩니다. \n주문의 [Shock|감전] 확률이 증폭됩니다.",
+    "invisible": false,
+    "name": "원소 집정관",
+    "removable": false,
+    "stats": [
+      "elemental_damage_with_spell_skills_+%_final_from_archon_buff",
+      "base_movement_velocity_+%",
+      "base_resist_all_elements_%",
+      "archon_spells_ignite_chance_+%_final",
+      "archon_spells_hit_damage_freeze_multiplier_+%_final",
+      "archon_spells_shock_chance_+%_final",
+      "base_critical_strike_multiplier_+",
+      "critical_strike_chance_+%",
+      "have_archon_elemental",
+      "deal_no_non_elemental_spell_damage",
+      "base_is_floating"
+    ],
+    "visuals": "archon_elemental",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "ArchonElemental": {
+        "aura_radius_metres": null,
+        "stats": {
+          "elemental_damage_with_spell_skills_+%_final_from_archon_buff": 25,
+          "base_movement_velocity_+%": 0,
+          "base_resist_all_elements_%": 0,
+          "archon_spells_ignite_chance_+%_final": 100,
+          "archon_spells_hit_damage_freeze_multiplier_+%_final": 100,
+          "archon_spells_shock_chance_+%_final": 100,
+          "base_critical_strike_multiplier_+": 0,
+          "critical_strike_chance_+%": 0,
+          "have_archon_elemental": 1,
+          "deal_no_non_elemental_spell_damage": 1,
+          "base_is_floating": 1
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
     "stack_limit": null
   },
   "archon_delay": {
@@ -49064,7 +49209,7 @@
     "stack_limit": null
   },
   "support_demolisher_permanent": {
-    "description": "받는 물리 피해가 증가합니다.",
+    "description": "받는 [Physical|물리] 피해가 증가합니다.",
     "invisible": false,
     "name": "부서진 방어구",
     "removable": false,
@@ -49261,9 +49406,9 @@
     "stack_limit": null
   },
   "edict_declaration": {
-    "description": "[DNT] You have declared edicts",
+    "description": "[DNT-UNUSED] You have declared edicts",
     "invisible": false,
-    "name": "[DNT] Edict Declaration",
+    "name": "[DNT-UNUSED] Edict Declaration",
     "removable": false,
     "stats": [],
     "visuals": "edict_declaration",
@@ -49287,7 +49432,7 @@
     "stack_limit": null
   },
   "exposure_elemental": {
-    "description": "디버프가 [Resistances|저항]을 감소시킵니다.",
+    "description": "디버프가 원소 [Resistances|저항]을 낮춥니다.",
     "invisible": false,
     "name": "원소 노출",
     "removable": false,
@@ -49301,12 +49446,12 @@
     "stack_limit": null
   },
   "tactician_ripwire_ballista_aura": {
-    "description": "이동 불가 축적이 개선됩니다.",
+    "description": "[SkillSpeed|스킬 속도]가 증가합니다.",
     "invisible": false,
     "name": "절단선 제방",
     "removable": false,
     "stats": [
-      "hit_damage_immobilisation_multiplier_+%"
+      "skill_speed_+%"
     ],
     "visuals": "tactician_ripwire_ballista_aura_visual",
     "category": "Buff",
@@ -49315,10 +49460,10 @@
       "PlayerTacticianRipwireAura": {
         "aura_radius_metres": 4.5,
         "stats": {
-          "hit_damage_immobilisation_multiplier_+%": 40
+          "skill_speed_+%": 20
         },
         "stat_text": [
-          "[Immobilised|이동 불가] 축적 40% 증가"
+          "[SkillSpeed|스킬 속도] 20% 증가"
         ],
         "visuals": null
       }
@@ -49326,12 +49471,12 @@
     "stack_limit": null
   },
   "tactician_artillery_ballista_aura": {
-    "description": "이동 불가 상태의 적에게 주는 피해가 증가합니다.",
+    "description": "이동 불가 상태의 적에게 주는 피해가 증폭됩니다.",
     "invisible": false,
     "name": "포대 제방",
     "removable": false,
     "stats": [
-      "damage_+%_vs_immobilised_enemies"
+      "tactician_artillery_ballista_aura_damage_+%_final_vs_immobilised_enemies"
     ],
     "visuals": "tactician_artillery_ballista_aura_visual",
     "category": "Buff",
@@ -49340,11 +49485,9 @@
       "PlayerTacticianArtilleryAura": {
         "aura_radius_metres": 4.5,
         "stats": {
-          "damage_+%_vs_immobilised_enemies": 50
+          "tactician_artillery_ballista_aura_damage_+%_final_vs_immobilised_enemies": 25
         },
-        "stat_text": [
-          "[Immobilised|이동 불가] 상태의 적에게 주는 피해 50% 증가"
-        ],
+        "stat_text": null,
         "visuals": null
       }
     },
@@ -49365,10 +49508,10 @@
       "PlayerTacticianGrenadeAura": {
         "aura_radius_metres": 4.5,
         "stats": {
-          "non_skill_base_all_damage_%_to_gain_as_fire": 15
+          "non_skill_base_all_damage_%_to_gain_as_fire": 25
         },
         "stat_text": [
-          "피해의 15%를 추가 [Fire|화염] 피해로 [Gain|획득]"
+          "피해의 25%를 추가 [Fire|화염] 피해로 [Gain|획득]"
         ],
         "visuals": null
       }
@@ -49444,6 +49587,31 @@
         },
         "stat_text": [
           "지속 피해 40% 증가"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "tactician_spell_totem_totem_aura": {
+    "description": "치명타 명중 확률이 증가합니다.",
+    "invisible": false,
+    "name": "비전의 제방",
+    "removable": false,
+    "stats": [
+      "critical_strike_chance_+%"
+    ],
+    "visuals": "tactician_spell_totem_totem_aura_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PlayerTacticianSpellAura": {
+        "aura_radius_metres": 4.5,
+        "stats": {
+          "critical_strike_chance_+%": 50
+        },
+        "stat_text": [
+          "[Critical|치명타 확률] 50% 증가"
         ],
         "visuals": null
       }
@@ -49639,7 +49807,7 @@
     "stack_limit": null
   },
   "guard_boss_offensive_buff": {
-    "description": "황혼의 사제들이 토르비안을 강화하여 모든 명중으로 감전, 냉각, 점화, 동결을 적용하게 하고 있습니다.",
+    "description": "황혼의 사제들이 토르비안을 강화하여 모든 명중으로 감전, 냉각, 점화, 동결을 적용하게 하고 있습니다.\r\n\r\n토르비안이 발판에 바위를 던지게 유도하면 사제들을 방해하여 이 버프를 제거할 수 있습니다.",
     "invisible": true,
     "name": "황혼의 교단의 검",
     "removable": false,
@@ -49657,7 +49825,7 @@
     "stack_limit": null
   },
   "guard_boss_defensive_buff": {
-    "description": "황혼의 사제들이 토르비안을 강화하여 방어력을 높여 주고 있습니다.",
+    "description": "황혼의 사제들이 토르비안을 강화하여 방어력을 높여 주고 있습니다.\r\n\r\n토르비안이 발판에 바위를 던지게 유도하면 사제들을 방해하여 이 버프를 제거할 수 있습니다.",
     "invisible": true,
     "name": "황혼의 교단의 방패",
     "removable": false,
@@ -49671,7 +49839,7 @@
     "stack_limit": null
   },
   "guard_boss_utility_buff": {
-    "description": "황혼의 사제들이 토르비안을 강화하여 기절과 상태 이상에 대한 면역을 부여하고 있습니다.",
+    "description": "황혼의 사제들이 토르비안을 강화하여 기절과 상태 이상에 대한 면역을 부여하고 있습니다.\r\n\r\n토르비안이 발판에 바위를 던지게 유도하면 사제들을 방해하여 이 버프를 제거할 수 있습니다.",
     "invisible": true,
     "name": "황혼의 교단의 믿음",
     "removable": false,
@@ -49710,7 +49878,7 @@
     "stack_limit": null
   },
   "flammability_ignite_chance_buildup": {
-    "description": "점화에 걸리기 쉽습니다.",
+    "description": "[Flammability|인화성] 강도에 따라 [Ignite|점화] 확률이 증가합니다.",
     "invisible": false,
     "name": "인화성",
     "removable": false,
@@ -50226,9 +50394,9 @@
     "stack_limit": null
   },
   "ascendancy_deadeye_marks_cooldown": {
-    "description": "",
+    "description": "아직 이 스킬로 다른 적에게 [Mark|징표]를 찍을 수 없습니다.",
     "invisible": false,
-    "name": "",
+    "name": "지정 사격",
     "removable": false,
     "stats": [],
     "visuals": "ascendancy_deadeye_marks_cd",
@@ -50238,9 +50406,9 @@
     "stack_limit": null
   },
   "ascendancy_deadeye_marks_ready": {
-    "description": "",
+    "description": "적에게 [Mark|징표]를 찍을 수 있습니다.",
     "invisible": false,
-    "name": "",
+    "name": "지정 사격",
     "removable": false,
     "stats": [],
     "visuals": "ascendancy_deadeye_marks",
@@ -50306,7 +50474,7 @@
     "stack_limit": null
   },
   "abyss_lightless_well": {
-    "description": "공허 안의 몬스터에게만 피해를 줄 수 있음",
+    "description": "공허 안의 대상에게만 피해를 줄 수 있습니다.",
     "invisible": false,
     "name": "아마나무의 공허",
     "removable": false,
@@ -50379,6 +50547,1176 @@
     "removable": false,
     "stats": [],
     "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "dark_tempest_buff": {
+    "description": "[DNT-UNUSED] You are within a Dark Tempest. Your spells are empowered with cold damage.",
+    "invisible": false,
+    "name": "검은 폭풍",
+    "removable": false,
+    "stats": [
+      "non_skill_base_all_damage_%_to_gain_as_cold_with_spells"
+    ],
+    "visuals": "dark_tempest",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "boss_base_tapering_damage_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "monster_damage_taken_+%_final_from_buff_from_ot"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "block_commandable": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "corpse_beetle_commanded_speed_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_reverted_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_reverted_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_shapeshifted_to_animal_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_shapeshifted_to_animal_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ritual_wendigo_darkness": {
+    "description": "지속 물리 피해를 받고 있습니다.",
+    "invisible": false,
+    "name": "[DNT] Darkness",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "ritual_wendigo_darkness",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "affected_by_darkness_vacuum": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "darkness_vacuum_aura": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "block_test",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "spell_damage_after_shapeshift": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "spell_damage_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_used_a_specific_attack_in_last_8_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "companions_in_presence_have_onslaught": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_taken_cold_damage_from_an_enemy_hit_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_taken_cold_damage_from_an_enemy_hit_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_taken_lightning_damage_from_an_enemy_hit_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_taken_lightning_damage_from_an_enemy_hit_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "companions_in_presence_damage": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "damage_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "cannot_shapeshift": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "cannot_shapeshift"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "shapeshift_time_tracker": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "lightning_warp_target": {
+    "description": "이 적이 [CullingStrike|마무리 타격] 기준 아래로 떨어지면 이 적에게 순간이동하여 폭발시킵니다.",
+    "invisible": false,
+    "name": "차원 이동",
+    "removable": false,
+    "stats": [],
+    "visuals": "lightning_warp_target",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "lightning_warp_cooldown": {
+    "description": "",
+    "invisible": true,
+    "name": "차원 이동 재사용 대기시간",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "number_of_active_totems_in_radius_from_support_greatwood": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "grant_maximum_number_of_active_totems_in_radius_for_effects_from_support_greatwood": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "maximum_number_of_active_totems_in_radius_for_effects_from_support_greatwood"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "briarpatch_buff": {
+    "description": "[Physical|물리] [Attack|공격] 피해가 저장되고, [Spell|주문]을 시전하면 [ThornyGround|가시 지대]가 생성되어 그 위를 움직이는 적들에게 저장했던 피해를 줍니다.",
+    "invisible": false,
+    "name": "가시밭",
+    "removable": false,
+    "stats": [],
+    "visuals": "briarpatch_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "briarpatch_reservation": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "briarpatch_ground": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ceaseless_rage_reservation": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_rage_regeneration_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "wild_beast_reservation": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "wild_beast_storage": {
+    "description": "적을 [Attack|공격]하면 광분이 축적되고, 야만적인 광분을 활성화하면 광란 상태에 빠져 피해와 속도가 증가하지만 생명력을 잃습니다.",
+    "invisible": false,
+    "name": "야만적인 광분",
+    "removable": false,
+    "stats": [],
+    "visuals": "wild_beast_storage",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "wild_beast_frenzy": {
+    "description": "주는 피해가 증폭되고 [Onslaught|맹공]을 얻었지만, 지속적으로 생명력을 잃습니다.",
+    "invisible": false,
+    "name": "야만적인 광란",
+    "removable": false,
+    "stats": [
+      "attack_speed_+%",
+      "base_movement_velocity_+%",
+      "damage_+%_final_from_wild_beast",
+      "life_lost_%_per_minute_nonlethal",
+      "base_should_have_onslaught_from_stat"
+    ],
+    "visuals": "wild_beast_frenzy",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ritual_wendigo_boss_mothball": {
+    "description": "지속 물리 피해를 받고 있습니다.",
+    "invisible": false,
+    "name": "[DNT] Mothballed",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "ritual_boss_mothball",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "incinerate_degen": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "support_tangmazu": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "light_radius_+%",
+      "sprint_movement_speed_+%",
+      "base_slow_potency_+%"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "frozen_claws_dash_delay": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "fungal_terrain_chaos_damage_over_time": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT]Fungal Terrain Drain",
+    "removable": false,
+    "stats": [
+      "base_chaos_damage_taken_per_minute"
+    ],
+    "visuals": "siphon",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "walking_calamity": {
+    "description": "주위에 마구 유성이 비처럼 떨어지고, 플레이어가 추가 [Fire|화염] 피해를 [Gain|획득]하고 [Rage|격노]를 재생합니다.",
+    "invisible": false,
+    "name": "걸어다니는 대재난",
+    "removable": false,
+    "stats": [
+      "base_rage_regeneration_per_minute",
+      "non_skill_base_all_damage_%_to_gain_as_fire",
+      "walking_calamity_cannot_gain_glory"
+    ],
+    "visuals": "walking_calamity",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ready_ancestral_strike_shapeshifted": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "ready_to_ancestral_strike_while_shapeshifted"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ready_ancestral_slam_shapeshifted": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "ready_to_ancestral_slam_while_shapeshifted"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "shapeshift_stolen_mods": {
+    "description": "몬스터의 [MonsterModifiers|속성]을 복제하여 취했습니다.",
+    "invisible": false,
+    "name": "속성 복제",
+    "removable": false,
+    "stats": [],
+    "visuals": "stolen_mods",
+    "category": "Stolen",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "druidic_prowess": {
+    "description": "드루이드의 기량이 각각 [SkillSpeed|스킬 속도]를 10% 증가시키고 [Spell|주문] 피해 [HitDamage|명중]이 [Rage|격노]를 3 부여하게 합니다. 드루이드의 기량은 최대 3 보유할 수 있습니다.",
+    "invisible": false,
+    "name": "드루이드의 기량",
+    "removable": false,
+    "stats": [
+      "gain_x_rage_on_spell_hit",
+      "skill_speed_+%"
+    ],
+    "visuals": "druidic_prowess",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 3
+  },
+  "marked_for_drain": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "marked_for_drain_leech_damage_taken_as_mana_to_attacker_if_marker_permyriad",
+      "marked_for_drain_leech_damage_taken_as_life_to_attacker_if_marker_permyriad"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "support_thrill_of_the_kill_buff": {
+    "description": "[Attack|공격]으로 추가 [Lightning|번개] 피해를 줍니다.",
+    "invisible": false,
+    "name": "살인의 전율",
+    "removable": false,
+    "stats": [
+      "non_skill_base_all_damage_%_to_gain_as_lightning_with_attacks",
+      "shock_chance_+%"
+    ],
+    "visuals": "support_thrill_of_the_kill",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "mirror_of_refraction_buff": {
+    "description": "[Presence|접근] 범위 내에 주기적으로 굴절의 거울이 나타납니다.",
+    "invisible": false,
+    "name": "굴절의 거울",
+    "removable": false,
+    "stats": [],
+    "visuals": "mirror_of_refraction",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "barkskin_reservation": {
+    "description": "[EnergyShield|에너지 보호막]이 피해를 받으면 [Armour|방어도]가 높아집니다.",
+    "invisible": false,
+    "name": "껍질피부",
+    "removable": false,
+    "stats": [
+      "has_barkskin_reservation"
+    ],
+    "visuals": "barkskin_reservation",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "barkskin_buildup": {
+    "description": "",
+    "invisible": false,
+    "name": "껍질피부",
+    "removable": false,
+    "stats": [
+      "barkskin_base_armour_+",
+      "barkskin_stacks"
+    ],
+    "visuals": "barkskin_buildup",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "barkskin_instant_energy_recharge": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "unleash_the_elements": {
+    "description": "자연의 진노로 적들을 심판하고 있습니다.",
+    "invisible": false,
+    "name": "종말",
+    "removable": false,
+    "stats": [],
+    "visuals": "unleash_the_elements",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "molten_vent_debuff": {
+    "description": "지속 [Fire|화염] 피해를 받고 있습니다.",
+    "invisible": false,
+    "name": "이글거리는 열기",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "treasure_vault_lava",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "feral_invocation_reserve": {
+    "description": "",
+    "invisible": false,
+    "name": "야생의 기원",
+    "removable": false,
+    "stats": [],
+    "visuals": "elemental_invocation_reserve",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "feral_invocation_count": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "feral_invocation_clone_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "feral_invocation_clone_buff",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "mech_arm_cold_beam": {
+    "description": "지속 [Cold|냉기] 피해를 받고 있습니다.",
+    "invisible": false,
+    "name": "냉기 광선",
+    "removable": false,
+    "stats": [
+      "base_cold_damage_taken_per_minute"
+    ],
+    "visuals": "ulimatum_daemon_beam_cold_damage",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "support_shatter_fang_buff": {
+    "description": "몸에 빙하의 격노가 주입되어, 피해의 일부를 [Cold|냉기] 피해로 획득합니다.",
+    "invisible": false,
+    "name": "바타이르의 복수",
+    "removable": false,
+    "stats": [
+      "non_skill_base_all_damage_%_to_gain_as_cold"
+    ],
+    "visuals": "shattered_fang",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "armour_from_life_loss_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_reduction_rating"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "brittle_armour": {
+    "description": "[Physical|물리] 피해를 받으면 [ArmourBreak|방어구가 파괴]됩니다.",
+    "invisible": false,
+    "name": "깨지기 쉬운 방어구",
+    "removable": false,
+    "stats": [
+      "%_physical_damage_taken_as_armour_break"
+    ],
+    "visuals": "brittle_armour",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "shatter_fang_delay_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "total_rage_spent_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "supported_offering_life_mana_recovery_on_death": {
+    "description": "1초마다 생명력 및 마나의 일부를 재생합니다.",
+    "invisible": false,
+    "name": "과텔리치의 삭마",
+    "removable": false,
+    "stats": [
+      "mana_regeneration_rate_per_minute_%",
+      "life_regeneration_rate_per_minute_%"
+    ],
+    "visuals": "guatelitzis_ablation",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "expand": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "architect_boss_black_hole_suck": {
+    "description": "이동 속도가 느려지고 지속 [Cold|냉기] 피해를 받고 있습니다.",
+    "invisible": false,
+    "name": "한기의 소용돌이",
+    "removable": false,
+    "stats": [
+      "base_cold_damage_taken_per_minute",
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "architect_boss_black_hole_suck",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "architect_boss_lightning_dance_rune": {
+    "description": "번개 피해를 받으며 마나를 잃고 있습니다.",
+    "invisible": false,
+    "name": "전기를 띤 룬",
+    "removable": false,
+    "stats": [
+      "base_lightning_damage_taken_per_minute",
+      "no_mana_recovery",
+      "mana_degeneration_per_minute"
+    ],
+    "visuals": "architect_boss_lightning_dance_rune",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "rage_regeneration": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_rage_regeneration_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "total_rage_gained_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "support_relentless_rage_charged": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "support_relentless_rage_tracker": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "spending_X_rage_grants_relentless_rage_buff"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "dangerous_resolve_tracker": {
+    "description": "적에게 [HitDamage|피격]되면 치명적인 투지가 [Trigger|발동]하여, 그 적을 향해 일정 범위 내에 [Physical|물리] 피해를 줍니다.",
+    "invisible": false,
+    "name": "치명적인 투지",
+    "removable": false,
+    "stats": [],
+    "visuals": "dangerous_resolve",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "dangerous_resolve_has_exploded_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "치명적인 투지",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "incursion_world_monster": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "incursion_world_monster",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": 1
+  },
+  "number_of_glory_skills_used_in_past_6_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "tornado_cold_damaging_debuff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_cold_damage_taken_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "tornado_fire_damaging_debuff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "tornado_lightning_damaging_debuff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_lightning_damage_taken_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "mana_spent_es_recharge_delay": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ignored_by_thrashing_vines": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "cannot_be_targeted_by_thrashing_vines"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "empowered_cyborg_robots": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "empowered_cyborg_robots",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "tornado_slow": {
+    "description": "블랙홀의 범위 내에 있어 이동 속도가 줄어듭니다. 블랙홀에 가까워질수록 이동 속도가 줄어드는 효과가 증가합니다.",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "movement_speed_+%_final_from_tornado"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "stormfire_lightning_damage": {
+    "description": "[Ignite|점화] 피해의 일부가 [Lightning|번개] 피해로도 가해집니다.",
+    "invisible": true,
+    "name": "태풍불길",
+    "removable": false,
+    "stats": [
+      "take_%_of_fire_damage_from_ignite_as_lightning"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "stunning_magic_buff": {
+    "description": "[Spell|주문] 피해가 증가합니다.",
+    "invisible": false,
+    "name": "실전 마법",
+    "removable": false,
+    "stats": [
+      "spell_damage_+%"
+    ],
+    "visuals": "stunning_magic_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blazing_crits": {
+    "description": "[Attack|공격]으로 추가 [Fire|화염] 피해를 줍니다.",
+    "invisible": false,
+    "name": "타오르는 치명타",
+    "removable": false,
+    "stats": [
+      "non_skill_base_all_damage_%_to_gain_as_fire_with_attacks"
+    ],
+    "visuals": "blazing_crits",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "bloodstone_lance": {
+    "description": "",
+    "invisible": false,
+    "name": "혈석 창",
+    "removable": false,
+    "stats": [],
+    "visuals": "bloodstone_lance",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 30
+  },
+  "curse_cost_regen": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_mana_regeneration_rate_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "last_tremor": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "hyena_cackle": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "hyena_cackle_size",
+      "number_of_hyena_cackles",
+      "additional_companions_from_hyena_cackles"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "spymaster_poison_pools": {
+    "description": "지속 카오스 피해를 받고 있습니다.",
+    "invisible": false,
+    "name": "중독된 웅덩이",
+    "removable": false,
+    "stats": [
+      "base_chaos_damage_taken_per_minute"
+    ],
+    "visuals": "spymaster_poison_pools",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "number_of_damaging_skills_used_recently_for_minions": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "number_of_enemies_ignited_last_8_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "number_of_enemies_frozen_last_8_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "compound_ignite_spreading_placeholder": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "freeze_cold_damage_taken": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "cold_damage_taken_+%"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ember_fusilade_projectile_count": {
+    "description": "",
+    "invisible": false,
+    "name": "불씨",
+    "removable": false,
+    "stats": [],
+    "visuals": "ember_fusilade_projectile_count",
     "category": null,
     "sources": null,
     "templates": null,

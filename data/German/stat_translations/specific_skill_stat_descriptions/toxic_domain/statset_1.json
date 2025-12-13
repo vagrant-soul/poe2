@@ -294,8 +294,44 @@
   {
     "English": null,
     "ids": [
-      "toxic_domain_+1%_final_more_damage_per_x_stored_poison",
-      "toxic_domain_max_damage_+%_final_from_stored_poison"
+      "skill_specific_stat_description_mode"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Pusteln speichern den erwarteten Schaden von dem auf sie angewendeten [Poison|Gift]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "toxic_pustule_burst_1%_more_damage_per_x_stored_poison",
+      "toxic_pustule_max_burst_damage_+%_final_from_stored_poison"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -363,7 +399,8 @@
   {
     "English": null,
     "ids": [
-      "toxic_domain_pustule_poison_explode_threshold"
+      "toxic_pustule_burst_base_radius_+1_per_x_stored_poison",
+      "toxic_pustule_max_additional_burst_base_radius_+"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -372,23 +409,10 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Maximal gespeichertes [Poison|Gift] in Pusteln@{0}",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
+          },
           {
             "min": null,
             "max": null,
@@ -396,12 +420,70 @@
           }
         ],
         "format": [
+          "ignore",
           "#"
         ],
         "index_handlers": [
-          []
+          [],
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
         ],
-        "string": "Pusteln können bis zu {0} [Poison|Gift] speichern",
+        "string": "Maximaler zusätzlicher Explosionsradius von [Poison|Gift]@+{1}m",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Gespeichertes [Poison|Gift] fügt bis zu {1} Meter zum Basis-Explosionsradius hinzu",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Gespeichertes [Poison|Gift] fügt bis zu {1} Meter zum Basis-Explosionsradius hinzu",
         "reminder_text": null,
         "is_markup": null
       }
