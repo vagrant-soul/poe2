@@ -1151,7 +1151,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Fire|ファイヤー][ElementalInfusion|インフュージョン][Remnant|レムナント]の代わりに[Cold|コールド][ElementalInfusion|インフュージョン][Remnant|レムナント]を生成する\n[Lightning|ライトニング][ElementalInfusion|インフュージョン][Remnant|レムナント]の代わりに[Fire|ファイヤー][ElementalInfusion|インフュージョン][Remnant|レムナント]を生成する\n[Cold|コールド][ElementalInfusion|インフュージョン][Remnant|レムナント]の代わりに[Lightning|ライトニング][ElementalInfusion|インフュージョン][Remnant|レムナント]を生成する",
+        "string": "Create [Lightning] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Fire]\nCreate [Cold] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Lightning]\nCreate [Fire] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Cold]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4356,7 +4356,7 @@
             "negate"
           ]
         ],
-        "string": "それぞれの[Adaptation|適応]は[Adaptation|適応した]属性から受けるダメージを{0}%低下させる",
+        "string": "{0}% less Damage taken of each [ElementalDamage|Elemental Damage Type] per matching [Adaptation]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4374,7 +4374,7 @@
         "index_handlers": [
           []
         ],
-        "string": "それぞれの[Adaptation|適応]は[Adaptation|適応した]属性から受けるダメージを{0}%上昇させる",
+        "string": "{0}% more Damage taken of each [ElementalDamage|Elemental Damage Type] per matching [Adaptation]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5408,7 +5408,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Skills have {0} to [Rage] cost",
+        "string": "スキルの[Rage|憤怒]コスト {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6506,59 +6506,7 @@
           [],
           []
         ],
-        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]\n[Spell|Spells] for which this [Sacrifice] was fully made deal {0}% more Damage",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ],
-          []
-        ],
-        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]\n[Spell|Spells] for which this [Sacrifice] was fully made deal {0}% less Damage",
+        "string": "[Spell|スペル]をキャストした時に最大[EnergyShield|エナジシールド]の{0}%を[Sacrifice|捧げる]",
         "reminder_text": null,
         "is_markup": null
       }

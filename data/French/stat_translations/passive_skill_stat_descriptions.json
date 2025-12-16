@@ -1149,7 +1149,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Create [Cold] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Fire] [ElementalInfusion|Infusion] [Remnant|Remnants]\nCreate [Fire] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Lightning] [ElementalInfusion|Infusion] [Remnant|Remnants]\nCreate [Lightning] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Cold] [ElementalInfusion|Infusion] [Remnant|Remnants]",
+        "string": "Create [Lightning] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Fire]\nCreate [Cold] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Lightning]\nCreate [Fire] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Cold]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4318,7 +4318,7 @@
             "negate"
           ]
         ],
-        "string": "Each [Adaptation] grants {0}% less Damage taken of that [Adaptation]'s type",
+        "string": "{0}% less Damage taken of each [ElementalDamage|Elemental Damage Type] per matching [Adaptation]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4336,7 +4336,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Each [Adaptation] grants {0}% more Damage taken of that [Adaptation]'s type",
+        "string": "{0}% more Damage taken of each [ElementalDamage|Elemental Damage Type] per matching [Adaptation]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5761,7 +5761,14 @@
     "ids": [
       "oracle_maximum_life_+%_final"
     ],
-    "trade_stats": null,
+    "trade_stats": [
+      {
+        "id": "explicit.stat_1633735772",
+        "text": "#% less maximum Life",
+        "type": "explicit",
+        "option": null
+      }
+    ],
     "hidden": null,
     "French": [
       {
@@ -6494,13 +6501,13 @@
         ],
         "format": [
           "#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           [],
           []
         ],
-        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]\n[Spell|Spells] for which this [Sacrifice] was fully made deal {0}% more Damage",
+        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]\n[Spell|Spells] for which this [Sacrifice] was fully made deal {1}% more Damage",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6519,7 +6526,7 @@
         ],
         "format": [
           "#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           [
@@ -6527,7 +6534,7 @@
           ],
           []
         ],
-        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]\n[Spell|Spells] for which this [Sacrifice] was fully made deal {0}% less Damage",
+        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]\n[Spell|Spells] for which this [Sacrifice] was fully made deal {1}% less Damage",
         "reminder_text": null,
         "is_markup": null
       }

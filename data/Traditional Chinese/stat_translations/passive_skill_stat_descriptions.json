@@ -1157,7 +1157,7 @@
         "index_handlers": [
           []
         ],
-        "string": "創造[Cold|冰冷][ElementalInfusion|灌注][Remnant|痕跡]而不是[Fire|火焰][ElementalInfusion|灌注][Remnant|痕跡]\n創造[Fire|火焰][ElementalInfusion|灌注][Remnant|痕跡]而不是[Lightning|閃電][ElementalInfusion|灌注][Remnant|痕跡]\n創造[Lightning|閃電][ElementalInfusion|灌注][Remnant|痕跡]而不是[Cold|冰冷][ElementalInfusion|灌注][Remnant|痕跡]",
+        "string": "Create [Lightning] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Fire]\nCreate [Cold] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Lightning]\nCreate [Fire] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Cold]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2929,8 +2929,8 @@
       {
         "condition": [
           {
-            "min": 1,
-            "max": 1,
+            "min": 2,
+            "max": 2,
             "negated": null
           }
         ],
@@ -4344,7 +4344,7 @@
             "negate"
           ]
         ],
-        "string": "每一[Adaptation|適應]賦予{0}%更少該[Adaptation|適應]種類所承受的傷害",
+        "string": "{0}% less Damage taken of each [ElementalDamage|Elemental Damage Type] per matching [Adaptation]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4362,7 +4362,7 @@
         "index_handlers": [
           []
         ],
-        "string": "每一[Adaptation|適應]賦予{0}%更多該[Adaptation|適應]種類所承受的傷害",
+        "string": "{0}% more Damage taken of each [ElementalDamage|Elemental Damage Type] per matching [Adaptation]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6494,59 +6494,7 @@
           [],
           []
         ],
-        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]\n[Spell|Spells] for which this [Sacrifice] was fully made deal {0}% more Damage",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ],
-          []
-        ],
-        "string": "[Sacrifice] {0}% of maximum [EnergyShield|Energy Shield] when you Cast a [Spell]\n[Spell|Spells] for which this [Sacrifice] was fully made deal {0}% less Damage",
+        "string": "當你施放[Spell|法術]時，[Sacrifice|犧牲] {0}% 最大能量護盾",
         "reminder_text": null,
         "is_markup": null
       }

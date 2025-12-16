@@ -22383,7 +22383,7 @@
     ],
     "implicit_tags": [],
     "is_essence_only": false,
-    "name": "[DNT-UNUSED] Hand Wraps",
+    "name": "DNT",
     "required_level": 1,
     "spawn_weights": [],
     "stats": [
@@ -130046,8 +130046,8 @@
     "stats": [
       {
         "id": "gain_a_modifier_from_enemies_in_presence_when_shapeshifting_ms",
-        "max": 30000,
-        "min": 30000
+        "max": 3000,
+        "min": 3000
       }
     ],
     "text": "จำลองม็อดแบบสุ่ม 1 อย่าง จากศัตรูแต่ละตัวที่อยู่ใน[Presence|ระยะปรากฏกาย]ของคุณ เมื่อคุณ[Shapeshift|กลายร่าง]เป็นร่างสัตว์\nม็อดที่ได้รับด้วยวิธีนี้จะหายไปใน 30 วินาที หรือเมื่อคุณ[Shapeshift|กลายร่าง]ครั้งถัดไป",
@@ -162273,8 +162273,8 @@
     "stats": [
       {
         "id": "map_base_ground_fire_damage_to_deal_per_10_seconds",
-        "max": 4000,
-        "min": 4000
+        "max": 2000,
+        "min": 2000
       },
       {
         "id": "map_ground_effect_patches_per_100_tiles",
@@ -162334,8 +162334,8 @@
     "stats": [
       {
         "id": "map_base_ground_fire_damage_to_deal_per_10_seconds",
-        "max": 6000,
-        "min": 6000
+        "max": 4000,
+        "min": 4000
       },
       {
         "id": "map_ground_effect_patches_per_100_tiles",
@@ -162395,8 +162395,8 @@
     "stats": [
       {
         "id": "map_base_ground_fire_damage_to_deal_per_10_seconds",
-        "max": 12000,
-        "min": 12000
+        "max": 6000,
+        "min": 6000
       },
       {
         "id": "map_ground_effect_patches_per_100_tiles",
@@ -501396,7 +501396,7 @@
         "min": 8
       }
     ],
-    "text": "มอนสเตอร์[MonsterCategory|ชีวิตประดิษฐ์] มี[MonsterEffectiveness|ประสิทธิภาพ] เพิ่มขึ้น 8%",
+    "text": "[MonsterCategory|Construct] Monsters have 8% increased [MonsterEffectiveness|Effectiveness]",
     "type": "IncursionMapConstructMonsterEffectiveness",
     "gold_value": null
   },
@@ -502677,7 +502677,7 @@
         "min": 50
       }
     ],
-    "text": "มีโอกาสได้รับ [Charges|Charge] แบบสุ่ม เพิ่มเติม 1 ลูก {0]% เมื่อคุณได้รับ [Charges|Power Charge]",
+    "text": "มีโอกาสได้รับ [Charges|Charge] แบบสุ่ม เพิ่มเติม 1 ลูก 50% เมื่อคุณได้รับ [Charges|Power Charge]",
     "type": "ChanceToGainAdditionalRandomCharge",
     "gold_value": null
   },
@@ -502928,11 +502928,11 @@
     "stats": [
       {
         "id": "skill_area_of_effect_+%_if_enemy_killed_recently",
-        "max": 15,
-        "min": 5
+        "max": 25,
+        "min": 10
       }
     ],
-    "text": "เพิ่มพื้นที่ส่งผล (5-15)% หากคุณสังหารมา[Recently|เร็วๆ นี้]",
+    "text": "เพิ่มพื้นที่ส่งผล (10-25)% หากคุณสังหารมา[Recently|เร็วๆ นี้]",
     "type": "AreaOfEffectIfKilledRecently",
     "gold_value": null
   },
@@ -503954,11 +503954,11 @@
     "stats": [
       {
         "id": "local_energy_shield",
-        "max": 90,
-        "min": 60
+        "max": 120,
+        "min": 90
       }
     ],
-    "text": "[EnergyShield|โล่พลังงาน]สูงสุด +(60-90)",
+    "text": "[EnergyShield|โล่พลังงาน]สูงสุด +(90-120)",
     "type": "LocalEnergyShield",
     "gold_value": null
   },
@@ -504230,11 +504230,11 @@
     "stats": [
       {
         "id": "all_skill_gem_level_+",
-        "max": 1,
-        "min": 1
+        "max": 4,
+        "min": 2
       }
     ],
-    "text": "เลเวลของ สกิล ทุกสกิล +1",
+    "text": "เลเวลของ สกิล ทุกสกิล +(2-4)",
     "type": "GlobalSkillGemLevel",
     "gold_value": null
   },
@@ -504321,21 +504321,20 @@
     "type": "PercentageAllAttributes",
     "gold_value": null
   },
-  "UniqueMutatedVaalLocalFireDamage": {
+  "UniqueMutatedVaalLocalPhysicalDamage1": {
     "adds_tags": [],
     "domain": "item",
     "generation_type": "unique",
     "generation_weights": [],
     "grants_effects": [],
     "groups": [
-      "FireDamage"
+      "PhysicalDamage"
     ],
     "implicit_tags": [
-      "elemental_damage",
+      "physical_damage",
       "mutatedunique_vaal",
       "damage",
-      "elemental",
-      "fire",
+      "physical",
       "attack"
     ],
     "is_essence_only": false,
@@ -504344,18 +504343,18 @@
     "spawn_weights": [],
     "stats": [
       {
-        "id": "local_minimum_added_fire_damage",
-        "max": 100,
-        "min": 80
+        "id": "local_minimum_added_physical_damage",
+        "max": 60,
+        "min": 40
       },
       {
-        "id": "local_maximum_added_fire_damage",
-        "max": 140,
-        "min": 120
+        "id": "local_maximum_added_physical_damage",
+        "max": 90,
+        "min": 70
       }
     ],
-    "text": "เสริมความเสียหาย [Fire|ไฟ] (80-100) ถึง (120-140)",
-    "type": "LocalFireDamage",
+    "text": "เสริมความเสียหาย [Physical|กายภาพ] (40-60) ถึง (70-90)",
+    "type": "LocalPhysicalDamage",
     "gold_value": null
   },
   "UniqueMutatedVaalAftershockChance": {
@@ -504579,11 +504578,11 @@
     "stats": [
       {
         "id": "local_base_physical_damage_reduction_rating",
-        "max": 200,
-        "min": 150
+        "max": 320,
+        "min": 220
       }
     ],
-    "text": "[Armour|ค่าเกราะ] +(150-200)",
+    "text": "[Armour|ค่าเกราะ] +(220-320)",
     "type": "LocalPhysicalDamageReductionRating",
     "gold_value": null
   },
@@ -506332,7 +506331,7 @@
         "min": 10
       }
     ],
-    "text": "สกิล มีโอกาสไม่กำจัด [Charges|Charge] แต่นับว่ากลืนกินไปแล้ว (10-15)%​",
+    "text": "สกิล มีโอกาสไม่กำจัด [Charges|Charge] แต่นับว่ากลืนกินไปแล้ว (10-15)%",
     "type": "ChargeChanceToNotConsume",
     "gold_value": null
   },
@@ -506469,11 +506468,11 @@
     "stats": [
       {
         "id": "local_base_physical_damage_reduction_rating",
-        "max": 220,
-        "min": 160
+        "max": 400,
+        "min": 260
       }
     ],
-    "text": "[Armour|ค่าเกราะ] +(160-220)",
+    "text": "[Armour|ค่าเกราะ] +(260-400)",
     "type": "LocalPhysicalDamageReductionRating",
     "gold_value": null
   },
@@ -507618,17 +507617,21 @@
     "type": "LifeRegenerationPlusPercentWhileMoving",
     "gold_value": null
   },
-  "UniqueMutatedVaalDamageAsExtraRandomElement": {
+  "UniqueMutatedVaalDamageAsExtraFire": {
     "adds_tags": [],
     "domain": "item",
     "generation_type": "unique",
     "generation_weights": [],
     "grants_effects": [],
     "groups": [
-      "DamageAsExtraDamage"
+      "MartialWeaponGainedDamage"
     ],
     "implicit_tags": [
-      "mutatedunique_vaal"
+      "elemental_damage",
+      "mutatedunique_vaal",
+      "damage",
+      "elemental",
+      "fire"
     ],
     "is_essence_only": false,
     "name": "",
@@ -507636,29 +507639,29 @@
     "spawn_weights": [],
     "stats": [
       {
-        "id": "non_skill_base_physical_damage_%_to_gain_as_random_element",
+        "id": "non_skill_base_all_damage_%_to_gain_as_fire",
         "max": 40,
         "min": 25
       }
     ],
-    "text": "นำความเสียหาย [Physical|กายภาพ] (25-40)% ไป[Gain|เสริม]เป็น [ElementalDamage|ธาตุ]แบบสุ่ม",
-    "type": "DamageAsExtraRandomElement",
+    "text": "นำความเสียหาย (25-40)% ไปเสริมเป็น [Fire|ไฟ]",
+    "type": "DamageasExtraFire",
     "gold_value": null
   },
-  "UniqueMutatedVaalLocalChaosDamage": {
+  "UniqueMutatedVaalLocalPhysicalDamage": {
     "adds_tags": [],
     "domain": "item",
     "generation_type": "unique",
     "generation_weights": [],
     "grants_effects": [],
     "groups": [
-      "LocalChaosDamage"
+      "PhysicalDamage"
     ],
     "implicit_tags": [
-      "chaos_damage",
+      "physical_damage",
       "mutatedunique_vaal",
       "damage",
-      "chaos",
+      "physical",
       "attack"
     ],
     "is_essence_only": false,
@@ -507667,18 +507670,18 @@
     "spawn_weights": [],
     "stats": [
       {
-        "id": "local_minimum_added_chaos_damage",
-        "max": 120,
-        "min": 90
+        "id": "local_minimum_added_physical_damage",
+        "max": 73,
+        "min": 65
       },
       {
-        "id": "local_maximum_added_chaos_damage",
-        "max": 200,
-        "min": 160
+        "id": "local_maximum_added_physical_damage",
+        "max": 91,
+        "min": 83
       }
     ],
-    "text": "เสริมความเสียหาย [Chaos|เคออส] (90-120) ถึง (160-200)",
-    "type": "LocalChaosDamage",
+    "text": "เสริมความเสียหาย [Physical|กายภาพ] (65-73) ถึง (83-91)",
+    "type": "LocalPhysicalDamage",
     "gold_value": null
   },
   "UniqueMutatedVaalLocalCriticalStrikeChance": {
@@ -507702,11 +507705,11 @@
     "stats": [
       {
         "id": "local_critical_strike_chance",
-        "max": 400,
-        "min": 200
+        "max": 500,
+        "min": 300
       }
     ],
-    "text": "โอกาส[Critical|ปะทะคริติคอล] +(2-4)%",
+    "text": "โอกาส[Critical|ปะทะคริติคอล] +(3-5)%",
     "type": "LocalBaseCriticalStrikeChance",
     "gold_value": null
   },
@@ -507736,6 +507739,180 @@
     ],
     "text": "สกิล[Spell|เวท] มีโอกาสยิง[Projectile|โพรเจกไทล์] เพิ่มเติม 2 ลูก (10-25)%",
     "type": "SpellChanceToFireTwoAdditionalProjectiles",
+    "gold_value": null
+  },
+  "UniqueMutatedVaalLocalPhysicalDamagePercent": {
+    "adds_tags": [],
+    "domain": "item",
+    "generation_type": "unique",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "LocalPhysicalDamagePercent"
+    ],
+    "implicit_tags": [
+      "physical_damage",
+      "mutatedunique_vaal",
+      "damage",
+      "physical",
+      "attack"
+    ],
+    "is_essence_only": false,
+    "name": "",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "local_physical_damage_+%",
+        "max": 400,
+        "min": 300
+      }
+    ],
+    "text": "เพิ่มความเสียหาย [Physical|กายภาพ] (300-400)%",
+    "type": "LocalPhysicalDamagePercent",
+    "gold_value": null
+  },
+  "UniqueMutatedVaalFireExposureOnHit": {
+    "adds_tags": [],
+    "domain": "item",
+    "generation_type": "unique",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "ExposureOnHit"
+    ],
+    "implicit_tags": [
+      "mutatedunique_vaal"
+    ],
+    "is_essence_only": false,
+    "name": "",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "base_inflict_fire_exposure_on_hit_%_chance",
+        "max": 50,
+        "min": 30
+      }
+    ],
+    "text": "มีโอกาสสร้างสถานะ พ่ายแก่[Lightning|สายฟ้า] (30-50)% เมื่อปะทะ",
+    "type": "FireExposureOnHit",
+    "gold_value": null
+  },
+  "UniqueMutatedVaalCullingStrikeLocalVsBleeding": {
+    "adds_tags": [],
+    "domain": "item",
+    "generation_type": "unique",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "CullingStrike"
+    ],
+    "implicit_tags": [
+      "mutatedunique_vaal"
+    ],
+    "is_essence_only": false,
+    "name": "",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "local_culling_strike_vs_bleeding_enemies",
+        "max": 1,
+        "min": 1
+      }
+    ],
+    "text": "การปะทะด้วยอาวุธนี้มี [CullingStrike|จู่โจมปลิดชีพ] ต่อศัตรูที่ติดสถานะ [Bleeding|เลือดไหล]",
+    "type": "CullingStrikeLocalVsBleeding",
+    "gold_value": null
+  },
+  "UniqueMutatedVaalLocalIncreasedEvasionAndEnergyShield": {
+    "adds_tags": [],
+    "domain": "item",
+    "generation_type": "unique",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "DefencesPercent"
+    ],
+    "implicit_tags": [
+      "energy_shield",
+      "evasion",
+      "mutatedunique_vaal",
+      "defences"
+    ],
+    "is_essence_only": false,
+    "name": "",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "local_evasion_and_energy_shield_+%",
+        "max": 300,
+        "min": 150
+      }
+    ],
+    "text": "เพิ่ม[Evasion|การหลบหลีก]และ[EnergyShield|โล่พลังงาน] (150-300)%",
+    "type": "LocalEvasionAndEnergyShield",
+    "gold_value": null
+  },
+  "UniqueMutatedVaalLocalEnergyShield3": {
+    "adds_tags": [],
+    "domain": "item",
+    "generation_type": "unique",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "BaseLocalDefences"
+    ],
+    "implicit_tags": [
+      "energy_shield",
+      "mutatedunique_vaal",
+      "defences"
+    ],
+    "is_essence_only": false,
+    "name": "",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "local_energy_shield",
+        "max": 80,
+        "min": 50
+      }
+    ],
+    "text": "[EnergyShield|โล่พลังงาน]สูงสุด +(50-80)",
+    "type": "LocalEnergyShield",
+    "gold_value": null
+  },
+  "UniqueMutatedVaalPhysicalDamagePercent": {
+    "adds_tags": [],
+    "domain": "item",
+    "generation_type": "unique",
+    "generation_weights": [],
+    "grants_effects": [],
+    "groups": [
+      "PhysicalDamagePercent"
+    ],
+    "implicit_tags": [
+      "physical_damage",
+      "mutatedunique_vaal",
+      "damage",
+      "physical"
+    ],
+    "is_essence_only": false,
+    "name": "",
+    "required_level": 1,
+    "spawn_weights": [],
+    "stats": [
+      {
+        "id": "physical_damage_+%",
+        "max": 30,
+        "min": -30
+      }
+    ],
+    "text": "เพิ่มความเสียหาย [Physical|กายภาพ] ของตัวละคร (-30-30)%",
+    "type": "PhysicalDamagePercent",
     "gold_value": null
   }
 }
