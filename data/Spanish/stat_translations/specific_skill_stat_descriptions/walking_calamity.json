@@ -16,6 +16,26 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Intervalo entre [Trigger|activaciones] de meteoritos@{0} s",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 1000,
             "max": 1000,
             "negated": null
@@ -27,7 +47,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Invoca un meteorito cada segundo",
+        "string": "[Trigger|Activa] un meteorito cada segundo",
         "reminder_text": null,
         "is_markup": null
       },
@@ -47,7 +67,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Invoca un meteorito cada {0} segundos",
+        "string": "[Trigger|Activa] un meteorito cada {0} segundos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -72,7 +92,7 @@
       {
         "condition": [
           {
-            "min": 2,
+            "min": null,
             "max": null,
             "negated": null
           }
@@ -83,7 +103,27 @@
         "index_handlers": [
           []
         ],
-        "string": "Cae un meteorito grande después de {0} meteoritos",
+        "string": "Meteoritos entre cada meteorito grande@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Caen -{0} meteoritos entre cada meteorito grande",
         "reminder_text": null,
         "is_markup": null
       },
@@ -101,7 +141,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Cae un meteorito grande después de {0} meteoritos",
+        "string": "Cae un meteorito grande cada {0} meteoritos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -221,7 +261,7 @@
           [],
           []
         ],
-        "string": "More Meteor frequency per additional enemy in radius (max)@{0}% ({1}%)",
+        "string": "Más frecuencia de meteoritos por cada enemigo adicional en el radio (máx.)@{0}% ({1}%)",
         "reminder_text": null,
         "is_markup": null
       },
@@ -246,7 +286,7 @@
           [],
           []
         ],
-        "string": "Meteors [Trigger] {0}% more frequently for each\nadditional enemy in radius, up to {1}%",
+        "string": "Los meteoritos se [Trigger|activan] con un {0}% más de frecuencia por cada\nenemigo adicional en el radio, hasta un {1}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -458,6 +498,26 @@
             "per_minute_to_per_second_2dp_if_required"
           ]
         ],
+        "string": "Regeneración de [Rage|furia] otorgada@{0}/s",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second_2dp_if_required"
+          ]
+        ],
         "string": "El [Buff|efecto beneficioso] otorga {0} de [Rage|furia] regenerada por segundo",
         "reminder_text": null,
         "is_markup": null
@@ -480,6 +540,42 @@
     "Portuguese": null,
     "Russian": null,
     "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Daño [Gain|ganado] como daño de [Fire|fuego] otorgado@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "El [Buff|efecto beneficioso] otorga {0}% del daño [Gain|ganado] como daño de [Fire|fuego]",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {

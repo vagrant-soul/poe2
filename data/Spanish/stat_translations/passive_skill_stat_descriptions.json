@@ -1155,7 +1155,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Create [Lightning] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Fire]\nCreate [Cold] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Lightning]\nCreate [Fire] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Cold]",
+        "string": "Crea [Remnant|remanentes] de [ElementalInfusion|infusión] de [Lightning|rayo] en lugar de [Fire|fuego]\nCrea [Remnant|remanentes] de [ElementalInfusion|infusión] de [Cold|hielo] en lugar de [Lightning|rayo]\nCrea [Remnant|remanentes] de [ElementalInfusion|infusión] de [Fire|fuego] en lugar de [Cold|hielo]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1892,7 +1892,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% de probabilidad de crear suelo consagrado al matar, que dura 8 segundos",
+        "string": "{0}% de probabilidad de crear [ConsecratedGround|suelo consagrado] al matar, que dura 8 segundos",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1910,7 +1910,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Creas suelo consagrado al matar, que dura 8 segundos",
+        "string": "Creas [ConsecratedGround|suelo consagrado] al matar, que dura 8 segundos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3372,7 +3372,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% de probabilidad de que el daño de los impactos sea afortunado",
+        "string": "{0}% de probabilidad de que el daño de los [HitDamage|impactos] sea [Lucky]|afortunado]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4360,7 +4360,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% less Damage taken of each [ElementalDamage|Elemental Damage Type] per matching [Adaptation]",
+        "string": "{0}% menos de daño recibido de cada [ElementalDamage|tipo de daño elemental] por cada [Adaptation|adaptación] del mismo elemento",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4378,7 +4378,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% more Damage taken of each [ElementalDamage|Elemental Damage Type] per matching [Adaptation]",
+        "string": "{0}% más de daño recibido de cada [ElementalDamage|tipo de daño elemental] por cada [Adaptation|adaptación] del mismo elemento",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6511,6 +6511,58 @@
           []
         ],
         "string": "[Sacrifice|Sacrificas] el {0}% de tu [EnergyShield|escudo de energía] máximo cuando lanzas un [Spell|hechizo]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Sacrifice|Sacrificas] el {0}% de tu [EnergyShield|escudo de energía] máximo cuando lanzas un [Spell|hechizo]\nLos [Spell|hechizos] en los cuales se ha realizado completamente este [Sacrifice|sacrificio] infligen un {1}% más de daño",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ],
+          []
+        ],
+        "string": "[Sacrifice|Sacrificas] el {0}% de tu [EnergyShield|escudo de energía] máximo cuando lanzas un [Spell|hechizo]\nLos [Spell|hechizos] en los cuales se ha realizado completamente este [Sacrifice|sacrificio] infligen un {1}% menos de daño",
         "reminder_text": null,
         "is_markup": null
       }

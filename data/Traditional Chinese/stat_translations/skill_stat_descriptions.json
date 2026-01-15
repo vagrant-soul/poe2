@@ -2134,12 +2134,12 @@
           }
         ],
         "format": [
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "[HitDamage|擊中]時[Knockback|擊退敵人]",
+        "string": "[HitDamage|擊中]時有{0}%機率[Knockback|擊退]敵人",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2917,7 +2917,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Curse|詛咒]持續時間為無限",
+        "string": "[Curse|詛咒]持續時間為@無限",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2935,6 +2935,44 @@
         "index_handlers": [
           [
             "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[Curse|詛咒]持續時間為 @{0} 秒",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2147483646,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Curse|詛咒]持續時間為無限",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp"
           ]
         ],
         "string": "[Curse|詛咒]持續時間為 {0} 秒",
@@ -33742,6 +33780,24 @@
         "string": "無副手[Stun|暈眩]累積",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "副手[Chaos|混沌][Stun|暈眩]累積加成@{0}%",
+        "reminder_text": null,
+        "is_markup": null
       }
     ]
   },
@@ -33814,6 +33870,24 @@
         "string": "無[Stun|暈眩]累積",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Chaos|混沌][Stun|暈眩]累積加成@{0}%",
+        "reminder_text": null,
+        "is_markup": null
       }
     ]
   },
@@ -33847,7 +33921,7 @@
         "index_handlers": [
           []
         ],
-        "string": "法術[Chaos|混沌][Freeze|冰凍]累積加成@{0}%",
+        "string": "[Chaos|混沌]法術[Freeze|冰凍]累積加成@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -33884,6 +33958,24 @@
           []
         ],
         "string": "無法術[Stun|暈眩]累積",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Chaos|混沌]法術[Stun|暈眩]累積加成@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34102,6 +34194,24 @@
         "string": "無主手[Stun|暈眩]累積",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "主手[Fire|火焰][Stun|暈眩]累積加成@{0}%",
+        "reminder_text": null,
+        "is_markup": null
       }
     ]
   },
@@ -34172,6 +34282,24 @@
           []
         ],
         "string": "無副手[Stun|暈眩]累積",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "副手[Fire|火焰][Stun|暈眩]累積加成@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34246,6 +34374,24 @@
         "string": "無[Stun|暈眩]累積",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Fire|火焰][Stun|暈眩]累積加成@{0}%",
+        "reminder_text": null,
+        "is_markup": null
       }
     ]
   },
@@ -34316,6 +34462,24 @@
           []
         ],
         "string": "無法術[Stun|暈眩]累積",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Fire|火焰]法術[Stun|暈眩]累積加成@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34390,6 +34554,24 @@
         "string": "無主手[Stun|暈眩]累積",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "主手[Lightning|閃電][Stun|暈眩]累積加成@{0}%",
+        "reminder_text": null,
+        "is_markup": null
       }
     ]
   },
@@ -34460,6 +34642,24 @@
           []
         ],
         "string": "無副手[Stun|暈眩]累積",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "副手[Lightning|閃電][Stun|暈眩]累積加成@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34534,6 +34734,24 @@
         "string": "無[Stun|暈眩]累積",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Lightning|閃電][Stun|暈眩]累積加成@{0}%",
+        "reminder_text": null,
+        "is_markup": null
       }
     ]
   },
@@ -34604,6 +34822,24 @@
           []
         ],
         "string": "無法術[Stun|暈眩]累積",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Lightning|閃電]法術[Stun|暈眩]累積加成@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34963,7 +35199,7 @@
         "index_handlers": [
           []
         ],
-        "string": "法術[Physical|物理][Stun|暈眩]累積修正@{0}%",
+        "string": "[Physical|物理]法術[Stun|暈眩]累積修正@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -36882,7 +37118,7 @@
         "index_handlers": [
           []
         ],
-        "string": "每個[Charges|暴擊球]使[CriticalDamageBonus|暴擊傷害加成]增加 {0}%",
+        "string": "每顆[Charges|暴擊球]使[CriticalDamageBonus|暴擊傷害加成]增加 {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -36902,7 +37138,7 @@
             "negate"
           ]
         ],
-        "string": "每個[Charges|暴擊球]使[CriticalDamageBonus|暴擊傷害加成]減少 {0}%",
+        "string": "每顆[Charges|暴擊球]使[CriticalDamageBonus|暴擊傷害加成]減少 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -54647,6 +54883,26 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_1dp"
+          ]
+        ],
+        "string": "離開暴風之後，魔力暴風的效果殘留 {0} 秒",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 1000,
             "max": 1000,
             "negated": null
@@ -67053,6 +67309,24 @@
         "string": "{0}% 機率重複觸發",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% 機率重複觸發",
+        "reminder_text": null,
+        "is_markup": null
       }
     ]
   },
@@ -72844,7 +73118,7 @@
         "index_handlers": [
           []
         ],
-        "string": "消耗一個[Charges|暴擊球]時更多持續時間@{0}%",
+        "string": "消耗一顆[Charges|暴擊球]時更多持續時間@{0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -72864,7 +73138,7 @@
             "negate"
           ]
         ],
-        "string": "消耗一個[Charges|暴擊球]時更少持續時間@{0}%",
+        "string": "消耗一顆[Charges|暴擊球]時更少持續時間@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -86133,23 +86407,23 @@
       {
         "condition": [
           {
-            "min": 1,
-            "max": 1,
+            "min": null,
+            "max": null,
             "negated": null
           },
           {
             "min": 0,
             "max": 0,
-            "negated": null
+            "negated": true
           },
           {
-            "min": 0,
-            "max": 0,
+            "min": null,
+            "max": null,
             "negated": null
           }
         ],
         "format": [
-          "ignore",
+          "#",
           "ignore",
           "ignore"
         ],
@@ -86158,7 +86432,7 @@
           [],
           []
         ],
-        "string": "[Empowered|強化]你下次施展的[Melee|近戰][Attack|攻擊]",
+        "string": "每一[Charges|耐力球][Empowered|強化]@{0}[Attack|攻擊]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -86170,8 +86444,8 @@
             "negated": null
           },
           {
-            "min": 1,
-            "max": 1,
+            "min": 0,
+            "max": 0,
             "negated": null
           },
           {
@@ -86202,8 +86476,8 @@
             "negated": null
           },
           {
-            "min": null,
-            "max": null,
+            "min": 1,
+            "max": 1,
             "negated": null
           },
           {
@@ -86229,13 +86503,13 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
+            "min": 1,
+            "max": 1,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
+            "min": null,
+            "max": null,
             "negated": null
           },
           {
@@ -86266,8 +86540,8 @@
             "negated": null
           },
           {
-            "min": 1,
-            "max": 1,
+            "min": 0,
+            "max": 0,
             "negated": null
           },
           {
@@ -86298,8 +86572,8 @@
             "negated": null
           },
           {
-            "min": null,
-            "max": null,
+            "min": 1,
+            "max": 1,
             "negated": null
           },
           {
@@ -86325,24 +86599,24 @@
       {
         "condition": [
           {
-            "min": 1,
-            "max": 1,
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
             "negated": null
           },
           {
             "min": 0,
             "max": 0,
             "negated": null
-          },
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
           }
         ],
         "format": [
-          "ignore",
-          "ignore",
+          "#",
+          "#",
           "ignore"
         ],
         "index_handlers": [
@@ -86350,7 +86624,7 @@
           [],
           []
         ],
-        "string": "[Empowered|強化]你下次施展的[Melee|近戰][Strike|打擊][Attack|攻擊]",
+        "string": "[Empowered|強化]你接下來{0}次施展的[Melee|近戰][Attack|攻擊]，每消耗一顆[Charges|耐力球]額外追加{1}次[Attack|攻擊]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -86362,8 +86636,8 @@
             "negated": null
           },
           {
-            "min": 1,
-            "max": 1,
+            "min": 0,
+            "max": 0,
             "negated": null
           },
           {
@@ -86394,8 +86668,8 @@
             "negated": null
           },
           {
-            "min": null,
-            "max": null,
+            "min": 1,
+            "max": 1,
             "negated": null
           },
           {
@@ -86421,13 +86695,13 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
+            "min": 1,
+            "max": 1,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
+            "min": null,
+            "max": null,
             "negated": null
           },
           {
@@ -86458,8 +86732,8 @@
             "negated": null
           },
           {
-            "min": 1,
-            "max": 1,
+            "min": 0,
+            "max": 0,
             "negated": null
           },
           {
@@ -86490,8 +86764,8 @@
             "negated": null
           },
           {
-            "min": null,
-            "max": null,
+            "min": 1,
+            "max": 1,
             "negated": null
           },
           {
@@ -86517,24 +86791,24 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
             "min": 1,
             "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          },
-          {
-            "min": 2,
-            "max": 2,
             "negated": null
           }
         ],
         "format": [
-          "ignore",
-          "ignore",
+          "#",
+          "#",
           "ignore"
         ],
         "index_handlers": [
@@ -86542,7 +86816,7 @@
           [],
           []
         ],
-        "string": "[Empowered|強化]你下次施展的[Melee|近戰][Slam|重擊][Attack|攻擊]",
+        "string": "[Empowered|強化]你接下來{0}次施展的[Melee|近戰][Strike|打擊][Attack|攻擊]，每消耗一顆[Charges|耐力球]額外追加{1}次[Attack|攻擊]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -86554,8 +86828,8 @@
             "negated": null
           },
           {
-            "min": 1,
-            "max": 1,
+            "min": 0,
+            "max": 0,
             "negated": null
           },
           {
@@ -86586,8 +86860,8 @@
             "negated": null
           },
           {
-            "min": null,
-            "max": null,
+            "min": 1,
+            "max": 1,
             "negated": null
           },
           {
@@ -86613,13 +86887,13 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
+            "min": 1,
+            "max": 1,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
+            "min": null,
+            "max": null,
             "negated": null
           },
           {
@@ -86650,8 +86924,8 @@
             "negated": null
           },
           {
-            "min": 1,
-            "max": 1,
+            "min": 0,
+            "max": 0,
             "negated": null
           },
           {
@@ -86682,8 +86956,8 @@
             "negated": null
           },
           {
-            "min": null,
-            "max": null,
+            "min": 1,
+            "max": 1,
             "negated": null
           },
           {
@@ -86709,24 +86983,24 @@
       {
         "condition": [
           {
-            "min": 1,
-            "max": 1,
+            "min": null,
+            "max": null,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
+            "min": null,
+            "max": null,
             "negated": null
           },
           {
-            "min": 3,
-            "max": 3,
+            "min": 2,
+            "max": 2,
             "negated": null
           }
         ],
         "format": [
-          "ignore",
-          "ignore",
+          "#",
+          "#",
           "ignore"
         ],
         "index_handlers": [
@@ -86734,15 +87008,15 @@
           [],
           []
         ],
-        "string": "移除增益效果以[Empowered|強化]你下次施展的[Melee|近戰][Attack|攻擊]\n由此技能[Exert|竭盡]的[Attack|攻擊]無法被其他技能[Exert|竭盡]",
+        "string": "[Empowered|強化]你接下來{0}次施展的[Melee|近戰][Slam|重擊][Attack|攻擊]，每消耗一顆[Charges|耐力球]額外追加{1}次[Attack|攻擊]",
         "reminder_text": null,
         "is_markup": null
       },
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
+            "min": 1,
+            "max": 1,
             "negated": null
           },
           {
@@ -86917,7 +87191,7 @@
           }
         ],
         "format": [
-          "ignore",
+          "#",
           "ignore",
           "ignore"
         ],
@@ -86926,7 +87200,7 @@
           [],
           []
         ],
-        "string": "[Empowered|強化]你下次施展的[Attack|攻擊]",
+        "string": "[Empowered|強化]你接下來{0}次施展的[Attack|攻擊]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -86949,7 +87223,7 @@
           }
         ],
         "format": [
-          "ignore",
+          "#",
           "ignore",
           "ignore"
         ],
@@ -86958,7 +87232,7 @@
           [],
           []
         ],
-        "string": "[Empowered|強化]你下次施展的[Attack|攻擊]，每消耗一顆[Charges|耐力球]額外追加 1 次[Attack|攻擊]",
+        "string": "[Empowered|強化]你接下來{0}次施展的[Attack|攻擊]，每消耗一顆[Charges|耐力球]額外追加 1 次[Attack|攻擊]",
         "reminder_text": null,
         "is_markup": null
       },

@@ -2913,7 +2913,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Duração da Maldição é infinita",
+        "string": "Duração de [Curse|maldição]@Infinita",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2933,7 +2933,45 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Duração da Maldição é de {0} segundos",
+        "string": "Duração da [Curse|maldição]@{0} s",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2147483646,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Duração da [Curse|maldição] é infinita",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp"
+          ]
+        ],
+        "string": "Duração da [Curse|maldição] é de {0} segundos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -19148,7 +19186,25 @@
         "index_handlers": [
           []
         ],
-        "string": "+{0}% de dano contra inimigos [Rarity|únicos]",
+        "string": "Mais dano contra inimigos [Rarity|únicos]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ㅤ+{0}% de dano contra inimigos [Rarity|únicos]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -19168,7 +19224,7 @@
             "negate"
           ]
         ],
-        "string": "-{0}% de dano contra inimigos [Rarity|únicos]",
+        "string": "ㅤ-{0}% de dano contra inimigos [Rarity|únicos]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -24892,18 +24948,18 @@
       {
         "condition": [
           {
-            "min": 100,
-            "max": null,
+            "min": 1,
+            "max": 99,
             "negated": null
           }
         ],
         "format": [
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Inflige Exposição ao Fogo ao Acertar",
+        "string": "{0}% de chance de infligir [Exposure|Exposição] ao [HitDamage|atingir]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -24921,7 +24977,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Inflige Exposição ao Raio ao Acertar",
+        "string": "Inflige [Exposure|Exposição] ao [HitDamage|atingir]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -27836,14 +27892,114 @@
           [],
           []
         ],
-        "string": "Dispara tentáculos em até {0} Alvos",
+        "string": "Gavinhas disparadas@{0}",
         "reminder_text": null,
         "is_markup": null
       },
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Dispara gavinhas em até {0} alvo",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Dispara gavinhas em até {0} alvos",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Dispara gavinhas em até {0} alvos",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Dispara gavinhas em até {0} alvo",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
             "max": null,
             "negated": null
           },
@@ -27861,7 +28017,7 @@
           [],
           []
         ],
-        "string": "Dispara tentáculos em até {0} Alvos",
+        "string": "Dispara gavinhas em até {0} alvos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28041,15 +28197,15 @@
         "index_handlers": [
           []
         ],
-        "string": "[Minion|Lacaios] Protegidos sofrem {0}% mais Dano por 1 segundo após o Escudo ser perdido",
+        "string": "Mais dano sofrido por [Minion|lacaios] protegidos por 1 segundo após a proteção ser perdida@{0}%",
         "reminder_text": null,
         "is_markup": null
       },
       {
         "condition": [
           {
-            "min": -1,
-            "max": null,
+            "min": null,
+            "max": -1,
             "negated": null
           }
         ],
@@ -28061,7 +28217,7 @@
             "negate"
           ]
         ],
-        "string": "[Minion|Lacaios] Protegidos sofrem {0}% menos Dano por 1 segundo após o Escudo ser perdido",
+        "string": "Menos dano sofrido por [Minion|lacaios] protegidos por 1 segundo após a proteção ser perdida@{0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -28079,7 +28235,27 @@
         "index_handlers": [
           []
         ],
-        "string": "[Minion|Lacaios] Protegidos sofrem {0}% mais Dano por 1 segundo após o Escudo ser perdido",
+        "string": "[Minion|Lacaios] protegidos sofrem +{0}% de dano por 1 segundo após perder a proteção",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Minion|Lacaios] protegidos sofrem -{0}% de dano por 1 segundo após perder a proteção",
         "reminder_text": null,
         "is_markup": null
       }
@@ -33351,7 +33527,25 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% de chance de [Despedaçar] e ainda deixá-los [Congelados]",
+        "string": "Chance de não remover [Frozen|congelamento]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de chance de [Shatter|despedaçar] e manter os inimigos [Frozen|congelados]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -35797,7 +35991,43 @@
         "index_handlers": [
           []
         ],
-        "string": "Contágio foca em {0} Inimigos adicionais quando Conjurado",
+        "string": "Inimigos adicionais afetados ao conjurar@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Contágio afeta {0} inimigo adicional ao conjurar",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Contágio afeta {0} inimigos adicionais ao conjurar",
         "reminder_text": null,
         "is_markup": null
       }
@@ -49802,15 +50032,15 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% mais Dano por cada 1 segundo de duração restante da [Curse|Maldição] removida",
+        "string": "Mais dano por 1 segundo de duração restante da [Curse|maldição] removida@{0}%",
         "reminder_text": null,
         "is_markup": null
       },
       {
         "condition": [
           {
-            "min": -1,
-            "max": null,
+            "min": null,
+            "max": -1,
             "negated": null
           }
         ],
@@ -49822,7 +50052,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% menos Dano por cada 1 segundo de duração restante da [Curse|Maldição] removida",
+        "string": "Menos dano por 1 segundo de duração restante da [Curse|maldição] removida@{0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -49840,7 +50070,27 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% mais Dano por cada 1 segundo de duração restante da [Curse|Maldição] removida",
+        "string": "ㅤ+{0}% de dano por 1 segundo de duração restante da [Curse|maldição] removida",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ㅤ-{0}% de dano por 1 segundo de duração restante da [Curse|maldição] removida",
         "reminder_text": null,
         "is_markup": null
       }
@@ -51958,6 +52208,24 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Chance de infligir [Exposure|exposição] ao [HitDamage|atingir]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 1,
             "max": 99,
             "negated": null
@@ -51969,7 +52237,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% de chance de infligir Exposição ao Fogo ao Acertar",
+        "string": "{0}% de chance de infligir [Exposure|Exposição] ao [HitDamage|atingir]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -51987,7 +52255,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Inflige Exposição ao Fogo ao Acertar",
+        "string": "Inflige [Exposure|Exposição] ao [HitDamage|atingir]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -56951,7 +57219,7 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -56962,7 +57230,65 @@
         "index_handlers": [
           []
         ],
-        "string": "[Minion|Lacaios] têm efeito da [Rage|Fúria] aumentado em {0}%",
+        "string": "Efeito de [Rage|fúria] aumentado@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Efeito de [Rage|fúria] reduzido@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Minion|Lacaios] têm o efeito de [Rage|fúria] aumentado em {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Minion|Lacaios] têm o efeito de [Rage|fúria] reduzido em {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -60095,7 +60421,25 @@
         "index_handlers": [
           []
         ],
-        "string": "Máximo de tiros disparados@{0}",
+        "string": "Máximo de raios disparados@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Orb|Orbe] desaparece após disparar {0} raios",
         "reminder_text": null,
         "is_markup": null
       }
@@ -66401,6 +66745,24 @@
           ]
         ],
         "string": "Modificador de [Resistances|resistência] total da [Exposure|Exposição] à [Oil|Óleo]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Exposure|Exposição] reduz as [Resistances|resistências]\n[ElementalDamage|elementais] totais em mais {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -78449,7 +78811,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Sino causa {0}% mais Dano por [HitDamage|Acerto] sofrido",
+        "string": "Mais dano por [HitDamage|ataque] sofrido pelo Sino@{0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -78469,7 +78831,45 @@
             "negate"
           ]
         ],
-        "string": "Sino causa {0}% menos Dano por [HitDamage|Acerto] sofrido",
+        "string": "Menos dano por [HitDamage|ataque] sofrido pelo Sino@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Onda de choque causa +{0}% de dano por [HitDamage|ataque] sofrido pelo Sino",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Onda de choque causa -{0}% de dano por [HitDamage|ataque] sofrido pelo Sino",
         "reminder_text": null,
         "is_markup": null
       }

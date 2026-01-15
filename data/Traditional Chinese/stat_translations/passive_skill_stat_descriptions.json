@@ -1157,7 +1157,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Create [Lightning] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Fire]\nCreate [Cold] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Lightning]\nCreate [Fire] [ElementalInfusion|Infusion] [Remnant|Remnants] instead of [Cold]",
+        "string": "創造[Lightning|閃電][ElementalInfusion|灌注][Remnant|痕跡]而不是[Fire|火焰]\n創造[Cold|冰冷][ElementalInfusion|灌注] [Remnant|痕跡]而不是[Lightning|閃電]\n創造[Fire|火焰][ElementalInfusion|灌注][Remnant|痕跡]而不是[Cold|冰冷]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1768,7 +1768,7 @@
         "index_handlers": [
           []
         ],
-        "string": "可以從遊俠的起點配置天賦",
+        "string": "可以從戰士的起點配置天賦",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1786,7 +1786,7 @@
         "index_handlers": [
           []
         ],
-        "string": "可以從決鬥者的起點配置天賦",
+        "string": "可以從遊俠的起點配置天賦",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1804,7 +1804,7 @@
         "index_handlers": [
           []
         ],
-        "string": "可以從聖騎士的起點配置天賦",
+        "string": "可以從女術者的起點配置天賦",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1813,6 +1813,42 @@
           {
             "min": 4,
             "max": 4,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "可以從決鬥者的起點配置天賦",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 5,
+            "max": 5,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "可以從聖宗的起點配置天賦",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
             "negated": null
           }
         ],
@@ -1858,7 +1894,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊殺時有 {0}% 機率產生奉獻地面持續 8 秒",
+        "string": "擊殺時有 {0}% 機率產生[ConsecratedGround|奉獻地面]持續 8 秒",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1876,7 +1912,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊殺時產生奉獻地面持續 8 秒",
+        "string": "擊殺時產生[ConsecratedGround|奉獻地面]持續 8 秒",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3356,7 +3392,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊中傷害有 {0}% 機率帶有幸運",
+        "string": "[HitDamage|擊中]傷害有 {0}% 機率十分[Lucky|幸運]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4344,7 +4380,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% less Damage taken of each [ElementalDamage|Elemental Damage Type] per matching [Adaptation]",
+        "string": "每一 [Adaptation|適應]賦予 {0}% 更少相應[ElementalDamage|元素傷害類型]的承受傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4362,7 +4398,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% more Damage taken of each [ElementalDamage|Elemental Damage Type] per matching [Adaptation]",
+        "string": "每一 [Adaptation|適應]賦予 {0}% 更多相應[ElementalDamage|元素傷害類型]的承受傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5396,7 +5432,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Skills have {0} to [Rage] cost",
+        "string": "技能 {0} [Rage|盛怒消耗]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6495,6 +6531,58 @@
           []
         ],
         "string": "當你施放[Spell|法術]時，[Sacrifice|犧牲] {0}% 最大能量護盾",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "當你施放[Spell|法術]時，[Sacrifice|犧牲] {0}% 最大能量護盾\n犧牲完成後該[Spell|法術]造成 {0}% 更多傷害",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ],
+          []
+        ],
+        "string": "當你施放[Spell|法術]時，[Sacrifice|犧牲] {0}% 最大能量護盾\n犧牲完成後該[Spell|法術]造成 {0}% 更少傷害",
         "reminder_text": null,
         "is_markup": null
       }

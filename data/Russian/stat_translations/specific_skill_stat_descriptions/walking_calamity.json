@@ -15,6 +15,26 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Интервал [Trigger|вызова] метеоритов@{0}s",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 1000,
             "max": 1000,
             "negated": null
@@ -26,7 +46,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Призывает падающий Метеор каждую секунду",
+        "string": "[Trigger|Вызывает] метеорит каждую секунду",
         "reminder_text": null,
         "is_markup": null
       },
@@ -46,7 +66,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Призывает падающий Метеор каждые {0} секунд(-ы)",
+        "string": "[Trigger|Вызывает] метеорит каждые {0} секунд(-ы)",
         "reminder_text": null,
         "is_markup": null
       }
@@ -71,7 +91,7 @@
       {
         "condition": [
           {
-            "min": 2,
+            "min": null,
             "max": null,
             "negated": null
           }
@@ -82,7 +102,27 @@
         "index_handlers": [
           []
         ],
-        "string": "Каждый {0} падающий Метеор - большой",
+        "string": "Интервал появления больших метеоритов@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "-{0} к числу падающих метеоритов перед появлением большого метеорита",
         "reminder_text": null,
         "is_markup": null
       },
@@ -100,7 +140,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Каждый {0} падающий Метеор - большой",
+        "string": "Большой метеорит падает через каждые {0} упавших метеоритов",
         "reminder_text": null,
         "is_markup": null
       }
@@ -220,7 +260,7 @@
           [],
           []
         ],
-        "string": "More Meteor frequency per additional enemy in radius (max)@{0}% ({1}%)",
+        "string": "Множитель частоты падения метеоритов за каждого дополнительного врага в радиусе (максимум)@{0}% ({1}%)",
         "reminder_text": null,
         "is_markup": null
       },
@@ -245,7 +285,7 @@
           [],
           []
         ],
-        "string": "Meteors [Trigger] {0}% more frequently for each\nadditional enemy in radius, up to {1}%",
+        "string": "Метеориты [Trigger|вызываются] на {0}% чаще за каждого дополнительного врага в радиусе, вплоть до {1}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -457,6 +497,26 @@
             "per_minute_to_per_second_2dp_if_required"
           ]
         ],
+        "string": "Даруемая регенерация [Rage|свирепости]@{0}/с",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second_2dp_if_required"
+          ]
+        ],
         "string": "[Buff|Положительный эффект] дарует регенерацию {0} [Rage|свирепости] в секунду",
         "reminder_text": null,
         "is_markup": null
@@ -493,7 +553,43 @@
         "index_handlers": [
           []
         ],
-        "string": "[Buff|Положительный эффект] дарует {0}% [Gain|наносимого] урона в виде урона от [Fire|огня]",
+        "string": "Даруемый [Gain|наносимый] урон в виде урона от [Fire/огня]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff|Положительный эффект] дарует {0}% от [Gain|наносимого] урона в виде урона от [Fire|огня]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff|Положительный эффект] дарует {0}% от [Gain|наносимого] урона в виде урона от [Fire|огня]",
         "reminder_text": null,
         "is_markup": null
       }

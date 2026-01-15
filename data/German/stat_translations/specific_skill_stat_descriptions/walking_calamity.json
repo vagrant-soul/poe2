@@ -11,6 +11,26 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Meteor-[Trigger|Auslöser]intervall@{0}s",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 1000,
             "max": 1000,
             "negated": null
@@ -22,7 +42,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Beschwört jede Sekunde einen Meteor herab",
+        "string": "[Trigger|Löst] jede Sekunde einen Meteor aus",
         "reminder_text": null,
         "is_markup": null
       },
@@ -42,7 +62,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Beschwört alle {0} Sekunden einen Meteor herab",
+        "string": "[Trigger|Löst] alle {0} Sekunden einen Meteor aus",
         "reminder_text": null,
         "is_markup": null
       }
@@ -67,7 +87,7 @@
       {
         "condition": [
           {
-            "min": 2,
+            "min": null,
             "max": null,
             "negated": null
           }
@@ -78,7 +98,27 @@
         "index_handlers": [
           []
         ],
-        "string": "Alle {0} Meteore fällt ein großer Meteor",
+        "string": "Meteore zwischen jedem großen Meteor@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "-{0} Meteore fallen zwischen großen Meteoren",
         "reminder_text": null,
         "is_markup": null
       },
@@ -216,7 +256,7 @@
           [],
           []
         ],
-        "string": "More Meteor frequency per additional enemy in radius (max)@{0}% ({1}%)",
+        "string": "Mehr Meteor-Frequenz pro zusätzlichem Gegner im Radius (max.)@{0}% ({1}%)",
         "reminder_text": null,
         "is_markup": null
       },
@@ -241,7 +281,7 @@
           [],
           []
         ],
-        "string": "Meteors [Trigger] {0}% more frequently for each\nadditional enemy in radius, up to {1}%",
+        "string": "Meteore [Trigger|lösen] {0}% häufiger aus für jeden\nzusätzlichen Gegner im Radius, bis zu {1}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -453,6 +493,26 @@
             "per_minute_to_per_second_2dp_if_required"
           ]
         ],
+        "string": "Gewährte [Rage|Rausch]-Regeneration@{0}/s",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second_2dp_if_required"
+          ]
+        ],
         "string": "[Buff|Stärkung] gewährt {0} [Rage|Rausch] regeneriert pro Sekunde",
         "reminder_text": null,
         "is_markup": null
@@ -475,6 +535,42 @@
     "hidden": null,
     "French": null,
     "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Als [Fire|Feuer]schaden [Gain|verursachter] Schaden@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff|Stärkung] [Gain|verursacht] {0}% des Schadens als [Fire|Feuer]schaden",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {

@@ -13,6 +13,26 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "유성 [Trigger|발동] 간격@{0}초",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 1000,
             "max": 1000,
             "negated": null
@@ -24,7 +44,7 @@
         "index_handlers": [
           []
         ],
-        "string": "1초마다 유성 1개 떨어뜨림",
+        "string": "1초마다 유성 [Trigger|발동]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -44,7 +64,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "{0}초마다 유성 1개 떨어뜨림",
+        "string": "{0}초마다 유성 [Trigger|발동]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -69,7 +89,7 @@
       {
         "condition": [
           {
-            "min": 2,
+            "min": null,
             "max": null,
             "negated": null
           }
@@ -80,7 +100,27 @@
         "index_handlers": [
           []
         ],
-        "string": "유성 {0}개가 떨어질 때마다 대형 유성이 떨어짐",
+        "string": "대형 유성 사이 유성@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "대형 유성 사이에 떨어지는 유성 -{0}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -218,7 +258,7 @@
           [],
           []
         ],
-        "string": "More Meteor frequency per additional enemy in radius (max)@{0}% ({1}%)",
+        "string": "반경 내 추가 적 하나당 유성 빈도 증폭 (최대)@{0}% ({1}%)",
         "reminder_text": null,
         "is_markup": null
       },
@@ -243,7 +283,7 @@
           [],
           []
         ],
-        "string": "Meteors [Trigger] {0}% more frequently for each\nadditional enemy in radius, up to {1}%",
+        "string": "반경 내 추가 적 하나당 유성 [Trigger|발동] 빈도 {0}% 증폭,\n최대 {1}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -455,6 +495,26 @@
             "per_minute_to_per_second_2dp_if_required"
           ]
         ],
+        "string": "부여되는 [Rage|격노] 재생@{0}/초",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second_2dp_if_required"
+          ]
+        ],
         "string": "[Buff|버프] 시 1초마다 [Rage|격노] {0} 재생",
         "reminder_text": null,
         "is_markup": null
@@ -477,6 +537,42 @@
     "German": null,
     "Japanese": null,
     "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Fire|화염] 피해로 [Gain|획득]하는 피해@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff|버프]가 피해의 {0}%를 [Fire|화염] 피해로 [Gain|획득] 효과 부여",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
