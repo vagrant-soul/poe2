@@ -4,17 +4,35 @@
   },
   "edge_count": 11,
   "edge_types": {
-    "RedvaleRiver": "RedvaleRiver #FF1919FF\r\nMetadata/Terrain/Woods/WideRiver/wideriver_water.gt\r\nwildcard\r\n0 3 0\r\n\r\n",
-    "WideRiver": "WideRiver #FF1919FF\r\nMetadata/Terrain/Woods/WideRiver/wideriver_water.gt\r\nwildcard\r\n0 3 0\n\n",
-    "WideRiver_RedValeRiver": "WideRiver_RedValeRiver #FF1919FF\r\nwildcard\r\nwildcard\r\n0 3 0\r\nvirtual\r\nMetadata/Terrain/Woods/WideRiver/wideriver.et 0\r\nMetadata/Terrain/Woods/RedvaleRiver/redvaleriver.et 1\r\n15 90\r\n\r\n",
-    "Woods": "Woods #b3cf17\nwildcard\nMetadata/Terrain/Woods/Woods/inside_woods.gt\n0 3 0 1\n",
-    "WoodsNonWalkable": "WoodsNonWalkable #FF655c58\nwildcard\nMetadata/Terrain/Woods/Woods/inside_woods.gt\n0 3 1\n",
-    "Woods_WoodsWideRiver": "Woods_WoodsWideRiver #FF655c58\nMetadata/Terrain/Woods/WideRiver/wideriver_water.gt\nMetadata/Terrain/Woods/Woods/inside_woods.gt\n0 3 1\n"
+    "Metadata/Terrain/Woods/RedvaleRiver/redvaleriver.et": {
+      "color": "#FF1919FF",
+      "id": "RedvaleRiver"
+    },
+    "Metadata/Terrain/Woods/RedvaleRiver/wideriver_redvaleriver_virtual.et": {
+      "color": "#FF1919FF",
+      "id": "WideRiver_RedValeRiver"
+    },
+    "Metadata/Terrain/Woods/WideRiver/wideriver.et": {
+      "color": "#FF1919FF",
+      "id": "WideRiver"
+    },
+    "Metadata/Terrain/Woods/Woods/woods.et": {
+      "color": "#b3cf17",
+      "id": "Woods"
+    },
+    "Metadata/Terrain/Woods/Woods/woods_nonwalkable.et": {
+      "color": "#FF655c58",
+      "id": "WoodsNonWalkable"
+    },
+    "Metadata/Terrain/Woods/Woods_WideRiver/woods_wideriver.et": {
+      "color": "#FF655c58",
+      "id": "Woods_WoodsWideRiver"
+    }
   },
   "edges": [
     {
       "color": "#b3cf17",
-      "edge_type": "Woods",
+      "edge_type": "Metadata/Terrain/Woods/Woods/woods.et",
       "from": 15,
       "path": [],
       "to": 2,
@@ -29,7 +47,7 @@
     },
     {
       "color": "#b3cf17",
-      "edge_type": "Woods",
+      "edge_type": "Metadata/Terrain/Woods/Woods/woods.et",
       "from": 0,
       "path": [
         [
@@ -49,7 +67,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "Woods_WoodsWideRiver",
+      "edge_type": "Metadata/Terrain/Woods/Woods_WideRiver/woods_wideriver.et",
       "from": 5,
       "path": [],
       "to": 4,
@@ -64,7 +82,7 @@
     },
     {
       "color": "#FF1919FF",
-      "edge_type": "WideRiver",
+      "edge_type": "Metadata/Terrain/Woods/WideRiver/wideriver.et",
       "from": 4,
       "path": [],
       "to": 10,
@@ -79,7 +97,7 @@
     },
     {
       "color": "#b3cf17",
-      "edge_type": "Woods",
+      "edge_type": "Metadata/Terrain/Woods/Woods/woods.et",
       "from": 11,
       "path": [],
       "to": 2,
@@ -94,7 +112,7 @@
     },
     {
       "color": "#FF1919FF",
-      "edge_type": "RedvaleRiver",
+      "edge_type": "Metadata/Terrain/Woods/RedvaleRiver/redvaleriver.et",
       "from": 12,
       "path": [],
       "to": 10,
@@ -109,7 +127,7 @@
     },
     {
       "color": "#b3cf17",
-      "edge_type": "Woods",
+      "edge_type": "Metadata/Terrain/Woods/Woods/woods.et",
       "from": 6,
       "path": [],
       "to": 1,
@@ -124,7 +142,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "WoodsNonWalkable",
+      "edge_type": "Metadata/Terrain/Woods/Woods/woods_nonwalkable.et",
       "from": 14,
       "path": [],
       "to": 1,
@@ -139,7 +157,7 @@
     },
     {
       "color": "#b3cf17",
-      "edge_type": "Woods",
+      "edge_type": "Metadata/Terrain/Woods/Woods/woods.et",
       "from": 0,
       "path": [],
       "to": 15,
@@ -154,7 +172,7 @@
     },
     {
       "color": "#FF1919FF",
-      "edge_type": "WideRiver_RedValeRiver",
+      "edge_type": "Metadata/Terrain/Woods/RedvaleRiver/wideriver_redvaleriver_virtual.et",
       "from": 10,
       "path": [],
       "to": 1,
@@ -169,7 +187,7 @@
     },
     {
       "color": "#b3cf17",
-      "edge_type": "Woods",
+      "edge_type": "Metadata/Terrain/Woods/Woods/woods.et",
       "from": 6,
       "path": [],
       "to": 11,
@@ -681,6 +699,7 @@
   "room_set": [
     {
       "file": "Metadata/Terrain/Gallows/Act1/1_4/Rooms/witchhut_01.arm",
+      "room_tag": "witch_hut",
       "suffix": [
         "I",
         "R270",
@@ -690,6 +709,7 @@
     },
     {
       "file": "Metadata/Terrain/Gallows/Act1/1_4/Rooms/bossman_01.arm",
+      "room_tag": "bossman",
       "suffix": [
         "I",
         "FI"
@@ -697,6 +717,7 @@
     },
     {
       "file": "Metadata/Terrain/Gallows/Act1/1_4/Rooms/grimtangle.arm",
+      "room_tag": "grimtangle",
       "suffix": [
         "I",
         "FI"
@@ -704,6 +725,7 @@
     },
     {
       "file": "Metadata/Terrain/Gallows/Act1/1_4/Rooms/tree_of_souls.arm",
+      "room_tag": "soultree",
       "suffix": [
         "I"
       ]

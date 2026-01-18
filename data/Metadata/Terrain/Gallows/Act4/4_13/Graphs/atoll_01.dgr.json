@@ -9,13 +9,19 @@
   },
   "edge_count": 5,
   "edge_types": {
-    "AtollDuneToLagoonVirtual": "AtollDuneToLagoonVirtual\r\nMetadata/Terrain/Islands/Tiles/Island/ShoreLine/RockyLagoon/island_lagoon.gt\r\nMetadata/Terrain/Maps/Sandspit/Tiles/dune_fill.gt\r\n0 3 1\r\nvirtual\r\nMetadata/Terrain/Maps/Sandspit/Tiles/dune.et 0\r\nMetadata/Terrain/Islands/Tiles/Island/ShoreLine/RockyLagoon/island_lagoon.et 1\r\n40 120",
-    "AtollLagoonToOceanVirtual": "AtollLagoonToOceanVirtual\r\nMetadata/Terrain/Islands/Tiles/Island/island_ocean.gt\r\nMetadata/Terrain/Islands/Tiles/Island/ShoreLine/RockyLagoon/island_lagoon.gt\r\n0 3 1\r\nvirtual\r\nMetadata/Terrain/Islands/Tiles/Island/ShoreLine/RockyLagoon/island_lagoon.et 0\r\nMetadata/Terrain/Islands/Tiles/Island/ShoreLine/island_shore_line.et 1\r\n50 90",
-    "SandspitDuneToOceanVirtual": "SandspitDuneToOceanVirtual\r\nMetadata/Terrain/Islands/Tiles/Island/island_ocean.gt\r\nMetadata/Terrain/Maps/Sandspit/Tiles/dune_fill.gt\r\n0 3 1\r\nvirtual\r\nMetadata/Terrain/Maps/Sandspit/Tiles/dune.et 0\r\nMetadata/Terrain/Islands/Tiles/Island/ShoreLine/island_shore_line.et 1\r\n40 60"
+    "Metadata/Terrain/Islands/Tiles/Island/ShoreLine/RockyLagoon/AtollDuneLagoon.et": {
+      "id": "AtollDuneToLagoonVirtual"
+    },
+    "Metadata/Terrain/Islands/Tiles/Island/ShoreLine/RockyLagoon/AtollLagoonOcean.et": {
+      "id": "AtollLagoonToOceanVirtual"
+    },
+    "Metadata/Terrain/Maps/Sandspit/Tiles/dune_to_ocean_virtual.et": {
+      "id": "SandspitDuneToOceanVirtual"
+    }
   },
   "edges": [
     {
-      "edge_type": "SandspitDuneToOceanVirtual",
+      "edge_type": "Metadata/Terrain/Maps/Sandspit/Tiles/dune_to_ocean_virtual.et",
       "from": 0,
       "path": [],
       "to": 1,
@@ -38,7 +44,7 @@
       ]
     },
     {
-      "edge_type": "SandspitDuneToOceanVirtual",
+      "edge_type": "Metadata/Terrain/Maps/Sandspit/Tiles/dune_to_ocean_virtual.et",
       "from": 1,
       "path": [],
       "to": 2,
@@ -61,7 +67,7 @@
       ]
     },
     {
-      "edge_type": "AtollDuneToLagoonVirtual",
+      "edge_type": "Metadata/Terrain/Islands/Tiles/Island/ShoreLine/RockyLagoon/AtollDuneLagoon.et",
       "from": 0,
       "path": [],
       "to": 2,
@@ -84,7 +90,7 @@
       ]
     },
     {
-      "edge_type": "AtollLagoonToOceanVirtual",
+      "edge_type": "Metadata/Terrain/Islands/Tiles/Island/ShoreLine/RockyLagoon/AtollLagoonOcean.et",
       "from": 0,
       "path": [],
       "to": 3,
@@ -107,7 +113,7 @@
       ]
     },
     {
-      "edge_type": "AtollLagoonToOceanVirtual",
+      "edge_type": "Metadata/Terrain/Islands/Tiles/Island/ShoreLine/RockyLagoon/AtollLagoonOcean.et",
       "from": 3,
       "path": [],
       "to": 2,
@@ -264,6 +270,7 @@
   "room_set": [
     {
       "file": "Metadata/Terrain/Gallows/Act4/4_13/Rooms/entrance_01.arm",
+      "room_tag": "entrance",
       "suffix": [
         "I",
         "R90",
@@ -273,6 +280,7 @@
     },
     {
       "file": "Metadata/Terrain/Gallows/Act4/4_13/Rooms/entrance_01_flip.arm",
+      "room_tag": "entrance",
       "suffix": [
         "FI",
         "FR90",
@@ -282,6 +290,7 @@
     },
     {
       "file": "Metadata/Terrain/Gallows/Act4/4_13/Rooms/boat.arm",
+      "room_tag": "boat",
       "suffix": [
         "I"
       ]
