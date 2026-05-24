@@ -55,7 +55,7 @@ jobs:
         run: find poe2/data '(' -name '*.json' -not -path '*/pob/*' -o -name '*.html' -o -name '*.txt' ')' -delete -print | wc -l
       - run: poetry install
         working-directory: RePoE
-      - run: poetry run pypoe_schema_import -a stable --poe2 -u https://repoe-fork.github.io/dat-export/poe2/filtered.json
+      - run: poetry run pypoe_schema_import --poe2 -a poe2
         working-directory: RePoE
       - run: poetry run repoe all -l all --poe2 -o ../poe2/data
         working-directory: RePoE
