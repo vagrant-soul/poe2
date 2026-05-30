@@ -57,7 +57,7 @@ jobs:
         working-directory: RePoE
       - run: poetry run pypoe_schema_import --poe2 -a poe2
         working-directory: RePoE
-      - run: poetry run repoe all -l all --poe2 -o ../poe2/data
+      - run: poetry run repoe all --poe2 -o ../poe2/data
         working-directory: RePoE
       - id: autocommit
         uses: stefanzweifel/git-auto-commit-action@v7.1.0
