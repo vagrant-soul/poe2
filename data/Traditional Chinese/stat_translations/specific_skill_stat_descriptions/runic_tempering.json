@@ -2,7 +2,7 @@
   {
     "English": null,
     "ids": [
-      "runic_tempering_backlash_cooldown_ms"
+      "active_skill_area_of_effect_radius"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -28,10 +28,10 @@
         ],
         "index_handlers": [
           [
-            "milliseconds_to_seconds_2dp_if_required"
+            "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "[DNT-UNUSED] Minimum of {0} second between each backlash",
+        "string": "反擊範圍@{0}公尺",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40,7 +40,143 @@
   {
     "English": null,
     "ids": [
-      "runic_tempering_damage_taken_+%"
+      "active_skill_base_area_of_effect_radius"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "反噬半徑為{0}公尺",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "反噬半徑為{0}公尺",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "runic_tempering_backlash_cooldown_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "反擊的最小間隔時間@{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "每{0}秒可以反擊一次",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "每{0}秒可以反擊一次",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "runic_tempering_damage_taken_+%_final"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -67,7 +203,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] {0}% increase Damage taken while you have runes",
+        "string": "當你擁有符文鎧甲時承受來自[HitDamage|擊中]傷害@{0}%更多",
         "reminder_text": null,
         "is_markup": null
       },
@@ -87,7 +223,45 @@
             "negate"
           ]
         ],
-        "string": "[DNT-UNUSED] {0}% decrease Damage taken while you have runes",
+        "string": "當你擁有符文鎧甲時承受來自[HitDamage|擊中]傷害@{0}%更少",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "當你擁有符文鎧甲時承受{0}%更多[HitDamage|擊中]傷害",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "當你擁有符文鎧甲時承受{0}%更少[HitDamage|擊中]傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -112,8 +286,8 @@
       {
         "condition": [
           {
-            "min": 2,
-            "max": 2,
+            "min": 1,
+            "max": null,
             "negated": null
           }
         ],
@@ -123,7 +297,25 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] Each rune can backlash {0} time",
+        "string": "每個符文鎧甲反擊@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每{0}次反擊失去一層符文鎧甲",
         "reminder_text": null,
         "is_markup": null
       },
@@ -141,7 +333,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] Each rune can backlash {0} times",
+        "string": "每{0}次反擊失去一層符文鎧甲",
         "reminder_text": null,
         "is_markup": null
       }
@@ -150,7 +342,8 @@
   {
     "English": null,
     "ids": [
-      "runic_tempering_max_runes"
+      "runic_tempering_max_runes",
+      "runic_tempering_stacks"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -166,18 +359,75 @@
       {
         "condition": [
           {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
             "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
+          "#",
           "#"
         ],
         "index_handlers": [
+          [],
           []
         ],
-        "string": "[DNT-UNUSED] Maximum {0} Runes",
+        "string": "Current & maximum Runic Plates當前 & 最大符文鎧甲@{1}/{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "最大{0}層符文鎧甲",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "最大{0}層符文鎧甲",
         "reminder_text": null,
         "is_markup": null
       }

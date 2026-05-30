@@ -219,6 +219,50 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "{0} to {1} Base Off Hand [Fire|Fire] Damage",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "off_hand_weapon_minimum_fire_damage",
+      "off_hand_weapon_maximum_fire_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
@@ -236,6 +280,50 @@
     ],
     "ids": [
       "off_hand_base_weapon_attack_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "{0} to {1} Base Off Hand [Cold] Damage",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "off_hand_weapon_minimum_cold_damage",
+      "off_hand_weapon_maximum_cold_damage"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -1417,60 +1505,6 @@
           }
         ],
         "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Spell Repeats once",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Spell Repeats {0} times",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "ids": [
-      "base_spell_repeat_count"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
           "#"
         ],
         "index_handlers": [
@@ -1790,60 +1824,6 @@
     ],
     "ids": [
       "additive_cast_speed_modifiers_apply_to_sigil_repeat_frequency"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "This [Attack] Repeats {0} additional time",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "This [Attack] Repeats {0} additional times",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "ids": [
-      "base_melee_attack_repeat_count"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2490,6 +2470,44 @@
   },
   {
     "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Conversion|Converts] {0}% of [Physical] Damage to [Lightning] Damage",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Conversion|Converts] -{0}% of [Physical] Damage to [Lightning] Damage",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -4570,6 +4588,12 @@
     ],
     "trade_stats": [
       {
+        "id": "crafted.stat_2891184298",
+        "text": "#% increased Cast Speed",
+        "type": "crafted",
+        "option": null
+      },
+      {
         "id": "desecrated.stat_2891184298",
         "text": "#% increased Cast Speed",
         "type": "desecrated",
@@ -5384,6 +5408,42 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Modifiers to number of Projectiles instead apply to the number of times this skill [Repeat|Repeats]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "base_modifiers_to_number_of_projectiles_instead_apply_to_repeats"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": 2,
             "max": null,
             "negated": null
@@ -5510,6 +5570,60 @@
     ],
     "ids": [
       "base_number_of_champions_of_light_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Creates {0} fissure",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Creates {0} fissures",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "base_number_of_fissures"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -6147,6 +6261,42 @@
         "option": null
       }
     ],
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "This Skill cannot cause [Meta] Skills to generate [Energy]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "base_skill_cannot_generate_energy"
+    ],
+    "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": null,
@@ -10416,6 +10566,12 @@
     ],
     "trade_stats": [
       {
+        "id": "crafted.stat_1037193709",
+        "text": "Adds # to # Cold Damage",
+        "type": "crafted",
+        "option": null
+      },
+      {
         "id": "desecrated.stat_1037193709",
         "text": "Adds # to # Cold Damage",
         "type": "desecrated",
@@ -10490,6 +10646,12 @@
       "global_maximum_added_fire_damage"
     ],
     "trade_stats": [
+      {
+        "id": "crafted.stat_709508406",
+        "text": "Adds # to # Fire Damage",
+        "type": "crafted",
+        "option": null
+      },
       {
         "id": "desecrated.stat_709508406",
         "text": "Adds # to # Fire Damage",
@@ -10566,6 +10728,12 @@
     ],
     "trade_stats": [
       {
+        "id": "crafted.stat_3336890334",
+        "text": "Adds # to # Lightning Damage",
+        "type": "crafted",
+        "option": null
+      },
+      {
         "id": "desecrated.stat_3336890334",
         "text": "Adds # to # Lightning Damage",
         "type": "desecrated",
@@ -10640,6 +10808,12 @@
       "global_maximum_added_physical_damage"
     ],
     "trade_stats": [
+      {
+        "id": "crafted.stat_1940865751",
+        "text": "Adds # to # Physical Damage",
+        "type": "crafted",
+        "option": null
+      },
       {
         "id": "desecrated.stat_1940865751",
         "text": "Adds # to # Physical Damage",
@@ -11364,6 +11538,12 @@
       "lightning_damage_+%"
     ],
     "trade_stats": [
+      {
+        "id": "crafted.stat_2231156303",
+        "text": "#% increased Lightning Damage",
+        "type": "crafted",
+        "option": null
+      },
       {
         "id": "desecrated.stat_2231156303",
         "text": "#% increased Lightning Damage",
@@ -12426,13 +12606,13 @@
         "index_handlers": [
           []
         ],
-        "string": "Modifiers to number of Projectiles instead apply to\nthe number of targets Projectile Splits towards",
+        "string": "Modifiers to number of [Projectile|Projectiles] instead apply to number of targets [Pierce|Pierced]",
         "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
-      "modifiers_to_number_of_projectiles_instead_apply_to_splitting"
+      "modifiers_to_number_of_projectiles_instead_apply_to_number_of_targets_projectile_pierces"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -12451,8 +12631,8 @@
       {
         "condition": [
           {
-            "min": 1,
-            "max": 1,
+            "min": null,
+            "max": null,
             "negated": null
           }
         ],
@@ -12462,13 +12642,13 @@
         "index_handlers": [
           []
         ],
-        "string": "Projectile count cannot be modified",
+        "string": "Modifiers to number of Projectiles instead apply to\nthe number of targets Projectile [Split|Splits] towards",
         "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
-      "modifiers_to_projectile_count_do_not_apply"
+      "modifiers_to_number_of_projectiles_instead_apply_to_splitting"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -12672,12 +12852,12 @@
           }
         ],
         "format": [
-          "ignore"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Chains an additional time",
+        "string": "Chains {0} time",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12695,7 +12875,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Chains {0} additional times",
+        "string": "Chains {0} times",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12973,43 +13153,23 @@
         "condition": [
           {
             "min": 1,
-            "max": null,
+            "max": 1,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Fires {0}% more [Projectile|Projectiles] per Steel Shard consumed",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "Fires {0}% less [Projectile|Projectiles] per Steel Shard consumed",
+        "string": "Number of [Projectile|Projectiles] cannot be modified",
         "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
-      "number_of_projectiles_to_fire_+%_final_per_steel_ammo_consumed"
+      "number_of_projectiles_cannot_be_modified"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -13152,50 +13312,6 @@
     "ids": [
       "off_hand_minimum_added_physical_damage_per_5_shield_armour",
       "off_hand_maximum_added_physical_damage_per_5_shield_armour"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "#"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "{0} to {1} Base Off Hand [Fire|Fire] Damage",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "ids": [
-      "off_hand_weapon_minimum_fire_damage",
-      "off_hand_weapon_maximum_fire_damage"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -13626,60 +13742,6 @@
       {
         "condition": [
           {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Primary Projectile Chains {0} Time",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Primary Projectile Chains {0} Times",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "ids": [
-      "primary_projectile_chains_+"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": [
-      {
-        "condition": [
-          {
             "min": 1000,
             "max": 1000,
             "negated": null
@@ -13744,12 +13806,12 @@
           }
         ],
         "format": [
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "[Pierce|Pierces] the first target [HitDamage|Hit]",
+        "string": "[Pierce|Pierces] {0} target",
         "reminder_text": null,
         "is_markup": null
       },
@@ -13767,7 +13829,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Pierce|Pierces] the first {0} targets [HitDamage|Hit]",
+        "string": "[Pierce|Pierces] {0} targets",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13867,7 +13929,25 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Projectiles [Split] towards {0} targets",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -13878,7 +13958,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Projectiles Split towards {0} targets",
+        "string": "Projectiles [Split] towards {0} targets",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13886,14 +13966,7 @@
     "ids": [
       "projectile_number_to_split"
     ],
-    "trade_stats": [
-      {
-        "id": "explicit.stat_3464380325",
-        "text": "Projectiles Split towards # targets",
-        "type": "explicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": null,
@@ -13964,7 +14037,7 @@
           [],
           []
         ],
-        "string": "Projectiles have {1}% chance to Return to you",
+        "string": "[Projectile|Projectiles] have {1}% chance to [Return] to you",
         "reminder_text": null,
         "is_markup": null
       },
@@ -13989,7 +14062,7 @@
           [],
           []
         ],
-        "string": "Projectiles Return to you",
+        "string": "[Projectile|Projectiles] [Return] to you",
         "reminder_text": null,
         "is_markup": null
       },
@@ -14014,7 +14087,7 @@
           [],
           []
         ],
-        "string": "Projectiles Return to you",
+        "string": "[Projectile|Projectiles] [Return] to you",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15030,6 +15103,12 @@
     ],
     "trade_stats": [
       {
+        "id": "crafted.stat_2974417149",
+        "text": "#% increased Spell Damage",
+        "type": "crafted",
+        "option": null
+      },
+      {
         "id": "desecrated.stat_2974417149",
         "text": "#% increased Spell Damage",
         "type": "desecrated",
@@ -15060,6 +15139,42 @@
         "option": null
       }
     ],
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Spirit Vessel deals {0}% more Damage per different socketed Skill",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "spirit_vessel_damage_+%_final_per_skill_socketed_in_meta_gem"
+    ],
+    "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": null,

@@ -2,7 +2,7 @@
   {
     "English": null,
     "ids": [
-      "runic_tempering_backlash_cooldown_ms"
+      "active_skill_area_of_effect_radius"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -24,10 +24,10 @@
         ],
         "index_handlers": [
           [
-            "milliseconds_to_seconds_2dp_if_required"
+            "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "Mínimo de {0} segundo entre cada reação violenta",
+        "string": "Raio de alcance de Reação Violenta@{0} m",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40,7 +40,143 @@
   {
     "English": null,
     "ids": [
-      "runic_tempering_damage_taken_+%"
+      "active_skill_base_area_of_effect_radius"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Raio de alcance da Reação Violenta: {0} metro",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Raio de alcance da Reação Violenta: {0} metros",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "runic_tempering_backlash_cooldown_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Tempo mínimo entre Reações Violentas@{0} s",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Pode ativar Reação Violenta a cada {0} segundo",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Pode ativar Reação Violenta a cada {0} segundos",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "runic_tempering_damage_taken_+%_final"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -63,7 +199,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dano sofrido aumentado em {0}% enquanto você tiver runas",
+        "string": "Dano sofrido de [HitDamage|ataques] enquanto você tiver Placas Rúnicas@+{0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -83,7 +219,45 @@
             "negate"
           ]
         ],
-        "string": "Dano sofrido reduzido em {0}% enquanto você tiver runas",
+        "string": "Dano sofrido de [HitDamage|ataques] enquanto você tiver Placas Rúnicas@-{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Você sofre +{0}% de dano de [HitDamage|ataques] enquanto você tiver Placas Rúnicas",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Você sofre -{0}% de dano de [HitDamage|ataques] enquanto você tiver Placas Rúnicas",
         "reminder_text": null,
         "is_markup": null
       }
@@ -109,6 +283,24 @@
         "condition": [
           {
             "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Reações Violentas por Placa Rúnica@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": 1,
             "negated": null
           }
@@ -119,7 +311,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Cada runa pode reagir violentamente {0} vez",
+        "string": "Perde uma Placa Rúnica a cada {0} Reação Violenta",
         "reminder_text": null,
         "is_markup": null
       },
@@ -137,7 +329,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Cada runa pode reagir violentamente {0} vezes",
+        "string": "Perde uma Placa Rúnica a cada {0} Reações Violentas",
         "reminder_text": null,
         "is_markup": null
       }
@@ -150,7 +342,8 @@
   {
     "English": null,
     "ids": [
-      "runic_tempering_max_runes"
+      "runic_tempering_max_runes",
+      "runic_tempering_stacks"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -162,18 +355,75 @@
       {
         "condition": [
           {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
             "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
+          "#",
           "#"
         ],
         "index_handlers": [
+          [],
           []
         ],
-        "string": "Máximo de {0} runas",
+        "string": "Placas Rúnicas atuais e máximas@{1}/{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Máximo de {0} Placa Rúnica",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Máximo de {0} Placas Rúnicas",
         "reminder_text": null,
         "is_markup": null
       }

@@ -2,7 +2,7 @@
   {
     "English": null,
     "ids": [
-      "active_skill_area_of_effect_radius"
+      "volatile_dead_base_number_of_corpses_to_consume"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -18,7 +18,61 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "消耗{0}具[Corpse|屍體]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "消耗{0}具[Corpse|屍體]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "消耗至多{0}具[Corpse|屍體]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
             "max": null,
             "negated": null
           }
@@ -27,11 +81,9 @@
           "#"
         ],
         "index_handlers": [
-          [
-            "divide_by_ten_1dp_if_required"
-          ]
+          []
         ],
-        "string": "爆炸範圍@{0} 公尺",
+        "string": "消耗至多{0}具[Corpse|屍體]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40,7 +92,7 @@
   {
     "English": null,
     "ids": [
-      "active_skill_base_area_of_effect_radius"
+      "base_skill_effect_duration"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -56,8 +108,8 @@
       {
         "condition": [
           {
-            "min": 10,
-            "max": 10,
+            "min": 1000,
+            "max": 1000,
             "negated": null
           }
         ],
@@ -66,10 +118,10 @@
         ],
         "index_handlers": [
           [
-            "divide_by_ten_1dp_if_required"
+            "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "爆炸範圍為 {0} 公尺",
+        "string": "核心持續時間為 {0} 秒",
         "reminder_text": null,
         "is_markup": null
       },
@@ -86,10 +138,48 @@
         ],
         "index_handlers": [
           [
-            "divide_by_ten_1dp_if_required"
+            "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "爆炸範圍為 {0} 公尺",
+        "string": "核心持續時間為 {0} 秒",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_effect_duration"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "核心持續時間@{0} 秒",
         "reminder_text": null,
         "is_markup": null
       }

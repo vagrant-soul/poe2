@@ -4,7 +4,61 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Consumes {0} [Corpse]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Consumes {0} [Corpses]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Consumes up to {0} [Corpse]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
             "max": null,
             "negated": null
           }
@@ -13,17 +67,15 @@
           "#"
         ],
         "index_handlers": [
-          [
-            "divide_by_ten_1dp_if_required"
-          ]
+          []
         ],
-        "string": "Explosion radius@{0}m",
+        "string": "Consumes up to {0} [Corpse|Corpses]",
         "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
-      "active_skill_area_of_effect_radius"
+      "volatile_dead_base_number_of_corpses_to_consume"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -42,8 +94,8 @@
       {
         "condition": [
           {
-            "min": 10,
-            "max": 10,
+            "min": 1000,
+            "max": 1000,
             "negated": null
           }
         ],
@@ -52,10 +104,10 @@
         ],
         "index_handlers": [
           [
-            "divide_by_ten_1dp_if_required"
+            "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Explosion radius is {0} metre",
+        "string": "Core duration is {0} second",
         "reminder_text": null,
         "is_markup": null
       },
@@ -72,16 +124,54 @@
         ],
         "index_handlers": [
           [
-            "divide_by_ten_1dp_if_required"
+            "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Explosion radius is {0} metres",
+        "string": "Core duration is {0} seconds",
         "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
-      "active_skill_base_area_of_effect_radius"
+      "base_skill_effect_duration"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Core duration@{0}s",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "skill_effect_duration"
     ],
     "trade_stats": null,
     "hidden": null,

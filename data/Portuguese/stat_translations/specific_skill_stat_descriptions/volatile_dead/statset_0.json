@@ -2,7 +2,7 @@
   {
     "English": null,
     "ids": [
-      "active_skill_area_of_effect_radius"
+      "volatile_dead_base_number_of_corpses_to_consume"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -14,7 +14,61 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Consome {0} [Corpse|cadáver]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Consome {0} [Corpse|cadáveres]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Consome até {0} [Corpse|cadáver]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
             "max": null,
             "negated": null
           }
@@ -23,11 +77,9 @@
           "#"
         ],
         "index_handlers": [
-          [
-            "divide_by_ten_1dp_if_required"
-          ]
+          []
         ],
-        "string": "Raio da explosão@{0} m",
+        "string": "Consome até {0} [Corpse|cadáveres]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40,7 +92,7 @@
   {
     "English": null,
     "ids": [
-      "active_skill_base_area_of_effect_radius"
+      "base_skill_effect_duration"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -52,8 +104,8 @@
       {
         "condition": [
           {
-            "min": 10,
-            "max": 10,
+            "min": 1000,
+            "max": 1000,
             "negated": null
           }
         ],
@@ -62,10 +114,10 @@
         ],
         "index_handlers": [
           [
-            "divide_by_ten_1dp_if_required"
+            "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Raio da explosão: {0} metro",
+        "string": "Núcleo dura {0} segundo",
         "reminder_text": null,
         "is_markup": null
       },
@@ -82,10 +134,48 @@
         ],
         "index_handlers": [
           [
-            "divide_by_ten_1dp_if_required"
+            "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Raio da explosão: {0} metros",
+        "string": "Núcleo dura {0} segundos",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_effect_duration"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Duração do núcleo@{0} s",
         "reminder_text": null,
         "is_markup": null
       }

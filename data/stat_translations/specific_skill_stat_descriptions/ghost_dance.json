@@ -4,6 +4,26 @@
       {
         "condition": [
           {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Gain a Ghost Shroud every second",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": null,
             "max": null,
             "negated": null
@@ -17,13 +37,13 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "{0} second duration between gaining Ghost Shrouds",
+        "string": "Gain a Ghost Shroud every {0} seconds",
         "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
-      "base_skill_effect_duration"
+      "base_cooldown_modifiable_repeat_interval_ms"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -48,18 +68,18 @@
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
           []
         ],
-        "string": "[EnergyShield|Energy Shield] recovered@{0}",
+        "string": "Modifiers to Cooldown Recovery Rate also apply to\nGhost Shroud gain frequency",
         "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
-      "display_skill_ghost_dance_grants_energy_shield_when_hit"
+      "cooldown_recovery_modifiers_also_apply_to_repeat_interval"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -117,54 +137,23 @@
             "min": null,
             "max": null,
             "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
           }
         ],
         "format": [
-          "+#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
-          [],
-          []
+          [
+            "per_minute_to_per_second_2dp_if_required"
+          ]
         ],
-        "string": "Ghost Shrouds recover [EnergyShield|Energy Shield] equal to {0}% of your [Evasion]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "When [HitDamage|Hit], [Consume] a Ghost Shroud to\nrecover [EnergyShield|Energy Shield] equal to {0}% of your [Evasion]",
+        "string": "When [HitDamage|Hit], lose a Ghost Shroud \nRegenerate [EnergyShield|Energy Shield] equal to {0}% of your [Evasion|Evasion Rating] per second if you have lost a Ghost Shroud [Recently]",
         "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
-      "skill_base_ghost_dance_grants_%_evasion_as_energy_shield_when_hit",
-      "quality_display_ghost_dance_is_gem"
+      "skill_base_ghost_dance_grants_%_evasion_as_es_regeneration_per_minute_if_have_lost_ghost_dance_shroud_recently"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -196,13 +185,13 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Duration between Ghost Shrouds@{0}s",
+        "string": "Interval between Ghost Shrouds@{0}s",
         "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
-      "skill_effect_duration"
+      "virtual_cooldown_modifiable_repeat_interval_ms"
     ],
     "trade_stats": null,
     "hidden": null,

@@ -844,7 +844,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -867,7 +867,8 @@
     "English": null,
     "ids": [
       "thorns_minimum_lightning_damage",
-      "thorns_maximum_lightning_damage"
+      "thorns_maximum_lightning_damage",
+      "thorns_lightning_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -888,20 +889,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "[Lightning|閃電][Thorns|荊棘]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Lightning|閃電][Thorns|荊棘]傷害@{0} 或 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -932,7 +972,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }

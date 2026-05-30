@@ -839,7 +839,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -867,7 +867,8 @@
     "English": null,
     "ids": [
       "thorns_minimum_lightning_damage",
-      "thorns_maximum_lightning_damage"
+      "thorns_maximum_lightning_damage",
+      "thorns_lightning_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -883,20 +884,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [],
+          [],
           []
         ],
-        "string": "[Lightning|번개] [Thorns|가시] 피해@{0}~{1}",
+        "string": "[Lightning|번개] [Thorns|가시] 피해@{0} - {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Lightning|번개] [Thorns|가시] 피해@{0} 또는 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -927,7 +967,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }

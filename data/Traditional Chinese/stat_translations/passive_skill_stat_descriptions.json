@@ -761,7 +761,7 @@
         "index_handlers": [
           []
         ],
-        "string": "將所有[EnergyShield|能量護盾][StatConversion|轉換]為魔力\n魔力消耗變為兩倍",
+        "string": "將100%的最大[EnergyShield|能量護盾][StatConversion|轉換]為最大魔力\n魔力消耗加倍",
         "reminder_text": null,
         "is_markup": null
       }
@@ -797,7 +797,7 @@
         "index_handlers": [
           []
         ],
-        "string": "移除最大召喚 [Totem|圖騰]上限\n每根圖騰保留75 [Spirit|精魂]",
+        "string": "Your [Totem] [Limit] is doubled\nNo [Charges|Charge] requirement for placing [Totem|Totems]\n[Totem|Totems] reserve 75 [Spirit] each",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1229,7 +1229,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[LifeLeech|生命偷取]變為立即生效\n無法使用生命[Flask|藥劑]",
+        "string": "50%更多[LifeLeech|生命偷取]量\n67%更少[LifeLeech|生命偷取]速度\n無法以[LifeLeech|偷取]以外的方式回復生命\n[LifeLeech|生命偷取]效果不會於[Reservation|未保留]生命全滿時移除",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1822,7 +1822,7 @@
         "index_handlers": [
           []
         ],
-        "string": "可以從決鬥者的起點配置天賦",
+        "string": "可以從傭兵的起點配置天賦",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1840,7 +1840,7 @@
         "index_handlers": [
           []
         ],
-        "string": "可以從聖宗的起點配置天賦",
+        "string": "可以從聖堂武僧的起點配置天賦",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2006,7 +2006,7 @@
         "index_handlers": [
           []
         ],
-        "string": "每消耗 4% 生命獲得 {0} 生命[Flask|藥劑]充能",
+        "string": "每消耗 2% 生命獲得 {0} 生命[Flask|藥劑]充能",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2024,7 +2024,7 @@
         "index_handlers": [
           []
         ],
-        "string": "每消耗 4% 生命獲得 {0} 生命[Flask|藥劑]充能",
+        "string": "每消耗 2% 生命獲得 {0} 生命[Flask|藥劑]充能",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2033,7 +2033,7 @@
   {
     "English": null,
     "ids": [
-      "global_defences_+%"
+      "global_armour_evasion_energy_shield_+%"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2060,7 +2060,7 @@
         "index_handlers": [
           []
         ],
-        "string": "增加{0}%[Defences|全域防禦]",
+        "string": "增加{0}%[Armour|護甲]、[Evasion|閃避]、和[EnergyShield|能量護盾]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2080,7 +2080,7 @@
             "negate"
           ]
         ],
-        "string": "減少{0}%[Defences|全域防禦]",
+        "string": "減少{0}%[Armour|護甲]、[Evasion|閃避]、和[EnergyShield|能量護盾]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2283,42 +2283,6 @@
           []
         ],
         "string": "你對[Pinned|釘身]的敵人造成的[Bleeding|流血]會[Aggravate|加劇]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "apply_X_critical_weakness_on_consuming_mark"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "對敵人[Consume|消耗][Mark|印記]時，施加 {0} 層[CriticalWeakness|暴擊弱點]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2539,6 +2503,42 @@
           []
         ],
         "string": "賦予[ThaumaturgicalDynamism|奇術活力]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_gemling_enable_thaumaturgy_quality_stats"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "寶石[Quality|品質]會賦予插槽中技能一個額外效果",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2875,6 +2875,78 @@
   {
     "English": null,
     "ids": [
+      "ascendancy_spell_deja_vu_skill_echo_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Cascadable|可爆發]的[Spell|法術]有{0}%機率[Cascadable|迴響]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_spell_deja_vu_spell_%_chance_to_reoccur_an_additional_time"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Repeat|可重複]的[Spell|法術]有{0}%機率[Repeat|重複]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "ascendancy_tactician_suppressing_fire_hit_damage_immobilisation_multiplier_+%_final"
     ],
     "trade_stats": null,
@@ -2949,7 +3021,7 @@
   {
     "English": null,
     "ids": [
-      "ascendancy_vivid_stag_minimum_stag_wisp_count"
+      "ascendancy_whispers_of_the_flesh_cursed_enemies_have_at_least_life_reserved_%"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2965,25 +3037,7 @@
       {
         "condition": [
           {
-            "min": 2,
-            "max": 2,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT-UNUSED] Minimum {0} Vivid Stag Wisp",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -2994,7 +3048,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] Minimum {0} Vivid Stag Wisps",
+        "string": "被你[Curse|詛咒]的目標有至少{0}%生命[Reservation|保留]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3142,7 +3196,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "在生命[Flask|藥劑]充能全滿時[HitDamage|擊中]敵人，消耗其 {0}% 充能\n每以此方式消耗 1 充能，[Gain|獲得]相當於 {1}% 傷害的[Physical|物理]傷害 {2} 秒",
+        "string": "在生命[Flask|藥劑]充能全滿時[HitDamage|擊中]敵人，消耗其 {0}% 充能\n每以此方式消耗 1 充能，[Gain|獲得]等同於 {1}% 傷害的[Physical|物理]傷害 {2} 秒",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3176,7 +3230,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "在生命[Flask|藥劑]充能全滿時[HitDamage|擊中]敵人，消耗其 {0}% 充能\n每以此方式消耗 1 充能，[Gain|獲得]相當於 {1}% 傷害的[Physical|物理]傷害 {2} 秒",
+        "string": "在生命[Flask|藥劑]充能全滿時[HitDamage|擊中]敵人，消耗其 {0}% 充能\n每以此方式消耗 1 充能，[Gain|獲得]等同於 {1}% 傷害的[Physical|物理]傷害 {2} 秒",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3248,7 +3302,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] Any [Attack] [HitDamage|Hit] can gain [Combo]",
+        "string": "從所有[Attack|攻擊][HitDamage|擊中]中獲得[Combo|連擊]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3482,7 +3536,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] {0}% chance to generate an Owl Feather on [Critical|Critical Hit]",
+        "string": "[Critical|暴擊]時有{0}%機率獲得一片貓頭鷹羽毛",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3583,6 +3637,62 @@
   {
     "English": null,
     "ids": [
+      "chronomancer_damage_taken_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "承受{0}%更多傷害",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "承受{0}%更少傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "chronomancer_grant_cast_speed_+%",
       "chronomancer_grant_area_of_effect_+%"
     ],
@@ -3627,7 +3737,7 @@
   {
     "English": null,
     "ids": [
-      "companion_damage_+%_per_socketed_talisman"
+      "chronomancer_take_%_of_hit_damage_4_seconds_after_being_hit"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -3654,27 +3764,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] [Companion|Companions] deal {0}% increased Damage per socketed Talisman",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[DNT-UNUSED] [Companion|Companions] deal {0}% reduced Damage per socketed Talisman",
+        "string": "在被敵人[HitDamage|擊中]並受傷的4秒後，承受等同於{0}%該次[HitDamage|擊中]的傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3863,42 +3953,6 @@
   {
     "English": null,
     "ids": [
-      "cursed_enemies_have_life_reserved_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "被你[Curse|詛咒]的目標有至少{0}%生命[Reservation|保留]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "damage_taken_from_hits_is_unlucky"
     ],
     "trade_stats": null,
@@ -3998,7 +4052,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] Enable Living Bomb",
+        "string": "[DNT-UNUSED] 啟用活體炸彈",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4070,7 +4124,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] Enable Explosive Teleport",
+        "string": "[DNT-UNUSED] 啟用爆破性傳送",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4106,7 +4160,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] Enable Hand Slam",
+        "string": "[DNT-UNUSED] 啟用巨掌拍擊",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4142,7 +4196,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] Enable Knife Toss",
+        "string": "[DNT-UNUSED] 啟用利刃飛擲",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4178,7 +4232,7 @@
         "index_handlers": [
           []
         ],
-        "string": "能力值天賦點改為賦予增加5%傷害\n能力值天賦點改為賦予增加5%[Defences|全域防禦]\n能力值天賦點改為賦予增加5%消耗[Efficiency|效率]",
+        "string": "能力值天賦改為賦予增加5%傷害\n能力值天賦改為賦予增加5%[Armour|護甲]、[Evasion|閃避]、和[EnergyShield|能量護盾]\n能力值天賦改為賦予增加5%消耗[Efficiency|效率]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4780,7 +4834,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你可以擁有兩種不同類型的[Companion|盟友]\n你有 30% 更少[Defences|防禦]\n你每擁有 2 點某項[Defences|防禦]，都會使你的[Companion|盟友]的該項[Defences|防禦]得到 +1",
+        "string": "你可以擁有兩種不同種類的[Companion|盟友]\n[Companion|盟友]技能擁有30%更多[Reservation|保留][Efficiency|效率]\n20%更少非[Companion|盟友]技能的[Reservation|保留][Efficiency|效率]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5268,7 +5322,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] {0} to maximum Mana per fifty [ItemDefences|Item Evasion Rating] on [EquipArmour|Equipped Armour Items]",
+        "string": "[DNT-UNUSED] {0} to maximum Mana per fifty [ItemEvasion|Item Evasion] on [EquipArmour|Equipped Armour Items]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5396,7 +5450,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] [Attack|Attacks] [Empowered] by Owl Feathers have {0}% more [CriticalDamageBonus|Critical Damage Bonus]",
+        "string": "受貓頭鷹羽毛[Empowered|強化]的[Attack|攻擊]，擁有{0}%更多[CriticalDamageBonus|暴擊傷害加成]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6188,7 +6242,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] [Freeze] you inflict has up to {0}% increased duration, at random",
+        "string": "你施加的[Freeze|冰凍]隨機增加最多{0}%的持續時間",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6247,98 +6301,6 @@
           ]
         ],
         "string": "你創造的[Remnant|痕跡]在撿拾後 {0} 秒會再出現一次",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "reservation_efficiency_+%_of_skills_per_socketed_talisman"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT-UNUSED] Skills have {0}% increased [Reservation] efficiency per socketed Talisman",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[DNT-UNUSED] Skills have {0}% reduced [Reservation] efficiency per socketed Talisman",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "resist_all_elements_%_per_socketed_rune"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT-UNUSED] {0}% to all [ElementalDamage|Elemental Resistances] per socketed Rune",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6466,7 +6428,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] {0}% increased cost of Skills per socketed Soul Core",
+        "string": "你裝備中每有一個[SoulCore|靈魂核心]，增加{0}%技能消耗",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6486,7 +6448,7 @@
             "negate"
           ]
         ],
-        "string": "[DNT-UNUSED] {0}% reduced cost of Skills per socketed Soul Core",
+        "string": "你裝備中每有一個[SoulCore|靈魂核心]，減少{0}%技能消耗",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6663,100 +6625,6 @@
   {
     "English": null,
     "ids": [
-      "tame_beast_can_target_unique_beasts"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT-UNUSED] Tame Beast can target Unique Beasts\nYou can summon Tamed Unique Beasts",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "tamed_beasts_randomly_possessed_every_x_ms"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[DNT-UNUSED] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} second",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[DNT-UNUSED] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} seconds",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "unlimited_banners_allowed"
     ],
     "trade_stats": null,
@@ -6829,7 +6697,7 @@
   {
     "English": null,
     "ids": [
-      "weapon_damage_%_granted_to_companions_in_presence"
+      "weapon_damage_%_granted_to_companions"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -6856,7 +6724,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] {0}% of Main Hand Weapon Damage granted as Added Attack Damage to your [Companion|Companions] in your [Presence]",
+        "string": "[Companion|盟友]造成等同於{0}%你主手武器傷害的額外[Attack|攻擊]傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7846,7 +7714,7 @@
         "index_handlers": [
           []
         ],
-        "string": "兩個手部欄位皆無武器時，可視為使用[Quarterstaff|細杖]進行[Attack|攻擊]\n本該使用你的[Quarterstaff|細杖]傷害的空手[Attack|攻擊]會獲得：\n• 依據技能等級的[Physical|物理]傷害\n• [EquipArmour|裝備的護甲物品]每具有 75 [ItemDefences|物品閃避值]便有 1% 更多[Attack|攻擊]速度\n• [EquipArmour|裝備的護甲物品]每具有 10 [ItemDefences|物品能量護盾]便 +0.1% [Critical|暴擊率]",
+        "string": "當你的雙手欄位為空時，可視同使用[Quarterstaff|長杖]進行[Attack|攻擊]\n會使用[Equipped|裝備][Quarterstaff|長杖]傷害的[UnarmedAttack|空手攻擊]獲得：\n• 基礎[UnarmedDamage|空手][Physical|物理]傷害改為基於技能等級的傷害\n• [EquipArmour|裝備中的護甲物品]每有 75 [ItemDefences|物品閃避值]，1% 更多[Attack|攻擊]速度\n• [EquipArmour|裝備中的護甲物品]每有 10 [ItemDefences|物品能量護盾]，+0.1% [Critical|暴擊率]",
         "reminder_text": null,
         "is_markup": null
       }

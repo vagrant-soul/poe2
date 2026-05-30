@@ -214,6 +214,50 @@
   {
     "English": null,
     "ids": [
+      "off_hand_weapon_minimum_fire_damage",
+      "off_hand_weapon_maximum_fire_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "{0}から{1}の基礎オフハンド[Fire|火]ダメージ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "off_hand_base_weapon_attack_duration_ms"
     ],
     "trade_stats": null,
@@ -238,6 +282,50 @@
           ]
         ],
         "string": "オフハンドの基礎[Attack|アタック]タイムは{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "off_hand_weapon_minimum_cold_damage",
+      "off_hand_weapon_maximum_cold_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "{0}から{1}の基礎オフハンド[Colf|冷気]ダメージを与える",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1378,60 +1466,6 @@
   {
     "English": null,
     "ids": [
-      "base_spell_repeat_count"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "スペルは1回繰り返す",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "スペルは{0}回繰り返す",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "base_number_of_golems_allowed"
     ],
     "trade_stats": null,
@@ -1748,60 +1782,6 @@
           []
         ],
         "string": "キャストスピードの増減はこのスキルのアクティベート頻度にも適用される",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "base_melee_attack_repeat_count"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "この[Attack|アタック]は{0}回繰り返す",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "この[Attack|アタック]は{0}回繰り返す",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2392,6 +2372,44 @@
     "French": null,
     "German": null,
     "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Physical|物理]ダメージの{0}%を[Lightning|雷]ダメージに[Conversion|変換]する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Physical|物理]ダメージの-{0}%を[Lightning|雷]ダメージに[Conversion|変換]する",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -5220,6 +5238,42 @@
   {
     "English": null,
     "ids": [
+      "base_modifiers_to_number_of_projectiles_instead_apply_to_repeats"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "投射物の数のモッドは代わりにこのスキルの[Repeat|繰り返す]回数に適用される",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_number_of_arrows"
     ],
     "trade_stats": null,
@@ -5350,6 +5404,60 @@
           []
         ],
         "string": "浄化のセンチネル最大召喚数{0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_fissures"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}個の亀裂を生成する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}個の亀裂を生成する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5954,6 +6062,42 @@
           ]
         ],
         "string": "効果範囲が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_skill_cannot_generate_energy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "このスキルは[Meta|メタ]スキルに[Energy|エネルギー]を生成させられない",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12006,6 +12150,42 @@
   {
     "English": null,
     "ids": [
+      "modifiers_to_number_of_projectiles_instead_apply_to_number_of_targets_projectile_pierces"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Projectiles|投射物]の数のモッドは代わりに[Pierce|貫通]する対象の数に適用される",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "modifiers_to_number_of_projectiles_instead_apply_to_splitting"
     ],
     "trade_stats": null,
@@ -12028,42 +12208,6 @@
           []
         ],
         "string": "投射物の数のモッドは投射物の数ではなく\n投射物が分裂して向かう敵の数に適用される",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "modifiers_to_projectile_count_do_not_apply"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "投射物の数は改変できない",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12273,12 +12417,12 @@
           }
         ],
         "format": [
-          "ignore"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "追加で1回連鎖する",
+        "string": "{0}回連鎖する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12291,12 +12435,12 @@
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "追加で{0}回連鎖する",
+        "string": "{0}回連鎖する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12563,7 +12707,7 @@
   {
     "English": null,
     "ids": [
-      "number_of_projectiles_to_fire_+%_final_per_steel_ammo_consumed"
+      "number_of_projectiles_cannot_be_modified"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -12574,37 +12718,17 @@
         "condition": [
           {
             "min": 1,
-            "max": null,
+            "max": 1,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
           []
         ],
-        "string": "消費したスティールシャード1個ごとに放つ[Projectile|投射物]が{0}%上昇する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "消費したスティールシャード1個ごとに放つ[Projectile|投射物]が{0}%低下する",
+        "string": "[Projectile|投射物]の数は変更できない",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12747,50 +12871,6 @@
           []
         ],
         "string": "[Shield|盾]の[Armour|アーマー]5ごとに{0}から{1}の追加[Physical|物理]ダメージ",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "off_hand_weapon_minimum_fire_damage",
-      "off_hand_weapon_maximum_fire_damage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "#"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "{0}から{1}の基礎オフハンド[Fire|火]ダメージ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13217,60 +13297,6 @@
   {
     "English": null,
     "ids": [
-      "primary_projectile_chains_+"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "メインの投射物は{0}回連鎖する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "メインの投射物は{0}回連鎖する",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "prismatic_rain_beam_base_frequency_ms"
     ],
     "trade_stats": null,
@@ -13345,12 +13371,12 @@
           }
         ],
         "format": [
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "[HitDamage|ヒット]した最初の対象1体を[Pierce|貫通]する",
+        "string": "{0}体の対象を[Pierce|貫通]する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -13368,7 +13394,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[HitDamage|ヒット]した最初の対象{0}体を[Pierce|貫通]する",
+        "string": "{0}体の対象を[Pierce|貫通]する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13449,18 +13475,36 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "投射物は{0}体の対象に向けて分裂する",
+        "string": "投射物は{0}体の対象に対して分裂する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "投射物は{0}体の対象に対して分裂する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14589,6 +14633,42 @@
           ]
         ],
         "string": "スペルダメージが{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "spirit_vessel_damage_+%_final_per_skill_socketed_in_meta_gem"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "スプリットヴェセルは異なる種類のソケットされたスキルの数ごとにダメージが{0}%上昇する",
         "reminder_text": null,
         "is_markup": null
       }

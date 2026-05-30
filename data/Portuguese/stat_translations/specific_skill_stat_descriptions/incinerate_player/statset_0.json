@@ -27,7 +27,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "Largura do Cone@{0}m",
+        "string": "Extensão do cone@{0} m",
         "reminder_text": null,
         "is_markup": null
       }
@@ -65,7 +65,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "Cone se extende por {0} metro",
+        "string": "Extensão do cone: {0} metro",
         "reminder_text": null,
         "is_markup": null
       },
@@ -85,7 +85,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "Cone se extende por {0} metros",
+        "string": "Extensão do cone: {0} metros",
         "reminder_text": null,
         "is_markup": null
       }
@@ -197,7 +197,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[Exposure|Exposição a Fogo] dura {0} segundo",
+        "string": "[Exposure|Exposição ao Fogo] dura {0} segundo",
         "reminder_text": null,
         "is_markup": null
       },
@@ -217,7 +217,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[Exposure|Exposição a Fogo] dura {0} segundos",
+        "string": "[Exposure|Exposição ao Fogo] dura {0} segundos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -354,6 +354,26 @@
       {
         "condition": [
           {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Pode guardar até {0} segundo de combustível",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": null,
             "max": null,
             "negated": null
@@ -411,7 +431,7 @@
           [],
           []
         ],
-        "string": "[Exposure|Exposição a Fogo] infligida no estágio máximo (máximo)@{0}% ({1}%)",
+        "string": "[Exposure|Exposição ao Fogo] infligida nos estágios máximos (máximo)@{0}% ({1}%)",
         "reminder_text": null,
         "is_markup": null
       },
@@ -436,7 +456,7 @@
           [],
           []
         ],
-        "string": "Inflige [Exposure|Exposição a Fogo] cumulativa no estágio máximo, reduzindo a [Resistances|Resistência a Fogo] em {0}% por contador, máximo de {1}%",
+        "string": "Inflige [Exposure|Exposição ao Fogo] cumulativa nos estágios máximos, reduzindo a [Resistances|resistência a dano de fogo] em {0}% por instância, até {1}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -474,7 +494,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Duração da [Exposure|Fire Exposure]@{0}s",
+        "string": "Duração da [Exposure|Exposição ao Fogo]@{0} s",
         "reminder_text": null,
         "is_markup": null
       }

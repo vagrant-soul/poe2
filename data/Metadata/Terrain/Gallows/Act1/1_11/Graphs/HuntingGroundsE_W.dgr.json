@@ -7,7 +7,7 @@
     ],
     "MasterFile": "Metadata/Terrain/Gallows/Act1/1_11/master.tsi"
   },
-  "edge_count": 18,
+  "edge_count": 19,
   "edge_types": {
     "Metadata/Terrain/Woods/Cliff/woods_cliff.et": {
       "id": "WoodsCliff",
@@ -24,6 +24,10 @@
     "Metadata/Terrain/Woods/Road/road_fields.et": {
       "id": "RoadFields",
       "color": "#ff818fd5"
+    },
+    "Metadata/Terrain/Tools/void.et": {
+      "id": "void",
+      "color": "#FF141414"
     }
   },
   "edges": [
@@ -458,6 +462,30 @@
       ],
       "edge_type": "Metadata/Terrain/Woods/Cliff/woods_cliff.et",
       "color": "#ffff4d00"
+    },
+    {
+      "from_": 14,
+      "to": 15,
+      "path": [],
+      "unknown": [
+        100,
+        0,
+        0,
+        "Metadata/Terrain/Tools/void.et",
+        0,
+        0,
+        0,
+        "",
+        0,
+        "",
+        0,
+        0,
+        "P",
+        "V",
+        1
+      ],
+      "edge_type": "Metadata/Terrain/Tools/void.et",
+      "color": "#FF141414"
     }
   ],
   "fill_tiles": [
@@ -943,7 +971,7 @@
     "Critters": "critters.clt",
     "FileGroups": null
   },
-  "node_count": 14,
+  "node_count": 16,
   "numbers": [
     0
   ],
@@ -983,7 +1011,7 @@
         "entrance2",
         "killzone=4"
       ],
-      "transform": "FR90",
+      "transform": "R90",
       "unknown": [
         100,
         1,
@@ -998,7 +1026,7 @@
         0
       ],
       "x": 35,
-      "y": 196
+      "y": 150
     },
     {
       "numbers": [
@@ -1076,7 +1104,7 @@
         0
       ],
       "x": 81,
-      "y": 127
+      "y": 104
     },
     {
       "numbers": [
@@ -1129,14 +1157,14 @@
     },
     {
       "numbers": [
+        5,
         6,
         10,
-        3,
-        5
+        3
       ],
-      "room": "",
+      "room": "post_up",
       "strings": [],
-      "transform": "(any)",
+      "transform": "FI",
       "unknown": [
         100,
         0,
@@ -1175,12 +1203,12 @@
         0
       ],
       "x": 104,
-      "y": 104
+      "y": 127
     },
     {
       "numbers": [
-        7,
-        12
+        12,
+        7
       ],
       "room": "ritual_ledge_cc",
       "strings": [],
@@ -1233,9 +1261,9 @@
         13,
         10
       ],
-      "room": "",
+      "room": "post_down",
       "strings": [],
-      "transform": "(any)",
+      "transform": "I",
       "unknown": [
         100,
         0,
@@ -1300,6 +1328,52 @@
       ],
       "x": 81,
       "y": 219
+    },
+    {
+      "numbers": [
+        18
+      ],
+      "room": "",
+      "strings": [],
+      "transform": "(best)",
+      "unknown": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        "V",
+        0
+      ],
+      "x": 219,
+      "y": 58
+    },
+    {
+      "numbers": [
+        18
+      ],
+      "room": "",
+      "strings": [],
+      "transform": "(best)",
+      "unknown": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        "V",
+        0
+      ],
+      "x": 219,
+      "y": 12
     }
   ],
   "room_set": [
@@ -1333,7 +1407,26 @@
     {
       "file": "Metadata/Terrain/Gallows/Act1/1_11/Rooms/Entrance_VillageRoad_1.arm",
       "prefix": null,
-      "suffix": null,
+      "suffix": [
+        "I",
+        "R90",
+        "R180",
+        "R270"
+      ],
+      "tile_tag": null,
+      "room_tag": "entrance_villageroad",
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Gallows/Act1/1_11/Rooms/Entrance_VillageRoad_2.arm",
+      "prefix": null,
+      "suffix": [
+        "FI",
+        "FR90",
+        "FR180",
+        "FR270"
+      ],
       "tile_tag": null,
       "room_tag": "entrance_villageroad",
       "tile_tgt": null,
@@ -1435,6 +1528,52 @@
       "suffix": null,
       "tile_tag": null,
       "room_tag": "special2",
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Gallows/Act1/1_11/Rooms/expedition_rune_01.arm",
+      "prefix": null,
+      "suffix": [
+        "I",
+        "R90",
+        "R180",
+        "R270"
+      ],
+      "tile_tag": null,
+      "room_tag": "Runestones",
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Gallows/Act1/1_11/Rooms/expedition_rune_flipped_01.arm",
+      "prefix": null,
+      "suffix": [
+        "FI",
+        "FR90",
+        "FR180",
+        "FR270"
+      ],
+      "tile_tag": null,
+      "room_tag": "Runestones",
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Gallows/Act1/1_11/Rooms/DeadBull_01.arm",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": "special3",
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Gallows/Act1/1_11/Rooms/DeadBull_02.arm",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": "special4",
       "tile_tgt": null,
       "tile_parent": null
     },
@@ -1729,6 +1868,15 @@
       "tile_parent": null
     },
     {
+      "file": "Metadata/Terrain/Gallows/Act1/1_11/Rooms/CliffRoad/CliffRoad_St_Signpost_01.arm",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": "post",
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
       "file": "Metadata/Terrain/Gallows/Act1/1_11/Rooms/CliffRoad/CliffRoad_ToCliff_Cv_01.arm",
       "prefix": null,
       "suffix": null,
@@ -1945,6 +2093,33 @@
       "tile_parent": null
     },
     {
+      "file": "Metadata/Terrain/Gallows/Act1/1_11/Rooms/Road/Road_Cnr_Signpost_01.arm",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": "post_cnr",
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Gallows/Act1/1_11/Rooms/Road/Road_Cnr_Signpost_02.arm",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": "post_cnr",
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Gallows/Act1/1_11/Rooms/Road/Road_Cnr_Signpost_03.arm",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": "post_cnr",
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
       "file": "Metadata/Terrain/Gallows/Act1/1_11/Rooms/Road/Road_End_01.arm",
       "prefix": null,
       "suffix": null,
@@ -2006,10 +2181,46 @@
       "room_tag": null,
       "tile_tgt": null,
       "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Gallows/Act1/1_11/Rooms/Road/Road_St_Ledge_Signpost_Downhill.arm",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": "post_down",
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Gallows/Act1/1_11/Rooms/Road/Road_St_Ledge_Signpost_Uphill.arm",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": "post_up",
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Gallows/Act1/1_11/Rooms/Road/Road_St_Signpost_01.arm",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": "post",
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Gallows/Act1/1_11/Rooms/Road/Road_St_Signpost_02.arm",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": "post",
+      "tile_tgt": null,
+      "tile_parent": null
     }
   ],
   "size": [
-    11,
+    12,
     11
   ],
   "strings": [
@@ -2145,6 +2356,20 @@
       "tile_tag": "ritual_site",
       "room_tag": null,
       "tile_tgt": "Art/Models/Terrain/Woods/Tiles/HuntingGrounds/RitualClearing01.tgt",
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Leagues/Expedition/Tiles/CampaignRunes/HuntingGrounds_Runestones.tdt",
+      "prefix": null,
+      "suffix": [
+        "I",
+        "R90",
+        "R180",
+        "R270"
+      ],
+      "tile_tag": "Runestones",
+      "room_tag": null,
+      "tile_tgt": "Art/Models/Terrain/Leagues/Expedition/CampaignRunes/HuntingGrounds_Runestones.tgt",
       "tile_parent": null
     },
     {

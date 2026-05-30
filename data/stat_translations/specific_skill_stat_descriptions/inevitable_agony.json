@@ -17,7 +17,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "[Curse] radius@{0}m",
+        "string": "Initial cast radius@{0}m",
         "reminder_text": null,
         "is_markup": null
       }
@@ -42,6 +42,26 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "+{0} Metres to initial cast radius",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 10,
             "max": 10,
             "negated": null
@@ -55,7 +75,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "[Curse] radius is {0} metre",
+        "string": "Initial cast radius is {0} metre",
         "reminder_text": null,
         "is_markup": null
       },
@@ -75,7 +95,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "[Curse] radius is {0} metres",
+        "string": "Initial cast radius is {0} metres",
         "reminder_text": null,
         "is_markup": null
       }
@@ -113,7 +133,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[Curse] duration is {0} second",
+        "string": "[Debuff] duration is {0} second",
         "reminder_text": null,
         "is_markup": null
       },
@@ -133,7 +153,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[Curse] duration is {0} seconds",
+        "string": "[Debuff] duration is {0} seconds",
         "reminder_text": null,
         "is_markup": null
       }
@@ -169,7 +189,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Curse|Cursed] targets take {0}% of [HitDamage|Hit Damage] dealt to them while [Curse|Cursed] again when [Curse] expires\nTaking [HitDamage|Damage] again this way cannot inflict Ailments on the [Curse|Cursed] target",
+        "string": "[Debuff|Debuffed] targets [LifeLoss|lose life] equal to {0}% of [HitDamage|Hit Damage] dealt to them while [Debuff|Debuffed] when [Debuff] expires\n [CullingStrike|Culls] enemies if [Debuff] reaches [CullingStrike|Culling Strike] Threshold",
         "reminder_text": null,
         "is_markup": null
       }
@@ -205,7 +225,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Damage tracked by [Curse]@{0}%",
+        "string": "Damage tracked by [Debuff]@{0}%",
         "reminder_text": null,
         "is_markup": null
       }

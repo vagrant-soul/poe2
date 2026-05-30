@@ -758,7 +758,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[StatConversion|Преобразует] весь [EnergyShield|энергетический щит] в ману\nУдваивает расход маны",
+        "string": "[StatConversion|Преобразует] 100% от максимума [EnergyShield|энергетического щита] в максимум маны\nЗатраты маны удвоены",
         "reminder_text": null,
         "is_markup": null
       }
@@ -794,7 +794,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Неограниченное количество устанавливаемых [Totem|тотемов]\nКаждый тотем удерживает 75 [Spirit|духа]",
+        "string": "Ваш [Limit|лимит] [Totem|тотемов] удвоен\nРазмещение [Totem|тотемов] не требует [Charges|зарядов]\nКаждый [Totem|тотем] удерживает 75 [Spirit|духа]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1226,7 +1226,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[LifeLeech|Похищение здоровья] происходит мгновенно\nНельзя использовать [Flask|флаконы] здоровья",
+        "string": "На 50% больше количества [LifeLeech|похищаемого здоровья]\n[LifeLeech|Похищение здоровья] происходит на 67% медленнее\nВы можете восстанавливать здоровье только с помощью [LifeLeech|похищения]\nЭффекты [LifeLeech|похищения здоровья] не удаляются при заполнении [Reservation|неудержанного] здоровья",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2003,7 +2003,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Дарует {0} заряд [Flask|флакона] здоровья за каждые 4% потраченного здоровья",
+        "string": "Дарует {0} заряд [Flask|флакона] здоровья за каждые 2% потраченного здоровья",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2021,7 +2021,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Дарует {0} заряда [Flask|флакона] здоровья за каждые 4% потраченного здоровья",
+        "string": "Дарует {0} заряда [Flask|флакона] здоровья за каждые 2% потраченного здоровья",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2033,7 +2033,7 @@
   {
     "English": null,
     "ids": [
-      "global_defences_+%"
+      "global_armour_evasion_energy_shield_+%"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2057,7 +2057,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% увеличение [Defences|защиты]",
+        "string": "{0}% увеличение [Armour|брони], [Evasion|уклонения] и [EnergyShield|энергетического щита]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2077,7 +2077,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% уменьшение [Defences|защиты]",
+        "string": "{0}% уменьшение [Armour|брони], [Evasion|уклонения] и [EnergyShield|энергетического щита]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2291,42 +2291,6 @@
   {
     "English": null,
     "ids": [
-      "apply_X_critical_weakness_on_consuming_mark"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Накладывает зарядов [CriticalWeakness|критической уязвимости] на врагов при [Consume|поглощении] действующей на них [Mark|метки]: {0}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "arcane_surge_effect_on_self_+%_per_10%_missing_mana"
     ],
     "trade_stats": null,
@@ -2518,6 +2482,42 @@
           []
         ],
         "string": "Дарует [ThaumaturgicalDynamism|Чародейскую динамику]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_gemling_enable_thaumaturgy_quality_stats"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Quality|Качество] камней дарует размещенным умениям дополнительный эффект",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2857,6 +2857,78 @@
   {
     "English": null,
     "ids": [
+      "ascendancy_spell_deja_vu_skill_echo_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Cascadable|Каскадные] [Spell|чары] с {0}% шансом могут [Cascadable|отразиться эхом]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ascendancy_spell_deja_vu_spell_%_chance_to_reoccur_an_additional_time"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Repeat|Повторяемые] [Spell|чары] с {0}% шансом могут [Repeat|повториться]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "ascendancy_tactician_suppressing_fire_hit_damage_immobilisation_multiplier_+%_final"
     ],
     "trade_stats": null,
@@ -2931,7 +3003,7 @@
   {
     "English": null,
     "ids": [
-      "ascendancy_vivid_stag_minimum_stag_wisp_count"
+      "ascendancy_whispers_of_the_flesh_cursed_enemies_have_at_least_life_reserved_%"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2945,24 +3017,6 @@
         "condition": [
           {
             "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT-UNUSED] Minimum {0} Vivid Stag Wisp",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
             "max": null,
             "negated": null
           }
@@ -2973,7 +3027,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] Minimum {0} Vivid Stag Wisps",
+        "string": "У [Curse|проклятых] вами целей [Reservation|удерживается] как минимум {0}% здоровья",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3227,7 +3281,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] Any [Attack] [HitDamage|Hit] can gain [Combo]",
+        "string": "Дарует [Combo|комбо] от всех [HitDamage|ударов] [Attack|атаками]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3461,7 +3515,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] {0}% chance to generate an Owl Feather on [Critical|Critical Hit]",
+        "string": "{0}% шанс получить Совиное перо при нанесении [Critical|критического удара]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3565,6 +3619,62 @@
   {
     "English": null,
     "ids": [
+      "chronomancer_damage_taken_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Получает на {0}% больше урона",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Получает на {0}% меньше урона",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "chronomancer_grant_cast_speed_+%",
       "chronomancer_grant_area_of_effect_+%"
     ],
@@ -3609,7 +3719,7 @@
   {
     "English": null,
     "ids": [
-      "companion_damage_+%_per_socketed_talisman"
+      "chronomancer_take_%_of_hit_damage_4_seconds_after_being_hit"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -3633,27 +3743,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] [Companion|Companions] deal {0}% increased Damage per socketed Talisman",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[DNT-UNUSED] [Companion|Companions] deal {0}% reduced Damage per socketed Talisman",
+        "string": "Через 4 секунды после получения урона от [HitDamage|удара] врага, получает урон в размере {0}% от урона этого [HitDamage|удара]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3834,42 +3924,6 @@
           []
         ],
         "string": "{0}% текущего [EnergyShield|энергетического щита] также даруется в виде уменьшения получаемого [Physical|физического урона]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "cursed_enemies_have_life_reserved_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "У [Curse|проклятых] вами целей [Reservation|удерживается] как минимум {0}% здоровья",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4157,7 +4211,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Пассивные умения с характеристиками вместо этого могут даровать 5% увеличение урона\nПассивные умения с характеристиками вместо этого могут даровать 5% увеличение [Defences|защиты]\nПассивные умения с характеристиками вместо этого могут даровать 5% увеличение [Efficiency|эффективности] расхода ресурсов",
+        "string": "Пассивные умения характеристик теперь вместо это могут даровать 5% увеличение урона\nПассивные умения характеристик теперь вместо это могут даровать 5% увеличение [Armour|брони], [Evasion|уклонения] и [EnergyShield|энергетического щита]\nПассивные умения характеристик теперь вместо это могут даровать 5% увеличение [Efficiency|эффективности] расхода ресурсов",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4759,7 +4813,7 @@
         "index_handlers": [
           []
         ],
-        "string": "У вас может быть два [Companion|компаньона] разных типов\nВы имеете на 30% меньше [Defences|защиты]\n[Companion|Компаньоны] имеют +1 к каждому типу [Defences|защиты] за каждые 2 единицы этого типа [Defences|защиты] у вас",
+        "string": "У вас может быть два [Companion|компаньона] разных типов\nНа 30% больше [Efficiency|эффективности] [Reservation|удержания] ресурсов умениями [Companion|компаньонов]\nНа 20% меньше [Efficiency|эффективности] [Reservation|удержания] ресурсов не относящимисяся к [Companion|компаньонам] умениями",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5247,7 +5301,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] {0} to maximum Mana per fifty [ItemDefences|Item Evasion Rating] on [EquipArmour|Equipped Armour Items]",
+        "string": "[DNT-UNUSED] {0} to maximum Mana per fifty [ItemEvasion|Item Evasion] on [EquipArmour|Equipped Armour Items]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5375,7 +5429,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] [Attack|Attacks] [Empowered] by Owl Feathers have {0}% more [CriticalDamageBonus|Critical Damage Bonus]",
+        "string": "[Empowered|Улучшенные] Совиными перьями [Attack|атаки] имеют на {0}% больше [CriticalDamageBonus|бонуса критического урона]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6237,98 +6291,6 @@
   {
     "English": null,
     "ids": [
-      "reservation_efficiency_+%_of_skills_per_socketed_talisman"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT-UNUSED] Skills have {0}% increased [Reservation] efficiency per socketed Talisman",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[DNT-UNUSED] Skills have {0}% reduced [Reservation] efficiency per socketed Talisman",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "resist_all_elements_%_per_socketed_rune"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT-UNUSED] {0}% to all [ElementalDamage|Elemental Resistances] per socketed Rune",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "sacrificing_energy_shield_does_not_interrupt_recharge"
     ],
     "trade_stats": null,
@@ -6445,7 +6407,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] {0}% increased cost of Skills per socketed Soul Core",
+        "string": "{0}% увеличение расхода ресурсов умениями за каждое [SoulCore|ядро души] в снаряжении",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6465,7 +6427,7 @@
             "negate"
           ]
         ],
-        "string": "[DNT-UNUSED] {0}% reduced cost of Skills per socketed Soul Core",
+        "string": "{0}% уменьшение расхода ресурсов умениями за каждое [SoulCore|ядро души] в снаряжении",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6645,100 +6607,6 @@
   {
     "English": null,
     "ids": [
-      "tame_beast_can_target_unique_beasts"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT-UNUSED] Tame Beast can target Unique Beasts\nYou can summon Tamed Unique Beasts",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "tamed_beasts_randomly_possessed_every_x_ms"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[DNT-UNUSED] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} second",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[DNT-UNUSED] Your Tamed Beasts are possessed by a different random Azmeri Wisp once every {0} seconds",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "unlimited_banners_allowed"
     ],
     "trade_stats": null,
@@ -6811,7 +6679,7 @@
   {
     "English": null,
     "ids": [
-      "weapon_damage_%_granted_to_companions_in_presence"
+      "weapon_damage_%_granted_to_companions"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -6835,7 +6703,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] {0}% of Main Hand Weapon Damage granted as Added Attack Damage to your [Companion|Companions] in your [Presence]",
+        "string": "[Companion|Компаньоны] наносят дополнительный урон [Attack|атаками] в размере {0}% от урона оружием в вашей правой руке",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7825,7 +7693,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Вы можете [Attack|атаковать] как при использовании [Quarterstaff|боевого посоха] пока обе ваши руки свободны\n[Attack|Атаки] без оружия, которые могли бы использовать ваш [Quarterstaff|боевой посох], получают\n• [Physical|Физический] урон в зависимости от уровня их умения\n• На 1% больше скорости атаки за каждые 75 [ItemDefences|уклонения] на [EquipArmour|надетых доспехах]\n• +0.1% к [Critical|шансу критического удара] за каждые 10 [ItemDefences|энергетического щита] на [EquipArmour|надетых доспехах]",
+        "string": "Может [Attack|атаковать] как с [Quarterstaff|боевым посохом] в руках, пока обе ваши руки свободны\n[UnarmedAttack|Атаки без оружия], которые использовали бы урон [Equipped|взятого в руки] [Quarterstaff|боевого посоха] имеют:\n• Базовый [Physical|физический] урон [UnarmedDamage|без оружия] заменяется на урон, основанный на уровне умения\n • На 1% больше скорости [Attack|атаки] за каждые 75 [ItemEvasion|уклонения] на [EquipArmour|надетых доспехах]\n•  +0.1% к [Critical|шансу критического удара] за каждые 10 [ItemEnergyShield|энергетического щита] на [EquipArmour|надетых доспехах]",
         "reminder_text": null,
         "is_markup": null
       }

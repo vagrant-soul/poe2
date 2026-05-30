@@ -141,7 +141,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[ParriedDebuff|Debuff do Aparo] faz com que os alvos sofram {0}% mais Dano de [Attack|Ataques]",
+        "string": "[ParriedDebuff|Penalidade de Aparo] faz com que os alvos sofram +{0}% de dano de [Attack|ataque]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -161,7 +161,7 @@
             "negate"
           ]
         ],
-        "string": "[ParriedDebuff|Debuff do Aparo] faz com que os alvos sofram {0}% menos Dano de [Attack|Ataques]",
+        "string": "[ParriedDebuff|Penalidade de Aparo] faz com que os alvos sofram -{0}% de dano de [Attack|ataque]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -174,8 +174,7 @@
   {
     "English": null,
     "ids": [
-      "base_skill_effect_duration",
-      "quality_display_base_skill_effect_duration_is_gem"
+      "base_parry_duration_ms"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -190,24 +189,17 @@
             "min": null,
             "max": null,
             "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
           }
         ],
         "format": [
-          "+#",
-          "ignore"
+          "+#"
         ],
         "index_handlers": [
           [
             "milliseconds_to_seconds_2dp_if_required"
-          ],
-          []
+          ]
         ],
-        "string": "[Debuff|Debuff] do [ParriedDebuff|Aparo] dura por {0} segundos adicionais",
+        "string": "[Debuff|Penalidade] de [ParriedDebuff|Aparo] dura {0} segundos adicionais",
         "reminder_text": null,
         "is_markup": null
       },
@@ -217,24 +209,17 @@
             "min": 1000,
             "max": 1000,
             "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
           }
         ],
         "format": [
-          "#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           [
             "milliseconds_to_seconds_2dp_if_required"
-          ],
-          []
+          ]
         ],
-        "string": "[Debuff|Debuff] do [ParriedDebuff|Aparo] dura {0} segundo",
+        "string": "[Debuff|Penalidade] de [ParriedDebuff|Aparo] dura {0} segundo",
         "reminder_text": null,
         "is_markup": null
       },
@@ -244,24 +229,17 @@
             "min": null,
             "max": null,
             "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
           }
         ],
         "format": [
-          "#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           [
             "milliseconds_to_seconds_2dp_if_required"
-          ],
-          []
+          ]
         ],
-        "string": "[Debuff|Debuff] do [ParriedDebuff|Aparo] dura {0} segundos",
+        "string": "[Debuff|Penalidade] de [ParriedDebuff|Aparo] dura {0} segundos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -381,7 +359,7 @@
           [],
           []
         ],
-        "string": "{0} a {1} de Dano [Physical|Físico] Adicional por cada 5 de [Evasion|Evasão] no [Buckler|Broquél]",
+        "string": "{0} a {1} de dano [Physical|físico] adicionado por 5 de [Evasion|evasão] no [Buckler|broquel]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -417,7 +395,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Mais dano com [Attack|Ataques] sofrido infligido@{0}%",
+        "string": "Mais dano de [Attack|ataque] sofrido infligido@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -453,7 +431,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Mais dano [Spell|Mágico] sofrido infligido@{0}%",
+        "string": "Mais dano [Spell|mágico] sofrido infligido@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -466,7 +444,7 @@
   {
     "English": null,
     "ids": [
-      "skill_effect_duration"
+      "virtual_parry_duration_ms"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -491,7 +469,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Duração do [ParriedDebuff|Aparo]@{0}s",
+        "string": "Duração do [ParriedDebuff|Aparo]@{0} s",
         "reminder_text": null,
         "is_markup": null
       }

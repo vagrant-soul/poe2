@@ -38,6 +38,42 @@
   {
     "English": null,
     "ids": [
+      "meta_skill_base_costs_equals_%_total_base_costs_from_all_socketed_skills"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "此技能的基礎消耗等同於插槽中技能{0}%的\n基礎消耗",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "skeletal_chains_aoe_%_health_dealt_as_chaos_damage"
     ],
     "trade_stats": null,
@@ -673,7 +709,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "造成相當於[Corpse|屍體]最大生命\n{0}%的 [Physical|物理]傷害",
+        "string": "造成等同於[Corpse|屍體]最大生命\n{0}%的 [Physical|物理]傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -693,7 +729,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "造成相當於[Corpse|屍體]最大生命\n{0}% 的 [Physical|物理]傷害",
+        "string": "造成等同於[Corpse|屍體]最大生命\n{0}% 的 [Physical|物理]傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1268,60 +1304,6 @@
           []
         ],
         "string": "不能用[Melee|近戰]武器使用此技能",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "spell_repeat_count"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "額外施放法術 {0} 次",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "法術額外重複施放 {0} 次",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3472,7 +3454,7 @@
   {
     "English": null,
     "ids": [
-      "projectile_number_of_targets_to_pierce",
+      "display_projectile_number_of_targets_to_pierce",
       "virtual_always_pierce",
       "virtual_projectiles_cannot_pierce"
     ],
@@ -3538,7 +3520,7 @@
           }
         ],
         "format": [
-          "ignore",
+          "#",
           "ignore",
           "ignore"
         ],
@@ -3547,7 +3529,7 @@
           [],
           []
         ],
-        "string": "[Projectile|投射物]會[Pierce|穿透] 1 個目標",
+        "string": "[Projectile|投射物]會[Pierce|穿透] {0} 個目標",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3612,60 +3594,6 @@
           []
         ],
         "string": "[Projectile|投射物]會[Pierce|穿透]所有目標",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "primary_projectile_display_targets_to_pierce"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "主要投射物穿透 1 個目標",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "主要投射物穿透 {0} 個目標",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4700,7 +4628,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊殺時有 {0}% 機率獲得 1 顆狂怒球",
+        "string": "擊殺時有 {0}% 機率獲得 1 顆[Charges|狂怒球]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4718,7 +4646,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊殺時獲得 1 顆狂怒球",
+        "string": "擊殺時獲得 1 顆[Charges|狂怒球]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5256,7 +5184,7 @@
         "index_handlers": [
           []
         ],
-        "string": "召喚物增加 {0}% 傷害",
+        "string": "召喚物減少 {0}% 傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5276,7 +5204,81 @@
             "negate"
           ]
         ],
+        "string": "減少{0}%召喚物造成的傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "virtual_minion_damage_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "召喚物增加 {0}% 傷害",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "召喚物減少 {0}% 傷害",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%召喚物造成的傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10202,42 +10204,6 @@
   {
     "English": null,
     "ids": [
-      "attack_repeat_count"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[Attack|攻擊]重複 {0} 次",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "add_power_charge_on_critical_strike_%"
     ],
     "trade_stats": null,
@@ -11350,7 +11316,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊殺時，有 {0}% 機率觸發此法術",
+        "string": "擊殺時，有 {0}% 機率[Trigger|觸發]此[Spell|法術]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11368,7 +11334,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊殺時，觸發此法術",
+        "string": "擊殺時，[Trigger|觸發]此[Spell|法術]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11404,7 +11370,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊殺時，有 {0}% 機率觸發此法術",
+        "string": "擊殺時，有 {0}% 機率[Trigger|觸發]此[Spell|法術]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11422,7 +11388,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊殺時，觸發此法術",
+        "string": "擊殺時，[Trigger|觸發]此[Spell|法術]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15132,9 +15098,11 @@
           "+#"
         ],
         "index_handlers": [
-          []
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
         ],
-        "string": "{0} [Melee|近戰][Strike|打擊]距離",
+        "string": "[Melee|近戰][Strike|打擊]範圍{0}公尺",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15778,7 +15746,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% 更多餘震效果範圍",
+        "string": "{0}% 更多[Aftershock|餘震]範圍效果",
         "reminder_text": null,
         "is_markup": null
       },
@@ -15798,7 +15766,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% 更少餘震效果範圍",
+        "string": "{0}% 更少[Aftershock|餘震]範圍效果",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17555,7 +17523,7 @@
         "index_handlers": [
           []
         ],
-        "string": "先祖加持的重擊造成 {0}% 更多擊中傷害",
+        "string": "先祖強化的重擊造成 {0}% 更多擊中傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17575,7 +17543,7 @@
             "negate"
           ]
         ],
-        "string": "先祖加持的重擊造成 {0}% 更少擊中傷害",
+        "string": "先祖強化的重擊造成 {0}% 更少擊中傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17611,7 +17579,7 @@
         "index_handlers": [
           []
         ],
-        "string": "先祖加持的重擊增加 {0}% 範圍效果",
+        "string": "先祖強化的重擊增加 {0}% 範圍效果",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17631,7 +17599,7 @@
             "negate"
           ]
         ],
-        "string": "先祖加持的重擊減少 {0}% 範圍效果",
+        "string": "先祖強化的重擊減少 {0}% 範圍效果",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17676,6 +17644,44 @@
   {
     "English": null,
     "ids": [
+      "ancestral_warrior_totem_total_use_time_%_as_idle_after_animation"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "multiplicative_damage_modifier"
+          ]
+        ],
+        "string": "每{0}%插槽[Attack|攻擊]時間會呼喚一名魂靈戰士",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "totem_elemental_resistance_%"
     ],
     "trade_stats": null,
@@ -17704,6 +17710,62 @@
           []
         ],
         "string": "[Totem|圖騰]獲得 {0}% 所有[ElementalDamage|元素][Resistances|抗性]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "totem_chaos_resistance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Totem|圖騰]獲得 +{0}% [Chaos|混沌][Resistances|抗性]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Totem|圖騰]失去 -{0}% [Chaos|混沌][Resistances|抗性]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17848,6 +17910,80 @@
           []
         ],
         "string": "不能冰凍",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_knights_ferocity_crush_on_hit_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[Crushed|壓碎]持續時間[HitDamage|擊中]@{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "crushed_target_%_physical_damage_taken_as_armour_break"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Crushed|被壓碎]的目標承受的[Physical|物理][ArmourBreak|護甲破壞]@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18719,7 +18855,7 @@
         "index_handlers": [
           []
         ],
-        "string": "冰緩敵人如同造成 {0}% 更多傷害",
+        "string": "[Chill|冰緩]敵人如同造成 {0}% 更多傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -18739,7 +18875,7 @@
             "negate"
           ]
         ],
-        "string": "冰緩敵人如同造成 {0}% 更少傷害",
+        "string": "[Chill|冰緩]敵人如同造成 {0}% 更少傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -19727,6 +19863,62 @@
   {
     "English": null,
     "ids": [
+      "active_skill_damaging_ailment_effect_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "施加之[DamagingAilments|傷害型異常狀態]具有 {0}% 更多[BuffMagnitude|幅度]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "施加之[DamagingAilments|傷害型異常狀態]具有 {0}% 更少[BuffMagnitude|幅度]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "active_skill_electrocutes_as_though_dealt_damage_+%_final"
     ],
     "trade_stats": null,
@@ -19775,6 +19967,42 @@
           ]
         ],
         "string": "{0}% 更少[Electrocute|觸電]累積",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "active_skill_generates_mp_%_glory_per_chaos_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "對一名敵人造成[Chaos|混沌][HitDamage|擊中]傷害或施加[Chaos|混沌]持續傷害[Debuff|減益效果]時，為此技能生成等同於{0}%[Power|怪物強度]的[Glory|榮耀]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21383,6 +21611,24 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[HitDamage|擊中]時有{0}%機率額外累積一段[Combo|連擊]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 1,
             "max": 99,
             "negated": null
@@ -21394,7 +21640,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[HitDamage|擊中]時額外累積一個[Combo|連擊]的機率@{0}%",
+        "string": "[HitDamage|擊中]時有@{0}%機率額外累積一段[Combo|連擊]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -21412,7 +21658,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[HitDamage|擊中]時額外累積一個[Combo|連擊]",
+        "string": "[HitDamage|擊中]時額外累積一段[Combo|連擊]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21625,8 +21871,7 @@
   {
     "English": null,
     "ids": [
-      "alchemists_mark_igniter_creates_burning_ground_%_ignite_damage",
-      "alchemists_mark_poisoner_creates_caustic_ground_%_poison_damage"
+      "alchemists_boon_attack_speed_granted_+%_during_life_flask"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -21645,7 +21890,58 @@
             "min": 1,
             "max": null,
             "negated": null
-          },
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Grants {0}% increased [Attack] speed during any Life [Flask] Effect",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Grants {0}% reduced [Attack] speed during any Life [Flask] Effect",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "alchemists_boon_cast_speed_granted_+%_during_mana_flask"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
           {
             "min": 1,
             "max": null,
@@ -21653,14 +21949,32 @@
           }
         ],
         "format": [
-          "#",
           "#"
         ],
         "index_handlers": [
-          [],
           []
         ],
-        "string": "燃燒地面根據敵人身上最強的點燃，造成每秒 {0}% 火焰傷害\n腐蝕地面根據敵人身上最強的中毒，造成每秒 {1}% 混沌傷害\n製造每個地面效果每秒不超過 1 次",
+        "string": "Grants {0}% increased cast speed during any Mana [Flask] Effect",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Grants {0}% reduced cast speed during any Mana [Flask] Effect",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21777,6 +22091,42 @@
   {
     "English": null,
     "ids": [
+      "always_chain_from_cursed_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "可從任意數量的[Curse|受詛咒]目標[Chain|連鎖]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "always_chain_from_shocked_enemies"
     ],
     "trade_stats": null,
@@ -21804,7 +22154,7 @@
         "index_handlers": [
           []
         ],
-        "string": "必定從[Shock|受感電]的敵人身上[Chain|連鎖]",
+        "string": "可從任意數量的[Shock|感電]目標[Chain|連鎖]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -22132,7 +22482,7 @@
         "index_handlers": [
           []
         ],
-        "string": "先祖加持的[Slam|重擊]減少 {0}% [EnemyStunThreshold|敵人暈眩門檻]",
+        "string": "先祖強化的[Slam|重擊]減少 {0}% [EnemyStunThreshold|敵人暈眩門檻]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -22152,7 +22502,7 @@
             "negate"
           ]
         ],
-        "string": "先祖加持的[Slam|重擊]增加 {0}% [EnemyStunThreshold|敵人暈眩門檻]",
+        "string": "先祖強化的[Slam|重擊]增加 {0}% [EnemyStunThreshold|敵人暈眩門檻]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -22729,6 +23079,246 @@
   {
     "English": null,
     "ids": [
+      "archon_of_chayula_physical_and_chaos_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "更多[Physical|物理]和[Chaos|混沌]傷害獲得@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "獲得{0}%更多[Physical|物理]和[Chaos|混沌]傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "archon_of_chayula_withered_on_hit_for_4_seconds_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Withered|凋零]機率獲得@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "獲得{0}%機率於[HitDamage|擊中]時[Withered|凋零]敵人，持續4秒",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "archon_of_chayula_spawn_chaos_tornado_interval_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "夏烏拉之志[Trigger|觸發]間隔@{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每秒[Trigger|觸發]夏烏拉之志",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "每{0}秒[Trigger|觸發]夏烏拉之志",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "arctic_armour_armour_granted_+%_per_stage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff] grants {0}% increased [Armour] per Stage",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff] grants {0}% reduced [Armour] per Stage",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "arctic_armour_chill_when_hit_duration"
     ],
     "trade_stats": null,
@@ -22981,6 +23571,42 @@
           ]
         ],
         "string": "{0}% 更少範圍效果",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "area_of_effect_+%_per_combo_stack"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每消耗[Combo|連擊]範圍效果@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -23243,6 +23869,24 @@
         "string": "[Poison|中毒]傷害[ArmourBreak|破甲]@{0}%",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "來自[Poison|中毒]傷害@{0}%的[ArmourBreak|護甲破壞]",
+        "reminder_text": null,
+        "is_markup": null
       }
     ]
   },
@@ -23277,6 +23921,24 @@
           []
         ],
         "string": "[Physical|物理]傷害[ArmourBreak|破壞的護甲值]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "等同於{0}%造成[Physical|物理]傷害的[ArmourBreak|護甲破壞]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -24329,7 +24991,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "如果你在 {0} 秒內沒有產生[Combo|連擊]，就會失去[Combo|連擊]",
+        "string": "此技能若在 {0} 秒內未產生[Combo|連擊]，將失去[Combo|連擊]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -24349,7 +25011,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "如果你在 {0} 秒內沒有產生[Combo|連擊]，就會失去[Combo|連擊]",
+        "string": "此技能若在 {0} 秒內未產生[Combo|連擊]，將失去[Combo|連擊]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25036,6 +25698,60 @@
   {
     "English": null,
     "ids": [
+      "base_maximum_seals_for_skill"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最大 {0} 個[Seal|封印]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最大 {0} 個[Seal|封印]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "base_number_of_crossbow_bolts",
       "quality_display_base_number_of_crossbow_bolts_is_gem"
     ],
@@ -25147,6 +25863,33 @@
           []
         ],
         "string": "每個彈夾會裝填 {0} 發弩箭",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ],
+          []
+        ],
+        "string": "每一彈夾-{0}裝填的箭矢數量",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25438,7 +26181,7 @@
         "index_handlers": [
           []
         ],
-        "string": "限制 {0} 個鐘",
+        "string": "[Limit|上限] {0} 個鐘",
         "reminder_text": null,
         "is_markup": null
       },
@@ -25456,7 +26199,7 @@
         "index_handlers": [
           []
         ],
-        "string": "限制 {0} 個鐘",
+        "string": "[Limit|上限] {0} 個鐘",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25493,6 +26236,42 @@
           []
         ],
         "string": "[Poison|中毒]有 {0}% 的機率增加 100% 的效果",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_power_charge_skip_consume_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% 機率不移除[Charges|暴擊球]但仍視為消耗了暴擊球",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25587,6 +26366,80 @@
           ]
         ],
         "string": "[Remnant|痕跡]持續 {0} 秒",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_skill_seal_gain_interval_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "每{0}秒獲得一個[Seal|封印]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_skill_ward_cost_as_%_of_life_and_mana_cost"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[StatGain|獲得]等同於{0}%生命和魔力消耗的[StatGain|額外][Ward|符文保護]消耗",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25729,6 +26582,44 @@
   {
     "English": null,
     "ids": [
+      "bear_companion_intimidate_on_hit_with_warcry_for_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[Intimidate|威嚇]持續時間@{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "bear_skills_additional_base_attack_time_when_performing_from_default_stance"
     ],
     "trade_stats": null,
@@ -25837,6 +26728,42 @@
           ]
         ],
         "string": "站立時的基礎攻擊時間+{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "berserk_maximum_rage_granted_+"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff] grants {0} to maximum [Rage]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -27251,6 +28178,26 @@
         "string": "傳送 {0} 公尺",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "傳送 {0} 公尺",
+        "reminder_text": null,
+        "is_markup": null
       }
     ]
   },
@@ -27286,7 +28233,7 @@
             "per_minute_to_per_second_2dp_if_required"
           ]
         ],
-        "string": "[CorruptedBlood|腐化之血]每秒造成相當於所擊殺敵人最大生命 {0}% 的[Physical|物理]傷害",
+        "string": "[CorruptedBlood|腐化之血]每秒造成等同於所擊殺敵人最大生命 {0}% 的[Physical|物理]傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -27380,7 +28327,7 @@
         "index_handlers": [
           []
         ],
-        "string": "被擊殺的敵人每有一層鮮血沸騰，\n造成[CorruptedBlood|腐化之血]的效果範圍增加 {0}%",
+        "string": "被擊殺的敵人每有一層鮮血沸騰，\n造成[CorruptedBlood|腐化之血]的範圍效果增加 {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -27400,7 +28347,7 @@
             "negate"
           ]
         ],
-        "string": "被擊殺的敵人每有一層鮮血沸騰，\n造成[CorruptedBlood|腐化之血]的效果範圍減少 {0}%",
+        "string": "被擊殺的敵人每有一層鮮血沸騰，\n造成[CorruptedBlood|腐化之血]的範圍效果減少 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28487,7 +29434,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[FlamesOfChayula|夏烏拉之炎]產生間隔@{0} 秒",
+        "string": "[FlamesOfChayula|夏烏拉之炎]顯現間隔@{0}秒",
         "reminder_text": null,
         "is_markup": null
       },
@@ -28505,7 +29452,7 @@
         "index_handlers": [
           []
         ],
-        "string": "每秒在附近產生一個[FlamesOfChayula|夏烏拉之炎]",
+        "string": "每秒在你8.5公尺的範圍內\n顯現一個[FlamesOfChayula|夏烏拉之炎]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -28525,7 +29472,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "每 {0} 秒在附近產生一個[FlamesOfChayula|夏烏拉之炎]",
+        "string": "每{0}秒在你8.5公尺的範圍內\n顯現一個[FlamesOfChayula|夏烏拉之炎]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -29298,6 +30245,62 @@
   {
     "English": null,
     "ids": [
+      "cast_on_crit_global_critical_hit_chance_granted_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff] grants {0}% increased [Critical|Critical Hit] chance",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff] grants {0}% reduced [Critical|Critical Hit] chance",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "cast_on_crit_%"
     ],
     "trade_stats": null,
@@ -29434,6 +30437,64 @@
           []
         ],
         "string": "當你死亡時觸發所有插槽中的法術",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "cast_on_dodge_dodge_roll_distance_granted_+"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "[Buff] grants {0} metre to Dodge Roll distance",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "[Buff] grants {0} metres to Dodge Roll distance",
         "reminder_text": null,
         "is_markup": null
       }
@@ -30420,6 +31481,60 @@
   {
     "English": null,
     "ids": [
+      "chance_for_exerted_attacks_to_not_reduce_count_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% chance to not count [Empowered] [Attack|Attacks]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Does not count [Empowered] [Attack|Attacks]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "chance_for_extra_damage_roll_%"
     ],
     "trade_stats": null,
@@ -30447,7 +31562,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊中傷害有 {0}% 機率帶有幸運",
+        "string": "[HitDamage|擊中]傷害有 {0}% 機率十分[Lucky|幸運]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -30508,8 +31623,8 @@
       {
         "condition": [
           {
-            "min": 1,
-            "max": 99,
+            "min": null,
+            "max": null,
             "negated": null
           }
         ],
@@ -30519,25 +31634,7 @@
         "index_handlers": [
           []
         ],
-        "string": "消耗[Charges|能量球]時獲得增益加倍機率@{0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "消耗[Charges|能量球]時獲得增益加倍",
+        "string": "消耗[Charges|充能]獲得的效益有{0}%機率翻倍",
         "reminder_text": null,
         "is_markup": null
       },
@@ -30555,7 +31652,7 @@
         "index_handlers": [
           []
         ],
-        "string": "消耗[Charges|能量球]有 {0}% 機率使此技能獲得的增益加倍",
+        "string": "消耗[Charges|充能]獲得的效益有@{0}%機率翻倍",
         "reminder_text": null,
         "is_markup": null
       },
@@ -30573,7 +31670,43 @@
         "index_handlers": [
           []
         ],
-        "string": "消耗[Charges|能量球]會使此技能獲得的增益加倍",
+        "string": "消耗[Charges|充能]獲得的效益翻倍",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "消耗[Charges|充能]獲得的效益有{0}%機率翻倍",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "消耗[Charges|充能]獲得的效益翻倍",
         "reminder_text": null,
         "is_markup": null
       }
@@ -31077,7 +32210,25 @@
         "index_handlers": [
           []
         ],
-        "string": "獲得額外一顆[Charges|能量球]的機率@{0}%",
+        "string": "@{0}%機率獲得額外[Charges|充能]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}%機率獲得額外[Charges|充能]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -31095,7 +32246,7 @@
         "index_handlers": [
           []
         ],
-        "string": "當你獲得一顆[Charges|能量球]時，有 {0}% 機率獲得一顆額外的[Charges|能量球]",
+        "string": "獲得[Charges|充能]時有{0}%機率額外獲得一個[Charges|充能]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -31113,7 +32264,79 @@
         "index_handlers": [
           []
         ],
-        "string": "當你獲得一顆[Charges|能量球]時，獲得一顆額外的[Charges|能量球]",
+        "string": "獲得[Charges|充能]時額外獲得一個[Charges|充能]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_to_gain_1_more_random_charge_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "獲得[Charges|充能]時有{0}%機率額外獲得一個隨機[Charges|充能]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "獲得[Charges|充能]時有{0}%機率額外獲得一個隨機[Charges|充能]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "獲得[Charges|充能]時額外獲得一個隨機[Charges|充能]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -32093,7 +33316,7 @@
         "index_handlers": [
           []
         ],
-        "string": "當此技能造成致命一擊時有 {0}% 機率召喚 1 個幻影",
+        "string": "當此技能造成[KillingBlow|致命一擊]時有 {0}% 機率召喚 1 個幻影",
         "reminder_text": null,
         "is_markup": null
       },
@@ -32111,7 +33334,7 @@
         "index_handlers": [
           []
         ],
-        "string": "當此技能造成致命一擊時召喚 1 個幻影",
+        "string": "當此技能造成[KillingBlow|致命一擊]時召喚 1 個幻影",
         "reminder_text": null,
         "is_markup": null
       }
@@ -32507,7 +33730,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的幻化守衛擊殺敵人時有 {0}% 機率觸發此法術",
+        "string": "你的幻化守衛擊殺敵人時有 {0}% 機率[Trigger|觸發]此法術",
         "reminder_text": null,
         "is_markup": null
       },
@@ -32525,7 +33748,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的幻化守衛擊殺敵人時觸發此法術",
+        "string": "你的幻化守衛擊殺敵人時[Trigger|觸發]此法術",
         "reminder_text": null,
         "is_markup": null
       }
@@ -32804,6 +34027,62 @@
           []
         ],
         "string": "擊中的混沌傷害改為被最低的抗性抵抗",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "charge_regulation_damage_per_charge_granted_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff] grants {0}% increased damage per [Charges|Charge]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff] grants {0}% reduced damage per [Charges|Charge]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -35609,7 +36888,7 @@
           [],
           []
         ],
-        "string": "如果可能，消耗 {0} [Heat|熱能]來\n[Gain|獲得]相當於傷害 {1}% 的[Fire|火焰]傷害",
+        "string": "如果可能，消耗 {0} [Heat|熱能]來\n[Gain|獲得]等同於傷害 {1}% 的[Fire|火焰]傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -39067,7 +40346,7 @@
           [],
           []
         ],
-        "string": "每層獲得相當於傷害 {0}% 的[Fire|火焰]傷害\n疊層上限 {1}",
+        "string": "每層獲得等同於傷害 {0}% 的[Fire|火焰]傷害\n疊層上限 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -41992,6 +43271,64 @@
   {
     "English": null,
     "ids": [
+      "display_skill_overflowing_chalice_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[OverflowingChalice|滿溢聖杯] 持續時間@{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[OverflowingChalice|滿溢聖杯] 持續時間@{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "display_storm_burst_jump_time_ms"
     ],
     "trade_stats": null,
@@ -43068,6 +44405,42 @@
   {
     "English": null,
     "ids": [
+      "echoed_spell_area_of_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "迴響範圍效果@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "elemental_damage_cannot_be_reflected"
     ],
     "trade_stats": null,
@@ -44027,6 +45400,42 @@
           ]
         ],
         "string": "被感電的敵人減少承受 {0}% 物理傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_seraphs_heart_enemy_hits_%_chance_to_treat_all_resistances_as_90%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "@{0}%的機率使敵人的[HitDamage|擊中]將[Resistances|抗性]視為90%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -45101,6 +46510,60 @@
   {
     "English": null,
     "ids": [
+      "final_strike_number_of_spirit_strikes"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[FinalStrike|最終打擊]以周遭額外{0}名敵人為目標",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[FinalStrike|最終打擊]以周遭額外{0}名敵人為目標",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "fire_beam_additional_stack_damage_+%_final"
     ],
     "trade_stats": null,
@@ -45331,42 +46794,6 @@
           []
         ],
         "string": "投射物隨著飛行越遠獲得範圍效果，至多 {0} 範圍",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "fires_1_projectile_if_no_steel_ammo"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "若你沒有鋼鐵碎片，只會發射 1 個[Projectile|投射物]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -46714,7 +48141,7 @@
           [],
           []
         ],
-        "string": "若消耗藍玉[Flask|藥劑]充能，附加 {0} 至 {1} [Cold|冰冷]傷害",
+        "string": "若消耗藍寶石[Flask|藥劑]充能，附加 {0} 至 {1} [Cold|冰冷]傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -47035,6 +48462,62 @@
           []
         ],
         "string": "近距離[Melee|近戰]擊中護體",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "fortifying_cry_guard_gained_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% more [Guard] gained",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% less [Guard] gained",
         "reminder_text": null,
         "is_markup": null
       }
@@ -48093,6 +49576,60 @@
   {
     "English": null,
     "ids": [
+      "frozen_monsters_take_increased_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "被此技能[Frozen|冰凍]的敵人增加{0}%承受傷害",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "被此技能[Frozen|冰凍]的敵人減少{0}%承受傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "fully_break_enemies_armour_on_heavy_stun"
     ],
     "trade_stats": null,
@@ -48540,7 +50077,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊殺之擊時有 {0}% 機率獲得 1 顆暴擊球",
+        "string": "[KillingBlow|致命一擊]時有 {0}% 機率獲得 1 顆[Charges|暴擊球]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -48648,7 +50185,7 @@
         "index_handlers": [
           []
         ],
-        "string": "最高傷害類型的元素擊中，使你每秒獲得其他元素 25 共鳴，持續 2 秒",
+        "string": "擊中時若最高傷害類型為元素傷害，使你每秒獲得 25 點其他元素的[Affinity|親和]，持續 2 秒",
         "reminder_text": null,
         "is_markup": null
       }
@@ -48945,6 +50482,250 @@
           ]
         ],
         "string": "當領域被製造時，領域根據敵人身上每 10% [Shock|感電]效果 {0} 範圍",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "gem_quality_ancestral_cry_global_fire_damage_granted_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Grants {0}% more [Fire] damage",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Grants {0}% less [Fire] damage",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "gem_quality_earthquake_damaging_ailment_effect_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "施加之[DamagingAilments|傷害型異常狀態]具有 {0}% 更多[BuffMagnitude|幅度]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "施加之[DamagingAilments|傷害型異常狀態]具有 {0}% 更少[BuffMagnitude|幅度]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "gem_quality_flameblast_damaging_ailment_effect_per_stage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每層擁有{0}%更多[DamagingAilments|傷害型異常狀態][BuffMagnitude|門檻]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "每層擁有{0}%更少[DamagingAilments|傷害型異常狀態][BuffMagnitude|門檻]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "gem_quality_marked_enemy_damage_dealt_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Mark|標記]敵人更少傷害造成@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Mark|被標記]的敵人造成{0}%更多傷害",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Mark|被標記]的敵人造成{0}%更少傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -49669,6 +51450,82 @@
   {
     "English": null,
     "ids": [
+      "hazard_damage_+%_final_for_first_500_ms_when_not_killed_by_self"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "在最初的0.5秒造成@{0}%更少傷害",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "如果在0.5秒內被不是你的其他來源破壞，造成{0}%更少傷害",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "如果在0.5秒內沒有被不是你的其他來源破壞，造成{0}%更多傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "hazard_rearm_%_chance"
     ],
     "trade_stats": null,
@@ -49851,6 +51708,174 @@
   {
     "English": null,
     "ids": [
+      "herald_of_ash_fire_damage_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff] grants {0}% increased [Fire] damage",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff] grants {0}% reduced [Fire] damage",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "herald_of_blood_global_physical_damage_granted_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff] grants {0}% increased [Physical] damage",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff] grants {0}% reduced [Physical] damage",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "herald_of_ice_cold_damage_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff] grants {0}% increased [Cold] damage",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff] grants {0}% reduced [Cold] damage",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "herald_of_light_summon_champion_on_kill"
     ],
     "trade_stats": null,
@@ -49989,6 +52014,62 @@
           ]
         ],
         "string": "增益給予 {0}% 更少物理傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "herald_of_thunder_lightning_damage_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff] grants {0}% increased [Lightning] damage",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff] grants {0}% reduced [Lightning] damage",
         "reminder_text": null,
         "is_markup": null
       }
@@ -50612,7 +52693,7 @@
         "index_handlers": [
           []
         ],
-        "string": "使用連結至灼熱連結的圖騰時，獲得相當於物理傷害 {0}% 的額外火焰傷害",
+        "string": "使用連結至灼熱連結的圖騰時，獲得等同於物理傷害 {0}% 的額外火焰傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -51062,7 +53143,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[IceCrystalShatter|粉碎]時有@{0}%更多效果範圍",
+        "string": "[IceCrystalShatter|粉碎]時有@{0}%更多範圍效果",
         "reminder_text": null,
         "is_markup": null
       },
@@ -51080,7 +53161,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[IceCrystalShatter|粉碎]時有 {0}% 更多效果範圍",
+        "string": "[IceCrystalShatter|粉碎]時有 {0}% 更多範圍效果",
         "reminder_text": null,
         "is_markup": null
       }
@@ -51143,7 +53224,7 @@
   {
     "English": null,
     "ids": [
-      "ice_crystals_hazard_damage_+%_final_for_first_500_ms_when_not_killed_by_self"
+      "ice_crystals_damage_+%_final_for_first_500_ms_when_not_killed_by_self"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -52097,7 +54178,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊中時造成火焰、冰冷和閃電曝曬",
+        "string": "[HitDamage|擊中]時造成火焰、冰冷和閃電[Exposure|曝曬]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -53903,6 +55984,42 @@
   {
     "English": null,
     "ids": [
+      "lose_%_of_maximum_rage_on_dealing_critical_strike"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Critical|暴擊]擊中時失去的盛怒@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "lose_all_righteous_charges_on_mana_use_threshold"
     ],
     "trade_stats": null,
@@ -53931,6 +56048,42 @@
           []
         ],
         "string": "在此技能的前期消耗和效果的總消耗 {0} 魔力時失去全部啟發球",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "magma_barrier_maximum_block_chance_granted_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff] grants {0}% to maximum [Block] Chance",
         "reminder_text": null,
         "is_markup": null
       }
@@ -54472,7 +56625,8 @@
     "English": null,
     "ids": [
       "main_hand_minimum_chaos_damage",
-      "main_hand_maximum_chaos_damage"
+      "main_hand_maximum_chaos_damage",
+      "main_hand_chaos_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -54493,20 +56647,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "主手[Chaos|混沌]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "主手[Chaos|混沌]傷害@{0} 或 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -54516,7 +56709,8 @@
     "English": null,
     "ids": [
       "main_hand_minimum_cold_damage",
-      "main_hand_maximum_cold_damage"
+      "main_hand_maximum_cold_damage",
+      "main_hand_cold_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -54537,20 +56731,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "主手[Cold|冰冷]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "主手[Cold|冰冷]傷害@{0} 或 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -54560,7 +56793,8 @@
     "English": null,
     "ids": [
       "main_hand_minimum_fire_damage",
-      "main_hand_maximum_fire_damage"
+      "main_hand_maximum_fire_damage",
+      "main_hand_fire_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -54581,20 +56815,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "主手[Fire|火焰]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "主手[Fire|火焰]傷害@{0} 或 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -54604,7 +56877,8 @@
     "English": null,
     "ids": [
       "main_hand_minimum_lightning_damage",
-      "main_hand_maximum_lightning_damage"
+      "main_hand_maximum_lightning_damage",
+      "main_hand_lightning_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -54625,20 +56899,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "主手[Lightning|閃電]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "主手[Lightning|閃電]傷害@{0} 或 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -54648,7 +56961,8 @@
     "English": null,
     "ids": [
       "main_hand_minimum_physical_damage",
-      "main_hand_maximum_physical_damage"
+      "main_hand_maximum_physical_damage",
+      "main_hand_physical_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -54669,20 +56983,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "主手[Physical|物理]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "主手[Physical|物理]傷害@{0} 或 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -54859,6 +57212,62 @@
           ]
         ],
         "string": "每擊中一個敵人，失去 {0} 魔力",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "mana_remnants_global_mana_regeneration_rate_granted_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff] grants {0}% increased Mana Regeneration Rate",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff] grants {0}% reduced Mana Regeneration Rate",
         "reminder_text": null,
         "is_markup": null
       }
@@ -55044,7 +57453,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Empowered|強化][Attack|攻擊]獲得相當於 {0}% 傷害的[Chaos|混沌]傷害",
+        "string": "[Empowered|強化][Attack|攻擊]獲得等同於 {0}% 傷害的[Chaos|混沌]傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -55260,7 +57669,7 @@
         "index_handlers": [
           []
         ],
-        "string": "每消耗一層[Jade|翠玉]，獲得相當於你最大生命 {0}% 的 [Guard|防衛]",
+        "string": "每消耗一層[Jade|翠玉]，獲得等同於你最大生命 {0}% 的 [Guard|防衛]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -55317,79 +57726,6 @@
           ]
         ],
         "string": "產生的屍體減少 {0}% 最大生命",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "base_active_skill_buff_stack_gain_frequency_ms",
-      "maximum_number_of_arctic_armour_stationary_stacks"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ],
-          []
-        ],
-        "string": "每秒獲得 1 層，最多可達 {1} 層",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ],
-          []
-        ],
-        "string": "每 {0} 秒獲得 1 層，最多可達 {1} 層",
         "reminder_text": null,
         "is_markup": null
       }
@@ -55530,7 +57866,7 @@
         "index_handlers": [
           []
         ],
-        "string": "限制 {0} 個領域",
+        "string": "[Limit|上限]  {0} 個領域",
         "reminder_text": null,
         "is_markup": null
       },
@@ -55548,7 +57884,7 @@
         "index_handlers": [
           []
         ],
-        "string": "限制 {0} 個領域",
+        "string": "[Limit|上限] {0} 個領域",
         "reminder_text": null,
         "is_markup": null
       }
@@ -55827,6 +58163,42 @@
           []
         ],
         "string": "召喚幻影神槍手最大上限 {0}\n召喚 {0} 個使用此技能的幻影神槍手\n當你使用冰霜射擊時，幻影神槍手向你的目標射擊",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "maximum_verisium_infusion_stacks"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "+{0}最大[VerisiumInfusion|維里西姆灌注]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -56977,42 +59349,6 @@
   {
     "English": null,
     "ids": [
-      "minion_grant_puppet_master_buff_to_parent_on_hit_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "召喚物擊中時有 {0}% 機率給予你豢養狂熱",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "minion_life_regeneration_rate_per_minute_%"
     ],
     "trade_stats": null,
@@ -57578,7 +59914,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Minion|召喚物]獲得相當於 {0}% [Physical|物理]傷害的[Chaos|混沌]傷害",
+        "string": "[Minion|召喚物]獲得等同於 {0}% [Physical|物理]傷害的[Chaos|混沌]傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -58206,7 +60542,7 @@
   {
     "English": null,
     "ids": [
-      "multistrike_area_of_effect_+%_per_repeat"
+      "multishot_empowered_projectile_speed_+%"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -58233,48 +60569,10 @@
         "index_handlers": [
           []
         ],
-        "string": "每次重復增加 {0}% 範圍效果",
+        "string": "額外[Projectile|投射物]數量\n增加[Projectile|投射物]速度@2\n{0}%",
         "reminder_text": null,
         "is_markup": null
       },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "每次重復減少 {0}% 範圍效果",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "multistrike_damage_+%_final_on_first_repeat"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
       {
         "condition": [
           {
@@ -58289,48 +60587,10 @@
         "index_handlers": [
           []
         ],
-        "string": "第一次重複造成 {0}% 更多傷害",
+        "string": "[Empowered|強化]技能增加{0}%[Projectile|投射物]速度",
         "reminder_text": null,
         "is_markup": null
       },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "第一次重複造成 {0}% 更少傷害",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "multistrike_damage_+%_final_on_second_repeat"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
       {
         "condition": [
           {
@@ -58345,83 +60605,7 @@
         "index_handlers": [
           []
         ],
-        "string": "第二次重複造成 {0}% 更多傷害",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "第二次重複造成 {0}% 更少傷害",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "multistrike_damage_+%_final_on_third_repeat"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "第三次重複造成 {0}% 更多傷害",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "第三次重複造成 {0}% 更少傷害",
+        "string": "[Empowered|強化]技能發射2個額外[Projectile|投射物]\n[Empowered|強化]技能增加{0}%[Projectile|投射物]速度",
         "reminder_text": null,
         "is_markup": null
       }
@@ -58675,7 +60859,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Empowered|強化][Spell|法術][Gain|獲得]相當於傷害 {0}% 的[Cold|冰冷]傷害",
+        "string": "[Empowered|強化][Spell|法術][Gain|獲得]等同於傷害 {0}% 的[Cold|冰冷]傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -58755,7 +60939,7 @@
           [],
           []
         ],
-        "string": "[Empowered|強化][Spell|法術][Gain|獲得]相當於傷害 {0}% 的[Lightning|閃電]傷害",
+        "string": "[Empowered|強化][Spell|法術][Gain|獲得]等同於傷害 {0}% 的[Lightning|閃電]傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -58780,7 +60964,7 @@
           [],
           []
         ],
-        "string": "[Empowered|強化][Spell|法術][Gain|獲得]相當於傷害 {0}% 的[Lightning|閃電]傷害",
+        "string": "[Empowered|強化][Spell|法術][Gain|獲得]等同於傷害 {0}% 的[Lightning|閃電]傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -58805,7 +60989,7 @@
           [],
           []
         ],
-        "string": "[Empowered|強化][Spell|法術][Gain|獲得]相當於傷害 {0}% 的[Lightning|閃電]傷害",
+        "string": "[Empowered|強化][Spell|法術][Gain|獲得]等同於傷害 {0}% 的[Lightning|閃電]傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -59626,6 +61810,42 @@
   {
     "English": null,
     "ids": [
+      "number_of_runic_aftershocks_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Rune [Limit]@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "number_of_skeletal_constructs_allowed"
     ],
     "trade_stats": null,
@@ -60065,7 +62285,8 @@
     "English": null,
     "ids": [
       "off_hand_minimum_chaos_damage",
-      "off_hand_maximum_chaos_damage"
+      "off_hand_maximum_chaos_damage",
+      "off_hand_chaos_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -60086,20 +62307,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "副手[Chaos|混沌]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "副手[Chaos|混沌]傷害@{0} 或 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -60109,7 +62369,8 @@
     "English": null,
     "ids": [
       "off_hand_minimum_cold_damage",
-      "off_hand_maximum_cold_damage"
+      "off_hand_maximum_cold_damage",
+      "off_hand_cold_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -60130,20 +62391,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "副手[Cold|冰冷]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "副手[Cold|冰冷]傷害@{0} 或 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -60153,7 +62453,8 @@
     "English": null,
     "ids": [
       "off_hand_minimum_fire_damage",
-      "off_hand_maximum_fire_damage"
+      "off_hand_maximum_fire_damage",
+      "off_hand_fire_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -60174,20 +62475,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "副手[Fire|火焰]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "副手[Fire|火焰]傷害@{0} 或 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -60197,7 +62537,8 @@
     "English": null,
     "ids": [
       "off_hand_minimum_lightning_damage",
-      "off_hand_maximum_lightning_damage"
+      "off_hand_maximum_lightning_damage",
+      "off_hand_lightning_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -60218,20 +62559,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "副手[Lightning|閃電]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "副手[Lightning|閃電]傷害@{0} 或 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -60241,7 +62621,8 @@
     "English": null,
     "ids": [
       "off_hand_minimum_physical_damage",
-      "off_hand_maximum_physical_damage"
+      "off_hand_maximum_physical_damage",
+      "off_hand_physical_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -60262,20 +62643,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "副手[Physical|物理]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "副手[Physical|物理]傷害@{0} 或 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -61379,7 +63799,7 @@
         "index_handlers": [
           []
         ],
-        "string": "造成相當於觸發的敵人身上瘟疫值 {0}% 的[Physical|物理]傷害",
+        "string": "造成等同於觸發的敵人身上瘟疫值 {0}% 的[Physical|物理]傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -61415,7 +63835,7 @@
         "index_handlers": [
           []
         ],
-        "string": "最大瘟疫值時有 {0}% 更多效果範圍",
+        "string": "最大瘟疫值時有 {0}% 更多範圍效果",
         "reminder_text": null,
         "is_markup": null
       }
@@ -61849,60 +64269,6 @@
   {
     "English": null,
     "ids": [
-      "primary_projectile_chain_num"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "主要投射物連鎖 {0} 次",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "主要投射物連鎖 {0} 次",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "primary_projectile_impale_chance_%"
     ],
     "trade_stats": null,
@@ -62229,6 +64595,24 @@
           []
         ],
         "string": "[Projectile|投射物]從地形[Chain|連鎖]的額外機率@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Projectile|投射物]從地形額外[Chain|連鎖]機率@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -62567,6 +64951,42 @@
   {
     "English": null,
     "ids": [
+      "projectiles_cannot_fork"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Projectile|投射物]無法[Fork|分岔]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "projectiles_cannot_split"
     ],
     "trade_stats": null,
@@ -62594,7 +65014,7 @@
         "index_handlers": [
           []
         ],
-        "string": "投射物不能裂化",
+        "string": "[Projectile|投射物]無法[Split|分裂]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -62687,6 +65107,42 @@
           []
         ],
         "string": "當投射物穿過烈焰之牆時，它們會分裂",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "projectiles_nova"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "以圓圈形狀發射[Projectile|投射物]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -63746,6 +66202,42 @@
         "string": "[CullingStrike|撲殺]時恢復生命@{0}%",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[CullingStrike|撲殺]時回復@{0}%生命",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[CullingStrike|撲殺]敵人時[NonStackingEffect|在四秒內]回復{0}%最大生命",
+        "reminder_text": null,
+        "is_markup": null
       }
     ]
   },
@@ -64072,6 +66564,62 @@
           ]
         ],
         "string": "減少裝填速度@+{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "remnant_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "此技能的[Remnant|痕跡]效果增加 {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "此技能的[Remnant|痕跡]效果減少 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -64664,6 +67212,62 @@
           []
         ],
         "string": "符文可被優化 {0} 次",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "sacrifice_minion_life_granted_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Minion|Minions] have {0}% increased maximum Life",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Minion|Minions] have {0}% reduced maximum Life",
         "reminder_text": null,
         "is_markup": null
       }
@@ -65265,7 +67869,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -65309,7 +67913,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -65353,7 +67957,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -65376,7 +67980,8 @@
     "English": null,
     "ids": [
       "secondary_minimum_lightning_damage",
-      "secondary_maximum_lightning_damage"
+      "secondary_maximum_lightning_damage",
+      "secondary_lightning_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -65397,20 +68002,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "[Lightning|閃電]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Lightning|閃電]傷害@{0} 或 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -65441,7 +68085,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -65626,7 +68270,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊殺之擊像冰凍那樣粉碎敵人",
+        "string": "[KillingBlow|致命一擊]會如同冰凍般粉碎敵人",
         "reminder_text": null,
         "is_markup": null
       }
@@ -65793,6 +68437,82 @@
           ]
         ],
         "string": "中心震波有 {0}% 更少範圍效果",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "shield_wall_damage_+%_final_for_first_500_ms_when_not_killed_by_self"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "在最初的0.5秒造成@{0}%更少傷害",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "如果在0.5秒內被不是你的其他來源破壞，造成{0}%更少傷害",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "如果在0.5秒內沒有被不是你的其他來源破壞，造成{0}%更多傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -66561,6 +69281,42 @@
   {
     "English": null,
     "ids": [
+      "skill_additional_projectiles_per_seal_broken"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Projectile|投射物]每個[Seal|封印]破壞@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "skill_angle_+%_in_sand_stance"
     ],
     "trade_stats": null,
@@ -66645,6 +69401,42 @@
           ]
         ],
         "string": "減少 {0}% 範圍效果角度",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_area_of_effect_+%_per_broken_seal"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "範圍效果增加[Seal|封印]破壞@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -67279,7 +70071,7 @@
   {
     "English": null,
     "ids": [
-      "skill_echo_chance_%"
+      "skill_echoes_per_seal_broken"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -67295,7 +70087,7 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -67306,25 +70098,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% 機率重複觸發",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% 機率重複觸發",
+        "string": "[Cascadable|迴響]每個[Seal|封印]破壞@{0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -67475,6 +70249,140 @@
           ]
         ],
         "string": "死亡時被輔助的技能減少 {0}% 技能效果持續時間",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_eternal_march_maximum_ward_cost",
+      "skill_eternal_march_life_per_ward_spent_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "divide_by_one_hundred_0dp"
+          ]
+        ],
+        "string": "最大[Ward|符文保護]消耗\n總[Minion|召喚物]生命[Reviving|復甦]每[Ward|符文保護]消耗@{0}\n{1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "消耗至多{0}額外[Ward|符文保護][Reviving|復甦]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "divide_by_one_hundred_0dp"
+          ]
+        ],
+        "string": "消耗至多{0}[Ward|符文保護]以[Reviving|復甦][Minion|召喚物]，總生命等同於消耗[Ward|符文保護]的{1}倍",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_gain_seal_every_x_hits_blocked"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Block|被格擋][HitDamage|擊中]需求以獲得[Seal|封印]@{0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -67979,6 +70887,42 @@
   {
     "English": null,
     "ids": [
+      "skill_maximum_seals"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最大[Seal|封印]@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "skill_maximum_travel_distance_+%"
     ],
     "trade_stats": null,
@@ -68089,6 +71033,80 @@
   {
     "English": null,
     "ids": [
+      "skill_rapid_fire_repeats_per_broken_seal"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Repeat|重複]每個[Seal|封印]破壞@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_seal_gain_interval_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[Seal|封印]獲得間隔@{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "skill_travel_distance_+%"
     ],
     "trade_stats": null,
@@ -68117,6 +71135,42 @@
           []
         ],
         "string": "增加 {0}% 快行距離",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_triggered_by_owl_feathers"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "此技能會於你翻滾並消耗一片原始貓頭鷹羽毛時[Trigger|觸發]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -68242,7 +71296,7 @@
         "index_handlers": [
           []
         ],
-        "string": "被幻影酋長使用的技能造成 {0}% 更多傷害\n被幻影酋長使用的技能不能重複",
+        "string": "由幻影酋長使用的技能造成{0}%更多傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -68262,7 +71316,7 @@
             "negate"
           ]
         ],
-        "string": "被幻影酋長使用的技能造成 {0}% 更少傷害\n被幻影酋長使用的技能不能重複",
+        "string": "由幻影酋長使用的技能造成{0}%更少傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -68839,7 +71893,7 @@
   {
     "English": null,
     "ids": [
-      "spectral_spiral_weapon_number_of_bounces"
+      "display_spectral_spiral_weapon_number_of_bounces"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -68923,6 +71977,60 @@
           ]
         ],
         "string": "每個[Projectile|投射物]有介在 {0}% 更多至 {0}% 更少[Projectile|投射物]速度",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_spell_%_chance_to_echo"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Cascadable|迴響]機率@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}%機率[Cascadable|迴響]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -69191,42 +72299,6 @@
   {
     "English": null,
     "ids": [
-      "spell_echo_plus_chance_double_damage_%_final"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "最後的重複有 {0}% 機率造成 2 倍傷害",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "spell_effetive_total_chance_permyriad_for_hit_to_be_critical"
     ],
     "trade_stats": null,
@@ -69257,62 +72329,6 @@
           ]
         ],
         "string": "[Critical|暴擊]的[EffectiveChance|有效機率]@{0}%",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "spellflux_frequency_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "增加{0}%幻象頻率",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "減少{0}%幻象頻率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -69555,7 +72571,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -69599,7 +72615,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -69643,7 +72659,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -69666,7 +72682,8 @@
     "English": null,
     "ids": [
       "spell_minimum_lightning_damage",
-      "spell_maximum_lightning_damage"
+      "spell_maximum_lightning_damage",
+      "spell_lightning_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -69687,20 +72704,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "[Lightning|閃電]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Lightning|閃電]傷害@{0} 或 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -69731,7 +72787,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -69827,6 +72883,24 @@
         "string": "以環型發射額外 8 個[Projectile|投射物]的機率@{0}%",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "@{0}%機率以環型方式發射8個額外[Projectile|投射物]",
+        "reminder_text": null,
+        "is_markup": null
       }
     ]
   },
@@ -69869,65 +72943,7 @@
   {
     "English": null,
     "ids": [
-      "spellflux_base_delay_between_fluxes_ms"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "幻象之間的延遲為{0}秒",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "幻象之間的延遲為{0}秒",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "spellflux_frequency_+%_per_socketed_valid_spell"
+      "spellflux_frequency_+%_final"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -69954,7 +72970,7 @@
         "index_handlers": [
           []
         ],
-        "string": "幻象每能施放一種[Spell|法術]即增加{0}%幻象頻率",
+        "string": "{0}%更多幻象頻率",
         "reminder_text": null,
         "is_markup": null
       },
@@ -69974,101 +72990,7 @@
             "negate"
           ]
         ],
-        "string": "幻象每能施放一種[Spell|法術]即減少{0}%幻象頻率",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "spellflux_spell_damage_+%_final_if_matching_flux_cast"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[Empowered|強化][Spell|法術]傷害@{0}%更多",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[Empowered|強化][Spell|法術]傷害@{0}%更少",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "在下一幻象前施放相同的[Spell|法術]會[Empowered|強化]它\n[Empowered|強化]法術造成{0}%更多傷害",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "在下一幻象前施放相同的[Spell|法術]會[Empowered|強化]它\n[Empowered|強化]法術造成{0}%更少傷害",
+        "string": "{0}%更少幻象頻率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -70104,7 +73026,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊中時有 {0}% 機率阻礙敵人",
+        "string": "[HitDamage|擊中]時有 {0}% 機率阻礙敵人",
         "reminder_text": null,
         "is_markup": null
       },
@@ -70122,7 +73044,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊中時阻礙敵人",
+        "string": "[HitDamage|擊中]時阻礙敵人",
         "reminder_text": null,
         "is_markup": null
       }
@@ -72501,42 +75423,6 @@
   {
     "English": null,
     "ids": [
-      "skill_max_unleash_seals"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "最大封印@{0}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "support_apply_daze_on_warcry"
     ],
     "trade_stats": null,
@@ -73239,82 +76125,6 @@
   {
     "English": null,
     "ids": [
-      "support_corrupting_cry_corrupted_blood_damage_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second_2dp_if_required"
-          ]
-        ],
-        "string": "[CorruptedBlood|腐化之血]每秒[Physical|物理]傷害@{0}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "support_corrupting_cry_corrupted_blood_duration_ms"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[CorruptedBlood|腐化之血]持續時間@{0} 秒",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "support_crushing_stuns_crush_on_stun_ms"
     ],
     "trade_stats": null,
@@ -73389,7 +76199,7 @@
   {
     "English": null,
     "ids": [
-      "support_damage_+%_final_per_combo_stack"
+      "support_culmination_damage_+%_final_per_combo_stack"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -74142,118 +76952,6 @@
   {
     "English": null,
     "ids": [
-      "support_greater_spell_echo_area_of_effect_+%_per_repeat"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "每次重復增加 {0}% 範圍效果",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "每次重復減少 {0}% 範圍效果",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "support_greater_spell_echo_spell_damage_+%_final_per_repeat"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "每次重複造成 {0}% 更多法術傷害",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "每次重複造成 {0}% 更少法術傷害",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "support_grenade_damage_+%_final"
     ],
     "trade_stats": null,
@@ -74967,7 +77665,7 @@
         "index_handlers": [
           []
         ],
-        "string": "由此技能創造的碎裂地面有 {0}% 更多效果範圍",
+        "string": "由此技能創造的碎裂地面有 {0}% 更多範圍效果",
         "reminder_text": null,
         "is_markup": null
       },
@@ -74987,7 +77685,7 @@
             "negate"
           ]
         ],
-        "string": "由此技能創造的碎裂地面有 {0}% 更少效果範圍",
+        "string": "由此技能創造的碎裂地面有 {0}% 更少範圍效果",
         "reminder_text": null,
         "is_markup": null
       }
@@ -75558,62 +78256,6 @@
   {
     "English": null,
     "ids": [
-      "support_minion_offensive_stance_minion_damage_+%_final_while_you_have_puppet_master"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "當你有豢養狂熱時，召喚物造成 {0}% 更多傷害",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "當你有豢養狂熱時，召喚物造成 {0}% 更少傷害",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "support_minion_pact_user_life_%_removed_from_nearby_minion",
       "support_minion_pact_damage_+%_final"
     ],
@@ -75881,6 +78523,82 @@
   {
     "English": null,
     "ids": [
+      "intimidate_enemies_when_they_enter_your_presence_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "進入[Presence|存在範圍]的敵人的[Intimidate|威嚇]持續時間@{0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_mothers_ward_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_0dp"
+          ]
+        ],
+        "string": "每6秒為[Presence|存在範圍]內的友方提供持續@{0}秒的[Guard|守護]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "support_no_energy_shield_recharge_delay_for_duration_ms_on_stunned"
     ],
     "trade_stats": null,
@@ -76076,7 +78794,7 @@
         "index_handlers": [
           []
         ],
-        "string": "造成相當於所造成[Physical|物理]傷害 {0}% 的[Daze|目眩]累積",
+        "string": "造成等同於所造成[Physical|物理]傷害 {0}% 的[Daze|目眩]累積",
         "reminder_text": null,
         "is_markup": null
       }
@@ -76727,6 +79445,42 @@
   {
     "English": null,
     "ids": [
+      "support_slam_spend_X_ward_to_become_runic_boosted"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Ward|Runic Ward] spent for Boost@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "support_slashing_buff_duration_ms"
     ],
     "trade_stats": null,
@@ -77143,7 +79897,7 @@
         "index_handlers": [
           []
         ],
-        "string": "爆發效果範圍修正@{0}%",
+        "string": "[Cascadable|爆發]的範圍效果詞綴@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -77187,43 +79941,7 @@
           [],
           []
         ],
-        "string": "同時影響目標區域的兩側",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "support_spell_echo_area_of_effect_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "迴響效果範圍@{0}%",
+        "string": "往目標區域的兩側[Cascadable|爆發]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -77259,7 +79977,7 @@
         "index_handlers": [
           []
         ],
-        "string": "更多迴響效果範圍@{0}%",
+        "string": "更多迴響範圍效果@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -77295,7 +80013,7 @@
         "index_handlers": [
           []
         ],
-        "string": "初始效果有 {0}% 更多效果範圍",
+        "string": "初始效果有 {0}% 更多範圍效果",
         "reminder_text": null,
         "is_markup": null
       },
@@ -77315,7 +80033,7 @@
             "negate"
           ]
         ],
-        "string": "初始效果有 {0}% 更少效果範圍",
+        "string": "初始效果有 {0}% 更少範圍效果",
         "reminder_text": null,
         "is_markup": null
       }
@@ -77351,7 +80069,7 @@
         "index_handlers": [
           []
         ],
-        "string": "第一次迴響有 {0}% 更多效果範圍",
+        "string": "第一次迴響有 {0}% 更多範圍效果",
         "reminder_text": null,
         "is_markup": null
       },
@@ -77371,7 +80089,7 @@
             "negate"
           ]
         ],
-        "string": "第一次迴響有 {0}% 更少效果範圍",
+        "string": "第一次迴響有 {0}% 更少範圍效果",
         "reminder_text": null,
         "is_markup": null
       }
@@ -77407,7 +80125,7 @@
         "index_handlers": [
           []
         ],
-        "string": "第二次迴響有 {0}% 更多效果範圍",
+        "string": "第二次迴響有 {0}% 更多範圍效果",
         "reminder_text": null,
         "is_markup": null
       },
@@ -77427,7 +80145,7 @@
             "negate"
           ]
         ],
-        "string": "第二次迴響有 {0}% 更少效果範圍",
+        "string": "第二次迴響有 {0}% 更少範圍效果",
         "reminder_text": null,
         "is_markup": null
       }
@@ -77463,7 +80181,7 @@
         "index_handlers": [
           []
         ],
-        "string": "第三次迴響有 {0}% 更多效果範圍",
+        "string": "第三次迴響有 {0}% 更多範圍效果",
         "reminder_text": null,
         "is_markup": null
       },
@@ -77483,63 +80201,7 @@
             "negate"
           ]
         ],
-        "string": "第三次迴響有 {0}% 更少效果範圍",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "support_spell_echo_final_repeat_damage_+%_final"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "最終重複造成 {0}% 更多傷害",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "最終重複造成 {0}% 更少傷害",
+        "string": "第三次迴響有 {0}% 更少範圍效果",
         "reminder_text": null,
         "is_markup": null
       }
@@ -77575,7 +80237,45 @@
         "index_handlers": [
           []
         ],
-        "string": "迴響次數@{0}",
+        "string": "[Cascadable|迴響]次數@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_spell_rapid_fire_repeat_use_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Repeat|重複]時更少傷害@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -78406,6 +81106,42 @@
   {
     "English": null,
     "ids": [
+      "support_voranas_siege_hit_damage_+%_final_vs_isolated_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "對[Isolated|孤立]目標造成@{0}%更多[HitDamage|擊中]傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "support_warcry_consumes_up_to_X_rage",
       "support_enraged_warcry_+%_damage_final_for_exerted_attacks"
     ],
@@ -79130,6 +81866,80 @@
   {
     "English": null,
     "ids": [
+      "thorns_critical_hit_damage_bonus"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Thorns|荊棘][CriticalDamageBonus|暴擊傷害加成]@+{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "thorns_critical_strike_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_one_hundred_2dp_if_required"
+          ]
+        ],
+        "string": "[Thorns|荊棘][Critical|暴擊]率@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "thorns_damage_modifiers_apply_to_spell_damage"
     ],
     "trade_stats": null,
@@ -79158,6 +81968,348 @@
           []
         ],
         "string": "影響[Thorns|荊棘]傷害的詞綴同時套用至此技能的[Spell|法術]傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "thorns_effetive_total_chance_permyriad_for_hit_to_be_critical"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_one_hundred_2dp_if_required"
+          ]
+        ],
+        "string": "[Thorns|荊棘][Critical|暴擊]的[EffectiveChance|有效機率]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "thorns_minimum_chaos_damage",
+      "thorns_maximum_chaos_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Chaos|混沌][Thorns|荊棘]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "thorns_minimum_cold_damage",
+      "thorns_maximum_cold_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Cold|冰冷][Thorns|荊棘]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "thorns_minimum_fire_damage",
+      "thorns_maximum_fire_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Fire|火焰][Thorns|荊棘]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "thorns_minimum_lightning_damage",
+      "thorns_maximum_lightning_damage",
+      "thorns_lightning_damage_only_min_or_max"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Lightning|閃電][Thorns|荊棘]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Lightning|閃電][Thorns|荊棘]傷害@{0} 或 {1}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "thorns_minimum_physical_damage",
+      "thorns_maximum_physical_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Physical|物理][Thorns|荊棘]傷害@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "thorns_minimum_total_damage",
+      "thorns_maximum_total_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "總[Thorns|荊棘]傷害@{0} – {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -79212,6 +82364,62 @@
           []
         ],
         "string": "[Detonator|引爆]長矛時有 {0}% 的機率留下[ShockedGround|感電地面]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "time_of_need_global_life_regeneration_rate_granted_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff] grants {0}% increased Life Regeneration Rate",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff] grants {0}% reduced Life Regeneration Rate",
         "reminder_text": null,
         "is_markup": null
       }
@@ -79410,7 +82618,7 @@
   {
     "English": null,
     "ids": [
-      "total_number_of_projectiles_to_fire"
+      "total_number_of_projectiles_to_fire_from_stats"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -79437,63 +82645,7 @@
         "index_handlers": [
           []
         ],
-        "string": "每次使用發射[Projectile|投射物]數量@{0}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "totem_chaos_resistance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[Totem|圖騰]獲得 +{0}% [Chaos|混沌][Resistances|抗性]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[Totem|圖騰]失去 -{0}% [Chaos|混沌][Resistances|抗性]",
+        "string": "發射[Projectile|投射物]@{0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -80554,6 +83706,60 @@
   {
     "English": null,
     "ids": [
+      "trigger_on_heavy_stun_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% chance to [Trigger] when you [HeavyStun|Heavy Stun] an enemy",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Trigger|Triggers] when you [HeavyStun|Heavy Stun] an enemy",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "trigger_on_hit_against_rare_or_unique_if_no_marked_enemy"
     ],
     "trade_stats": null,
@@ -81142,7 +84348,7 @@
   {
     "English": null,
     "ids": [
-      "unleash_support_seal_gain_frequency_+%_while_channelling"
+      "trinity_%_physical_damage_to_convert_to_random_element_granted"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -81169,83 +84375,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你引導施放時，增加 {0}% 封印獲得頻率",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "你引導施放時，減少 {0}% 封印獲得頻率",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "unleash_support_seal_gain_frequency_+%_while_not_channelling"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "你沒有引導施放時，增加 {0}% 封印獲得頻率",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "你沒有引導施放時，減少 {0}% 封印獲得頻率",
+        "string": "{0}% of [Physical] damage [Conversion|Converted] to a random [ElementalDamage|Element]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -81621,7 +84751,7 @@
           [],
           []
         ],
-        "string": "增益使劈砍有[CullingStrike|撲殺]\n增益使劈砍有 {0}% 更多效果範圍\n增益使劈砍對[LowLife|貧血狀態]的敵人造成 {1}% 更多擊中傷害",
+        "string": "增益使劈砍有[CullingStrike|撲殺]\n增益使劈砍有 {0}% 更多範圍效果\n增益使劈砍對[LowLife|貧血狀態]的敵人造成 {1}% 更多擊中傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -82150,6 +85280,170 @@
   {
     "English": null,
     "ids": [
+      "verisium_infusion_do_not_expire"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[VerisiumInfusion|維里西姆灌注]不會消逝",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "verisium_infusion_duration_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%[VerisiumInfusion|維里西姆灌注]持續時間",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%[VerisiumInfusion|維里西姆灌注]持續時間",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%[VerisiumInfusion|維里西姆灌注]持續時間",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "verisium_infusion_skill_number_of_verisium_infusion_to_grant"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "生成{0}[VerisiumInfusion|維里西姆灌注]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "生成{0}[VerisiumInfusion|維里西姆灌注]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "virtual_aegis_unique_shield_max_value"
     ],
     "trade_stats": null,
@@ -82602,44 +85896,6 @@
   {
     "English": null,
     "ids": [
-      "virtual_deal_chaos_damage_per_minute_for_8_seconds_on_curse"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second_2dp_if_required"
-          ]
-        ],
-        "string": "對[Curse|受詛咒]目標的每秒[Chaos|混沌]傷害@{0}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "virtual_display_total_main_hand_chance_to_inflict_bleeding_on_hit_%"
     ],
     "trade_stats": null,
@@ -82956,6 +86212,62 @@
           []
         ],
         "string": "當你獲得疊層時傷害附近 {0} 個敵人",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "virtual_energy_shield_modified_amount_on_skill_use"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[EnergyShield|能量護盾]使用時獲得@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[EnergyShield|能量護盾]使用時獲得@{0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -83309,6 +86621,62 @@
   {
     "English": null,
     "ids": [
+      "virtual_life_modified_amount_on_skill_use"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "生命使用時獲得@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "生命使用時失去@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "virtual_main_hand_apply_X_armour_break_on_hit"
     ],
     "trade_stats": null,
@@ -83471,8 +86839,7 @@
   {
     "English": null,
     "ids": [
-      "active_skill_buff_stack_gain_frequency_ms",
-      "virtual_maximum_number_of_arctic_armour_stationary_stacks"
+      "virtual_mana_modified_amount_on_skill_use"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -83488,27 +86855,38 @@
       {
         "condition": [
           {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          },
-          {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "魔力使用時獲得@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
           "#"
         ],
         "index_handlers": [
           [
-            "milliseconds_to_seconds_2dp_if_required"
-          ],
-          []
+            "negate"
+          ]
         ],
-        "string": "每秒獲得 1 層，最多可達 {1} 層",
+        "string": "魔力使用時失去@{0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -83863,7 +87241,43 @@
   {
     "English": null,
     "ids": [
-      "virtual_number_of_chains"
+      "display_number_of_chains_for_beams"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Chain|連鎖]數量@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_number_of_chains_for_projectiles"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -84223,7 +87637,7 @@
   {
     "English": null,
     "ids": [
-      "virtual_projectile_number_to_split"
+      "display_projectile_number_to_split"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -84607,44 +88021,6 @@
           []
         ],
         "string": "你生命或能量護盾承受的 {0}% 傷害先由增益效果扣除\n增益效果可以承受 {1} 傷害",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "virtual_support_anticipation_charge_gain_interval_ms"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "獲得封印間隔@{0} 秒",
         "reminder_text": null,
         "is_markup": null
       }
@@ -85446,61 +88822,7 @@
         "index_handlers": [
           []
         ],
-        "string": "限制 {0} 道裂縫",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "volcanic_fissure_%_chance_repeat_aftershocks"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "觸發的[Aftershock|餘震]有 {0}% 機率重複觸發",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "觸發的[Aftershock|餘震]有 {0}% 機率重複觸發",
+        "string": "[Limit|上限] {0} 道裂縫",
         "reminder_text": null,
         "is_markup": null
       }
@@ -87538,7 +90860,7 @@
         "index_handlers": [
           []
         ],
-        "string": "竭盡[Attack|攻擊]增加 {0}% 效果範圍",
+        "string": "竭盡[Attack|攻擊]增加 {0}% 範圍效果",
         "reminder_text": null,
         "is_markup": null
       },
@@ -87558,7 +90880,7 @@
             "negate"
           ]
         ],
-        "string": "竭盡[Attack|攻擊]減少 {0}% 效果範圍",
+        "string": "竭盡[Attack|攻擊]減少 {0}% 範圍效果",
         "reminder_text": null,
         "is_markup": null
       }
@@ -87594,7 +90916,7 @@
         "index_handlers": [
           []
         ],
-        "string": "每個前次透過此戰吼竭盡的[Attack|攻擊]，使竭盡[Attack|攻擊]增加 {0}% 效果範圍",
+        "string": "每個前次透過此戰吼竭盡的[Attack|攻擊]，使竭盡[Attack|攻擊]增加 {0}% 範圍效果",
         "reminder_text": null,
         "is_markup": null
       },
@@ -87614,7 +90936,7 @@
             "negate"
           ]
         ],
-        "string": "每個前次透過此戰吼竭盡的[Attack|攻擊]，使竭盡[Attack|攻擊]減少 {0}% 效果範圍",
+        "string": "每個前次透過此戰吼竭盡的[Attack|攻擊]，使竭盡[Attack|攻擊]減少 {0}% 範圍效果",
         "reminder_text": null,
         "is_markup": null
       }
@@ -88646,7 +91968,7 @@
             "one_hundred_divide_by_value"
           ]
         ],
-        "string": "每對敵人造成相當於其[AilmentThreshold|異常狀態門檻] {0}% 的[Chaos|混沌]傷害，施加[Withered|凋零]的機率@1%",
+        "string": "每對敵人造成等同於其[AilmentThreshold|異常狀態門檻] {0}% 的[Chaos|混沌]傷害，施加[Withered|凋零]的機率@1%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -88922,7 +92244,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] Wolves are permanent and not-reviving. Maximum number of wolves {0}. If you already have maximum wolves it will heal a wolf with the lowest health instead of summoning a new one.",
+        "string": "[DNT-UNUSED] 惡狼為永久且不會復活。最大數量惡狼為 {0}。如果你已經有最大數量的惡狼，則會回復血量最低的惡狼而不會召喚一隻新的。",
         "reminder_text": null,
         "is_markup": null
       },
@@ -88940,7 +92262,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] Wolves are permanent and not-reviving. Maximum number of wolves {0}. If you already have maximum wolves it will heal a wolf with the lowest health instead of summoning a new one.",
+        "string": "[DNT-UNUSED] 惡狼為永久且不會復活。最大數量惡狼為 {0}。如果你已經有最大數量的惡狼，則會回復血量最低的惡狼而不會召喚一隻新的。",
         "reminder_text": null,
         "is_markup": null
       }
@@ -88976,7 +92298,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] Summons {0} additonal wolves per each Endurance charge consumed",
+        "string": "[DNT-UNUSED] 每消耗一顆耐力球則召喚{0}隻額外惡狼",
         "reminder_text": null,
         "is_markup": null
       }
@@ -89055,62 +92377,6 @@
           ]
         ],
         "string": "岩漿消散後的 {0} 秒內無法施展\n灌注岩漿的格擋",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "support_spell_rapid_fire_repeat_use_damage_+%_final"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "再次觸發時，此技能的效果造成 {0}% 更多傷害",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "再次觸發時，此技能的效果造成 {0}% 更少傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -89390,7 +92656,7 @@
         "index_handlers": [
           []
         ],
-        "string": "再生腐屍的重擊[Attack|攻擊]增加 {0}% 效果範圍",
+        "string": "再生腐屍的重擊[Attack|攻擊]增加 {0}% 範圍效果",
         "reminder_text": null,
         "is_markup": null
       },
@@ -89410,7 +92676,7 @@
             "negate"
           ]
         ],
-        "string": "再生腐屍的重擊[Attack|攻擊]減少 {0}% 效果範圍",
+        "string": "再生腐屍的重擊[Attack|攻擊]減少 {0}% 範圍效果",
         "reminder_text": null,
         "is_markup": null
       }
@@ -89606,7 +92872,7 @@
           [],
           []
         ],
-        "string": "範圍內每 5 敵人[Power|強度]，[Empowered|強化][Attack|攻擊]會獲得相當於傷害 {0}% 的[Fire|火焰]傷害",
+        "string": "範圍內每 5 敵人[Power|強度]，[Empowered|強化][Attack|攻擊]會獲得等同於傷害 {0}% 的[Fire|火焰]傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -89638,7 +92904,7 @@
           [],
           []
         ],
-        "string": "範圍內每 5 敵人[Power|強度]，[Empowered|強化][Attack|攻擊]會[Gain|獲得]相當於傷害 {0}% 的[Fire|火焰]傷害，最高可達 {1}%",
+        "string": "範圍內每 5 敵人[Power|強度]，[Empowered|強化][Attack|攻擊]會[Gain|獲得]等同於傷害 {0}% 的[Fire|火焰]傷害，最高可達 {1}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -89670,7 +92936,7 @@
           [],
           []
         ],
-        "string": "範圍內每 5 敵人[Power|強度]，[Empowered|強化][Attack|攻擊]會[Gain|獲得]相當於傷害 {0}% 的[Fire|火焰]傷害，最高可達 {1}%",
+        "string": "範圍內每 5 敵人[Power|強度]，[Empowered|強化][Attack|攻擊]會[Gain|獲得]等同於傷害 {0}% 的[Fire|火焰]傷害，最高可達 {1}%",
         "reminder_text": null,
         "is_markup": null
       }

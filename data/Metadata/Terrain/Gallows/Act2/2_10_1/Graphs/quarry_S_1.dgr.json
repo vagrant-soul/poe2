@@ -7,7 +7,7 @@
     ],
     "MasterFile": "Metadata/Terrain/Gallows/Act2/2_10_1/master.tsi"
   },
-  "edge_count": 21,
+  "edge_count": 23,
   "edge_types": {
     "Metadata/Terrain/Gallows/Act2/2_10_1/Rooms/cavern_room_thickwall.et": {
       "id": "CavernRoomThickWall",
@@ -240,7 +240,7 @@
       "color": "#FF141414"
     },
     {
-      "from_": 1,
+      "from_": 24,
       "to": 11,
       "path": [],
       "unknown": [
@@ -506,6 +506,54 @@
     {
       "from_": 22,
       "to": 6,
+      "path": [],
+      "unknown": [
+        100,
+        0,
+        0,
+        "Metadata/Terrain/Dungeon/rooms.et",
+        0,
+        0,
+        0,
+        "",
+        0,
+        "",
+        0,
+        0,
+        "P",
+        "N",
+        1
+      ],
+      "edge_type": "Metadata/Terrain/Dungeon/rooms.et",
+      "color": "#FF5A5A5A"
+    },
+    {
+      "from_": 1,
+      "to": 24,
+      "path": [],
+      "unknown": [
+        100,
+        0,
+        0,
+        "Metadata/Terrain/Gallows/Act2/2_10_1/Rooms/cavern_room_thickwall.et",
+        0,
+        10,
+        0,
+        "Metadata/Terrain/Dungeon/rooms.et",
+        0,
+        "",
+        0,
+        0,
+        "I",
+        "N",
+        1
+      ],
+      "edge_type": "Metadata/Terrain/Gallows/Act2/2_10_1/Rooms/cavern_room_thickwall.et",
+      "color": null
+    },
+    {
+      "from_": 24,
+      "to": 23,
       "path": [],
       "unknown": [
         100,
@@ -908,7 +956,7 @@
     "Critters": "critters.clt",
     "FileGroups": null
   },
-  "node_count": 23,
+  "node_count": 25,
   "numbers": [
     0
   ],
@@ -941,7 +989,7 @@
     {
       "numbers": [
         19,
-        9,
+        21,
         1
       ],
       "room": "checkpoint1",
@@ -1132,7 +1180,7 @@
         "V",
         0
       ],
-      "x": 127,
+      "x": 104,
       "y": 127
     },
     {
@@ -1265,11 +1313,9 @@
       "numbers": [
         14
       ],
-      "room": "landmark",
-      "strings": [
-        "unique1"
-      ],
-      "transform": "(best)",
+      "room": "jamanra",
+      "strings": [],
+      "transform": "R180",
       "unknown": [
         100,
         0,
@@ -1283,8 +1329,8 @@
         "N",
         0
       ],
-      "x": 150,
-      "y": 150
+      "x": 127,
+      "y": 127
     },
     {
       "numbers": [
@@ -1309,7 +1355,7 @@
         1
       ],
       "x": 173,
-      "y": 150
+      "y": 127
     },
     {
       "numbers": [
@@ -1377,7 +1423,7 @@
         "V",
         0
       ],
-      "x": 127,
+      "x": 104,
       "y": 242
     },
     {
@@ -1455,7 +1501,7 @@
         20,
         19
       ],
-      "room": "jamanra",
+      "room": "pit",
       "strings": [],
       "transform": "R270",
       "unknown": [
@@ -1473,6 +1519,56 @@
       ],
       "x": 150,
       "y": 12
+    },
+    {
+      "numbers": [
+        22
+      ],
+      "room": "landmark",
+      "strings": [
+        "unique1"
+      ],
+      "transform": "(best)",
+      "unknown": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        "N",
+        0
+      ],
+      "x": 150,
+      "y": 81
+    },
+    {
+      "numbers": [
+        21,
+        22,
+        9
+      ],
+      "room": "",
+      "strings": [],
+      "transform": "(best)",
+      "unknown": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        "N",
+        0
+      ],
+      "x": 127,
+      "y": 81
     }
   ],
   "room_set": [
@@ -1625,11 +1721,20 @@
       "tile_parent": null
     },
     {
-      "file": "Metadata/Terrain/Gallows/Act2/2_10_1/Rooms/Unique/landmark_jamanra_02.arm",
+      "file": "Metadata/Terrain/Gallows/Act2/2_10_1/Rooms/Unique/landmark_pit_01.arm",
       "prefix": null,
       "suffix": null,
       "tile_tag": null,
-      "room_tag": "jamanra",
+      "room_tag": "pit",
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Gallows/Act2/2_10_1/Rooms/Unique/landmark_pit_02.arm",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": "pit",
       "tile_tgt": null,
       "tile_parent": null
     },
@@ -2113,12 +2218,21 @@
       "tile_parent": null
     },
     {
+      "file": "Metadata/Terrain/Desert/Quarry/Features/JamanraRitualSite_02.tdt",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": "ritualsite",
+      "room_tag": null,
+      "tile_tgt": "Art/Models/Terrain/Desert/Quarry/JamanraRitualSite_02.tgt",
+      "tile_parent": null
+    },
+    {
       "file": "Metadata/Terrain/Desert/Quarry/Features/Maraketh_Entrance_01.tdt",
       "prefix": null,
       "suffix": null,
       "tile_tag": "MarakethEnt",
       "room_tag": null,
-      "tile_tgt": "Art/Models/Terrain/Desert/Quarry/Maraketh_Entrance_01.tgt",
+      "tile_tgt": "Art/Models/Terrain/Desert/Quarry/Maraketh_Entrance_02.tgt",
       "tile_parent": null
     },
     {

@@ -7,7 +7,7 @@
     ],
     "MasterFile": "Metadata/Terrain/Gallows/Act2/2_2/master.tsi"
   },
-  "edge_count": 28,
+  "edge_count": 31,
   "edge_types": {
     "Metadata/Terrain/Dungeon/rooms.et": {
       "id": "rooms",
@@ -24,6 +24,10 @@
     "Metadata/Terrain/Gallows/Act2/2_2/Rooms/cavepath_intro_rooms.et": {
       "id": "CavePathIntroRooms",
       "color": "#ffbb8160"
+    },
+    "Metadata/Terrain/Gallows/Act2/2_2/Rooms/cavepath_outro_rooms.et": {
+      "id": "CavePathOutroRooms",
+      "color": "#ff8f4b35"
     }
   },
   "edges": [
@@ -580,7 +584,7 @@
       "color": "#FF141414"
     },
     {
-      "from_": 25,
+      "from_": 29,
       "to": 5,
       "path": [],
       "unknown": [
@@ -589,7 +593,7 @@
         0,
         "Metadata/Terrain/Dungeon/rooms.et",
         100,
-        100,
+        0,
         0,
         "",
         66,
@@ -678,6 +682,78 @@
     {
       "from_": 28,
       "to": 4,
+      "path": [],
+      "unknown": [
+        100,
+        0,
+        0,
+        "Metadata/Terrain/Tools/void.et",
+        0,
+        0,
+        0,
+        "",
+        0,
+        "",
+        0,
+        0,
+        "P",
+        "V",
+        1
+      ],
+      "edge_type": "Metadata/Terrain/Tools/void.et",
+      "color": "#FF141414"
+    },
+    {
+      "from_": 30,
+      "to": 29,
+      "path": [],
+      "unknown": [
+        100,
+        0,
+        0,
+        "Metadata/Terrain/Gallows/Act2/2_2/Rooms/cavepath_outro_rooms.et",
+        100,
+        0,
+        0,
+        "",
+        66,
+        "",
+        0,
+        0,
+        "P",
+        "N",
+        1
+      ],
+      "edge_type": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/cavepath_outro_rooms.et",
+      "color": "#ff8f4b35"
+    },
+    {
+      "from_": 25,
+      "to": 30,
+      "path": [],
+      "unknown": [
+        100,
+        0,
+        0,
+        "Metadata/Terrain/Gallows/Act2/2_2/Rooms/cavepath_outro_rooms.et",
+        100,
+        0,
+        0,
+        "",
+        66,
+        "",
+        0,
+        0,
+        "P",
+        "N",
+        1
+      ],
+      "edge_type": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/cavepath_outro_rooms.et",
+      "color": "#ff8f4b35"
+    },
+    {
+      "from_": 31,
+      "to": 32,
       "path": [],
       "unknown": [
         100,
@@ -805,7 +881,7 @@
     "Critters": "critters.clt",
     "FileGroups": null
   },
-  "node_count": 29,
+  "node_count": 33,
   "numbers": [
     0
   ],
@@ -815,7 +891,7 @@
         12,
         0
       ],
-      "room": "bigstatue2",
+      "room": "bigstatue",
       "strings": [],
       "transform": "R180",
       "unknown": [
@@ -825,7 +901,7 @@
         0,
         0,
         0,
-        "-23",
+        0,
         0,
         0,
         "N",
@@ -1429,9 +1505,9 @@
     },
     {
       "numbers": [
-        23
+        29
       ],
-      "room": "exit",
+      "room": "exit_outro",
       "strings": [
         "entrance2"
       ],
@@ -1443,14 +1519,14 @@
         0,
         0,
         0,
-        "-23",
-        23,
-        23,
+        0,
+        0,
+        0,
         "N",
         0
       ],
       "x": 12,
-      "y": 58
+      "y": 81
     },
     {
       "numbers": [
@@ -1522,6 +1598,100 @@
       ],
       "x": 12,
       "y": 12
+    },
+    {
+      "numbers": [
+        23,
+        28
+      ],
+      "room": "",
+      "strings": [],
+      "transform": "(best)",
+      "unknown": [
+        100,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        "N",
+        0
+      ],
+      "x": 58,
+      "y": 58
+    },
+    {
+      "numbers": [
+        28,
+        29
+      ],
+      "room": "",
+      "strings": [],
+      "transform": "(best)",
+      "unknown": [
+        100,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        "N",
+        0
+      ],
+      "x": 12,
+      "y": 58
+    },
+    {
+      "numbers": [
+        30
+      ],
+      "room": "",
+      "strings": [],
+      "transform": "(best)",
+      "unknown": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        "V",
+        0
+      ],
+      "x": 35,
+      "y": 81
+    },
+    {
+      "numbers": [
+        30
+      ],
+      "room": "",
+      "strings": [],
+      "transform": "(best)",
+      "unknown": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        "V",
+        0
+      ],
+      "x": 35,
+      "y": 104
     }
   ],
   "room_set": [
@@ -1591,9 +1761,28 @@
       "tile_parent": null
     },
     {
-      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Unique/exit_outro_01.arm",
+      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Unique/exit_outro_02.arm",
       "prefix": null,
-      "suffix": null,
+      "suffix": [
+        "I",
+        "R90",
+        "FR180",
+        "FR270"
+      ],
+      "tile_tag": null,
+      "room_tag": "exit_outro",
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Unique/exit_outro_03.arm",
+      "prefix": null,
+      "suffix": [
+        "R180",
+        "R270",
+        "FI",
+        "FR90"
+      ],
       "tile_tag": null,
       "room_tag": "exit_outro",
       "tile_tgt": null,
@@ -1720,7 +1909,7 @@
       "prefix": null,
       "suffix": null,
       "tile_tag": null,
-      "room_tag": "introstairs",
+      "room_tag": "outrostairs",
       "tile_tgt": null,
       "tile_parent": null
     },
@@ -1729,7 +1918,7 @@
       "prefix": null,
       "suffix": null,
       "tile_tag": null,
-      "room_tag": "introstairs",
+      "room_tag": "outrostairs",
       "tile_tgt": null,
       "tile_parent": null
     },
@@ -1738,7 +1927,7 @@
       "prefix": null,
       "suffix": null,
       "tile_tag": null,
-      "room_tag": "introstairs",
+      "room_tag": "outrostairs",
       "tile_tgt": null,
       "tile_parent": null
     },
@@ -1747,7 +1936,7 @@
       "prefix": null,
       "suffix": null,
       "tile_tag": null,
-      "room_tag": "introstairs",
+      "room_tag": "outrostairs",
       "tile_tgt": null,
       "tile_parent": null
     },
@@ -2575,7 +2764,7 @@
       "tile_parent": null
     },
     {
-      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Cavern/cavernwall_Cc_01.arm",
+      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Outro/outro_Cc_01.arm",
       "prefix": [
         "1"
       ],
@@ -2586,7 +2775,7 @@
       "tile_parent": null
     },
     {
-      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Cavern/cavernwall_Cc_02.arm",
+      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Outro/outro_Cc_02.arm",
       "prefix": [
         "1"
       ],
@@ -2597,7 +2786,7 @@
       "tile_parent": null
     },
     {
-      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Cavern/cavernwall_Cv_01.arm",
+      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Outro/outro_Cv_01.arm",
       "prefix": [
         "1"
       ],
@@ -2608,7 +2797,7 @@
       "tile_parent": null
     },
     {
-      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Cavern/cavernwall_St_01.arm",
+      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Outro/outro_St_01.arm",
       "prefix": [
         "1"
       ],
@@ -2619,7 +2808,7 @@
       "tile_parent": null
     },
     {
-      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Cavern/cavernwall_St_02.arm",
+      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Outro/outro_St_02.arm",
       "prefix": [
         "1"
       ],
@@ -2630,7 +2819,7 @@
       "tile_parent": null
     },
     {
-      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Cavern/cavernwall_St_03.arm",
+      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Outro/outro_St_03.arm",
       "prefix": [
         "1"
       ],
@@ -2641,7 +2830,7 @@
       "tile_parent": null
     },
     {
-      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Cavern/path_to_cavernwall_Cc_01.arm",
+      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Outro/path_to_outro_Cc_01.arm",
       "prefix": [
         "1"
       ],
@@ -2652,7 +2841,7 @@
       "tile_parent": null
     },
     {
-      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Cavern/path_to_cavernwall_St_01.arm",
+      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Outro/path_to_outro_Cc_02.arm",
       "prefix": [
         "1"
       ],
@@ -2663,7 +2852,18 @@
       "tile_parent": null
     },
     {
-      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Cavern/path_to_cavernwall_St_02.arm",
+      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Outro/path_to_outro_St_01.arm",
+      "prefix": [
+        "1"
+      ],
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": null,
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Gallows/Act2/2_2/Rooms/Outro/path_to_outro_St_02.arm",
       "prefix": [
         "1"
       ],
@@ -2887,6 +3087,15 @@
       ],
       "suffix": null,
       "tile_tag": "forced_blank",
+      "room_tag": null,
+      "tile_tgt": "Art/Models/Terrain/Desert/CavePath/Blank_01_01.tgt",
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Desert/CavePath/Forced_Blank_01_02.tdt",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": "forcedblank",
       "room_tag": null,
       "tile_tgt": "Art/Models/Terrain/Desert/CavePath/Blank_01_01.tgt",
       "tile_parent": null

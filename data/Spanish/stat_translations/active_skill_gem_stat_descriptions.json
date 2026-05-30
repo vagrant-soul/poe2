@@ -214,6 +214,50 @@
   {
     "English": null,
     "ids": [
+      "off_hand_weapon_minimum_fire_damage",
+      "off_hand_weapon_maximum_fire_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "De {0} a {1} de daño de [Fire|fuego] base de la mano secundaria",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "off_hand_base_weapon_attack_duration_ms"
     ],
     "trade_stats": null,
@@ -242,6 +286,50 @@
           ]
         ],
         "string": "El tiempo de [Attack|ataque] base de la mano secundaria es de {0} segundos",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "off_hand_weapon_minimum_cold_damage",
+      "off_hand_weapon_maximum_cold_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "De {0} a {1} de daño de [Cold|hielo] base de la mano secundaria",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1378,60 +1466,6 @@
   {
     "English": null,
     "ids": [
-      "base_spell_repeat_count"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "El hechizo se repite una vez",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "El hechizo se repite {0} veces",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "base_number_of_golems_allowed"
     ],
     "trade_stats": null,
@@ -1752,60 +1786,6 @@
           []
         ],
         "string": "Los aumentos y las reducciones a la velocidad de lanzamiento de hechizos también se aplican a la frecuencia de activación de esta habilidad",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "base_melee_attack_repeat_count"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Este [Attack|ataque] se repite {0} vez adicional",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Este [Attack|ataque] se repite {0} veces adicionales",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2396,6 +2376,44 @@
     "Portuguese": null,
     "Russian": null,
     "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Conversion|Convierte] el {0}% del daño [Physical|físico] en daño de [Lightning|rayo]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Conversion|Convierte] -{0}% del daño [Physical|físico] en daño de [Lightning|rayo]",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -5220,6 +5238,42 @@
   {
     "English": null,
     "ids": [
+      "base_modifiers_to_number_of_projectiles_instead_apply_to_repeats"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los modificadores de cantidad de proyectiles se aplican a la cantidad de veces que se [Repeat|repite] esta habilidad",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_number_of_arrows"
     ],
     "trade_stats": null,
@@ -5354,6 +5408,60 @@
           []
         ],
         "string": "Máximo de centinelas de pureza que puedes invocar: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_fissures"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Crea {0} fisura",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Crea {0} fisuras",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5958,6 +6066,42 @@
           ]
         ],
         "string": "Área de efecto reducida un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_skill_cannot_generate_energy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Esta habilidad no puede hacer que las [Meta|metahabilidades] generen [Energy|energía]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12006,6 +12150,42 @@
   {
     "English": null,
     "ids": [
+      "modifiers_to_number_of_projectiles_instead_apply_to_number_of_targets_projectile_pierces"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los modificadores de cantidad de [Projectile|proyectiles] se aplican a la cantidad de objetivos [Pierce|perforados] en su lugar",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "modifiers_to_number_of_projectiles_instead_apply_to_splitting"
     ],
     "trade_stats": null,
@@ -12032,42 +12212,6 @@
           []
         ],
         "string": "Los modificadores que afectan a la cantidad de proyectiles\nse aplican en su lugar a la cantidad de objetivos hacia los cuales se dividen los proyectiles",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "modifiers_to_projectile_count_do_not_apply"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "La cantidad de proyectiles no se puede modificar",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12277,12 +12421,12 @@
           }
         ],
         "format": [
-          "ignore"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Se encadena una vez adicional",
+        "string": "Se encadena {0} vez",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12300,7 +12444,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Se encadena {0} veces adicionales",
+        "string": "Se encadena {0} veces",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12563,7 +12707,7 @@
   {
     "English": null,
     "ids": [
-      "number_of_projectiles_to_fire_+%_final_per_steel_ammo_consumed"
+      "number_of_projectiles_cannot_be_modified"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -12578,37 +12722,17 @@
         "condition": [
           {
             "min": 1,
-            "max": null,
+            "max": 1,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Dispara un {0}% más de [Projectile|proyectiles] por cada esquirla de acero consumida",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "Dispara un {0}% menos de [Projectile|proyectiles] por cada esquirla de acero consumida",
+        "string": "La cantidad de [Projectile|proyectiles] no se puede modificar",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12751,50 +12875,6 @@
           []
         ],
         "string": "Agrega de {0} a {1} de daño [Physical|físico] por cada 5 de [Armour|armadura] en el [Shield|escudo]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "off_hand_weapon_minimum_fire_damage",
-      "off_hand_weapon_maximum_fire_damage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "#"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "De {0} a {1} de daño de [Fire|fuego] base de la mano secundaria",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13217,60 +13297,6 @@
   {
     "English": null,
     "ids": [
-      "primary_projectile_chains_+"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "El proyectil primario se encadena {0} vez",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "El proyectil primario se encadena {0} veces",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "prismatic_rain_beam_base_frequency_ms"
     ],
     "trade_stats": null,
@@ -13349,12 +13375,12 @@
           }
         ],
         "format": [
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "[Pierce|Perfora] al primer objetivo [HitDamage|impactado]",
+        "string": "[Pierce|Perfora] {0} objetivo",
         "reminder_text": null,
         "is_markup": null
       },
@@ -13372,7 +13398,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Pierce|Perfora] a los {0} primeros objetivos [HitDamage|impactados]",
+        "string": "[Pierce|Perfora] {0} objetivos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13453,7 +13479,25 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los proyectiles se dividen hacia {0} objetivos",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -14593,6 +14637,42 @@
           ]
         ],
         "string": "Daño de hechizos reducido un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "spirit_vessel_damage_+%_final_per_skill_socketed_in_meta_gem"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Recipiente de espíritu inflige un {0}% más de daño por cada habilidad diferente que esté engarzada",
         "reminder_text": null,
         "is_markup": null
       }

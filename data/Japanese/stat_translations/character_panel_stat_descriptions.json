@@ -712,14 +712,14 @@
           }
         ],
         "format": [
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           [
             "divide_by_one_hundred_2dp_if_required"
           ]
         ],
-        "string": "[Thorns|棘][Critical|クリティカルヒット][EffectiveChance|実効確率]",
+        "string": "[Thorns|棘][EffectiveChance|実効][Critical|クリティカルヒット]率@+{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -838,7 +838,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -867,7 +867,8 @@
     "English": null,
     "ids": [
       "thorns_minimum_lightning_damage",
-      "thorns_maximum_lightning_damage"
+      "thorns_maximum_lightning_damage",
+      "thorns_lightning_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -882,20 +883,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "[Lightning|雷][Thorns|棘]ダメージ@{0} - {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Lightning|雷][Thorns|棘]ダメージ@{0}または{1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -926,7 +966,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }

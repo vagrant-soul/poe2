@@ -38,6 +38,42 @@
   {
     "English": null,
     "ids": [
+      "meta_skill_base_costs_equals_%_total_base_costs_from_all_socketed_skills"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "이 스킬의 기본 소모량이 장착된 스킬들의\n기본 소모량의 {0}%와 동일",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "skeletal_chains_aoe_%_health_dealt_as_chaos_damage"
     ],
     "trade_stats": null,
@@ -1263,60 +1299,6 @@
           []
         ],
         "string": "[Melee|근접] 무기 사용 시 스킬 사용 불가",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "spell_repeat_count"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "주문 1회 추가 반복",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "주문 {0}회 추가 반복",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3472,7 +3454,7 @@
   {
     "English": null,
     "ids": [
-      "projectile_number_of_targets_to_pierce",
+      "display_projectile_number_of_targets_to_pierce",
       "virtual_always_pierce",
       "virtual_projectiles_cannot_pierce"
     ],
@@ -3533,7 +3515,7 @@
           }
         ],
         "format": [
-          "ignore",
+          "#",
           "ignore",
           "ignore"
         ],
@@ -3542,7 +3524,7 @@
           [],
           []
         ],
-        "string": "투사체가 대상 1개를 [Pierce|관통]",
+        "string": "투사체가 대상 {0}개를 [Pierce|관통]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3607,60 +3589,6 @@
           []
         ],
         "string": "투사체가 모든 대상 [Pierce|관통]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "primary_projectile_display_targets_to_pierce"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "주 투사체가 대상 1개를 관통",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "주 투사체가 대상 {0}개를 관통",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5237,6 +5165,80 @@
     "German": null,
     "Japanese": null,
     "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "소환수가 주는 피해 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "소환수가 주는 피해 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "virtual_minion_damage_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "소환수 피해 속성@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -10202,42 +10204,6 @@
   {
     "English": null,
     "ids": [
-      "attack_repeat_count"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[Attack|공격] {0}회 반복",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "add_power_charge_on_critical_strike_%"
     ],
     "trade_stats": null,
@@ -15127,9 +15093,11 @@
           "+#"
         ],
         "index_handlers": [
-          []
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
         ],
-        "string": "[Melee|근접] 타격 범위 {0}",
+        "string": "[Melee|근접] [Strike|타격] 범위 {0}미터",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17676,6 +17644,44 @@
   {
     "English": null,
     "ids": [
+      "ancestral_warrior_totem_total_use_time_%_as_idle_after_animation"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "multiplicative_damage_modifier"
+          ]
+        ],
+        "string": "장착된 [Attack|공격] 시간 {0}%마다 혼백 전사 생성",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "totem_elemental_resistance_%"
     ],
     "trade_stats": null,
@@ -17699,6 +17705,62 @@
           []
         ],
         "string": "[Totem|토템]이 모든 [ElementalDamage|원소] 저항 {0}% 획득",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "totem_chaos_resistance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Totem|토템]이 [Chaos|카오스] [Resistances|저항] +{0}% 획득",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Totem|토템]이 [Chaos|카오스] [Resistances|저항] -{0}% 상실",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17843,6 +17905,80 @@
           []
         ],
         "string": "동결 불가",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_knights_ferocity_crush_on_hit_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[HitDamage|명중] 시 [Crush|타쇄] 지속시간@{0}초",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "crushed_target_%_physical_damage_taken_as_armour_break"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Crushed|타쇄]된 대상이 받는 [Physical|물리] 피해가 [ArmourBreak|방어구 파괴]@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -19727,6 +19863,62 @@
   {
     "English": null,
     "ids": [
+      "active_skill_damaging_ailment_effect_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "유발하는 [DamagingAilments|피해를 주는 상태 이상]의 [BuffMagnitude|강도] {0}% 증폭",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "유발하는 [DamagingAilments|피해를 주는 상태 이상]의 [BuffMagnitude|강도] {0}% 감폭",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "active_skill_electrocutes_as_though_dealt_damage_+%_final"
     ],
     "trade_stats": null,
@@ -19770,6 +19962,42 @@
           ]
         ],
         "string": "[Electrocute|전기 처형] 축적 {0}% 감폭",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "active_skill_generates_mp_%_glory_per_chaos_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "적에게 [Chaos|카오스] [HitDamage|명중] 피해를 주거나 적에게 [Chaos|카오스] 지속 피해 [Debuff|디버프]를 유발하면 [Power|몬스터 위세]의 {0}%를 이 스킬의 [Glory|영광]으로 생성",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21380,6 +21608,24 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[HitDamage|명중] 시 {0}% 확률로 추가 [Combo|연계] 축적",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 1,
             "max": 99,
             "negated": null
@@ -21409,7 +21655,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[HitDamage|명중] 시 추가 [Combo|연계] 축적",
+        "string": "[HitDamage|명중] 시 추가 [Combo|연계] 1 축적",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21627,8 +21873,7 @@
   {
     "English": null,
     "ids": [
-      "alchemists_mark_igniter_creates_burning_ground_%_ignite_damage",
-      "alchemists_mark_poisoner_creates_caustic_ground_%_poison_damage"
+      "alchemists_boon_attack_speed_granted_+%_during_life_flask"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -21642,7 +21887,58 @@
             "min": 1,
             "max": null,
             "negated": null
-          },
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "아무 생명력 [Flask|플라스크]나 효과를 받는 동안 [Attack|공격] 속도 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "아무 생명력 [Flask|플라스크]나 효과를 받는 동안 [Attack|공격] 속도 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "alchemists_boon_cast_speed_granted_+%_during_mana_flask"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
           {
             "min": 1,
             "max": null,
@@ -21650,14 +21946,32 @@
           }
         ],
         "format": [
-          "#",
           "#"
         ],
         "index_handlers": [
-          [],
           []
         ],
-        "string": "용암 지대가 적에게 유발된 가장 강한 점화의 초당 화염 피해의 {0}%를 줌\n부식성 지대가 적에게 유발된 가장 강한 중독의 초당 카오스 피해의 {1}%를 줌\n각 지대 효과는 1초마다 최대 1번 만들 수 있음",
+        "string": "아무 마나 [Flask|플라스크]나 효과를 받는 동안 시전 속도 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "아무 마나 [Flask|플라스크]나 효과를 받는 동안 시전 속도 {0}% 감소",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21779,6 +22093,42 @@
   {
     "English": null,
     "ids": [
+      "always_chain_from_cursed_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Curse|저주]받은 대상으로부터 대상의 수와 상관없이 [Chain|연쇄] 가능",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "always_chain_from_shocked_enemies"
     ],
     "trade_stats": null,
@@ -21801,7 +22151,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Shock|감전]된 적에게서 항상 [Chain|연쇄]됨",
+        "string": "[Shock|감전]된 대상으로부터 대상의 수와 상관없이 [Chain|연쇄] 가능",
         "reminder_text": null,
         "is_markup": null
       }
@@ -22731,6 +23081,246 @@
   {
     "English": null,
     "ids": [
+      "archon_of_chayula_physical_and_chaos_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "부여되는 [Physical|물리] 및 [Chaos|카오스] 피해 증폭@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "부여하는 [Physical|물리] 및 [Chaos|카오스] 피해 {0}% 증폭",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "archon_of_chayula_withered_on_hit_for_4_seconds_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "부여되는 [Withered|위축] 확률@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[HitDamage|명중] 시 {0}%의 확률로 4초 동안 적 [Withered|위축]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "archon_of_chayula_spawn_chaos_tornado_interval_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "차율라의 의지 [Trigger|발동] 간격@{0}초",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "1초마다 차율라의 의지 [Trigger|발동]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "{0}초마다 차율라의 의지 [Trigger|발동]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "arctic_armour_armour_granted_+%_per_stage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff|버프] 시 단계 하나당 [Armour|방어도] {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff|버프] 시 단계 하나당 [Armour|방어도] {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "arctic_armour_chill_when_hit_duration"
     ],
     "trade_stats": null,
@@ -22978,6 +23568,42 @@
           ]
         ],
         "string": "효과 범위 {0}% 감폭",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "area_of_effect_+%_per_combo_stack"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "소모한 [Combo|연계] 하나당 효과 범위 증가@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -23240,6 +23866,24 @@
         "string": "[Poison|중독] 피해의 [ArmourBreak|방어구 파괴]@{0}%",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Poison|중독] 피해의 [ArmourBreak|방어구 파괴]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
       }
     ],
     "Portuguese": null,
@@ -23274,6 +23918,24 @@
           []
         ],
         "string": "[Physical|물리] 피해로 인한 [ArmourBreak|방어구 파괴]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "준 [Physical|물리] 피해의 {0}%와 동일한 [ArmourBreak|방어구 파괴]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -24328,7 +24990,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "{0}초 동안 [Combo|연계]를 생성하지 않으면 [Combo|연계] 상실",
+        "string": "이 스킬이 {0}초 동안 [Combo|연계]를 생성하지 않으면 [Combo|연계] 상실",
         "reminder_text": null,
         "is_markup": null
       },
@@ -24348,7 +25010,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "{0}초 동안 [Combo|연계]를 생성하지 않으면 [Combo|연계] 상실",
+        "string": "이 스킬이 {0}초 동안 [Combo|연계]를 생성하지 않으면 [Combo|연계] 상실",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25040,6 +25702,60 @@
   {
     "English": null,
     "ids": [
+      "base_maximum_seals_for_skill"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Seal|봉인] 최대치 {0}개",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Seal|봉인] 최대치 {0}개",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_number_of_crossbow_bolts",
       "quality_display_base_number_of_crossbow_bolts_is_gem"
     ],
@@ -25057,20 +25773,20 @@
             "negated": null
           },
           {
-            "min": null,
-            "max": null,
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
-          "#",
+          "+#",
           "ignore"
         ],
         "index_handlers": [
           [],
           []
         ],
-        "string": "탄창당 볼트 {0}개 장전",
+        "string": "탄창 1개당 장전되는 볼트 {0}개",
         "reminder_text": null,
         "is_markup": null
       },
@@ -25082,20 +25798,20 @@
             "negated": null
           },
           {
-            "min": null,
-            "max": null,
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
-          "#",
+          "+#",
           "ignore"
         ],
         "index_handlers": [
           [],
           []
         ],
-        "string": "탄창당 볼트 {0}개 장전",
+        "string": "탄창 1개당 장전되는 볼트 {0}개",
         "reminder_text": null,
         "is_markup": null
       },
@@ -25146,6 +25862,33 @@
           []
         ],
         "string": "탄창 1개당 볼트 {0}개 장전",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ],
+          []
+        ],
+        "string": "탄창 1개당 장전되는 볼트 -{0}개",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25505,6 +26248,42 @@
   {
     "English": null,
     "ids": [
+      "base_power_charge_skip_consume_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}%의 확률로 [Charges|권능 충전]을 제거하지 않고도 충전을 소모한 것으로 간주",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_projectiles_cannot_chain"
     ],
     "trade_stats": null,
@@ -25586,6 +26365,80 @@
           ]
         ],
         "string": "[Remnant|잔류물]이 {0}초 지속",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_skill_seal_gain_interval_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "{0}초마다 [Seal|봉인] 획득",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_skill_ward_cost_as_%_of_life_and_mana_cost"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "생명력 및 마나 소모량의 {0}%를 [StatGain|추가] [Ward|룬 수호] 소모량으로 [StatGain|획득]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25733,6 +26586,44 @@
   {
     "English": null,
     "ids": [
+      "bear_companion_intimidate_on_hit_with_warcry_for_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[Intimidate|위협] 지속시간@{0}초",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "bear_skills_additional_base_attack_time_when_performing_from_default_stance"
     ],
     "trade_stats": null,
@@ -25836,6 +26727,42 @@
           ]
         ],
         "string": "서 있는 경우 기본 공격 시간 +{0}초",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "berserk_maximum_rage_granted_+"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff|버프] 시 [Rage|격노] 최대치 {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -27250,6 +28177,26 @@
         "string": "{0}미터 순간이동",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "{0}미터 순간이동",
+        "reminder_text": null,
+        "is_markup": null
       }
     ],
     "Portuguese": null,
@@ -28486,7 +29433,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "{0}초마다 [FlamesOfChayula|차율라의 화염]이 주변에 출현",
+        "string": "[FlamesOfChayula|차율라의 화염] 출현 간격@{0}초",
         "reminder_text": null,
         "is_markup": null
       },
@@ -28504,7 +29451,7 @@
         "index_handlers": [
           []
         ],
-        "string": "1초마다 [FlamesOfChayula|차율라의 화염]이 주변에 출현",
+        "string": "1초마다 플레이어로부터 8.5미터 내에\n[FlamesOfChayula|차율라의 화염]이 출현",
         "reminder_text": null,
         "is_markup": null
       },
@@ -28524,7 +29471,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "{0}초마다 [FlamesOfChayula|차율라의 화염]이 주변에 출현",
+        "string": "{0}초마다 플레이어로부터 8.5미터 내에\n[FlamesOfChayula|차율라의 화염]이 출현",
         "reminder_text": null,
         "is_markup": null
       }
@@ -29302,6 +30249,62 @@
   {
     "English": null,
     "ids": [
+      "cast_on_crit_global_critical_hit_chance_granted_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff|버프] 시 [Critical|치명타 명중] 확률 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff|버프] 시 [Critical|치명타 명중] 확률 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "cast_on_crit_%"
     ],
     "trade_stats": null,
@@ -29433,6 +30436,64 @@
           []
         ],
         "string": "사망 시 장착된 모든 주문 발동",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "cast_on_dodge_dodge_roll_distance_granted_+"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "[Buff|버프] 시 회피 구르기 거리 {0}미터",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "[Buff|버프] 시 회피 구르기 거리 {0}미터",
         "reminder_text": null,
         "is_markup": null
       }
@@ -30424,6 +31485,60 @@
   {
     "English": null,
     "ids": [
+      "chance_for_exerted_attacks_to_not_reduce_count_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% 확률로 [Empowered|강화]된 [Attack|공격]을 집계하지 않음",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Empowered|강화]된 [Attack|공격]을 집계하지 않음",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "chance_for_extra_damage_roll_%"
     ],
     "trade_stats": null,
@@ -30507,6 +31622,24 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Charges|충전]을 소모하여 얻는 이득이 {0}%의 확률로 2배",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 1,
             "max": 99,
             "negated": null
@@ -30554,7 +31687,7 @@
         "index_handlers": [
           []
         ],
-        "string": "이 스킬을 위해 [Charges|충전]을 소모하여 얻는 이득이 {0}%의 확률로 2배",
+        "string": "[Charges|충전]을 소모하여 얻는 이득이 {0}%의 확률로 2배",
         "reminder_text": null,
         "is_markup": null
       },
@@ -30572,7 +31705,7 @@
         "index_handlers": [
           []
         ],
-        "string": "이 스킬을 위해 [Charges|충전]을 소모하여 얻는 이득이 2배",
+        "string": "[Charges|충전]을 소모하여 얻는 이득이 2배",
         "reminder_text": null,
         "is_markup": null
       }
@@ -31083,6 +32216,24 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}%의 확률로 [Charges|충전] 1개 추가 획득",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 1,
             "max": 99,
             "negated": null
@@ -31113,6 +32264,78 @@
           []
         ],
         "string": "[Charges|충전] 획득 시 [Charges|충전] 1개 추가 획득",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_to_gain_1_more_random_charge_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "충전 획득 시 {0}% 확률로 추가 무작위 [Charges|충전] 획득",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "충전 획득 시 {0}% 확률로 추가 무작위 [Charges|충전] 획득",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "충전 획득 시 추가 무작위 [Charges|충전] 획득",
         "reminder_text": null,
         "is_markup": null
       }
@@ -32803,6 +34026,62 @@
           []
         ],
         "string": "명중 시 카오스 피해가 가장 낮은 저항의 저항을 받음",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "charge_regulation_damage_per_charge_granted_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff|버프] 시 [Charges|충전] 하나당 피해 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff|버프] 시 [Charges|충전] 하나당 피해 {0}% 감소",
         "reminder_text": null,
         "is_markup": null
       }
@@ -41996,6 +43275,64 @@
   {
     "English": null,
     "ids": [
+      "display_skill_overflowing_chalice_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[OverflowingChalice|넘치는 성배] 지속시간@{0}초",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[OverflowingChalice|넘치는 성배] 지속시간@{0}초",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "display_storm_burst_jump_time_ms"
     ],
     "trade_stats": null,
@@ -43034,6 +44371,42 @@
   {
     "English": null,
     "ids": [
+      "echoed_spell_area_of_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "메아리 효과 범위@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "elemental_damage_cannot_be_reflected"
     ],
     "trade_stats": null,
@@ -43990,6 +45363,42 @@
           ]
         ],
         "string": "감전된 적이 받는 물리 피해 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_seraphs_heart_enemy_hits_%_chance_to_treat_all_resistances_as_90%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "적의 [HitDamage|명중]이 [Resistances|저항]을 90%로 간주할 확률@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -45069,6 +46478,60 @@
   {
     "English": null,
     "ids": [
+      "final_strike_number_of_spirit_strikes"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[FinalStrike|최후 타격]이 주변 적 {0}명을 추가 대상으로 삼음",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[FinalStrike|최후 타격]이 주변 적 {0}명을 추가 대상으로 삼음",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "fire_beam_additional_stack_damage_+%_final"
     ],
     "trade_stats": null,
@@ -45294,42 +46757,6 @@
           []
         ],
         "string": "투사체 이동 거리가 증가할수록 폭발 반경 최대 {0}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "fires_1_projectile_if_no_steel_ammo"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "강철 조각이 없을 경우 [Projectile|투사체] 1개만 발사",
         "reminder_text": null,
         "is_markup": null
       }
@@ -47011,6 +48438,62 @@
   {
     "English": null,
     "ids": [
+      "fortifying_cry_guard_gained_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "획득하는 [Guard|가호] {0}% 증폭",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "획득하는 [Guard|가호] {0}% 감폭",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "freeze_applies_cold_resistance_+"
     ],
     "trade_stats": null,
@@ -48061,6 +49544,60 @@
   {
     "English": null,
     "ids": [
+      "frozen_monsters_take_increased_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "이 스킬로 [동결|Frozen]된 적이 받는 피해 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "이 스킬로 [동결|Frozen]된 적이 받는 피해 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "fully_break_enemies_armour_on_heavy_stun"
     ],
     "trade_stats": null,
@@ -48611,7 +50148,7 @@
         "index_handlers": [
           []
         ],
-        "string": "명중 시 가장 큰 피해 유형이 원소인 경우 2초 동안 1초마다 다른 원소의 공명 25 획득",
+        "string": "명중 시 가장 큰 피해 유형이 원소인 경우 2초 동안 1초마다 다른 원소의 [Affinity|친화력] 25 획득",
         "reminder_text": null,
         "is_markup": null
       }
@@ -48908,6 +50445,250 @@
           ]
         ],
         "string": "장이 생성될 때 적에게 유발된 [Shock|감전] 효과 10%당 장의 반경 {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "gem_quality_ancestral_cry_global_fire_damage_granted_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Fire|화염] 피해 {0}% 증폭",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Fire|화염] 피해 {0}% 감폭",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "gem_quality_earthquake_damaging_ailment_effect_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "유발하는 [DamagingAilments|피해를 주는 상태 이상]의 [BuffMagnitude|강도] {0}% 증폭",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "유발하는 [DamagingAilments|피해를 주는 상태 이상]의 [BuffMagnitude|강도] {0}% 감폭",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "gem_quality_flameblast_damaging_ailment_effect_per_stage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "단계 하나당 [DamagingAilments|피해를 주는 상태 이상]의 [BuffMagnitude|강도] {0}% 증폭",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "단계 하나당 [DamagingAilments|피해를 주는 상태 이상]의 [BuffMagnitude|강도] {0}% 감폭",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "gem_quality_marked_enemy_damage_dealt_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Mark|징표]가 찍힌 적이 주는 피해 감폭@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Mark|징표]가 찍힌 적이 주는 피해 {0}% 증폭",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Mark|징표]가 찍힌 적이 주는 피해 {0}% 감폭",
         "reminder_text": null,
         "is_markup": null
       }
@@ -49637,6 +51418,82 @@
   {
     "English": null,
     "ids": [
+      "hazard_damage_+%_final_for_first_500_ms_when_not_killed_by_self"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "처음 0.5초 동안 피해 감폭@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "플레이어가 아닌 다른 개체에 의해 0.5초 내에 파괴되면 피해 {0}% 감폭",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "플레이어가 아닌 다른 개체에 의해 0.5초 내에 파괴되지 않으면 피해 {0}% 증폭",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "hazard_rearm_%_chance"
     ],
     "trade_stats": null,
@@ -49819,6 +51676,174 @@
   {
     "English": null,
     "ids": [
+      "herald_of_ash_fire_damage_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff|버프] 시 [Fire|화염] 피해 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff|버프] 시 [Fire|화염] 피해 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "herald_of_blood_global_physical_damage_granted_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff|버프] 시 [Physical|물리] 피해 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff|버프] 시 [Physical|물리] 피해 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "herald_of_ice_cold_damage_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff|버프] 시 [Cold|냉기] 피해 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff|버프] 시 [Cold|냉기] 피해 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "herald_of_light_summon_champion_on_kill"
     ],
     "trade_stats": null,
@@ -49952,6 +51977,62 @@
           ]
         ],
         "string": "버프 시 물리 피해 {0}% 감폭",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "herald_of_thunder_lightning_damage_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff|버프] 시 [Lightning|번개] 피해 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff|버프] 시 [Lightning|번개] 피해 {0}% 감소",
         "reminder_text": null,
         "is_markup": null
       }
@@ -51111,7 +53192,7 @@
   {
     "English": null,
     "ids": [
-      "ice_crystals_hazard_damage_+%_final_for_first_500_ms_when_not_killed_by_self"
+      "ice_crystals_damage_+%_final_for_first_500_ms_when_not_killed_by_self"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -53852,6 +55933,42 @@
   {
     "English": null,
     "ids": [
+      "lose_%_of_maximum_rage_on_dealing_critical_strike"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Critical|치명타] 명중 시 격노 상실@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "lose_all_righteous_charges_on_mana_use_threshold"
     ],
     "trade_stats": null,
@@ -53875,6 +55992,42 @@
           []
         ],
         "string": "이 스킬의 초기 비용 또는 효과로 총 {0}의 마나 소모 시 모든 영감 충전 상실",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "magma_barrier_maximum_block_chance_granted_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff|버프] 시 [Block|막기] 확률 최대치 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -54421,7 +56574,8 @@
     "English": null,
     "ids": [
       "main_hand_minimum_chaos_damage",
-      "main_hand_maximum_chaos_damage"
+      "main_hand_maximum_chaos_damage",
+      "main_hand_chaos_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -54437,20 +56591,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "주 무기 [Chaos|카오스] 피해@{0} - {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "주 무기 [Chaos|카오스] 피해@{0} 또는 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -54465,7 +56658,8 @@
     "English": null,
     "ids": [
       "main_hand_minimum_cold_damage",
-      "main_hand_maximum_cold_damage"
+      "main_hand_maximum_cold_damage",
+      "main_hand_cold_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -54481,20 +56675,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "주 무기 [Cold|냉기] 피해@{0} - {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "주 무기 [Cold|냉기] 피해@{0} 또는 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -54509,7 +56742,8 @@
     "English": null,
     "ids": [
       "main_hand_minimum_fire_damage",
-      "main_hand_maximum_fire_damage"
+      "main_hand_maximum_fire_damage",
+      "main_hand_fire_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -54525,20 +56759,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "주 무기 [Fire|화염] 피해@{0} - {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "주 무기 [Fire|화염] 피해@{0} 또는 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -54553,7 +56826,8 @@
     "English": null,
     "ids": [
       "main_hand_minimum_lightning_damage",
-      "main_hand_maximum_lightning_damage"
+      "main_hand_maximum_lightning_damage",
+      "main_hand_lightning_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -54569,20 +56843,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "주 무기 [Lightning|번개] 피해@{0} - {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "주 무기 [Lightning|번개] 피해@{0} 또는 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -54597,7 +56910,8 @@
     "English": null,
     "ids": [
       "main_hand_minimum_physical_damage",
-      "main_hand_maximum_physical_damage"
+      "main_hand_maximum_physical_damage",
+      "main_hand_physical_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -54613,20 +56927,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "주 무기 [Physical|물리] 피해@{0} - {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "주 무기 [Physical|물리] 피해@{0} 또는 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -54803,6 +57156,62 @@
           ]
         ],
         "string": "명중한 적 하나당 마나 {0} 상실",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "mana_remnants_global_mana_regeneration_rate_granted_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff|버프] 시 마나 재생 속도 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff|버프] 시 마나 재생 속도 {0}% 감소",
         "reminder_text": null,
         "is_markup": null
       }
@@ -55274,79 +57683,6 @@
   {
     "English": null,
     "ids": [
-      "base_active_skill_buff_stack_gain_frequency_ms",
-      "maximum_number_of_arctic_armour_stationary_stacks"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ],
-          []
-        ],
-        "string": "1초마다 단계 1만큼 획득, 최대 {1}단계 획득",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ],
-          []
-        ],
-        "string": "{0}초마다 단계 1만큼 획득, 최대 {1}단계 획득",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "maximum_number_of_blades_left_in_ground"
     ],
     "trade_stats": null,
@@ -55771,6 +58107,42 @@
           []
         ],
         "string": "소환된 신기루 저격수 최대 {0}마리\n이 스킬을 사용하는 신기루 저격수 {0}마리 소환\n플레이어가 얼음 화살 사용 시 신기루 저격수가 대상에게 사격",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "maximum_verisium_infusion_stacks"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[VerisiumInfusion|베리시움 주입] 최대치 +{0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -56915,42 +59287,6 @@
           ]
         ],
         "string": "소환수가 받는 화염 피해 {0}% 감소",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "minion_grant_puppet_master_buff_to_parent_on_hit_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "적중 시 소환수가 {0}% 확률로 플레이어에게 격분 주입 부여",
         "reminder_text": null,
         "is_markup": null
       }
@@ -58157,7 +60493,7 @@
   {
     "English": null,
     "ids": [
-      "multistrike_area_of_effect_+%_per_repeat"
+      "multishot_empowered_projectile_speed_+%"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -58179,48 +60515,10 @@
         "index_handlers": [
           []
         ],
-        "string": "반복할 때마다 효과 범위 {0}% 증가",
+        "string": "부여되는 추가 [Projectile|투사체]\n부여되는 [Projectile|투사체] 속도 증가@2개\n{0}%",
         "reminder_text": null,
         "is_markup": null
       },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "반복할 때마다 효과 범위 {0}% 감소",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "multistrike_damage_+%_final_on_first_repeat"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
       {
         "condition": [
           {
@@ -58235,48 +60533,10 @@
         "index_handlers": [
           []
         ],
-        "string": "첫 번째 반복 시 주는 피해 {0}% 증폭",
+        "string": "[Empowered|강화]된 스킬의 [Projectile|투사체] 속도 {0}% 증가",
         "reminder_text": null,
         "is_markup": null
       },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "첫 번째 반복 시 주는 피해 {0}% 감폭",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "multistrike_damage_+%_final_on_second_repeat"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
       {
         "condition": [
           {
@@ -58291,83 +60551,7 @@
         "index_handlers": [
           []
         ],
-        "string": "두 번째 반복 시 주는 피해 {0}% 증폭",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "두 번째 반복 시 주는 피해 {0}% 감폭",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "multistrike_damage_+%_final_on_third_repeat"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "세 번째 반복 시 주는 피해 {0}%증폭",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "세 번째 반복 시 주는 피해 {0}%감폭",
+        "string": "[Empowered|강화]된 스킬이 [Projectile|투사체] 2개 추가 발사\n[Empowered|강화]된 스킬의 [Projectile|투사체] 속도 {0}% 증가",
         "reminder_text": null,
         "is_markup": null
       }
@@ -59577,6 +61761,42 @@
   {
     "English": null,
     "ids": [
+      "number_of_runic_aftershocks_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "룬 [Limit|제한]@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "number_of_skeletal_constructs_allowed"
     ],
     "trade_stats": null,
@@ -60016,7 +62236,8 @@
     "English": null,
     "ids": [
       "off_hand_minimum_chaos_damage",
-      "off_hand_maximum_chaos_damage"
+      "off_hand_maximum_chaos_damage",
+      "off_hand_chaos_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -60032,20 +62253,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "보조 장비 [Chaos|카오스] 피해@{0} - {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "보조 장비 [Chaos|카오스] 피해@{0} 또는 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -60060,7 +62320,8 @@
     "English": null,
     "ids": [
       "off_hand_minimum_cold_damage",
-      "off_hand_maximum_cold_damage"
+      "off_hand_maximum_cold_damage",
+      "off_hand_cold_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -60076,20 +62337,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "보조 장비 [Cold|냉기] 피해@{0} - {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "보조 장비 [Cold|냉기] 피해@{0} 또는 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -60104,7 +62404,8 @@
     "English": null,
     "ids": [
       "off_hand_minimum_fire_damage",
-      "off_hand_maximum_fire_damage"
+      "off_hand_maximum_fire_damage",
+      "off_hand_fire_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -60120,20 +62421,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "보조 장비 [Fire|화염] 피해@{0} - {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "보조 장비 [Fire|화염] 피해@{0} 또는 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -60148,7 +62488,8 @@
     "English": null,
     "ids": [
       "off_hand_minimum_lightning_damage",
-      "off_hand_maximum_lightning_damage"
+      "off_hand_maximum_lightning_damage",
+      "off_hand_lightning_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -60164,20 +62505,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "보조 장비 [Lightning|번개] 피해@{0} - {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "보조 장비 [Lightning|번개] 피해@{0} 또는 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -60192,7 +62572,8 @@
     "English": null,
     "ids": [
       "off_hand_minimum_physical_damage",
-      "off_hand_maximum_physical_damage"
+      "off_hand_maximum_physical_damage",
+      "off_hand_physical_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -60208,20 +62589,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "보조 장비 [Physical|물리] 피해@{0} - {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "보조 장비 [Physical|물리] 피해@{0} 또는 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -61800,60 +64220,6 @@
   {
     "English": null,
     "ids": [
-      "primary_projectile_chain_num"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "주 투사체가 {0}회 연쇄",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "주 투사체가 {0}회 연쇄",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "primary_projectile_impale_chance_%"
     ],
     "trade_stats": null,
@@ -62160,6 +64526,24 @@
     "German": null,
     "Japanese": null,
     "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Projectile|투사체]가 지형으로 인해 추가로 [Chain|연쇄]될 확률@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -62518,6 +64902,42 @@
   {
     "English": null,
     "ids": [
+      "projectiles_cannot_fork"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Projectile|투사체] [Fork|갈라짐] 불가",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "projectiles_cannot_split"
     ],
     "trade_stats": null,
@@ -62540,7 +64960,7 @@
         "index_handlers": [
           []
         ],
-        "string": "투사체 분할 불가",
+        "string": "[Projectile|투사체] [Split|분할] 불가",
         "reminder_text": null,
         "is_markup": null
       }
@@ -62633,6 +65053,42 @@
           []
         ],
         "string": "투사체가 화염 벽을 통과할 때 갈라짐",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "projectiles_nova"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "원형으로 [Projectile|투사체] 발사",
         "reminder_text": null,
         "is_markup": null
       }
@@ -63692,6 +66148,42 @@
         "string": "[CullingStrike|마무리 타격] 시 생명력 회복@{0}%",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[CullingStrike|마무리 타격] 시 생명력 회복@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "적 [CullingStrike|마무리 타격] 시 [NonStackingEffect|4초에 걸쳐] 생명력 최대치의 {0}% 회복",
+        "reminder_text": null,
+        "is_markup": null
       }
     ],
     "Portuguese": null,
@@ -64018,6 +66510,62 @@
           ]
         ],
         "string": "재장전 속도 감소@+{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "remnant_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "이 스킬의 [Remnant|잔류물] 효과 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "이 스킬의 [Remnant|잔류물] 효과 {0}% 감소",
         "reminder_text": null,
         "is_markup": null
       }
@@ -64623,6 +67171,62 @@
   {
     "English": null,
     "ids": [
+      "sacrifice_minion_life_granted_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Minion|소환수]의 최대 생명력 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Minion|소환수]의 최대 생명력 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "sacrifice_%_life_on_skill_use"
     ],
     "trade_stats": null,
@@ -65211,7 +67815,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -65255,7 +67859,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -65299,7 +67903,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -65327,7 +67931,8 @@
     "English": null,
     "ids": [
       "secondary_minimum_lightning_damage",
-      "secondary_maximum_lightning_damage"
+      "secondary_maximum_lightning_damage",
+      "secondary_lightning_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -65343,20 +67948,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "[Lightning|번개] 피해@{0} - {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Lightning|번개] 피해@{0} 또는 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -65387,7 +68031,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -65739,6 +68383,82 @@
           ]
         ],
         "string": "중앙 파장의 효과 범위 {0}% 감폭",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "shield_wall_damage_+%_final_for_first_500_ms_when_not_killed_by_self"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "처음 0.5초 동안 피해 감폭@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "플레이어가 아닌 다른 개체에 의해 0.5초 내에 파괴되면 피해 {0}% 감폭",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "플레이어가 아닌 다른 개체에 의해 0.5초 내에 파괴되지 않으면 피해 {0}% 증폭",
         "reminder_text": null,
         "is_markup": null
       }
@@ -66512,6 +69232,42 @@
   {
     "English": null,
     "ids": [
+      "skill_additional_projectiles_per_seal_broken"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "파괴된 [Seal|문장] 하나당 [Projectile|투사체]@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "skill_angle_+%_in_sand_stance"
     ],
     "trade_stats": null,
@@ -66591,6 +69347,42 @@
           ]
         ],
         "string": "효과 범위 각도 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_area_of_effect_+%_per_broken_seal"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "파괴된 [Seal|문장] 하나당 효과 범위 증가@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -67230,7 +70022,7 @@
   {
     "English": null,
     "ids": [
-      "skill_echo_chance_%"
+      "skill_echoes_per_seal_broken"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -67241,7 +70033,7 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -67252,25 +70044,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% 확률로 반복",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% 확률로 반복",
+        "string": "파괴된 [Seal|문장] 하나당 [Cascadable|메아리]@{0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -67421,6 +70195,140 @@
           ]
         ],
         "string": "죽음 상태에서 보조 대상 스킬의 스킬 효과 지속시간 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_eternal_march_maximum_ward_cost",
+      "skill_eternal_march_life_per_ward_spent_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "divide_by_one_hundred_0dp"
+          ]
+        ],
+        "string": "[Ward|룬 수호] 소모 최대치\n소모한 [Ward|룬 수호] 하나당 [Reviving|부활]하는 [Minion|소환수]의 총 생명력@{0}\n{1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "추가 [Ward|룬 수호]를 최대 {0} 소모하여 [Reviving|부활]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "divide_by_one_hundred_0dp"
+          ]
+        ],
+        "string": "[Ward|룬 수호]를 최대 {0} 소모하여 생명력 최대치 합계가 소모한 [Ward|룬 수호]의 {1}배와 동일한 [Minion|소환수들] [Reviving|부활]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_gain_seal_every_x_hits_blocked"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Seal|문장]을 획득하는 데 필요한 [HitDamage|명중] [Block|막기] 횟수@{0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -67930,6 +70838,42 @@
   {
     "English": null,
     "ids": [
+      "skill_maximum_seals"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Seal|문장] 최대치@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "skill_maximum_travel_distance_+%"
     ],
     "trade_stats": null,
@@ -68040,6 +70984,80 @@
   {
     "English": null,
     "ids": [
+      "skill_rapid_fire_repeats_per_broken_seal"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "파괴된 [Seal|문장] 하나당 [Repeat|반복]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_seal_gain_interval_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "[Seal|문장] 획득 간격@{0}초",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "skill_travel_distance_+%"
     ],
     "trade_stats": null,
@@ -68063,6 +71081,42 @@
           []
         ],
         "string": "이동 거리 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_triggered_by_owl_feathers"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "회피 구르기 시 원시 올빼미 깃털을 소모하여 이 스킬 [Trigger|발동]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -68188,7 +71242,7 @@
         "index_handlers": [
           []
         ],
-        "string": "신기루 부족장이 사용하는 스킬의 피해 {0}% 증폭\n신기루 부족장이 사용하는 스킬이 반복되지 않음",
+        "string": "[DNT-UNUSED]Skills used by Mirage Chieftains deal {0}% more Damage",
         "reminder_text": null,
         "is_markup": null
       },
@@ -68208,7 +71262,7 @@
             "negate"
           ]
         ],
-        "string": "신기루 부족장이 사용하는 스킬의 피해 {0}% 감폭\n신기루 부족장이 사용하는 스킬이 반복되지 않음",
+        "string": "[DNT-UNUSED]Skills used by Mirage Chieftains deal {0}% less Damage",
         "reminder_text": null,
         "is_markup": null
       }
@@ -68790,7 +71844,7 @@
   {
     "English": null,
     "ids": [
-      "spectral_spiral_weapon_number_of_bounces"
+      "display_spectral_spiral_weapon_number_of_bounces"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -68869,6 +71923,60 @@
           ]
         ],
         "string": "각 [Projectile|투사체]의 [Projectile|투사체] 속도가 {0}% 증폭된 수치와 {0}% 감폭된 수치 사이에서 결정",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_spell_%_chance_to_echo"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Cascadable|메아리] 확률@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Cascadable|메아리] 확률 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -69142,42 +72250,6 @@
   {
     "English": null,
     "ids": [
-      "spell_echo_plus_chance_double_damage_%_final"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "마지막 반복 시 {0}%의 확률로 2배의 피해를 줌",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "spell_effetive_total_chance_permyriad_for_hit_to_be_critical"
     ],
     "trade_stats": null,
@@ -69203,62 +72275,6 @@
           ]
         ],
         "string": "[Critical|치명타 명중] [EffectiveChance|유효 확률]@{0}%",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "spellflux_frequency_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "상 빈도 {0}% 증가",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "상 빈도 {0}% 감소",
         "reminder_text": null,
         "is_markup": null
       }
@@ -69501,7 +72517,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -69545,7 +72561,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -69589,7 +72605,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -69617,7 +72633,8 @@
     "English": null,
     "ids": [
       "spell_minimum_lightning_damage",
-      "spell_maximum_lightning_damage"
+      "spell_maximum_lightning_damage",
+      "spell_lightning_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -69633,20 +72650,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           []
         ],
         "string": "[Lightning|번개] 피해@{0} - {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Lightning|번개] 피해@{0} 또는 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -69677,7 +72733,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -69773,6 +72829,24 @@
         "string": "추가 [Projectile|투사체] 8개를 원형으로 발사할 확률@{0}%",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "추가 [Projectile|투사체] 8개를 원형으로 발사할 확률@{0}%",
+        "reminder_text": null,
+        "is_markup": null
       }
     ],
     "Portuguese": null,
@@ -69820,65 +72894,7 @@
   {
     "English": null,
     "ids": [
-      "spellflux_base_delay_between_fluxes_ms"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "상 사이의 지연시간 {0}초",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "상 사이의 지연시간 {0}초",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "spellflux_frequency_+%_per_socketed_valid_spell"
+      "spellflux_frequency_+%_final"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -69900,7 +72916,7 @@
         "index_handlers": [
           []
         ],
-        "string": "상이 시전할 수 있는 [Spell|주문] 하나당 상 빈도 {0}% 증가",
+        "string": "상 빈도 {0}% 증폭",
         "reminder_text": null,
         "is_markup": null
       },
@@ -69920,101 +72936,7 @@
             "negate"
           ]
         ],
-        "string": "상이 시전할 수 있는 [Spell|주문] 하나당 상 빈도 {0}% 감소",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "spellflux_spell_damage_+%_final_if_matching_flux_cast"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[Empowered|강화]된 [Spell|주문] 피해@{0}% 증폭",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[Empowered|강화]된 [Spell|주문] 피해@{0}% 감폭",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "다음 상 전에 일치하는 [Spell|주문] 시전 시 해당 주문 [Empowered|강화]\n[Empowered|강화]된 주문이 주는 피해 {0}% 증폭",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "다음 상 전에 일치하는 [Spell|주문] 시전 시 해당 주문 [Empowered|강화]\n[Empowered|강화]된 주문이 주는 피해 {0}% 감폭",
+        "string": "상 빈도 {0}% 감폭",
         "reminder_text": null,
         "is_markup": null
       }
@@ -72452,42 +75374,6 @@
   {
     "English": null,
     "ids": [
-      "skill_max_unleash_seals"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "최대 인장@{0}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "support_apply_daze_on_warcry"
     ],
     "trade_stats": null,
@@ -73190,82 +76076,6 @@
   {
     "English": null,
     "ids": [
-      "support_corrupting_cry_corrupted_blood_damage_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second_2dp_if_required"
-          ]
-        ],
-        "string": "[CorruptedBlood|타락한 피]의 초당 [Physical|물리] 피해@{0}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "support_corrupting_cry_corrupted_blood_duration_ms"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "[CorruptedBlood|타락한 피] 지속시간@{0}초",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "support_crushing_stuns_crush_on_stun_ms"
     ],
     "trade_stats": null,
@@ -73340,7 +76150,7 @@
   {
     "English": null,
     "ids": [
-      "support_damage_+%_final_per_combo_stack"
+      "support_culmination_damage_+%_final_per_combo_stack"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -74080,118 +76890,6 @@
           ]
         ],
         "string": "{0}초간 환영 지속",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "support_greater_spell_echo_area_of_effect_+%_per_repeat"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "반복할 때마다 효과 범위 {0}% 증가",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "반복할 때마다 효과 범위 {0}% 감소",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "support_greater_spell_echo_spell_damage_+%_final_per_repeat"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "반복할 때마다 주문 피해 {0}% 증폭",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "반복할 때마다 주문 피해 {0}% 감폭",
         "reminder_text": null,
         "is_markup": null
       }
@@ -75509,62 +78207,6 @@
   {
     "English": null,
     "ids": [
-      "support_minion_offensive_stance_minion_damage_+%_final_while_you_have_puppet_master"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "격분 주입 보유 시 소환수가 주는 피해 {0}% 증폭",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "격분 주입 보유 시 소환수가 주는 피해 {0}% 감폭",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "support_minion_pact_user_life_%_removed_from_nearby_minion",
       "support_minion_pact_damage_+%_final"
     ],
@@ -75819,6 +78461,82 @@
           []
         ],
         "string": "{0}미터 이동 후 피해 증폭@{1}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intimidate_enemies_when_they_enter_your_presence_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "[Presence|접근] 범위에 진입하는 적들에게 유발되는 [Intimidate|위협] 지속시간@{0}초",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_mothers_ward_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_0dp"
+          ]
+        ],
+        "string": "6초마다 [Presence|접근]해 있는 동료가 획득하는 [Guard|가호] 지속시간@{0}초",
         "reminder_text": null,
         "is_markup": null
       }
@@ -76678,6 +79396,42 @@
   {
     "English": null,
     "ids": [
+      "support_slam_spend_X_ward_to_become_runic_boosted"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "증폭에 소모되는 [Ward|룬 수호]@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_slashing_buff_duration_ms"
     ],
     "trade_stats": null,
@@ -77089,7 +79843,7 @@
         "index_handlers": [
           []
         ],
-        "string": "폭포의 효과 범위 속성@{0}%",
+        "string": "[Cascadable|연속 주문]의 효과 범위 속성@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -77133,43 +79887,7 @@
           [],
           []
         ],
-        "string": "목표 지역의 한쪽에 있는 추가 지역에도 영향을 미침",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "support_spell_echo_area_of_effect_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "메아리 효과 범위@{0}%",
+        "string": "목표 지역의 한쪽에 [Cascadable|연속 가능]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -77443,62 +80161,6 @@
   {
     "English": null,
     "ids": [
-      "support_spell_echo_final_repeat_damage_+%_final"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "마지막 반복 시 주는 피해 {0}% 증폭",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "마지막 반복 시 주는 피해 {0}% 감폭",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "support_spell_echo_number_of_echo_cascades"
     ],
     "trade_stats": null,
@@ -77521,7 +80183,45 @@
         "index_handlers": [
           []
         ],
-        "string": "메아리 수@{0}",
+        "string": "[Cascadable|메아리] 횟수@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_spell_rapid_fire_repeat_use_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Repeat|반복] 시 피해 감폭@{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -78357,6 +81057,42 @@
   {
     "English": null,
     "ids": [
+      "support_voranas_siege_hit_damage_+%_final_vs_isolated_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Isolated|고립]된 대상에 대한 [HitDamage|명중] 피해 증폭@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_warcry_consumes_up_to_X_rage",
       "support_enraged_warcry_+%_damage_final_for_exerted_attacks"
     ],
@@ -79081,6 +81817,80 @@
   {
     "English": null,
     "ids": [
+      "thorns_critical_hit_damage_bonus"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Thorns|가시] [CriticalDamageBonus|치명타 피해 보너스]@+{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "thorns_critical_strike_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_one_hundred_2dp_if_required"
+          ]
+        ],
+        "string": "[Thorns|가시] [Critical|치명타 명중] 확률@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "thorns_damage_modifiers_apply_to_spell_damage"
     ],
     "trade_stats": null,
@@ -79104,6 +81914,348 @@
           []
         ],
         "string": "[Thorns|가시] 피해 속성이 이 스킬의 [Spell|주문] 피해에도 적용",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "thorns_effetive_total_chance_permyriad_for_hit_to_be_critical"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_one_hundred_2dp_if_required"
+          ]
+        ],
+        "string": "[Thorns|가시] [Critical|치명타 명중] [EffectiveChance|유효 확률]@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "thorns_minimum_chaos_damage",
+      "thorns_maximum_chaos_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Chaos|카오스] [Thorns|가시] 피해@{0}~{1}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "thorns_minimum_cold_damage",
+      "thorns_maximum_cold_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Cold|냉기] [Thorns|가시] 피해@{0}~{1}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "thorns_minimum_fire_damage",
+      "thorns_maximum_fire_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Fire|화염] [Thorns|가시] 피해@{0}~{1}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "thorns_minimum_lightning_damage",
+      "thorns_maximum_lightning_damage",
+      "thorns_lightning_damage_only_min_or_max"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Lightning|번개] [Thorns|가시] 피해@{0}~{1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Lightning|번개] [Thorns|가시] 피해@{0} 또는 {1}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "thorns_minimum_physical_damage",
+      "thorns_maximum_physical_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "[Physical|물리] [Thorns|가시] 피해@{0}~{1}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "thorns_minimum_total_damage",
+      "thorns_maximum_total_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "총 [Thorns|가시] 피해@{0}~{1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -79158,6 +82310,62 @@
           []
         ],
         "string": "창 [Detonator|기폭] 시 {0}% 확률로 [ShockedGround|감전 지대]를 남김",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "time_of_need_global_life_regeneration_rate_granted_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Buff|버프] 시 생명력 재생 속도 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Buff|버프] 시 생명력 재생 속도 {0}% 감소",
         "reminder_text": null,
         "is_markup": null
       }
@@ -79361,7 +82569,7 @@
   {
     "English": null,
     "ids": [
-      "total_number_of_projectiles_to_fire"
+      "total_number_of_projectiles_to_fire_from_stats"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -79383,63 +82591,7 @@
         "index_handlers": [
           []
         ],
-        "string": "사용 시 발사하는 [Projectile|투사체]@{0}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "totem_chaos_resistance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[Totem|토템]이 [Chaos|카오스] [Resistances|저항] +{0}% 획득",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[Totem|토템]이 [Chaos|카오스] [Resistances|저항] -{0}% 상실",
+        "string": "발사하는 [Projectile|투사체]@{0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -80505,6 +83657,60 @@
   {
     "English": null,
     "ids": [
+      "trigger_on_heavy_stun_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% chance to [Trigger] when you [HeavyStun|Heavy Stun] an enemy",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Trigger|Triggers] when you [HeavyStun|Heavy Stun] an enemy",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "trigger_on_hit_against_rare_or_unique_if_no_marked_enemy"
     ],
     "trade_stats": null,
@@ -81093,7 +84299,7 @@
   {
     "English": null,
     "ids": [
-      "unleash_support_seal_gain_frequency_+%_while_channelling"
+      "trinity_%_physical_damage_to_convert_to_random_element_granted"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -81115,83 +84321,7 @@
         "index_handlers": [
           []
         ],
-        "string": "집중 유지하는 동안 봉인 획득 빈도 {0}% 증가",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "집중 유지하는 동안 봉인 획득 빈도 {0}% 감소",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "unleash_support_seal_gain_frequency_+%_while_not_channelling"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "집중 유지를 하지 않는 동안 봉인 획득 빈도 {0}% 증가",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "집중 유지를 하지 않는 동안 봉인 획득 빈도 {0}% 감소",
+        "string": "[Physical|물리] 피해의 {0}%가 무작위 [ElementalDamage|원소]로 [Conversion|전환]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -82101,6 +85231,170 @@
   {
     "English": null,
     "ids": [
+      "verisium_infusion_do_not_expire"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[VerisiumInfusion|베리시움 주입]이 만료되지 않음",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "verisium_infusion_duration_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[VerisiumInfusion|베리시움 주입] 지속시간 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[VerisiumInfusion|베리시움 주입] 지속시간 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[VerisiumInfusion|베리시움 주입] 지속시간 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "verisium_infusion_skill_number_of_verisium_infusion_to_grant"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[VerisiumInfusion|베리시움 주입] {0} 생성",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[VerisiumInfusion|베리시움 주입] {0} 생성",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "virtual_aegis_unique_shield_max_value"
     ],
     "trade_stats": null,
@@ -82553,44 +85847,6 @@
   {
     "English": null,
     "ids": [
-      "virtual_deal_chaos_damage_per_minute_for_8_seconds_on_curse"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second_2dp_if_required"
-          ]
-        ],
-        "string": "[Curse|저주]받은 대상에게 주는 초당 [Chaos|카오스] 피해@{0}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "virtual_display_total_main_hand_chance_to_inflict_bleeding_on_hit_%"
     ],
     "trade_stats": null,
@@ -82902,6 +86158,62 @@
           []
         ],
         "string": "단계 획득 시 주변의 적 {0}명에게 피해",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "virtual_energy_shield_modified_amount_on_skill_use"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "사용 시 획득하는 [EnergyShield|에너지 보호막]@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "사용 시 획득하는 [EnergyShield|에너지 보호막]@{0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -83260,6 +86572,62 @@
   {
     "English": null,
     "ids": [
+      "virtual_life_modified_amount_on_skill_use"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "사용 시 획득하는 생명력@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "사용 시 상실하는 생명력@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "virtual_main_hand_apply_X_armour_break_on_hit"
     ],
     "trade_stats": null,
@@ -83422,8 +86790,7 @@
   {
     "English": null,
     "ids": [
-      "active_skill_buff_stack_gain_frequency_ms",
-      "virtual_maximum_number_of_arctic_armour_stationary_stacks"
+      "virtual_mana_modified_amount_on_skill_use"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -83434,27 +86801,38 @@
       {
         "condition": [
           {
-            "min": 1000,
-            "max": 1000,
-            "negated": null
-          },
-          {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "사용 시 획득하는 마나@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
           "#"
         ],
         "index_handlers": [
           [
-            "milliseconds_to_seconds_2dp_if_required"
-          ],
-          []
+            "negate"
+          ]
         ],
-        "string": "1초마다 단계 1만큼 획득, 최대 {1}단계 획득",
+        "string": "사용 시 상실하는 마나@{0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -83814,7 +87192,43 @@
   {
     "English": null,
     "ids": [
-      "virtual_number_of_chains"
+      "display_number_of_chains_for_beams"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Chain|연쇄] 횟수@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_number_of_chains_for_projectiles"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -84174,7 +87588,7 @@
   {
     "English": null,
     "ids": [
-      "virtual_projectile_number_to_split"
+      "display_projectile_number_to_split"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -84553,44 +87967,6 @@
           []
         ],
         "string": "피격 시 피해의 {0}%가 생명력이나 에너지 보호막보다 버프에 먼저 적용\n버프의 피해 방어량 {1}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "virtual_support_anticipation_charge_gain_interval_ms"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
-        ],
-        "string": "인장 획득 간격@{0}초",
         "reminder_text": null,
         "is_markup": null
       }
@@ -85393,42 +88769,6 @@
           []
         ],
         "string": "균열 {0}개로 [Limit|제한]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "volcanic_fissure_%_chance_repeat_aftershocks"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% 확률로 발동한 [Aftershock|여진]이 반복",
         "reminder_text": null,
         "is_markup": null
       }
@@ -88983,62 +92323,6 @@
           ]
         ],
         "string": "마그마가 흩어지고 {0}초 후\n마그마가 주입된 막기 가능",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "support_spell_rapid_fire_repeat_use_damage_+%_final"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "재발생 시 이 스킬로 주는 피해 {0}% 증폭",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "재발생 시 이 스킬로 주는 피해 {0}% 감폭",
         "reminder_text": null,
         "is_markup": null
       }

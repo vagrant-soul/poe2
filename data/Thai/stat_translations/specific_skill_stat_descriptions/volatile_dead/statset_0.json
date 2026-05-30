@@ -2,7 +2,7 @@
   {
     "English": null,
     "ids": [
-      "active_skill_area_of_effect_radius"
+      "volatile_dead_base_number_of_corpses_to_consume"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -17,7 +17,61 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "กลืนกิน[Corpse|ศพ] {0} ศพ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "กลืนกิน[Corpse|ศพ] {0} ศพ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "กลืนกิน[Corpse|ศพ]สูงสุด {0} ศพ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
             "max": null,
             "negated": null
           }
@@ -26,11 +80,9 @@
           "#"
         ],
         "index_handlers": [
-          [
-            "divide_by_ten_1dp_if_required"
-          ]
+          []
         ],
-        "string": "รัศมี ของระเบิด@{0} ม.",
+        "string": "กลืนกิน[Corpse|ศพ]สูงสุด {0} ศพ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40,7 +92,7 @@
   {
     "English": null,
     "ids": [
-      "active_skill_base_area_of_effect_radius"
+      "base_skill_effect_duration"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -55,8 +107,8 @@
       {
         "condition": [
           {
-            "min": 10,
-            "max": 10,
+            "min": 1000,
+            "max": 1000,
             "negated": null
           }
         ],
@@ -65,10 +117,10 @@
         ],
         "index_handlers": [
           [
-            "divide_by_ten_1dp_if_required"
+            "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "ระเบิด มีรัศมี {0} เมตร",
+        "string": "แก่น มีระยะเวลา {0} วินาที",
         "reminder_text": null,
         "is_markup": null
       },
@@ -85,10 +137,48 @@
         ],
         "index_handlers": [
           [
-            "divide_by_ten_1dp_if_required"
+            "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "ระเบิด มีรัศมี {0} เมตร",
+        "string": "แก่น มีระยะเวลา {0} วินาที",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_effect_duration"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "ระยะเวลา ของแก่น@{0} วิ",
         "reminder_text": null,
         "is_markup": null
       }

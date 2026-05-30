@@ -28,7 +28,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "Радиус [Curse|проклятия]@{0} м",
+        "string": "Изначальный радиус сотворения@{0} м",
         "reminder_text": null,
         "is_markup": null
       }
@@ -53,6 +53,26 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "+{0} м к изначальному радиусу сотворения",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 10,
             "max": 10,
             "negated": null
@@ -66,7 +86,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "Радиус [Curse|проклятия] - {0} м",
+        "string": "Изначальный радиус сотворения - {0} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -86,7 +106,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "Радиус [Curse|проклятия] - {0} м",
+        "string": "Изначальный радиус сотворения - {0} м",
         "reminder_text": null,
         "is_markup": null
       }
@@ -124,7 +144,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Длительность [Curse|проклятия] - {0} секунда",
+        "string": "Длительность [Debuff|отрицательного эффекта] - {0} секунда",
         "reminder_text": null,
         "is_markup": null
       },
@@ -144,7 +164,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Длительность [Curse|проклятия] - {0} секунд(-ы)",
+        "string": "Длительность [Debuff|отрицательного эффекта] - {0} секунд(-ы)",
         "reminder_text": null,
         "is_markup": null
       }
@@ -180,7 +200,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Curse|Проклятые] цели получают {0}% от нанесенного им за время действия [Curse|проклятия] урона от ударов после истечения [Curse|проклятия]\nПолучаемый таким образом [HitDamage|урон] не может накладывать состояния на [Curse|проклятую] цель",
+        "string": "Цели с [Debuff|отрицательным эффектом] [LifeLoss|теряют здоровье] в размере {0}% от нанесенного им [HitDamage|урона от удара], пока действует [Debuff|отрицательный эффект] по его истечению\n[CullingStrike|Добивает] врагов, если [Debuff|отрицательный эффект] достигает порога [CullingStrike|добивания]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -216,7 +236,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Отслеживаемый [Curse|проклятьем] урон@{0}%",
+        "string": "Отслеживаемый [Debuff|отрицательным эффектом] урон@{0}%",
         "reminder_text": null,
         "is_markup": null
       }

@@ -66,7 +66,7 @@
           [],
           []
         ],
-        "string": "{0} bis {1} [Physical|physischer] Nebenhand-Basisschaden",
+        "string": "{0} bis {1} [Physical|physischer] Basisschaden der Nebenhand",
         "reminder_text": null,
         "is_markup": null
       }
@@ -214,6 +214,50 @@
   {
     "English": null,
     "ids": [
+      "off_hand_weapon_minimum_fire_damage",
+      "off_hand_weapon_maximum_fire_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "{0} bis {1} Basis-[Fire|Feuer]schaden der Nebenhand",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "off_hand_base_weapon_attack_duration_ms"
     ],
     "trade_stats": null,
@@ -237,6 +281,50 @@
           ]
         ],
         "string": "Basis[Attack|angriffs]zeit der Nebenhand beträgt {0} Sekunden",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "off_hand_weapon_minimum_cold_damage",
+      "off_hand_weapon_maximum_cold_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "{0} bis {1} Basis-[Cold|Kälte]schaden der Nebenhand",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1378,60 +1466,6 @@
   {
     "English": null,
     "ids": [
-      "base_spell_repeat_count"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Zauber wiederholt sich einmal",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Zauber wiederholt sich {0} Mal",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "base_number_of_golems_allowed"
     ],
     "trade_stats": null,
@@ -1747,60 +1781,6 @@
           []
         ],
         "string": "Erhöhungen und Verringerungen der Zaubergeschwindigkeit gelten auch für die Aktivierungsfrequenz dieser Fertigkeit",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "base_melee_attack_repeat_count"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Dieser [Attack|Angriff] wird {0} zusätzliches Mal wiederholt",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Dieser [Attack|Angriff] wird {0} zusätzliche Male wiederholt",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2406,6 +2386,44 @@
           []
         ],
         "string": "Wandelt {0}% des [Physical|physischen] Schadens in [Lightning|Blitz]schaden um",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Conversion|Wandelt] -{0}% des [Physical|physischen] Schadens in [Lightning|Blitz]schaden um",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Conversion|Wandelt] {0}% des [Physical|physischen] Schadens in [Lightning|Blitz]schaden um",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5220,6 +5238,42 @@
   {
     "English": null,
     "ids": [
+      "base_modifiers_to_number_of_projectiles_instead_apply_to_repeats"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Modifikatoren der Anzahl von Projektilen gelten stattdessen für die Anzahl, mit der sich diese Fertigkeit [Repeat|wiederholt]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_number_of_arrows"
     ],
     "trade_stats": null,
@@ -5349,6 +5403,60 @@
           []
         ],
         "string": "Maximal {0} beschworene Wächter der Reinheit",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_fissures"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Erzeugt {0} Spalte",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Erzeugt {0} Spalten",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5953,6 +6061,42 @@
           ]
         ],
         "string": "{0}% verkleinerter Wirkungsbereich",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_skill_cannot_generate_energy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Diese Fertigkeit kann [Meta|Meta]-Fertigkeiten keine [Energy|Energie] generieren lassen",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9473,7 +9617,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Durch Euch verursachtes Bluten verursacht den Schaden {0}% schneller",
+        "string": "Von Euch verursachtes Bluten verursacht den Schaden {0}% schneller",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9565,7 +9709,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Durch Euch verursachte Vergiftungen verursachen den Schaden {0}% schneller",
+        "string": "Von Euch verursachte Vergiftungen verursachen den Schaden {0}% schneller",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12006,6 +12150,42 @@
   {
     "English": null,
     "ids": [
+      "modifiers_to_number_of_projectiles_instead_apply_to_number_of_targets_projectile_pierces"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Modifikatoren der [Projectile|Projektil]anzahl gelten stattdessen für die Anzahl [Pierce|durchbohrter] Ziele",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "modifiers_to_number_of_projectiles_instead_apply_to_splitting"
     ],
     "trade_stats": null,
@@ -12027,42 +12207,6 @@
           []
         ],
         "string": "Modifikatoren der Anzahl von Projektilen gelten stattdessen\nfür die Anzahl an Zielen, auf die sich Projektile aufteilen",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "modifiers_to_projectile_count_do_not_apply"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Projektilanzahl kann nicht modifiziert werden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12272,12 +12416,12 @@
           }
         ],
         "format": [
-          "ignore"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Verkettet sich ein zusätzliches Mal",
+        "string": "Verkettet sich {0} Mal",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12295,7 +12439,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Verkettet sich {0} zusätzliche Male",
+        "string": "Verkettet sich {0} Mal",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12308,12 +12452,12 @@
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "[Chain|Verkettet sich] {0} Mal",
+        "string": "[Chain|Verkettet] sich {0} Mal",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12326,12 +12470,12 @@
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "[Chain|Verkettet sich] {0} Male",
+        "string": "[Chain|Verkettet] sich {0} Mal",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12563,7 +12707,7 @@
   {
     "English": null,
     "ids": [
-      "number_of_projectiles_to_fire_+%_final_per_steel_ammo_consumed"
+      "number_of_projectiles_cannot_be_modified"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -12573,37 +12717,17 @@
         "condition": [
           {
             "min": 1,
-            "max": null,
+            "max": 1,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Feuert {0}% mehr [Projectile|Projektile] pro verbrauchtem Stahlsplitter",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "Feuert {0}% weniger [Projectile|Projektile] pro verbrauchtem Stahlsplitter",
+        "string": "Anzahl der [Projectile|Projektile] kann nicht modifiziert werden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12746,50 +12870,6 @@
           []
         ],
         "string": "Fügt {0} bis {1} [Physical|physischen] Schaden hinzu pro 5 [Armour|Rüstung] auf dem [Shield|Schild]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "off_hand_weapon_minimum_fire_damage",
-      "off_hand_weapon_maximum_fire_damage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "#"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "{0} bis {1} Basis-[Fire|Feuer]schaden der Nebenhand",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13217,60 +13297,6 @@
   {
     "English": null,
     "ids": [
-      "primary_projectile_chains_+"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Primäres Projektil verkettet sich {0} Mal",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Primäres Projektil verkettet sich {0} Mal",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "prismatic_rain_beam_base_frequency_ms"
     ],
     "trade_stats": null,
@@ -13344,12 +13370,12 @@
           }
         ],
         "format": [
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "[Pierce|Durchbohrt] das erste [HitDamage|getroffene] Ziel",
+        "string": "[Pierce|Durchbohrt] {0} Ziel",
         "reminder_text": null,
         "is_markup": null
       },
@@ -13367,7 +13393,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Pierce|Durchbohrt] die ersten {0} [HitDamage|getroffenen] Ziele",
+        "string": "[Pierce|Durchbohrt] {0} Ziele",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13448,7 +13474,25 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Projektile teilen sich auf {0} Ziele auf",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -14588,6 +14632,42 @@
           ]
         ],
         "string": "{0}% verringerter Zauberschaden",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "spirit_vessel_damage_+%_final_per_skill_socketed_in_meta_gem"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Geistergefäß verursacht {0}% mehr Schaden pro unterschiedlicher eingefasster Fertigkeit",
         "reminder_text": null,
         "is_markup": null
       }

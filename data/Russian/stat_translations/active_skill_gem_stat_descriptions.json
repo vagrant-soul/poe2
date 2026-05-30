@@ -214,6 +214,50 @@
   {
     "English": null,
     "ids": [
+      "off_hand_weapon_minimum_fire_damage",
+      "off_hand_weapon_maximum_fire_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "От {0} до {1} базового урона от [Fire|огня] левой рукой",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "off_hand_base_weapon_attack_duration_ms"
     ],
     "trade_stats": null,
@@ -241,6 +285,50 @@
           ]
         ],
         "string": "Базовое время [Attack|атаки] левой рукой составляет {0} секунд(-ы)",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "off_hand_weapon_minimum_cold_damage",
+      "off_hand_weapon_maximum_cold_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "От {0} до {1} базового урона от [Cold|холода] левой рукой",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1378,60 +1466,6 @@
   {
     "English": null,
     "ids": [
-      "base_spell_repeat_count"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Чары сотворяются еще раз",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Чары сотворяются еще {0} раза",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "base_number_of_golems_allowed"
     ],
     "trade_stats": null,
@@ -1751,60 +1785,6 @@
           []
         ],
         "string": "Повышения и снижения скорости сотворения чар также действуют на частоту активации этого умения",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "base_melee_attack_repeat_count"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Эта [Attack|атака] повторяется {0} дополнительный раз",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Эта [Attack|атака] повторяется {0} дополнительных раза",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2410,6 +2390,44 @@
           []
         ],
         "string": "{0}% [Physical|физического] урона становится уроном от [Lightning|молнии]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Conversion|Преобразует] -{0}% of [Physical|физического] урона в урон от [Lightning|молнии]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Conversion|Преобразует] {0}% of [Physical|физического] урона в урон от [Lightning|молнии]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5220,6 +5238,42 @@
   {
     "English": null,
     "ids": [
+      "base_modifiers_to_number_of_projectiles_instead_apply_to_repeats"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Свойства количества снарядов вместо этого применяются к количеству [Repeat|повторов] этого умения",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_number_of_arrows"
     ],
     "trade_stats": null,
@@ -5353,6 +5407,60 @@
           []
         ],
         "string": "Максимум призванных Стражей чистоты: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_fissures"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Создает расселин: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Создает расселин: {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5957,6 +6065,42 @@
           ]
         ],
         "string": "{0}% уменьшение области действия",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_skill_cannot_generate_energy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Это умения не позволяет [Meta|мета]-умениям накапливать [Energy|энергию]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12006,6 +12150,42 @@
   {
     "English": null,
     "ids": [
+      "modifiers_to_number_of_projectiles_instead_apply_to_number_of_targets_projectile_pierces"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Свойства количества [Projectile|снарядов] вместо этого применяются к количеству [Pierce|пронзенных] целей",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "modifiers_to_number_of_projectiles_instead_apply_to_splitting"
     ],
     "trade_stats": null,
@@ -12031,42 +12211,6 @@
           []
         ],
         "string": "Модификаторы количества снарядов вместо этого влияют на\nколичество целей, в направлении которых разделяются снаряды",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "modifiers_to_projectile_count_do_not_apply"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Количество снарядов нельзя изменить",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12276,12 +12420,12 @@
           }
         ],
         "format": [
-          "ignore"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Наносит дополнительный удар по цепи",
+        "string": "{0} удар по цепи",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12299,7 +12443,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Наносит дополнительных ударов по цепи: {0}",
+        "string": "{0} удара(-ов) по цепи",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12317,7 +12461,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Наносит ударов [Chain|по цепи]: {0}",
+        "string": "Наносит удар по [Chain|цепи] {0} раз",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12335,7 +12479,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Наносит ударов [Chain|по цепи]: {0}",
+        "string": "Наносит удар по [Chain|цепи] {0} раз(-а)",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12563,7 +12707,7 @@
   {
     "English": null,
     "ids": [
-      "number_of_projectiles_to_fire_+%_final_per_steel_ammo_consumed"
+      "number_of_projectiles_cannot_be_modified"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -12577,37 +12721,17 @@
         "condition": [
           {
             "min": 1,
-            "max": null,
+            "max": 1,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Выпускает на {0}% больше [Projectile|снарядов] за каждый поглощенный стальной осколок",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "Выпускает на {0}% меньше [Projectile|снарядов] за каждый поглощенный стальной осколок",
+        "string": "Количество [Projectile|снарядов] нельзя изменить",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12750,50 +12874,6 @@
           []
         ],
         "string": "Добавляет от {0} до {1} [Physical|физического] урона за каждые 5 [Armour|брони] на [Shield|щите]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "off_hand_weapon_minimum_fire_damage",
-      "off_hand_weapon_maximum_fire_damage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "#"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "От {0} до {1} базового урона от [Fire|огня] левой рукой",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13217,60 +13297,6 @@
   {
     "English": null,
     "ids": [
-      "primary_projectile_chains_+"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Основной снаряд поражает {0} цель по цепи",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Основной снаряд поражает целей по цепи: {0}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "prismatic_rain_beam_base_frequency_ms"
     ],
     "trade_stats": null,
@@ -13348,12 +13374,12 @@
           }
         ],
         "format": [
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "[Pierce|Пронзает] первую цель при нанесении [HitDamage|удара]",
+        "string": "[Pierce|Пронзает] целей: {0}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -13371,7 +13397,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Pierce|Пронзает] первые {0} цели при нанесении [HitDamage|удара]",
+        "string": "[Pierce|Пронзает] целей: {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13452,7 +13478,25 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Снаряды разделяются в сторону {0} целей",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -13463,7 +13507,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Снаряды разделяются в направлении {0} целей",
+        "string": "Снаряды разделяются в сторону {0} целей",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14592,6 +14636,42 @@
           ]
         ],
         "string": "{0}% уменьшение урона от чар",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "spirit_vessel_damage_+%_final_per_skill_socketed_in_meta_gem"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Духовный сосуд наносит на {0}% больше урона за каждое отдельное размещенное умение",
         "reminder_text": null,
         "is_markup": null
       }

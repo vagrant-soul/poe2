@@ -2,12 +2,32 @@
   {
     "English": null,
     "ids": [
-      "base_skill_effect_duration"
+      "base_cooldown_modifiable_repeat_interval_ms"
     ],
     "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Erhaltet jede Sekunde einen Geisterschleier",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -24,7 +44,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "{0} Sekunde Dauer zwischen dem Erhalt von Geisterschleiern",
+        "string": "Erhaltet alle {0} Sekunden einen Geisterschleier",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40,7 +60,7 @@
   {
     "English": null,
     "ids": [
-      "display_skill_ghost_dance_grants_energy_shield_when_hit"
+      "cooldown_recovery_modifiers_also_apply_to_repeat_interval"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -55,12 +75,12 @@
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
           []
         ],
-        "string": "[EnergyShield|Energieschild] wiederhergestellt@{0}",
+        "string": "Modifikatoren der Abklingzeit-Rate gelten auch\nfür die Frequenz, Geisterschleier zu erhalten",
         "reminder_text": null,
         "is_markup": null
       }
@@ -112,8 +132,7 @@
   {
     "English": null,
     "ids": [
-      "skill_base_ghost_dance_grants_%_evasion_as_energy_shield_when_hit",
-      "quality_display_ghost_dance_is_gem"
+      "skill_base_ghost_dance_grants_%_evasion_as_es_regeneration_per_minute_if_have_lost_ghost_dance_shroud_recently"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -125,47 +144,17 @@
             "min": null,
             "max": null,
             "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
           }
         ],
         "format": [
-          "+#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
-          [],
-          []
+          [
+            "per_minute_to_per_second_2dp_if_required"
+          ]
         ],
-        "string": "Geisterschleier stellen [EnergyShield|Energieschild] in Höhe von {0}% Eures [Evasion|Ausweichens] wieder her",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "Wenn Ihr [HitDamage|getroffen] werdet, [Consume|verbraucht] Ihr einen Geisterschleier\nund stellt [EnergyShield|Energieschild] in Höhe von {0}% Eures [Evasion|Ausweichens] wieder her",
+        "string": "Verliert einen Geisterschleier, wenn Ihr [HitDamage|getroffen] werdet\nRegeneriert [EnergyShield|Energieschild] in Höhe von {0}% Eures [Evasion|Ausweichwerts] pro Sekunde, wenn Ihr [Recently|kürzlich] einen Geisterschleier verloren habt",
         "reminder_text": null,
         "is_markup": null
       }
@@ -181,7 +170,7 @@
   {
     "English": null,
     "ids": [
-      "skill_effect_duration"
+      "virtual_cooldown_modifiable_repeat_interval_ms"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -203,7 +192,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Dauer zwischen Geisterschleiern@{0}s",
+        "string": "Intervall zwischen Geisterschleiern@{0}s",
         "reminder_text": null,
         "is_markup": null
       }

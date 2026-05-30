@@ -2,7 +2,7 @@
   {
     "English": null,
     "ids": [
-      "base_skill_effect_duration"
+      "base_cooldown_modifiable_repeat_interval_ms"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -31,7 +31,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "獲得祝福的間隔時間為 {0} 秒",
+        "string": "祝福間隔為{0}秒",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40,7 +40,7 @@
   {
     "English": null,
     "ids": [
-      "skill_effect_duration"
+      "cooldown_recovery_modifiers_also_apply_to_repeat_interval"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -62,14 +62,12 @@
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
-          [
-            "milliseconds_to_seconds_2dp_if_required"
-          ]
+          []
         ],
-        "string": "祝福間隔持續時間@{0} 秒",
+        "string": "影響冷卻回復率的詞綴會同時套用至\n祝福頻率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -124,6 +122,44 @@
           []
         ],
         "string": "祝福會恢復 {0} 生命並移除[Curse|詛咒]和[ElementalAilments|元素異常狀態]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "virtual_cooldown_modifiable_repeat_interval_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "祝福間隔@{0}秒",
         "reminder_text": null,
         "is_markup": null
       }

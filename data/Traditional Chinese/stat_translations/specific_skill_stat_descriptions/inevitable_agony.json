@@ -31,7 +31,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "[Curse|詛咒]範圍@{0} 公尺",
+        "string": "初始施放半徑@{0}公尺",
         "reminder_text": null,
         "is_markup": null
       }
@@ -56,6 +56,26 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "+{0}公尺初始施放半徑",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": 10,
             "max": 10,
             "negated": null
@@ -69,7 +89,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "[Curse|詛咒]範圍為 {0} 公尺",
+        "string": "初始施放半徑為 {0} 公尺",
         "reminder_text": null,
         "is_markup": null
       },
@@ -89,7 +109,7 @@
             "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "[Curse|詛咒]範圍為 {0} 公尺",
+        "string": "初始施放半徑為 {0} 公尺",
         "reminder_text": null,
         "is_markup": null
       }
@@ -127,7 +147,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[Curse|詛咒]持續時間為 {0} 秒",
+        "string": "[Debuff|減益效果]持續時間為 {0} 秒",
         "reminder_text": null,
         "is_markup": null
       },
@@ -147,7 +167,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[Curse|詛咒]持續時間為 {0} 秒",
+        "string": "[Debuff|減益效果]持續時間為 {0} 秒",
         "reminder_text": null,
         "is_markup": null
       }
@@ -183,7 +203,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Curse|受詛咒]目標再度被[Curse|詛咒]時，在[Curse|詛咒]效果結束時承受 {0}% 對其造成的[HitDamage|擊中傷害]\n以此方式再度承受[HitDamage|傷害]時，無法對[Curse|受詛咒]目標造成異常狀態",
+        "string": "當[Debuff|減益]結束時，受影響的目標[LifeLoss|損失]等同於其在受[Debuff|減益]期間所受[HitDamage|擊中傷害]的{0}%生命\n若[Debuff|減益]達到[CullingStrike|撲殺]門檻，則[CullingStrike|撲殺]敵人",
         "reminder_text": null,
         "is_markup": null
       }
@@ -219,7 +239,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[Curse|詛咒]追蹤的傷害@{0}%",
+        "string": "[Debuff|減益]追蹤的傷害百分比@{0}%",
         "reminder_text": null,
         "is_markup": null
       }

@@ -21,7 +21,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Immunité à la Frigorification",
+        "string": "Vous ne pouvez pas être Frigorifié",
         "reminder_text": null,
         "is_markup": null
       }
@@ -57,7 +57,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Immunité au Gel",
+        "string": "Vous ne pouvez pas être Gelé",
         "reminder_text": null,
         "is_markup": null
       }
@@ -93,7 +93,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Immunité à l'Embrasement",
+        "string": "Vous ne pouvez pas être Embrasé",
         "reminder_text": null,
         "is_markup": null
       }
@@ -129,7 +129,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Immunité à l'Électrocution",
+        "string": "Vous ne pouvez pas être Électrocuté",
         "reminder_text": null,
         "is_markup": null
       }
@@ -165,7 +165,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Le [Bleeding|Saignement] ne peut vous être infligé",
+        "string": "Le [Bleeding|Saignement] ne peut pas vous être infligé",
         "reminder_text": null,
         "is_markup": null
       }
@@ -313,7 +313,7 @@
           [],
           []
         ],
-        "string": "[BuffMagnitude|Amplitude] estimée de l'[Flammability|Inflammabilité] des [Thorns|Épines]@{0}% - {1}%",
+        "string": "Estimation de l'[BuffMagnitude|Amplitude] d'[Flammability|Inflammabilité] des [Thorns|Épines]@{0}% - {1}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -357,7 +357,7 @@
           [],
           []
         ],
-        "string": "Estimation des chances d'[Shock|Électrocuter] avec les [Thorns|Épines]@{0}% - {1}",
+        "string": "Estimation des chances d'[Shock|Électrocuter] des [Thorns|Épines]@{0}% - {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -836,7 +836,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -867,7 +867,8 @@
     "English": null,
     "ids": [
       "thorns_minimum_lightning_damage",
-      "thorns_maximum_lightning_damage"
+      "thorns_maximum_lightning_damage",
+      "thorns_lightning_damage_only_min_or_max"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -880,20 +881,59 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
           "#",
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [],
+          [],
           []
         ],
-        "string": "Dégâts de [Lightning|Foudre] des [Thorns|Épines]@{0} – {1}",
+        "string": "[Lightning] [Thorns] damage@{0} – {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "[Lightning] [Thorns] damage@{0} or {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -924,7 +964,7 @@
             "negated": null
           },
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -981,7 +1021,7 @@
           [],
           []
         ],
-        "string": "Dégâts des [Thorns|Épines] totaux@{0} – {1}",
+        "string": "Dégâts totaux des [Thorns|Épines]@{0} – {1}",
         "reminder_text": null,
         "is_markup": null
       }

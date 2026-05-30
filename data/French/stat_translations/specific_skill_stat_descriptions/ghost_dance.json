@@ -2,11 +2,31 @@
   {
     "English": null,
     "ids": [
-      "base_skill_effect_duration"
+      "base_cooldown_modifiable_repeat_interval_ms"
     ],
     "trade_stats": null,
     "hidden": null,
     "French": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Vous gagnez un Voile fantomatique chaque seconde",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -23,7 +43,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Vous générez un Voile fantomatique toutes les {0} secondes de Durée",
+        "string": "Vous gagnez un Voile fantomatique toutes les {0} secondes",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40,7 +60,7 @@
   {
     "English": null,
     "ids": [
-      "display_skill_ghost_dance_grants_energy_shield_when_hit"
+      "cooldown_recovery_modifiers_also_apply_to_repeat_interval"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -54,12 +74,12 @@
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
           []
         ],
-        "string": "[EnergyShield|Bouclier d'énergie] récupéré@{0}",
+        "string": "Modifiers to Cooldown Recovery Rate also apply to\nGhost Shroud gain frequency",
         "reminder_text": null,
         "is_markup": null
       }
@@ -112,8 +132,7 @@
   {
     "English": null,
     "ids": [
-      "skill_base_ghost_dance_grants_%_evasion_as_energy_shield_when_hit",
-      "quality_display_ghost_dance_is_gem"
+      "skill_base_ghost_dance_grants_%_evasion_as_es_regeneration_per_minute_if_have_lost_ghost_dance_shroud_recently"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -124,47 +143,17 @@
             "min": null,
             "max": null,
             "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
           }
         ],
         "format": [
-          "+#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
-          [],
-          []
+          [
+            "per_minute_to_per_second_2dp_if_required"
+          ]
         ],
-        "string": "Les Voiles fantomatiques vous font récupérer un montant de [EnergyShield|Bouclier d'énergie] équivalent à {0}% de votre [Evasion|Évasion]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "Lorsque vous êtes [HitDamage|Touché], vous [Consume|Consommez] un Voile fantomatique pour\nrécupérer un montant de [EnergyShield|Bouclier d'énergie] équivalent à {0}% de votre [Evasion|Évasion]",
+        "string": "When [HitDamage|Hit], lose a Ghost Shroud \nRegenerate [EnergyShield|Energy Shield] equal to {0}% of your [Evasion|Evasion Rating] per second if you have lost a Ghost Shroud [Recently]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -181,7 +170,7 @@
   {
     "English": null,
     "ids": [
-      "skill_effect_duration"
+      "virtual_cooldown_modifiable_repeat_interval_ms"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -202,7 +191,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "Durée entre les Voiles fantomatiques@{0}s",
+        "string": "Intervalle entre les Voiles fantomatiques@{0}s",
         "reminder_text": null,
         "is_markup": null
       }

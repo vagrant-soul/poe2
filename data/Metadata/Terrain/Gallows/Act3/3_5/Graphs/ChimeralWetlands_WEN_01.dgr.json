@@ -7,7 +7,7 @@
     ],
     "MasterFile": "Metadata/Terrain/Gallows/Act3/3_5/master.tsi"
   },
-  "edge_count": 11,
+  "edge_count": 12,
   "edge_types": {
     "Metadata/Terrain/Tools/void.et": {
       "id": "void",
@@ -140,7 +140,7 @@
       "color": "#FF5A5A5A"
     },
     {
-      "from_": 9,
+      "from_": 11,
       "to": 2,
       "path": [],
       "unknown": [
@@ -263,6 +263,35 @@
       "from_": 9,
       "to": 6,
       "path": [],
+      "unknown": [
+        100,
+        0,
+        0,
+        "Metadata/Terrain/Dungeon/rooms.et",
+        0,
+        25,
+        0,
+        "",
+        60,
+        "",
+        0,
+        0,
+        "P",
+        "N",
+        1
+      ],
+      "edge_type": "Metadata/Terrain/Dungeon/rooms.et",
+      "color": "#FF5A5A5A"
+    },
+    {
+      "from_": 9,
+      "to": 11,
+      "path": [
+        [
+          150,
+          104
+        ]
+      ],
       "unknown": [
         100,
         0,
@@ -774,7 +803,7 @@
     "Critters": "critters.clt",
     "FileGroups": null
   },
-  "node_count": 11,
+  "node_count": 12,
   "numbers": [
     0
   ],
@@ -817,7 +846,7 @@
         "teleport1disabled-Arena",
         "telepad1"
       ],
-      "transform": "I",
+      "transform": "R270",
       "unknown": [
         100,
         0,
@@ -831,7 +860,7 @@
         "N",
         0
       ],
-      "x": 334,
+      "x": 196,
       "y": 127
     },
     {
@@ -844,7 +873,7 @@
       "strings": [
         "entrance3"
       ],
-      "transform": "I",
+      "transform": "(any)",
       "unknown": [
         100,
         0,
@@ -858,8 +887,8 @@
         "N",
         0
       ],
-      "x": 173,
-      "y": 219
+      "x": 104,
+      "y": 196
     },
     {
       "numbers": [
@@ -881,7 +910,7 @@
         "V",
         0
       ],
-      "x": 242,
+      "x": 173,
       "y": 58
     },
     {
@@ -928,8 +957,8 @@
         "V",
         0
       ],
-      "x": 127,
-      "y": 242
+      "x": 58,
+      "y": 219
     },
     {
       "numbers": [
@@ -954,7 +983,7 @@
         "N",
         0
       ],
-      "x": 380,
+      "x": 242,
       "y": 81
     },
     {
@@ -977,7 +1006,7 @@
         "V",
         0
       ],
-      "x": 403,
+      "x": 265,
       "y": 12
     },
     {
@@ -1000,13 +1029,13 @@
         "V",
         0
       ],
-      "x": 311,
+      "x": 173,
       "y": 196
     },
     {
       "numbers": [
         10,
-        5,
+        11,
         4
       ],
       "room": "landmark",
@@ -1025,7 +1054,7 @@
         "N",
         0
       ],
-      "x": 219,
+      "x": 150,
       "y": 12
     },
     {
@@ -1051,6 +1080,30 @@
       ],
       "x": 81,
       "y": 104
+    },
+    {
+      "numbers": [
+        11,
+        5
+      ],
+      "room": "encampment",
+      "strings": [],
+      "transform": "(best)",
+      "unknown": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        "N",
+        0
+      ],
+      "x": 127,
+      "y": 104
     }
   ],
   "room_set": [
@@ -1066,7 +1119,10 @@
     {
       "file": "Metadata/Terrain/Gallows/Act3/3_5/Rooms/Unique/entrance_02.arm",
       "prefix": null,
-      "suffix": null,
+      "suffix": [
+        "I",
+        "FR270"
+      ],
       "tile_tag": null,
       "room_tag": "entrance_trial",
       "tile_tgt": null,
@@ -1100,11 +1156,20 @@
       "tile_parent": null
     },
     {
+      "file": "Metadata/Terrain/Gallows/Act3/3_5/Rooms/Unique/mission_01.arm",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": "mission",
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
       "file": "Metadata/Terrain/Gallows/Act3/3_5/Rooms/Unique/landmark_01.arm",
       "prefix": null,
       "suffix": null,
       "tile_tag": null,
-      "room_tag": "special2",
+      "room_tag": "encampment",
       "tile_tgt": null,
       "tile_parent": null
     },
@@ -1113,7 +1178,7 @@
       "prefix": null,
       "suffix": null,
       "tile_tag": null,
-      "room_tag": "special2",
+      "room_tag": "encampment",
       "tile_tgt": null,
       "tile_parent": null
     },
@@ -1621,8 +1686,8 @@
     }
   ],
   "size": [
-    18,
-    12
+    12,
+    11
   ],
   "strings": [
     "",
@@ -1673,6 +1738,15 @@
       "tile_tag": "observatory_entrance",
       "room_tag": null,
       "tile_tgt": "Art/Models/Terrain/Jungle/Tiles/AreaTransitions/Observatory_Entrance_01.tgt",
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Leagues/Incursion/Tiles/Features/Waygates/WaygateDeviceJungleDepths.tdt",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": "waygate",
+      "room_tag": null,
+      "tile_tgt": "Art/Models/Terrain/Leagues/Incursion/Tiles/WaygateDevice/WaygateDeviceJungle.tgt",
       "tile_parent": null
     },
     {

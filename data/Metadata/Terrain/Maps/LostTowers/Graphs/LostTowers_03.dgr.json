@@ -53,12 +53,23 @@
     {
       "file": "Metadata/Terrain/Desert/Pillars/Tops/PillarTop_Fill_01.tdt",
       "prefix": [
-        "10"
+        "1000"
       ],
       "suffix": null,
       "tile_tag": null,
       "room_tag": null,
       "tile_tgt": "Art/Models/Terrain/Desert/Pillars/Tops/PillarTop_Fill_01.tgt",
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Blank_3x3.tdt",
+      "prefix": [
+        "1"
+      ],
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": null,
+      "tile_tgt": "Art/Models/Terrain/Blank.tgt",
       "tile_parent": null
     },
     {
@@ -166,7 +177,7 @@
     "ChestData": "chests.cht",
     "Doodads": "doodads.ddt",
     "EdgeCombination": "pillars.ecf",
-    "FillTiles": "random_fill_tiles.gft",
+    "FillTiles": "main_random_fill_tiles.gft",
     "MaterialsList": "materials.mtd",
     "OuterGroundType": null,
     "Reskin": null,
@@ -321,15 +332,6 @@
       "suffix": null,
       "tile_tag": null,
       "room_tag": "no_boss",
-      "tile_tgt": null,
-      "tile_parent": null
-    },
-    {
-      "file": "Metadata/Terrain/Maps/LostTowers/Rooms/Unique/mission_01.arm",
-      "prefix": null,
-      "suffix": null,
-      "tile_tag": null,
-      "room_tag": "mission",
       "tile_tgt": null,
       "tile_parent": null
     },
@@ -805,17 +807,6 @@
       "room_tag": null,
       "tile_tgt": null,
       "tile_parent": null
-    },
-    {
-      "file": "Metadata/Terrain/Maps/LostTowers/Rooms/Tops/2x2/2open_corner_02.arm",
-      "prefix": [
-        "300"
-      ],
-      "suffix": null,
-      "tile_tag": null,
-      "room_tag": null,
-      "tile_tgt": null,
-      "tile_parent": null
     }
   ],
   "size": [
@@ -874,6 +865,15 @@
       "tile_parent": null
     },
     {
+      "file": "Metadata/Terrain/Blank_3x3.tdt",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": null,
+      "tile_tgt": "Art/Models/Terrain/Blank.tgt",
+      "tile_parent": null
+    },
+    {
       "file": "Metadata/Terrain/Desert/Pillars/Upper/StairExit_01.tdt",
       "prefix": null,
       "suffix": null,
@@ -890,34 +890,6 @@
       "room_tag": null,
       "tile_tgt": "Art/Models/Terrain/Desert/Pillars/Ascent/PillarUpper_StairsUp_01.tgt",
       "tile_parent": null
-    },
-    {
-      "file": "Metadata/Terrain/Desert/Pillars/Lower/Wide/PillarLowerWide_St_01_mission.tdt",
-      "prefix": null,
-      "suffix": null,
-      "tile_tag": "missionRoom",
-      "room_tag": null,
-      "tile_tgt": null,
-      "tile_parent": {
-        "file": "Metadata/Terrain/Desert/Pillars/Lower/Wide/PillarLowerWide_St_01.tdt",
-        "tile_parent": null,
-        "tile_tag": null,
-        "tile_tgt": "Art/Models/Terrain/Desert/Pillars/Ascent/PillarLowerWide_St_01.tgt"
-      }
-    },
-    {
-      "file": "Metadata/Terrain/Desert/Pillars/Lower/MapLostTowers/PillarLowerWide_CvCv_01_mission.tdt",
-      "prefix": null,
-      "suffix": null,
-      "tile_tag": "Art/Models/Terrain/Desert/Pillars/MapLostTowers/PillarLowerWide_CvCv_01.tgt",
-      "room_tag": null,
-      "tile_tgt": null,
-      "tile_parent": {
-        "file": "Metadata/Terrain/Desert/Pillars/Lower/Wide/PillarLowerWide_CvCv_01.tdt",
-        "tile_parent": null,
-        "tile_tag": null,
-        "tile_tgt": "Art/Models/Terrain/Desert/Pillars/Ascent/PillarLowerWide_CvCv_01.tgt"
-      }
     },
     {
       "file": "Metadata/Terrain/Maps/LostTowers/Tiles/PillarArena01.tdt",
@@ -941,21 +913,48 @@
       "tile_parent": null
     },
     {
-      "file": "Metadata/Terrain/Maps/LostTowers/Tiles/Tops/PillarTopWide_Cv_01_mission.tdt",
+      "file": "Metadata/Terrain/Maps/LostTowers/Tiles/MissionTiles/PillarTopWide_Cv_01_mission.tdt",
       "prefix": null,
       "suffix": null,
-      "tile_tag": "mission",
+      "tile_tag": null,
       "room_tag": null,
       "tile_tgt": "Art/Models/Terrain/Desert/Pillars/Tops/PillarTopWide_Cv_01_mission.tgt",
       "tile_parent": null
     },
     {
-      "file": "Metadata/Terrain/Maps/LostTowers/Tiles/Tops/PillarTopWide_Door_01_mission.tdt",
+      "file": "Metadata/Terrain/Maps/LostTowers/Tiles/MissionTiles/PillarTopWide_CvCvLow_01_mission.tdt",
       "prefix": null,
       "suffix": null,
-      "tile_tag": "mission",
+      "tile_tag": null,
+      "room_tag": null,
+      "tile_tgt": "Art/Models/Terrain/Desert/Pillars/Tops/PillarTopWide_CvCvLow_01_mission.tgt",
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Maps/LostTowers/Tiles/MissionTiles/PillarTopWide_CvCvTall_01_mission.tdt",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": null,
+      "tile_tgt": "Art/Models/Terrain/Desert/Pillars/Tops/PillarTopWide_CvCvTall_01_mission.tgt",
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Maps/LostTowers/Tiles/MissionTiles/PillarTopWide_Door_01_mission.tdt",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": null,
       "room_tag": null,
       "tile_tgt": "Art/Models/Terrain/Desert/Pillars/Tops/PillarTopWide_Door_01_mission.tgt",
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Maps/LostTowers/Tiles/MissionTiles/PillarTopWide_St_01_mission.tdt",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": null,
+      "tile_tgt": "Art/Models/Terrain/Desert/Pillars/Tops/PillarTopWide_St_01_mission.tgt",
       "tile_parent": null
     },
     {

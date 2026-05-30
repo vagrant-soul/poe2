@@ -2,7 +2,7 @@
   {
     "English": null,
     "ids": [
-      "active_skill_area_of_effect_radius"
+      "volatile_dead_base_number_of_corpses_to_consume"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -13,7 +13,61 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "소모되는 [Corpse|시신] {0}구",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "소모되는 [Corpse|시신] {0}구",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Corpse|시신] 최대 {0}구 소모",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
             "max": null,
             "negated": null
           }
@@ -22,11 +76,9 @@
           "#"
         ],
         "index_handlers": [
-          [
-            "divide_by_ten_1dp_if_required"
-          ]
+          []
         ],
-        "string": "폭발 반경@{0}미터",
+        "string": "[Corpse|시신] 최대 {0}구 소모",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40,7 +92,7 @@
   {
     "English": null,
     "ids": [
-      "active_skill_base_area_of_effect_radius"
+      "base_skill_effect_duration"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -51,8 +103,8 @@
       {
         "condition": [
           {
-            "min": 10,
-            "max": 10,
+            "min": 1000,
+            "max": 1000,
             "negated": null
           }
         ],
@@ -61,10 +113,10 @@
         ],
         "index_handlers": [
           [
-            "divide_by_ten_1dp_if_required"
+            "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "폭발 반경 {0}미터",
+        "string": "핵심 지속시간 {0}초",
         "reminder_text": null,
         "is_markup": null
       },
@@ -81,10 +133,48 @@
         ],
         "index_handlers": [
           [
-            "divide_by_ten_1dp_if_required"
+            "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "폭발 반경 {0}미터",
+        "string": "핵심 지속시간 {0}초",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "skill_effect_duration"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "핵심 지속시간@{0}초",
         "reminder_text": null,
         "is_markup": null
       }

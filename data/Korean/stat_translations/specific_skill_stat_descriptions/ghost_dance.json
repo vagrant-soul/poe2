@@ -2,7 +2,7 @@
   {
     "English": null,
     "ids": [
-      "base_skill_effect_duration"
+      "base_cooldown_modifiable_repeat_interval_ms"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -10,6 +10,26 @@
     "German": null,
     "Japanese": null,
     "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "1초마다 유령 연막 1개 획득",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -26,7 +46,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "유령 연막 획득 사이의 시간 {0}초",
+        "string": "{0}초마다 유령 연막 1개 획득",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40,7 +60,7 @@
   {
     "English": null,
     "ids": [
-      "display_skill_ghost_dance_grants_energy_shield_when_hit"
+      "cooldown_recovery_modifiers_also_apply_to_repeat_interval"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -57,12 +77,12 @@
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
           []
         ],
-        "string": "[EnergyShield|에너지 보호막] 회복@{0}",
+        "string": "재사용 대기시간 회복 속도 속성이\n유령 연막 획득 빈도에도 적용",
         "reminder_text": null,
         "is_markup": null
       }
@@ -112,8 +132,7 @@
   {
     "English": null,
     "ids": [
-      "skill_base_ghost_dance_grants_%_evasion_as_energy_shield_when_hit",
-      "quality_display_ghost_dance_is_gem"
+      "skill_base_ghost_dance_grants_%_evasion_as_es_regeneration_per_minute_if_have_lost_ghost_dance_shroud_recently"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -127,47 +146,17 @@
             "min": null,
             "max": null,
             "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
           }
         ],
         "format": [
-          "#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
-          [],
-          []
+          [
+            "per_minute_to_per_second_2dp_if_required"
+          ]
         ],
-        "string": "[HitDamage|명중] 시 유령 연막을 [Consume|소모]하여\n[Evasion|회피]의 {0}%와 동일한 [EnergyShield|에너지 보호막] 회복",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "[HitDamage|명중] 시 유령 연막을 [Consume|소모]하여\n[Evasion|회피]의 {0}%와 동일한 [EnergyShield|에너지 보호막] 회복",
+        "string": "[HitDamage|명중] 시 유령 연막 1개 상실\n[Recently|최근 4초 이내] 유령 연막을 상실한 경우 1초마다 [Evasion|회피]의 {0}%와 동일한 [EnergyShield|에너지 보호막] 재생",
         "reminder_text": null,
         "is_markup": null
       }
@@ -181,7 +170,7 @@
   {
     "English": null,
     "ids": [
-      "skill_effect_duration"
+      "virtual_cooldown_modifiable_repeat_interval_ms"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -205,7 +194,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "유령 연막 사이의 시간@{0}초",
+        "string": "유령 연막 사이의 간격@{0}초",
         "reminder_text": null,
         "is_markup": null
       }

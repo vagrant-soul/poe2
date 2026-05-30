@@ -7,7 +7,7 @@
     ],
     "MasterFile": "Metadata/Terrain/Maps/Chasm/master.tsi"
   },
-  "edge_count": 8,
+  "edge_count": 7,
   "edge_types": {
     "Metadata/Terrain/Maps/Chasm/Graphs/chasm_abyss_rooms.et": {
       "id": "ChasmAbyssRooms",
@@ -16,20 +16,16 @@
     "Metadata/Terrain/Maps/Chasm/Graphs/chasm_abyss_outer_rooms.et": {
       "id": "ChasmAbyssOuterRooms",
       "color": "#ff8f0000"
-    },
-    "Metadata/Terrain/Tools/void.et": {
-      "id": "void",
-      "color": "#FF141414"
     }
   },
   "edges": [
     {
-      "from_": 5,
+      "from_": 4,
       "to": 0,
       "path": [],
       "unknown": [
         100,
-        0,
+        1,
         0,
         "Metadata/Terrain/Maps/Chasm/Graphs/chasm_abyss_rooms.et",
         0,
@@ -53,7 +49,7 @@
       "path": [],
       "unknown": [
         100,
-        0,
+        1,
         0,
         "Metadata/Terrain/Maps/Chasm/Graphs/chasm_abyss_outer_rooms.et",
         0,
@@ -77,31 +73,7 @@
       "path": [],
       "unknown": [
         100,
-        0,
-        0,
-        "Metadata/Terrain/Maps/Chasm/Graphs/chasm_abyss_outer_rooms.et",
-        0,
-        0,
-        0,
-        "",
-        0,
-        "",
-        0,
-        0,
-        "P",
-        "N",
-        1
-      ],
-      "edge_type": "Metadata/Terrain/Maps/Chasm/Graphs/chasm_abyss_outer_rooms.et",
-      "color": "#ff8f0000"
-    },
-    {
-      "from_": 4,
-      "to": 1,
-      "path": [],
-      "unknown": [
-        100,
-        0,
+        1,
         0,
         "Metadata/Terrain/Maps/Chasm/Graphs/chasm_abyss_outer_rooms.et",
         0,
@@ -121,11 +93,11 @@
     },
     {
       "from_": 3,
-      "to": 4,
+      "to": 1,
       "path": [],
       "unknown": [
         100,
-        0,
+        1,
         0,
         "Metadata/Terrain/Maps/Chasm/Graphs/chasm_abyss_outer_rooms.et",
         0,
@@ -144,12 +116,36 @@
       "color": "#ff8f0000"
     },
     {
+      "from_": 5,
+      "to": 4,
+      "path": [],
+      "unknown": [
+        100,
+        1,
+        0,
+        "Metadata/Terrain/Maps/Chasm/Graphs/chasm_abyss_rooms.et",
+        0,
+        80,
+        0,
+        "Metadata/Terrain/Dungeon/rooms.et",
+        100,
+        "",
+        0,
+        0,
+        "I",
+        "N",
+        1
+      ],
+      "edge_type": "Metadata/Terrain/Maps/Chasm/Graphs/chasm_abyss_rooms.et",
+      "color": "#ffff0000"
+    },
+    {
       "from_": 6,
       "to": 5,
       "path": [],
       "unknown": [
         100,
-        0,
+        1,
         0,
         "Metadata/Terrain/Maps/Chasm/Graphs/chasm_abyss_rooms.et",
         0,
@@ -173,7 +169,7 @@
       "path": [],
       "unknown": [
         100,
-        0,
+        1,
         0,
         "Metadata/Terrain/Maps/Chasm/Graphs/chasm_abyss_rooms.et",
         0,
@@ -190,30 +186,6 @@
       ],
       "edge_type": "Metadata/Terrain/Maps/Chasm/Graphs/chasm_abyss_rooms.et",
       "color": "#ffff0000"
-    },
-    {
-      "from_": 7,
-      "to": 8,
-      "path": [],
-      "unknown": [
-        100,
-        0,
-        0,
-        "Metadata/Terrain/Tools/void.et",
-        0,
-        0,
-        0,
-        "",
-        0,
-        "",
-        0,
-        0,
-        "P",
-        "V",
-        1
-      ],
-      "edge_type": "Metadata/Terrain/Tools/void.et",
-      "color": "#FF141414"
     }
   ],
   "fill_tiles": [
@@ -337,12 +309,23 @@
     {
       "file": "Metadata/Terrain/Maps/Chasm/Tiles/Thickwall/Fill_01.tdt",
       "prefix": [
+        "//1"
+      ],
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": null,
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Maps/Chasm/Tiles/Thickwall/Fill_02.tdt",
+      "prefix": [
         "1"
       ],
       "suffix": null,
       "tile_tag": null,
       "room_tag": null,
-      "tile_tgt": "Art/Models/Terrain/Maps/Chasm/Thickwall/Fill_01.tgt",
+      "tile_tgt": "Art/Models/Terrain/Maps/Chasm/Thickwall/Fill_02.tgt",
       "tile_parent": null
     },
     {
@@ -390,7 +373,7 @@
   ],
   "master": {
     "ChestData": "chests.cht",
-    "Doodads": null,
+    "Doodads": "doodads.ddt",
     "EdgeCombination": "combination.ecf",
     "FillTiles": "random_fill_tiles.gft",
     "MaterialsList": "materials.mtd",
@@ -411,15 +394,15 @@
     "Critters": "critters.clt",
     "FileGroups": null
   },
-  "node_count": 9,
+  "node_count": 7,
   "numbers": [
     1
   ],
   "nodes": [
     {
       "numbers": [
-        0,
-        1
+        1,
+        0
       ],
       "room": "entrance",
       "strings": [
@@ -439,8 +422,8 @@
         "N",
         0
       ],
-      "x": 35,
-      "y": 219
+      "x": 10,
+      "y": 35
     },
     {
       "numbers": [
@@ -449,7 +432,7 @@
       ],
       "room": "boss",
       "strings": [],
-      "transform": "FR180",
+      "transform": "I",
       "unknown": [
         100,
         0,
@@ -463,12 +446,36 @@
         "N",
         0
       ],
-      "x": 173,
-      "y": 35
+      "x": 242,
+      "y": 81
     },
     {
       "numbers": [
-        1,
+        2,
+        1
+      ],
+      "room": "",
+      "strings": [],
+      "transform": "(best)",
+      "unknown": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        "N",
+        0
+      ],
+      "x": 35,
+      "y": 12
+    },
+    {
+      "numbers": [
+        3,
         2
       ],
       "room": "",
@@ -487,12 +494,12 @@
         "N",
         0
       ],
-      "x": 12,
-      "y": 242
+      "x": 311,
+      "y": 12
     },
     {
       "numbers": [
-        2,
+        0,
         4
       ],
       "room": "",
@@ -511,107 +518,13 @@
         "N",
         0
       ],
-      "x": 12,
-      "y": 288
-    },
-    {
-      "numbers": [
-        3,
-        4
-      ],
-      "room": "",
-      "strings": [],
-      "transform": "(best)",
-      "unknown": [
-        100,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "N",
-        0
-      ],
-      "x": 242,
-      "y": 288
-    },
-    {
-      "numbers": [
-        5,
-        0
-      ],
-      "room": "",
-      "strings": [],
-      "transform": "(best)",
-      "unknown": [
-        100,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "N",
-        0
-      ],
-      "x": 104,
-      "y": 196
-    },
-    {
-      "numbers": [
-        6,
-        5
-      ],
-      "room": "",
-      "strings": [],
-      "transform": "(best)",
-      "unknown": [
-        100,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "N",
-        0
-      ],
-      "x": 81,
-      "y": 81
-    },
-    {
-      "numbers": [
-        7
-      ],
-      "room": "",
-      "strings": [],
-      "transform": "(best)",
-      "unknown": [
-        100,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "V",
-        0
-      ],
-      "x": 173,
+      "x": 58,
       "y": 127
     },
     {
       "numbers": [
-        7
+        5,
+        4
       ],
       "room": "",
       "strings": [],
@@ -626,10 +539,34 @@
         0,
         0,
         0,
-        "V",
+        "N",
         0
       ],
-      "x": 150,
+      "x": 127,
+      "y": 58
+    },
+    {
+      "numbers": [
+        5,
+        6
+      ],
+      "room": "",
+      "strings": [],
+      "transform": "(best)",
+      "unknown": [
+        100,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        "N",
+        0
+      ],
+      "x": 173,
       "y": 127
     }
   ],
@@ -671,11 +608,20 @@
       "tile_parent": null
     },
     {
-      "file": "Metadata/Terrain/Maps/Chasm/Rooms/Unique/rare_01.arm",
+      "file": "Metadata/Terrain/Maps/Chasm/Rooms/Unique/mission_01.arm",
       "prefix": null,
       "suffix": null,
       "tile_tag": null,
-      "room_tag": "rare",
+      "room_tag": "mission",
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Maps/Chasm/Rooms/Unique/mission_02.arm",
+      "prefix": null,
+      "suffix": null,
+      "tile_tag": null,
+      "room_tag": "mission",
       "tile_tgt": null,
       "tile_parent": null
     },
@@ -1212,8 +1158,8 @@
     }
   ],
   "size": [
-    11,
-    13
+    14,
+    7
   ],
   "strings": [
     "",
@@ -1863,11 +1809,27 @@
     },
     {
       "file": "Metadata/Terrain/Maps/Chasm/Tiles/Thickwall/Fill_01.tdt",
-      "prefix": null,
+      "prefix": [
+        "//"
+      ],
       "suffix": null,
       "tile_tag": null,
       "room_tag": null,
-      "tile_tgt": "Art/Models/Terrain/Maps/Chasm/Thickwall/Fill_01.tgt",
+      "tile_tgt": null,
+      "tile_parent": null
+    },
+    {
+      "file": "Metadata/Terrain/Maps/Chasm/Tiles/Thickwall/Fill_02.tdt",
+      "prefix": null,
+      "suffix": [
+        "I",
+        "R90",
+        "R180",
+        "R270"
+      ],
+      "tile_tag": null,
+      "room_tag": null,
+      "tile_tgt": "Art/Models/Terrain/Maps/Chasm/Thickwall/Fill_02.tgt",
       "tile_parent": null
     },
     {

@@ -2,7 +2,7 @@
   {
     "English": null,
     "ids": [
-      "runic_tempering_backlash_cooldown_ms"
+      "active_skill_area_of_effect_radius"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -26,10 +26,10 @@
         ],
         "index_handlers": [
           [
-            "milliseconds_to_seconds_2dp_if_required"
+            "divide_by_ten_1dp_if_required"
           ]
         ],
-        "string": "[DNT-UNUSED] Minimum of {0} second between each backlash",
+        "string": "Radio del contragolpe@{0} m",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40,7 +40,143 @@
   {
     "English": null,
     "ids": [
-      "runic_tempering_damage_taken_+%"
+      "active_skill_base_area_of_effect_radius"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "El radio del contragolpe es de {0} metro",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "El radio del contragolpe es de {0} metros",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "runic_tempering_backlash_cooldown_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Tiempo mínimo entre los contragolpes@{0} s",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Puede realizar un contragolpe una vez por segundo",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Puede realizar un contragolpe una vez cada {0} segundos",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "runic_tempering_damage_taken_+%_final"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -65,7 +201,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] {0}% increase Damage taken while you have runes",
+        "string": "Daño recibido de los [HitDamage|impactos] mientras tengas placas rúnicas@{0}% más",
         "reminder_text": null,
         "is_markup": null
       },
@@ -85,7 +221,45 @@
             "negate"
           ]
         ],
-        "string": "[DNT-UNUSED] {0}% decrease Damage taken while you have runes",
+        "string": "Daño recibido de los [HitDamage|impactos] mientras tengas placas rúnicas@{0}% menos",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Recibes un {0}% más de daño de los [HitDamage|impactos] mientras tengas placas rúnicas",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Recibes un {0}% menos de daño de los [HitDamage|impactos] mientras tengas placas rúnicas",
         "reminder_text": null,
         "is_markup": null
       }
@@ -111,6 +285,24 @@
         "condition": [
           {
             "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Contragolpes por cada placa rúnica@{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": 1,
             "negated": null
           }
@@ -121,7 +313,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] Each rune can backlash {0} time",
+        "string": "Pierdes una placa rúnica por cada {0} contragolpe",
         "reminder_text": null,
         "is_markup": null
       },
@@ -139,7 +331,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT-UNUSED] Each rune can backlash {0} times",
+        "string": "Pierdes una placa rúnica por cada {0} contragolpes",
         "reminder_text": null,
         "is_markup": null
       }
@@ -150,7 +342,8 @@
   {
     "English": null,
     "ids": [
-      "runic_tempering_max_runes"
+      "runic_tempering_max_runes",
+      "runic_tempering_stacks"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -164,18 +357,75 @@
       {
         "condition": [
           {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
             "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
+          "#",
           "#"
         ],
         "index_handlers": [
+          [],
           []
         ],
-        "string": "[DNT-UNUSED] Maximum {0} Runes",
+        "string": "Placas rúnicas actuales y máximas@{1}/{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Máximo de placas rúnicas: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Máximo de placas rúnicas: {0}",
         "reminder_text": null,
         "is_markup": null
       }
