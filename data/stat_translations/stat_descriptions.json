@@ -2106,6 +2106,12 @@
         "option": null
       },
       {
+        "id": "fractured.stat_718638445",
+        "text": "# Suffix Modifier allowed",
+        "type": "fractured",
+        "option": null
+      },
+      {
         "id": "implicit.stat_718638445",
         "text": "# Suffix Modifier allowed",
         "type": "implicit",
@@ -2890,7 +2896,14 @@
     "ids": [
       "heist_enchantment_critical_mod_effect_+%"
     ],
-    "trade_stats": null,
+    "trade_stats": [
+      {
+        "id": "explicit.stat_2393315299",
+        "text": "#% increased Explicit Critical Modifier magnitudes",
+        "type": "explicit",
+        "option": null
+      }
+    ],
     "hidden": null,
     "French": null,
     "German": null,
@@ -3178,6 +3191,12 @@
       "heist_enchantment_lightning_mod_effect_+%"
     ],
     "trade_stats": [
+      {
+        "id": "desecrated.stat_3624940721",
+        "text": "#% increased Explicit Lightning Modifier magnitudes",
+        "type": "desecrated",
+        "option": null
+      },
       {
         "id": "explicit.stat_3624940721",
         "text": "#% increased Explicit Lightning Modifier magnitudes",
@@ -66613,14 +66632,7 @@
     "ids": [
       "base_item_found_quantity_+%"
     ],
-    "trade_stats": [
-      {
-        "id": "explicit.stat_2390685262",
-        "text": "#% increased Quantity of Items found",
-        "type": "explicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": null,
@@ -66802,21 +66814,9 @@
         "option": null
       },
       {
-        "id": "enchant.stat_2306002879",
-        "text": "#% increased Rarity of Items found",
-        "type": "enchant",
-        "option": null
-      },
-      {
         "id": "enchant.stat_3917489142",
         "text": "#% increased Rarity of Items found",
         "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_2306002879",
-        "text": "#% increased Rarity of Items found",
-        "type": "explicit",
         "option": null
       },
       {
@@ -199131,18 +199131,18 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "+#"
+          "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "[Archon] Buffs also grant {0}% [CriticalDamageBonus|Critical Damage Bonus]",
+        "string": "[Archon] Buffs also grant {0}% increased [CriticalDamageBonus|Critical Damage Bonus]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -199167,18 +199167,18 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "+#"
+          "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "[Archon] Buffs also grant {0}% [Critical|Critical Hit Chance]",
+        "string": "[Archon] Buffs also grant {0}% increased [Critical|Critical Hit Chance]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -243302,6 +243302,62 @@
         "index_handlers": [
           []
         ],
+        "string": "{0}% increased Cast Speed per [Spell|Spell] Echoed [Recently], up to 30%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% reduced Cast Speed per [Spell|Spell] Echoed [Recently], up to 30%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "cast_speed_+%_per_spell_echoed_recently_up_to_30%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "{0}% increased Cast Speed with Brand Skills",
         "reminder_text": null,
         "is_markup": null
@@ -281956,6 +282012,12 @@
         "option": null
       },
       {
+        "id": "fractured.stat_258119672",
+        "text": "# metre to Dodge Roll distance",
+        "type": "fractured",
+        "option": null
+      },
+      {
         "id": "rune.stat_258119672",
         "text": "# metre to Dodge Roll distance",
         "type": "augment",
@@ -283435,6 +283497,78 @@
     ],
     "ids": [
       "dummy_display_defeating_arbiter_will_allow_completion_of_a_section_of_fortress"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Active",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "dummy_display_stat_active"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Inactive",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "dummy_display_stat_inactive"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -340938,6 +341072,44 @@
       {
         "condition": [
           {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Regenerate {0}% of maximum Life per Second if you have used a [Command] Skill [Recently]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "life_regeneration_per_minute_%_if_used_a_command_skill_recently"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": null,
             "max": null,
             "negated": null
@@ -350113,6 +350285,44 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second_1dp"
+          ]
+        ],
+        "string": "Regenerate {0}% of maximum [Ward|Runic Ward] per second during Effect",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "local_flask_ward_regeneration_per_minute_%_during_flask_effect"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": 1,
             "max": null,
             "negated": null
@@ -355136,6 +355346,12 @@
         "text": "#% increased Effect of Prefixes",
         "type": "explicit",
         "option": null
+      },
+      {
+        "id": "fractured.stat_1443502073",
+        "text": "#% increased Effect of Prefixes",
+        "type": "fractured",
+        "option": null
       }
     ],
     "hidden": null,
@@ -355423,6 +355639,12 @@
         "id": "explicit.stat_1443502073",
         "text": "#% increased Effect of Prefixes",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "fractured.stat_1443502073",
+        "text": "#% increased Effect of Prefixes",
+        "type": "fractured",
         "option": null
       }
     ],
@@ -356409,6 +356631,79 @@
     ],
     "ids": [
       "local_unique_flask_explode_enemies_for_10%_life_as_random_element_on_kill_chance_%_during_flask_effect"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": 100,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "milliseconds_to_seconds_0dp"
+          ]
+        ],
+        "string": "Gain [Guard] equal to Current [Ward|Runic Ward] for {1} seconds when Effect ends",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "milliseconds_to_seconds_0dp"
+          ]
+        ],
+        "string": "Gain [Guard] equal to {0}% of Current [Ward|Runic Ward] for {1} seconds when Effect ends",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "local_unique_flask_gain_%_of_current_ward_as_guard_when_flask_effect_ends",
+      "local_unique_flask_ward_gained_as_guard_duration_ms_when_flask_effect_ends"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -387469,7 +387764,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Area contains an additional [StoneSummoningCircle|Summoning Circle]",
+        "string": "Area contains a [StoneSummoningCircle|Summoning Circle]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -387485,9 +387780,11 @@
           "#"
         ],
         "index_handlers": [
-          []
+          [
+            "subtract_one"
+          ]
         ],
-        "string": "Area contains {0} additional [StoneSummoningCircle|Summoning Circles]",
+        "string": "Area contains a [StoneSummoningCircle|Summoning Circle]\nArea contains {0} Reactivation Runes",
         "reminder_text": null,
         "is_markup": null
       }
@@ -413040,7 +413337,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Supported [Minion|Minions]' [Strike|Strikes] have [MeleeSplash|Melee Splash]",
+        "string": "[Minion|Minions]' [Strike|Strikes] have [MeleeSplash|Melee Splash]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -416951,6 +417248,342 @@
         "option": null
       }
     ],
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] {0}% increased Movement Speed Penalty from using [Attack|Attacks] while moving",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[DNT] {0}% reduced Movement Speed Penalty from using [Attack|Attacks] while moving",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "movement_speed_penalty_+%_while_performing_attacks"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] {0}% increased Movement Speed Penalty from using Chaos Skills while moving",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[DNT] {0}% reduced Movement Speed Penalty from using Chaos Skills while moving",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "movement_speed_penalty_+%_while_performing_chaos_skills"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% increased Movement Speed Penalty from using Cold Skills while moving",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% reduced Movement Speed Penalty from using Cold Skills while moving",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "movement_speed_penalty_+%_while_performing_cold_skills"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% increased Movement Speed Penalty from using Fire Skills while moving",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% reduced Movement Speed Penalty from using Fire Skills while moving",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "movement_speed_penalty_+%_while_performing_fire_skills"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] {0}% increased Movement Speed Penalty from using Lightning Skills while moving",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[DNT] {0}% reduced Movement Speed Penalty from using Lightning Skills while moving",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "movement_speed_penalty_+%_while_performing_lightning_skills"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] {0}% increased Movement Speed Penalty from using [Spell|Spells] while moving",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[DNT] {0}% reduced Movement Speed Penalty from using [Spell|Spells] while moving",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "movement_speed_penalty_+%_while_performing_spells"
+    ],
+    "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": null,
@@ -421580,6 +422213,42 @@
     ],
     "ids": [
       "non_skill_base_all_damage_%_to_gain_as_lightning_with_attacks"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[Gain] {0}% of [Cold] damage as Extra [Lightning] damage",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "non_skill_base_cold_damage_%_to_gain_as_lightning"
     ],
     "trade_stats": null,
     "hidden": null,

@@ -150791,8 +150791,8 @@
     "stats": [
       {
         "id": "local_flask_ward_regeneration_per_minute_%_during_flask_effect",
-        "max": 200,
-        "min": 200
+        "max": 300,
+        "min": 150
       },
       {
         "id": "local_unique_flask_gain_%_of_current_ward_as_guard_when_flask_effect_ends",
@@ -150805,7 +150805,7 @@
         "min": 10000
       }
     ],
-    "text": null,
+    "text": "Regenerate (2.5-5.0)% of maximum [Ward|Runic Ward] per second during Effect\nGain [Guard] equal to Current [Ward|Runic Ward] for 10 seconds when Effect ends",
     "type": "FlaskWardGainedAsGuard",
     "gold_value": null
   },
@@ -179813,7 +179813,7 @@
         "min": 5
       }
     ],
-    "text": "[ContainsBreach|Breaches] in Map have (5-10)% increased Monster density",
+    "text": "[ContainsBreach|Breaches] in Map have (5-10)% increased Pack Size",
     "type": "BreachDensityIncrease",
     "gold_value": null
   },
@@ -179852,7 +179852,7 @@
         "min": 3
       }
     ],
-    "text": "[ContainsBreach|Breaches] in Map open and close (10-30)% faster\n[ContainsBreach|Breaches] in Map have (3-8)% increased Monster density",
+    "text": "[ContainsBreach|Breaches] in Map open and close (10-30)% faster\n[ContainsBreach|Breaches] in Map have (3-8)% increased Pack Size",
     "type": "BreachSpeedIncreaseAndMonsters",
     "gold_value": null
   },
@@ -180022,7 +180022,7 @@
         "min": 30
       }
     ],
-    "text": null,
+    "text": "(30-60)% increased Quantity of Hiveblood found in Map",
     "type": "BreachHivebloodQuantity",
     "gold_value": null
   },
@@ -180226,7 +180226,7 @@
         "min": 5
       }
     ],
-    "text": "[ContainsBreach|Breaches] in Map have (5-15)% increased Monster density",
+    "text": "[ContainsBreach|Breaches] in Map have (5-15)% increased Pack Size",
     "type": "BreachMonsterQuantity",
     "gold_value": null
   },
@@ -181709,7 +181709,7 @@
         "min": -20
       }
     ],
-    "text": "[ContainsBreach|Breaches] in Map have (-20-10)% increased Monster density",
+    "text": "[ContainsBreach|Breaches] in Map have (-20-10)% increased Pack Size",
     "type": "BreachDensityIncrease",
     "gold_value": null
   },
@@ -186724,9 +186724,9 @@
         "min": 1
       },
       {
-        "id": "monster_dropped_item_rarity_+%",
-        "max": 15,
-        "min": 15
+        "id": "from_league_item_rarity_+%_permyriad",
+        "max": 1500,
+        "min": 1500
       }
     ],
     "text": null,
@@ -186763,9 +186763,9 @@
         "min": 1
       },
       {
-        "id": "monster_dropped_item_rarity_+%",
-        "max": 20,
-        "min": 20
+        "id": "from_league_item_rarity_+%_permyriad",
+        "max": 2000,
+        "min": 2000
       }
     ],
     "text": null,
@@ -537993,7 +537993,7 @@
         "min": 1
       }
     ],
-    "text": "Supported [Minion|Minions]' [Strike|Strikes] have [MeleeSplash|Melee Splash]",
+    "text": "[Minion|Minions]' [Strike|Strikes] have [MeleeSplash|Melee Splash]",
     "type": "MinionMeleeSplash",
     "gold_value": null
   },
@@ -539321,7 +539321,7 @@
         "min": 1
       }
     ],
-    "text": "Supported [Minion|Minions]' [Strike|Strikes] have [MeleeSplash|Melee Splash]",
+    "text": "[Minion|Minions]' [Strike|Strikes] have [MeleeSplash|Melee Splash]",
     "type": "MinionMeleeSplash",
     "gold_value": null
   },
@@ -560247,7 +560247,7 @@
         "min": 8
       }
     ],
-    "text": "Area contains 8 additional [StoneSummoningCircle|Summoning Circles]",
+    "text": "Area contains a [StoneSummoningCircle|Summoning Circle]\nArea contains 7 Reactivation Runes",
     "type": "MapAdditionalStoneCircle",
     "gold_value": null
   },
@@ -560277,7 +560277,7 @@
         "min": 10
       }
     ],
-    "text": "Area contains 10 additional [StoneSummoningCircle|Summoning Circles]",
+    "text": "Area contains a [StoneSummoningCircle|Summoning Circle]\nArea contains 9 Reactivation Runes",
     "type": "MapAdditionalStoneCircle",
     "gold_value": null
   },
@@ -560307,7 +560307,7 @@
         "min": 12
       }
     ],
-    "text": "Area contains 12 additional [StoneSummoningCircle|Summoning Circles]",
+    "text": "Area contains a [StoneSummoningCircle|Summoning Circle]\nArea contains 11 Reactivation Runes",
     "type": "MapAdditionalStoneCircle",
     "gold_value": null
   },
@@ -576395,22 +576395,25 @@
     "generation_weights": [],
     "grants_effects": [],
     "groups": [
-      "DamageBypassEnergyShield"
+      "EnergyShieldRegeneration"
     ],
-    "implicit_tags": [],
+    "implicit_tags": [
+      "defences",
+      "energy_shield"
+    ],
     "is_essence_only": false,
     "name": "",
     "required_level": 1,
     "spawn_weights": [],
     "stats": [
       {
-        "id": "hit_damage_bypass_energy_shield_%_when_below_half_energy_shield",
+        "id": "energy_shield_recharge_rate_+%",
         "max": 15,
         "min": 10
       }
     ],
-    "text": "(10-15)% of Damage taken from [HitDamage|Hits] bypasses [EnergyShield|Energy Shield] if [EnergyShield|Energy Shield] is below half",
-    "type": "ESBypassWhileBelowHalfES",
+    "text": "(10-15)% increased [ESRechargeRate|Energy Shield Recharge Rate]",
+    "type": "EnergyShieldRegeneration",
     "gold_value": null
   },
   "EventidePetalsVerisiumImplicitMaxColdRes1": {
