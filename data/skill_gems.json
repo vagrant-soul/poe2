@@ -262,16 +262,14 @@
     "recommended_supports": [
       "Metadata/Items/Gems/SupportGemMeatShield",
       "Metadata/Items/Gems/SupportGemMagnifiedEffect",
-      "Metadata/Items/Gems/SupportGemPersistence",
       "Metadata/Items/Gems/SupportGemMaim",
-      "Metadata/Items/Gems/SupportGemPinTwo",
       "Metadata/Items/Gems/SupportGemInfernalLegion",
       "Metadata/Items/Gems/SupportGemMeatShieldTwo",
       "Metadata/Items/Gems/SupportGemMagnifiedEffectTwo",
-      "Metadata/Items/Gems/SupportGemPersistenceTwo",
       "Metadata/Items/Gem/SupportGemCullingStrike",
       "Metadata/Items/Gem/SupportGemImpale",
-      "Metadata/Items/Gems/SupportGemMinionMastery"
+      "Metadata/Items/Gems/SupportGemMinionMastery",
+      "Metadata/Items/Gem/SupportGemCullingStrikeTwo"
     ],
     "requirement_weights": {
       "dexterity": 0,
@@ -1561,7 +1559,12 @@
       "MirageDeadeyeSpawnPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/4k/RangerDeadeyeMirageSkill.dds",
-    "recommended_supports": [],
+    "recommended_supports": [
+      "Metadata/Items/Gems/SupportGemIngenuity",
+      "Metadata/Items/Gems/SupportGemIngenuityTwo",
+      "Metadata/Items/Gems/SupportGemPersistence",
+      "Metadata/Items/Gems/SupportGemPersistenceTwo"
+    ],
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -6610,8 +6613,10 @@
       "Metadata/Items/Gems/SupportGemPrecision",
       "Metadata/Items/Gem/SupportGemDireStrike",
       "Metadata/Items/Gems/SupportGemHerbalism",
-      "Metadata/Items/Gem/SupportGemCoolHeaded",
-      "Metadata/Items/Gem/SupportGemWarmBlooded"
+      "Metadata/Items/Gem/SupportGemWarmBlooded",
+      "Metadata/Items/Gems/SupportGemPersistenceTwo",
+      "Metadata/Items/Gems/SupportGemIngenuityTwo",
+      "Metadata/Items/Gems/SupportGemIngenuity"
     ],
     "requirement_weights": {
       "dexterity": 100,
@@ -11657,7 +11662,7 @@
     },
     "skill_name": null,
     "support_name": null,
-    "support_text": "Supports [Curse] Skills you cast yourself. Supported Skills will consume [Charges|Power Charges] on use, gaining significant [Curse] duration if they do.",
+    "support_text": "Supports [Curse] Skills you cast yourself. Supported Skills will consume [Charges|Power Charges] on use, gaining significant [Curse] duration if they do. Cannot Support Skills which consume [Charges|Power Charges].",
     "tags": [
       "support",
       "curse"
@@ -14510,7 +14515,7 @@
     },
     "skill_name": null,
     "support_name": null,
-    "support_text": "Supports [Attack] Skills. Supported Skills always hit [Daze|Dazed] Enemies, but [Consume] [Daze] on [HitDamage|Hit], and cannot themselves inflict [Daze].",
+    "support_text": "Supports [Attack] Skills. Supported Skills always hit [Daze|Dazed] Enemies, but [Consume] [Daze] on [HitDamage|Hit], and cannot themselves inflict [Daze]. Cannot Support Skills which [Consume] [Daze].",
     "tags": [
       "support",
       "attack"
@@ -15769,7 +15774,7 @@
     },
     "skill_name": null,
     "support_name": null,
-    "support_text": "Supports Skills that you use yourself. Supported Skills will consume a [Charges|Frenzy Charge] on use if possible, and will gain significant [SkillSpeed|Skill Speed] if they do. Supported Skills cannot generate [Charges|Frenzy Charges].",
+    "support_text": "Supports Skills that you use yourself. Supported Skills will consume a [Charges|Frenzy Charge] on use if possible, and will gain significant [SkillSpeed|Skill Speed] if they do, but cannot generate [Charges|Frenzy Charges]. Cannot Support Skills which consume [Charges|Frenzy Charges].",
     "tags": [
       "support"
     ],
@@ -18437,7 +18442,7 @@
     },
     "skill_name": null,
     "support_name": null,
-    "support_text": "Supports Skills that you use yourself. Supported Skills will consume a [Charges|Power Charge] on use if possible, and will be much more likely to [Critical|Critically Hit] if they do. Supported Skills cannot generate [Charges|Power Charges].",
+    "support_text": "Supports Skills that you use yourself. Supported Skills will consume a [Charges|Power Charge] on use if possible, and will be much more likely to [Critical|Critically Hit] if they do. Supported Skills cannot generate [Charges|Power Charges]. Cannot Support Skills which consume [Charges|Power Charges].",
     "tags": [
       "support"
     ],
@@ -18888,7 +18893,7 @@
     },
     "skill_name": null,
     "support_name": null,
-    "support_text": "Supports Melee [Attack|Attacks] you use yourself. Supported Skills [Consume] all [Charges|Endurance Charge] on use, causing you to restore a percentage of your maximum Life for each [Charges|Charge] [Consume|Consumed].",
+    "support_text": "Supports Melee [Attack|Attacks] you use yourself. Supported Skills [Consume] all [Charges|Endurance Charge] on use, causing you to restore a percentage of your maximum Life for each [Charges|Charge] [Consume|Consumed]. Cannot Support Skills which consume [Charges|Endurance Charges].",
     "tags": [
       "support",
       "attack",
@@ -38820,7 +38825,7 @@
     },
     "skill_name": null,
     "support_name": null,
-    "support_text": "Supports any [Spell] that [HitDamage|Hits] enemies, causing it to consume [ElementalAilments|Elemental Ailments] on hit to trigger an Elemental Discharge. Cannot support the skills of [Minion|Minions].",
+    "support_text": "Supports any [Spell] that [HitDamage|Hits] enemies, causing it to [Consume|Consume] [ElementalAilments|Elemental Ailments] on hit to trigger an Elemental Discharge. Cannot support the skills of [Minion|Minions] or skills which already [Consume|Consume] [ElementalAilments|Elemental Ailments].",
     "tags": [
       "support",
       "grants_active_skill",
@@ -40410,7 +40415,7 @@
     },
     "skill_name": null,
     "support_name": null,
-    "support_text": "Supports any skill that [HitDamage|Hits] enemies, causing it to [Consume|Consume] [Freeze] on [Ignite|Igniting] a [Frozen] enemy to boost the effect of the [Ignite].",
+    "support_text": "Supports any skill that [HitDamage|Hits] enemies, causing it to [Consume|Consume] [Freeze] on [Ignite|Igniting] a [Frozen] enemy to boost the effect of the [Ignite]. Cannot support skills that [Consume|Consume] [Freeze|Freeze] or [Ignite].",
     "tags": [
       "support",
       "cold",
@@ -41417,7 +41422,7 @@
     },
     "skill_name": null,
     "support_name": null,
-    "support_text": "Supports [Slam|Slam] skills. Supported Skills will consume [Charges|Endurance Charges] on use to create [JaggedGround|Jagged Ground].",
+    "support_text": "Supports [Slam|Slam] skills. Supported Skills will consume [Charges|Endurance Charges] on use to create [JaggedGround|Jagged Ground]. Cannot Support Skills which consume [Charges|Endurance Charges].",
     "tags": [
       "support",
       "attack",
