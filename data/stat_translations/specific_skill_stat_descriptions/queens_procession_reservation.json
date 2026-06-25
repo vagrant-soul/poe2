@@ -7,73 +7,39 @@
             "min": null,
             "max": null,
             "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
           }
         ],
         "format": [
-          "#",
           "#"
         ],
         "index_handlers": [
-          [],
           []
         ],
-        "string": "[DNT] Take {0} to {1} Physical Damage if Swarm Hits any target",
+        "string": "More [HitDamage|Damage] per Swarm's Advance@{0}%",
         "reminder_text": null,
         "is_markup": null
-      }
-    ],
-    "ids": [
-      "secondary_minimum_base_physical_damage",
-      "secondary_maximum_base_physical_damage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional Chinese": null
-  },
-  {
-    "English": [
+      },
       {
         "condition": [
           {
             "min": null,
             "max": null,
             "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
           }
         ],
         "format": [
-          "#",
           "#"
         ],
         "index_handlers": [
-          [],
           []
         ],
-        "string": "[DNT] Gain a stack of Swarm's Advance if Swarm Hits any Target, max {1} stacks\n{0}% More Damage to Enemies per stack of Swarm's Advance",
+        "string": "Swarm deals {0}% more [HitDamage|Damage] per Swarm's Advance",
         "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
-      "locust_dash_damage_+%_final_per_stack",
-      "maximum_locust_stacks"
+      "locust_dash_damage_+%_final_per_stack"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -102,10 +68,68 @@
         ],
         "index_handlers": [
           [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Swarm radius is {0} metres",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "active_skill_base_area_of_effect_radius"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[DNT] Swarm Hits all targets in area Every {0}s",
+        "string": "Swarm [HitDamage|Hits] all targets in area every {0} second",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Swarm [HitDamage|Hits] all targets in area every {0} seconds",
         "reminder_text": null,
         "is_markup": null
       }
@@ -141,7 +165,7 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Modifiers to Cooldown Recovery Rate also apply to\n[HitDamage|Hit] frequency",
+        "string": "Modifiers to Cooldown Recovery Rate apply to [HitDamage|Hit] frequency",
         "reminder_text": null,
         "is_markup": null
       }
@@ -169,23 +193,69 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
+          "#",
+          "#",
           "#"
         ],
         "index_handlers": [
-          [
-            "divide_by_ten_1dp_if_required"
-          ]
+          [],
+          [],
+          []
         ],
-        "string": "[DNT] Swarm radius is {0} metres",
+        "string": "Maximum Swarm's Advance\n[Physical] [HitDamage|Damage] taken@{2}\n{0} to {1}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          []
+        ],
+        "string": "If Swarm [HitDamage|Hits] any targets, you take {0} to {1} [Physical] [HitDamage|Damage] and gain 1 Swarm's Advance, to a maximum of {2}",
         "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
-      "active_skill_base_area_of_effect_radius"
+      "active_skill_minimum_physical_self_damage_to_take",
+      "active_skill_maximum_physical_self_damage_to_take",
+      "maximum_locust_stacks"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -215,7 +285,25 @@
         "index_handlers": [
           []
         ],
-        "string": "[DNT] Damage taken from this Skill applies [HeavyStunPlayer|Stun] Buildup as if dealing {0}% more damage",
+        "string": "More [HeavyStunPlayer|Stun] buildup taken@{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Damage taken this way applies {0}% more [HeavyStunPlayer|Stun] buildup to you",
         "reminder_text": null,
         "is_markup": null
       }
@@ -240,24 +328,6 @@
       {
         "condition": [
           {
-            "min": 4000,
-            "max": 4000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] [HeavyStunPlayer|Heavy Stun] Buildup only Empties if you haven't sprinted [Recently]\nLose all stacks of Swarm's Advance if you haven't sprinted [Recently]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
             "min": null,
             "max": null,
             "negated": null
@@ -271,7 +341,7 @@
             "milliseconds_to_seconds_2dp_if_required"
           ]
         ],
-        "string": "[DNT] [HeavyStunPlayer|Heavy Stun] Buildup only Empties if you haven't sprinted in the last {0}s\nLose all stacks of Swarm's Advance if you haven't sprinted in the last {0}s",
+        "string": "[HeavyStunPlayer|Stun] Buildup cannot empty while you have Swarm's Advance\nLose all Swarm's Advance {0} seconds after you finish sprinting",
         "reminder_text": null,
         "is_markup": null
       }
