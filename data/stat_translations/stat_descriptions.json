@@ -45576,6 +45576,12 @@
         "text": "#% increased Life Regeneration rate",
         "type": "fractured",
         "option": null
+      },
+      {
+        "id": "rune.stat_44972811",
+        "text": "#% increased Life Regeneration rate",
+        "type": "augment",
+        "option": null
       }
     ],
     "hidden": null,
@@ -113189,6 +113195,12 @@
         "id": "explicit.stat_350598685",
         "text": "# to Weapon Range",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "fractured.stat_350598685",
+        "text": "# to Weapon Range",
+        "type": "fractured",
         "option": null
       }
     ],
@@ -189325,79 +189337,7 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[RevealWeakness|Reveal Weaknesses] against [Rarity|Rare and Unique] enemies",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "ids": [
-      "unique_reveal_weakness"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional Chinese": null
-  },
-  {
-    "English": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[SoulEater|Eat a Soul] on [HitDamage|Hitting] an enemy with an [RevealWeakness|Open Weakness]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "ids": [
-      "gain_soul_eater_when_hitting_a_rare_or_unique_enemy_that_has_open_weakness"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional Chinese": null
-  },
-  {
-    "English": [
-      {
-        "condition": [
-          {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -189408,13 +189348,145 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% of damage taken from enemies with an [RevealWeakness|Open Weakness] [Recoup|Recouped] as Life",
+        "string": "{0}% increased [CooldownRecovery|Cooldown Recovery Rate]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% reduced [CooldownRecovery|Cooldown Recovery Rate]",
         "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
-      "recoup_%_of_damage_taken_from_enemies_with_open_weakness_as_life"
+      "base_cooldown_speed_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% increased [CooldownRecovery|Cooldown Recovery Rate] per 10 Tribute",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% reduced [CooldownRecovery|Cooldown Recovery Rate] per 10 Tribute",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "base_cooldown_speed_+%_per_10_tribute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Spells have {0}% increased [CooldownRecovery|Cooldown Recovery Rate]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Spells have {0}% reduced [CooldownRecovery|Cooldown Recovery Rate]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "base_spell_cooldown_speed_+%"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -215216,118 +215288,6 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% increased [CooldownRecovery|Cooldown Recovery Rate] per 10 Tribute",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "{0}% reduced [CooldownRecovery|Cooldown Recovery Rate] per 10 Tribute",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "ids": [
-      "base_cooldown_speed_+%_per_10_tribute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional Chinese": null
-  },
-  {
-    "English": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% increased [CooldownRecovery|Cooldown Recovery Rate]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "{0}% reduced [CooldownRecovery|Cooldown Recovery Rate]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "ids": [
-      "base_cooldown_speed_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional Chinese": null
-  },
-  {
-    "English": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
         "string": "[Curse] zones erupt after {0}% increased delay",
         "reminder_text": null,
         "is_markup": null
@@ -218413,62 +218373,6 @@
     ],
     "ids": [
       "base_slow_potency_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional Chinese": null
-  },
-  {
-    "English": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Spells have {0}% increased [CooldownRecovery|Cooldown Recovery Rate]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "Spells have {0}% reduced [CooldownRecovery|Cooldown Recovery Rate]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "ids": [
-      "base_spell_cooldown_speed_+%"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -228685,42 +228589,6 @@
     ],
     "ids": [
       "blood_spears_damage_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional Chinese": null
-  },
-  {
-    "English": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[RevealWeakness|Reveal Weaknesses] against [Rarity|Rare and Unique] enemies",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "ids": [
-      "bloodlust_reveal_weakness"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -270726,62 +270594,6 @@
     ],
     "ids": [
       "damage_+%_against_enemies_with_fully_broken_armour"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional Chinese": null
-  },
-  {
-    "English": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% more damage against enemies with an [RevealWeakness|Open Weakness]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "{0}% less damage against enemies with an [RevealWeakness|Open Weakness]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "ids": [
-      "damage_+%_final_against_bloodlusting_enemies"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -378093,7 +377905,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% increased number of Explosives",
+        "string": "{0}% increased number of [ContainsExpedition|Expedition] Explosives",
         "reminder_text": null,
         "is_markup": null
       }
@@ -378101,14 +377913,7 @@
     "ids": [
       "map_expedition_explosives_+%"
     ],
-    "trade_stats": [
-      {
-        "id": "implicit.stat_3051490307",
-        "text": "#% increased number of Explosives",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": null,
@@ -382956,7 +382761,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Area contains {0} [GrandExpeditionRemnant|Remnant]",
+        "string": "Area contains {0} [ContainsExpedition2|Verisium Remnant]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -382974,7 +382779,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Area contains {0} [GrandExpeditionRemnant|Remnants]",
+        "string": "Area contains {0} [ContainsExpedition2|Verisium Remnants]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -383010,7 +382815,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Area contains {0}% increased number of [GrandExpeditionRemnant|Remnants]",
+        "string": "Area contains {0}% increased number of [ContainsExpedition2|Verisium Remnants]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -391078,7 +390883,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Players steal the [SoulEater|Eaten Souls] of Slain [Rarity|Rare] Monsters in Area",
+        "string": "Players steal the [EatenSoul|Eaten Souls] of Slain [Rarity|Rare] Monsters in Area",
         "reminder_text": null,
         "is_markup": null
       }
@@ -417763,62 +417568,6 @@
     ],
     "ids": [
       "movement_skills_deal_no_physical_damage"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional Chinese": null
-  },
-  {
-    "English": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% increased Movement Speed while an enemy with an [RevealWeakness|Open Weakness] is in your [Presence]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "{0}% reduced Movement Speed while an enemy with an [RevealWeakness|Open Weakness] is in your [Presence]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "ids": [
-      "movement_speed_+%_against_bloodlusting_enemies"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -452681,62 +452430,6 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% increased [SkillSpeed|Skill Speed] while an enemy with an [RevealWeakness|Open Weakness] is in your [Presence]",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "{0}% reduced [SkillSpeed|Skill Speed] while an enemy with an [RevealWeakness|Open Weakness] is in your [Presence]",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "ids": [
-      "skill_speed_+%_against_bloodlusting_enemies"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional Chinese": null
-  },
-  {
-    "English": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
         "string": "{0}% increased [SkillSpeed|Skill Speed] if you've consumed a [Charges|Frenzy Charge] [Recently]",
         "reminder_text": null,
         "is_markup": null
@@ -487014,6 +486707,354 @@
     ],
     "ids": [
       "stun_threshold_+%_per_rage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[RevealWeakness|Reveal Weaknesses] against [Rarity|Rare and Unique] enemies",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "bloodlust_reveal_weakness"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[RevealWeakness|Reveal Weaknesses] against [Rarity|Rare and Unique] enemies",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "unique_reveal_weakness"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% more damage against enemies with an [RevealWeakness|Open Weakness]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% less damage against enemies with an [RevealWeakness|Open Weakness]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "damage_+%_final_against_bloodlusting_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[EatenSoul|Eat a Soul] when you [HitDamage|Hit] an enemy with an [RevealWeakness|Open Weakness]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "gain_soul_eater_when_hitting_a_rare_or_unique_enemy_that_has_open_weakness"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% of damage taken from enemies with an [RevealWeakness|Open Weakness] [Recoup|Recouped] as Life",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "recoup_%_of_damage_taken_from_enemies_with_open_weakness_as_life"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% of damage taken from enemies with an [RevealWeakness|Open Weakness] [Recoup|Recouped] as Life and [EnergyShield|Energy Shield]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "recoup_%_of_damage_taken_from_enemies_with_open_weakness_as_life_and_energy_shield"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% increased Movement Speed while an enemy with an [RevealWeakness|Open Weakness] is in your [Presence]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% reduced Movement Speed while an enemy with an [RevealWeakness|Open Weakness] is in your [Presence]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "movement_speed_+%_against_bloodlusting_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% increased [SkillSpeed|Skill Speed] while an enemy with an [RevealWeakness|Open Weakness] is in your [Presence]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% reduced [SkillSpeed|Skill Speed] while an enemy with an [RevealWeakness|Open Weakness] is in your [Presence]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "skill_speed_+%_against_bloodlusting_enemies"
     ],
     "trade_stats": null,
     "hidden": null,
