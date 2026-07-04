@@ -7,6 +7,10 @@ on:
   schedule:
     - cron: 40 */4 * * *
 
+# 在顶层赋予写权限（或者单独在 jobs 里面加）
+permissions:
+  contents: write
+
 jobs:
   version:
     runs-on: ubuntu-latest
@@ -55,8 +59,11 @@ jobs:
         run: find poe2/data '(' -name '*.json' -not -path '*/pob/*' -o -name '*.html' -o -name '*.txt' ')' -delete -print | wc -l
       - run: poetry install
         working-directory: RePoE
-      - run: poetry run pypoe_schema_import --poe2 -a poe2
+        
+      # 1. 【修正】将 -a poe2 改为 -a ../poe2 指向正确的外部目录
+      - run: poetry run pypoe_schema_import --poe2 -a ../poe2
         working-directory: RePoE
+        
       - run: poetry run repoe all -l all --poe2 -o ../poe2/data
         working-directory: RePoE
       - id: autocommit
